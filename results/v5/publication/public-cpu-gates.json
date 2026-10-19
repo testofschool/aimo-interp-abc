@@ -1,0 +1,93 @@
+{
+  "scope": "CPU gates only; remote clone provenance recorded separately",
+  "checks": [
+    {
+      "name": "V1_original",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/public-fresh-clone/.venv/bin/python",
+        "-I",
+        "tools/report_numbers.py",
+        "--data-dir",
+        "data",
+        "--check",
+        "research/preregistered_v5_claims.json"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "stdout": "{\n \"result\": \"PASS\",\n \"checked\": 13,\n \"mismatches\": []\n}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "V2_original",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/public-fresh-clone/.venv/bin/python",
+        "-I",
+        "tools/render_report.py",
+        "report/PREREGISTERED_OUTLINE_v5.md",
+        "results/report_numbers.json",
+        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ft7m0yrg/original.md"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "stdout": "{\"result\": \"PASS\", \"placeholders\": 17, \"out\": \"/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ft7m0yrg/original.md\"}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "V1_final",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/public-fresh-clone/.venv/bin/python",
+        "-I",
+        "tools/report_numbers.py",
+        "--data-dir",
+        "data",
+        "--out",
+        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ft7m0yrg/numbers.json",
+        "--check",
+        "research/claims.json"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "stdout": "{\n \"result\": \"PASS\",\n \"checked\": 87,\n \"mismatches\": []\n}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "V3",
+      "checked": 12,
+      "passed": true
+    },
+    {
+      "name": "V2_final",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/public-fresh-clone/.venv/bin/python",
+        "-I",
+        "tools/render_report.py",
+        "report/REPORT_OUTLINE.md",
+        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ft7m0yrg/numbers.json",
+        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ft7m0yrg/final.md"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "stdout": "{\"result\": \"PASS\", \"placeholders\": 89, \"out\": \"/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ft7m0yrg/final.md\"}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "V4",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/public-fresh-clone/.venv/bin/python",
+        "-I",
+        "tools/reopen_gate.py"
+      ],
+      "exit_code": 1,
+      "expected_exit": 1,
+      "stdout": "{\"result\": \"CLOSED\", \"reason\": \"no self-made labels supplied; method track stays folded\"}\n",
+      "stderr": "",
+      "passed": true
+    }
+  ],
+  "draft_sha256": "a93fb36b4cac6065101f7a7f8fffc70df2332eb5b1042eb0774abc3034eed364",
+  "result": "PASS"
+}

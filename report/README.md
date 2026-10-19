@@ -29,6 +29,8 @@ pdftoppm -png -r 110 build/rebuild/main.pdf build/rebuild/page
 
 There is no external bibliography backend. Compilation is distinct from visual
 inspection and submission readiness. Author details/review, native Codabench
-results, public-remote reproduction, final portal instructions and the OpenReview
-receipt remain pending. The report includes the evaluation limitation and peer
-review commitment checklist. Existing historical PDF/QA files were preserved.
+results, final portal instructions and the OpenReview receipt remain pending.
+Public-remote reproduction passed on 2026-10-20 KST; see `../PUBLICATION.md` and
+`../results/v5/publication/`. The scientific manuscript/PDF and their prepublication
+QA snapshot remain unchanged. The report includes the evaluation limitation and
+peer review commitment checklist. Existing historical PDF/QA files were preserved.

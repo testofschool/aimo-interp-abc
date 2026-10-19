@@ -1,0 +1,60 @@
+{
+  "tested_commit": "6fef8753b2e21b0c53098e77fdbc6e72ad4d4251",
+  "changes": [
+    {
+      "path": "README.md",
+      "before_sha256": "4f402f637d6e3760ae505ea1c20c5832d2dc9c9ec7ff43c8932bd6b9cd46ae1f",
+      "after_sha256": "1dfa04dd2712a55f5849726849869ff957878f338fc0e4f86fef7068c343d60e",
+      "purpose": "Publication state/readback documentation; scientific source unchanged"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "1dfa04dd2712a55f5849726849869ff957878f338fc0e4f86fef7068c343d60e",
+      "after_sha256": "123abdb0372bb2242b231c58db5706a8c35f3144e5275996fa9502495b988121",
+      "purpose": "Publication state/readback documentation; scientific source unchanged"
+    },
+    {
+      "path": "README.md",
+      "before_sha256": "123abdb0372bb2242b231c58db5706a8c35f3144e5275996fa9502495b988121",
+      "after_sha256": "85f85c2df16f3d91871d638afb625e206af16410768952929e5fdf80444a2d95",
+      "purpose": "Publication state/readback documentation; scientific source unchanged"
+    },
+    {
+      "path": "report/README.md",
+      "before_sha256": "3ce322c388a53ebe11faf4b32c1af29beef34cb6dce190c15ffdadb973d6ef23",
+      "after_sha256": "96adafd0b8f56b6145607ce5ede19079a0f94b2f0f84bc44bbe5efac0623bdf3",
+      "purpose": "Publication state/readback documentation; scientific source unchanged"
+    },
+    {
+      "path": "OWNER_CHECKLIST_v5.md",
+      "before_sha256": "76d3459ccb73f8f310e01f12b7f3ba859e65f526d632520365300f6c6e55f385",
+      "after_sha256": "707006432a28eb5d3283d55777a0f758b7e54a4d977d485af31ba95545a3a16e",
+      "purpose": "Publication state/readback documentation; scientific source unchanged"
+    },
+    {
+      "path": "RUN_STATUS.json",
+      "before_sha256": "c8a91a85bb947f9c939d691d881029d5e72d877a07b7b8050b5a86805b734b01",
+      "after_sha256": "bb83c5eea24905756509c463ebee9e70e82eef154a516ce858226e7ac22c0e9a",
+      "purpose": "Publication state/readback documentation; scientific source unchanged"
+    },
+    {
+      "path": "PUBLICATION.md",
+      "before_sha256": null,
+      "after_sha256": "45a93257e54505a3d5db59754db484fb1d1df7790be4ed493bf27ded0440d4e4",
+      "purpose": "Publication state/readback documentation; scientific source unchanged"
+    },
+    {
+      "path": "EXECUTION_REPORT_v5.md",
+      "before_sha256": "9dfd486146c0b7fa5372b2ceec67f08a7fdc02b7038ceb66bcf49a8ca73bf199",
+      "after_sha256": "3759a8208c62794c84d371271eae66d27bc4f70e8d8c7af3ba71e57578782c6f",
+      "purpose": "Publication state/readback documentation; scientific source unchanged"
+    },
+    {
+      "path": "BUILD_INPUT_CHANGES_v5.md",
+      "before_sha256": "93e91dcf863bc36d00daa22bd50478dd40cb8b6528de75490d6838375c7406e4",
+      "after_sha256": "60cb8056decda31a2ec6135bcc7d5be61a72f9b2456c7799e3b21a5d1fe48d28",
+      "purpose": "Publication state/readback documentation; scientific source unchanged"
+    }
+  ],
+  "scientific_bytes_unchanged": true
+}

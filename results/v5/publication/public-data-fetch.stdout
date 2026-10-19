@@ -1,0 +1,11 @@
+{
+  "downloaded": 4,
+  "files": 4,
+  "sha256": {
+    "augmented-sample-math-agg.parquet": "b785750259a3f4524cbaf988f51660197cbdfca19d8f45cc35347d4ef29aa4db",
+    "sample-full.parquet": "2989ab6a018f2779a821209f414bd0049c9ef1c2488f589ff2d3bf4ed16942ff",
+    "train-main-v2.parquet": "e18eb44207e7987781ec2ff214793196038442bdc1466fdf5498f3e87ec58285",
+    "val-sample.parquet": "3919cb3d951bb360a120be3397e926f48b7819bcd97e12cfee4c01e76618560f"
+  },
+  "status": "PASS"
+}

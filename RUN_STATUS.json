@@ -1,7 +1,7 @@
 {
   "goal": "v5 report execution, CPU only",
   "active_handoff": "HANDOFF_v5.md",
-  "overall": "LOCAL_REPORT_READY_EXTERNAL_RELEASE_AND_OWNER_SUBMISSIONS_PENDING",
+  "overall": "PUBLIC_REPORT_REPRODUCED_OWNER_SUBMISSIONS_PENDING",
   "preregistered": {
     "V1": {
       "result": "PASS",
@@ -53,13 +53,21 @@
   },
   "release": {
     "requested_public_repo": "https://github.com/testofschool/aimo-interp-abc",
-    "public_remote": "UNRUN; repository not found on current authenticated check",
-    "local_export": "READY_NOT_PUBLISHED",
+    "public_remote": "PASS: public API private=false; anonymous Git HEAD/clone readback",
+    "local_export": "PUBLISHED",
     "local_fresh_clone": {
       "status": "PASS",
       "scope": "LOCAL_ONLY",
       "tested_commit": "6e9003b47ab624310f08a4a78192046da9671370",
       "receipt": "results/v5/fresh_local_clone/receipt.json"
+    },
+    "public_fresh_clone": {
+      "status": "PASS",
+      "scope": "PUBLIC_REMOTE_ANONYMOUS",
+      "tested_commit": "6fef8753b2e21b0c53098e77fdbc6e72ad4d4251",
+      "receipt": "results/v5/publication/public-clone-receipt.json",
+      "gate_receipt": "results/v5/publication/public-cpu-gates.json",
+      "completed_at_utc": "2026-10-19T15:12:01.197700+00:00"
     }
   },
   "entry_bundles": {
@@ -67,7 +75,6 @@
     "always_true_sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a"
   },
   "unrun": [
-    "Public repository publication and public fresh-clone verification",
     "Owner Codabench uploads, native scores/screenshots, final-test nomination",
     "Private validation and final-test evaluation",
     "Human author review and final OpenReview form/receipt",

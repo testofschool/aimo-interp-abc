@@ -16,9 +16,11 @@ submission yet. No `kangmin` result is attributed to this work.
    receipts exist, adding reproducible/receipt-backed claim keys first. Otherwise
    retain the explicit UNMEASURED limitation; it is not a waiver of the organizer's
    requested evaluation evidence.
-5. Publish the prepared reviewed export to `testofschool/aimo-interp-abc`, read back
-   its public HEAD and run the included CPU gates from a new public clone. The
-   present fresh-clone check uses a local repository, not a public remote.
+5. **Completed 2026-10-20 KST:** published `testofschool/aimo-interp-abc`; anonymous
+   public HEAD and new public-clone CPU gates passed at commit
+   `6fef8753b2e21b0c53098e77fdbc6e72ad4d4251`. See `PUBLICATION.md` and
+   `results/v5/publication/`. This completes the public-reproduction step only;
+   account submissions, nomination and receipts remain owner actions.
 6. Inspect the actual OpenReview announcement/form for final page limit, author
    rules, file fields, artifact links and cutoff timezone. Current website says
    reports are due by November 15, 2026; a precise hour/timezone was not verified.

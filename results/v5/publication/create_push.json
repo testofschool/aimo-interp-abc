@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "gh",
+    "repo",
+    "create",
+    "testofschool/aimo-interp-abc",
+    "--public",
+    "--source",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/public-release",
+    "--remote",
+    "origin",
+    "--push",
+    "--description",
+    "Reproducible public-data controls and label audit for AIMO Interpretability Challenge; private evaluation unmeasured."
+  ],
+  "exit_code": 0,
+  "stdout": "https://github.com/testofschool/aimo-interp-abc\nbranch 'main' set up to track 'origin/main'.\n",
+  "stderr": "To https://github.com/testofschool/aimo-interp-abc.git\n * [new branch]      HEAD -> main\n",
+  "approved_commit": "6fef8753b2e21b0c53098e77fdbc6e72ad4d4251"
+}

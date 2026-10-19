@@ -1,3 +1,22 @@
+# v5 실행 보고 — 공개 재현 완료, 소유자 제출 대기
+
+2026-10-20 KST: 소유자의 직접 공개 승인 후 저장소를 게시했다.
+https://github.com/testofschool/aimo-interp-abc
+
+공개 commit `6fef8753b2e21b0c53098e77fdbc6e72ad4d4251`를 인증 없이 새로 복제하고
+별도 venv와 실제 HF download로 V1-V4를 검증했다. 원본 V1 13/13, 원본 V2 17,
+최종 V1 87/87, 최종 V2 89, V3 12개 값, V4 CLOSED/exit1이 모두 기대값대로다.
+ZIP 재빌드와 TeX 재생성도 byte-identical이다. 보고서 PDF는 동일한 5쪽/SHA256을
+유지했다. 원문 공개-clone 출력과 영수증은 `PUBLICATION.md` 및
+`results/v5/publication/`에 있다. 추가 GPU job/지출은 0이다.
+
+R3와 acceptance1의 공개-repo clone 부분은 완료됐다. 소유자 Codabench 업로드,
+점수·screenshot/time·nomination, author review, OpenReview 최종 form/rules·receipt는
+남아 있다. private validation/test는 UNMEASURED이며 전체 목표 완료를 주장하지 않는다.
+아래 내용은 공개 이전의 실행·검증 기록으로 보존한 역사적 snapshot이다.
+
+---
+
 # v5 실행 보고 — 로컬 보고서 준비 완료, 외부 게시·제출 미완료
 
 직접 요청 `/goal run`과 제공된 v5 파일을 바탕으로 CPU 보고서 작업을 진행했다.

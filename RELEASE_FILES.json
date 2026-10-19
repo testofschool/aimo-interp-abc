@@ -1,7 +1,8 @@
 {
-  "status": "LOCAL_PREPARED_EXPORT_NOT_PUBLISHED",
-  "tested_core_commit": "6e9003b47ab624310f08a4a78192046da9671370",
-  "core_bytes_unchanged_after_clone": true,
+  "status": "PUBLIC_RELEASE_VERIFIED",
+  "tested_core_commit": "6fef8753b2e21b0c53098e77fdbc6e72ad4d4251",
+  "core_bytes_unchanged_after_public_clone": true,
+  "public_repository": "https://github.com/testofschool/aimo-interp-abc",
   "files": [
     {
       "path": ".gitignore",
@@ -10,28 +11,33 @@
     },
     {
       "path": "BUILD_INPUT_CHANGES_v5.md",
-      "bytes": 13103,
-      "sha256": "93e91dcf863bc36d00daa22bd50478dd40cb8b6528de75490d6838375c7406e4"
+      "bytes": 13613,
+      "sha256": "60cb8056decda31a2ec6135bcc7d5be61a72f9b2456c7799e3b21a5d1fe48d28"
     },
     {
       "path": "EXECUTION_REPORT_v5.md",
-      "bytes": 10163,
-      "sha256": "9dfd486146c0b7fa5372b2ceec67f08a7fdc02b7038ceb66bcf49a8ca73bf199"
+      "bytes": 11285,
+      "sha256": "3759a8208c62794c84d371271eae66d27bc4f70e8d8c7af3ba71e57578782c6f"
     },
     {
       "path": "OWNER_CHECKLIST_v5.md",
-      "bytes": 2348,
-      "sha256": "76d3459ccb73f8f310e01f12b7f3ba859e65f526d632520365300f6c6e55f385"
+      "bytes": 2479,
+      "sha256": "707006432a28eb5d3283d55777a0f758b7e54a4d977d485af31ba95545a3a16e"
+    },
+    {
+      "path": "PUBLICATION.md",
+      "bytes": 2769,
+      "sha256": "45a93257e54505a3d5db59754db484fb1d1df7790be4ed493bf27ded0440d4e4"
     },
     {
       "path": "README.md",
-      "bytes": 4152,
-      "sha256": "4f402f637d6e3760ae505ea1c20c5832d2dc9c9ec7ff43c8932bd6b9cd46ae1f"
+      "bytes": 4567,
+      "sha256": "85f85c2df16f3d91871d638afb625e206af16410768952929e5fdf80444a2d95"
     },
     {
       "path": "RUN_STATUS.json",
-      "bytes": 2406,
-      "sha256": "c8a91a85bb947f9c939d691d881029d5e72d877a07b7b8050b5a86805b734b01"
+      "bytes": 2683,
+      "sha256": "bb83c5eea24905756509c463ebee9e70e82eef154a516ce858226e7ac22c0e9a"
     },
     {
       "path": "THIRD_PARTY.md",
@@ -150,8 +156,8 @@
     },
     {
       "path": "report/README.md",
-      "bytes": 1850,
-      "sha256": "3ce322c388a53ebe11faf4b32c1af29beef34cb6dce190c15ffdadb973d6ef23"
+      "bytes": 2018,
+      "sha256": "96adafd0b8f56b6145607ce5ede19079a0f94b2f0f84bc44bbe5efac0623bdf3"
     },
     {
       "path": "report/REPORT_DRAFT.md",
@@ -492,6 +498,131 @@
       "path": "results/v5/protected-inputs-check.json",
       "bytes": 1591,
       "sha256": "db41a43ee6ba3c18fefcdd4d123bd6e01b3193a8f8b12d10978bb9d1434a07a0"
+    },
+    {
+      "path": "results/v5/publication/anonymous-repo-api.json",
+      "bytes": 5607,
+      "sha256": "fb4cb7bff84d69647e14fca132d51c37f9e134fcc4a8a84b6aeb7ee5ee0e4a1a"
+    },
+    {
+      "path": "results/v5/publication/create_push.json",
+      "bytes": 702,
+      "sha256": "fca45ed9ae2524b9f813f56e73e4cb4dba693e461d9b10cabc455897931ff381"
+    },
+    {
+      "path": "results/v5/publication/create_push.stderr",
+      "bytes": 89,
+      "sha256": "6e382e07ffd0f51b59bd3a09d19f5f44f8f1a79b18702c59a73139f9ccce4912"
+    },
+    {
+      "path": "results/v5/publication/create_push.stdout",
+      "bytes": 93,
+      "sha256": "a32e9041003b4a5ef12c68480010acaf6291d5933c8b33c5206c6fd2bca8fa49"
+    },
+    {
+      "path": "results/v5/publication/documentation_changes.json",
+      "bytes": 2910,
+      "sha256": "5d8e97108fcab6fc02a1c22bf243f602de2ac1d9a6aebd66225550fb85757f87"
+    },
+    {
+      "path": "results/v5/publication/public-clone-receipt.json",
+      "bytes": 5254,
+      "sha256": "f071b100c9c4e7cadc86c016d716639c4290aaa705547adaab7b9cb5bf822942"
+    },
+    {
+      "path": "results/v5/publication/public-clone.stderr",
+      "bytes": 103,
+      "sha256": "56acceb3bd19bc8ebce20f0e8df49dbd0d59533c8321c4a63d138b4a2eff7d60"
+    },
+    {
+      "path": "results/v5/publication/public-clone.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/v5/publication/public-control-zip-rebuild.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/v5/publication/public-control-zip-rebuild.stdout",
+      "bytes": 460,
+      "sha256": "7aeeeb6e118c28c8cb191ac7795b725a78d2e92c3283dc9bc7b356db17bc1f2e"
+    },
+    {
+      "path": "results/v5/publication/public-cpu-gates.json",
+      "bytes": 3165,
+      "sha256": "0eed9cb322a20608bfcfb6d1b0add5a1bac3645dd5a04ed2cbe54aac31a6e02c"
+    },
+    {
+      "path": "results/v5/publication/public-cpu-gates.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/v5/publication/public-cpu-gates.stdout",
+      "bytes": 647,
+      "sha256": "d8f337edbf402c0db4671fc85fb38097fdd7729a462231edb2a2e51a144ec43e"
+    },
+    {
+      "path": "results/v5/publication/public-data-fetch.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/v5/publication/public-data-fetch.stdout",
+      "bytes": 469,
+      "sha256": "de47a2b87e39d9cc3826618ff44d9945b45ea84cbed400bb0b5aca5608dcf169"
+    },
+    {
+      "path": "results/v5/publication/public-dependencies.stderr",
+      "bytes": 683,
+      "sha256": "7e31f2140f2a5d875a259aae9360646a82bc4f317f6f0474830d3be61551c51b"
+    },
+    {
+      "path": "results/v5/publication/public-dependencies.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/v5/publication/public-ls-remote.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/v5/publication/public-ls-remote.stdout",
+      "bytes": 103,
+      "sha256": "21001da4513c17c797562450fd0aa85084dd0f787cfa42250a3f17104c4cb40a"
+    },
+    {
+      "path": "results/v5/publication/public-pdf-info.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/v5/publication/public-pdf-info.stdout",
+      "bytes": 695,
+      "sha256": "5839bece895ae4d69e0157cb30166b1056172a259c4d5d81c03c6b17f27d4a80"
+    },
+    {
+      "path": "results/v5/publication/public-tex-rebuild.stderr",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "path": "results/v5/publication/public-tex-rebuild.stdout",
+      "bytes": 715,
+      "sha256": "12527056f0df3a58362cda836cca4cdd6ee6613ae1397408b90162b88d637f9d"
+    },
+    {
+      "path": "results/v5/publication/public-venv.stderr",
+      "bytes": 102,
+      "sha256": "2c1e5c021ef59d6384f9147c7b7e37b25cc006875b68e04d25bb714886b1e0b2"
+    },
+    {
+      "path": "results/v5/publication/public-venv.stdout",
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
     },
     {
       "path": "results/v5/repository_reproduction.json",

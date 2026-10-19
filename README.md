@@ -1,6 +1,6 @@
 # AIMO-Interp: problem-only controls and public-label audit
 
-The v5 technical draft is complete locally: five NeurIPS-format pages, 87 checked
+The v5 technical draft is public: five NeurIPS-format pages, 87 checked
 numeric values and 89 rendered placeholders. It is not submitted. Public-data
 control balanced accuracy is 0.6855 and plain accuracy is 0.7674; private-validation
 and final-test performance are UNMEASURED. The method track remains folded and
@@ -15,6 +15,8 @@ The inherited pre-v5 README is preserved at `research/history/README_pre_v5.md`.
 Use Python 3.12 and the pinned local dependencies:
 
 ```sh
+git clone https://github.com/testofschool/aimo-interp-abc.git
+cd aimo-interp-abc
 uv venv --python 3.12 .venv
 uv pip install --python .venv/bin/python -r requirements-local.txt
 .venv/bin/python -I tools/fetch_data.py --output-dir data
@@ -58,8 +60,13 @@ PDF hash and font/key/reference checks are in `report/render_qa_v5.json`.
 The owner confirmed account `testofschool` and no submission yet. `kangmin` rows
 are not used as evidence. Host-only checks do not establish private scores or
 GPU-image parity. See `OWNER_CHECKLIST_v5.md`; uploads and OpenReview submission
-remain owner actions. Public repository publication and a public-remote fresh
-clone remain pending. The prepared export has a separate local-clone receipt.
+remain owner actions. Public publication and anonymous fresh-clone reproduction
+passed on 2026-10-20 KST at commit `6fef8753b2e21b0c53098e77fdbc6e72ad4d4251`.
+See `PUBLICATION.md` and `results/v5/publication/` for public HEAD, V1-V4 outputs,
+data downloads, bundle rebuild and identical TeX source. Subsequent publication
+receipt/documentation commits preserve the tested scientific bytes. The report
+PDF retains its prepublication snapshot statements; this README records the
+current release state.
 
 ## Evidence boundaries
 

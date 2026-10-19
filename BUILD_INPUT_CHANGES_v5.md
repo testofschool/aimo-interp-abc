@@ -108,3 +108,12 @@ Compared with the saved pre-v5 working tree, including earlier uncommitted work.
 Protected inputs checked unchanged: four parquet files; original F12 Small ZIP; strengthened tools/grouped_eval.py and tools/submit_gate.py; original research/kill_reports.md. Generated build directories are retained locally but excluded from this change table; final render evidence is copied into report/qa_v5/.
 
 The public export is a separate allowlisted Git repository. Its tested code/manuscript commit is 6e9003b47ab624310f08a4a78192046da9671370; subsequent receipts/documentation do not change the tested source. Original repository history and prior GPU launcher/log files are not published.
+
+## Publication follow-up — 2026-10-20 KST
+
+Only current-state documentation and public readback receipts were added/updated:
+README.md, RUN_STATUS.json, OWNER_CHECKLIST_v5.md, report/README.md,
+EXECUTION_REPORT_v5.md, PUBLICATION.md, this changelog, RELEASE_FILES.json, and
+results/v5/publication/. Scientific manuscripts, PDF, numeric registry, code,
+input manifests and ZIPs retain their tested bytes. Exact before/after hashes for
+this follow-up are in results/v5/publication/documentation_changes.json.
