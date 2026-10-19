@@ -1,6 +1,6 @@
 # v6 execution report — CPU only
 
-Current scope: T1–T3 and final report builds are verified locally. Public publication/readback is recorded separately in PUBLICATION.md. Owner submissions are UNMEASURED; T5 is scheduled, not executed.
+T1–T3 and T6 are verified, including public anonymous fresh-clone/new-venv V1–V6. Exact public scientific HEAD and readback are recorded in PUBLICATION.md. Owner submissions are UNMEASURED; T5 is scheduled, not executed.
 
 ## Tracks
 

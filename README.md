@@ -14,6 +14,9 @@ first occurs at 158 items and is sustained from 169; at accuracy 0.65 the counts
 are 69 and 76. These are single fixed predictor calculations, without leaderboard
 selection or multiple-owner correction. The report keeps those limits explicit.
 
+Public anonymous fresh-clone V1–V6 passed at scientific commit `e2fa9b64d1466be4b8b4069b20f7678d69aaabfb`;
+see `PUBLICATION.md` and `results/v6/publication/`.
+
 Read `report/REPORT_DRAFT.md`, the named and anonymous v6 PDFs under `report/`,
 `EXECUTION_REPORT_v6.md`, and `PUBLICATION.md`. The v5 report and its execution
 receipts remain historical evidence. Two frozen owner bundle scores and final-test
