@@ -1,0 +1,12 @@
+{
+  "status": "WORKING_DRAFT_NOT_SUBMITTED",
+  "author_kit_url": "https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip",
+  "author_kit_sha256": "82473931e3ef710fcd3f4a8cd4119b9de32e56825f90f9e5a6d55f2d01b817d9",
+  "style_sha256": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a",
+  "style_embedded_unmodified": true,
+  "style_option": "preprint",
+  "content_sha256": "a93fb36b4cac6065101f7a7f8fffc70df2332eb5b1042eb0774abc3034eed364",
+  "source_sha256": "95e9dde2250115e4a2475325a8719aa29527ac0992305257ab5ee2d1f3fa242b",
+  "content_path": "report/REPORT_DRAFT.md",
+  "content_source": "Gated REPORT_OUTLINE.md rendered with results/report_numbers.json"
+}

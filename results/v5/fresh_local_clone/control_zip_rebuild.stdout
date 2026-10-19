@@ -1,0 +1,17 @@
+{
+  "status": "PASS",
+  "bundles": [
+    {
+      "bundle": "solution-text-length-control.zip",
+      "sha256": "1ff8a93e4e0543aca97e78e5b3a4be1c29d2a7fb8fdc0107cf28b728a10ecea2",
+      "bytes": 1291,
+      "identical_to_supplied": true
+    },
+    {
+      "bundle": "solution-text-length-control-small.zip",
+      "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "bytes": 1387,
+      "identical_to_supplied": true
+    }
+  ]
+}

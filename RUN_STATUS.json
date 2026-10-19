@@ -1,0 +1,76 @@
+{
+  "goal": "v5 report execution, CPU only",
+  "active_handoff": "HANDOFF_v5.md",
+  "overall": "LOCAL_REPORT_READY_EXTERNAL_RELEASE_AND_OWNER_SUBMISSIONS_PENDING",
+  "preregistered": {
+    "V1": {
+      "result": "PASS",
+      "checked": 13,
+      "exit": 0
+    },
+    "V2": {
+      "result": "PASS",
+      "placeholders": 17,
+      "exit": 0
+    },
+    "V3": {
+      "result": "PASS",
+      "checked": 12
+    },
+    "V4": {
+      "result": "CLOSED",
+      "exit": 1,
+      "expected": true
+    }
+  },
+  "final_numeric_gates": {
+    "V1_claims": 87,
+    "V2_placeholders": 89,
+    "status": "PASS"
+  },
+  "report": {
+    "pdf": "report/aimo-interp-report-v5.pdf",
+    "sha256": "1ec9bfb0ac7e48c78ef13ae8ee78d9acdce953bd12bac1038a3bee08719194cf",
+    "pages": 5,
+    "status": "TECHNICAL_DRAFT_NOT_SUBMITTED",
+    "visual_review": "PASS all five pages",
+    "author_details": "PENDING"
+  },
+  "method_track": "FOLDED",
+  "white_box_award": "OUT; no effect inferred from unrun ablation",
+  "new_gpu_jobs": 0,
+  "new_spend_usd": 0,
+  "historical_j0_spend_usd": 0.412497,
+  "historical_billing_refreshed": false,
+  "owner": {
+    "codabench_account": "testofschool",
+    "submission": "NOT_SUBMITTED; owner confirmed in current chat",
+    "kangmin": "NOT_ATTRIBUTED",
+    "private_validation": "UNMEASURED",
+    "final_test": "UNMEASURED",
+    "discord_nomination": "PENDING",
+    "openreview_receipt": "ABSENT"
+  },
+  "release": {
+    "requested_public_repo": "https://github.com/testofschool/aimo-interp-abc",
+    "public_remote": "UNRUN; repository not found on current authenticated check",
+    "local_export": "READY_NOT_PUBLISHED",
+    "local_fresh_clone": {
+      "status": "PASS",
+      "scope": "LOCAL_ONLY",
+      "tested_commit": "6e9003b47ab624310f08a4a78192046da9671370",
+      "receipt": "results/v5/fresh_local_clone/receipt.json"
+    }
+  },
+  "entry_bundles": {
+    "text_control_sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+    "always_true_sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a"
+  },
+  "unrun": [
+    "Public repository publication and public fresh-clone verification",
+    "Owner Codabench uploads, native scores/screenshots, final-test nomination",
+    "Private validation and final-test evaluation",
+    "Human author review and final OpenReview form/receipt",
+    "New GPU methods, white-box effect and ablation"
+  ]
+}

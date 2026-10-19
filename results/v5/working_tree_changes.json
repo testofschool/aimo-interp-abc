@@ -1,0 +1,810 @@
+{
+  "base": "pre-v5 snapshot of working tree, not only HEAD",
+  "excluded_generated": [
+    "report/build/",
+    "report/neurips_2026.sty",
+    "this manifest and BUILD_INPUT_CHANGES_v5.md"
+  ],
+  "changes": [
+    {
+      "path": "EXECUTION_REPORT_v5.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "9dfd486146c0b7fa5372b2ceec67f08a7fdc02b7038ceb66bcf49a8ca73bf199",
+      "bytes": 10163,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "HANDOFF_v5.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "85dcc5543369b77dbf6bc6dac8af0aa1971c22c6e17d03d5fd8c3eecef30f4eb",
+      "bytes": 4065,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "OWNER_CHECKLIST_v5.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "76d3459ccb73f8f310e01f12b7f3ba859e65f526d632520365300f6c6e55f385",
+      "bytes": 2348,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "README.md",
+      "action": "MODIFY",
+      "before_sha256": "107c674e247effbc5c46e533a484add6902ff5e1d1f3bb677cf90ff3a4a89405",
+      "after_sha256": "4f402f637d6e3760ae505ea1c20c5832d2dc9c9ec7ff43c8932bd6b9cd46ae1f",
+      "bytes": 4152,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "RUN_STATUS.json",
+      "action": "MODIFY",
+      "before_sha256": "1098d8a253ccb170095f55aaca65a1a15170c42088c58235e9cd0a534ba1b0ca",
+      "after_sha256": "c8a91a85bb947f9c939d691d881029d5e72d877a07b7b8050b5a86805b734b01",
+      "bytes": 2406,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "bundles/solution-always-true-small.zip",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "bytes": 519,
+      "purpose": "Official always-true Small bundle preparation; original control unchanged"
+    },
+    {
+      "path": "data/evidence/api-receipts.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "de03eca07038f895446be21b2a81f1361b9d936f90070cf75adef024ed07db14",
+      "bytes": 4505,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/evidence/augmented-sample-math-agg-api.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "595558034436dfe99ed14fed24e48f495f31a15c83a3a3b281479a3e1dc3f34a",
+      "bytes": 1953,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/evidence/augmented-sample-math-agg-pinned-README.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "095f3ed5c320768403721b60a38000ba80df3f5495a0ae761c0eed1909bf704b",
+      "bytes": 988,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/evidence/augmented-sample-math-agg-pinned-api.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "595558034436dfe99ed14fed24e48f495f31a15c83a3a3b281479a3e1dc3f34a",
+      "bytes": 1953,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/evidence/sample-full-api.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "a6a36f944a72bbcb8a707bdecdd70dd474c7b7aad28e90dad37a55e6157b2504",
+      "bytes": 1919,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/evidence/sample-full-pinned-README.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "eec3e442f584ba6c95080ddad89f50cdb184f7ef8ea0830593b647de546a8dfa",
+      "bytes": 946,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/evidence/sample-full-pinned-api.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "a6a36f944a72bbcb8a707bdecdd70dd474c7b7aad28e90dad37a55e6157b2504",
+      "bytes": 1919,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/evidence/train-main-v2-api.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "a1da6f844aabe7ea0ab49d45ce849f02c8bdf3f94629b5260f5ba05859c1d45a",
+      "bytes": 1718,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/evidence/train-main-v2-pinned-README.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "6286baddd7b622adb3e1e20d86049ae46aa755af9f92d95b1becfdeb76b97eda",
+      "bytes": 2446,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/evidence/train-main-v2-pinned-api.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "a1da6f844aabe7ea0ab49d45ce849f02c8bdf3f94629b5260f5ba05859c1d45a",
+      "bytes": 1718,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/evidence/val-sample-api.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "6ead5eb834407a4baa90e4b3bfe57374465f3df959b2d5e48b67c0c93b3d01b9",
+      "bytes": 1908,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/evidence/val-sample-pinned-README.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "f58729a564594c54e204f913270b3cb36c9cee24e5ce7589ee92a18d34abde0a",
+      "bytes": 985,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/evidence/val-sample-pinned-api.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "6ead5eb834407a4baa90e4b3bfe57374465f3df959b2d5e48b67c0c93b3d01b9",
+      "bytes": 1908,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "data/manifest.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "582b323bec57130c682b4c910d6fbfdfaf7ab0fa14ff45a050180fe55df8ada5",
+      "bytes": 7141,
+      "purpose": "Dataset provenance manifest and public API/card evidence; parquet unchanged"
+    },
+    {
+      "path": "report/ALLOWED_LITERALS.txt",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "8a711abeab8a4b27d497a395a60d8a987c40ce99e68b381338f64288a2522f8f",
+      "bytes": 740,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/CLAIMS_TABLE.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "3535f2792f534c0574008d1830525eb0c6e62ffee2a30bd28af1b04ccc0a6c28",
+      "bytes": 5285,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/PREREGISTERED_OUTLINE_v5.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "2cf375dce9986be8bc80a8bccfa6e365f4198b218ab0c288db61d6807ca76735",
+      "bytes": 2168,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/README.md",
+      "action": "MODIFY",
+      "before_sha256": "5007894483dcb814ad23754727f958f355d7118a48fed723906f311343ddcdc5",
+      "after_sha256": "3ce322c388a53ebe11faf4b32c1af29beef34cb6dce190c15ffdadb973d6ef23",
+      "bytes": 1850,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/REPORT_DRAFT.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "a93fb36b4cac6065101f7a7f8fffc70df2332eb5b1042eb0774abc3034eed364",
+      "bytes": 14137,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/REPORT_OUTLINE.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "a8accb9a1ea98b131e8a0fa3930e51d73729dfd8fab651a760134eafec61408b",
+      "bytes": 16448,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/aimo-interp-report-v5.pdf",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "1ec9bfb0ac7e48c78ef13ae8ee78d9acdce953bd12bac1038a3bee08719194cf",
+      "bytes": 108466,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/create_source.py",
+      "action": "MODIFY",
+      "before_sha256": "f3d7fafc5946ab6f0ec420c5cd5fc08672c75622cf2543175e227ca84f386659",
+      "after_sha256": "19aeb33d89c290b23e8f8c07f5892b1f3528dc207afed214a5df605b353de28f",
+      "bytes": 8564,
+      "purpose": "Derive NeurIPS source from gated final draft; update title and table captions"
+    },
+    {
+      "path": "report/key_strings_v5.txt",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "2dc25dca2be7e8917e52b959cdcfcf86dda57b501d9567d15f20253466941096",
+      "bytes": 228,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/main.tex",
+      "action": "MODIFY",
+      "before_sha256": "ee3d3e279a76110d932fb69796d46f1e429b398526bf01a17842010a1454ec6e",
+      "after_sha256": "95e9dde2250115e4a2475325a8719aa29527ac0992305257ab5ee2d1f3fa242b",
+      "bytes": 30228,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/pdffonts_v5.txt",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "b795bb59b1225de4bd02eeba3c642137aa9f8f2aa15c03c94c5d79b93a80616f",
+      "bytes": 564,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/qa_v5/01-latex-initial.log",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "6587fa9856825298273cb070bf90840ad3a862f74308c7a137dd311137638fe6",
+      "bytes": 9481,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/qa_v5/02-latex-rerun-1.log",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "7bea904d45545fd255f56b0551b3e3ba8c72b5dd478d59332f403b2276f22157",
+      "bytes": 8170,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/qa_v5/03-pdf-battery.log",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "de11ff3976f2cd1f1cb43bab3112409cc7496459b6160523e5eb2c336f9f787c",
+      "bytes": 165,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/qa_v5/build-receipt.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "170a749198361acb76c34c2889182f7a871da50fcb909cdc045b8e3b5f3e2b58",
+      "bytes": 3982,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/qa_v5/page-1.png",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "c357dea23d92869d8243c6b047d00e34be83a6a9d48136b90f277519d895fac7",
+      "bytes": 217158,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/qa_v5/page-2.png",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "857198fffc67107b22aef91884c05d417c16e1ae75665afdeb00b1f1ce284193",
+      "bytes": 250178,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/qa_v5/page-3.png",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "9a3afe56bd8513330be62573e9a7d3dc854fbbe0e738530b28a902ce2abf7249",
+      "bytes": 250327,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/qa_v5/page-4.png",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "989060a7dc44e77fdacf7a2552492049e541f1b03a74c9bbecd2d800f32a396c",
+      "bytes": 227736,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/qa_v5/page-5.png",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "3dd6fcf17c817bd22684fca2fe85cea4bdc073aa3587ce0afc99aed1a6b054ff",
+      "bytes": 84236,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/render_qa_v5.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "41339d06a607c31ba920157ef26aec1fcef397dba53aaf217a2c44917ad49d86",
+      "bytes": 1201,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "report/source_provenance.json",
+      "action": "MODIFY",
+      "before_sha256": "d7ef24c2138578eea5ef67a40e5e3dc42b6f686c38d099160f448fbaf76e0656",
+      "after_sha256": "12527056f0df3a58362cda836cca4cdd6ee6613ae1397408b90162b88d637f9d",
+      "bytes": 715,
+      "purpose": "Gated report content, standalone source, PDF, numeric table and render evidence"
+    },
+    {
+      "path": "research/SOLUTION4.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "0be523f832714da691db2ef5e5945348cf5cf3ab7b8dd14209cc140061339876",
+      "bytes": 1494,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/SWEEP4.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "f86abe3835925fbc73afcb3834533e00bd691743f9e5df5c51f22c5811741894",
+      "bytes": 11209,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/claims.json",
+      "action": "MODIFY",
+      "before_sha256": "ffb791def4bac0e191c9f94b7d236f7e20cf3200640841f191675c52be2e32b9",
+      "after_sha256": "f840afee77144212d1a4e7c492b73d7220de2f9664dea21dbe44ee9e077e3885",
+      "bytes": 13615,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/history/README_pre_v5.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "107c674e247effbc5c46e533a484add6902ff5e1d1f3bb677cf90ff3a4a89405",
+      "bytes": 8219,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/history/report_README_pre_v5.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "5007894483dcb814ad23754727f958f355d7118a48fed723906f311343ddcdc5",
+      "bytes": 2978,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/preregistered_v5_claims.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "81dba39316273bffd14800bb19413d1d06d5ed41cc2adb54de6307f7b862ca4e",
+      "bytes": 1914,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/sweep4_report.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "cf2da05641a1ae6b27508db0d7d0dc18b8793d43d144b2884278f480ace305a3",
+      "bytes": 2829,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/v5_kill_reports.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "6654db3001f77d00178854df5e970565149df23a0f02583acb6e526115d8e7c6",
+      "bytes": 4679,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/v5_sources/AUTHORITY_LEDGER.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "07c29678e77eb740053ad52ac188da4e0486ce682860772940bf332f8376b5d1",
+      "bytes": 13906,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/v5_sources/SOURCE_MANIFEST.md",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "4689f8ec9257e967202d88a1d9436116da7439d92f2c7f45244f5da7d31a2cc5",
+      "bytes": 5357,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/v5_sources/integrity_check.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "d16a322d2585218535d7bc17de2400acbc1d92cb038fac5780262491b582269e",
+      "bytes": 96,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/v5_sources/raw_manifest.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "3d87201f38b29c25954cfc6f59a03f5eb26e157cb827b1ba6de6bae0b2a28df1",
+      "bytes": 21293,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/v5_sources/source_comparisons.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "d1b9ff60a9cd1b0ad54b38a27dbbb0523ad1fc627dcecb7e9742c42cf42003d9",
+      "bytes": 973,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "research/v5_sources/token_checks.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "f459d577d5565cf67fac8a5cfbcf48ed5e44777d89c358ed7d890df6d8b2151b",
+      "bytes": 387,
+      "purpose": "v5 inherited context, numeric registry, source ledger or historical preservation"
+    },
+    {
+      "path": "results/report_numbers.json",
+      "action": "MODIFY",
+      "before_sha256": "0f97f0d5133f2ce1cc8752de862d1d43832110fb2a310b97257b7aa4fdea9909",
+      "after_sha256": "28e0a5717beb716f18c63d39f0b43462e3e4f0512cc3d5e82c2243dfc7ef3308",
+      "bytes": 2859,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/V1.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/V1.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "c71f918cfe3864ca6718f06a853495e548bc4c80ab4d36b893816183f9e2a4a0",
+      "bytes": 57,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/V2.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/V2.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "f93ecd04fd01d8fffb8d67425dafcb8242d89f9db9666980ff69a12687b79273",
+      "bytes": 72,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/V4.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/V4.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "0aaf0997f6b93ad7e559b50c0663ecd38bc87cad6226d98894ab9b6e5b847713",
+      "bytes": 90,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/always-true-provenance.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "175a95bc3177ba2b8525924a0a979310946138eb657ac8f1417503096d06b319",
+      "bytes": 4170,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fetch-verification.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "962b5786a231ac203969759bbe238fe7c76e0626f2a431e2a8806adabf91e04f",
+      "bytes": 2725,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/clone.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "272cec83896c7704d44d4f320bbd89305682faf3372c6e48acd0915c4be74e7c",
+      "bytes": 102,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/clone.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/control_zip_rebuild.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/control_zip_rebuild.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "7aeeeb6e118c28c8cb191ac7795b725a78d2e92c3283dc9bc7b356db17bc1f2e",
+      "bytes": 460,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/cpu-gates.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "2f08d79531960456d8ab95a4ab85d9cfcd145dc2483f78d1c59407fc4121216f",
+      "bytes": 3160,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/cpu_gates.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/cpu_gates.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "8e4a58ef69c47c22c31ce1a33dca93b04455544a66deef815aca22a38f790a5e",
+      "bytes": 647,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/data_fetch.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/data_fetch.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "de47a2b87e39d9cc3826618ff44d9945b45ea84cbed400bb0b5aca5608dcf169",
+      "bytes": 469,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/dependencies.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "7ff559d607dd6bf25ae85aa0d7efa9a5b33a960c9a24de11feeeb6c542baf58a",
+      "bytes": 683,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/dependencies.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/receipt.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "6ed2a4bed165a70ded961badcbf2e2e46ab8e57eba1de45226fe02e3c5df5e57",
+      "bytes": 3889,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/tex_source_rebuild.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/tex_source_rebuild.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "12527056f0df3a58362cda836cca4cdd6ee6613ae1397408b90162b88d637f9d",
+      "bytes": 715,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/venv.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "2c1e5c021ef59d6384f9147c7b7e37b25cc006875b68e04d25bb714886b1e0b2",
+      "bytes": 102,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/fresh_local_clone/venv.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/host-contract.stderr.txt",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/host-contract.stdout.txt",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "a1acf33f417d64bf80bd7621f1f0e27bef4a9e683de0f044d5f088894cdbd489",
+      "bytes": 71,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/integration_manifest.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "3b7f36ffb40c9fd69b16b094488ad95f9bc3f689e0329332adb6c7786c0749e1",
+      "bytes": 1931,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/numbers.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/numbers.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "1f22fc5aa7ff640a0fe83acb51b575132b2f9a088d0fec5813839f07c828bae3",
+      "bytes": 1360,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/numeric_guard_checks.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "0d9dd1539d4717346f1082aa9d27bbb913e8e0100366ceffd4a3e8d037435302",
+      "bytes": 1655,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/pdf_battery.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/pdf_battery.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "4f793a583e826d8131bc44016294756d454be2311635a488023417c5212f0dc1",
+      "bytes": 1395,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/pre_v5_RUN_STATUS.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "1098d8a253ccb170095f55aaca65a1a15170c42088c58235e9cd0a534ba1b0ca",
+      "bytes": 11918,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/preregistered_receipt.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "b5b5fb002bc8df920f321d6e7daaa3f56dbdb364ba52ff2fb8dbefe34b2c57b7",
+      "bytes": 1318,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/protected-inputs-check.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "db41a43ee6ba3c18fefcdd4d123bd6e01b3193a8f8b12d10978bb9d1434a07a0",
+      "bytes": 1591,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/report_numbers.regenerated.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "a08044c37d6d7787311da6318932e773b1e79d3ecb723813920ab384c2a9207f",
+      "bytes": 1359,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/repository_reproduction.json",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "33169302bd8a912779f4de7ce383b68801f1a4dc348b50b0e8d27d7d379f0187",
+      "bytes": 3055,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/repository_reproduction.stderr",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "results/v5/repository_reproduction.stdout",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "e7667ec06dfc0bd0647258d4eaf78400fc488dc971cef5019564b578998701ea",
+      "bytes": 647,
+      "purpose": "Execution state, owner handoff, provenance or verification receipts"
+    },
+    {
+      "path": "tools/fetch_data.py",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "a6eef5df3c40059625a1253a2d2f6714e942d85fdf2e7269549361411e2142d8",
+      "bytes": 6323,
+      "purpose": "Fetch exact pinned HF bytes; verify size/hash; mismatch STOP"
+    },
+    {
+      "path": "tools/render_report.py",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "45819afce13e8f243bc83add9b9268233e54862f12b6f6565f1f974425ffcd4a",
+      "bytes": 2745,
+      "purpose": "Require numeric registry membership/value equality before rendering"
+    },
+    {
+      "path": "tools/report_numbers.py",
+      "action": "MODIFY",
+      "before_sha256": "6e1d8f74b18cc96994072a3d0dc233b463ef6b5b36b943d0dae0bac8263991a5",
+      "after_sha256": "85706dc9e8f2591262622751fc366b78f18941aa5ff840075e245d5e5e49f345",
+      "bytes": 11995,
+      "purpose": "Preserve original metrics; verify input hashes; add accuracy, sensitivity and specified bootstrap"
+    },
+    {
+      "path": "tools/reproduce_report.py",
+      "action": "ADD",
+      "before_sha256": null,
+      "after_sha256": "1f6526e65e33062aa46ea3b76184e28569fb579387ea81f423803f0c0cf9416e",
+      "bytes": 4259,
+      "purpose": "Reproduce original/final gates; compare tracked output bytes; expected CLOSED handled explicitly"
+    }
+  ]
+}

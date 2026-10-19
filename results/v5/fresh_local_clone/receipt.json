@@ -1,0 +1,111 @@
+{
+  "scope": "LOCAL_FRESH_CLONE_ONLY_NOT_PUBLIC_REMOTE",
+  "source_commit": "6e9003b47ab624310f08a4a78192046da9671370",
+  "source": "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/public-release",
+  "clone": "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone",
+  "checks": [
+    {
+      "name": "clone",
+      "argv": [
+        "git",
+        "clone",
+        "--no-local",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/public-release",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone"
+      ],
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge",
+      "exit_code": 0,
+      "stdout_file": "clone.stdout",
+      "stderr_file": "clone.stderr"
+    },
+    {
+      "name": "venv",
+      "argv": [
+        "uv",
+        "venv",
+        "--python",
+        "3.12",
+        ".venv"
+      ],
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone",
+      "exit_code": 0,
+      "stdout_file": "venv.stdout",
+      "stderr_file": "venv.stderr"
+    },
+    {
+      "name": "dependencies",
+      "argv": [
+        "uv",
+        "pip",
+        "install",
+        "--python",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone/.venv/bin/python",
+        "-r",
+        "requirements-local.txt"
+      ],
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone",
+      "exit_code": 0,
+      "stdout_file": "dependencies.stdout",
+      "stderr_file": "dependencies.stderr"
+    },
+    {
+      "name": "data_fetch",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone/.venv/bin/python",
+        "-I",
+        "tools/fetch_data.py",
+        "--output-dir",
+        "data"
+      ],
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone",
+      "exit_code": 0,
+      "stdout_file": "data_fetch.stdout",
+      "stderr_file": "data_fetch.stderr"
+    },
+    {
+      "name": "cpu_gates",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone/.venv/bin/python",
+        "-I",
+        "tools/reproduce_report.py",
+        "--receipt",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-clone-logs/cpu-gates.json"
+      ],
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone",
+      "exit_code": 0,
+      "stdout_file": "cpu_gates.stdout",
+      "stderr_file": "cpu_gates.stderr"
+    },
+    {
+      "name": "control_zip_rebuild",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone/.venv/bin/python",
+        "-I",
+        "tools/rebuild_control_bundles.py"
+      ],
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone",
+      "exit_code": 0,
+      "stdout_file": "control_zip_rebuild.stdout",
+      "stderr_file": "control_zip_rebuild.stderr"
+    },
+    {
+      "name": "tex_source_rebuild",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone/.venv/bin/python",
+        "-I",
+        "report/create_source.py"
+      ],
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/fresh-local-clone",
+      "exit_code": 0,
+      "stdout_file": "tex_source_rebuild.stdout",
+      "stderr_file": "tex_source_rebuild.stderr"
+    }
+  ],
+  "tex_source_identical": true,
+  "source_sha256": "95e9dde2250115e4a2475325a8719aa29527ac0992305257ab5ee2d1f3fa242b",
+  "report_pdf_sha256": "1ec9bfb0ac7e48c78ef13ae8ee78d9acdce953bd12bac1038a3bee08719194cf",
+  "result": "PASS",
+  "private_scores": "UNMEASURED",
+  "new_gpu_jobs": 0,
+  "spend_usd": 0
+}
