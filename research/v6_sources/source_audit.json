@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "repo": "https://github.com/byeolki/aimo-interp",
+      "revision": "3b678f62432dda6e2c3124b670fc4bcaed9453ab",
+      "path": "LICENSE",
+      "sha256": "f6df01570441d4d657b11c1d298e75e8e952b78c683a0a9fce05c22b68444863",
+      "bytes": 1070,
+      "method": "git show exact public commit; no submodules initialized"
+    },
+    {
+      "repo": "https://github.com/byeolki/aimo-interp",
+      "revision": "3b678f62432dda6e2c3124b670fc4bcaed9453ab",
+      "path": "data/self_labels.jsonl",
+      "sha256": "78ca645a7e9f36c23264d27c262b3e82408d0fdd119a35821fb1bc41605d155f",
+      "bytes": 268340,
+      "method": "git show exact public commit; no submodules initialized"
+    },
+    {
+      "repo": "https://github.com/byeolki/aimo-interp",
+      "revision": "3b678f62432dda6e2c3124b670fc4bcaed9453ab",
+      "path": "experiments/02-self-labels/RESULTS.md",
+      "sha256": "cc9affe6b02ea5604717dead9ccc52a21d5c93c18b9e300aca00fdb18324982c",
+      "bytes": 4525,
+      "method": "git show exact public commit; no submodules initialized"
+    },
+    {
+      "repo": "https://github.com/byeolki/aimo-interp",
+      "revision": "3b678f62432dda6e2c3124b670fc4bcaed9453ab",
+      "path": "report/report.html",
+      "sha256": "763ef1c27fba6718126e8e5b0716cbfdc736eb104bf3d90c18fa8f949bbf54dd",
+      "bytes": 15680,
+      "method": "git show exact public commit; no submodules initialized"
+    }
+  ],
+  "license": "MIT at pinned commit; checked before optional computation",
+  "raw_data_redistributed": false,
+  "prior_report_title": "Prompt Probes Read Solve Rate, Not Robustness: Negative Results from the AIMO Interpretability Challenge",
+  "prior_balance_claim": "Participant-reported, not independent organizer confirmation",
+  "prior_later_exclusion": "RESULTS.md Update 2026-10-12 excludes AIME 2024-2026; full 150-problem optional calculation is a historical sensitivity only",
+  "openreview": "Exact invitation unavailable via web tool; prior v5 public API 404 does not establish anonymity; both variants retained",
+  "initial_network_probes": "Python3.10 default CA failed; curl DNS failures on several source domains; pinned git readback succeeded"
+}

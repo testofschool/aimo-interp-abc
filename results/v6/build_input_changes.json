@@ -1,0 +1,311 @@
+{
+  "base": "9274840b6faacaa7ad0e321172071eedb822d9de",
+  "files": [
+    {
+      "path": "data/leaderboard/2026-10-19/lb1.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 34412,
+      "byte_delta": 34412,
+      "before_sha256": null,
+      "after_sha256": "fc7338524b81410324f3e3588aee42ff8a0bb67e5b3ad36b24a6903986d066c2"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb2.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 32636,
+      "byte_delta": 32636,
+      "before_sha256": null,
+      "after_sha256": "7fcb939214bfb1e673975cf1f3f9de100a074ba5c459da067af90ccc2ef1a4cd"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb3.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 33836,
+      "byte_delta": 33836,
+      "before_sha256": null,
+      "after_sha256": "ac33b9f4cd4e1e626f19a71b397d5a1a8a756f3fd78ef37e91c7477568a705df"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb4.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 33130,
+      "byte_delta": 33130,
+      "before_sha256": null,
+      "after_sha256": "22331c134be761029c5adefe18a08620f5a8ee84c70a6e4ca205779307abdc1e"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb5.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 33365,
+      "byte_delta": 33365,
+      "before_sha256": null,
+      "after_sha256": "89822694e89aaa4c5743ee2a84113b97386dbfa9a2ae13dc090a72df35b382a4"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb6.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 33333,
+      "byte_delta": 33333,
+      "before_sha256": null,
+      "after_sha256": "cc94df6dcee715c110332b8df677e917151501cbeb76fec21cdcd4448c34043e"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb7.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 33433,
+      "byte_delta": 33433,
+      "before_sha256": null,
+      "after_sha256": "e909516e2644adca80b744d2a10a88b788fbf6b7bce2a96be8e3e921d8765464"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb8.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 33095,
+      "byte_delta": 33095,
+      "before_sha256": null,
+      "after_sha256": "fa507d52739648f820ecb253f6ab1c5f1f6d08a2415d609628d2ad61fb1bea9f"
+    },
+    {
+      "path": "data/manifest.json",
+      "action": "MODIFY",
+      "before_bytes": 7141,
+      "after_bytes": 9575,
+      "byte_delta": 2434,
+      "before_sha256": "582b323bec57130c682b4c910d6fbfdfaf7ab0fa14ff45a050180fe55df8ada5",
+      "after_sha256": "e18ab9b669af40d466b7c479322666322431c11afd1223520e4754252a2767a9"
+    },
+    {
+      "path": "report/ALLOWED_LITERALS.txt",
+      "action": "MODIFY",
+      "before_bytes": 740,
+      "after_bytes": 885,
+      "byte_delta": 145,
+      "before_sha256": "8a711abeab8a4b27d497a395a60d8a987c40ce99e68b381338f64288a2522f8f",
+      "after_sha256": "52241dee1c650223fa35372c68dd4729b61c6727532b3a872239ec3a0a442cb3"
+    },
+    {
+      "path": "report/REPORT_OUTLINE.md",
+      "action": "MODIFY",
+      "before_bytes": 16448,
+      "after_bytes": 34741,
+      "byte_delta": 18293,
+      "before_sha256": "a8accb9a1ea98b131e8a0fa3930e51d73729dfd8fab651a760134eafec61408b",
+      "after_sha256": "c8f1cce12d001bcbde61f7069fcb9a57b2946ecd646cd79d2a1dd5e93e75edee"
+    },
+    {
+      "path": "report/create_source.py",
+      "action": "MODIFY",
+      "before_bytes": 8564,
+      "after_bytes": 9978,
+      "byte_delta": 1414,
+      "before_sha256": "19aeb33d89c290b23e8f8c07f5892b1f3528dc207afed214a5df605b353de28f",
+      "after_sha256": "fb04f202259ec794d115a0b8ebf6a792dc01430f85c9a70a1e08eff58b5bbf2b"
+    },
+    {
+      "path": "report/main-anonymous.tex",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 47900,
+      "byte_delta": 47900,
+      "before_sha256": null,
+      "after_sha256": "513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e"
+    },
+    {
+      "path": "report/main.tex",
+      "action": "MODIFY",
+      "before_bytes": 30228,
+      "after_bytes": 47901,
+      "byte_delta": 17673,
+      "before_sha256": "95e9dde2250115e4a2475325a8719aa29527ac0992305257ab5ee2d1f3fa242b",
+      "after_sha256": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9"
+    },
+    {
+      "path": "requirements-local.txt",
+      "action": "UNCHANGED",
+      "before_bytes": 190,
+      "after_bytes": 190,
+      "byte_delta": 0,
+      "before_sha256": "a37eb58d8c0278e1643bdb132b53b3d382013a9e39e86a03f3501d4acf4769ae",
+      "after_sha256": "a37eb58d8c0278e1643bdb132b53b3d382013a9e39e86a03f3501d4acf4769ae"
+    },
+    {
+      "path": "research/PREREG_v6.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 1373,
+      "byte_delta": 1373,
+      "before_sha256": null,
+      "after_sha256": "cd0ee93fbb536f9de02f626164b40915eb3be7ed95b69b5b154f0fd3fed81a36"
+    },
+    {
+      "path": "research/claims.json",
+      "action": "MODIFY",
+      "before_bytes": 13615,
+      "after_bytes": 25944,
+      "byte_delta": 12329,
+      "before_sha256": "f840afee77144212d1a4e7c492b73d7220de2f9664dea21dbe44ee9e077e3885",
+      "after_sha256": "759c24ece59323610147a958c13fa1e798f350f3110e81ec39d31b2db8c687a5"
+    },
+    {
+      "path": "research/identifiability_expected_v6.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 955,
+      "byte_delta": 955,
+      "before_sha256": null,
+      "after_sha256": "c0555b415e6a5a226fa60f21e5db49267702b4343742395252df5fadfa18bc15"
+    },
+    {
+      "path": "research/live_audit/neurips2026_author_kit.zip",
+      "action": "UNCHANGED",
+      "before_bytes": 20259,
+      "after_bytes": 20259,
+      "byte_delta": 0,
+      "before_sha256": "82473931e3ef710fcd3f4a8cd4119b9de32e56825f90f9e5a6d55f2d01b817d9",
+      "after_sha256": "82473931e3ef710fcd3f4a8cd4119b9de32e56825f90f9e5a6d55f2d01b817d9"
+    },
+    {
+      "path": "tests/fx_badsha.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 396,
+      "byte_delta": 396,
+      "before_sha256": null,
+      "after_sha256": "d0c55179b917fd86d7d6dc093480e2eb6e6a2f8bde49ddfc7e515374cca48bc4"
+    },
+    {
+      "path": "tests/fx_early.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 518,
+      "byte_delta": 518,
+      "before_sha256": null,
+      "after_sha256": "37b72149e1b793f259facc7d1aa69566afba0ca325505a59eb309b35cd41fa82"
+    },
+    {
+      "path": "tests/fx_match.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 518,
+      "byte_delta": 518,
+      "before_sha256": null,
+      "after_sha256": "9252b4c06e5dd796a53763f34afe0a2addfbc78c3bcb15e28615f80fd4eea9b6"
+    },
+    {
+      "path": "tests/fx_mismatch.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 519,
+      "byte_delta": 519,
+      "before_sha256": null,
+      "after_sha256": "79171847c4fa0f88595b7ccac620a044b303bbb85263fa37f5f49d2bb0986329"
+    },
+    {
+      "path": "tests/fx_missing.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 16,
+      "byte_delta": 16,
+      "before_sha256": null,
+      "after_sha256": "1fd26fc6d9fc27bb3fe73faa4580768fc0c6221efc8311485b7d6d01809cae73"
+    },
+    {
+      "path": "tests/test_v6_gates.py",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 5066,
+      "byte_delta": 5066,
+      "before_sha256": null,
+      "after_sha256": "5d59c27e67422653b1ba7388fad4d39798cbb9a9bc086e8fcbfb0bb4be3bef27"
+    },
+    {
+      "path": "tools/codabench_receipt_scope.py",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 5526,
+      "byte_delta": 5526,
+      "before_sha256": null,
+      "after_sha256": "63287b1416a08dd856133bcdd9438b481e1d1281a47eb7926540be4e984c1430"
+    },
+    {
+      "path": "tools/fetch_data.py",
+      "action": "UNCHANGED",
+      "before_bytes": 6323,
+      "after_bytes": 6323,
+      "byte_delta": 0,
+      "before_sha256": "a6eef5df3c40059625a1253a2d2f6714e942d85fdf2e7269549361411e2142d8",
+      "after_sha256": "a6eef5df3c40059625a1253a2d2f6714e942d85fdf2e7269549361411e2142d8"
+    },
+    {
+      "path": "tools/leaderboard_identifiability.py",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 16758,
+      "byte_delta": 16758,
+      "before_sha256": null,
+      "after_sha256": "66ec8bba1b6ad8d527fc9e02469596e2f85452219a405cd2937f305869505635"
+    },
+    {
+      "path": "tools/optional_mixed_label_transfer.py",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 3872,
+      "byte_delta": 3872,
+      "before_sha256": null,
+      "after_sha256": "f3ad21750ac6a577f009b049102bb8e3c4aa82f578f8c08b1149dab3bb059bfc"
+    },
+    {
+      "path": "tools/prereg_codabench_gate.py",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 2729,
+      "byte_delta": 2729,
+      "before_sha256": null,
+      "after_sha256": "07b09da4e05af061f3457268e0ac10e0a45b2bdd28484477345fad8337ff1d9d"
+    },
+    {
+      "path": "tools/report_numbers.py",
+      "action": "MODIFY",
+      "before_bytes": 11995,
+      "after_bytes": 12555,
+      "byte_delta": 560,
+      "before_sha256": "85706dc9e8f2591262622751fc366b78f18941aa5ff840075e245d5e5e49f345",
+      "after_sha256": "37f24afae0ae0b3e2ae8ce8a6f49f28f43482df61da45d067831ac230cb875aa"
+    },
+    {
+      "path": "tools/reproduce_report.py",
+      "action": "MODIFY",
+      "before_bytes": 4259,
+      "after_bytes": 7333,
+      "byte_delta": 3074,
+      "before_sha256": "1f6526e65e33062aa46ea3b76184e28569fb579387ea81f423803f0c0cf9416e",
+      "after_sha256": "2ba3c2e074e91bd767ffd8e3b7b9f469a0b709a6650402465e93272a5fdf41ff"
+    },
+    {
+      "path": "tools/submission_text_gate.py",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 1526,
+      "byte_delta": 1526,
+      "before_sha256": null,
+      "after_sha256": "030bfa77ad2c9b1bfb1fda8e7c026a574f6feb98ed6f84daa0bd453f11c772d2"
+    },
+    {
+      "path": "tools/test_leaderboard_identifiability.py",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 4298,
+      "byte_delta": 4298,
+      "before_sha256": null,
+      "after_sha256": "26b00a1a0001518f5fc9bc2578a0b70101fb2adef4e9fa059175e23ba279961c"
+    }
+  ]
+}

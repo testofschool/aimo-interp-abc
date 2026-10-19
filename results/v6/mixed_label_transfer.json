@@ -1,0 +1,184 @@
+{
+ "self_labels_all": {
+  "set": "self_labels labelled (incl base_zero)",
+  "rows": 393,
+  "problems": 150,
+  "models": 3,
+  "robust": 312,
+  "nonrobust": 81,
+  "problems_with_gt1_label": 145,
+  "problems_mixed_labels": 44,
+  "problems_exactly_balanced": 15,
+  "rows_in_exactly_balanced": 30,
+  "size_dist": {
+   "3": 98,
+   "2": 47,
+   "1": 5
+  },
+  "control_lopo_bacc": 0.5462,
+  "control_lopo_acc": 0.4682,
+  "control_correct": 184,
+  "always_true_acc": 0.7939,
+  "bootstrap": {
+   "draws": 4000,
+   "seed": 0,
+   "valid_draws": 4000,
+   "bacc_ci95": {
+    "low": 0.4689,
+    "high": 0.6167
+   },
+   "acc_ci95": {
+    "low": 0.3985,
+    "high": 0.5362
+   },
+   "delta_bacc_ci95": {
+    "low": -0.0311,
+    "high": 0.1167
+   },
+   "delta_bacc_sd": 0.0375
+  },
+  "oracle_majority_acc": 0.888,
+  "oracle_correct": 349,
+  "oracle_majority_bacc": 0.7695,
+  "oracle_acc_on_exactly_balanced_rows": 0.5,
+  "oracle_acc_on_exactly_balanced_rows_tie0": 0.5,
+  "control_acc_on_exactly_balanced_rows": 0.5
+ },
+ "self_labels_nobase0": {
+  "set": "self_labels labelled, base_zero excluded",
+  "rows": 205,
+  "problems": 98,
+  "models": 3,
+  "robust": 124,
+  "nonrobust": 81,
+  "problems_with_gt1_label": 77,
+  "problems_mixed_labels": 24,
+  "problems_exactly_balanced": 16,
+  "rows_in_exactly_balanced": 32,
+  "size_dist": {
+   "1": 21,
+   "3": 30,
+   "2": 47
+  },
+  "control_lopo_bacc": 0.5294,
+  "control_lopo_acc": 0.5317,
+  "control_correct": 109,
+  "always_true_acc": 0.6049,
+  "bootstrap": {
+   "draws": 4000,
+   "seed": 0,
+   "valid_draws": 4000,
+   "bacc_ci95": {
+    "low": 0.4343,
+    "high": 0.6167
+   },
+   "acc_ci95": {
+    "low": 0.4396,
+    "high": 0.6182
+   },
+   "delta_bacc_ci95": {
+    "low": -0.0657,
+    "high": 0.1167
+   },
+   "delta_bacc_sd": 0.0459
+  },
+  "oracle_majority_acc": 0.8829,
+  "oracle_correct": 181,
+  "oracle_majority_bacc": 0.8561,
+  "oracle_acc_on_exactly_balanced_rows": 0.5,
+  "oracle_acc_on_exactly_balanced_rows_tie0": 0.5,
+  "control_acc_on_exactly_balanced_rows": 0.5
+ },
+ "official_small_dedup": {
+  "set": "train-main-v2 small-model labelled, dedup (model,problem): 43->43",
+  "rows": 43,
+  "problems": 22,
+  "models": 4,
+  "robust": 31,
+  "nonrobust": 12,
+  "problems_with_gt1_label": 11,
+  "problems_mixed_labels": 0,
+  "problems_exactly_balanced": 0,
+  "rows_in_exactly_balanced": 0,
+  "size_dist": {
+   "3": 2,
+   "1": 11,
+   "2": 5,
+   "4": 4
+  },
+  "control_lopo_bacc": 0.6855,
+  "control_lopo_acc": 0.7674,
+  "control_correct": 33,
+  "always_true_acc": 0.7209,
+  "bootstrap": {
+   "draws": 4000,
+   "seed": 0,
+   "valid_draws": 4000,
+   "bacc_ci95": {
+    "low": 0.4679,
+    "high": 0.9355
+   },
+   "acc_ci95": {
+    "low": 0.5476,
+    "high": 0.9535
+   },
+   "delta_bacc_ci95": {
+    "low": -0.0321,
+    "high": 0.4355
+   },
+   "delta_bacc_sd": 0.1232
+  },
+  "oracle_majority_acc": 1.0,
+  "oracle_correct": 43,
+  "oracle_majority_bacc": 1.0,
+  "oracle_acc_on_exactly_balanced_rows": null,
+  "oracle_acc_on_exactly_balanced_rows_tie0": null,
+  "control_acc_on_exactly_balanced_rows": null
+ },
+ "official_small_3models_noOlmo": {
+  "set": "train-main-v2 labelled, the 3 self-label models (Olmo excluded) -- reconstruction of byeolki 34 rows",
+  "rows": 34,
+  "problems": 20,
+  "models": 3,
+  "robust": 24,
+  "nonrobust": 10,
+  "problems_with_gt1_label": 9,
+  "problems_mixed_labels": 0,
+  "problems_exactly_balanced": 0,
+  "rows_in_exactly_balanced": 0,
+  "size_dist": {
+   "2": 4,
+   "1": 11,
+   "3": 5
+  },
+  "control_lopo_bacc": 0.6667,
+  "control_lopo_acc": 0.7353,
+  "control_correct": 25,
+  "always_true_acc": 0.7059,
+  "bootstrap": {
+   "draws": 4000,
+   "seed": 0,
+   "valid_draws": 4000,
+   "bacc_ci95": {
+    "low": 0.4137,
+    "high": 0.9167
+   },
+   "acc_ci95": {
+    "low": 0.5135,
+    "high": 0.9355
+   },
+   "delta_bacc_ci95": {
+    "low": -0.0863,
+    "high": 0.4167
+   },
+   "delta_bacc_sd": 0.1309
+  },
+  "oracle_majority_acc": 1.0,
+  "oracle_correct": 34,
+  "oracle_majority_bacc": 1.0,
+  "oracle_acc_on_exactly_balanced_rows": null,
+  "oracle_acc_on_exactly_balanced_rows_tie0": null,
+  "control_acc_on_exactly_balanced_rows": null
+ },
+ "official_vs_self_problem_overlap": 1
+}

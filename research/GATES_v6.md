@@ -1,0 +1,69 @@
+# V6 gate scope and receipt audit
+
+The two supplied tools, `research/PREREG_v6.json`, and five `tests/fx_*.json`
+fixtures are copied byte-for-byte from the v6 attachment. Their hashes are
+recorded in `results/v6/gate_fixture_receipts.json`. The recorded fixture runs
+are synthetic tests, not owner submissions or private-validation evidence.
+No `results/v6/codabench_receipts.json` has been fabricated.
+
+`tools/reproduce_report.py` keeps the V1–V4 checks and expected values intact.
+V4 remains an expected exit 1 with `CLOSED`; it does not reopen a method track.
+V5 regenerates the hashed leaderboard analysis and compares 22 fixed values
+(the 20 required handoff values plus the two Bonferroni counts) both with the
+analysis output and with the report-number pipeline. V6 requires the frozen
+text gate to return `CLEAN` for `report/main.tex`, `report/main-anonymous.tex`,
+and `report/REPORT_DRAFT.md`. It regenerates both TeX sources and their source
+provenance from the gated Markdown in a temporary directory and requires
+byte parity with the tracked files.
+
+The separate `owner_receipt_scope` check records whether owner bundle results
+may be stated. Missing receipts affect only the two bundle-specific
+private-validation statements, not the public snapshot analysis or report
+build. The current status is `UNMEASURED`. The gate's rendering deadline is
+2026-11-01 11:55 UTC (20:55 KST). At or after that instant the rendering gate
+expires, but absent or invalid receipts remain `UNMEASURED`; expiry is never
+evidence for a score.
+
+## Why the supplied receipt verdict is not report prose
+
+The frozen receipt gate's matching verdict says two 7/14 scores license a
+per-problem label-balance conclusion. That inference is invalid: matching
+aggregate scores are compatible with multiple per-problem label assignments.
+The constant score concerns overall prevalence; a single problem-only score
+does not identify every problem's label balance. The frozen expectations
+were informed by an already visible board and prior report. The report calls
+them **receipt expectations**, rather than pre-registered predictions.
+
+The frozen gate also silently overwrites duplicate bundle rows, ignores
+submission IDs, accepts an accuracy outside [0, 1] as a mismatch, and does not
+validate supporting screenshots or timezone-aware timestamps. A passing
+fixture exit is therefore only the specified fixture behavior. In particular,
+the fixture IDs `t` and future fixture timestamps are not live evidence.
+
+`tools/codabench_receipt_scope.py` adds conservative validation without editing
+the supplied gate or registration. It requires one receipt per expected
+bundle, distinct numeric submission IDs, a finite accuracy in [0, 1] fitting
+the registered item count at displayed precision, timezone-aware timestamps
+after registration and no later than the check, and supporting screenshot
+files. The existing gate additionally checks bundle hashes, tracks, finished
+status, and chronology. A screenshot path is resolved relative to the
+receipts JSON directory. This checks recorded evidence structure, not its
+external authenticity; owner/service evidence review remains necessary.
+
+Even when both tools accept recorded receipts, the wrapper permits only the
+recorded bundle scores and always sets
+`per_problem_balance_inference_allowed: false`. It never copies the supplied
+`CONSISTENT` or `REFUTED_OR_PARTIAL` prose into the report. If any receipt is
+missing or invalid, measured score statements remain prohibited. The wrapper
+exits 0 because unrelated CPU gates must still complete; its structured state
+controls the owner statements.
+
+## Verification
+
+Run `python3 -I tests/test_v6_gates.py`. These tests verify all five supplied
+fixture exits (0, 0, 1, 1, 1), the mismatch verdict prefix
+`REFUTED_OR_PARTIAL`, missing evidence immediately before and at the deadline,
+the restriction on balance inference, rejected weak receipts, and the text
+gate across both source formats. All generated positive-test receipt files
+and evidence placeholders exist only in temporary test directories and are
+explicitly synthetic.

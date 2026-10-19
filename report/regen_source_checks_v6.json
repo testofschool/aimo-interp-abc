@@ -1,0 +1,103 @@
+{
+  "canon_commit": "9274840b6faacaa7ad0e321172071eedb822d9de",
+  "style_equal_to_v5": true,
+  "style_sha256": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a",
+  "package_font_and_column_spec_equal_to_v5": true,
+  "variants_scientific_source_body_identical": true,
+  "outline_word_count": 4461,
+  "variants": {
+    "v5": {
+      "path": "report/aimo-interp-report-v5.pdf",
+      "sha256": "1ec9bfb0ac7e48c78ef13ae8ee78d9acdce953bd12bac1038a3bee08719194cf",
+      "page_count": 5,
+      "body_pages": 4,
+      "reference_pages": 1,
+      "page_size": "612 x 792 pts (letter)",
+      "type3_fonts": 0,
+      "font_names": [
+        "NimbusRomNo9L-Medi",
+        "NimbusRomNo9L-Regu",
+        "SFTT0900",
+        "SFTT1000"
+      ],
+      "source_sha256": "95e9dde2250115e4a2475325a8719aa29527ac0992305257ab5ee2d1f3fa242b",
+      "external_href_count": 9,
+      "table_count": 4,
+      "display_equation_count": 0,
+      "subsection_count": 0
+    },
+    "named": {
+      "path": "report/aimo-interp-report-v6-named.pdf",
+      "sha256": "0cd3fdf4dd40b39a80b5244fc7d8131f2956c278d1944c6951eebe2e0290600f",
+      "page_count": 9,
+      "body_pages": 8,
+      "reference_pages": 1,
+      "page_size": "612 x 792 pts (letter)",
+      "type3_fonts": 0,
+      "font_names": [
+        "CMEX10",
+        "CMMI10",
+        "CMMI7",
+        "CMR10",
+        "CMR7",
+        "CMSY10",
+        "CMSY7",
+        "NimbusRomNo9L-Medi",
+        "NimbusRomNo9L-Regu",
+        "SFTT0900",
+        "SFTT1000"
+      ],
+      "source_sha256": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9",
+      "external_href_count": 6,
+      "table_count": 6,
+      "display_equation_count": 4,
+      "subsection_count": 9
+    },
+    "anonymous": {
+      "path": "report/aimo-interp-report-v6-anonymous.pdf",
+      "sha256": "64007f693861ccf0151e42e0805fccc65a638036ec26b76a7a440a7f5c13c112",
+      "page_count": 9,
+      "body_pages": 8,
+      "reference_pages": 1,
+      "page_size": "612 x 792 pts (letter)",
+      "type3_fonts": 0,
+      "font_names": [
+        "CMEX10",
+        "CMMI10",
+        "CMMI7",
+        "CMR10",
+        "CMR7",
+        "CMSY10",
+        "CMSY7",
+        "NimbusRomNo9L-Medi",
+        "NimbusRomNo9L-Regu",
+        "SFTT0900",
+        "SFTT1000"
+      ],
+      "source_sha256": "513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e",
+      "external_href_count": 6,
+      "table_count": 6,
+      "display_equation_count": 4,
+      "subsection_count": 9
+    }
+  },
+  "variant_only_source_diff_lines": [
+    "-\\hypersetup{pdftitle={Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp},pdfauthor={Jung Min Kang},pdfsubject={Leaderboard identifiability and evaluation design in AIMO-Interp}}",
+    "+\\hypersetup{pdftitle={Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp},pdfauthor={Anonymous Author(s)},pdfsubject={Leaderboard identifiability and evaluation design in AIMO-Interp}}",
+    "-\\author{Jung Min Kang\\\\Independent}",
+    "+\\author{Anonymous Author(s)}"
+  ],
+  "visual_inspection": {
+    "final_contact_sheets_inspected": [
+      "report/qa_v6_named/contact.png",
+      "report/qa_v6_anonymous/contact.png"
+    ],
+    "pages_inspected": 18,
+    "clipped_tables_or_equations": 0,
+    "missing_glyphs_observed": 0,
+    "orphaned_headings_observed": 0,
+    "citation_marker_breakage_observed": 0,
+    "note": "All final contact pages inspected. Root independently reviewed all 18 pages."
+  },
+  "unreported_remaining": 0
+}

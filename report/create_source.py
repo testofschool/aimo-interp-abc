@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Create a standalone draft using unchanged official NeurIPS 2026 style bytes.
+"""Create named and anonymous reports with unchanged NeurIPS 2026 style bytes.
 
-The deliberately small Markdown subset matches DRAFT_CONTENT.md. This produces
+The deliberately small Markdown subset matches REPORT_DRAFT.md. This produces
 source, never scientific observations or submission receipts.
 """
 import hashlib
@@ -70,7 +70,7 @@ def inline(value):
 def body(markdown):
     lines = markdown.splitlines()
     output, i, abstract, references, started_bib, tables = [], 0, False, False, False, 0
-    # Title and status are typeset separately; body derives only from gated draft.
+    # Title/identity are typeset separately; body derives only from gated content.
     i = next(n for n, line in enumerate(lines) if line == "## Abstract")
     while i < len(lines):
         line = lines[i].strip()
@@ -91,6 +91,21 @@ def body(markdown):
                 output.append(r"\section{" + inline(re.sub(r"^\d+\.\s*", "", heading)) + "}")
             i += 1
             continue
+        if line.startswith("### "):
+            output.append(r"\subsection{" + inline(re.sub(r"^\d+\.\d+\s*", "", line[4:])) + "}")
+            i += 1
+            continue
+        if line == "$$":
+            equation = []
+            i += 1
+            while i < len(lines) and lines[i].strip() != "$$":
+                equation.append(lines[i])
+                i += 1
+            if i == len(lines):
+                raise SystemExit("unclosed manuscript equation")
+            output.append("\\[\n" + "\n".join(equation) + "\n\\]")
+            i += 1
+            continue
         if references:
             match = re.match(r"- \*\*(S\d+):\*\* (.*)", line)
             if match:
@@ -109,10 +124,12 @@ def body(markdown):
                 i += 1
             tables += 1
             caption = {
-                1: "Observed drop variance grouped by problem; an in-sample description.",
-                2: "Observed label agreement; Bernoulli reference is not a significance test.",
-                3: "Problem-grouped public Small evaluation; no private competition scores.",
-                4: "Public sample transfer with different models and label conventions.",
+                1: "Owner-level results under the declared independent-item and independent-submission null. All surviving owners have perfect scores.",
+                2: "Exact single-submission binomial power on the inferred validation grids. This calculation precedes selection and multiplicity correction.",
+                3: "First crossing and sustained target power under independent-item planning. Sustained thresholds are recommended for item budgeting.",
+                4: "Observed maximum-drop variance grouped by problem; an in-sample description.",
+                5: "Observed label agreement; the Bernoulli reference count is not a significance test.",
+                6: "Problem-grouped public Small evaluation; these are public training outcomes.",
             }[tables]
             output.extend([r"\begin{table}[htbp]", r"\caption{" + caption + "}",
                            r"\label{tab:" + str(tables) + "}", r"\small",
@@ -125,7 +142,9 @@ def body(markdown):
             continue
         paragraph = [line]
         i += 1
-        while i < len(lines) and lines[i].strip() and not lines[i].startswith("## ") and not lines[i].lstrip().startswith("|"):
+        while (i < len(lines) and lines[i].strip()
+               and not lines[i].startswith(("## ", "### "))
+               and lines[i].strip() != "$$" and not lines[i].lstrip().startswith("|")):
             paragraph.append(lines[i].strip())
             i += 1
         output.append(inline(" ".join(paragraph)) + "\n")
@@ -145,7 +164,8 @@ def main():
     if b"\r" in style:
         raise SystemExit("STOP: review line ending normalization before embedding official style")
     content = (HERE / "REPORT_DRAFT.md").read_text()
-    prefix = r"""% Standalone working draft; official style embedded unchanged for single-file preview.
+    title = content.splitlines()[0].removeprefix("# ").strip()
+    prefix = r"""% Standalone scientific report; official style embedded unchanged.
 \begin{filecontents*}[overwrite]{neurips_2026.sty}
 """ + style.decode() + r"""\end{filecontents*}
 \documentclass{article}
@@ -156,26 +176,31 @@ def main():
 \usepackage[hidelinks]{hyperref}
 \setcitestyle{numbers,square,comma}
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-\hypersetup{pdftitle={Problem-only controls for robustness prediction in AIMO-Interp},pdfauthor={Author confirmation pending},pdfsubject={Technical draft; private evaluation unmeasured; not submitted}}
-\title{Problem-only controls for robustness prediction\\in AIMO-Interp}
-\author{Author and team designation pending owner confirmation\\Technical draft}
-\begin{document}
-\maketitle
-\begin{center}
-\textbf{Working draft. Not submitted.}\\
-\small Public-data CPU audit. Private validation and test: UNMEASURED.\\
-Author review and final portal instructions pending; official NeurIPS preprint style.
-\end{center}
 """
-    source = prefix + body(content) + "\n\\end{document}\n"
-    if "\r" in source:
-        raise SystemExit("source has CRLF")
-    (HERE / "main.tex").write_text(source)
-    provenance = {"status": "WORKING_DRAFT_NOT_SUBMITTED", "author_kit_url": URL,
+    variants = {"named": ("main.tex", "Jung Min Kang", r"Jung Min Kang\\Independent"),
+                "anonymous": ("main-anonymous.tex", "Anonymous Author(s)", "Anonymous Author(s)")}
+    rendered_body = body(content)
+    sources = {}
+    for variant, (filename, metadata_author, author_block) in variants.items():
+        source = (prefix + r"\hypersetup{pdftitle={" + plain(title)
+                  + r"},pdfauthor={" + plain(metadata_author)
+                  + r"},pdfsubject={Leaderboard identifiability and evaluation design in AIMO-Interp}}"
+                  + "\n" + r"\title{" + plain(title) + "}\n"
+                  + r"\author{" + author_block + "}\n"
+                  + "\\begin{document}\n\\maketitle\n"
+                  + rendered_body + "\n\\end{document}\n")
+        if "\r" in source:
+            raise SystemExit("source has CRLF")
+        (HERE / filename).write_text(source)
+        sources[variant] = {"path": "report/" + filename,
+                            "sha256": hashlib.sha256(source.encode()).hexdigest(),
+                            "author": metadata_author}
+    provenance = {"status": "SOURCE_GENERATED", "author_kit_url": URL,
                   "author_kit_sha256": KIT_SHA, "style_sha256": hashlib.sha256(style).hexdigest(),
                   "style_embedded_unmodified": True, "style_option": "preprint",
                   "content_sha256": hashlib.sha256(content.encode()).hexdigest(),
-                  "source_sha256": hashlib.sha256(source.encode()).hexdigest()}
+                  "variants": sources,
+                  "source_sha256": sources["named"]["sha256"]}
     provenance["content_path"] = "report/REPORT_DRAFT.md"
     provenance["content_source"] = "Gated REPORT_OUTLINE.md rendered with results/report_numbers.json"
     (HERE / "source_provenance.json").write_text(json.dumps(provenance, indent=2) + "\n")

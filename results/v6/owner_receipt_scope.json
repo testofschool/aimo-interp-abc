@@ -1,0 +1,13 @@
+{
+  "scope": "owner bundle private-validation statements only; other report sections proceed",
+  "measurement_status": "UNMEASURED",
+  "render_gate_deadline_utc": "2026-11-01T11:55:00+00:00",
+  "render_gate_expired": false,
+  "render_gate_active": true,
+  "measured_score_statements_allowed": false,
+  "per_problem_balance_inference_allowed": false,
+  "rows": [],
+  "errors": [
+    "[Errno 2] No such file or directory: '/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/results/v6/codabench_receipts.json'"
+  ]
+}

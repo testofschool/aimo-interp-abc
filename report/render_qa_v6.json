@@ -1,0 +1,31 @@
+{
+  "variants": {
+    "named": {
+      "pdf": "report/aimo-interp-report-v6-named.pdf",
+      "sha256": "0cd3fdf4dd40b39a80b5244fc7d8131f2956c278d1944c6951eebe2e0290600f",
+      "pages": 9,
+      "body_pages": 8,
+      "reference_pages": 1,
+      "type3_count": 0,
+      "automated": "AUTOMATED_PASS_VISUAL_REVIEW_REQUIRED",
+      "visual_review": "PASS",
+      "visual_scope": "All 9 pages per variant inspected via final contact sheets; named pages 3,4,6 additionally inspected at full render resolution",
+      "defects": [],
+      "source_sha256": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9"
+    },
+    "anonymous": {
+      "pdf": "report/aimo-interp-report-v6-anonymous.pdf",
+      "sha256": "64007f693861ccf0151e42e0805fccc65a638036ec26b76a7a440a7f5c13c112",
+      "pages": 9,
+      "body_pages": 8,
+      "reference_pages": 1,
+      "type3_count": 0,
+      "automated": "AUTOMATED_PASS_VISUAL_REVIEW_REQUIRED",
+      "visual_review": "PASS",
+      "visual_scope": "All 9 pages per variant inspected via final contact sheets; named pages 3,4,6 additionally inspected at full render resolution",
+      "defects": [],
+      "source_sha256": "513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e"
+    }
+  },
+  "reviewer": "Codex visual inspection; machine font/reference/render battery separately recorded"
+}

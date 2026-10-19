@@ -1,0 +1,70 @@
+{
+  "status": "PASS",
+  "license_checked_before_data_use": "MIT at pinned commit, retrieved via git show; raw source data not redistributed",
+  "script_sha256": "f3ad21750ac6a577f009b049102bb8e3c4aa82f578f8c08b1149dab3bb059bfc",
+  "data_sha256": "78ca645a7e9f36c23264d27c262b3e82408d0fdd119a35821fb1bc41605d155f",
+  "checks": [
+    {
+      "key": "rows",
+      "expected": 393,
+      "observed": 393,
+      "status": "MATCH"
+    },
+    {
+      "key": "problems",
+      "expected": 150,
+      "observed": 150,
+      "status": "MATCH"
+    },
+    {
+      "key": "problems_with_gt1_label",
+      "expected": 145,
+      "observed": 145,
+      "status": "MATCH"
+    },
+    {
+      "key": "problems_mixed_labels",
+      "expected": 44,
+      "observed": 44,
+      "status": "MATCH"
+    },
+    {
+      "key": "control_lopo_bacc",
+      "expected": 0.5462,
+      "observed": 0.5462,
+      "status": "MATCH"
+    },
+    {
+      "key": "control_lopo_acc",
+      "expected": 0.4682,
+      "observed": 0.4682,
+      "status": "MATCH"
+    },
+    {
+      "key": "bootstrap.bacc_ci95.low",
+      "expected": 0.4689,
+      "observed": 0.4689,
+      "status": "MATCH"
+    },
+    {
+      "key": "bootstrap.bacc_ci95.high",
+      "expected": 0.6167,
+      "observed": 0.6167,
+      "status": "MATCH"
+    },
+    {
+      "key": "oracle_acc_on_exactly_balanced_rows",
+      "expected": 0.5,
+      "observed": 0.5,
+      "status": "MATCH"
+    },
+    {
+      "key": "control_acc_on_exactly_balanced_rows",
+      "expected": 0.5,
+      "observed": 0.5,
+      "status": "MATCH"
+    }
+  ],
+  "publication_scope": "historical supporting calculation, not included as a paper result or dependency of V1-V6",
+  "limitation": "Full pinned 150-problem pool includes problems prior authors later excluded as leakage-prone. No new language-model run. No claim about private official labels."
+}

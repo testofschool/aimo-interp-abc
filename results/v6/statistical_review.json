@@ -1,0 +1,76 @@
+{
+  "review_type": "Independent read-only statistical and contextual claim review against existing T1 outputs; no measurements or model runs repeated.",
+  "status": "PASS_RESOLVED",
+  "reviewed_sha256": {
+    "report/REPORT_DRAFT.md": "2a93d56dce8f4edde7c151e50e151cd28c13616d75d0b4e08093ce4236914602",
+    "report/main.tex": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9",
+    "results/v6/leaderboard_identifiability.json": "df31f5dc1b40618286dfebb3ca1e45901663222e449624cdab6b6842dcda566f",
+    "results/report_numbers.json": "cc31e5a71cd04134504a246552aecf583a3536b36e2b0f1cae1732d3625f940c",
+    "tools/leaderboard_identifiability.py": "66ec8bba1b6ad8d527fc9e02469596e2f85452219a405cd2937f305869505635",
+    "report/main-anonymous.tex": "513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e"
+  },
+  "verified": [
+    {
+      "topic": "numeric context",
+      "result": "PASS",
+      "detail": "Small/Main minimum compatible denominators14/21, scored submissions249/132, owners61/41, BH/Bonf/union-Bonf2/1, next best12/14 m5 padj.0319 and17/21 m6 padj.0214 match existing T1 outputs."
+    },
+    {
+      "topic": "minimum compatible N",
+      "result": "PASS",
+      "detail": "Manuscript labels N inferred/smallest compatible, notes unweighted-grid assumption and undocumented weighting/resampling, and seeks evaluator confirmation."
+    },
+    {
+      "topic": "Sidak and BH scope",
+      "result": "PASS",
+      "detail": "Exact independent-submission union probability is stated conditionally; owner dependence and BH conditions explicit. Bonf sensitivity correctly retains item-null and within-owner-adjustment assumptions."
+    },
+    {
+      "topic": "hidden attempts and perfect scores",
+      "result": "PASS",
+      "detail": "Hidden-attempt upper-bound direction explicitly holds observed best and null fixed and excludes unknown dependence/missing owners/unseen best. Perfect-score extremeness is conditional and does not establish mechanism, leakage avoidance, or future generalization. Organizer queue merely observed."
+    },
+    {
+      "topic": "power",
+      "result": "PASS",
+      "detail": "Alpha.05,target.8, current-grid powers.12/.22/.20/.36, first158/69 and sustained169/76 match outputs. Single-prespecified-test scope explicit and separated from selection, multiplicity and pairwise ranking. Code analytic Hoeffding certification is valid."
+    },
+    {
+      "topic": "supporting label/CPU claims",
+      "result": "PASS",
+      "detail": "Small43rows/22problems/11multimodel/0mixed matches output. Supporting R2, concordance, OOF metrics and intervals match existing numeric ledger and retain descriptive/fixed-prediction caveats."
+    }
+  ],
+  "findings": [
+    {
+      "id": "STAT-1",
+      "priority": 2,
+      "files": [
+        "report/REPORT_DRAFT.md:63",
+        "report/main.tex:558"
+      ],
+      "issue": "Arbitrary-dependence union-bound plus Bonferroni guarantee additionally requires fixed families/counts, or p-values valid conditional on the realized family/count. Complete observed attempts alone is insufficient under score-adaptive stopping. A random realized m can make m*p_min anti-conservative even when each trial p-value is marginally valid.",
+      "required_change": "Qualify no-dependence guarantee by a fixed family of attempts and owners (or conditional validity given counts); identify observed-count sensitivity as descriptive when submission stopping is score-adaptive. Add the count-selection caveat to limitations.",
+      "reported_to": [
+        "root",
+        "report_v6"
+      ],
+      "owner_response": "Report agent patched sections2.3 and5 and regenerated both sources; final read-only review confirms resolution.",
+      "analytical_example": "With one owner and independent uniform null p-values, stop at m=1 if p1<=alpha, otherwise m=2. Then realized-m union rejection probability is alpha+(1-alpha)*alpha/2>alpha.",
+      "status": "RESOLVED",
+      "resolution": "Section2.3 now explicitly restricts the no-dependence guarantee to a fixed attempt/owner family with valid single-submission p-values, and labels score-adaptive observed-count results descriptive unless validity holds conditional on observed family/counts. Section5 now explicitly identifies random realized-count and adaptive-stopping limitations. Confirmed in Markdown plus both generated author variants."
+    }
+  ],
+  "resolved_during_review": [
+    {
+      "issue": "Initial Markdown said the tool records the full power curve, while output stores threshold certification and selected powers.",
+      "resolution": "Current Markdown/main.tex now say computes exact power at candidate sizes and records threshold certification; this matches the tool."
+    }
+  ],
+  "limitations": [
+    "Review validates internal consistency and declared mathematical scope; it does not confirm private scoring N, outcome independence, completeness of attempted runs, or actual private-label construction.",
+    "Publications built from later source hashes must carry the required wording fix and new text-gate/build receipts."
+  ],
+  "unresolved_findings": [],
+  "closeout": "Final source hashes match root-supplied frozen named and anonymous sources. No new measurement, test, or model run was performed for this closeout."
+}

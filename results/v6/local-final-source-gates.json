@@ -1,0 +1,55 @@
+{
+  "scope": "Final changed manuscript sources only; supersedes source checks in local-cpu-gates.json. Numeric inputs and statistical CPU outputs unchanged. No fixture or owner receipts are measured here.",
+  "checks": [
+    {
+      "name": "V2_final",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "tools/render_report.py",
+        "report/REPORT_OUTLINE.md",
+        "results/report_numbers.json",
+        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-final-source-262uq5ds/REPORT_DRAFT.md"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"result\": \"PASS\", \"placeholders\": 136, \"out\": \"/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-final-source-262uq5ds/REPORT_DRAFT.md\"}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "V6_source_regeneration",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "-c",
+        "from pathlib import Path\nimport runpy\nnamespace = runpy.run_path('/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/create_source.py')\nnamespace['main'].__globals__['HERE'] = Path('/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-final-source-262uq5ds')\nnamespace['main']()"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"status\": \"SOURCE_GENERATED\",\n  \"author_kit_url\": \"https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip\",\n  \"author_kit_sha256\": \"82473931e3ef710fcd3f4a8cd4119b9de32e56825f90f9e5a6d55f2d01b817d9\",\n  \"style_sha256\": \"c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a\",\n  \"style_embedded_unmodified\": true,\n  \"style_option\": \"preprint\",\n  \"content_sha256\": \"2a93d56dce8f4edde7c151e50e151cd28c13616d75d0b4e08093ce4236914602\",\n  \"variants\": {\n    \"named\": {\n      \"path\": \"report/main.tex\",\n      \"sha256\": \"211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9\",\n      \"author\": \"Jung Min Kang\"\n    },\n    \"anonymous\": {\n      \"path\": \"report/main-anonymous.tex\",\n      \"sha256\": \"513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e\",\n      \"author\": \"Anonymous Author(s)\"\n    }\n  },\n  \"source_sha256\": \"211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9\",\n  \"content_path\": \"report/REPORT_DRAFT.md\",\n  \"content_source\": \"Gated REPORT_OUTLINE.md rendered with results/report_numbers.json\"\n}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "V6",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "tools/submission_text_gate.py",
+        "report/main.tex",
+        "report/main-anonymous.tex",
+        "report/REPORT_DRAFT.md"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n \"result\": \"CLEAN\",\n \"hits\": []\n}\n",
+      "stderr": "",
+      "passed": true
+    }
+  ],
+  "matched_source_sha256": {
+    "report/REPORT_DRAFT.md": "2a93d56dce8f4edde7c151e50e151cd28c13616d75d0b4e08093ce4236914602",
+    "report/main.tex": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9",
+    "report/main-anonymous.tex": "513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e",
+    "report/source_provenance.json": "c676a9ce29bee9ad7eeb5d4eca0a26d680dd65a144d21fef8c90f67ba4874a77"
+  },
+  "result": "PASS"
+}

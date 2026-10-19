@@ -1,0 +1,65 @@
+--- named
++++ anonymous
+@@ -2,13 +2,11 @@
+      predictors? Identifiability limits in AIMO-Interp
+ 
+ 
+-                                            Jung Min Kang
+-                                              Independent
++                                         Anonymous Author(s)
+ 
+ 
+ 
+                                                Abstract
+-
+             How much evidence does a small public leaderboard provide about robustness pre-
+             diction? We analyze a hash-pinned AIMO-Interp leaderboard snapshot using its
+             observed score grid. The smallest compatible item counts are 14 for Small and 21
+@@ -29,7 +27,6 @@
+ 
+ 
+ 1    Task and the evidence a leaderboard supplies
+-
+ The AIMO Interpretability Challenge asks whether a model will answer a mathematical problem
+ robustly under meaning-preserving perturbations. A predictor receives a problem and access to a
+ specified model, then produces a binary robustness decision. The Small track uses a fixed set of
+@@ -49,11 +46,11 @@
+ in accuracy from score variation and repeated selection. A board with few items can still detect an
+ extreme outcome. It can simultaneously have little power for a useful but moderate improvement,
+ especially when owners can try several methods and retain the best score. The relevant unit for the
+-
+-Preprint.
+- selection adjustment is the owner within each track, rather than each displayed score row. Neither an
+ isolated significant owner nor a collection of non-significant owners is itself an ordering of methods.
++
++Preprint.
++ Our main contribution is an executable, snapshot-specific assessment of that evidential limit. We
+ specify how the score grid is reconstructed, how invalid predictions and duplicate rows enter the
+ denominator, how an owner’s best visible result is adjusted, and what sample size detects stated
+@@ -63,7 +60,9 @@
+ claim. The report concerns evaluation design and uncertainty; it does not propose a new robustness
+ predictor.
+ 
++
+ 2     A conditional analysis of the visible leaderboard
++
+ 2.1   Snapshot, units and score reconstruction
+ 
+ We freeze the public private-validation leaderboard snapshot dated October 19, 2026, fetched on
+@@ -97,12 +96,12 @@
+ null makes item correctness independent with common probability one half. The one-sided exact
+ upper-tail probability for an observed count k is
+ 
+-                                                              N
+-                                                              X      
+-                                                                    N −N
+-                        p(k, N ) =       Pr      (K ≥ k) =              2 .
++                                                              N  
++                                                              X  N
++                        p(k, N ) =       Pr      (K ≥ k) =              2−N .
+                                      K∼Bin(N,1/2)                   j
+                                                               j=k
++
+ 
+ The fair-coin null is a calibration model. It is not a claim that actual submissions guess, nor a
+ randomization test justified solely by class balance. A deterministic constant predictor under exact

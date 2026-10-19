@@ -1,0 +1,11 @@
+{
+ "registered_at": "2026-10-20T00:56:29+09:00",
+ "registered_by": "Claude (Felix's session), before any testofschool Codabench upload",
+ "basis": ["HF train-main-v2 card 2026-09-16: 'the validation set is close to balanced'", "public leaderboard 2026-10-19: Small owner-best mode k=7/14 (measure/m2_leaderboard.json)", "secondhand byeolki RESULTS.md:59-64: val rebuilt 'balanced per problem and per model'"],
+ "predictions": [
+  {"bundle": "solution-text-length-control-small.zip", "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd", "track": "Small", "n_items": 14, "expected_k": 7, "why": "problem-only predictor; exactly 0.5 on any per-problem label-balanced set"},
+  {"bundle": "solution-always-true-small.zip", "sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a", "track": "Small", "n_items": 14, "expected_k": 7, "why": "constant predictor scores the robust prevalence; 7/14 if Small val is exactly balanced"}
+ ],
+ "if_all_match": "CONSISTENT: Small private-val behaves as label-balanced per problem; problem-only and constant predictors score exactly chance (7/14). Report may state the identity for val with these receipts.",
+ "if_any_mismatch": "REFUTED_OR_PARTIAL: Small private-val is not exactly per-problem balanced; report observed k/14 for each bundle and drop the per-problem-balance sentence for val."
+}

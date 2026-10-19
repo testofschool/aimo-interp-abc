@@ -1,0 +1,27 @@
+{
+  "protocol": "Frozen HANDOFF_v6 T1 expected values, independently stated before execution; mismatch means STOP affected track. Rounded p-adjusted values use four decimals; power uses two decimals.",
+  "expected": {
+    "lb_small_items": 14,
+    "lb_main_items": 21,
+    "lb_small_owners_scored": 61,
+    "lb_main_owners_scored": 41,
+    "lb_small_bh_survivors": 2,
+    "lb_main_bh_survivors": 1,
+    "lb_small_bonferroni_survivors": 2,
+    "lb_main_bonferroni_survivors": 1,
+    "lb_small_next_padj": 0.0319,
+    "lb_main_next_padj": 0.0214,
+    "power_n80_first_acc060": 158,
+    "power_n80_sustained_acc060": 169,
+    "power_n80_first_acc065": 69,
+    "power_n80_sustained_acc065": 76,
+    "power_at_14_acc060": 0.12,
+    "power_at_14_acc065": 0.22,
+    "power_at_21_acc060": 0.2,
+    "power_at_21_acc065": 0.36,
+    "train_small_rows": 43,
+    "train_small_problems": 22,
+    "train_small_multi_model_problems": 11,
+    "train_small_mixed": 0
+  }
+}

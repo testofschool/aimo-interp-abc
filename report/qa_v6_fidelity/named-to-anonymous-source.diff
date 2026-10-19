@@ -1,0 +1,17 @@
+--- named.tex
+
++++ anonymous.tex
+
+@@ -452,9 +452,9 @@
+
+ \usepackage[hidelinks]{hyperref}
+ \setcitestyle{numbers,square,comma}
+ \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+-\hypersetup{pdftitle={Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp},pdfauthor={Jung Min Kang},pdfsubject={Leaderboard identifiability and evaluation design in AIMO-Interp}}
++\hypersetup{pdftitle={Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp},pdfauthor={Anonymous Author(s)},pdfsubject={Leaderboard identifiability and evaluation design in AIMO-Interp}}
+ \title{Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp}
+-\author{Jung Min Kang\\Independent}
++\author{Anonymous Author(s)}
+ \begin{document}
+ \maketitle
+ \begin{abstract}

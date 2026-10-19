@@ -27,6 +27,30 @@ EXPECTED = {
     "agg_format_flag_bacc": 1.0,
     "agg_majority_acc": 0.7447,
 }
+EXPECTED_IDENTIFIABILITY = {
+    "lb_small_items": 14,
+    "lb_main_items": 21,
+    "lb_small_owners_scored": 61,
+    "lb_main_owners_scored": 41,
+    "lb_small_bh_survivors": 2,
+    "lb_main_bh_survivors": 1,
+    "lb_small_bonferroni_survivors": 2,
+    "lb_main_bonferroni_survivors": 1,
+    "lb_small_next_padj": 0.0319,
+    "lb_main_next_padj": 0.0214,
+    "power_n80_first_acc060": 158,
+    "power_n80_sustained_acc060": 169,
+    "power_n80_first_acc065": 69,
+    "power_n80_sustained_acc065": 76,
+    "power_at_14_acc060": 0.12,
+    "power_at_14_acc065": 0.22,
+    "power_at_21_acc060": 0.20,
+    "power_at_21_acc065": 0.36,
+    "train_small_rows": 43,
+    "train_small_problems": 22,
+    "train_small_multi_model_problems": 11,
+    "train_small_mixed": 0,
+}
 
 
 def main():
@@ -74,6 +98,38 @@ def main():
             raise RuntimeError("tracked draft differs from gated rendering; STOP")
         receipt["draft_sha256"] = hashlib.sha256(draft).hexdigest()
         run("V4", ["tools/reopen_gate.py"], expected_exit=1, fields={"result": "CLOSED"})
+        run("V5", ["tools/leaderboard_identifiability.py", "--snapshot-dir", "data/leaderboard/2026-10-19",
+                   "--data-dir", "data", "--out", str(tmp / "identifiability.json"),
+                   "--check", "research/identifiability_expected_v6.json"],
+            fields={"result": "PASS", "checked": len(EXPECTED_IDENTIFIABILITY)})
+        identifiability = json.loads((tmp / "identifiability.json").read_text())["numbers"]
+        mismatches = [{"key": key, "expected": expected, "identifiability": identifiability.get(key),
+                       "report_numbers": nums.get(key)} for key, expected in EXPECTED_IDENTIFIABILITY.items()
+                      if identifiability.get(key) != expected or nums.get(key) != expected]
+        if mismatches:
+            raise RuntimeError("V5 frozen expected-value mismatch; STOP: " + json.dumps(mismatches))
+        receipt["checks"][-1]["frozen_values"] = EXPECTED_IDENTIFIABILITY
+        source_dir = tmp / "source-regeneration"
+        source_dir.mkdir()
+        (source_dir / "REPORT_DRAFT.md").write_bytes(draft)
+        regenerate_source = "\n".join([
+            "from pathlib import Path",
+            "import runpy",
+            "namespace = runpy.run_path(" + repr(str(ROOT / "report/create_source.py")) + ")",
+            "namespace['main'].__globals__['HERE'] = Path(" + repr(str(source_dir)) + ")",
+            "namespace['main']()",
+        ])
+        run("V6_source_regeneration", ["-c", regenerate_source], fields={"status": "SOURCE_GENERATED"})
+        source_hashes = {}
+        for filename in ("main.tex", "main-anonymous.tex", "source_provenance.json"):
+            generated = (source_dir / filename).read_bytes()
+            if generated != (ROOT / "report" / filename).read_bytes():
+                raise RuntimeError("V6 generated source differs from tracked bytes: " + filename + "; STOP")
+            source_hashes[filename] = hashlib.sha256(generated).hexdigest()
+        receipt["checks"][-1]["matched_source_sha256"] = source_hashes
+        run("V6", ["tools/submission_text_gate.py", "report/main.tex", "report/main-anonymous.tex", "report/REPORT_DRAFT.md"],
+            fields={"result": "CLEAN", "hits": []})
+        receipt["owner_receipt_scope"] = run("owner_receipt_scope", ["tools/codabench_receipt_scope.py"])
     receipt["result"] = "PASS"
     args.receipt.parent.mkdir(parents=True, exist_ok=True)
     args.receipt.write_text(json.dumps(receipt, indent=2) + "\n")

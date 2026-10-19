@@ -1,0 +1,138 @@
+{
+  "result": "PASS",
+  "checked": 22,
+  "comparisons": [
+    {
+      "key": "lb_small_items",
+      "expected": 14,
+      "observed": 14,
+      "status": "MATCH"
+    },
+    {
+      "key": "lb_main_items",
+      "expected": 21,
+      "observed": 21,
+      "status": "MATCH"
+    },
+    {
+      "key": "lb_small_owners_scored",
+      "expected": 61,
+      "observed": 61,
+      "status": "MATCH"
+    },
+    {
+      "key": "lb_main_owners_scored",
+      "expected": 41,
+      "observed": 41,
+      "status": "MATCH"
+    },
+    {
+      "key": "lb_small_bh_survivors",
+      "expected": 2,
+      "observed": 2,
+      "status": "MATCH"
+    },
+    {
+      "key": "lb_main_bh_survivors",
+      "expected": 1,
+      "observed": 1,
+      "status": "MATCH"
+    },
+    {
+      "key": "lb_small_bonferroni_survivors",
+      "expected": 2,
+      "observed": 2,
+      "status": "MATCH"
+    },
+    {
+      "key": "lb_main_bonferroni_survivors",
+      "expected": 1,
+      "observed": 1,
+      "status": "MATCH"
+    },
+    {
+      "key": "lb_small_next_padj",
+      "expected": 0.0319,
+      "observed": 0.0319,
+      "status": "MATCH"
+    },
+    {
+      "key": "lb_main_next_padj",
+      "expected": 0.0214,
+      "observed": 0.0214,
+      "status": "MATCH"
+    },
+    {
+      "key": "power_n80_first_acc060",
+      "expected": 158,
+      "observed": 158,
+      "status": "MATCH"
+    },
+    {
+      "key": "power_n80_sustained_acc060",
+      "expected": 169,
+      "observed": 169,
+      "status": "MATCH"
+    },
+    {
+      "key": "power_n80_first_acc065",
+      "expected": 69,
+      "observed": 69,
+      "status": "MATCH"
+    },
+    {
+      "key": "power_n80_sustained_acc065",
+      "expected": 76,
+      "observed": 76,
+      "status": "MATCH"
+    },
+    {
+      "key": "power_at_14_acc060",
+      "expected": 0.12,
+      "observed": 0.12,
+      "status": "MATCH"
+    },
+    {
+      "key": "power_at_14_acc065",
+      "expected": 0.22,
+      "observed": 0.22,
+      "status": "MATCH"
+    },
+    {
+      "key": "power_at_21_acc060",
+      "expected": 0.2,
+      "observed": 0.2,
+      "status": "MATCH"
+    },
+    {
+      "key": "power_at_21_acc065",
+      "expected": 0.36,
+      "observed": 0.36,
+      "status": "MATCH"
+    },
+    {
+      "key": "train_small_rows",
+      "expected": 43,
+      "observed": 43,
+      "status": "MATCH"
+    },
+    {
+      "key": "train_small_problems",
+      "expected": 22,
+      "observed": 22,
+      "status": "MATCH"
+    },
+    {
+      "key": "train_small_multi_model_problems",
+      "expected": 11,
+      "observed": 11,
+      "status": "MATCH"
+    },
+    {
+      "key": "train_small_mixed",
+      "expected": 0,
+      "observed": 0,
+      "status": "MATCH"
+    }
+  ]
+}

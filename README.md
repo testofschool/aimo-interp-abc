@@ -1,84 +1,74 @@
-# AIMO-Interp: problem-only controls and public-label audit
+# AIMO-Interp: validation leaderboard identifiability
 
-The v5 technical draft is public: five NeurIPS-format pages, 87 checked
-numeric values and 89 rendered placeholders. It is not submitted. Public-data
-control balanced accuracy is 0.6855 and plain accuracy is 0.7674; private-validation
-and final-test performance are UNMEASURED. The method track remains folded and
-the reopen gate is CLOSED. No new GPU jobs or spend are authorized by this packet.
+The v6 report asks what can be resolved from a small public validation leaderboard.
+On the pinned October 19 snapshot (retrieved October 20, 2026 KST), owner-selection
+adjustment followed by Benjamini–Hochberg leaves 2 of 61 Small owners and 1 of 41
+Main owners significant under an independent fair-coin item null. All survivors
+have perfect scores. This is a conditional above-chance audit, not a pairwise
+ranking test. The smallest denominators jointly compatible with the displayed
+scores, coverage and invalid counts are 14 and 21; rounded scores alone do not
+prove the true number of evaluation items.
 
-Read `report/REPORT_DRAFT.md`, `report/aimo-interp-report-v5.pdf`,
-`report/CLAIMS_TABLE.md`, and `EXECUTION_REPORT_v5.md` for results and limitations.
-The inherited pre-v5 README is preserved at `research/history/README_pre_v5.md`.
+For a one-sided exact binomial test at alpha 0.05, 80% power at true accuracy 0.60
+first occurs at 158 items and is sustained from 169; at accuracy 0.65 the counts
+are 69 and 76. These are single fixed predictor calculations, without leaderboard
+selection or multiple-owner correction. The report keeps those limits explicit.
 
-## Reproduce the CPU report
+Read `report/REPORT_DRAFT.md`, the named and anonymous v6 PDFs under `report/`,
+`EXECUTION_REPORT_v6.md`, and `PUBLICATION.md`. The v5 report and its execution
+receipts remain historical evidence. Two frozen owner bundle scores and final-test
+performance remain **UNMEASURED**. No GPU/model generation run was launched.
 
-Use Python 3.12 and the pinned local dependencies:
+## Reproduce
+
+Use Python 3.12 or newer (this release is verified on Python 3.13):
 
 ```sh
 git clone https://github.com/testofschool/aimo-interp-abc.git
 cd aimo-interp-abc
-uv venv --python 3.12 .venv
-uv pip install --python .venv/bin/python -r requirements-local.txt
+python3.13 -m venv .venv
+.venv/bin/python -m pip install -r requirements-local.txt
 .venv/bin/python -I tools/fetch_data.py --output-dir data
 .venv/bin/python -I tools/reproduce_report.py
+.venv/bin/python -I tests/test_v6_gates.py
+.venv/bin/python -I tools/test_leaderboard_identifiability.py
 ```
 
-The fetcher fixes all four HF revisions and checks exact file sizes and hashes.
-Any existing mismatch stops without replacement. Parquet files are excluded from
-the prepared public export because redistribution permission is unresolved.
-`data/manifest.json` records IDs, paths, revisions, hashes and source evidence.
+V1 checks the original and expanded numeric registry; V2 renders the original
+and final outlines; V3 preserves the v5 reference values. V4 is expected to return
+`CLOSED` with exit 1. V5 recomputes 22 frozen v6 values from hash-checked inputs.
+V6 checks report front matter in both source variants and Markdown. A separate
+owner-evidence check retains UNMEASURED when receipts are missing, allowing
+unrelated analysis and report work to complete. Synthetic fixtures are not service
+results. See `research/GATES_v6.md` for scope and the supplied gate's limitations.
 
-The reproduction runner checks the original V1 (13 claims), original V2 (17
-placeholders), final V1 (87 claims), final V2 (89 placeholders), V3's registered
-values and V4. V4 must return CLOSED / exit 1; that is the expected operational
-stop, not a failed report check. It also compares regenerated JSON and rendered
-Markdown with the tracked bytes. It does not launch a job or contact Codabench.
+Dataset IDs, immutable revisions, hashes and license boundaries are in
+`data/manifest.json`. Parquet files are fetched locally and not redistributed.
+Pinned public leaderboard JSON is included; participant handles remain in the
+raw snapshot, while derived result tables use within-track owner ranks.
+Every reported numeric key is regenerated and checked against `research/claims.json`.
+A hash mismatch stops before computation.
 
-The expanded numeric script preserves the original claim values and adds plain
-accuracy, checkpoint/cohort sensitivities and a fully specified problem bootstrap.
-The old unscripted power-note interval is historical, not the current estimate.
-
-## Report source and PDF
+## Report builds and remaining owner work
 
 ```sh
 .venv/bin/python -I tools/render_report.py report/REPORT_OUTLINE.md results/report_numbers.json report/REPORT_DRAFT.md
 .venv/bin/python -I report/create_source.py
 ```
 
-`report/main.tex` embeds the unchanged official NeurIPS style and uses an inline
-bibliography. See `report/README.md` for the PDF build. Final source compiled with
-both the desktop compiler and pdfTeX; all five page renders were inspected. The
-PDF hash and font/key/reference checks are in `report/render_qa_v5.json`.
+`report/create_source.py` produces named and anonymous NeurIPS sources from the
+same gated body. See `report/README.md` for build and font/render verification.
+Both variants are retained while the actual OpenReview invitation's anonymity
+policy is unavailable. This repository's publication is not an OpenReview receipt.
 
-## Owner submission artifacts and remaining work
+The owner uploads the unchanged Small bundles listed in `OWNER_CHECKLIST_v6.md`,
+records native receipts and screenshots, reads current Discord instructions,
+nominates final-test submissions, and performs the final OpenReview submission.
+Two aggregate scores can check receipt expectations; they cannot establish
+per-problem label balance. Missing evidence never becomes a zero or a passed gate.
 
-| Bundle | SHA256 | Status |
-|---|---|---|
-| `bundles/solution-text-length-control-small.zip` | `30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd` | Original frozen control, unchanged |
-| `bundles/solution-always-true-small.zip` | `4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a` | Built with the pinned official builder |
-
-The owner confirmed account `testofschool` and no submission yet. `kangmin` rows
-are not used as evidence. Host-only checks do not establish private scores or
-GPU-image parity. See `OWNER_CHECKLIST_v5.md`; uploads and OpenReview submission
-remain owner actions. Public publication and anonymous fresh-clone reproduction
-passed on 2026-10-20 KST at commit `6fef8753b2e21b0c53098e77fdbc6e72ad4d4251`.
-See `PUBLICATION.md` and `results/v5/publication/` for public HEAD, V1-V4 outputs,
-data downloads, bundle rebuild and identical TeX source. Subsequent publication
-receipt/documentation commits preserve the tested scientific bytes. The report
-PDF retains its prepublication snapshot statements; this README records the
-current release state.
-
-## Evidence boundaries
-
-Problem R-squared is a descriptive in-sample decomposition. Agreement with a
-Bernoulli reference is not a significance test. Public sample configurations
-are not scored competition inputs; some underlying checkpoints overlap.
-Organizer baseline metrics use different protocols, so there is no matched
-superiority claim. Related work is cited explicitly. Unexecuted methods and
-unsupported inherited external screening numbers are not experimental results.
-
-AI assistance is disclosed in the report. Current rules and provenance are
-summarized in `research/v5_sources/AUTHORITY_LEDGER.md`; the private raw-source
-cache is not included in the export. These are documentary verifications, not
-independent reruns of competitors' experiments. Historical records retain their
-original timestamps and statements and are superseded by the v5 execution report.
+The October 31 rescrape is scheduled for 20:00 Asia/Seoul in the current Codex chat.
+It has not run. The registered kill rule and immutable future-snapshot invocation
+are in `HANDOFF_v6.md` and `research/identifiability_usage_v6.md`. Method reopening
+remains CLOSED. AI assistance and all statistical assumptions are disclosed in
+the report. Current release receipts supersede historical v5 state statements.

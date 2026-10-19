@@ -1,0 +1,12 @@
+{
+  "scope": "Synthetic gate regression tests only; no owner or service measurements",
+  "argv": [
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+    "-I",
+    "tests/test_v6_gates.py"
+  ],
+  "exit_code": 0,
+  "stdout": "",
+  "stderr": ".....\n----------------------------------------------------------------------\nRan 5 tests in 0.392s\n\nOK\n",
+  "passed": true
+}

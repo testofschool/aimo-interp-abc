@@ -1,0 +1,44 @@
+{
+  "when_utc": "2026-10-19T16:11:21.470525+00:00",
+  "phase": "Initial preflight checks re-recorded before v6 publication; all initial input hashes were checked before delegation",
+  "checks": [
+    {
+      "input": "Public main HEAD",
+      "expected": "9274840b6faacaa7ad0e321172071eedb822d9de",
+      "observed": "9274840b6faacaa7ad0e321172071eedb822d9de",
+      "status": "MATCH"
+    },
+    {
+      "input": "report/aimo-interp-report-v5.pdf",
+      "expected": "1ec9bfb0ac7e48c78ef13ae8ee78d9acdce953bd12bac1038a3bee08719194cf",
+      "observed": "1ec9bfb0ac7e48c78ef13ae8ee78d9acdce953bd12bac1038a3bee08719194cf",
+      "status": "MATCH"
+    },
+    {
+      "input": "bundles/solution-text-length-control-small.zip",
+      "expected": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "observed": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "status": "MATCH"
+    },
+    {
+      "input": "bundles/solution-always-true-small.zip",
+      "expected": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "observed": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "status": "MATCH"
+    },
+    {
+      "input": "data/train-main-v2.parquet",
+      "expected": "e18eb44207e7987781ec2ff214793196038442bdc1466fdf5498f3e87ec58285",
+      "observed": "e18eb44207e7987781ec2ff214793196038442bdc1466fdf5498f3e87ec58285",
+      "status": "MATCH"
+    },
+    {
+      "input": "research/PREREG_v6.json",
+      "expected": "cd0ee93fbb536f9de02f626164b40915eb3be7ed95b69b5b154f0fd3fed81a36",
+      "observed": "cd0ee93fbb536f9de02f626164b40915eb3be7ed95b69b5b154f0fd3fed81a36",
+      "status": "MATCH"
+    }
+  ],
+  "package_checks": "research/v6_sources/input-integrity.json (38/38)",
+  "result": "PASS"
+}

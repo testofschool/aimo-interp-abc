@@ -11,9 +11,11 @@ allowed into the report: --check exits 1 and prints the offending claim.
 """
 import argparse
 import hashlib
+import importlib.util
 import json
 import os
 import sys
+from pathlib import Path
 
 import numpy as np
 import pandas as pd
@@ -187,6 +189,13 @@ def run(d):
     # 7. concordance without dropping the 0.10-0.25 band (all rows, gpt-oss collapsed, robust iff max_drop <= 0.10)
     t["yb"] = (t.max_drop <= 0.10).astype(int)
     out["conc_train_nogap_p10"] = concordance(t.groupby(["problem", "cfg"]).yb.min().reset_index(), "problem", "yb")
+    # 8. The independent v6 leaderboard tool checks all raw snapshot bytes before
+    # parsing. Load by absolute path so this also works under Python -I.
+    tool_path = Path(__file__).with_name("leaderboard_identifiability.py")
+    spec = importlib.util.spec_from_file_location("leaderboard_identifiability", tool_path)
+    identifiability = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(identifiability)
+    out.update(identifiability.run(Path(d) / "leaderboard/2026-10-19", d)["numbers"])
     return out
 
 

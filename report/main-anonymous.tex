@@ -1,0 +1,839 @@
+% Standalone scientific report; official style embedded unchanged.
+\begin{filecontents*}[overwrite]{neurips_2026.sty}
+% partial rewrite of the LaTeX2e package for submissions to the
+% Conference on Neural Information Processing Systems (NeurIPS):
+%
+% - uses more LaTeX conventions
+% - line numbers at submission time replaced with aligned numbers from
+%   lineno package
+% - \nipsfinalcopy replaced with [final] package option
+% - automatically loads times package for authors
+% - loads natbib automatically; this can be suppressed with the
+%   [nonatbib] package option
+% - adds foot line to first page identifying the conference
+% - adds preprint option for submission to e.g. arXiv
+% - conference acronym modified
+% - update foot line to display the track name
+%
+% Roman Garnett (garnett@wustl.edu) and the many authors of
+% nips15submit_e.sty, including MK and drstrip@sandia
+%
+% last revision: January 2026
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neurips_2026}[2026-01-29 NeurIPS 2026 submission/camera-ready style file]
+
+% declare final option, which creates camera-ready copy
+\newif\if@neuripsfinal\@neuripsfinalfalse
+\DeclareOption{final}{
+  \@neuripsfinaltrue
+  \@anonymousfalse
+}
+
+% declare nonatbib option, which does not load natbib in case of
+% package clash (users can pass options to natbib via
+% \PassOptionsToPackage)
+\newif\if@natbib\@natbibtrue
+\DeclareOption{nonatbib}{
+  \@natbibfalse
+}
+
+% declare preprint option, which creates a preprint version ready for
+% upload to, e.g., arXiv
+\newif\if@preprint\@preprintfalse
+\DeclareOption{preprint}{
+  \@preprinttrue
+  \@anonymousfalse
+}
+
+% determine the track of the paper in camera-ready mode
+\newif\if@main\@maintrue
+\DeclareOption{main}{
+  \@maintrue
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear).}
+}
+\newif\if@position\@positionfalse
+\DeclareOption{position}{
+  \@positiontrue
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Position Paper Track.}
+}
+\newif\if@eandd\@eanddfalse
+\DeclareOption{eandd}{
+  \@eanddtrue
+\if@neuripsfinal\@anonymousfalse\else\if@preprint\@anonymousfalse\else\@anonymoustrue\fi\fi
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Track on Evaluations and Datasets.} 
+}
+\newif\if@creativeai\@creativeaifalse
+\DeclareOption{creativeai}{
+  \@creativeaitrue
+  \@anonymousfalse
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Creative AI Track.}
+}
+\newif\if@education\@educationfalse
+\DeclareOption{education}{
+  \@educationtrue
+  \@anonymousfalse
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Education Track.}
+}
+
+% For anonymous or non-anonymous
+\newif\if@anonymous\@anonymoustrue
+
+% For workshop papers
+\newcommand{\@workshoptitle}{}
+\newcommand{\workshoptitle}[1]{\renewcommand{\@workshoptitle}{#1}}
+
+\newif\if@workshop\@workshopfalse
+\DeclareOption{sglblindworkshop}{
+  \@workshoptrue
+  \@anonymousfalse
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Workshop: \@workshoptitle.}
+}
+\DeclareOption{dblblindworkshop}{
+  \@workshoptrue
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Workshop: \@workshoptitle.}
+}
+\DeclareOption{nonanonymous}{
+  \@anonymousfalse
+}
+
+\ProcessOptions\relax
+
+% fonts
+\renewcommand{\rmdefault}{ptm}
+\renewcommand{\sfdefault}{phv}
+
+% change this every year for notice string at bottom
+\newcommand{\@neuripsordinal}{40th}
+\newcommand{\@neuripsyear}{2026}
+\newcommand{\@neuripslocation}{Sydney}
+
+% acknowledgments
+\usepackage{environ}
+\newcommand{\acksection}{\section*{Acknowledgments and Disclosure of Funding}}
+\NewEnviron{ack}{%
+  \acksection
+  \BODY
+}
+
+
+% load natbib unless told otherwise
+\if@natbib
+  \RequirePackage{natbib}
+\fi
+
+
+
+
+
+% set page geometry
+\usepackage[verbose=true,letterpaper]{geometry}
+\AtBeginDocument{
+  \newgeometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+  }
+  \@ifpackageloaded{fullpage}
+    {\PackageWarning{neurips_2026}{fullpage package not allowed! Overwriting formatting.}}
+    {}
+}
+
+\widowpenalty=10000
+\clubpenalty=10000
+\flushbottom
+\sloppy
+
+
+% font sizes with reduced leading
+\renewcommand{\normalsize}{%
+  \@setfontsize\normalsize\@xpt\@xipt
+  \abovedisplayskip      7\p@ \@plus 2\p@ \@minus 5\p@
+  \abovedisplayshortskip \z@ \@plus 3\p@
+  \belowdisplayskip      \abovedisplayskip
+  \belowdisplayshortskip 4\p@ \@plus 3\p@ \@minus 3\p@
+}
+\normalsize
+\renewcommand{\small}{%
+  \@setfontsize\small\@ixpt\@xpt
+  \abovedisplayskip      6\p@ \@plus 1.5\p@ \@minus 4\p@
+  \abovedisplayshortskip \z@  \@plus 2\p@
+  \belowdisplayskip      \abovedisplayskip
+  \belowdisplayshortskip 3\p@ \@plus 2\p@   \@minus 2\p@
+}
+\renewcommand{\footnotesize}{\@setfontsize\footnotesize\@ixpt\@xpt}
+\renewcommand{\scriptsize}{\@setfontsize\scriptsize\@viipt\@viiipt}
+\renewcommand{\tiny}{\@setfontsize\tiny\@vipt\@viipt}
+\renewcommand{\large}{\@setfontsize\large\@xiipt{14}}
+\renewcommand{\Large}{\@setfontsize\Large\@xivpt{16}}
+\renewcommand{\LARGE}{\@setfontsize\LARGE\@xviipt{20}}
+\renewcommand{\huge}{\@setfontsize\huge\@xxpt{23}}
+\renewcommand{\Huge}{\@setfontsize\Huge\@xxvpt{28}}
+
+
+% Force \tiny to be no smaller than 6pt
+\renewcommand{\tiny}{\fontsize{6pt}{7pt}\selectfont}
+
+% Force \scriptsize to be no smaller than 7pt
+\renewcommand{\scriptsize}{\fontsize{7pt}{8pt}\selectfont}
+
+% Force \footnotesize to be no smaller than 8pt
+\renewcommand{\footnotesize}{\fontsize{8pt}{9.5pt}\selectfont}
+
+% sections with less space
+\providecommand{\section}{}
+\renewcommand{\section}{%
+  \@startsection{section}{1}{\z@}%
+                {-2.0ex \@plus -0.5ex \@minus -0.2ex}%
+                { 1.5ex \@plus  0.3ex \@minus  0.2ex}%
+                {\large\bf\raggedright}%
+}
+\providecommand{\subsection}{}
+\renewcommand{\subsection}{%
+  \@startsection{subsection}{2}{\z@}%
+                {-1.8ex \@plus -0.5ex \@minus -0.2ex}%
+                { 0.8ex \@plus  0.2ex}%
+                {\normalsize\bf\raggedright}%
+}
+\providecommand{\subsubsection}{}
+\renewcommand{\subsubsection}{%
+  \@startsection{subsubsection}{3}{\z@}%
+                {-1.5ex \@plus -0.5ex \@minus -0.2ex}%
+                { 0.5ex \@plus  0.2ex}%
+                {\normalsize\bf\raggedright}%
+}
+\providecommand{\paragraph}{}
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{\z@}%
+                {1.5ex \@plus 0.5ex \@minus 0.2ex}%
+                {-1em}%
+                {\normalsize\bf}%
+}
+\providecommand{\subparagraph}{}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{\z@}%
+                {1.5ex \@plus 0.5ex \@minus 0.2ex}%
+                {-1em}%
+                {\normalsize\bf}%
+}
+\providecommand{\subsubsubsection}{}
+\renewcommand{\subsubsubsection}{%
+  \vskip5pt{\noindent\normalsize\rm\raggedright}%
+}
+
+% float placement
+\renewcommand{\topfraction      }{0.85}
+\renewcommand{\bottomfraction   }{0.4}
+\renewcommand{\textfraction     }{0.1}
+\renewcommand{\floatpagefraction}{0.7}
+
+\newlength{\@neuripsabovecaptionskip}\setlength{\@neuripsabovecaptionskip}{7\p@}
+\newlength{\@neuripsbelowcaptionskip}\setlength{\@neuripsbelowcaptionskip}{\z@}
+
+\setlength{\abovecaptionskip}{\@neuripsabovecaptionskip}
+\setlength{\belowcaptionskip}{\@neuripsbelowcaptionskip}
+
+% swap above/belowcaptionskip lengths for tables
+\renewenvironment{table}
+  {\setlength{\abovecaptionskip}{\@neuripsbelowcaptionskip}%
+   \setlength{\belowcaptionskip}{\@neuripsabovecaptionskip}%
+   \@float{table}}
+  {\end@float}
+
+% footnote formatting
+\setlength{\footnotesep }{6.65\p@}
+\setlength{\skip\footins}{9\p@ \@plus 4\p@ \@minus 2\p@}
+\renewcommand{\footnoterule}{\kern-3\p@ \hrule width 12pc \kern 2.6\p@}
+\setcounter{footnote}{0}
+
+% paragraph formatting
+\setlength{\parindent}{\z@}
+\setlength{\parskip  }{5.5\p@}
+
+% list formatting
+\setlength{\topsep       }{4\p@ \@plus 1\p@   \@minus 2\p@}
+\setlength{\partopsep    }{1\p@ \@plus 0.5\p@ \@minus 0.5\p@}
+\setlength{\itemsep      }{2\p@ \@plus 1\p@   \@minus 0.5\p@}
+\setlength{\parsep       }{2\p@ \@plus 1\p@   \@minus 0.5\p@}
+\setlength{\leftmargin   }{3pc}
+\setlength{\leftmargini  }{\leftmargin}
+\setlength{\leftmarginii }{2em}
+\setlength{\leftmarginiii}{1.5em}
+\setlength{\leftmarginiv }{1.0em}
+\setlength{\leftmarginv  }{0.5em}
+\def\@listi  {\leftmargin\leftmargini}
+\def\@listii {\leftmargin\leftmarginii
+              \labelwidth\leftmarginii
+              \advance\labelwidth-\labelsep
+              \topsep  2\p@ \@plus 1\p@    \@minus 0.5\p@
+              \parsep  1\p@ \@plus 0.5\p@ \@minus 0.5\p@
+              \itemsep \parsep}
+\def\@listiii{\leftmargin\leftmarginiii
+              \labelwidth\leftmarginiii
+              \advance\labelwidth-\labelsep
+              \topsep    1\p@ \@plus 0.5\p@ \@minus 0.5\p@
+              \parsep    \z@
+              \partopsep 0.5\p@ \@plus 0\p@ \@minus 0.5\p@
+              \itemsep \topsep}
+\def\@listiv {\leftmargin\leftmarginiv
+              \labelwidth\leftmarginiv
+              \advance\labelwidth-\labelsep}
+\def\@listv  {\leftmargin\leftmarginv
+              \labelwidth\leftmarginv
+              \advance\labelwidth-\labelsep}
+\def\@listvi {\leftmargin\leftmarginvi
+              \labelwidth\leftmarginvi
+              \advance\labelwidth-\labelsep}
+
+% create title
+\providecommand{\maketitle}{}
+\renewcommand{\maketitle}{%
+  \par
+  \begingroup
+    \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+    % for perfect author name centering
+    \renewcommand{\@makefnmark}{\hbox to \z@{$^{\@thefnmark}$\hss}}
+    % The footnote-mark was overlapping the footnote-text,
+    % added the following to fix this problem               (MK)
+    \long\def\@makefntext##1{%
+      \parindent 1em\noindent
+      \hbox to 1.8em{\hss $\m@th ^{\@thefnmark}$}##1
+    }
+    \thispagestyle{empty}
+    \@maketitle
+    \@thanks
+    \@notice
+  \endgroup
+  \let\maketitle\relax
+  \let\thanks\relax
+}
+
+% rules for title box at top of first page
+\newcommand{\@toptitlebar}{
+  \hrule height 4\p@
+  \vskip 0.25in
+  \vskip -\parskip%
+}
+\newcommand{\@bottomtitlebar}{
+  \vskip 0.29in
+  \vskip -\parskip
+  \hrule height 1\p@
+  \vskip 0.09in%
+}
+
+% create title (includes both anonymized and non-anonymized versions)
+\providecommand{\@maketitle}{}
+\renewcommand{\@maketitle}{%
+  \vbox{%
+    \hsize\textwidth
+    \linewidth\hsize
+    \vskip 0.1in
+    \@toptitlebar
+    \centering
+    {\LARGE\bf \@title\par}
+    \@bottomtitlebar
+    \if@anonymous
+      \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}
+        Anonymous Author(s) \\
+        Affiliation \\
+        Address \\
+        \texttt{email} \\
+      \end{tabular}%
+    \else
+      \def\And{%
+        \end{tabular}\hfil\linebreak[0]\hfil%
+        \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
+      }
+      \def\AND{%
+        \end{tabular}\hfil\linebreak[4]\hfil%
+        \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
+      }
+      \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}%
+    \fi
+    \vskip 0.3in \@minus 0.1in
+  }
+}
+
+% add conference notice to bottom of first page
+\newcommand{\ftype@noticebox}{8}
+\newcommand{\@notice}{%
+  % give a bit of extra room back to authors on first page
+  \enlargethispage{2\baselineskip}%
+  \@float{noticebox}[b]%
+    \footnotesize\@noticestring%
+  \end@float%
+}
+
+% abstract styling
+\renewenvironment{abstract}%
+{%
+  \vskip 0.075in%
+  \centerline%
+  {\large\bf Abstract}%
+  \vspace{0.5ex}%
+  \begin{quote}%
+}
+{
+  \par%
+  \end{quote}%
+  \vskip 1ex%
+}
+
+% For the paper checklist
+\newcommand{\answerYes}[1][]{\textcolor{blue}{[Yes]#1}}
+\newcommand{\answerNo}[1][]{\textcolor{orange}{[No]#1}}
+\newcommand{\answerNA}[1][]{\textcolor{gray}{[N/A]#1}}
+\newcommand{\answerTODO}[1][]{\textcolor{red}{\bf [TODO]}}
+\newcommand{\justificationTODO}[1][]{\textcolor{red}{\bf [TODO]}}
+
+% handle tweaks for camera-ready copy vs. submission copy
+\if@preprint
+  \newcommand{\@noticestring}{%
+    Preprint.%
+  }
+\else
+  \if@neuripsfinal
+    \newcommand{\@noticestring}{
+      \@trackname
+    }
+  \else
+    \newcommand{\@noticestring}{%
+      Submitted to \@neuripsordinal\/ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Do not distribute.%
+    }
+
+    % hide the acknowledgements
+    \NewEnviron{hide}{}
+    \let\ack\hide
+    \let\endack\endhide
+
+    % line numbers for submission
+    \RequirePackage{lineno}
+    \linenumbers
+
+    % fix incompatibilities between lineno and amsmath, if required, by
+    % transparently wrapping linenomath environments around amsmath
+    % environments
+    \AtBeginDocument{%
+      \@ifpackageloaded{amsmath}{%
+        \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
+          \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+          \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
+          \renewenvironment{#1}%
+                          {\linenomath\csname old#1\endcsname}%
+                          {\csname oldend#1\endcsname\endlinenomath}%
+        }%
+        \newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{%
+          \patchAmsMathEnvironmentForLineno{#1}%
+          \patchAmsMathEnvironmentForLineno{#1*}%
+        }%
+        \patchBothAmsMathEnvironmentsForLineno{equation}%
+        \patchBothAmsMathEnvironmentsForLineno{align}%
+        \patchBothAmsMathEnvironmentsForLineno{flalign}%
+        \patchBothAmsMathEnvironmentsForLineno{alignat}%
+        \patchBothAmsMathEnvironmentsForLineno{gather}%
+        \patchBothAmsMathEnvironmentsForLineno{multline}%
+      }
+      {}
+    }
+  \fi
+\fi
+
+
+\endinput
+\end{filecontents*}
+\documentclass{article}
+\usepackage[preprint]{neurips_2026}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,booktabs,tabularx,array,textcomp}
+\usepackage[hidelinks]{hyperref}
+\setcitestyle{numbers,square,comma}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\hypersetup{pdftitle={Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp},pdfauthor={Anonymous Author(s)},pdfsubject={Leaderboard identifiability and evaluation design in AIMO-Interp}}
+\title{Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp}
+\author{Anonymous Author(s)}
+\begin{document}
+\maketitle
+\begin{abstract}
+
+How much evidence does a small public leaderboard provide about robustness prediction? We analyze a hash-pinned AIMO-Interp leaderboard snapshot using its observed score grid. The smallest compatible item counts are 14 for Small and 21 for Main. Under an explicit independent fair-coin item null and an independent-submission model, we adjust each owner's best visible score for its number of scored submissions, then apply Benjamini--Hochberg across owners. Only 2 of 61 Small owners and 1 of 41 Main owners reject that conditional null; every surviving owner has a perfect score. Non-rejection does not establish chance performance, method equivalence, or a pairwise ranking. Exact one-sided binomial power at true accuracy 0.6 is 0.12 and 0.2 on the respective grids. Power first reaches 0.8 at 158 items for accuracy 0.6 and 69 for 0.65; discreteness makes the sustained thresholds larger. We recommend at least 76--169 independent items for those stated effects before accounting for leaderboard selection. A supporting public-label audit finds no mixed labels among 11 Small problems with multiple checkpoints. We provide CPU reproduction, parsing and sensitivity contracts, and distinguish observed leaderboard statistics from unmeasured private results for our own controls.
+
+
+\end{abstract}
+
+\section{Task and the evidence a leaderboard supplies}
+
+The AIMO Interpretability Challenge asks whether a model will answer a mathematical problem robustly under meaning-preserving perturbations. A predictor receives a problem and access to a specified model, then produces a binary robustness decision. The Small track uses a fixed set of open checkpoints; Main adds a larger checkpoint with multiple reasoning-effort configurations. The scored outcome is plain accuracy on held-out problem--model instances. A leaderboard is therefore an evaluation instrument for generalization to those instances, while an interpretability claim also needs evidence about what signal a method uses. A high development score and a model-specific explanation are separate claims. \citep{S1,S2,S3}
+
+
+The public dataset card says that the validation set is close to balanced. An earlier public technical report states that validation and test are balanced per problem and per model, and describes an always-robust result on the Small validation set. We attribute that stronger balance statement to the prior report; we do not infer exact balance from the phrase ``close to balanced.'' The organizer website also says that the exact private evaluation criterion is unpublished. These sources motivate a fair-coin reference, but they do not establish the independence assumptions required for a binomial test. Our statistical claims below are conditional on a declared null and scoring model. \citep{S1,S2,S7}
+
+
+The scientific question is whether the public validation board can separate plausible improvements in accuracy from score variation and repeated selection. A board with few items can still detect an extreme outcome. It can simultaneously have little power for a useful but moderate improvement, especially when owners can try several methods and retain the best score. The relevant unit for the selection adjustment is the owner within each track, rather than each displayed score row. Neither an isolated significant owner nor a collection of non-significant owners is itself an ordering of methods.
+
+
+Our main contribution is an executable, snapshot-specific assessment of that evidential limit. We specify how the score grid is reconstructed, how invalid predictions and duplicate rows enter the denominator, how an owner's best visible result is adjusted, and what sample size detects stated effects under the same null. We then connect this result to a supporting label audit: a training set dominated by problem identity cannot by itself teach the contrast that a balanced per-problem test is designed to measure. That latter observation overlaps prior public work and is not our lead novelty claim. The report concerns evaluation design and uncertainty; it does not propose a new robustness predictor.
+
+
+\section{A conditional analysis of the visible leaderboard}
+
+\subsection{Snapshot, units and score reconstruction}
+
+We freeze the public private-validation leaderboard snapshot dated October 19, 2026, fetched on October 20 in Korea. The reproduction package stores the raw JSON pages, their hashes and the immutable analysis inputs. Snapshot date means the dated archive used for this calculation, not that every submitted run occurred on that date. The analysis refuses to compute after a snapshot hash mismatch. This avoids quietly replacing a published denominator when the online board changes. \citep{S10}
+
+
+The integer item counts are inferred from the score grid. For each track, the parser searches for the smallest item count compatible with the displayed accuracy and coverage after rounding, together with the integer invalid-prediction count. It represents a scored submission by its integer number of correct items divided by that denominator, counting invalid predictions as wrong. The smallest compatible counts are 14 and 21. This finite-grid assumption is explicit: the chosen unweighted integer score model and smallest-fit rule cannot reveal undocumented weighting or resampling. The exact item counts should ultimately be confirmed by the evaluator's item-level scoring contract.
+
+
+The parser de-duplicates repeated score rows before counting submissions. A submission scored on both tasks contributes once to each relevant track. An observed submission has conflicting score sets; the declared resolution uses its zero-coverage set. Zero-coverage rows remain part of the parsing record but do not enter owner counts or the distribution of scored best results. This resolution does not change the reported survivor counts. The analysis uses owner identifiers only to group submissions; participant handles remain confined to the hashed raw snapshot.
+
+
+After these rules, Small contains 249 scored submissions from 61 owners and Main contains 132 from 41. The units matter: a repeated row is not a new attempt, while several distinct submissions by one owner create a selection opportunity. A method may change between submissions, so the owner-level result describes the best visible outcome selected from that owner's attempts. It does not estimate the accuracy of a stable, pre-specified algorithm.
+
+
+\subsection{Null, selection adjustment and multiplicity}
+
+For a single pre-specified submission, let K be its number of correct items among N. Our reference null makes item correctness independent with common probability one half. The one-sided exact upper-tail probability for an observed count k is
+
+
+\[
+p(k,N)=\Pr_{K\sim\operatorname{Bin}(N,1/2)}(K\geq k)
+=\sum_{j=k}^{N}\binom{N}{j}2^{-N}.
+\]
+
+The fair-coin null is a calibration model. It is not a claim that actual submissions guess, nor a randomization test justified solely by class balance. A deterministic constant predictor under exact fixed balance, for example, has a different conditional score distribution. Correlated problem--model outcomes, unequal item difficulties or an imperfectly balanced label composition can also invalidate the binomial calibration. The analysis should therefore be read as ``what this small grid can establish under this transparent reference,'' rather than as unconditional evidence about the private task distribution.
+
+
+For an owner with m scored submissions and best single-submission tail probability p, we compute the probability of observing at least one equally extreme result under independent, identically calibrated submission scores:
+
+
+\[
+p_{\mathrm{adj}}=1-(1-p)^m.
+\]
+
+This is the independent-submission selection adjustment. It grows with the number of opportunities to obtain a high score. For independent counts obeying the stated binomial null, it is exact at attainable score thresholds; with merely valid discrete p-values it is conservative. We do not fit a distribution of latent owner skill. The calculation is fully determined by the best score, the track denominator and the visible scored-submission count.
+
+
+We apply the Benjamini--Hochberg step-up rule separately within Small and Main at false-discovery-rate target 0.05. Sorting the adjusted p-values across the M scored owners, the rule retains the largest rank r satisfying the threshold below and rejects the preceding ranks. Bonferroni at level 0.05 is reported as a sensitivity check. \citep{S11}
+
+
+\[
+p_{\mathrm{adj},(r)}\leq q\,r/M.
+\]
+
+The conventional false-discovery-rate guarantee requires valid owner p-values and suitable dependence conditions, such as independent owners. Public methods can share code, data, observations and leaderboard feedback. We do not observe those dependencies. Bonferroni avoids the across-owner dependence requirement when its input p-values are valid, but still inherits the binomial item model and the independent-submission adjustment. Equal counts under the two corrections are useful sensitivity evidence within this model; they do not remove its assumptions.
+
+
+\subsection{Results and what the perfect scores establish}
+
+\begin{table}[htbp]
+
+\caption{Owner-level results under the declared independent-item and independent-submission null. All surviving owners have perfect scores.}
+
+\label{tab:1}
+
+\small
+
+\begin{tabularx}{\linewidth}{@{}YYYYYY@{}}
+
+\toprule
+
+\textbf{Track} & \textbf{Inferred items} & \textbf{Scored owners} & \textbf{BH survivors} & \textbf{Bonferroni survivors} & \textbf{Perfect-score owners} \\
+
+\midrule
+
+Small & 14 & 61 & 2 & 2 & 2 \\
+
+Main & 21 & 41 & 1 & 1 & 1 \\
+
+\bottomrule
+
+\end{tabularx}
+
+\end{table}
+
+Only 2 Small owners and 1 Main owners survive either correction, and each has a perfect observed score. A further sensitivity replaces the within-owner adjustment by the union bound, min(1, m p), followed by across-owner Bonferroni. It gives 2 Small and 1 Main survivors. For a fixed family of attempts and owners with valid single-submission binomial p-values, this bound requires no independence among attempts or among owners. With score-adaptive stopping, the observed-count result is descriptive unless p-value validity holds conditional on the observed family and counts. The next Small owner has 12/14 correct across 5 scored submissions, with independent-submission adjusted tail probability 0.0319. The next Main owner has 17/21 across 6 submissions, with adjusted tail probability 0.0214. These next-best results fail the across-owner rule despite looking strong as raw accuracy fractions.
+
+
+A perfect score is an extreme event under this null regardless of the procedure that produced it. Significance therefore cannot establish that the procedure used a model-internal signal, avoided leakage, or generalizes to new problems. The snapshot records 1 perfect Small submission through the queue named \texttt{aimo\_\allowbreak organizer\_\allowbreak rerun}. We report this as an observed queue label and make no inference about how that run was produced or why it used that queue. The analysis assigns no causal interpretation or accusation to a score or a queue.
+
+
+Conversely, a non-rejected owner may have useful accuracy. Low power, multiplicity and a small number of visible trials can all prevent rejection. Our survivor count is neither the number of valid methods nor the number of methods better than random in the target population. It is a count of visible owners separated from the stated reference under the stated analysis. The surviving owners are also not ordered against each other by a significance test. Ranking two predictors requires their paired item outcomes, an estimand for their accuracy difference, and uncertainty accounting for selection; aggregate best scores do not supply those ingredients.
+
+
+\section{Exact power and an actionable item budget}
+
+\subsection{Single-submission planning calculation}
+
+We first plan for a single pre-specified submission without owner selection or an across-owner correction. For each candidate sample size N, the rejection threshold c(N) is the smallest integer correct count whose exact fair-coin upper tail is at most 0.05. Under an alternative accuracy a with independent items, power is the probability of reaching that count:
+
+
+\[
+c(N)=\min\{k:p(k,N)\leq\alpha\},\qquad
+\pi(N,a)=\Pr_{K\sim\operatorname{Bin}(N,a)}\{K\geq c(N)\}.
+\]
+
+If no count satisfies the level constraint, power is zero. Using the exact integer threshold preserves the conservative behavior of a discrete test. It also makes power non-monotone in N near the target: adding an item sometimes increases the required correct count. A normal approximation or a single first-crossing value hides this sawtooth behavior.
+
+
+\begin{table}[htbp]
+
+\caption{Exact single-submission binomial power on the inferred validation grids. This calculation precedes selection and multiplicity correction.}
+
+\label{tab:2}
+
+\small
+
+\begin{tabularx}{\linewidth}{@{}YYYYY@{}}
+
+\toprule
+
+\textbf{Grid} & \textbf{Rejection count} & \textbf{Actual null rejection probability} & \textbf{Power at accuracy 0.6} & \textbf{Power at accuracy 0.65} \\
+
+\midrule
+
+Small, N = 14 & 11 & 0.0287 & 0.12 & 0.22 \\
+
+Main, N = 21 & 15 & 0.0392 & 0.2 & 0.36 \\
+
+\bottomrule
+
+\end{tabularx}
+
+\end{table}
+
+At true accuracy 0.6, the single-submission test has power 0.12 on the Small grid and 0.2 on Main. At 0.65, these rise to 0.22 and 0.36. These probabilities describe repeated independent evaluations under the model; they are not confidence levels for any named submission. They explain why a moderate gain can remain unresolved on a tiny leaderboard even before correcting a best-of-many search.
+
+
+\subsection{First crossing and sustained power}
+
+We report both the first N reaching target power 0.8 and the first N after which every larger sample size stays at or above that target. The latter is a more robust planning recommendation. The executable search certifies the sustained threshold by exact enumeration followed by an analytic tail bound for all larger N, rather than treating a finite search horizon as proof of a permanent crossing.
+
+
+\begin{table}[htbp]
+
+\caption{First crossing and sustained target power under independent-item planning. Sustained thresholds are recommended for item budgeting.}
+
+\label{tab:3}
+
+\small
+
+\begin{tabularx}{\linewidth}{@{}YYY@{}}
+
+\toprule
+
+\textbf{True accuracy} & \textbf{First N with target power} & \textbf{Sustained N with target power} \\
+
+\midrule
+
+0.6 & 158 & 169 \\
+
+0.65 & 69 & 76 \\
+
+\bottomrule
+
+\end{tabularx}
+
+\end{table}
+
+The first crossings are 69--158 items for the stated alternatives. We recommend the sustained values, at least 76 items to detect accuracy 0.65 or 169 to detect 0.6, under independent-item planning. A nearby larger sample should not be assumed adequate from the first crossing alone. The released tool computes exact power at each candidate sample size and records the threshold certification, so the calculation can be inspected without reinterpreting rounded table entries.
+
+
+These are lower-complexity planning scenarios than the observed leaderboard analysis. They test one method against a fixed reference; they do not guarantee power after owner selection, false-discovery correction, pairwise comparisons or model development on validation feedback. A final evaluation that chooses among many methods must allocate its error budget to that selection process or reserve an untouched confirmation set. We do not turn the single-test item budget into a universal minimum for ranking a field.
+
+
+\subsection{Evaluation design implications}
+
+A useful next evaluation would preserve the problem as a grouping unit and release enough item-level outcomes to distinguish within-problem model contrasts from between-problem difficulty. If several instances share one problem, adding model configurations can add less independent information than adding new problems. The item budgets above assume independent correctness indicators; positive within-problem correlation would generally reduce effective information. A design should state the number of problems, the number of model instances per problem, balance constraints, invalid-prediction handling and any weighting before treating a nominal row count as its statistical sample size.
+
+
+For method comparison, a paired analysis is preferable to subtracting independent accuracy estimates, because predictors face the same instances. The evaluator can report which methods disagree and evaluate their paired accuracy difference while preserving problem clusters. A constant prediction and a problem-only control are also informative reference methods under the actual private scoring protocol. Their measured scores test practical behavior; they cannot reconstruct hidden label balance from a small aggregate score. Finally, leaderboard feedback should be limited or separated from a final holdout so that iteration does not silently consume the confirmation set.
+
+
+The final-test size is unpublished in the sources we inspected. We therefore make no claim that the eventual final ranking has the same limitations as this visible validation snapshot. A larger, well-designed final set could resolve differences that the public board cannot. The recommendation is to publish its effective evaluation units and uncertainty, rather than infer its adequacy from the validation grid.
+
+
+\section{Supporting label audit and problem-only controls}
+
+\subsection{Training agreement does not identify model contrasts}
+
+The pinned training table has 94 rows over 36 problems, with 80 labelled rows and 14 rows in an unlabelled gap. The public rule labels an instance robust when its maximum observed drop is at most 0.10 and non-robust when it is at least 0.25. It does not specify the private-label procedure. The labelled Small subset contains 43 rows over 22 problems. Among its 11 problems represented by multiple checkpoints, 0 have mixed binary labels. Thus the observed training labels supply no within-problem label contrast for that repeated-checkpoint cohort. \citep{S2}
+
+
+An earlier public report already identifies problem-level shortcuts and reports exact per-problem balance in validation and test. Under exact within-problem balance, any deterministic problem-only predictor that gives the same binary answer for all model instances of a problem has accuracy exactly 0.5 on that problem, and therefore overall under equal item scoring. This follows by counting correct positive and negative instances, regardless of how the predictor learned its problem-level answer. The conclusion is conditional on that balance contract and same-answer behavior; it is not a proof that every text-based system is incapable of generalization. \citep{S7}
+
+
+We retain two frozen Small bundles: a length-and-digit control and an always-robust rule. Their own private-validation results are UNMEASURED because we have no linked owner receipt recording the bundle, submission identifier, status, accuracy and time. The anticipated constant/control results are receipt expectations motivated by public evidence, not pre-registered predictions of unknown labels. Even if both receipts match those expectations, they would show consistency for those submissions rather than prove exact per-problem balance. Final-test performance of these bundles is also UNMEASURED. This owner-result limitation is separate from our observed analysis of the public board.
+
+
+\subsection{Descriptive drop variance and label concordance}
+
+For continuous maximum drop, we compute one minus within-problem squared error divided by total squared error, using each observed problem mean to estimate its residuals. This in-sample R-squared describes the public panel; it is not cross-validated prediction. Unlabelled rows are retained where continuous drops are present. Repeated configurations include effort variants, so they are not all distinct model checkpoints.
+
+
+\begin{table}[htbp]
+
+\caption{Observed maximum-drop variance grouped by problem; an in-sample description.}
+
+\label{tab:4}
+
+\small
+
+\begin{tabularx}{\linewidth}{@{}YYYY@{}}
+
+\toprule
+
+\textbf{Public panel} & \textbf{Rows or pairs} & \textbf{Problems} & \textbf{Descriptive R-squared} \\
+
+\midrule
+
+Train, repeated configurations & 76 & 18 & 0.7822 \\
+
+Train, multi-checkpoint problems & 70 & 15 & 0.7369 \\
+
+Small, distinct checkpoints & 39 & 14 & 0.7811 \\
+
+Public sample-full configurations & 80 & 10 & 0.1813 \\
+
+\bottomrule
+
+\end{tabularx}
+
+\end{table}
+
+The repeated-configuration training cohort includes 3 problems represented only by effort variants of the same larger checkpoint. The multi-checkpoint sensitivity retains those effort rows where other checkpoints are also present. For sample-full, we take the maximum recorded family drop per model/configuration--problem pair. Aliases, decoding configurations, problem panels and perturbation coverage differ across public panels. The large contrast in R-squared therefore limits a universal problem-property interpretation without constituting a controlled generalization experiment.
+
+
+\begin{table}[htbp]
+
+\caption{Observed label agreement; the Bernoulli reference count is not a significance test.}
+
+\label{tab:5}
+
+\small
+
+\begin{tabularx}{\linewidth}{@{}YYY@{}}
+
+\toprule
+
+\textbf{Label agreement panel} & \textbf{Concordant / repeated groups} & \textbf{Independent-Bernoulli reference count} \\
+
+\midrule
+
+Train, original labelled configurations & 15 / 16 & 5.94 \\
+
+Train, labelled Small checkpoints & 11 / 11 & 4.89 \\
+
+Train, no-gap sensitivity, worst effort & 10 / 15 & 3.59 \\
+
+Sample-full, public-rule proxy labels & 1 / 10 & 0.25 \\
+
+\bottomrule
+
+\end{tabularx}
+
+\end{table}
+
+A group is concordant when all included binary labels agree. The reference count sums the probabilities of all-positive or all-negative labels at each observed group size under independent Bernoulli draws at pooled prevalence. It is descriptive, not a significance test. The no-gap sensitivity labels every training row by the lower public threshold, then collapses the larger checkpoint's effort variants by the minimum binary label. Both the cohort and collapse rule change. The sample proxy uses the public threshold band and is not a private competition label. These distinctions prevent a label-concordance table from being read as evidence about unseen private outcomes.
+
+
+\subsection{A weak control with appropriately wide uncertainty}
+
+The control uses log-one-plus character length and digit count of the original problem. Class-balanced logistic regression is fitted on all labelled Main-table rows, excluding every row with the held-out problem string in each leave-one-problem-out fold. Evaluation uses only labelled Small rows. The fixed decision threshold is 0.5, with no hyperparameter search or model-internal input.
+
+
+\begin{table}[htbp]
+
+\caption{Problem-grouped public Small evaluation; these are public training outcomes.}
+
+\label{tab:6}
+
+\small
+
+\begin{tabularx}{\linewidth}{@{}YYYY@{}}
+
+\toprule
+
+\textbf{Public Small out-of-fold rule} & \textbf{Plain accuracy} & \textbf{Balanced accuracy} & \textbf{Correct rows} \\
+
+\midrule
+
+Length and digit count & 0.7674 & 0.6855 & 33 / 43 \\
+
+Always robust & 0.7209 & 0.5 & 31 / 43 \\
+
+\bottomrule
+
+\end{tabularx}
+
+\end{table}
+
+Holding out whole problems prevents the same problem string from entering both sides of a fold, including effort variants. It does not remedy the absence of mixed labels or reproduce the private test composition. We hold the out-of-fold predictions fixed and bootstrap the 22 problem clusters, drawing the same number of clusters with replacement using seed 0 for 4000 replicates. One-class draws are discarded, leaving 4000 valid draws. The balanced-accuracy 95\% interval is [0.4759, 0.9378]; the plain-accuracy interval is [0.5556, 0.9556]. The paired balanced-accuracy improvement over always robust is 0.1855, with interval [-0.0241, 0.4378], including zero. These intervals omit retraining and method-selection variation.
+
+
+Applying the fitted training control unchanged to public samples yields balanced accuracy 0.4913 on the aggregate sample and 0.5409 on the original validation sample rows. These samples have different configurations and label conventions, with possible problem overlap, so this is not a verified disjoint-problem transfer test. In the aggregate sample, the formatting of a perturbation-description field perfectly associates with the observed label: a field-format flag has accuracy 1.0. That field is not an original problem-only feature. It demonstrates why strong results on an unscored sample panel cannot alone establish actionable interpretability or private-task performance. \citep{S3,S5}
+
+
+\section{Limitations and sensitivity directions}
+
+The strongest limitation is calibration. Our binomial null assumes independent items with the same correctness probability. Shared problems, models and perturbations can create dependence; exact balance can itself constrain the outcome distribution of particular rules. The inferred denominators also rely on the smallest compatible unweighted score grid. We report these assumptions at the point of the main result because a small p-value under a convenient null is not an unconditional validation of a predictor.
+
+
+The within-owner selection adjustment assumes independent submissions. Closely related submissions are likely to be positively correlated, so they can provide fewer effective opportunities than m independent draws. Under such positive dependence the independence adjustment can be too large and reduce the number of rejections. Other dependence patterns can have a different direction; negative dependence can make it too small relative to the union event. Score-adaptive development and stopping can invalidate both a fixed-trial model and a correction using the realized number of attempts. The union-bound sensitivity also needs a fixed family or conditional validity given the family and counts; observing all attempts alone does not establish that condition. We cannot estimate effective attempts or stopping rules from aggregate scores. The release therefore exposes the unadjusted tail, visible m and adjusted tail rather than hiding this choice in a single survivor count.
+
+
+Only visible scored submissions are counted. Holding the observed best score fixed and retaining the same independent-submission null, including additional hidden attempts would increase the adjusted tail and could only reduce the reported survivors. In that restricted sensitivity analysis, the visible count is an optimistic upper bound. This is not an unconditional upper bound under unknown dependence, missing owners, an unseen higher best score or a misspecified null. The two directions must be read together: unobserved attempts can strengthen the selection penalty, while redundant positively correlated attempts can weaken it.
+
+
+Across-owner dependence presents an additional issue for the Benjamini--Hochberg interpretation. Shared solutions or public discoveries can correlate owner outcomes. The matching Bonferroni count is helpful because its family-wise bound allows arbitrary dependence across valid owner p-values. It does not validate the within-owner p-values. We avoid describing the adjusted analysis as a causal measurement of leaderboard overfitting or as a diagnosis of any individual submission.
+
+
+The snapshot is finite and time-specific. New submissions, scoring changes, owner visibility or an altered evaluator can change the result. The report has not measured our own frozen bundles on private validation and has no final-test outcomes. Public-training concordance, sample metadata associations and reported participant experiences support evaluation cautions; they are not substitutes for those missing results. A prior text-control report and a prior probe stress test discuss weaker public performance under distribution shift, which supplies context rather than a matched comparison to our analysis. \citep{S8,S9}
+
+
+Finally, single-method power is not ranking power. The item recommendations concern a one-sided test against the fair-coin reference at the stated effects and target. Pairwise ranking, small accuracy gaps, correlated outcomes, multiple comparisons and repeated validation feedback can require more data or a different design. We have not established that a method lacking significance is equivalent to chance, that surviving methods differ from one another, or that the public board predicts the final ordering.
+
+
+\section{Reproduction and assistance}
+
+The release supplies a hash-pinned CPU pipeline rather than additional model runs. It verifies the leaderboard snapshot and parquet inputs before computing; registers measured values in a claims ledger; renders every reported measurement through checked numeric keys; and builds both author variants from one Markdown manuscript using the unchanged official NeurIPS style. The leaderboard tool records denominator fits, parsing resolutions, owner counts, corrected tails, exact power at the current grids and the sustained-threshold certification. The reproduction gates also test missing, early, mismatched and bad-hash receipt fixtures without treating them as real submissions.
+
+
+The archive includes immutable dataset revisions, file hashes and a downloader. It does not redistribute third-party labelled data with unresolved licence terms. A separate publication record contains clean-clone checks, source/PDF hashes, page counts and render review. Those records establish what was executed and which artifacts can be rebuilt; compilation alone does not validate the assumptions of the statistical model. The raw leaderboard retains source identifiers for auditability, while the scientific report discusses aggregated owner counts and neutral source titles.
+
+
+AI assistance disclosure: Claude prepared the inherited research summaries, planning materials and initial outline. OpenAI Codex implemented and ran CPU analyses, expanded and revised the manuscript, checked source evidence and used independent AI agents for analysis, report preparation and gates. No new robustness labels or model predictions were generated for this report. Source claims, numerical outputs and limitations are separated so that AI-generated prose is not treated as experimental evidence.
+
+
+The practical result is a reproducible evidential boundary: under a declared calibration model, the visible validation grid separates only perfect observed outcomes after selection and multiplicity, and has low single-method power for the stated moderate effects. A larger confirmation set, item-level paired outcomes and explicit grouping/balance rules would make the board more informative about robustness predictors and about the interpretability claims attached to them.
+
+
+\clearpage
+
+\begin{thebibliography}{15}
+
+\small\raggedright
+
+\bibitem{S1} AIMO organizers. Official competition website, rules and FAQ. \href{https://aimo-interp.github.io/}{Competition description}.
+
+\bibitem{S2} AIMO organizers. \texttt{train-main-v2} dataset card, immutable revision fa8af758c6519fc97a9d0bd9017feb6f12232b52. \href{https://huggingface.co/datasets/aimo-interp/train-main-v2/blob/fa8af758c6519fc97a9d0bd9017feb6f12232b52/README.md}{Label rules and validation description}.
+
+\bibitem{S3} AIMO organizers. Getting-started README, immutable commit de794053debe75a711400696e66b60937cebbb1b. \href{https://github.com/aimo-interp/getting-started/blob/de794053debe75a711400696e66b60937cebbb1b/README.md}{Interface and sample scope}.
+
+\bibitem{S5} AIMO organizers. Uncertainty baseline README, immutable commit de794053debe75a711400696e66b60937cebbb1b. \href{https://github.com/aimo-interp/getting-started/blob/de794053debe75a711400696e66b60937cebbb1b/solutions/uncertainty-profiling/README.md}{Sample evaluation protocol}.
+
+\bibitem{S7} Prompt Probes Read Solve Rate, Not Robustness: Negative Results from the AIMO Interpretability Challenge. Public report, October 18, 2026; immutable source commit 3b678f62432dda6e2c3124b670fc4bcaed9453ab. Prior problem-level label agreement, reported evaluation balance and constant-rule result. Exact source location is preserved in the research evidence manifest.
+
+\bibitem{S8} Earlier public AIMO-Interp text-control report. Immutable source commit 48643c30e7a01cabd63f337711e79d962c7f8826. Text cross-validation and public-score comparison. Exact source location is preserved in the research evidence manifest.
+
+\bibitem{S9} Earlier public AIMO-Interp probe stress-test report. Immutable source commit e527debcfc1b4b92c3e25b529bf196a17a84b417. Distribution-shift study. Exact source location is preserved in the research evidence manifest.
+
+\bibitem{S10} Codabench. AIMO-Interp public private-validation leaderboard, frozen dated snapshot October 19, 2026; fetched October 20, 2026. \href{https://www.codabench.org/api/phases/30038/get_leaderboard/}{Public leaderboard API}. Hashed JSON pages and parser provenance accompany the reproduction archive.
+
+\bibitem{S11} Yoav Benjamini and Yosef Hochberg. Controlling the false discovery rate: a practical and powerful approach to multiple testing. Journal of the Royal Statistical Society, Series B, 1995. \href{https://doi.org/10.1111/j.2517-6161.1995.tb02031.x}{Original article}.
+
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,36 @@
+{
+  "status": "PASS",
+  "checks": [
+    {
+      "path": "report/aimo-interp-report-v5.pdf",
+      "same_bytes": true,
+      "sha256": "1ec9bfb0ac7e48c78ef13ae8ee78d9acdce953bd12bac1038a3bee08719194cf"
+    },
+    {
+      "path": "bundles/solution-text-length-control-small.zip",
+      "same_bytes": true,
+      "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd"
+    },
+    {
+      "path": "bundles/solution-always-true-small.zip",
+      "same_bytes": true,
+      "sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a"
+    },
+    {
+      "path": "requirements-local.txt",
+      "same_bytes": true,
+      "sha256": "a37eb58d8c0278e1643bdb132b53b3d382013a9e39e86a03f3501d4acf4769ae"
+    },
+    {
+      "path": "tools/reopen_gate.py",
+      "same_bytes": true,
+      "sha256": "4d22c7df8406a147a52554c205ca45f7ba7a3a5fcbdb06eb905725a9f340db38"
+    },
+    {
+      "path": "research/preregistered_v5_claims.json",
+      "same_bytes": true,
+      "sha256": "81dba39316273bffd14800bb19413d1d06d5ed41cc2adb54de6307f7b862ca4e"
+    }
+  ],
+  "participant_handle_text_check": "PASS for cited participant handles across Markdown and both TeX sources"
+}

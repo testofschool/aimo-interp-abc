@@ -1,0 +1,96 @@
+{
+  "scope": "SYNTHETIC FIXTURES ONLY; no owner submission, service receipt, upload, or private-validation measurement",
+  "result": "PASS",
+  "checks": [
+    {
+      "fixture": "match",
+      "synthetic": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-I",
+        "tools/prereg_codabench_gate.py",
+        "research/PREREG_v6.json",
+        "tests/fx_match.json"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "{\n \"result\": \"JUDGED\",\n \"verdict\": \"CONSISTENT: Small private-val behaves as label-balanced per problem; problem-only and constant predictors score exactly chance (7/14). Report may state the identity for val with these receipts.\",\n \"rows\": [\n  {\n   \"bundle\": \"solution-text-length-control-small.zip\",\n   \"expected\": \"7/14\",\n   \"observed\": \"7/14\",\n   \"match\": true\n  },\n  {\n   \"bundle\": \"solution-always-true-small.zip\",\n   \"expected\": \"7/14\",\n   \"observed\": \"7/14\",\n   \"match\": true\n  }\n ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "mismatch",
+      "synthetic": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-I",
+        "tools/prereg_codabench_gate.py",
+        "research/PREREG_v6.json",
+        "tests/fx_mismatch.json"
+      ],
+      "expected_exit": 0,
+      "exit_code": 0,
+      "passed": true,
+      "stdout": "{\n \"result\": \"JUDGED\",\n \"verdict\": \"REFUTED_OR_PARTIAL: Small private-val is not exactly per-problem balanced; report observed k/14 for each bundle and drop the per-problem-balance sentence for val.\",\n \"rows\": [\n  {\n   \"bundle\": \"solution-text-length-control-small.zip\",\n   \"expected\": \"7/14\",\n   \"observed\": \"7/14\",\n   \"match\": true\n  },\n  {\n   \"bundle\": \"solution-always-true-small.zip\",\n   \"expected\": \"7/14\",\n   \"observed\": \"9/14\",\n   \"match\": false\n  }\n ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "badsha",
+      "synthetic": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-I",
+        "tools/prereg_codabench_gate.py",
+        "research/PREREG_v6.json",
+        "tests/fx_badsha.json"
+      ],
+      "expected_exit": 1,
+      "exit_code": 1,
+      "passed": true,
+      "stdout": "{\n \"result\": \"BLOCKED\",\n \"errors\": [\n  \"solution-text-length-control-small.zip: sha256 bad != registered 30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd\",\n  \"solution-always-true-small.zip: sha256 bad != registered 4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a\"\n ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "early",
+      "synthetic": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-I",
+        "tools/prereg_codabench_gate.py",
+        "research/PREREG_v6.json",
+        "tests/fx_early.json"
+      ],
+      "expected_exit": 1,
+      "exit_code": 1,
+      "passed": true,
+      "stdout": "{\n \"result\": \"BLOCKED\",\n \"errors\": [\n  \"solution-text-length-control-small.zip: submitted 2026-10-19T10:00:00+09:00 not after registration 2026-10-20T00:56:29+09:00\",\n  \"solution-always-true-small.zip: submitted 2026-10-19T10:00:00+09:00 not after registration 2026-10-20T00:56:29+09:00\"\n ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "fixture": "missing",
+      "synthetic": true,
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-I",
+        "tools/prereg_codabench_gate.py",
+        "research/PREREG_v6.json",
+        "tests/fx_missing.json"
+      ],
+      "expected_exit": 1,
+      "exit_code": 1,
+      "passed": true,
+      "stdout": "{\n \"result\": \"BLOCKED\",\n \"errors\": [\n  \"missing receipt for solution-text-length-control-small.zip\",\n  \"missing receipt for solution-always-true-small.zip\"\n ]\n}\n",
+      "stderr": ""
+    }
+  ],
+  "frozen_input_sha256": {
+    "tools/submission_text_gate.py": "030bfa77ad2c9b1bfb1fda8e7c026a574f6feb98ed6f84daa0bd453f11c772d2",
+    "tools/prereg_codabench_gate.py": "07b09da4e05af061f3457268e0ac10e0a45b2bdd28484477345fad8337ff1d9d",
+    "research/PREREG_v6.json": "cd0ee93fbb536f9de02f626164b40915eb3be7ed95b69b5b154f0fd3fed81a36",
+    "tests/fx_badsha.json": "d0c55179b917fd86d7d6dc093480e2eb6e6a2f8bde49ddfc7e515374cca48bc4",
+    "tests/fx_early.json": "37b72149e1b793f259facc7d1aa69566afba0ca325505a59eb309b35cd41fa82",
+    "tests/fx_match.json": "9252b4c06e5dd796a53763f34afe0a2addfbc78c3bcb15e28615f80fd4eea9b6",
+    "tests/fx_mismatch.json": "79171847c4fa0f88595b7ccac620a044b303bbb85263fa37f5f49d2bb0986329",
+    "tests/fx_missing.json": "1fd26fc6d9fc27bb3fe73faa4580768fc0c6221efc8311485b7d6d01809cae73"
+  }
+}

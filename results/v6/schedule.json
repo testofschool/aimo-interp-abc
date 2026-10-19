@@ -1,0 +1,9 @@
+{
+  "task": "T5",
+  "automation_id": "aimo-v6-leaderboard-rescrape",
+  "status": "SCHEDULED_NOT_RUN",
+  "scheduled_local": "2026-10-31T20:00:00+09:00",
+  "target_complete_by_local": "2026-10-31T21:00:00+09:00",
+  "scope": "single rescrape and registered kill-rule check",
+  "thread_id": "01a154ea-9f83-76d0-811b-bb3a4e7679ce"
+}

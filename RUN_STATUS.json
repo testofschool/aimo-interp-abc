@@ -1,83 +1,68 @@
 {
-  "goal": "v5 report execution, CPU only",
-  "active_handoff": "HANDOFF_v5.md",
-  "overall": "PUBLIC_REPORT_REPRODUCED_OWNER_SUBMISSIONS_PENDING",
-  "preregistered": {
-    "V1": {
-      "result": "PASS",
-      "checked": 13,
-      "exit": 0
-    },
-    "V2": {
-      "result": "PASS",
-      "placeholders": 17,
-      "exit": 0
-    },
-    "V3": {
-      "result": "PASS",
-      "checked": 12
-    },
-    "V4": {
-      "result": "CLOSED",
-      "exit": 1,
-      "expected": true
-    }
+  "goal": "v6 CPU report execution",
+  "active_handoff": "HANDOFF_v6.md",
+  "overall": "LOCAL_REPORT_VERIFIED_PUBLICATION_PENDING",
+  "tracks": {
+    "T1": "PASS",
+    "T2": "PASS",
+    "T3": "PASS",
+    "T4": "OWNER_PENDING_UNMEASURED",
+    "T5": "SCHEDULED_NOT_RUN",
+    "T6": "PUBLIC_READBACK_PENDING"
   },
-  "final_numeric_gates": {
-    "V1_claims": 87,
-    "V2_placeholders": 89,
-    "status": "PASS"
+  "claims": 150,
+  "frozen_v6_checks": 22,
+  "render_placeholders": 136,
+  "V4": {
+    "result": "CLOSED",
+    "exit": 1,
+    "expected": true
   },
   "report": {
-    "pdf": "report/aimo-interp-report-v5.pdf",
-    "sha256": "1ec9bfb0ac7e48c78ef13ae8ee78d9acdce953bd12bac1038a3bee08719194cf",
-    "pages": 5,
-    "status": "TECHNICAL_DRAFT_NOT_SUBMITTED",
-    "visual_review": "PASS all five pages",
-    "author_details": "PENDING"
-  },
-  "method_track": "FOLDED",
-  "white_box_award": "OUT; no effect inferred from unrun ablation",
-  "new_gpu_jobs": 0,
-  "new_spend_usd": 0,
-  "historical_j0_spend_usd": 0.412497,
-  "historical_billing_refreshed": false,
-  "owner": {
-    "codabench_account": "testofschool",
-    "submission": "NOT_SUBMITTED; owner confirmed in current chat",
-    "kangmin": "NOT_ATTRIBUTED",
-    "private_validation": "UNMEASURED",
-    "final_test": "UNMEASURED",
-    "discord_nomination": "PENDING",
-    "openreview_receipt": "ABSENT"
-  },
-  "release": {
-    "requested_public_repo": "https://github.com/testofschool/aimo-interp-abc",
-    "public_remote": "PASS: public API private=false; anonymous Git HEAD/clone readback",
-    "local_export": "PUBLISHED",
-    "local_fresh_clone": {
-      "status": "PASS",
-      "scope": "LOCAL_ONLY",
-      "tested_commit": "6e9003b47ab624310f08a4a78192046da9671370",
-      "receipt": "results/v5/fresh_local_clone/receipt.json"
+    "named": {
+      "pdf": "report/aimo-interp-report-v6-named.pdf",
+      "sha256": "0cd3fdf4dd40b39a80b5244fc7d8131f2956c278d1944c6951eebe2e0290600f",
+      "pages": 9,
+      "body_pages": 8,
+      "reference_pages": 1,
+      "type3_count": 0,
+      "automated": "AUTOMATED_PASS_VISUAL_REVIEW_REQUIRED",
+      "visual_review": "PASS",
+      "visual_scope": "All 9 pages per variant inspected via final contact sheets; named pages 3,4,6 additionally inspected at full render resolution",
+      "defects": [],
+      "source_sha256": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9"
     },
-    "public_fresh_clone": {
-      "status": "PASS",
-      "scope": "PUBLIC_REMOTE_ANONYMOUS",
-      "tested_commit": "6fef8753b2e21b0c53098e77fdbc6e72ad4d4251",
-      "receipt": "results/v5/publication/public-clone-receipt.json",
-      "gate_receipt": "results/v5/publication/public-cpu-gates.json",
-      "completed_at_utc": "2026-10-19T15:12:01.197700+00:00"
+    "anonymous": {
+      "pdf": "report/aimo-interp-report-v6-anonymous.pdf",
+      "sha256": "64007f693861ccf0151e42e0805fccc65a638036ec26b76a7a440a7f5c13c112",
+      "pages": 9,
+      "body_pages": 8,
+      "reference_pages": 1,
+      "type3_count": 0,
+      "automated": "AUTOMATED_PASS_VISUAL_REVIEW_REQUIRED",
+      "visual_review": "PASS",
+      "visual_scope": "All 9 pages per variant inspected via final contact sheets; named pages 3,4,6 additionally inspected at full render resolution",
+      "defects": [],
+      "source_sha256": "513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e"
     }
   },
-  "entry_bundles": {
-    "text_control_sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
-    "always_true_sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a"
+  "owner": {
+    "codabench_account": "testofschool",
+    "private_validation": "UNMEASURED",
+    "final_test": "UNMEASURED",
+    "discord": "NOT_READ",
+    "openreview_receipt": "ABSENT"
   },
-  "unrun": [
-    "Owner Codabench uploads, native scores/screenshots, final-test nomination",
-    "Private validation and final-test evaluation",
-    "Human author review and final OpenReview form/receipt",
-    "New GPU methods, white-box effect and ablation"
-  ]
+  "schedule": {
+    "task": "T5",
+    "automation_id": "aimo-v6-leaderboard-rescrape",
+    "status": "SCHEDULED_NOT_RUN",
+    "scheduled_local": "2026-10-31T20:00:00+09:00",
+    "target_complete_by_local": "2026-10-31T21:00:00+09:00",
+    "scope": "single rescrape and registered kill-rule check",
+    "thread_id": "01a154ea-9f83-76d0-811b-bb3a4e7679ce"
+  },
+  "new_gpu_jobs": 0,
+  "new_paid_spend_usd": 0,
+  "source_base": "9274840b6faacaa7ad0e321172071eedb822d9de"
 }
