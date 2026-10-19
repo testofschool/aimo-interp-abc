@@ -1,14 +1,14 @@
 {
   "goal": "v6 CPU report execution",
   "active_handoff": "HANDOFF_v6.md",
-  "overall": "COMPLETION_CORRECTIONS_LOCALLY_VERIFIED_PUBLIC_REFRESH_PENDING",
+  "overall": "PUBLIC_REPORT_REPRODUCED_OWNER_AND_RESCRAPE_PENDING",
   "tracks": {
     "T1": "PASS",
     "T2": "PASS",
     "T3": "PASS",
     "T4": "OWNER_PENDING_UNMEASURED",
     "T5": "SCHEDULED_NOT_RUN",
-    "T6": "PUBLIC_REFRESH_PENDING"
+    "T6": "PASS_PUBLIC_READBACK"
   },
   "claims": 150,
   "frozen_v6_checks": 22,
@@ -67,19 +67,20 @@
   "source_base": "9274840b6faacaa7ad0e321172071eedb822d9de",
   "release": {
     "repo": "https://github.com/testofschool/aimo-interp-abc",
-    "verified_public_scientific_head": "e2fa9b64d1466be4b8b4069b20f7678d69aaabfb",
+    "verified_public_scientific_head": "524cc98816b2cd31bafd7c4e4e25f66a093e2cf5",
     "public_anonymous_fresh_clone": "PASS",
     "new_venv_python": "Python 3.13.12",
     "fresh_data_downloads": 4,
     "V1_V6": "PASS",
     "receipt": "results/v6/publication/receipt.json",
-    "owner_or_future_actions_complete": false
+    "owner_or_future_actions_complete": false,
+    "snapshot_json_files_checked": 9,
+    "owner_scope_render_tests": 7
   },
   "completion_audit": "COMPLETION_AUDIT_v6.md",
   "remaining_required_work": [
     "Owner Codabench receipts",
     "Owner verbatim Discord instructions",
-    "October31 actual rescrape and kill-rule decision",
-    "Public refresh of completion corrections"
+    "October 31 actual rescrape and kill-rule decision"
   ]
 }

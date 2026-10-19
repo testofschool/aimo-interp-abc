@@ -5,7 +5,7 @@ V1_original actual exit 0
  "mismatches": []
 }
 V2_original actual exit 0
-{"result": "PASS", "placeholders": 17, "out": "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-xhn8ejdp/original.md"}
+{"result": "PASS", "placeholders": 17, "out": "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ppxpjuv8/original.md"}
 V1_final actual exit 0
 {
  "result": "PASS",
@@ -14,7 +14,7 @@ V1_final actual exit 0
 }
 V3 PASS: 12 registered values
 V2_final actual exit 0
-{"result": "PASS", "placeholders": 136, "out": "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-xhn8ejdp/final.md"}
+{"result": "PASS", "placeholders": 136, "out": "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ppxpjuv8/final.md", "owner_private_validation": {"measurement_status": "UNMEASURED", "rendered_variant": "canonical_unmeasured", "measured_score_statements_allowed": false, "render_gate_expired": false, "per_problem_balance_inference_allowed": false}}
 V4 actual exit 1
 {"result": "CLOSED", "reason": "no self-made labels supplied; method track stays folded"}
 V5 actual exit 0
@@ -31,22 +31,31 @@ V6_source_regeneration actual exit 0
   "style_sha256": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a",
   "style_embedded_unmodified": true,
   "style_option": "preprint",
-  "content_sha256": "2a93d56dce8f4edde7c151e50e151cd28c13616d75d0b4e08093ce4236914602",
+  "content_sha256": "7b04da671312d15f40557e7661ff8d6dc0740d3bb32eb4fb98ed024eaaab8d4f",
   "variants": {
     "named": {
       "path": "report/main.tex",
-      "sha256": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9",
+      "sha256": "6fef355b271e3c85a5083358cfb4e04f2789caef152683f3ecc2285c93e21c2d",
       "author": "Jung Min Kang"
     },
     "anonymous": {
       "path": "report/main-anonymous.tex",
-      "sha256": "513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e",
+      "sha256": "dca141886ef481483e70ba9eddc1add77443e906906ea0d054bd603943286feb",
       "author": "Anonymous Author(s)"
     }
   },
-  "source_sha256": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9",
+  "source_sha256": "6fef355b271e3c85a5083358cfb4e04f2789caef152683f3ecc2285c93e21c2d",
   "content_path": "report/REPORT_DRAFT.md",
   "content_source": "Gated REPORT_OUTLINE.md rendered with results/report_numbers.json"
+}
+V6_owner_render_scope actual exit 0
+{
+  "result": "PASS",
+  "scope": "SYNTHETIC renderer cases only; no owner or service measurements",
+  "tests": 7,
+  "failures": 0,
+  "errors": 0,
+  "details": "test_expired_deadline_keeps_missing_receipts_unmeasured (__main__.OwnerPrivateRenderingTests.test_expired_deadline_keeps_missing_receipts_unmeasured) ... ok\ntest_fallback_tampering_cannot_license_measured_claims (__main__.OwnerPrivateRenderingTests.test_fallback_tampering_cannot_license_measured_claims) ... ok\ntest_guarded_candidate_still_requires_numeric_registry (__main__.OwnerPrivateRenderingTests.test_guarded_candidate_still_requires_numeric_registry) ... ok\ntest_historical_v5_outline_stays_markerless (__main__.OwnerPrivateRenderingTests.test_historical_v5_outline_stays_markerless) ... ok\ntest_missing_receipts_replace_only_owner_block (__main__.OwnerPrivateRenderingTests.test_missing_receipts_replace_only_owner_block) ... ok\ntest_structure_errors_are_explicit (__main__.OwnerPrivateRenderingTests.test_structure_errors_are_explicit) ... ok\ntest_valid_strict_receipts_allow_registered_candidate (__main__.OwnerPrivateRenderingTests.test_valid_strict_receipts_allow_registered_candidate) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.108s\n\nOK\n"
 }
 V6 actual exit 0
 {
@@ -64,7 +73,7 @@ owner_receipt_scope actual exit 0
   "per_problem_balance_inference_allowed": false,
   "rows": [],
   "errors": [
-    "[Errno 2] No such file or directory: '/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/results/v6/codabench_receipts.json'"
+    "[Errno 2] No such file or directory: '/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/results/v6/codabench_receipts.json'"
   ]
 }
 ALL_CPU_GATES_PASS; V4_CLOSED_EXPECTED

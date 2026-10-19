@@ -13,8 +13,8 @@
     ],
     "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:17:57.400072+00:00",
-    "elapsed_seconds": 0.458
+    "started_at_utc": "2026-10-19T16:29:04.772234+00:00",
+    "elapsed_seconds": 0.519
   },
   {
     "name": "anonymous-clone",
@@ -26,12 +26,12 @@
       "http.extraHeader=",
       "clone",
       "https://github.com/testofschool/aimo-interp-abc.git",
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone"
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone"
     ],
     "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:17:57.858862+00:00",
-    "elapsed_seconds": 1.352
+    "started_at_utc": "2026-10-19T16:29:05.291745+00:00",
+    "elapsed_seconds": 1.573
   },
   {
     "name": "clone-head",
@@ -40,9 +40,9 @@
       "rev-parse",
       "HEAD"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:17:59.211014+00:00",
+    "started_at_utc": "2026-10-19T16:29:06.865028+00:00",
     "elapsed_seconds": 0.018
   },
   {
@@ -51,101 +51,101 @@
       "/opt/homebrew/bin/python3.13",
       "-m",
       "venv",
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv"
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:17:59.229015+00:00",
-    "elapsed_seconds": 1.894
+    "started_at_utc": "2026-10-19T16:29:06.883720+00:00",
+    "elapsed_seconds": 1.689
   },
   {
     "name": "dependencies",
     "argv": [
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
       "-m",
       "pip",
       "install",
       "-r",
       "requirements-local.txt"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:18:01.123449+00:00",
-    "elapsed_seconds": 15.425
+    "started_at_utc": "2026-10-19T16:29:08.573196+00:00",
+    "elapsed_seconds": 14.54
   },
   {
     "name": "fresh-data-downloads",
     "argv": [
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
       "-I",
       "tools/fetch_data.py",
       "--output-dir",
       "data"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:18:16.549525+00:00",
-    "elapsed_seconds": 4.379
+    "started_at_utc": "2026-10-19T16:29:23.113895+00:00",
+    "elapsed_seconds": 4.38
   },
   {
     "name": "V1-V6",
     "argv": [
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
       "-I",
       "tools/reproduce_report.py",
       "--receipt",
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-readback/public-cpu-gates.json"
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-readback/public-cpu-gates.json"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:18:20.929142+00:00",
-    "elapsed_seconds": 48.247
+    "started_at_utc": "2026-10-19T16:29:27.497068+00:00",
+    "elapsed_seconds": 49.978
   },
   {
     "name": "receipt-gate-tests",
     "argv": [
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
       "-I",
       "tests/test_v6_gates.py"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:19:09.176393+00:00",
+    "started_at_utc": "2026-10-19T16:30:17.475051+00:00",
     "elapsed_seconds": 0.298
   },
   {
     "name": "leaderboard-tests",
     "argv": [
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
       "-I",
       "tools/test_leaderboard_identifiability.py"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:19:09.474604+00:00",
-    "elapsed_seconds": 1.219
+    "started_at_utc": "2026-10-19T16:30:17.772894+00:00",
+    "elapsed_seconds": 1.187
   },
   {
     "name": "pdfinfo-named",
     "argv": [
       "pdfinfo",
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/report/aimo-interp-report-v6-named.pdf"
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/report/aimo-interp-report-v6-named.pdf"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:19:10.694393+00:00",
-    "elapsed_seconds": 0.04
+    "started_at_utc": "2026-10-19T16:30:18.960000+00:00",
+    "elapsed_seconds": 0.039
   },
   {
     "name": "pdffonts-named",
     "argv": [
       "pdffonts",
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/report/aimo-interp-report-v6-named.pdf"
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/report/aimo-interp-report-v6-named.pdf"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:19:10.735011+00:00",
-    "elapsed_seconds": 0.028
+    "started_at_utc": "2026-10-19T16:30:18.998812+00:00",
+    "elapsed_seconds": 0.027
   },
   {
     "name": "render-named",
@@ -154,35 +154,35 @@
       "-png",
       "-r",
       "72",
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/report/aimo-interp-report-v6-named.pdf",
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-readback/render-named/page"
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/report/aimo-interp-report-v6-named.pdf",
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-readback/render-named/page"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:19:10.763534+00:00",
-    "elapsed_seconds": 0.857
+    "started_at_utc": "2026-10-19T16:30:19.026626+00:00",
+    "elapsed_seconds": 0.83
   },
   {
     "name": "pdfinfo-anonymous",
     "argv": [
       "pdfinfo",
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/report/aimo-interp-report-v6-anonymous.pdf"
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/report/aimo-interp-report-v6-anonymous.pdf"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:19:11.622126+00:00",
+    "started_at_utc": "2026-10-19T16:30:19.857796+00:00",
     "elapsed_seconds": 0.019
   },
   {
     "name": "pdffonts-anonymous",
     "argv": [
       "pdffonts",
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/report/aimo-interp-report-v6-anonymous.pdf"
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/report/aimo-interp-report-v6-anonymous.pdf"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:19:11.641843+00:00",
-    "elapsed_seconds": 0.027
+    "started_at_utc": "2026-10-19T16:30:19.876779+00:00",
+    "elapsed_seconds": 0.026
   },
   {
     "name": "render-anonymous",
@@ -191,23 +191,23 @@
       "-png",
       "-r",
       "72",
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/report/aimo-interp-report-v6-anonymous.pdf",
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-readback/render-anonymous/page"
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/report/aimo-interp-report-v6-anonymous.pdf",
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-readback/render-anonymous/page"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:19:11.669205+00:00",
-    "elapsed_seconds": 0.835
+    "started_at_utc": "2026-10-19T16:30:19.903126+00:00",
+    "elapsed_seconds": 0.833
   },
   {
     "name": "python-version",
     "argv": [
-      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+      "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
       "--version"
     ],
-    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone",
+    "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone",
     "exit": 0,
-    "started_at_utc": "2026-10-19T16:19:12.504957+00:00",
-    "elapsed_seconds": 0.014
+    "started_at_utc": "2026-10-19T16:30:20.736743+00:00",
+    "elapsed_seconds": 0.013
   }
 ]

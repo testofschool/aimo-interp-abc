@@ -1,3 +1,3 @@
 
 [notice] A new release of pip is available: 26.0 -> 26.2.1
-[notice] To update, run: /Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python -m pip install --upgrade pip
+[notice] To update, run: /Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python -m pip install --upgrade pip

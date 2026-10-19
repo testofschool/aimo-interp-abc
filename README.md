@@ -14,7 +14,7 @@ first occurs at 158 items and is sustained from 169; at accuracy 0.65 the counts
 are 69 and 76. These are single fixed predictor calculations, without leaderboard
 selection or multiple-owner correction. The report keeps those limits explicit.
 
-Public anonymous fresh-clone V1–V6 passed at scientific commit `e2fa9b64d1466be4b8b4069b20f7678d69aaabfb`;
+Public anonymous fresh-clone V1–V6 passed at scientific commit `524cc98816b2cd31bafd7c4e4e25f66a093e2cf5`;
 see `PUBLICATION.md` and `results/v6/publication/`.
 
 Read `report/REPORT_DRAFT.md`, the named and anonymous v6 PDFs under `report/`,
@@ -75,3 +75,5 @@ It has not run. The registered kill rule and immutable future-snapshot invocatio
 are in `HANDOFF_v6.md` and `research/identifiability_usage_v6.md`. Method reopening
 remains CLOSED. AI assistance and all statistical assumptions are disclosed in
 the report. Current release receipts supersede historical v5 state statements.
+
+The full completion audit is in `COMPLETION_AUDIT_v6.md`. It records corrected snapshot membership, verbatim label rules and the protected owner-result rendering block; required owner evidence and the actual October 31 rescrape are still pending.

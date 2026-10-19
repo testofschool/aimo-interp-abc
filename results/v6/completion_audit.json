@@ -1,6 +1,6 @@
 {
   "status": "INCOMPLETE_OWNER_AND_FUTURE_DATE",
-  "checked_at_utc": "2026-10-19T16:27:32.973692+00:00",
+  "checked_at_utc": "2026-10-19T16:30:46.457011+00:00",
   "scope": "full referenced handoff, not a smaller executor-only objective",
   "completion_not_proven": true,
   "requirements": [
@@ -151,19 +151,19 @@
     {
       "id": "T6.1",
       "requirement": "Commit with specified author and public push/readback",
-      "status": "PUBLIC_REFRESH_PENDING",
+      "status": "PASS",
       "evidence": "PUBLICATION.md and latest final public HEAD receipt; author felix <gangjeongmin23@gmail.com>"
     },
     {
       "id": "T6.2",
       "requirement": "Fresh anonymous clone,newvenv,fresh pinned data,V1-V6 pass",
-      "status": "PUBLIC_REFRESH_PENDING",
+      "status": "PASS",
       "evidence": "Latest results/v6/publication receipt and per-check stdout/stderr"
     },
     {
       "id": "T6.3",
       "requirement": "Both public PDFs render,page counts/hashes/Type3 recorded",
-      "status": "PUBLIC_REFRESH_PENDING",
+      "status": "PASS",
       "evidence": "PUBLICATION.md; report/render_qa_v6.json; public readback PDF rendering logs"
     },
     {
@@ -193,7 +193,7 @@
     {
       "id": "D4",
       "requirement": "Public HEAD and fresh-clone V1-V6 stdout retained",
-      "status": "PUBLIC_REFRESH_PENDING",
+      "status": "PASS",
       "evidence": "PUBLICATION.md; latest public/final readback receipts"
     },
     {
@@ -212,13 +212,14 @@
   "remaining": [
     "T4.1 owner Codabench receipts",
     "T4.2 owner Discord exact record",
-    "T5 October31 actual rescrape/kill-rule decision",
-    "T6 public refresh of completion corrections"
+    "T5 October31 actual rescrape/kill-rule decision"
   ],
   "corrections_from_completion_audit": [
     "all snapshot JSON includes comp.json",
     "inherited verbatim public label rules",
     "runtime receipt scope now enforced by renderer, not only reported",
     "fixed-family/adaptive-stopping qualification also in usage docs"
-  ]
+  ],
+  "verified_public_scientific_head": "524cc98816b2cd31bafd7c4e4e25f66a093e2cf5",
+  "public_receipt": "results/v6/publication/receipt.json"
 }

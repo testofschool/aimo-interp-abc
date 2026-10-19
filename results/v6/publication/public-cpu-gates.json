@@ -4,7 +4,7 @@
     {
       "name": "V1_original",
       "argv": [
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
         "-I",
         "tools/report_numbers.py",
         "--data-dir",
@@ -21,29 +21,29 @@
     {
       "name": "V2_original",
       "argv": [
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
         "-I",
         "tools/render_report.py",
         "report/PREREGISTERED_OUTLINE_v5.md",
         "results/report_numbers.json",
-        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-xhn8ejdp/original.md"
+        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ppxpjuv8/original.md"
       ],
       "exit_code": 0,
       "expected_exit": 0,
-      "stdout": "{\"result\": \"PASS\", \"placeholders\": 17, \"out\": \"/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-xhn8ejdp/original.md\"}\n",
+      "stdout": "{\"result\": \"PASS\", \"placeholders\": 17, \"out\": \"/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ppxpjuv8/original.md\"}\n",
       "stderr": "",
       "passed": true
     },
     {
       "name": "V1_final",
       "argv": [
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
         "-I",
         "tools/report_numbers.py",
         "--data-dir",
         "data",
         "--out",
-        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-xhn8ejdp/numbers.json",
+        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ppxpjuv8/numbers.json",
         "--check",
         "research/claims.json"
       ],
@@ -61,23 +61,23 @@
     {
       "name": "V2_final",
       "argv": [
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
         "-I",
         "tools/render_report.py",
         "report/REPORT_OUTLINE.md",
-        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-xhn8ejdp/numbers.json",
-        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-xhn8ejdp/final.md"
+        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ppxpjuv8/numbers.json",
+        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ppxpjuv8/final.md"
       ],
       "exit_code": 0,
       "expected_exit": 0,
-      "stdout": "{\"result\": \"PASS\", \"placeholders\": 136, \"out\": \"/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-xhn8ejdp/final.md\"}\n",
+      "stdout": "{\"result\": \"PASS\", \"placeholders\": 136, \"out\": \"/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ppxpjuv8/final.md\", \"owner_private_validation\": {\"measurement_status\": \"UNMEASURED\", \"rendered_variant\": \"canonical_unmeasured\", \"measured_score_statements_allowed\": false, \"render_gate_expired\": false, \"per_problem_balance_inference_allowed\": false}}\n",
       "stderr": "",
       "passed": true
     },
     {
       "name": "V4",
       "argv": [
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
         "-I",
         "tools/reopen_gate.py"
       ],
@@ -90,7 +90,7 @@
     {
       "name": "V5",
       "argv": [
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
         "-I",
         "tools/leaderboard_identifiability.py",
         "--snapshot-dir",
@@ -98,7 +98,7 @@
         "--data-dir",
         "data",
         "--out",
-        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-xhn8ejdp/identifiability.json",
+        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ppxpjuv8/identifiability.json",
         "--check",
         "research/identifiability_expected_v6.json"
       ],
@@ -135,26 +135,39 @@
     {
       "name": "V6_source_regeneration",
       "argv": [
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
         "-I",
         "-c",
-        "from pathlib import Path\nimport runpy\nnamespace = runpy.run_path('/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/report/create_source.py')\nnamespace['main'].__globals__['HERE'] = Path('/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-xhn8ejdp/source-regeneration')\nnamespace['main']()"
+        "from pathlib import Path\nimport runpy\nnamespace = runpy.run_path('/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/report/create_source.py')\nnamespace['main'].__globals__['HERE'] = Path('/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-ppxpjuv8/source-regeneration')\nnamespace['main']()"
       ],
       "exit_code": 0,
       "expected_exit": 0,
-      "stdout": "{\n  \"status\": \"SOURCE_GENERATED\",\n  \"author_kit_url\": \"https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip\",\n  \"author_kit_sha256\": \"82473931e3ef710fcd3f4a8cd4119b9de32e56825f90f9e5a6d55f2d01b817d9\",\n  \"style_sha256\": \"c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a\",\n  \"style_embedded_unmodified\": true,\n  \"style_option\": \"preprint\",\n  \"content_sha256\": \"2a93d56dce8f4edde7c151e50e151cd28c13616d75d0b4e08093ce4236914602\",\n  \"variants\": {\n    \"named\": {\n      \"path\": \"report/main.tex\",\n      \"sha256\": \"211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9\",\n      \"author\": \"Jung Min Kang\"\n    },\n    \"anonymous\": {\n      \"path\": \"report/main-anonymous.tex\",\n      \"sha256\": \"513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e\",\n      \"author\": \"Anonymous Author(s)\"\n    }\n  },\n  \"source_sha256\": \"211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9\",\n  \"content_path\": \"report/REPORT_DRAFT.md\",\n  \"content_source\": \"Gated REPORT_OUTLINE.md rendered with results/report_numbers.json\"\n}\n",
+      "stdout": "{\n  \"status\": \"SOURCE_GENERATED\",\n  \"author_kit_url\": \"https://media.neurips.cc/Conferences/NeurIPS2026/Formatting_Instructions_For_NeurIPS_2026.zip\",\n  \"author_kit_sha256\": \"82473931e3ef710fcd3f4a8cd4119b9de32e56825f90f9e5a6d55f2d01b817d9\",\n  \"style_sha256\": \"c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a\",\n  \"style_embedded_unmodified\": true,\n  \"style_option\": \"preprint\",\n  \"content_sha256\": \"7b04da671312d15f40557e7661ff8d6dc0740d3bb32eb4fb98ed024eaaab8d4f\",\n  \"variants\": {\n    \"named\": {\n      \"path\": \"report/main.tex\",\n      \"sha256\": \"6fef355b271e3c85a5083358cfb4e04f2789caef152683f3ecc2285c93e21c2d\",\n      \"author\": \"Jung Min Kang\"\n    },\n    \"anonymous\": {\n      \"path\": \"report/main-anonymous.tex\",\n      \"sha256\": \"dca141886ef481483e70ba9eddc1add77443e906906ea0d054bd603943286feb\",\n      \"author\": \"Anonymous Author(s)\"\n    }\n  },\n  \"source_sha256\": \"6fef355b271e3c85a5083358cfb4e04f2789caef152683f3ecc2285c93e21c2d\",\n  \"content_path\": \"report/REPORT_DRAFT.md\",\n  \"content_source\": \"Gated REPORT_OUTLINE.md rendered with results/report_numbers.json\"\n}\n",
       "stderr": "",
       "passed": true,
       "matched_source_sha256": {
-        "main.tex": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9",
-        "main-anonymous.tex": "513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e",
-        "source_provenance.json": "c676a9ce29bee9ad7eeb5d4eca0a26d680dd65a144d21fef8c90f67ba4874a77"
+        "main.tex": "6fef355b271e3c85a5083358cfb4e04f2789caef152683f3ecc2285c93e21c2d",
+        "main-anonymous.tex": "dca141886ef481483e70ba9eddc1add77443e906906ea0d054bd603943286feb",
+        "source_provenance.json": "8d37d7c086df7be60d2b0587232dca99060d0436ee78af3736a8e85c36ecd87a"
       }
+    },
+    {
+      "name": "V6_owner_render_scope",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
+        "-I",
+        "tests/test_owner_private_renderer.py"
+      ],
+      "exit_code": 0,
+      "expected_exit": 0,
+      "stdout": "{\n  \"result\": \"PASS\",\n  \"scope\": \"SYNTHETIC renderer cases only; no owner or service measurements\",\n  \"tests\": 7,\n  \"failures\": 0,\n  \"errors\": 0,\n  \"details\": \"test_expired_deadline_keeps_missing_receipts_unmeasured (__main__.OwnerPrivateRenderingTests.test_expired_deadline_keeps_missing_receipts_unmeasured) ... ok\\ntest_fallback_tampering_cannot_license_measured_claims (__main__.OwnerPrivateRenderingTests.test_fallback_tampering_cannot_license_measured_claims) ... ok\\ntest_guarded_candidate_still_requires_numeric_registry (__main__.OwnerPrivateRenderingTests.test_guarded_candidate_still_requires_numeric_registry) ... ok\\ntest_historical_v5_outline_stays_markerless (__main__.OwnerPrivateRenderingTests.test_historical_v5_outline_stays_markerless) ... ok\\ntest_missing_receipts_replace_only_owner_block (__main__.OwnerPrivateRenderingTests.test_missing_receipts_replace_only_owner_block) ... ok\\ntest_structure_errors_are_explicit (__main__.OwnerPrivateRenderingTests.test_structure_errors_are_explicit) ... ok\\ntest_valid_strict_receipts_allow_registered_candidate (__main__.OwnerPrivateRenderingTests.test_valid_strict_receipts_allow_registered_candidate) ... ok\\n\\n----------------------------------------------------------------------\\nRan 7 tests in 0.108s\\n\\nOK\\n\"\n}\n",
+      "stderr": "",
+      "passed": true
     },
     {
       "name": "V6",
       "argv": [
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
         "-I",
         "tools/submission_text_gate.py",
         "report/main.tex",
@@ -170,18 +183,18 @@
     {
       "name": "owner_receipt_scope",
       "argv": [
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/.venv/bin/python",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/.venv/bin/python",
         "-I",
         "tools/codabench_receipt_scope.py"
       ],
       "exit_code": 0,
       "expected_exit": 0,
-      "stdout": "{\n  \"scope\": \"owner bundle private-validation statements only; other report sections proceed\",\n  \"measurement_status\": \"UNMEASURED\",\n  \"render_gate_deadline_utc\": \"2026-11-01T11:55:00+00:00\",\n  \"render_gate_expired\": false,\n  \"render_gate_active\": true,\n  \"measured_score_statements_allowed\": false,\n  \"per_problem_balance_inference_allowed\": false,\n  \"rows\": [],\n  \"errors\": [\n    \"[Errno 2] No such file or directory: '/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/results/v6/codabench_receipts.json'\"\n  ]\n}\n",
+      "stdout": "{\n  \"scope\": \"owner bundle private-validation statements only; other report sections proceed\",\n  \"measurement_status\": \"UNMEASURED\",\n  \"render_gate_deadline_utc\": \"2026-11-01T11:55:00+00:00\",\n  \"render_gate_expired\": false,\n  \"render_gate_active\": true,\n  \"measured_score_statements_allowed\": false,\n  \"per_problem_balance_inference_allowed\": false,\n  \"rows\": [],\n  \"errors\": [\n    \"[Errno 2] No such file or directory: '/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/results/v6/codabench_receipts.json'\"\n  ]\n}\n",
       "stderr": "",
       "passed": true
     }
   ],
-  "draft_sha256": "2a93d56dce8f4edde7c151e50e151cd28c13616d75d0b4e08093ce4236914602",
+  "draft_sha256": "7b04da671312d15f40557e7661ff8d6dc0740d3bb32eb4fb98ed024eaaab8d4f",
   "owner_receipt_scope": {
     "scope": "owner bundle private-validation statements only; other report sections proceed",
     "measurement_status": "UNMEASURED",
@@ -192,7 +205,7 @@
     "per_problem_balance_inference_allowed": false,
     "rows": [],
     "errors": [
-      "[Errno 2] No such file or directory: '/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/results/v6/codabench_receipts.json'"
+      "[Errno 2] No such file or directory: '/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/completion-public-fresh-clone/results/v6/codabench_receipts.json'"
     ]
   },
   "result": "PASS"

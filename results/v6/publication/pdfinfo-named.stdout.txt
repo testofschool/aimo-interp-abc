@@ -4,8 +4,8 @@ Keywords:
 Author:          Jung Min Kang
 Creator:         LaTeX with hyperref
 Producer:        pdfTeX-1.40.29
-CreationDate:    Tue Oct 20 01:14:41 2026 KST
-ModDate:         Tue Oct 20 01:14:41 2026 KST
+CreationDate:    Tue Oct 20 01:25:29 2026 KST
+ModDate:         Tue Oct 20 01:25:29 2026 KST
 Custom Metadata: yes
 Metadata Stream: no
 Tagged:          no
@@ -17,6 +17,6 @@ Pages:           9
 Encrypted:       no
 Page size:       612 x 792 pts (letter)
 Page rot:        0
-File size:       190602 bytes
+File size:       193450 bytes
 Optimized:       no
 PDF version:     1.7

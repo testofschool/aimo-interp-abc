@@ -1,6 +1,6 @@
 # v6 requirement-by-requirement completion audit
 
-Full goal remains **INCOMPLETE**. Local executable checks pass after the corrections below; T6 refresh is pending and T4/T5 remain required work. A future schedule is not execution evidence.
+Full goal remains **INCOMPLETE**. Current executable tracks pass after the corrections below; T4 and T5 are required work still pending. A future schedule is not execution evidence.
 
 | Requirement | State | Evidence |
 |---|---|---|
@@ -28,14 +28,14 @@ Full goal remains **INCOMPLETE**. Local executable checks pass after the correct
 | T4.1 — Felix uploads both unchanged Small bundles and supplies real scores/screenshots | OWNER_REQUIRED | No results/v6/codabench_receipts.json exists; user-designated owner action; Codex clicks prohibited |
 | T4.2 — Felix records exact Discord announcements and current nomination/report/anonymity instructions | OWNER_REQUIRED | No research/discord_2026-10.md exists; explicit owner track |
 | T5 — October31 complete rescrape and novelty/kill-rule decision | DATE_REQUIRED | TodayOctober20KST; scheduled20:00KSTOct31 via aimo-v6-leaderboard-rescrape; future snapshot absent; not complete |
-| T6.1 — Commit with specified author and public push/readback | PUBLIC_REFRESH_PENDING | PUBLICATION.md and latest final public HEAD receipt; author felix <gangjeongmin23@gmail.com> |
-| T6.2 — Fresh anonymous clone,newvenv,fresh pinned data,V1-V6 pass | PUBLIC_REFRESH_PENDING | Latest results/v6/publication receipt and per-check stdout/stderr |
-| T6.3 — Both public PDFs render,page counts/hashes/Type3 recorded | PUBLIC_REFRESH_PENDING | PUBLICATION.md; report/render_qa_v6.json; public readback PDF rendering logs |
+| T6.1 — Commit with specified author and public push/readback | PASS | PUBLICATION.md and latest final public HEAD receipt; author felix <gangjeongmin23@gmail.com> |
+| T6.2 — Fresh anonymous clone,newvenv,fresh pinned data,V1-V6 pass | PASS | Latest results/v6/publication receipt and per-check stdout/stderr |
+| T6.3 — Both public PDFs render,page counts/hashes/Type3 recorded | PASS | PUBLICATION.md; report/render_qa_v6.json; public readback PDF rendering logs |
 | T6.4 — No OpenReview submission by Codex | PASS_BOUNDARY | Owner checklist; no submission receipt; explicit owner-only final click |
 | D1 — Every preregistered input/value expected-observed-MATCH table | PASS | EXECUTION_REPORT_v6.md; initial38+input checks+22identifiability+10optional |
 | D2 — Build-input changes file-by-file including manifest,reproduce and requirements byte deltas | PASS | BUILD_INPUT_CHANGES_v6.md; results/v6/build_input_changes.json; requirements unchanged |
 | D3 — Final clean sources,PDF page counts/hashes/Type3 zero | PASS | Latest QA and public stdout |
-| D4 — Public HEAD and fresh-clone V1-V6 stdout retained | PUBLIC_REFRESH_PENDING | PUBLICATION.md; latest public/final readback receipts |
+| D4 — Public HEAD and fresh-clone V1-V6 stdout retained | PASS | PUBLICATION.md; latest public/final readback receipts |
 | D5 — Unrun work and reasons reported | PASS | EXECUTION_REPORT_v6.md; owner/future actions remain explicitly incomplete |
 | P — No paidGPU/newlanguage-model inference/method reopen/service clicks/messages/unlicensed raw label redistribution | PASS_BOUNDARY | Recorded CPU commands only; V4 CLOSEDexpectedexit1; unchanged bundles; source/license/provenance ledgers |
 

@@ -1,6 +1,6 @@
 # v6 execution report — CPU only
 
-T1–T3 completion corrections pass local full CPU gates. Public refresh of these corrections is pending; prior public readback is historical. Current public evidence will be recorded in PUBLICATION.md. Owner submissions are UNMEASURED; T5 is scheduled, not executed.
+T1–T3 completion corrections and T6 pass actual anonymous fresh-clone/new-venv public V1–V6. The current corrected scientific/build HEAD and observed readback are recorded in PUBLICATION.md. Owner submissions are UNMEASURED; T5 is scheduled, not executed.
 
 ## Tracks
 
@@ -138,3 +138,5 @@ Not run: any new language-model inference, paid GPU, white-box method or ablatio
 ## Completion-audit corrections
 
 The full inherited handoff audit found and corrected: omitted comp.json metadata (all9 attached snapshotJSON now copied and hashed); missing exact public label rules; a receipt scope that was only reported rather than enforced at rendering; and an incomplete fixed-family qualification in usage documentation. The renderer now selects a protected UNMEASURED fallback only for the marked owner paragraph when receipts are absent/invalid, even after deadline expiry. Seven new synthetic scope tests pass and are integrated into V6. Current local full receipt: results/v6/completion-cpu-gates.json. Numeric outputs and both bundles remain unchanged. The rebuilt report remains8body+1referencespages per variant. Full-goal completion remains unproven while T4 and T5 are pending; see COMPLETION_AUDIT_v6.md.
+
+Corrected public reproduction now passes at scientific/build HEAD `524cc98816b2cd31bafd7c4e4e25f66a093e2cf5`, including all 9 snapshot files and the 7 new scoped rendering cases. Actual new-clone/new-venv/network download and full V1–V6 stdout are in results/v6/publication/. This supersedes initial public receipts for current report/code bytes; owner evidence and October 31 execution remain incomplete.
