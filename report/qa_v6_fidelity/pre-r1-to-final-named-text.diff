@@ -1,0 +1,118 @@
+--- pre-r1-named
++++ final-named
+@@ -262,15 +262,19 @@
+ is to publish its effective evaluation units and uncertainty, rather than infer its adequacy from the
+ validation grid.
+ 
++
+ 4     Supporting label audit and problem-only controls
++
+ 4.1   Training agreement does not identify model contrasts
+ 
+ The pinned training table has 94 rows over 36 problems, with 80 labelled rows and 14 rows in an
+-unlabelled gap. The public rule labels an instance robust when its maximum observed drop is at
+-most 0.10 and non-robust when it is at least 0.25. It does not specify the private-label procedure.
+-The labelled Small subset contains 43 rows over 22 problems. Among its 11 problems represented
+-by multiple checkpoints, 0 have mixed binary labels. Thus the observed training labels supply no
+-within-problem label contrast for that repeated-checkpoint cohort. [2]
++unlabelled gap. The dataset card states the labelled-row rule verbatim:
++is_robust = true iff max_drop <= 0.10
++is_robust = false iff max_drop >= 0.25
++This public rule does not specify the private-label procedure. The labelled Small subset contains 43
++rows over 22 problems. Among its 11 problems represented by multiple checkpoints, 0 have mixed
++binary labels. Thus the observed training labels supply no within-problem label contrast for that
++repeated-checkpoint cohort. [2]
+ An earlier public report already identifies problem-level shortcuts and reports exact per-problem
+ balance in validation and test. Under exact within-problem balance, any deterministic problem-only
+ predictor that gives the same binary answer for all model instances of a problem has accuracy exactly
+@@ -287,14 +291,13 @@
+ also UNMEASURED. This owner-result limitation is separate from our observed analysis of the
+ public board.
+ 
+-4.2   Descriptive drop variance and label concordance
++
++                                                  5
+++4.2    Descriptive drop variance and label concordance
+ 
+ For continuous maximum drop, we compute one minus within-problem squared error divided by
+ total squared error, using each observed problem mean to estimate its residuals. This in-sample R-
+-
+-
+-                                                  5
+- squared describes the public panel; it is not cross-validated prediction. Unlabelled rows are retained
+ where continuous drops are present. Repeated configurations include effort variants, so they are not
+ all distinct model checkpoints.
+@@ -320,14 +323,14 @@
+ 
+       Table 5: Observed label agreement; the Bernoulli reference count is not a significance test.
+ 
+-Label agreement panel               Concordant / repeated groups       Independent-Bernoulli
+-                                                                       reference count
+-Train, original labelled            15 / 16                            5.94
++Label agreement panel               Concordant / repeated groups      Independent-Bernoulli
++                                                                      reference count
++Train, original labelled            15 / 16                           5.94
+ configurations
+-Train, labelled Small checkpoints   11 / 11                            4.89
+-Train, no-gap sensitivity, worst    10 / 15                            3.59
++Train, labelled Small checkpoints   11 / 11                           4.89
++Train, no-gap sensitivity, worst    10 / 15                           3.59
+ effort
+-Sample-full, public-rule proxy      1 / 10                             0.25
++Sample-full, public-rule proxy      1 / 10                            0.25
+ labels
+ 
+ A group is concordant when all included binary labels agree. The reference count sums the proba-
+@@ -344,24 +347,25 @@
+ balanced logistic regression is fitted on all labelled Main-table rows, excluding every row with the
+ held-out problem string in each leave-one-problem-out fold. Evaluation uses only labelled Small
+ rows. The fixed decision threshold is 0.5, with no hyperparameter search or model-internal input.
+-
+-       Table 6: Problem-grouped public Small evaluation; these are public training outcomes.
+-
+-Public Small               Plain accuracy              Balanced accuracy       Correct rows
+-out-of-fold rule
+-Length and digit count     0.7674                      0.6855                  33 / 43
+-Always robust              0.7209                      0.5                     31 / 43
+-
+ Holding out whole problems prevents the same problem string from entering both sides of a fold,
+ including effort variants. It does not remedy the absence of mixed labels or reproduce the private
+-
+-
+-                                                   6
+- test composition. We hold the out-of-fold predictions fixed and bootstrap the 22 problem clusters,
+ drawing the same number of clusters with replacement using seed 0 for 4000 replicates. One-class
+ draws are discarded, leaving 4000 valid draws. The balanced-accuracy 95% interval is [0.4759,
+ 0.9378]; the plain-accuracy interval is [0.5556, 0.9556]. The paired balanced-accuracy improvement
++
++
++                                                   6
+++      Table 6: Problem-grouped public Small evaluation; these are public training outcomes.
++
++Public Small              Plain accuracy               Balanced accuracy        Correct rows
++out-of-fold rule
++Length and digit count    0.7674                       0.6855                   33 / 43
++Always robust             0.7209                       0.5                      31 / 43
++
++
++
+ over always robust is 0.1855, with interval [-0.0241, 0.4378], including zero. These intervals omit
+ retraining and method-selection variation.
+ Applying the fitted training control unchanged to public samples yields balanced accuracy 0.4913
+@@ -410,14 +414,14 @@
+ for those missing results. A prior text-control report and a prior probe stress test discuss weaker pub-
+ lic performance under distribution shift, which supplies context rather than a matched comparison
+ to our analysis. [6, 7]
++
++
++                                                   7
++ Finally, single-method power is not ranking power. The item recommendations concern a one-sided
+ test against the fair-coin reference at the stated effects and target. Pairwise ranking, small accuracy
+ gaps, correlated outcomes, multiple comparisons and repeated validation feedback can require more
+ data or a different design. We have not established that a method lacking significance is equivalent
+-
+-
+-                                                   7
+- to chance, that surviving methods differ from one another, or that the public board predicts the final
+ ordering.
+ 

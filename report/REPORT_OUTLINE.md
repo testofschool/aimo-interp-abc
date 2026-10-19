@@ -111,11 +111,19 @@ The final-test size is unpublished in the sources we inspected. We therefore mak
 
 ### Training agreement does not identify model contrasts
 
-The pinned training table has {{train_rows}} rows over {{train_problems}} problems, with {{train_labelled_rows}} labelled rows and {{train_unlabelled_rows}} rows in an unlabelled gap. The public rule labels an instance robust when its maximum observed drop is at most 0.10 and non-robust when it is at least 0.25. It does not specify the private-label procedure. The labelled Small subset contains {{train_small_rows}} rows over {{train_small_problems}} problems. Among its {{train_small_multi_model_problems}} problems represented by multiple checkpoints, {{train_small_mixed}} have mixed binary labels. Thus the observed training labels supply no within-problem label contrast for that repeated-checkpoint cohort. [S2]
+The pinned training table has {{train_rows}} rows over {{train_problems}} problems, with {{train_labelled_rows}} labelled rows and {{train_unlabelled_rows}} rows in an unlabelled gap. The dataset card states the labelled-row rule verbatim:
+
+`is_robust = true`  iff `max_drop <= 0.10`
+
+`is_robust = false` iff `max_drop >= 0.25`
+
+This public rule does not specify the private-label procedure. The labelled Small subset contains {{train_small_rows}} rows over {{train_small_problems}} problems. Among its {{train_small_multi_model_problems}} problems represented by multiple checkpoints, {{train_small_mixed}} have mixed binary labels. Thus the observed training labels supply no within-problem label contrast for that repeated-checkpoint cohort. [S2]
 
 An earlier public report already identifies problem-level shortcuts and reports exact per-problem balance in validation and test. Under exact within-problem balance, any deterministic problem-only predictor that gives the same binary answer for all model instances of a problem has accuracy exactly {{power_null_accuracy}} on that problem, and therefore overall under equal item scoring. This follows by counting correct positive and negative instances, regardless of how the predictor learned its problem-level answer. The conclusion is conditional on that balance contract and same-answer behavior; it is not a proof that every text-based system is incapable of generalization. [S7]
 
+<!-- BEGIN_OWNER_PRIVATE_VALIDATION -->
 We retain two frozen Small bundles: a length-and-digit control and an always-robust rule. Their own private-validation results are UNMEASURED because we have no linked owner receipt recording the bundle, submission identifier, status, accuracy and time. The anticipated constant/control results are receipt expectations motivated by public evidence, not pre-registered predictions of unknown labels. Even if both receipts match those expectations, they would show consistency for those submissions rather than prove exact per-problem balance. Final-test performance of these bundles is also UNMEASURED. This owner-result limitation is separate from our observed analysis of the public board.
+<!-- END_OWNER_PRIVATE_VALIDATION -->
 
 ### Descriptive drop variance and label concordance
 

@@ -9,12 +9,12 @@
         "-interaction=nonstopmode",
         "-halt-on-error",
         "-no-shell-escape",
-        "-output-directory=/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel",
+        "-output-directory=/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf",
         "main-anonymous.tex"
       ],
       "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report",
       "exit": 0,
-      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/01-latex-initial.log"
+      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/01-latex-initial.log"
     },
     {
       "step": "latex-rerun-1",
@@ -23,33 +23,33 @@
         "-interaction=nonstopmode",
         "-halt-on-error",
         "-no-shell-escape",
-        "-output-directory=/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel",
+        "-output-directory=/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf",
         "main-anonymous.tex"
       ],
       "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report",
       "exit": 0,
-      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/02-latex-rerun-1.log"
+      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/02-latex-rerun-1.log"
     },
     {
       "step": "pdf-battery",
       "command": [
         "sh",
         "/Users/felix/.codex/skills/arxiv-latex-production/scripts/pdf_battery.sh",
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/main-anonymous.pdf"
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/main-anonymous.pdf"
       ],
-      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel",
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf",
       "exit": 0,
-      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/03-pdf-battery.log"
+      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/03-pdf-battery.log"
     },
     {
       "step": "pdfinfo",
       "command": [
         "pdfinfo",
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/main-anonymous.pdf"
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/main-anonymous.pdf"
       ],
-      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel",
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf",
       "exit": 0,
-      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/04-pdfinfo.log"
+      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/04-pdfinfo.log"
     },
     {
       "step": "render-all-pages",
@@ -58,12 +58,12 @@
         "-png",
         "-r",
         "110",
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/main-anonymous.pdf",
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/pages/page"
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/main-anonymous.pdf",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/pages/page"
       ],
-      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel",
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf",
       "exit": 0,
-      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/05-render-all-pages.log"
+      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/05-render-all-pages.log"
     }
   ],
   "checks": {
@@ -72,21 +72,21 @@
     "all_pages_rendered": "PASS"
   },
   "source": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/main-anonymous.tex",
-  "workdir": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel",
+  "workdir": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf",
   "engine": "pdflatex",
   "backend": "inline",
-  "pdf": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/main-anonymous.pdf",
+  "pdf": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/main-anonymous.pdf",
   "page_count": 9,
   "rendered_pages": 9,
   "page_images": [
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/pages/page-1.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/pages/page-2.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/pages/page-3.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/pages/page-4.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/pages/page-5.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/pages/page-6.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/pages/page-7.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/pages/page-8.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-final/main-anonymous-gcjqjrel/pages/page-9.png"
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/pages/page-1.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/pages/page-2.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/pages/page-3.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/pages/page-4.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/pages/page-5.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/pages/page-6.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/pages/page-7.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/pages/page-8.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-anonymous-r1-final/main-anonymous-k6vu7rtf/pages/page-9.png"
   ]
 }

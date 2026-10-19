@@ -14,7 +14,8 @@ analysis output and with the report-number pipeline. V6 requires the frozen
 text gate to return `CLEAN` for `report/main.tex`, `report/main-anonymous.tex`,
 and `report/REPORT_DRAFT.md`. It regenerates both TeX sources and their source
 provenance from the gated Markdown in a temporary directory and requires
-byte parity with the tracked files.
+byte parity with the tracked files. `V6_owner_render_scope` also runs the
+synthetic scoped-rendering regression suite; it never supplies owner evidence.
 
 The separate `owner_receipt_scope` check records whether owner bundle results
 may be stated. Missing receipts affect only the two bundle-specific
@@ -55,8 +56,23 @@ recorded bundle scores and always sets
 `per_problem_balance_inference_allowed: false`. It never copies the supplied
 `CONSISTENT` or `REFUTED_OR_PARTIAL` prose into the report. If any receipt is
 missing or invalid, measured score statements remain prohibited. The wrapper
-exits 0 because unrelated CPU gates must still complete; its structured state
-controls the owner statements.
+exits 0 because unrelated CPU gates must still complete. The numeric renderer
+now consumes its structured state before checking numeric placeholders and
+the registry. The outline has exactly one `BEGIN_OWNER_PRIVATE_VALIDATION` /
+`END_OWNER_PRIVATE_VALIDATION` HTML-comment pair inside section 4. If measured
+score statements are not allowed, only that block is replaced by
+`report/OWNER_PRIVATE_VAL_UNMEASURED.md`; the comments are removed from the
+rendered manuscript. This replacement continues after the deadline. If strict
+receipts permit recorded score statements, the authored block still must pass
+the numeric registry and literal gates.
+
+The fallback file's exact SHA-256 is pinned in `tools/render_report.py`:
+`e51dd37e3eefe81e0163aa20d4fe8c5b68fd9acf99c296506e14b2f448298da2`.
+A changed fallback or missing, duplicated, reversed or misplaced marker pair
+is an explicit configuration error. Changing the fallback file alone cannot
+inject fabricated measurements. The marker requirement applies to the v6
+`REPORT_OUTLINE.md` beside that canonical file; the historical markerless v5
+preregistered outline and unrelated older fixture outlines remain supported.
 
 ## Verification
 
@@ -67,3 +83,10 @@ the restriction on balance inference, rejected weak receipts, and the text
 gate across both source formats. All generated positive-test receipt files
 and evidence placeholders exist only in temporary test directories and are
 explicitly synthetic.
+
+Run `python3 -I tests/test_owner_private_renderer.py` for the seven synthetic
+rendering tests. They inject an unmeasured private-score claim and verify that
+only its guarded block is replaced while public statistics survive, verify
+the same behavior after deadline expiry, permit a candidate only with strict
+synthetic receipts, retain numeric-registry rejection, reject invalid marker
+structure and fallback tampering, and preserve the historical v5 outline.

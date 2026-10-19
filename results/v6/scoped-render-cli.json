@@ -1,0 +1,36 @@
+{
+  "scope": "CPU renderer CLI checks only; missing owner evidence remains UNMEASURED",
+  "result": "PASS",
+  "checks": [
+    {
+      "name": "V2_original",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "tools/render_report.py",
+        "report/PREREGISTERED_OUTLINE_v5.md",
+        "results/report_numbers.json",
+        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-render-cli-k9mv4gn9/V2_original.md"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"result\": \"PASS\", \"placeholders\": 17, \"out\": \"/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-render-cli-k9mv4gn9/V2_original.md\"}\n",
+      "stderr": "",
+      "passed": true
+    },
+    {
+      "name": "V2_final",
+      "argv": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "tools/render_report.py",
+        "report/REPORT_OUTLINE.md",
+        "results/report_numbers.json",
+        "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-render-cli-k9mv4gn9/V2_final.md"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"result\": \"PASS\", \"placeholders\": 136, \"out\": \"/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-render-cli-k9mv4gn9/V2_final.md\", \"owner_private_validation\": {\"measurement_status\": \"UNMEASURED\", \"rendered_variant\": \"canonical_unmeasured\", \"measured_score_statements_allowed\": false, \"render_gate_expired\": false, \"per_problem_balance_inference_allowed\": false}}\n",
+      "stderr": "",
+      "passed": true
+    }
+  ]
+}

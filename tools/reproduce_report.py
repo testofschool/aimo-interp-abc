@@ -127,6 +127,8 @@ def main():
                 raise RuntimeError("V6 generated source differs from tracked bytes: " + filename + "; STOP")
             source_hashes[filename] = hashlib.sha256(generated).hexdigest()
         receipt["checks"][-1]["matched_source_sha256"] = source_hashes
+        run("V6_owner_render_scope", ["tests/test_owner_private_renderer.py"],
+            fields={"result": "PASS", "tests": 7, "failures": 0, "errors": 0})
         run("V6", ["tools/submission_text_gate.py", "report/main.tex", "report/main-anonymous.tex", "report/REPORT_DRAFT.md"],
             fields={"result": "CLEAN", "hits": []})
         receipt["owner_receipt_scope"] = run("owner_receipt_scope", ["tools/codabench_receipt_scope.py"])

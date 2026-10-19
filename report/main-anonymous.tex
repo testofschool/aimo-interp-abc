@@ -660,7 +660,16 @@ The final-test size is unpublished in the sources we inspected. We therefore mak
 
 \subsection{Training agreement does not identify model contrasts}
 
-The pinned training table has 94 rows over 36 problems, with 80 labelled rows and 14 rows in an unlabelled gap. The public rule labels an instance robust when its maximum observed drop is at most 0.10 and non-robust when it is at least 0.25. It does not specify the private-label procedure. The labelled Small subset contains 43 rows over 22 problems. Among its 11 problems represented by multiple checkpoints, 0 have mixed binary labels. Thus the observed training labels supply no within-problem label contrast for that repeated-checkpoint cohort. \citep{S2}
+The pinned training table has 94 rows over 36 problems, with 80 labelled rows and 14 rows in an unlabelled gap. The dataset card states the labelled-row rule verbatim:
+
+
+\texttt{is\_\allowbreak robust = true}  iff \texttt{max\_\allowbreak drop <= 0.10}
+
+
+\texttt{is\_\allowbreak robust = false} iff \texttt{max\_\allowbreak drop >= 0.25}
+
+
+This public rule does not specify the private-label procedure. The labelled Small subset contains 43 rows over 22 problems. Among its 11 problems represented by multiple checkpoints, 0 have mixed binary labels. Thus the observed training labels supply no within-problem label contrast for that repeated-checkpoint cohort. \citep{S2}
 
 
 An earlier public report already identifies problem-level shortcuts and reports exact per-problem balance in validation and test. Under exact within-problem balance, any deterministic problem-only predictor that gives the same binary answer for all model instances of a problem has accuracy exactly 0.5 on that problem, and therefore overall under equal item scoring. This follows by counting correct positive and negative instances, regardless of how the predictor learned its problem-level answer. The conclusion is conditional on that balance contract and same-answer behavior; it is not a proof that every text-based system is incapable of generalization. \citep{S7}

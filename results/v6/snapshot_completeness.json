@@ -1,0 +1,72 @@
+{
+  "result": "PASS",
+  "requirement": "T1.1 every attach/data/leaderboard/2026-10-19/*.json",
+  "copied_files": 9,
+  "numerical_pages": 8,
+  "competition_metadata": 1,
+  "checks": [
+    {
+      "file": "data/leaderboard/2026-10-19/comp.json",
+      "attachment_byte_equal": true,
+      "manifest_sha256_match": true,
+      "bytes_match": true,
+      "sha256": "a512a7140918428d302e180f3d5c92af13eef94876d77d87a964d280a91a7cfc"
+    },
+    {
+      "file": "data/leaderboard/2026-10-19/lb1.json",
+      "attachment_byte_equal": true,
+      "manifest_sha256_match": true,
+      "bytes_match": true,
+      "sha256": "fc7338524b81410324f3e3588aee42ff8a0bb67e5b3ad36b24a6903986d066c2"
+    },
+    {
+      "file": "data/leaderboard/2026-10-19/lb2.json",
+      "attachment_byte_equal": true,
+      "manifest_sha256_match": true,
+      "bytes_match": true,
+      "sha256": "7fcb939214bfb1e673975cf1f3f9de100a074ba5c459da067af90ccc2ef1a4cd"
+    },
+    {
+      "file": "data/leaderboard/2026-10-19/lb3.json",
+      "attachment_byte_equal": true,
+      "manifest_sha256_match": true,
+      "bytes_match": true,
+      "sha256": "ac33b9f4cd4e1e626f19a71b397d5a1a8a756f3fd78ef37e91c7477568a705df"
+    },
+    {
+      "file": "data/leaderboard/2026-10-19/lb4.json",
+      "attachment_byte_equal": true,
+      "manifest_sha256_match": true,
+      "bytes_match": true,
+      "sha256": "22331c134be761029c5adefe18a08620f5a8ee84c70a6e4ca205779307abdc1e"
+    },
+    {
+      "file": "data/leaderboard/2026-10-19/lb5.json",
+      "attachment_byte_equal": true,
+      "manifest_sha256_match": true,
+      "bytes_match": true,
+      "sha256": "89822694e89aaa4c5743ee2a84113b97386dbfa9a2ae13dc090a72df35b382a4"
+    },
+    {
+      "file": "data/leaderboard/2026-10-19/lb6.json",
+      "attachment_byte_equal": true,
+      "manifest_sha256_match": true,
+      "bytes_match": true,
+      "sha256": "cc94df6dcee715c110332b8df677e917151501cbeb76fec21cdcd4448c34043e"
+    },
+    {
+      "file": "data/leaderboard/2026-10-19/lb7.json",
+      "attachment_byte_equal": true,
+      "manifest_sha256_match": true,
+      "bytes_match": true,
+      "sha256": "e909516e2644adca80b744d2a10a88b788fbf6b7bce2a96be8e3e921d8765464"
+    },
+    {
+      "file": "data/leaderboard/2026-10-19/lb8.json",
+      "attachment_byte_equal": true,
+      "manifest_sha256_match": true,
+      "bytes_match": true,
+      "sha256": "fa507d52739648f820ecb253f6ab1c5f1f6d08a2415d609628d2ad61fb1bea9f"
+    }
+  ]
+}

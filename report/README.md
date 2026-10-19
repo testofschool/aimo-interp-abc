@@ -24,6 +24,14 @@ and their final-test performance remain UNMEASURED without linked owner
 receipts; matching expected constant/control scores would not establish
 per-problem balance.
 
+The editable outline marks the owner private-validation paragraph with one
+`BEGIN_OWNER_PRIVATE_VALIDATION` / `END_OWNER_PRIVATE_VALIDATION` pair. The
+renderer removes those markers and enforces
+`OWNER_PRIVATE_VAL_UNMEASURED.md` as the canonical paragraph whenever linked
+receipts do not authorize measured text. This guard applies after the deadline
+as well; a deadline does not create measurements. It changes only that paragraph
+and leaves the independent leaderboard analysis available.
+
 To regenerate source from the repository root:
 
 ```sh

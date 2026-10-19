@@ -8,7 +8,9 @@ python3 -I tools/leaderboard_identifiability.py --data-dir data --snapshot-dir d
 
 The derived JSON has flat `numbers` consumed by `tools/report_numbers.py`,
 handle-free ranked owner summaries, input hashes, parsing receipts, and power
-details. Raw participant handles remain only in the eight hashed input pages.
+details. The eight hashed leaderboard pages retain their raw participant handles. The
+attached competition metadata is also preserved as hashed comp.json; it is not
+an additional leaderboard page and does not enter the owner analysis.
 The item denominator is the smallest value jointly compatible with displayed
 two-decimal accuracies, coverage, and invalid-item counts. Rounded public scores
 alone do not establish that this is the unique true denominator.
@@ -22,9 +24,12 @@ records are deduplicated.
 
 The primary adjustment is `1 - (1 - p_single)^m`, followed by BH within track;
 Bonferroni is also reported. A separate `min(1, m * p_single)` union-bound
-adjustment followed by Bonferroni controls the family without assuming
-independence among submissions or among owners, conditional on valid item-level
-binomial p-values. All calculations count invalid predictions as wrong.
+adjustment followed by Bonferroni controls a fixed attempt/owner family without
+assuming independence among submissions or among owners, conditional on valid
+single-submission binomial p-values. For random observed family sizes or
+score-adaptive stopping, the guarantee additionally requires p-value validity
+conditional on the realized family and counts; otherwise the observed-count
+result is descriptive. All calculations count invalid predictions as wrong.
 
 The sustained power thresholds are not an arbitrary finite-sweep result. The
 tool exhausts every smaller item count up to a Hoeffding sufficient bound; a

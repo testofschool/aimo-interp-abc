@@ -9,5 +9,5 @@ OXDNOH+CMSY7                         Type 1            Builtin          yes yes 
 RVCSGD+CMR7                          Type 1            Builtin          yes yes yes     90  0
 RLPFNW+CMSY10                        Type 1            Builtin          yes yes yes     91  0
 UOIFLF+CMEX10                        Type 1            Builtin          yes yes yes     92  0
-GXYGMQ+SFTT1000                      Type 1            Custom           yes yes yes    100  0
+RFQOQX+SFTT1000                      Type 1            Custom           yes yes yes    100  0
 YXQCPT+SFTT0900                      Type 1            Custom           yes yes yes    148  0

@@ -15,7 +15,7 @@ Document Class: article 2025/01/22 v1.4n Standard LaTeX document class
 (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/base/size10.c
 lo))
 (/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/
-build/v6-named-final/main-qegm8nb_/neurips_2026.sty
+build/v6-named-r1-final/main-3o36apav/neurips_2026.sty
 (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/environ/envir
 on.sty
 (/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/tex/latex/trimspaces/tr
@@ -210,33 +210,33 @@ Package natbib Warning: Citation `S11' on page 3 undefined on input line 520.
 [3{/opt/homebrew/Cellar/texlive/20260301/share/texmf-dist/fonts/enc/dvips/cm-su
 per/cm-super-t1.enc}] [4]
 
-Package natbib Warning: Citation `S2' on page 5 undefined on input line 663.
+Package natbib Warning: Citation `S2' on page 5 undefined on input line 672.
 
 
-Package natbib Warning: Citation `S7' on page 5 undefined on input line 666.
+Package natbib Warning: Citation `S7' on page 5 undefined on input line 675.
 
 [5] [6]
 
-Package natbib Warning: Citation `S3' on page 7 undefined on input line 777.
+Package natbib Warning: Citation `S3' on page 7 undefined on input line 786.
 
 
-Package natbib Warning: Citation `S5' on page 7 undefined on input line 777.
+Package natbib Warning: Citation `S5' on page 7 undefined on input line 786.
 
 
-Package natbib Warning: Citation `S8' on page 7 undefined on input line 794.
+Package natbib Warning: Citation `S8' on page 7 undefined on input line 803.
 
 
-Package natbib Warning: Citation `S9' on page 7 undefined on input line 794.
+Package natbib Warning: Citation `S9' on page 7 undefined on input line 803.
 
 
-Underfull \vbox (badness 1189) has occurred while \output is active [7]
+Underfull \vbox (badness 1199) has occurred while \output is active [7]
 [8]
 
 Package natbib Warning: There were undefined citations.
 
 [9]
 (/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/
-build/v6-named-final/main-qegm8nb_/main.aux
+build/v6-named-r1-final/main-3o36apav/main.aux
 
 Package natbib Warning: Citation(s) may have changed.
 (natbib)                Rerun to get citations correct.
@@ -266,7 +266,7 @@ share/texmf-dist/fonts/type1/public/cm-super/sftt1000.pfb></opt/homebrew/Cellar
 /texlive/20260301/share/texmf-dist/fonts/type1/urw/times/utmb8a.pfb></opt/homeb
 rew/Cellar/texlive/20260301/share/texmf-dist/fonts/type1/urw/times/utmr8a.pfb>
 Output written on "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-exec
-ution/work/report/build/v6-named-final/main-qegm8nb_/main.pdf" (9 pages, 188930
- bytes).
+ution/work/report/build/v6-named-r1-final/main-3o36apav/main.pdf" (9 pages, 191
+779 bytes).
 Transcript written on "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-
-execution/work/report/build/v6-named-final/main-qegm8nb_/main.log".
+execution/work/report/build/v6-named-r1-final/main-3o36apav/main.log".

@@ -1,4 +1,8 @@
-# v6 public publication and readback — 2026-10-20 KST
+# Completion-corrected v6 publication — refresh pending
+
+Current local corrections have passed complete CPU and PDF checks. They have not yet been asserted as publicly reproduced. The previous public release and readback below are historical evidence for their own bytes.
+
+## Historical initial v6 public readback — 2026-10-20 KST
 
 Observed public scientific release HEAD: `e2fa9b64d1466be4b8b4069b20f7678d69aaabfb` ([commit](https://github.com/testofschool/aimo-interp-abc/commit/e2fa9b64d1466be4b8b4069b20f7678d69aaabfb)). Commit author is `felix <gangjeongmin23@gmail.com>`. The remote was checked against the exact pinned v5 HEAD before the v6 push.
 

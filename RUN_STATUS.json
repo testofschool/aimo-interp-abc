@@ -1,14 +1,14 @@
 {
   "goal": "v6 CPU report execution",
   "active_handoff": "HANDOFF_v6.md",
-  "overall": "PUBLIC_REPORT_REPRODUCED_OWNER_AND_RESCRAPE_PENDING",
+  "overall": "COMPLETION_CORRECTIONS_LOCALLY_VERIFIED_PUBLIC_REFRESH_PENDING",
   "tracks": {
     "T1": "PASS",
     "T2": "PASS",
     "T3": "PASS",
     "T4": "OWNER_PENDING_UNMEASURED",
     "T5": "SCHEDULED_NOT_RUN",
-    "T6": "PASS_PUBLIC_READBACK"
+    "T6": "PUBLIC_REFRESH_PENDING"
   },
   "claims": 150,
   "frozen_v6_checks": 22,
@@ -21,29 +21,29 @@
   "report": {
     "named": {
       "pdf": "report/aimo-interp-report-v6-named.pdf",
-      "sha256": "0cd3fdf4dd40b39a80b5244fc7d8131f2956c278d1944c6951eebe2e0290600f",
+      "sha256": "6114f15549c07c12efce021a6521d0d72d20c53adc46079d3a4bba9558eef9ef",
       "pages": 9,
       "body_pages": 8,
       "reference_pages": 1,
       "type3_count": 0,
       "automated": "AUTOMATED_PASS_VISUAL_REVIEW_REQUIRED",
       "visual_review": "PASS",
-      "visual_scope": "All 9 pages per variant inspected via final contact sheets; named pages 3,4,6 additionally inspected at full render resolution",
+      "visual_scope": "All 9 final post-R1 pages per variant inspected via contact sheets; named pages 5,6,7 additionally inspected at full render resolution",
       "defects": [],
-      "source_sha256": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9"
+      "source_sha256": "6fef355b271e3c85a5083358cfb4e04f2789caef152683f3ecc2285c93e21c2d"
     },
     "anonymous": {
       "pdf": "report/aimo-interp-report-v6-anonymous.pdf",
-      "sha256": "64007f693861ccf0151e42e0805fccc65a638036ec26b76a7a440a7f5c13c112",
+      "sha256": "f1d2a4df94c1669c6f0e2e3dc67c7dda6324b51b8ccc83b28a95a77d79d88ebb",
       "pages": 9,
       "body_pages": 8,
       "reference_pages": 1,
       "type3_count": 0,
       "automated": "AUTOMATED_PASS_VISUAL_REVIEW_REQUIRED",
       "visual_review": "PASS",
-      "visual_scope": "All 9 pages per variant inspected via final contact sheets; named pages 3,4,6 additionally inspected at full render resolution",
+      "visual_scope": "All 9 final post-R1 pages per variant inspected via contact sheets; named pages 5,6,7 additionally inspected at full render resolution",
       "defects": [],
-      "source_sha256": "513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e"
+      "source_sha256": "dca141886ef481483e70ba9eddc1add77443e906906ea0d054bd603943286feb"
     }
   },
   "owner": {
@@ -74,5 +74,12 @@
     "V1_V6": "PASS",
     "receipt": "results/v6/publication/receipt.json",
     "owner_or_future_actions_complete": false
-  }
+  },
+  "completion_audit": "COMPLETION_AUDIT_v6.md",
+  "remaining_required_work": [
+    "Owner Codabench receipts",
+    "Owner verbatim Discord instructions",
+    "October31 actual rescrape and kill-rule decision",
+    "Public refresh of completion corrections"
+  ]
 }

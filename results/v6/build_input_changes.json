@@ -2,6 +2,15 @@
   "base": "9274840b6faacaa7ad0e321172071eedb822d9de",
   "files": [
     {
+      "path": "data/leaderboard/2026-10-19/comp.json",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 10002,
+      "byte_delta": 10002,
+      "before_sha256": null,
+      "after_sha256": "a512a7140918428d302e180f3d5c92af13eef94876d77d87a964d280a91a7cfc"
+    },
+    {
       "path": "data/leaderboard/2026-10-19/lb1.json",
       "action": "ADD",
       "before_bytes": 0,
@@ -77,10 +86,10 @@
       "path": "data/manifest.json",
       "action": "MODIFY",
       "before_bytes": 7141,
-      "after_bytes": 9575,
-      "byte_delta": 2434,
+      "after_bytes": 9961,
+      "byte_delta": 2820,
       "before_sha256": "582b323bec57130c682b4c910d6fbfdfaf7ab0fa14ff45a050180fe55df8ada5",
-      "after_sha256": "e18ab9b669af40d466b7c479322666322431c11afd1223520e4754252a2767a9"
+      "after_sha256": "13bca65e74537ce8fa252a86b899110bb526abd45a198e1fe819ca17b506f771"
     },
     {
       "path": "report/ALLOWED_LITERALS.txt",
@@ -92,13 +101,22 @@
       "after_sha256": "52241dee1c650223fa35372c68dd4729b61c6727532b3a872239ec3a0a442cb3"
     },
     {
+      "path": "report/OWNER_PRIVATE_VAL_UNMEASURED.md",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 692,
+      "byte_delta": 692,
+      "before_sha256": null,
+      "after_sha256": "e51dd37e3eefe81e0163aa20d4fe8c5b68fd9acf99c296506e14b2f448298da2"
+    },
+    {
       "path": "report/REPORT_OUTLINE.md",
       "action": "MODIFY",
       "before_bytes": 16448,
-      "after_bytes": 34741,
-      "byte_delta": 18293,
+      "after_bytes": 34848,
+      "byte_delta": 18400,
       "before_sha256": "a8accb9a1ea98b131e8a0fa3930e51d73729dfd8fab651a760134eafec61408b",
-      "after_sha256": "c8f1cce12d001bcbde61f7069fcb9a57b2946ecd646cd79d2a1dd5e93e75edee"
+      "after_sha256": "05a051024f512498a32835a04e81f057797c568bd8cff1ecd0f214b81c4420ef"
     },
     {
       "path": "report/create_source.py",
@@ -113,19 +131,19 @@
       "path": "report/main-anonymous.tex",
       "action": "ADD",
       "before_bytes": 0,
-      "after_bytes": 47900,
-      "byte_delta": 47900,
+      "after_bytes": 48012,
+      "byte_delta": 48012,
       "before_sha256": null,
-      "after_sha256": "513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e"
+      "after_sha256": "dca141886ef481483e70ba9eddc1add77443e906906ea0d054bd603943286feb"
     },
     {
       "path": "report/main.tex",
       "action": "MODIFY",
       "before_bytes": 30228,
-      "after_bytes": 47901,
-      "byte_delta": 17673,
+      "after_bytes": 48013,
+      "byte_delta": 17785,
       "before_sha256": "95e9dde2250115e4a2475325a8719aa29527ac0992305257ab5ee2d1f3fa242b",
-      "after_sha256": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9"
+      "after_sha256": "6fef355b271e3c85a5083358cfb4e04f2789caef152683f3ecc2285c93e21c2d"
     },
     {
       "path": "requirements-local.txt",
@@ -218,6 +236,15 @@
       "after_sha256": "1fd26fc6d9fc27bb3fe73faa4580768fc0c6221efc8311485b7d6d01809cae73"
     },
     {
+      "path": "tests/test_owner_private_renderer.py",
+      "action": "ADD",
+      "before_bytes": 0,
+      "after_bytes": 7791,
+      "byte_delta": 7791,
+      "before_sha256": null,
+      "after_sha256": "9e4e64b8291969634ab14a4301091ff46b5a68f0a1261478de5f93d578475b85"
+    },
+    {
       "path": "tests/test_v6_gates.py",
       "action": "ADD",
       "before_bytes": 0,
@@ -272,6 +299,15 @@
       "after_sha256": "07b09da4e05af061f3457268e0ac10e0a45b2bdd28484477345fad8337ff1d9d"
     },
     {
+      "path": "tools/render_report.py",
+      "action": "MODIFY",
+      "before_bytes": 2745,
+      "after_bytes": 6853,
+      "byte_delta": 4108,
+      "before_sha256": "45819afce13e8f243bc83add9b9268233e54862f12b6f6565f1f974425ffcd4a",
+      "after_sha256": "2a4b96bfa97abfb37ab46ec9fa9fd1b0090e69e34c712ac36a8831c61131b142"
+    },
+    {
       "path": "tools/report_numbers.py",
       "action": "MODIFY",
       "before_bytes": 11995,
@@ -284,10 +320,10 @@
       "path": "tools/reproduce_report.py",
       "action": "MODIFY",
       "before_bytes": 4259,
-      "after_bytes": 7333,
-      "byte_delta": 3074,
+      "after_bytes": 7491,
+      "byte_delta": 3232,
       "before_sha256": "1f6526e65e33062aa46ea3b76184e28569fb579387ea81f423803f0c0cf9416e",
-      "after_sha256": "2ba3c2e074e91bd767ffd8e3b7b9f469a0b709a6650402465e93272a5fdf41ff"
+      "after_sha256": "f701f1154defc62feb8eee614a2a22fbd219a90451dd8816b8c99db3c9215ebf"
     },
     {
       "path": "tools/submission_text_gate.py",

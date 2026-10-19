@@ -9,12 +9,12 @@
         "-interaction=nonstopmode",
         "-halt-on-error",
         "-no-shell-escape",
-        "-output-directory=/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_",
+        "-output-directory=/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav",
         "main.tex"
       ],
       "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report",
       "exit": 0,
-      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/01-latex-initial.log"
+      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/01-latex-initial.log"
     },
     {
       "step": "latex-rerun-1",
@@ -23,33 +23,33 @@
         "-interaction=nonstopmode",
         "-halt-on-error",
         "-no-shell-escape",
-        "-output-directory=/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_",
+        "-output-directory=/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav",
         "main.tex"
       ],
       "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report",
       "exit": 0,
-      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/02-latex-rerun-1.log"
+      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/02-latex-rerun-1.log"
     },
     {
       "step": "pdf-battery",
       "command": [
         "sh",
         "/Users/felix/.codex/skills/arxiv-latex-production/scripts/pdf_battery.sh",
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/main.pdf"
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/main.pdf"
       ],
-      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_",
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav",
       "exit": 0,
-      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/03-pdf-battery.log"
+      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/03-pdf-battery.log"
     },
     {
       "step": "pdfinfo",
       "command": [
         "pdfinfo",
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/main.pdf"
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/main.pdf"
       ],
-      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_",
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav",
       "exit": 0,
-      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/04-pdfinfo.log"
+      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/04-pdfinfo.log"
     },
     {
       "step": "render-all-pages",
@@ -58,12 +58,12 @@
         "-png",
         "-r",
         "110",
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/main.pdf",
-        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/pages/page"
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/main.pdf",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/pages/page"
       ],
-      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_",
+      "cwd": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav",
       "exit": 0,
-      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/05-render-all-pages.log"
+      "log": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/05-render-all-pages.log"
     }
   ],
   "checks": {
@@ -72,21 +72,21 @@
     "all_pages_rendered": "PASS"
   },
   "source": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/main.tex",
-  "workdir": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_",
+  "workdir": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav",
   "engine": "pdflatex",
   "backend": "inline",
-  "pdf": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/main.pdf",
+  "pdf": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/main.pdf",
   "page_count": 9,
   "rendered_pages": 9,
   "page_images": [
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/pages/page-1.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/pages/page-2.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/pages/page-3.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/pages/page-4.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/pages/page-5.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/pages/page-6.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/pages/page-7.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/pages/page-8.png",
-    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-final/main-qegm8nb_/pages/page-9.png"
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/pages/page-1.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/pages/page-2.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/pages/page-3.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/pages/page-4.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/pages/page-5.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/pages/page-6.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/pages/page-7.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/pages/page-8.png",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/report/build/v6-named-r1-final/main-3o36apav/pages/page-9.png"
   ]
 }

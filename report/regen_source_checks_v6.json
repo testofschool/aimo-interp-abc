@@ -1,10 +1,14 @@
 {
   "canon_commit": "9274840b6faacaa7ad0e321172071eedb822d9de",
+  "narrow_correction_base_commit": "60b21ddf7f276d746847d35c739d13c64bb39be4",
   "style_equal_to_v5": true,
   "style_sha256": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a",
   "package_font_and_column_spec_equal_to_v5": true,
   "variants_scientific_source_body_identical": true,
-  "outline_word_count": 4461,
+  "outline_word_count": 4467,
+  "verbatim_public_label_rules": true,
+  "owner_markers_absent_from_rendered_draft": true,
+  "canonical_owner_fallback_sha256": "e51dd37e3eefe81e0163aa20d4fe8c5b68fd9acf99c296506e14b2f448298da2",
   "variants": {
     "v5": {
       "path": "report/aimo-interp-report-v5.pdf",
@@ -28,7 +32,7 @@
     },
     "named": {
       "path": "report/aimo-interp-report-v6-named.pdf",
-      "sha256": "0cd3fdf4dd40b39a80b5244fc7d8131f2956c278d1944c6951eebe2e0290600f",
+      "sha256": "6114f15549c07c12efce021a6521d0d72d20c53adc46079d3a4bba9558eef9ef",
       "page_count": 9,
       "body_pages": 8,
       "reference_pages": 1,
@@ -47,7 +51,7 @@
         "SFTT0900",
         "SFTT1000"
       ],
-      "source_sha256": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9",
+      "source_sha256": "6fef355b271e3c85a5083358cfb4e04f2789caef152683f3ecc2285c93e21c2d",
       "external_href_count": 6,
       "table_count": 6,
       "display_equation_count": 4,
@@ -55,7 +59,7 @@
     },
     "anonymous": {
       "path": "report/aimo-interp-report-v6-anonymous.pdf",
-      "sha256": "64007f693861ccf0151e42e0805fccc65a638036ec26b76a7a440a7f5c13c112",
+      "sha256": "f1d2a4df94c1669c6f0e2e3dc67c7dda6324b51b8ccc83b28a95a77d79d88ebb",
       "page_count": 9,
       "body_pages": 8,
       "reference_pages": 1,
@@ -74,7 +78,7 @@
         "SFTT0900",
         "SFTT1000"
       ],
-      "source_sha256": "513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e",
+      "source_sha256": "dca141886ef481483e70ba9eddc1add77443e906906ea0d054bd603943286feb",
       "external_href_count": 6,
       "table_count": 6,
       "display_equation_count": 4,
@@ -93,11 +97,16 @@
       "report/qa_v6_anonymous/contact.png"
     ],
     "pages_inspected": 18,
+    "full_resolution_additional_pages": [
+      "named 5",
+      "named 6",
+      "named 7"
+    ],
     "clipped_tables_or_equations": 0,
     "missing_glyphs_observed": 0,
     "orphaned_headings_observed": 0,
     "citation_marker_breakage_observed": 0,
-    "note": "All final contact pages inspected. Root independently reviewed all 18 pages."
+    "note": "All final contact pages inspected after R1 correction, plus named pages 5,6,7 at full render resolution."
   },
   "unreported_remaining": 0
 }

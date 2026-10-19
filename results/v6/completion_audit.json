@@ -1,0 +1,224 @@
+{
+  "status": "INCOMPLETE_OWNER_AND_FUTURE_DATE",
+  "checked_at_utc": "2026-10-19T16:27:32.973692+00:00",
+  "scope": "full referenced handoff, not a smaller executor-only objective",
+  "completion_not_proven": true,
+  "requirements": [
+    {
+      "id": "I0",
+      "requirement": "Initial public HEAD and v5 PDF/bundle/train hashes matched before execution",
+      "status": "PASS",
+      "evidence": "results/v6/input_checks.json; research/v6_sources/input-integrity.json"
+    },
+    {
+      "id": "I1",
+      "requirement": "All38 package manifest hashes checked",
+      "status": "PASS",
+      "evidence": "research/v6_sources/input-integrity.json"
+    },
+    {
+      "id": "T1.1",
+      "requirement": "Every attached snapshot JSON copied and individually hashed in data manifest",
+      "status": "PASS",
+      "evidence": "results/v6/snapshot_completeness.json:9/9 including comp.json; comp metadata is not ninth numeric page"
+    },
+    {
+      "id": "T1.2",
+      "requirement": "Frozen snapshot hash checks precede computation; smallest compatible denominators; invalid/dedup/dual/conflict/coverage rules",
+      "status": "PASS",
+      "evidence": "tools/leaderboard_identifiability.py; tools/test_leaderboard_identifiability.py; results/v6/leaderboard_identifiability.json"
+    },
+    {
+      "id": "T1.3",
+      "requirement": "All20 required numerical expectations plus2 Bonferroni values registered and checked",
+      "status": "PASS",
+      "evidence": "results/v6/identifiability_validation.json:22/22 MATCH; research/claims.json; results/report_numbers.json"
+    },
+    {
+      "id": "T1.4",
+      "requirement": "Optional transfer only after license check, from fetched pinned bytes, no raw redistribution",
+      "status": "PASS_OPTIONAL",
+      "evidence": "research/v6_sources/source_audit.json; OPTIONAL_TRANSFER.md; results/v6/optional_transfer_validation.json:10/10 MATCH; raw data omitted"
+    },
+    {
+      "id": "T1.5",
+      "requirement": "Current scientific report omits participant handles",
+      "status": "PASS",
+      "evidence": "Both TeX/Markdown and extracted current PDF texts checked; hashed raw snapshot retained"
+    },
+    {
+      "id": "T2.1",
+      "requirement": "Specified scientific narrative, power, label audit, calibration/dependence/hidden-attempt/final-test limitations and AI disclosure",
+      "status": "PASS",
+      "evidence": "report/REPORT_DRAFT.md; report/REGEN_FIDELITY_v6.md; results/v6/statistical_review.json"
+    },
+    {
+      "id": "T2.2",
+      "requirement": "Official NeurIPS template,6-8bodypages plusreferences",
+      "status": "PASS",
+      "evidence": "report/render_qa_v6.json; unchanged official style and base preamble;8body+1references"
+    },
+    {
+      "id": "T2.3",
+      "requirement": "Prior v5 lead-contribution sentence removed",
+      "status": "PASS",
+      "evidence": "report/REPORT_DRAFT.md and extracted final PDF text"
+    },
+    {
+      "id": "T2.4",
+      "requirement": "Measured decimals/percentages use checked numeric keys; sourced literals remain declared",
+      "status": "PASS",
+      "evidence": "tools/render_report.py; report/ALLOWED_LITERALS.txt; V2 public stdout"
+    },
+    {
+      "id": "T2.5",
+      "requirement": "Submission front-matter gate exits0 on final sources",
+      "status": "PASS",
+      "evidence": "V6 public stdout; both TeX sources and Markdown CLEAN"
+    },
+    {
+      "id": "T2.6",
+      "requirement": "Named Jung Min Kang Independent and anonymous variants from one scientific body",
+      "status": "PASS",
+      "evidence": "report/source_provenance.json; report/regen_source_checks_v6.json"
+    },
+    {
+      "id": "T2.7",
+      "requirement": "TAE citation is optional",
+      "status": "NOT_REQUIRED",
+      "evidence": "Not used; no claim added"
+    },
+    {
+      "id": "L5.R1",
+      "requirement": "Inherited v5 requires public label rule verbatim",
+      "status": "PASS",
+      "evidence": "Pinned dataset card26-29; exact two rules restored in report/REPORT_DRAFT.md; sourced0.10/0.25 literals"
+    },
+    {
+      "id": "L5.V",
+      "requirement": "Original13-claim/17-placeholder and frozen12 v5 checks retained",
+      "status": "PASS",
+      "evidence": "tools/reproduce_report.py; latest public CPU receipt"
+    },
+    {
+      "id": "T3.1",
+      "requirement": "Two supplied gates, PREREG and five fixture inputs installed byte-identically",
+      "status": "PASS",
+      "evidence": "results/v6/gate_fixture_receipts.json; original package hashes"
+    },
+    {
+      "id": "T3.2",
+      "requirement": "V5 identifiability and V6 text/source regeneration integrated",
+      "status": "PASS",
+      "evidence": "tools/reproduce_report.py; latest public CPU receipt"
+    },
+    {
+      "id": "T3.3",
+      "requirement": "Synthetic fixture exits0,0,1,1,1 and mismatch REFUTED_OR_PARTIAL",
+      "status": "PASS_SYNTHETIC_ONLY",
+      "evidence": "results/v6/gate_fixture_receipts.json; no fixture promoted to live receipt"
+    },
+    {
+      "id": "T3.4",
+      "requirement": "7/14 expectations described as receipt expectations, not novel predictions or balance proof",
+      "status": "PASS",
+      "evidence": "report section4; research/GATES_v6.md; fixed supplied PREREG retained as evidence"
+    },
+    {
+      "id": "T3.5",
+      "requirement": "Missing/invalid receipts replace only owner private-result block with protected UNMEASURED fallback; deadline never invents results",
+      "status": "PASS",
+      "evidence": "tools/render_report.py scoped rendering; report/OWNER_PRIVATE_VAL_UNMEASURED.md; new scoped rendering regression receipt"
+    },
+    {
+      "id": "T4.1",
+      "requirement": "Felix uploads both unchanged Small bundles and supplies real scores/screenshots",
+      "status": "OWNER_REQUIRED",
+      "evidence": "No results/v6/codabench_receipts.json exists; user-designated owner action; Codex clicks prohibited"
+    },
+    {
+      "id": "T4.2",
+      "requirement": "Felix records exact Discord announcements and current nomination/report/anonymity instructions",
+      "status": "OWNER_REQUIRED",
+      "evidence": "No research/discord_2026-10.md exists; explicit owner track"
+    },
+    {
+      "id": "T5",
+      "requirement": "October31 complete rescrape and novelty/kill-rule decision",
+      "status": "DATE_REQUIRED",
+      "evidence": "TodayOctober20KST; scheduled20:00KSTOct31 via aimo-v6-leaderboard-rescrape; future snapshot absent; not complete"
+    },
+    {
+      "id": "T6.1",
+      "requirement": "Commit with specified author and public push/readback",
+      "status": "PUBLIC_REFRESH_PENDING",
+      "evidence": "PUBLICATION.md and latest final public HEAD receipt; author felix <gangjeongmin23@gmail.com>"
+    },
+    {
+      "id": "T6.2",
+      "requirement": "Fresh anonymous clone,newvenv,fresh pinned data,V1-V6 pass",
+      "status": "PUBLIC_REFRESH_PENDING",
+      "evidence": "Latest results/v6/publication receipt and per-check stdout/stderr"
+    },
+    {
+      "id": "T6.3",
+      "requirement": "Both public PDFs render,page counts/hashes/Type3 recorded",
+      "status": "PUBLIC_REFRESH_PENDING",
+      "evidence": "PUBLICATION.md; report/render_qa_v6.json; public readback PDF rendering logs"
+    },
+    {
+      "id": "T6.4",
+      "requirement": "No OpenReview submission by Codex",
+      "status": "PASS_BOUNDARY",
+      "evidence": "Owner checklist; no submission receipt; explicit owner-only final click"
+    },
+    {
+      "id": "D1",
+      "requirement": "Every preregistered input/value expected-observed-MATCH table",
+      "status": "PASS",
+      "evidence": "EXECUTION_REPORT_v6.md; initial38+input checks+22identifiability+10optional"
+    },
+    {
+      "id": "D2",
+      "requirement": "Build-input changes file-by-file including manifest,reproduce and requirements byte deltas",
+      "status": "PASS",
+      "evidence": "BUILD_INPUT_CHANGES_v6.md; results/v6/build_input_changes.json; requirements unchanged"
+    },
+    {
+      "id": "D3",
+      "requirement": "Final clean sources,PDF page counts/hashes/Type3 zero",
+      "status": "PASS",
+      "evidence": "Latest QA and public stdout"
+    },
+    {
+      "id": "D4",
+      "requirement": "Public HEAD and fresh-clone V1-V6 stdout retained",
+      "status": "PUBLIC_REFRESH_PENDING",
+      "evidence": "PUBLICATION.md; latest public/final readback receipts"
+    },
+    {
+      "id": "D5",
+      "requirement": "Unrun work and reasons reported",
+      "status": "PASS",
+      "evidence": "EXECUTION_REPORT_v6.md; owner/future actions remain explicitly incomplete"
+    },
+    {
+      "id": "P",
+      "requirement": "No paidGPU/newlanguage-model inference/method reopen/service clicks/messages/unlicensed raw label redistribution",
+      "status": "PASS_BOUNDARY",
+      "evidence": "Recorded CPU commands only; V4 CLOSEDexpectedexit1; unchanged bundles; source/license/provenance ledgers"
+    }
+  ],
+  "remaining": [
+    "T4.1 owner Codabench receipts",
+    "T4.2 owner Discord exact record",
+    "T5 October31 actual rescrape/kill-rule decision",
+    "T6 public refresh of completion corrections"
+  ],
+  "corrections_from_completion_audit": [
+    "all snapshot JSON includes comp.json",
+    "inherited verbatim public label rules",
+    "runtime receipt scope now enforced by renderer, not only reported",
+    "fixed-family/adaptive-stopping qualification also in usage docs"
+  ]
+}

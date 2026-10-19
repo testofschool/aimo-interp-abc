@@ -2,12 +2,15 @@
   "review_type": "Independent read-only statistical and contextual claim review against existing T1 outputs; no measurements or model runs repeated.",
   "status": "PASS_RESOLVED",
   "reviewed_sha256": {
-    "report/REPORT_DRAFT.md": "2a93d56dce8f4edde7c151e50e151cd28c13616d75d0b4e08093ce4236914602",
-    "report/main.tex": "211bf3f17a03d093e3d472f27baac8e2a712fa408dcb1e5836a01f438c2507e9",
+    "report/REPORT_DRAFT.md": "7b04da671312d15f40557e7661ff8d6dc0740d3bb32eb4fb98ed024eaaab8d4f",
+    "report/main.tex": "6fef355b271e3c85a5083358cfb4e04f2789caef152683f3ecc2285c93e21c2d",
     "results/v6/leaderboard_identifiability.json": "df31f5dc1b40618286dfebb3ca1e45901663222e449624cdab6b6842dcda566f",
     "results/report_numbers.json": "cc31e5a71cd04134504a246552aecf583a3536b36e2b0f1cae1732d3625f940c",
     "tools/leaderboard_identifiability.py": "66ec8bba1b6ad8d527fc9e02469596e2f85452219a405cd2937f305869505635",
-    "report/main-anonymous.tex": "513c75c8ee6a1605ee111f35ec5a936897cfb9a619327a1d85d5ca86ddb7e20e"
+    "report/main-anonymous.tex": "dca141886ef481483e70ba9eddc1add77443e906906ea0d054bd603943286feb",
+    "report/REPORT_OUTLINE.md": "05a051024f512498a32835a04e81f057797c568bd8cff1ecd0f214b81c4420ef",
+    "report/OWNER_PRIVATE_VAL_UNMEASURED.md": "e51dd37e3eefe81e0163aa20d4fe8c5b68fd9acf99c296506e14b2f448298da2",
+    "data/evidence/train-main-v2-pinned-README.md": "6286baddd7b622adb3e1e20d86049ae46aa755af9f92d95b1becfdeb76b97eda"
   },
   "verified": [
     {
@@ -72,5 +75,64 @@
     "Publications built from later source hashes must carry the required wording fix and new text-gate/build receipts."
   ],
   "unresolved_findings": [],
-  "closeout": "Final source hashes match root-supplied frozen named and anonymous sources. No new measurement, test, or model run was performed for this closeout."
+  "closeout": "Final exact-rule source correction reviewed against public60b21dd. Named and anonymous source hashes refreshed; owner paragraph and all other statistical text unchanged. No numeric rerun, test, model run, report edit, tool edit, or commit performed for this closeout.",
+  "source_fidelity_closeout": {
+    "public_baseline_commit": "60b21ddf7f276d746847d35c739d13c64bb39be4",
+    "status": "PASS",
+    "correction_rationale": "Restore both dataset-card public label rules verbatim, retaining inclusive <=0.10 and >=0.25 boundaries and public-vs-private distinction. Generated scientific text changes only that rule block and its transition; formulas, numerical interpretations, power scope, STAT-1 fixed-family/stopping caveats and owner UNMEASURED paragraph remain unchanged.",
+    "source_checks": [
+      {
+        "path": "report/REPORT_DRAFT.md",
+        "only_label_rule_block_changed": true,
+        "owner_private_paragraph_unchanged": true,
+        "sha256": "7b04da671312d15f40557e7661ff8d6dc0740d3bb32eb4fb98ed024eaaab8d4f"
+      },
+      {
+        "path": "report/main.tex",
+        "only_label_rule_block_changed": true,
+        "owner_private_paragraph_unchanged": true,
+        "sha256": "6fef355b271e3c85a5083358cfb4e04f2789caef152683f3ecc2285c93e21c2d"
+      },
+      {
+        "path": "report/main-anonymous.tex",
+        "only_label_rule_block_changed": true,
+        "owner_private_paragraph_unchanged": true,
+        "sha256": "dca141886ef481483e70ba9eddc1add77443e906906ea0d054bd603943286feb"
+      }
+    ],
+    "exact_rules_match_pinned_card": true,
+    "numeric_and_analysis_files_unchanged": [
+      {
+        "path": "tools/leaderboard_identifiability.py",
+        "identical_to_public_baseline": true,
+        "sha256": "66ec8bba1b6ad8d527fc9e02469596e2f85452219a405cd2937f305869505635"
+      },
+      {
+        "path": "tools/report_numbers.py",
+        "identical_to_public_baseline": true,
+        "sha256": "37f24afae0ae0b3e2ae8ce8a6f49f28f43482df61da45d067831ac230cb875aa"
+      },
+      {
+        "path": "research/claims.json",
+        "identical_to_public_baseline": true,
+        "sha256": "759c24ece59323610147a958c13fa1e798f350f3110e81ec39d31b2db8c687a5"
+      },
+      {
+        "path": "research/identifiability_expected_v6.json",
+        "identical_to_public_baseline": true,
+        "sha256": "c0555b415e6a5a226fa60f21e5db49267702b4343742395252df5fadfa18bc15"
+      },
+      {
+        "path": "results/report_numbers.json",
+        "identical_to_public_baseline": true,
+        "sha256": "cc31e5a71cd04134504a246552aecf583a3536b36e2b0f1cae1732d3625f940c"
+      },
+      {
+        "path": "results/v6/leaderboard_identifiability.json",
+        "identical_to_public_baseline": true,
+        "sha256": "df31f5dc1b40618286dfebb3ca1e45901663222e449624cdab6b6842dcda566f"
+      }
+    ],
+    "no_new_numeric_measurement": true
+  }
 }

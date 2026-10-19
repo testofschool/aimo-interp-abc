@@ -17,6 +17,8 @@ The v6 change invalidates the v5 description that problem identity is the lead c
 - Replace participant names/handles and participant-handle URLs in report sources with neutral titles and immutable source commit IDs. Precise source URLs remain in research evidence outside the manuscript.
 - Rewrite reproduction and AI disclosure around the v6 tools. Include no new model runs or third-party labelled transfer.
 - Add the union-bound-within-owner plus Bonferroni-across-owner sensitivity, which preserves the same survivor count without assuming attempt/owner independence for a fixed family of valid single-submission p-values. Explicitly qualify score-adaptive stopping and conditional validity given observed family/counts.
+- Restore the two public label-rule lines verbatim from the pinned dataset card, as inherited HANDOFF v5 R1 requires. This replaces the initial v6 threshold paraphrase with the exact inline-code rules and retains the private-label limitation. Threshold values, measurements and formulas do not change. Rebuild both variants and update all PDF/source hashes, rendered-page review and fidelity records after this correction.
+- Delimit the owner private-validation paragraph in the editable outline and save its exact existing text in `OWNER_PRIVATE_VAL_UNMEASURED.md`. The renderer strips delimiters and enforces that canonical UNMEASURED fallback when linked receipts do not authorize measured text. This hardens the build boundary without changing the paper's current owner paragraph or blocking the unrelated leaderboard analysis.
 
 ## Intentional formatting changes
 

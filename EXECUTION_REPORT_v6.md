@@ -1,6 +1,6 @@
 # v6 execution report — CPU only
 
-T1–T3 and T6 are verified, including public anonymous fresh-clone/new-venv V1–V6. Exact public scientific HEAD and readback are recorded in PUBLICATION.md. Owner submissions are UNMEASURED; T5 is scheduled, not executed.
+T1–T3 completion corrections pass local full CPU gates. Public refresh of these corrections is pending; prior public readback is historical. Current public evidence will be recorded in PUBLICATION.md. Owner submissions are UNMEASURED; T5 is scheduled, not executed.
 
 ## Tracks
 
@@ -124,8 +124,8 @@ The frozen receipt gate overstates what two aggregate matching scores establish.
 
 | Variant | Pages | Type-3 fonts | PDF SHA256 |
 |---|---:|---:|---|
-| named | 9 | 0 | `0cd3fdf4dd40b39a80b5244fc7d8131f2956c278d1944c6951eebe2e0290600f` |
-| anonymous | 9 | 0 | `64007f693861ccf0151e42e0805fccc65a638036ec26b76a7a440a7f5c13c112` |
+| named | 9 | 0 | `6114f15549c07c12efce021a6521d0d72d20c53adc46079d3a4bba9558eef9ef` |
+| anonymous | 9 | 0 | `f1d2a4df94c1669c6f0e2e3dc67c7dda6324b51b8ccc83b28a95a77d79d88ebb` |
 
 Both final variants were rendered and all pages visually inspected. Embedded NeurIPS style bytes and base typography are unchanged; page growth from v5 five pages to v6 nine pages is the predeclared content expansion. The original v5 PDF and both ZIPs remain byte-identical. See report/REGEN_FIDELITY_v6.md and results/v6/protected_inputs.json.
 
@@ -134,3 +134,7 @@ Both final variants were rendered and all pages visually inspected. Embedded Neu
 Every changed code/manifest/registration/report source and fixture is listed with before/after byte counts in BUILD_INPUT_CHANGES_v6.md and full hashes in results/v6/build_input_changes.json. Requirements and original dataset fetcher changed by zero bytes. The host default Python 3.10 could not satisfy existing pins; the successful environment uses Python 3.13. Initial direct network source probes encountered CA/DNS errors, then immutable public Git retrieval verified the prior report and MIT LICENSE. No failed probe was represented as source content.
 
 Not run: any new language-model inference, paid GPU, white-box method or ablation; owner account uploads, private-val/final-test evaluation, nomination, Discord announcement inspection, OpenReview final form/submission or receipt; October 31 rescrape and its future kill-rule result. The exact final report hour/timezone and anonymity policy remain unverified, so both author variants are retained. No scientific negative effect is inferred from unrun work. New GPU jobs: 0. New paid-service spend: USD 0.
+
+## Completion-audit corrections
+
+The full inherited handoff audit found and corrected: omitted comp.json metadata (all9 attached snapshotJSON now copied and hashed); missing exact public label rules; a receipt scope that was only reported rather than enforced at rendering; and an incomplete fixed-family qualification in usage documentation. The renderer now selects a protected UNMEASURED fallback only for the marked owner paragraph when receipts are absent/invalid, even after deadline expiry. Seven new synthetic scope tests pass and are integrated into V6. Current local full receipt: results/v6/completion-cpu-gates.json. Numeric outputs and both bundles remain unchanged. The rebuilt report remains8body+1referencespages per variant. Full-goal completion remains unproven while T4 and T5 are pending; see COMPLETION_AUDIT_v6.md.

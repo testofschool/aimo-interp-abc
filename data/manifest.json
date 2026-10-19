@@ -186,6 +186,13 @@
         "bytes": 33095,
         "sha256": "fa507d52739648f820ecb253f6ab1c5f1f6d08a2415d609628d2ad61fb1bea9f",
         "source_url": "https://www.codabench.org/api/phases/30038/get_leaderboard/?page=8"
+      },
+      {
+        "path": "leaderboard/2026-10-19/comp.json",
+        "bytes": 10002,
+        "sha256": "a512a7140918428d302e180f3d5c92af13eef94876d77d87a964d280a91a7cfc",
+        "source_url": "https://www.codabench.org/api/competitions/16180/",
+        "role": "competition metadata; copied from attached snapshot, not an additional leaderboard page or numeric-analysis input"
       }
     ],
     "privacy": "Only these hashed raw snapshots retain participant handles; derived results use rank within track."
