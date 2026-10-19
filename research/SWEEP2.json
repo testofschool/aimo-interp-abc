@@ -1,0 +1,366 @@
+{
+ "schema": "direction-sweep/1",
+ "question": "AIMO-Interp round 2: what does Codex do with the remaining 12 days and ~$24",
+ "success_line": {
+  "text": "A+B+C as owner set: valid Small entry by 2026-11-01 11:55Z, White-Box ablation in report, report by 2026-11-15",
+  "status": "given"
+ },
+ "swept_at": "2026-10-19T22:36:18+09:00",
+ "note": "Round 2 after J0. 4 independent killers. C4 primary kill sentence (qwen3-8b:low != DeepSeek) audited FALSE ALARM: organizer README maps the alias to DeepSeek-R1-0528-Qwen3-8B; C4 re-graded wounded on the input slot.",
+ "candidates": [
+  {
+   "id": "C1",
+   "label": "E1'' prefill hidden-state divergence (white-box)",
+   "kind": "proposal",
+   "provenance": "upstream:kill-report-convergence",
+   "axis": "pre-reasoning representation",
+   "premises": {
+    "payer": {
+     "claim": "selector rewards it",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Submissions are ranked by accuracy in classifying each problem–model instance",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "prefill states carry robustness signal",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "substitute": {
+     "claim": "organizers have not already tested prefill probes",
+     "verdict": "contested",
+     "status": "read",
+     "source": "https://arxiv.org/abs/2607.13899",
+     "quote": "a simple probing classifier ... predicting robustness label from the internal representations of last input token",
+     "tier": "official"
+    },
+    "reach": {
+     "claim": "fits 3600 s / budget",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "file:Codex J0 report",
+     "quote": "two forward passes per case",
+     "tier": "primary"
+    },
+    "input": {
+     "claim": "labels + cached models available",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/aimo-interp/train-main-v2",
+     "quote": "94 rows: 59 robust, 21 non-robust, 14 unlabelled, over 36 problems.",
+     "tier": "official"
+    }
+   },
+   "kill": {
+    "verdict": "dead",
+    "angle": "incumbent",
+    "sentence": "organizers already published the prefill last-token probe and it was their weakest baseline",
+    "source": "https://arxiv.org/abs/2607.13899",
+    "quote": "achieves up to 58.37 (±7.5) and 69.23% (±10.13) of accuracy, respectively",
+    "adequacy_quote": "probing classifier ... 58.37 (±7.5)"
+   }
+  },
+  {
+   "id": "C2",
+   "label": "E2'' prefill prompt-token uncertainty",
+   "kind": "proposal",
+   "provenance": "upstream:kill-report-convergence",
+   "axis": "prompt perplexity",
+   "premises": {
+    "payer": {
+     "claim": "selector rewards it",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Submissions are ranked by accuracy in classifying each problem–model instance",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "prompt-token uncertainty predicts robustness",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "file:scratchpad/s (killer CPU run, proxy Qwen3-0.6B/1.7B)",
+     "quote": "uncertainty-only LOPO bacc 0.42-0.55 vs text control 0.54-0.63 (proxy models, not targets)",
+     "tier": "self_report"
+    },
+    "substitute": {
+     "claim": "no published prompt-perplexity robustness predictor",
+     "verdict": "unknown",
+     "status": "read",
+     "tier": "third_party",
+     "source": "https://arxiv.org/html/2504.02111v1",
+     "quote": "killer search found perturbation-fragility papers, none predicting robustness from prompt perplexity"
+    },
+    "reach": {
+     "claim": "fits 3600 s / budget",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "file:scratchpad/s",
+     "quote": "~0.7 s per forward pass on CPU (0.6B)",
+     "tier": "primary"
+    },
+    "input": {
+     "claim": "labels + cached models available",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/aimo-interp/train-main-v2",
+     "quote": "94 rows: 59 robust, 21 non-robust, 14 unlabelled, over 36 problems.",
+     "tier": "official"
+    }
+   },
+   "kill": {
+    "verdict": "wounded",
+    "angle": "mechanism",
+    "sentence": "on proxy models prompt uncertainty did not beat the text control and lowered it when added",
+    "source": "file:scratchpad/s",
+    "quote": "Adding the uncertainty features to the text control lowered the score (0.47-0.55)"
+   }
+  },
+  {
+   "id": "C3",
+   "label": "Measurement-audit report: control vs baselines on matching rows, label-structure findings",
+   "kind": "proposal",
+   "provenance": "requester",
+   "axis": "writeup prize",
+   "premises": {
+    "payer": {
+     "claim": "selector rewards negative results",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "particularly interested in work on generalization of interpretability methods, actionable interpretability, negative results or efficient methods",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "eligibility without rank",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/issues/10",
+     "quote": "Definitely, it is perfectly eligible.",
+     "tier": "official"
+    },
+    "substitute": {
+     "claim": "not already published by organizers/participants",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/issues/6",
+     "quote": "at 17 cases a single case is worth 5.9 accuracy points",
+     "tier": "official"
+    },
+    "reach": {
+     "claim": "doable by 11-15 solo",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "file:research/claims.json",
+     "quote": "6 claims regenerated on CPU, PASS",
+     "tier": "primary"
+    },
+    "input": {
+     "claim": "labels + cached models available",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/aimo-interp/train-main-v2",
+     "quote": "94 rows: 59 robust, 21 non-robust, 14 unlabelled, over 36 problems.",
+     "tier": "official"
+    }
+   },
+   "kill": {
+    "verdict": "wounded",
+    "angle": "mechanism",
+    "sentence": "as framed, finding (2) compared different rows/labels; leaderboard-noise point already public",
+    "source": "https://github.com/aimo-interp/getting-started/blob/main/solutions/uncertainty-profiling/README.md",
+    "quote": "balanced accuracy is 0.6262"
+   }
+  },
+  {
+   "id": "C4",
+   "label": "Early-generation (64-128 token) hidden-state white-box",
+   "kind": "proposal",
+   "provenance": "upstream:kill-report-convergence",
+   "axis": "early decode representation",
+   "premises": {
+    "payer": {
+     "claim": "selector rewards it",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Submissions are ranked by accuracy in classifying each problem–model instance",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "early-token states predict outcome",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://arxiv.org/html/2511.14773v1",
+     "quote": "eventual correctness is highly predictable after only a few tokens",
+     "tier": "third_party"
+    },
+    "substitute": {
+     "claim": "organizers' 4,096-token generation baseline is not already better",
+     "verdict": "contested",
+     "status": "read",
+     "tier": "official",
+     "source": "https://github.com/aimo-interp/getting-started/blob/main/solutions/uncertainty-profiling/README.md",
+     "quote": "balanced accuracy is 0.6262"
+    },
+    "reach": {
+     "claim": "fits 3600 s / budget",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "file:Codex J0 report",
+     "quote": "256-token decode 13-25 s per problem per model",
+     "tier": "primary"
+    },
+    "input": {
+     "claim": "enough target-model labels for a white-box ablation",
+     "verdict": "fails",
+     "status": "read",
+     "source": "file:research/report_numbers.json",
+     "quote": "small_rows 43, small_problems 22; min detectable bacc difference ~0.22-0.25",
+     "tier": "primary"
+    }
+   },
+   "kill": {
+    "verdict": "wounded",
+    "angle": "input",
+    "sentence": "only 43 target-model rows exist; the 141-row set's labels are readable from row format, so no ablation is detectable",
+    "source": "https://huggingface.co/datasets/aimo-interp/augmented-sample-math-agg",
+    "quote": "crosstab multi-family vs robust 105/0 and 0/36"
+   }
+  },
+  {
+   "id": "S1",
+   "label": "text-length control as the Small entry + report",
+   "kind": "substitute",
+   "provenance": "requester",
+   "axis": "baseline",
+   "premises": {
+    "payer": {
+     "claim": "selector rewards it",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Submissions are ranked by accuracy in classifying each problem–model instance",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "substitute": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "reach": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "input": {
+     "claim": "labels + cached models available",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/aimo-interp/train-main-v2",
+     "quote": "94 rows: 59 robust, 21 non-robust, 14 unlabelled, over 36 problems.",
+     "tier": "official"
+    }
+   }
+  },
+  {
+   "id": "W1",
+   "label": "stop spending; wait for results",
+   "kind": "wait",
+   "provenance": "requester",
+   "axis": "wait",
+   "premises": {
+    "payer": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "mechanism": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "substitute": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "reach": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "input": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    }
+   }
+  }
+ ],
+ "escapes": [
+  {
+   "text": "measure on matching rows/labels (organizer CV) before any comparison claim",
+   "named_by": [
+    "C1",
+    "C3"
+   ]
+  },
+  {
+   "text": "more target-model labels are required for any white-box ablation (n=43 MDE ~0.22)",
+   "named_by": [
+    "C1",
+    "C2",
+    "C4"
+   ]
+  },
+  {
+   "text": "submit control + always-true before Nov 1 to get Codabench numbers for the report",
+   "named_by": [
+    "C3"
+   ]
+  }
+ ],
+ "pick": {
+  "candidate": "C3",
+  "kill_criterion": {
+   "assumption": "the organizers will select a measurement-audit report whose numbers all regenerate from public data (payer slot untested)",
+   "cheapest_test": "every number in the draft passes tools/report_numbers.py --check research/claims.json, plus Codabench numbers for the control and always-true submitted before 2026-11-01 11:55Z",
+   "pass_rule": "report submitted on the organizers' channel by 2026-11-15 with check exit 0 and both Codabench rows cited",
+   "fail_rule": "any claim the check cannot regenerate is cut from the report, not reworded",
+   "stop_rule": "no paid GPU job beyond a single <=$3 prefill extraction for the white-box ablation section; no new method after 2026-10-29 23:59 KST",
+   "registered_at": "2026-10-19T22:36:51+09:00",
+   "check_by": "2026-11-15T23:59:00+09:00"
+  }
+ }
+}

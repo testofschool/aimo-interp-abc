@@ -1,0 +1,137 @@
+{
+  "fetcher_sha256": "a6eef5df3c40059625a1253a2d2f6714e942d85fdf2e7269549361411e2142d8",
+  "files": [
+    {
+      "bytes": 11372,
+      "evidence": [
+        {
+          "bytes": 1718,
+          "http_status": 200,
+          "path": "evidence/train-main-v2-pinned-api.json",
+          "retrieved_at_utc": "2026-10-19T14:50:42.552273+00:00",
+          "sha256": "a1da6f844aabe7ea0ab49d45ce849f02c8bdf3f94629b5260f5ba05859c1d45a",
+          "source_url": "https://huggingface.co/api/datasets/aimo-interp/train-main-v2/revision/fa8af758c6519fc97a9d0bd9017feb6f12232b52?blobs=true"
+        },
+        {
+          "bytes": 2446,
+          "http_status": 200,
+          "path": "evidence/train-main-v2-pinned-README.md",
+          "retrieved_at_utc": "2026-10-19T14:50:42.777074+00:00",
+          "sha256": "6286baddd7b622adb3e1e20d86049ae46aa755af9f92d95b1becfdeb76b97eda",
+          "source_url": "https://huggingface.co/datasets/aimo-interp/train-main-v2/resolve/fa8af758c6519fc97a9d0bd9017feb6f12232b52/README.md"
+        }
+      ],
+      "filename": "train-main-v2.parquet",
+      "lfs_hash_matches": true,
+      "license_metadata": "other",
+      "local_archive_hash_matches": true,
+      "path": "data/train-00000-of-00001.parquet",
+      "repo_id": "aimo-interp/train-main-v2",
+      "revision": "fa8af758c6519fc97a9d0bd9017feb6f12232b52",
+      "sha256": "e18eb44207e7987781ec2ff214793196038442bdc1466fdf5498f3e87ec58285",
+      "url": "https://huggingface.co/datasets/aimo-interp/train-main-v2/resolve/fa8af758c6519fc97a9d0bd9017feb6f12232b52/data/train-00000-of-00001.parquet"
+    },
+    {
+      "bytes": 23788,
+      "evidence": [
+        {
+          "bytes": 1908,
+          "http_status": 200,
+          "path": "evidence/val-sample-pinned-api.json",
+          "retrieved_at_utc": "2026-10-19T14:50:42.553226+00:00",
+          "sha256": "6ead5eb834407a4baa90e4b3bfe57374465f3df959b2d5e48b67c0c93b3d01b9",
+          "source_url": "https://huggingface.co/api/datasets/aimo-interp/val-sample/revision/1ae454ec1fad9727084eda8f9f3c9ae2239b21de?blobs=true"
+        },
+        {
+          "bytes": 985,
+          "http_status": 200,
+          "path": "evidence/val-sample-pinned-README.md",
+          "retrieved_at_utc": "2026-10-19T14:50:42.773838+00:00",
+          "sha256": "f58729a564594c54e204f913270b3cb36c9cee24e5ce7589ee92a18d34abde0a",
+          "source_url": "https://huggingface.co/datasets/aimo-interp/val-sample/resolve/1ae454ec1fad9727084eda8f9f3c9ae2239b21de/README.md"
+        }
+      ],
+      "filename": "val-sample.parquet",
+      "lfs_hash_matches": true,
+      "license_metadata": "unspecified",
+      "local_archive_hash_matches": true,
+      "path": "data/validation-00000-of-00001.parquet",
+      "repo_id": "aimo-interp/val-sample",
+      "revision": "1ae454ec1fad9727084eda8f9f3c9ae2239b21de",
+      "sha256": "3919cb3d951bb360a120be3397e926f48b7819bcd97e12cfee4c01e76618560f",
+      "url": "https://huggingface.co/datasets/aimo-interp/val-sample/resolve/1ae454ec1fad9727084eda8f9f3c9ae2239b21de/data/validation-00000-of-00001.parquet"
+    },
+    {
+      "bytes": 94757,
+      "evidence": [
+        {
+          "bytes": 1919,
+          "http_status": 200,
+          "path": "evidence/sample-full-pinned-api.json",
+          "retrieved_at_utc": "2026-10-19T14:50:42.544429+00:00",
+          "sha256": "a6a36f944a72bbcb8a707bdecdd70dd474c7b7aad28e90dad37a55e6157b2504",
+          "source_url": "https://huggingface.co/api/datasets/aimo-interp/aimo-interp-challenge-sample-full/revision/c0ffb7e678294cc8819d50d979ba28ba49bd02d0?blobs=true"
+        },
+        {
+          "bytes": 946,
+          "http_status": 200,
+          "path": "evidence/sample-full-pinned-README.md",
+          "retrieved_at_utc": "2026-10-19T14:50:42.765836+00:00",
+          "sha256": "eec3e442f584ba6c95080ddad89f50cdb184f7ef8ea0830593b647de546a8dfa",
+          "source_url": "https://huggingface.co/datasets/aimo-interp/aimo-interp-challenge-sample-full/resolve/c0ffb7e678294cc8819d50d979ba28ba49bd02d0/README.md"
+        }
+      ],
+      "filename": "sample-full.parquet",
+      "lfs_hash_matches": true,
+      "license_metadata": "unspecified",
+      "local_archive_hash_matches": true,
+      "path": "data/validation-00000-of-00001.parquet",
+      "repo_id": "aimo-interp/aimo-interp-challenge-sample-full",
+      "revision": "c0ffb7e678294cc8819d50d979ba28ba49bd02d0",
+      "sha256": "2989ab6a018f2779a821209f414bd0049c9ef1c2488f589ff2d3bf4ed16942ff",
+      "url": "https://huggingface.co/datasets/aimo-interp/aimo-interp-challenge-sample-full/resolve/c0ffb7e678294cc8819d50d979ba28ba49bd02d0/data/validation-00000-of-00001.parquet"
+    },
+    {
+      "bytes": 50071,
+      "evidence": [
+        {
+          "bytes": 1953,
+          "http_status": 200,
+          "path": "evidence/augmented-sample-math-agg-pinned-api.json",
+          "retrieved_at_utc": "2026-10-19T14:50:42.540687+00:00",
+          "sha256": "595558034436dfe99ed14fed24e48f495f31a15c83a3a3b281479a3e1dc3f34a",
+          "source_url": "https://huggingface.co/api/datasets/aimo-interp/augmented-sample-math-agg/revision/f972ced0705096f8d7ca7fac30825900b8b7fb6a?blobs=true"
+        },
+        {
+          "bytes": 988,
+          "http_status": 200,
+          "path": "evidence/augmented-sample-math-agg-pinned-README.md",
+          "retrieved_at_utc": "2026-10-19T14:50:42.940841+00:00",
+          "sha256": "095f3ed5c320768403721b60a38000ba80df3f5495a0ae761c0eed1909bf704b",
+          "source_url": "https://huggingface.co/datasets/aimo-interp/augmented-sample-math-agg/resolve/f972ced0705096f8d7ca7fac30825900b8b7fb6a/README.md"
+        }
+      ],
+      "filename": "augmented-sample-math-agg.parquet",
+      "lfs_hash_matches": true,
+      "license_metadata": "unspecified",
+      "local_archive_hash_matches": true,
+      "path": "data/validation-00000-of-00001.parquet",
+      "repo_id": "aimo-interp/augmented-sample-math-agg",
+      "revision": "f972ced0705096f8d7ca7fac30825900b8b7fb6a",
+      "sha256": "b785750259a3f4524cbaf988f51660197cbdfca19d8f45cc35347d4ef29aa4db",
+      "url": "https://huggingface.co/datasets/aimo-interp/augmented-sample-math-agg/resolve/f972ced0705096f8d7ca7fac30825900b8b7fb6a/data/validation-00000-of-00001.parquet"
+    }
+  ],
+  "license_limitation": "train-main-v2 declares license: other; the other three pinned dataset cards have no license field. Public download access does not establish redistribution permission.",
+  "purpose": "Exact organizer source bytes for CPU report reproduction",
+  "release_policy": "Publish this manifest, fetch_data.py and provenance evidence; omit parquet and converted example/reference rows until redistribution permission is established.",
+  "schema_version": 1,
+  "verification": {
+    "existing_archive": "PASS 4/4 exact sha256 and byte sizes",
+    "fresh_download": "PASS 4/4 pinned file downloads verified before installation",
+    "mismatch_stop": "PASS exit 1; mismatched file preserved; no other files created",
+    "offline_verification": "PASS 4/4 with --verify-only",
+    "pinned_public_api": "PASS 4/4 exact revisions and LFS sha256",
+    "receipt": "fetch-verification.json"
+  }
+}

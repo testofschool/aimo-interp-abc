@@ -1,0 +1,692 @@
+% Standalone working draft; official style embedded unchanged for single-file preview.
+\begin{filecontents*}[overwrite]{neurips_2026.sty}
+% partial rewrite of the LaTeX2e package for submissions to the
+% Conference on Neural Information Processing Systems (NeurIPS):
+%
+% - uses more LaTeX conventions
+% - line numbers at submission time replaced with aligned numbers from
+%   lineno package
+% - \nipsfinalcopy replaced with [final] package option
+% - automatically loads times package for authors
+% - loads natbib automatically; this can be suppressed with the
+%   [nonatbib] package option
+% - adds foot line to first page identifying the conference
+% - adds preprint option for submission to e.g. arXiv
+% - conference acronym modified
+% - update foot line to display the track name
+%
+% Roman Garnett (garnett@wustl.edu) and the many authors of
+% nips15submit_e.sty, including MK and drstrip@sandia
+%
+% last revision: January 2026
+
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{neurips_2026}[2026-01-29 NeurIPS 2026 submission/camera-ready style file]
+
+% declare final option, which creates camera-ready copy
+\newif\if@neuripsfinal\@neuripsfinalfalse
+\DeclareOption{final}{
+  \@neuripsfinaltrue
+  \@anonymousfalse
+}
+
+% declare nonatbib option, which does not load natbib in case of
+% package clash (users can pass options to natbib via
+% \PassOptionsToPackage)
+\newif\if@natbib\@natbibtrue
+\DeclareOption{nonatbib}{
+  \@natbibfalse
+}
+
+% declare preprint option, which creates a preprint version ready for
+% upload to, e.g., arXiv
+\newif\if@preprint\@preprintfalse
+\DeclareOption{preprint}{
+  \@preprinttrue
+  \@anonymousfalse
+}
+
+% determine the track of the paper in camera-ready mode
+\newif\if@main\@maintrue
+\DeclareOption{main}{
+  \@maintrue
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear).}
+}
+\newif\if@position\@positionfalse
+\DeclareOption{position}{
+  \@positiontrue
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Position Paper Track.}
+}
+\newif\if@eandd\@eanddfalse
+\DeclareOption{eandd}{
+  \@eanddtrue
+\if@neuripsfinal\@anonymousfalse\else\if@preprint\@anonymousfalse\else\@anonymoustrue\fi\fi
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Track on Evaluations and Datasets.} 
+}
+\newif\if@creativeai\@creativeaifalse
+\DeclareOption{creativeai}{
+  \@creativeaitrue
+  \@anonymousfalse
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Creative AI Track.}
+}
+\newif\if@education\@educationfalse
+\DeclareOption{education}{
+  \@educationtrue
+  \@anonymousfalse
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Education Track.}
+}
+
+% For anonymous or non-anonymous
+\newif\if@anonymous\@anonymoustrue
+
+% For workshop papers
+\newcommand{\@workshoptitle}{}
+\newcommand{\workshoptitle}[1]{\renewcommand{\@workshoptitle}{#1}}
+
+\newif\if@workshop\@workshopfalse
+\DeclareOption{sglblindworkshop}{
+  \@workshoptrue
+  \@anonymousfalse
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Workshop: \@workshoptitle.}
+}
+\DeclareOption{dblblindworkshop}{
+  \@workshoptrue
+  \newcommand{\@trackname}{\@neuripsordinal\ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Workshop: \@workshoptitle.}
+}
+\DeclareOption{nonanonymous}{
+  \@anonymousfalse
+}
+
+\ProcessOptions\relax
+
+% fonts
+\renewcommand{\rmdefault}{ptm}
+\renewcommand{\sfdefault}{phv}
+
+% change this every year for notice string at bottom
+\newcommand{\@neuripsordinal}{40th}
+\newcommand{\@neuripsyear}{2026}
+\newcommand{\@neuripslocation}{Sydney}
+
+% acknowledgments
+\usepackage{environ}
+\newcommand{\acksection}{\section*{Acknowledgments and Disclosure of Funding}}
+\NewEnviron{ack}{%
+  \acksection
+  \BODY
+}
+
+
+% load natbib unless told otherwise
+\if@natbib
+  \RequirePackage{natbib}
+\fi
+
+
+
+
+
+% set page geometry
+\usepackage[verbose=true,letterpaper]{geometry}
+\AtBeginDocument{
+  \newgeometry{
+    textheight=9in,
+    textwidth=5.5in,
+    top=1in,
+    headheight=12pt,
+    headsep=25pt,
+    footskip=30pt
+  }
+  \@ifpackageloaded{fullpage}
+    {\PackageWarning{neurips_2026}{fullpage package not allowed! Overwriting formatting.}}
+    {}
+}
+
+\widowpenalty=10000
+\clubpenalty=10000
+\flushbottom
+\sloppy
+
+
+% font sizes with reduced leading
+\renewcommand{\normalsize}{%
+  \@setfontsize\normalsize\@xpt\@xipt
+  \abovedisplayskip      7\p@ \@plus 2\p@ \@minus 5\p@
+  \abovedisplayshortskip \z@ \@plus 3\p@
+  \belowdisplayskip      \abovedisplayskip
+  \belowdisplayshortskip 4\p@ \@plus 3\p@ \@minus 3\p@
+}
+\normalsize
+\renewcommand{\small}{%
+  \@setfontsize\small\@ixpt\@xpt
+  \abovedisplayskip      6\p@ \@plus 1.5\p@ \@minus 4\p@
+  \abovedisplayshortskip \z@  \@plus 2\p@
+  \belowdisplayskip      \abovedisplayskip
+  \belowdisplayshortskip 3\p@ \@plus 2\p@   \@minus 2\p@
+}
+\renewcommand{\footnotesize}{\@setfontsize\footnotesize\@ixpt\@xpt}
+\renewcommand{\scriptsize}{\@setfontsize\scriptsize\@viipt\@viiipt}
+\renewcommand{\tiny}{\@setfontsize\tiny\@vipt\@viipt}
+\renewcommand{\large}{\@setfontsize\large\@xiipt{14}}
+\renewcommand{\Large}{\@setfontsize\Large\@xivpt{16}}
+\renewcommand{\LARGE}{\@setfontsize\LARGE\@xviipt{20}}
+\renewcommand{\huge}{\@setfontsize\huge\@xxpt{23}}
+\renewcommand{\Huge}{\@setfontsize\Huge\@xxvpt{28}}
+
+
+% Force \tiny to be no smaller than 6pt
+\renewcommand{\tiny}{\fontsize{6pt}{7pt}\selectfont}
+
+% Force \scriptsize to be no smaller than 7pt
+\renewcommand{\scriptsize}{\fontsize{7pt}{8pt}\selectfont}
+
+% Force \footnotesize to be no smaller than 8pt
+\renewcommand{\footnotesize}{\fontsize{8pt}{9.5pt}\selectfont}
+
+% sections with less space
+\providecommand{\section}{}
+\renewcommand{\section}{%
+  \@startsection{section}{1}{\z@}%
+                {-2.0ex \@plus -0.5ex \@minus -0.2ex}%
+                { 1.5ex \@plus  0.3ex \@minus  0.2ex}%
+                {\large\bf\raggedright}%
+}
+\providecommand{\subsection}{}
+\renewcommand{\subsection}{%
+  \@startsection{subsection}{2}{\z@}%
+                {-1.8ex \@plus -0.5ex \@minus -0.2ex}%
+                { 0.8ex \@plus  0.2ex}%
+                {\normalsize\bf\raggedright}%
+}
+\providecommand{\subsubsection}{}
+\renewcommand{\subsubsection}{%
+  \@startsection{subsubsection}{3}{\z@}%
+                {-1.5ex \@plus -0.5ex \@minus -0.2ex}%
+                { 0.5ex \@plus  0.2ex}%
+                {\normalsize\bf\raggedright}%
+}
+\providecommand{\paragraph}{}
+\renewcommand{\paragraph}{%
+  \@startsection{paragraph}{4}{\z@}%
+                {1.5ex \@plus 0.5ex \@minus 0.2ex}%
+                {-1em}%
+                {\normalsize\bf}%
+}
+\providecommand{\subparagraph}{}
+\renewcommand{\subparagraph}{%
+  \@startsection{subparagraph}{5}{\z@}%
+                {1.5ex \@plus 0.5ex \@minus 0.2ex}%
+                {-1em}%
+                {\normalsize\bf}%
+}
+\providecommand{\subsubsubsection}{}
+\renewcommand{\subsubsubsection}{%
+  \vskip5pt{\noindent\normalsize\rm\raggedright}%
+}
+
+% float placement
+\renewcommand{\topfraction      }{0.85}
+\renewcommand{\bottomfraction   }{0.4}
+\renewcommand{\textfraction     }{0.1}
+\renewcommand{\floatpagefraction}{0.7}
+
+\newlength{\@neuripsabovecaptionskip}\setlength{\@neuripsabovecaptionskip}{7\p@}
+\newlength{\@neuripsbelowcaptionskip}\setlength{\@neuripsbelowcaptionskip}{\z@}
+
+\setlength{\abovecaptionskip}{\@neuripsabovecaptionskip}
+\setlength{\belowcaptionskip}{\@neuripsbelowcaptionskip}
+
+% swap above/belowcaptionskip lengths for tables
+\renewenvironment{table}
+  {\setlength{\abovecaptionskip}{\@neuripsbelowcaptionskip}%
+   \setlength{\belowcaptionskip}{\@neuripsabovecaptionskip}%
+   \@float{table}}
+  {\end@float}
+
+% footnote formatting
+\setlength{\footnotesep }{6.65\p@}
+\setlength{\skip\footins}{9\p@ \@plus 4\p@ \@minus 2\p@}
+\renewcommand{\footnoterule}{\kern-3\p@ \hrule width 12pc \kern 2.6\p@}
+\setcounter{footnote}{0}
+
+% paragraph formatting
+\setlength{\parindent}{\z@}
+\setlength{\parskip  }{5.5\p@}
+
+% list formatting
+\setlength{\topsep       }{4\p@ \@plus 1\p@   \@minus 2\p@}
+\setlength{\partopsep    }{1\p@ \@plus 0.5\p@ \@minus 0.5\p@}
+\setlength{\itemsep      }{2\p@ \@plus 1\p@   \@minus 0.5\p@}
+\setlength{\parsep       }{2\p@ \@plus 1\p@   \@minus 0.5\p@}
+\setlength{\leftmargin   }{3pc}
+\setlength{\leftmargini  }{\leftmargin}
+\setlength{\leftmarginii }{2em}
+\setlength{\leftmarginiii}{1.5em}
+\setlength{\leftmarginiv }{1.0em}
+\setlength{\leftmarginv  }{0.5em}
+\def\@listi  {\leftmargin\leftmargini}
+\def\@listii {\leftmargin\leftmarginii
+              \labelwidth\leftmarginii
+              \advance\labelwidth-\labelsep
+              \topsep  2\p@ \@plus 1\p@    \@minus 0.5\p@
+              \parsep  1\p@ \@plus 0.5\p@ \@minus 0.5\p@
+              \itemsep \parsep}
+\def\@listiii{\leftmargin\leftmarginiii
+              \labelwidth\leftmarginiii
+              \advance\labelwidth-\labelsep
+              \topsep    1\p@ \@plus 0.5\p@ \@minus 0.5\p@
+              \parsep    \z@
+              \partopsep 0.5\p@ \@plus 0\p@ \@minus 0.5\p@
+              \itemsep \topsep}
+\def\@listiv {\leftmargin\leftmarginiv
+              \labelwidth\leftmarginiv
+              \advance\labelwidth-\labelsep}
+\def\@listv  {\leftmargin\leftmarginv
+              \labelwidth\leftmarginv
+              \advance\labelwidth-\labelsep}
+\def\@listvi {\leftmargin\leftmarginvi
+              \labelwidth\leftmarginvi
+              \advance\labelwidth-\labelsep}
+
+% create title
+\providecommand{\maketitle}{}
+\renewcommand{\maketitle}{%
+  \par
+  \begingroup
+    \renewcommand{\thefootnote}{\fnsymbol{footnote}}
+    % for perfect author name centering
+    \renewcommand{\@makefnmark}{\hbox to \z@{$^{\@thefnmark}$\hss}}
+    % The footnote-mark was overlapping the footnote-text,
+    % added the following to fix this problem               (MK)
+    \long\def\@makefntext##1{%
+      \parindent 1em\noindent
+      \hbox to 1.8em{\hss $\m@th ^{\@thefnmark}$}##1
+    }
+    \thispagestyle{empty}
+    \@maketitle
+    \@thanks
+    \@notice
+  \endgroup
+  \let\maketitle\relax
+  \let\thanks\relax
+}
+
+% rules for title box at top of first page
+\newcommand{\@toptitlebar}{
+  \hrule height 4\p@
+  \vskip 0.25in
+  \vskip -\parskip%
+}
+\newcommand{\@bottomtitlebar}{
+  \vskip 0.29in
+  \vskip -\parskip
+  \hrule height 1\p@
+  \vskip 0.09in%
+}
+
+% create title (includes both anonymized and non-anonymized versions)
+\providecommand{\@maketitle}{}
+\renewcommand{\@maketitle}{%
+  \vbox{%
+    \hsize\textwidth
+    \linewidth\hsize
+    \vskip 0.1in
+    \@toptitlebar
+    \centering
+    {\LARGE\bf \@title\par}
+    \@bottomtitlebar
+    \if@anonymous
+      \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}
+        Anonymous Author(s) \\
+        Affiliation \\
+        Address \\
+        \texttt{email} \\
+      \end{tabular}%
+    \else
+      \def\And{%
+        \end{tabular}\hfil\linebreak[0]\hfil%
+        \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
+      }
+      \def\AND{%
+        \end{tabular}\hfil\linebreak[4]\hfil%
+        \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\ignorespaces%
+      }
+      \begin{tabular}[t]{c}\bf\rule{\z@}{24\p@}\@author\end{tabular}%
+    \fi
+    \vskip 0.3in \@minus 0.1in
+  }
+}
+
+% add conference notice to bottom of first page
+\newcommand{\ftype@noticebox}{8}
+\newcommand{\@notice}{%
+  % give a bit of extra room back to authors on first page
+  \enlargethispage{2\baselineskip}%
+  \@float{noticebox}[b]%
+    \footnotesize\@noticestring%
+  \end@float%
+}
+
+% abstract styling
+\renewenvironment{abstract}%
+{%
+  \vskip 0.075in%
+  \centerline%
+  {\large\bf Abstract}%
+  \vspace{0.5ex}%
+  \begin{quote}%
+}
+{
+  \par%
+  \end{quote}%
+  \vskip 1ex%
+}
+
+% For the paper checklist
+\newcommand{\answerYes}[1][]{\textcolor{blue}{[Yes]#1}}
+\newcommand{\answerNo}[1][]{\textcolor{orange}{[No]#1}}
+\newcommand{\answerNA}[1][]{\textcolor{gray}{[N/A]#1}}
+\newcommand{\answerTODO}[1][]{\textcolor{red}{\bf [TODO]}}
+\newcommand{\justificationTODO}[1][]{\textcolor{red}{\bf [TODO]}}
+
+% handle tweaks for camera-ready copy vs. submission copy
+\if@preprint
+  \newcommand{\@noticestring}{%
+    Preprint.%
+  }
+\else
+  \if@neuripsfinal
+    \newcommand{\@noticestring}{
+      \@trackname
+    }
+  \else
+    \newcommand{\@noticestring}{%
+      Submitted to \@neuripsordinal\/ Conference on Neural Information Processing Systems (NeurIPS \@neuripsyear). Do not distribute.%
+    }
+
+    % hide the acknowledgements
+    \NewEnviron{hide}{}
+    \let\ack\hide
+    \let\endack\endhide
+
+    % line numbers for submission
+    \RequirePackage{lineno}
+    \linenumbers
+
+    % fix incompatibilities between lineno and amsmath, if required, by
+    % transparently wrapping linenomath environments around amsmath
+    % environments
+    \AtBeginDocument{%
+      \@ifpackageloaded{amsmath}{%
+        \newcommand*\patchAmsMathEnvironmentForLineno[1]{%
+          \expandafter\let\csname old#1\expandafter\endcsname\csname #1\endcsname
+          \expandafter\let\csname oldend#1\expandafter\endcsname\csname end#1\endcsname
+          \renewenvironment{#1}%
+                          {\linenomath\csname old#1\endcsname}%
+                          {\csname oldend#1\endcsname\endlinenomath}%
+        }%
+        \newcommand*\patchBothAmsMathEnvironmentsForLineno[1]{%
+          \patchAmsMathEnvironmentForLineno{#1}%
+          \patchAmsMathEnvironmentForLineno{#1*}%
+        }%
+        \patchBothAmsMathEnvironmentsForLineno{equation}%
+        \patchBothAmsMathEnvironmentsForLineno{align}%
+        \patchBothAmsMathEnvironmentsForLineno{flalign}%
+        \patchBothAmsMathEnvironmentsForLineno{alignat}%
+        \patchBothAmsMathEnvironmentsForLineno{gather}%
+        \patchBothAmsMathEnvironmentsForLineno{multline}%
+      }
+      {}
+    }
+  \fi
+\fi
+
+
+\endinput
+\end{filecontents*}
+\documentclass{article}
+\usepackage[preprint]{neurips_2026}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath,amssymb,booktabs,tabularx,array,textcomp}
+\usepackage[hidelinks]{hyperref}
+\setcitestyle{numbers,square,comma}
+\newcolumntype{Y}{>{\raggedright\arraybackslash}X}
+\hypersetup{pdftitle={Problem-only controls for robustness prediction in AIMO-Interp},pdfauthor={Author confirmation pending},pdfsubject={Technical draft; private evaluation unmeasured; not submitted}}
+\title{Problem-only controls for robustness prediction\\in AIMO-Interp}
+\author{Author and team designation pending owner confirmation\\Technical draft}
+\begin{document}
+\maketitle
+\begin{center}
+\textbf{Working draft. Not submitted.}\\
+\small Public-data CPU audit. Private validation and test: UNMEASURED.\\
+Author review and final portal instructions pending; official NeurIPS preprint style.
+\end{center}
+\begin{abstract}
+
+We audit public labels used to develop robustness predictors for the AIMO Interpretability Challenge. On the competition-checkpoint training data, a descriptive problem-mean decomposition accounts for 0.7822 of observed maximum-drop variance across 76 repeated-configuration rows. Among labelled Small-track problems represented by multiple checkpoints, 11/11 have concordant labels. A problem-only logistic control using log character length and digit count achieves leave-one-problem-out balanced accuracy 0.6855 and plain accuracy 0.7674, with wide problem-clustered intervals. These observations motivate explicit problem-only controls; they establish neither a model-internal signal nor performance on unseen private competition problems. Public sample panels show different associations and weak control transfer. Private-validation and final-test results remain unmeasured. We provide a hash-pinned CPU reproduction package and distinguish observed calculations, contextual baseline reports, and experiments that were not executed.
+
+
+\end{abstract}
+
+\section{Task, data, and scope}
+
+The challenge asks whether a model answers a mathematical problem robustly under meaning-preserving perturbations. Its Small track evaluates Qwen3.5-4B, Skywork-OR1-Math-7B, Olmo-3-7B-Think, and DeepSeek-R1-0528-Qwen3-8B; the Main track adds gpt-oss-120b with several reasoning efforts. Competition ranking uses plain accuracy on held-out problem-model instances. We also report balanced accuracy because prevalence differs across public panels. \citep{S1,S2}
+
+
+The pinned \texttt{train-main-v2} table has 94 rows over 36 problems, including 80 labelled rows over 33 problems and 14 unlabelled rows. Our public Small evaluation cohort is 43 labelled rows over 22 problems, with 31 robust and 12 non-robust labels. This is public training data, not the private scoring set. The dataset card states the labelled-row rule verbatim:
+
+
+\texttt{is\_\allowbreak robust = true} iff \texttt{max\_\allowbreak drop <= 0.10}
+
+
+\texttt{is\_\allowbreak robust = false} iff \texttt{max\_\allowbreak drop >= 0.25}
+
+
+The intervening band carries null labels. This public rule does not disclose the private-label procedure: the current website says the exact evaluation criterion is unpublished. Public samples contain additional configurations and closed API models. The starter README says low-suffixed sample names and closed API models are never passed during the Competition phase; sample findings below are development caveats. \citep{S1,S2,S3}
+
+
+\section{Problem identity and observed label agreement}
+
+Our descriptive R-squared is one minus within-problem squared error divided by total squared error, using the same rows to estimate each problem mean and its residuals. This is an in-sample decomposition, not cross-validated prediction. Unlabelled rows are included because their continuous drops are observed. The registered repeated-configuration cohort has 76 rows over 18 problems; 3 of these problems have only gpt-oss effort variants. Calling all of them multi-model would be inaccurate.
+
+
+\begin{table}[htbp]
+
+\caption{Observed drop variance grouped by problem; an in-sample description.}
+
+\label{tab:1}
+
+\small
+
+\begin{tabularx}{\linewidth}{@{}YYYY@{}}
+
+\toprule
+
+\textbf{Observed panel} & \textbf{Rows or pairs} & \textbf{Problems} & \textbf{Descriptive R-squared} \\
+
+\midrule
+
+Train, repeated configurations & 76 & 18 & 0.7822 \\
+
+Train, multi-checkpoint problems & 70 & 15 & 0.7369 \\
+
+Small only, distinct checkpoints & 39 & 14 & 0.7811 \\
+
+Public sample-full configurations & 80 & 10 & 0.1813 \\
+
+\bottomrule
+
+\end{tabularx}
+
+\end{table}
+
+The multi-checkpoint training sensitivity retains effort configurations as separate rows. Sample-full has 8 model/configuration identifiers; we take the maximum recorded family drop per identifier-problem pair. Some underlying checkpoints overlap with competition checkpoints, while aliases, decoding configurations, problem panels, and perturbation coverage differ. This contrast limits a universal problem-property interpretation but is not a controlled generalization test.
+
+
+\begin{table}[htbp]
+
+\caption{Observed label agreement; Bernoulli reference is not a significance test.}
+
+\label{tab:2}
+
+\small
+
+\begin{tabularx}{\linewidth}{@{}YYY@{}}
+
+\toprule
+
+\textbf{Label agreement analysis} & \textbf{Concordant / repeated groups} & \textbf{Bernoulli reference} \\
+
+\midrule
+
+Train, original labelled configurations & 15 / 16 & 5.94 \\
+
+Train, labelled Small checkpoints & 11 / 11 & 4.89 \\
+
+Train, no-gap sensitivity, worst effort & 10 / 15 & 3.59 \\
+
+Sample-full, proxy labels & 1 / 10 & 0.25 \\
+
+\bottomrule
+
+\end{tabularx}
+
+\end{table}
+
+A group is concordant when all included binary labels agree. The reference sums the probability of all-positive or all-negative labels at each observed group size, assuming independent Bernoulli draws at pooled panel prevalence. It is not a p-value. The no-gap sensitivity labels every training row robust iff its drop is at most 0.10, then collapses gpt-oss efforts by minimum label. Any non-robust effort makes that checkpoint non-robust. Both cohort and collapse rule change; this is not identical agreement under the original labels. Sample-full proxy labels use the public threshold band and are not private competition labels.
+
+
+Raw \texttt{val-sample} agreement is 1/6; removing duplicate model-problem pairs changes it to 0/5. Duplicate configurations can change the apparent number of repeated groups.
+
+
+\section{A problem-only control and its uncertainty}
+
+Features are log-one-plus character length and digit count of the original problem. Class-balanced logistic regression with default regularization and a fixed convergence limit is fitted using the 80 labelled Main-table rows. Each leave-one-problem-out fold excludes every row with the held-out problem string, including gpt-oss efforts. We score only the 43 labelled Small rows: pooled-checkpoint training, Small-only evaluation. The threshold is 0.5. There is no hyperparameter search or model-internal input.
+
+
+\begin{table}[htbp]
+
+\caption{Problem-grouped public Small evaluation; no private competition scores.}
+
+\label{tab:3}
+
+\small
+
+\begin{tabularx}{\linewidth}{@{}YYYY@{}}
+
+\toprule
+
+\textbf{Public Small OOF predictor} & \textbf{Plain accuracy} & \textbf{Balanced accuracy} & \textbf{Correct rows} \\
+
+\midrule
+
+Length and digit count & 0.7674 & 0.6855 & 33 / 43 \\
+
+Always robust & 0.7209 & 0.5 & 31 / 43 \\
+
+\bottomrule
+
+\end{tabularx}
+
+\end{table}
+
+The control correctly classifies 27 robust and 6 non-robust rows; its plain-accuracy improvement is small in case count. We hold OOF predictions fixed, sort the 22 problem strings, and draw that many clusters with replacement using NumPy \texttt{default\_\allowbreak rng}, seed 0, for 4000 replicates. All rows of each selected problem travel together. We discard one-class draws; 4000 remain. Endpoints use linear-interpolated percentiles.
+
+
+The 95\% interval is [0.4759, 0.9378] for balanced accuracy and [0.5556, 0.9556] for plain accuracy. The paired balanced-accuracy difference from always robust is 0.1855, with interval [-0.0241, 0.4378], including zero. These intervals omit variability from retraining and method selection. They are not a formal power analysis. The inherited power note lacked executable bootstrap code; this explicit reconstruction supersedes its interval for this draft.
+
+
+For context, the organizer proposal reports prefill-probe plain accuracy 58.37 percent and generation-uncertainty plain accuracy 69.23 percent under a different sample protocol. The starter uncertainty artifact separately reports balanced accuracy 0.6262 and plain accuracy 0.6879. These are not matched Small-cohort comparisons; our results do not establish that the text control matches or beats a probe. \citep{S4,S5}
+
+
+\section{Transfer and the missing private evaluation}
+
+Fitting the control on all labelled training rows and applying it unchanged to public samples gives the following results. Samples contain different models and label conventions. Problem content can overlap across panels, so this is not a verified disjoint-problem evaluation.
+
+
+\begin{table}[htbp]
+
+\caption{Public sample transfer with different models and label conventions.}
+
+\label{tab:4}
+
+\small
+
+\begin{tabularx}{\linewidth}{@{}YYYY@{}}
+
+\toprule
+
+\textbf{Public destination} & \textbf{Rows} & \textbf{Plain accuracy} & \textbf{Balanced accuracy} \\
+
+\midrule
+
+Augmented aggregate sample & 141 & 0.2695 & 0.4913 \\
+
+Val sample, original rows & 28 & 0.5357 & 0.5409 \\
+
+\bottomrule
+
+\end{tabularx}
+
+\end{table}
+
+Private-validation results for the frozen Small control and always-robust Small bundle are UNMEASURED. No owner screenshot, timestamp, or bundle-to-submission linkage is available for these two methods. An account name or unrelated leaderboard score cannot identify a bundle. Final-test performance is also UNMEASURED. We make no claim that the control survives unseen competition problems. This limits the technical draft: organizer guidance requests public-train and private Codabench evaluation while saying a Codabench entry is not required for writeup-prize eligibility. \citep{S6}
+
+
+\section{Unscored sample-panel caveats}
+
+The 141-row aggregate sample has 36 robust list-formatted rows and 105 non-robust string-formatted rows, with no opposite-label cases. A flag for whether \texttt{permutation\_\allowbreak type} starts with an opening bracket achieves balanced and plain accuracy 1.0; majority-label plain accuracy is 0.7447. This is perfect observed association, not evidence of a causal construction mechanism. That field is not the original problem-only input available to a deployed control.
+
+
+On these rows, five-fold \texttt{StratifiedGroupKFold} grouped by problem ID gives the text control mean balanced accuracy 0.6754 and mean plain accuracy 0.6865 across ten seeds; balanced accuracy ranges from 0.6159 to 0.6996. Dataset and splitter family match the organizer artifact; actual folds and full pipeline are not claimed identical. Format and majority rules show why this comparison cannot alone establish interpretability. These sample configurations are not scored competition inputs. \citep{S3,S5}
+
+
+\section{External attempts and overlapping public work}
+
+Inherited screening considered external mathematical difficulty, self-generated perturbation labels, and public generation dumps. These were planning decisions, not completed target-checkpoint experiments in this run. The packet lacks executable Omni-MATH predictions and a fully specified Monte Carlo label-noise simulation; we omit their quantitative claims. A difficulty proxy need not predict perturbation sensitivity, and synthetic-label agreement cannot be assumed from sample count alone.
+
+
+One diagnostic is reproducible: on 24 deduplicated val-sample pairs, observed unperturbed accuracy has AUROC 0.7333 for the robust label; 8 of 15 non-robust pairs have perfect observed base accuracy. This uses organizer outcome metadata, not deployable problem-only features, on public sample configurations. No external source was validated here as replacement target-label data. No new white-box experiment or ablation was run; that absence is not evidence that white-box signals have no effect.
+
+
+Public participants already discuss these risks. Byeolki reports within-problem label agreement and difficulty shortcuts on an earlier cohort. Coderdailyone reports strong text cross-validation followed by weaker public leaderboard performance. Renx reports poor probe behavior under distribution shift relative to a constant rule. We cite these overlaps without a comprehensive novelty claim. Our contribution is an explicit reproduction and sensitivity ledger for the pinned public files. \citep{S7,S8,S9}
+
+
+\section{Reproduction, assistance, and completion checklist}
+
+Every decimal and percentage comes from a checked numeric key or sourced literal. The CPU script checks all parquet hashes before computation. The renderer verifies keys against the claims registry; standalone NeurIPS source is generated from the rendered Markdown. The release includes dataset IDs, immutable revisions, paths, hashes, and a fetcher rather than redistributing parquet with unresolved custom-license terms. A local clean clone can reproduce CPU checks after hash-verified downloads. Public-remote verification is a separate release step and remains unevidenced here.
+
+
+AI assistance disclosure: Claude prepared inherited research summaries, sweep decisions, and the initial outline. OpenAI Codex expanded the draft, wrote and ran CPU reproduction code, checked public sources, and used independent AI agents to audit claims and prepare release support. No language model generated additional robustness labels for this report. Human author review remains pending; AI summaries are not experimental evidence.
+
+
+Completion checklist: PDF page count, source hashes, numeric checks, and render review accompany the release artifacts. Owner actions remain: confirm author details; obtain linked Codabench rows or retain the limitation; verify the final OpenReview venue and submit by November 15, 2026; retain the receipt; and commit to reviewing up to three reports during November 15-30, 2026. Website rules govern dates and reviewing; the organizer issue gives provisional NeurIPS-format and OpenReview guidance. This draft is not a submission receipt. \citep{S1,S6}
+
+
+\clearpage
+
+\begin{thebibliography}{15}
+
+\small\raggedright
+
+\bibitem{S1} AIMO organizers. Official competition website, rules and FAQ. \href{https://aimo-interp.github.io/}{Current reference}.
+
+\bibitem{S2} AIMO organizers. \texttt{train-main-v2} card, revision fa8af758c6519fc97a9d0bd9017feb6f12232b52. \href{https://huggingface.co/datasets/aimo-interp/train-main-v2/blob/fa8af758c6519fc97a9d0bd9017feb6f12232b52/README.md}{Public label rules}.
+
+\bibitem{S3} AIMO organizers. Starter README, commit de794053debe75a711400696e66b60937cebbb1b. \href{https://github.com/aimo-interp/getting-started/blob/de794053debe75a711400696e66b60937cebbb1b/README.md}{Interface and sample scope}.
+
+\bibitem{S4} AIMO organizers. Competition proposal, section 1.6. \href{https://arxiv.org/abs/2607.13899}{arXiv:2607.13899}.
+
+\bibitem{S5} AIMO organizers. Uncertainty baseline, commit de794053debe75a711400696e66b60937cebbb1b. \href{https://github.com/aimo-interp/getting-started/blob/de794053debe75a711400696e66b60937cebbb1b/solutions/uncertainty-profiling/README.md}{Artifact evaluation}.
+
+\bibitem{S6} Michal Spiegel. Organizer response, issue 10. \href{https://github.com/aimo-interp/getting-started/issues/10\#issuecomment-5765789797}{Scope, format, AI assistance and submission}.
+
+\bibitem{S7} Byeolki. AIMO report and results, commit 3b678f62432dda6e2c3124b670fc4bcaed9453ab. \href{https://github.com/byeolki/aimo-interp/tree/3b678f62432dda6e2c3124b670fc4bcaed9453ab}{Prior label agreement}.
+
+\bibitem{S8} Coderdailyone. AIMO Interp Challenge, commit 48643c30e7a01cabd63f337711e79d962c7f8826. \href{https://github.com/coderdailyone/aimo-interp-challenge/tree/48643c30e7a01cabd63f337711e79d962c7f8826}{Text control and public score}.
+
+\bibitem{S9} Renxuhangrt. Probe Stress Tests, commit e527debcfc1b4b92c3e25b529bf196a17a84b417. \href{https://github.com/renxuhangrt-dotcom/aimo-interp-probe-stress-tests/tree/e527debcfc1b4b92c3e25b529bf196a17a84b417}{Distribution-shift study}.
+
+\end{thebibliography}
+\end{document}

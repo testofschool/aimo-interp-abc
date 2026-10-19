@@ -1,0 +1,8 @@
+# Control refit + OOF evaluator. GPU extraction uses the competition image.
+numpy==2.5.4
+scipy==1.18.1
+pandas==2.3.3
+pyarrow==23.0.1
+scikit-learn==1.8.0
+joblib==1.5.3
+huggingface-hub==1.5.0

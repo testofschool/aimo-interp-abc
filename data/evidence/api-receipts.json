@@ -1,0 +1,130 @@
+[
+  {
+    "api_url": "https://huggingface.co/api/datasets/aimo-interp/train-main-v2/revision/fa8af758c6519fc97a9d0bd9017feb6f12232b52?blobs=true",
+    "dataset": "aimo-interp/train-main-v2",
+    "files": [
+      {
+        "blobId": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+        "rfilename": ".gitattributes",
+        "size": 2504
+      },
+      {
+        "blobId": "01d82aaa4a84b38d901b8a8e4e944b76f9bffb5f",
+        "rfilename": "README.md",
+        "size": 2446
+      },
+      {
+        "blobId": "8cbd03e491a85ed8fccd71ae8a97bef2e0374735",
+        "lfs": {
+          "pointerSize": 130,
+          "sha256": "e18eb44207e7987781ec2ff214793196038442bdc1466fdf5498f3e87ec58285",
+          "size": 11372
+        },
+        "rfilename": "data/train-00000-of-00001.parquet",
+        "size": 11372
+      }
+    ],
+    "license": "other",
+    "retrieved_at_utc": "2026-10-19T14:49:09.299240+00:00",
+    "revision": "fa8af758c6519fc97a9d0bd9017feb6f12232b52",
+    "snapshot": "evidence/train-main-v2-api.json",
+    "snapshot_sha256": "a1da6f844aabe7ea0ab49d45ce849f02c8bdf3f94629b5260f5ba05859c1d45a",
+    "status": 200
+  },
+  {
+    "api_url": "https://huggingface.co/api/datasets/aimo-interp/val-sample/revision/1ae454ec1fad9727084eda8f9f3c9ae2239b21de?blobs=true",
+    "dataset": "aimo-interp/val-sample",
+    "files": [
+      {
+        "blobId": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+        "rfilename": ".gitattributes",
+        "size": 2504
+      },
+      {
+        "blobId": "e9d4b9599cf1dcd74c1261f74b57090c5d25e27b",
+        "rfilename": "README.md",
+        "size": 985
+      },
+      {
+        "blobId": "b2b9909ae17b663d256c7a54bb942f9e37653ad3",
+        "lfs": {
+          "pointerSize": 130,
+          "sha256": "3919cb3d951bb360a120be3397e926f48b7819bcd97e12cfee4c01e76618560f",
+          "size": 23788
+        },
+        "rfilename": "data/validation-00000-of-00001.parquet",
+        "size": 23788
+      }
+    ],
+    "license": null,
+    "retrieved_at_utc": "2026-10-19T14:49:09.523165+00:00",
+    "revision": "1ae454ec1fad9727084eda8f9f3c9ae2239b21de",
+    "snapshot": "evidence/val-sample-api.json",
+    "snapshot_sha256": "6ead5eb834407a4baa90e4b3bfe57374465f3df959b2d5e48b67c0c93b3d01b9",
+    "status": 200
+  },
+  {
+    "api_url": "https://huggingface.co/api/datasets/aimo-interp/aimo-interp-challenge-sample-full/revision/c0ffb7e678294cc8819d50d979ba28ba49bd02d0?blobs=true",
+    "dataset": "aimo-interp/aimo-interp-challenge-sample-full",
+    "files": [
+      {
+        "blobId": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+        "rfilename": ".gitattributes",
+        "size": 2504
+      },
+      {
+        "blobId": "c8fdbdb5a6bfcfa95e57057897a6cad8a3111c74",
+        "rfilename": "README.md",
+        "size": 946
+      },
+      {
+        "blobId": "3ccbc0bdd1ce0ae963435c97ee6fb4486276de74",
+        "lfs": {
+          "pointerSize": 130,
+          "sha256": "2989ab6a018f2779a821209f414bd0049c9ef1c2488f589ff2d3bf4ed16942ff",
+          "size": 94757
+        },
+        "rfilename": "data/validation-00000-of-00001.parquet",
+        "size": 94757
+      }
+    ],
+    "license": null,
+    "retrieved_at_utc": "2026-10-19T14:49:09.847999+00:00",
+    "revision": "c0ffb7e678294cc8819d50d979ba28ba49bd02d0",
+    "snapshot": "evidence/sample-full-api.json",
+    "snapshot_sha256": "a6a36f944a72bbcb8a707bdecdd70dd474c7b7aad28e90dad37a55e6157b2504",
+    "status": 200
+  },
+  {
+    "api_url": "https://huggingface.co/api/datasets/aimo-interp/augmented-sample-math-agg?blobs=true",
+    "dataset": "aimo-interp/augmented-sample-math-agg",
+    "files": [
+      {
+        "blobId": "bed0738c7eeb449bca98b5d2f33c89a1ee56349a",
+        "rfilename": ".gitattributes",
+        "size": 2504
+      },
+      {
+        "blobId": "172af672f6628b5e2a6298b0794990aa8fe07ff3",
+        "rfilename": "README.md",
+        "size": 988
+      },
+      {
+        "blobId": "268f48858168e5f53c09e5a072877281e95399c0",
+        "lfs": {
+          "pointerSize": 130,
+          "sha256": "b785750259a3f4524cbaf988f51660197cbdfca19d8f45cc35347d4ef29aa4db",
+          "size": 50071
+        },
+        "rfilename": "data/validation-00000-of-00001.parquet",
+        "size": 50071
+      }
+    ],
+    "license": null,
+    "retrieved_at_utc": "2026-10-19T14:49:10.085180+00:00",
+    "revision": "f972ced0705096f8d7ca7fac30825900b8b7fb6a",
+    "snapshot": "evidence/augmented-sample-math-agg-api.json",
+    "snapshot_sha256": "595558034436dfe99ed14fed24e48f495f31a15c83a3a3b281479a3e1dc3f34a",
+    "status": 200
+  }
+]

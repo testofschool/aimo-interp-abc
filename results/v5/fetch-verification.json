@@ -1,0 +1,50 @@
+{
+  "runs": [
+    {
+      "command": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/aimo-abc/.venv/bin/python",
+        "-I",
+        "-B",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/release-support/fetch_data.py",
+        "--output-dir",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/release-support/download-verification"
+      ],
+      "exit": 0,
+      "name": "fresh-download",
+      "stderr": "",
+      "stdout": "{\n  \"downloaded\": 4,\n  \"files\": 4,\n  \"sha256\": {\n    \"augmented-sample-math-agg.parquet\": \"b785750259a3f4524cbaf988f51660197cbdfca19d8f45cc35347d4ef29aa4db\",\n    \"sample-full.parquet\": \"2989ab6a018f2779a821209f414bd0049c9ef1c2488f589ff2d3bf4ed16942ff\",\n    \"train-main-v2.parquet\": \"e18eb44207e7987781ec2ff214793196038442bdc1466fdf5498f3e87ec58285\",\n    \"val-sample.parquet\": \"3919cb3d951bb360a120be3397e926f48b7819bcd97e12cfee4c01e76618560f\"\n  },\n  \"status\": \"PASS\"\n}\n"
+    },
+    {
+      "command": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/aimo-abc/.venv/bin/python",
+        "-I",
+        "-B",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/release-support/fetch_data.py",
+        "--output-dir",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/release-support/download-verification",
+        "--verify-only"
+      ],
+      "exit": 0,
+      "name": "offline-verification",
+      "stderr": "",
+      "stdout": "{\n  \"downloaded\": 0,\n  \"files\": 4,\n  \"sha256\": {\n    \"augmented-sample-math-agg.parquet\": \"b785750259a3f4524cbaf988f51660197cbdfca19d8f45cc35347d4ef29aa4db\",\n    \"sample-full.parquet\": \"2989ab6a018f2779a821209f414bd0049c9ef1c2488f589ff2d3bf4ed16942ff\",\n    \"train-main-v2.parquet\": \"e18eb44207e7987781ec2ff214793196038442bdc1466fdf5498f3e87ec58285\",\n    \"val-sample.parquet\": \"3919cb3d951bb360a120be3397e926f48b7819bcd97e12cfee4c01e76618560f\"\n  },\n  \"status\": \"PASS\"\n}\n"
+    },
+    {
+      "command": [
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/aimo-abc/.venv/bin/python",
+        "-I",
+        "-B",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/release-support/fetch_data.py",
+        "--output-dir",
+        "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/release-support/mismatch-verification"
+      ],
+      "exit": 1,
+      "mismatched_file_preserved": true,
+      "name": "existing-file mismatch stop",
+      "other_files_not_created": true,
+      "stderr": "STOP: size/hash mismatch: train-main-v2.parquet; existing file preserved\n",
+      "stdout": ""
+    }
+  ],
+  "status": "PASS"
+}

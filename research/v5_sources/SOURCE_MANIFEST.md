@@ -1,0 +1,47 @@
+# Raw public source integrity
+
+| File | HTTP | Bytes | SHA256 |
+|---|---:|---:|---|
+| `website.html` | 200 | 92354 | `46f0c2a32c47f41ab09e54ab9bd0b23b41069890db8c6aad87a3736873a00fba` |
+| `getting_started_README_de794053.md` | 200 | 17979 | `e823924799ca1d67094c217555f65f4ff05c4b71ccbe03cf11f1392f83c4e4f5` |
+| `getting_started_README_main.md` | 200 | 17979 | `e823924799ca1d67094c217555f65f4ff05c4b71ccbe03cf11f1392f83c4e4f5` |
+| `getting_started_main_commit.json` | 200 | 33931 | `7613854791ddab1a074f5e0210a6e65c8466fead02247fa21c029f38c5d53c97` |
+| `github_issue_10.json` | 200 | 4588 | `488eec955da27d714469f7190848b7dfaeeea9e744751605e86f898e3a65c4ae` |
+| `github_issue_10_comments.json` | 200 | 19846 | `f23e0c2edda6d19e6a7acbd8504462890c997808102033463f814896576c9243` |
+| `github_issue_6_comments.json` | 200 | 33567 | `a90486ff1edca86d938eccc27d05d7b91a8c6c2f70d78150673e6f00fdc0643f` |
+| `github_issue_11_comments.json` | 200 | 2207 | `24eb9727af92792f7cbfd5c61de33fbe489d9fc8e49df3c2e6d293b668285458` |
+| `hf_train_main_v2_README_pinned.md` | 200 | 2446 | `6286baddd7b622adb3e1e20d86049ae46aa755af9f92d95b1becfdeb76b97eda` |
+| `hf_train_main_v2_README_main.md` | 200 | 2446 | `6286baddd7b622adb3e1e20d86049ae46aa755af9f92d95b1becfdeb76b97eda` |
+| `uncertainty_profiling_README_pinned.md` | 200 | 5824 | `4ccb9eaebc77c1b2a1e09353d4dfe4640882b3f2581d269a7f675f57be6a344c` |
+| `uncertainty_profiling_README_main.md` | 200 | 5824 | `4ccb9eaebc77c1b2a1e09353d4dfe4640882b3f2581d269a7f675f57be6a344c` |
+| `arxiv_2607.13899.html` | 200 | 231522 | `fdc1ebb883a81c9748897ec98fc0006a6ff2c48215034b55a625b00f6a6f46e1` |
+| `arxiv_2607.13899_abs.html` | 200 | 43461 | `f51e5f908935ccef40a4109008be9c39837b9da3101d10831d7f0be35dd9ff08` |
+| `arxiv_2607.13899.pdf` | 200 | 321306 | `7f79aded0f928080335d83edbe99ee9e3f664dbddd4d1a8c0978f8e59c08c9f7` |
+| `byeolki_repos.json` | 200 | 76341 | `18a0160df01103c19d4be40e13c572590acb3f56f1dc7c6f4c15929954cae66c` |
+| `coderdailyone_repos.json` | 200 | 145990 | `5593a938dba89c36ad3c09e7e7cff00d00d63126e9709fd01c04c2e962c5a815` |
+| `renx_repos.json` | 200 | 5 | `2ba33ca0557f1bb5b7ba88d67f9d0093c7185a36ec51fe2b7bd9372d3e001d6d` |
+| `github_search_aimo_interp.json` | 200 | 47485 | `c8a48c716e2747e122aac12e13d25d204a16ed486a0d54cfd3ce5075358f8853` |
+| `byeolki_README_main.md` | 200 | 3522 | `0482b9ec0d8d32e3d130d8a532c3bd734d5466c0575b397336aaa3bb163c886e` |
+| `byeolki_main_commit.json` | 200 | 7605 | `a26a629d76f62b17579d817a8f35341b50d8430c7c81a3599b4fc187f5854ff4` |
+| `byeolki_tree_main.json` | 200 | 43153 | `0be133061ddabc903c64a7cd67bace6157c0ffcf36aae4d72cfeb04cbbb1db53` |
+| `coderdailyone_README_main.md` | 200 | 3686 | `648fa10751f797846915b44268cae8af139a5982cd98b24f3439d4f439ae5372` |
+| `coderdailyone_main_commit.json` | 200 | 113212 | `99a5795fdf2e2f423b63ba7ecbc104b96248c9503fc41170d28fb4337f14eaaa` |
+| `coderdailyone_tree_main.json` | 200 | 9934 | `1f7697fecbf052183fa60431c64e980e5aea5b1cfe29219a44710a88a66839d5` |
+| `renx_README_main.md` | 200 | 3294 | `e9d825e38850c33874494d4e42c282412fed5b16855150a89d46b6cfc1c44054` |
+| `renx_main_commit.json` | 200 | 526628 | `e886a2bf5d999b1d61ee85a6635af6f5aa7c2d1a5b0f726dca7b41dc843ea8a8` |
+| `renx_tree_main.json` | 200 | 46119 | `1c6e9461111d27886f1927d62b0acbe4cbc19e73fe8defdb9c7d85e802f9e6a4` |
+| `byeolki_pinned_README.md` | 200 | 3522 | `0482b9ec0d8d32e3d130d8a532c3bd734d5466c0575b397336aaa3bb163c886e` |
+| `byeolki_pinned_experiments__01-layer-probe__RESULTS.md` | 200 | 3657 | `de1a0943a0ae92f0e16590e14d0d8f4f0eb7621cd73a4a10b14f9a4ab60e7673` |
+| `byeolki_pinned_experiments__02-self-labels__RESULTS.md` | 200 | 4525 | `cc9affe6b02ea5604717dead9ccc52a21d5c93c18b9e300aca00fdb18324982c` |
+| `byeolki_pinned_experiments__03-counterfactual__RESULTS.md` | 200 | 2281 | `eb5b53f895f75a943320a26cd3752580d057277fd20573457ec55cfe5d9ebbc9` |
+| `byeolki_pinned_report__report.html` | 200 | 15680 | `763ef1c27fba6718126e8e5b0716cbfdc736eb104bf3d90c18fa8f949bbf54dd` |
+| `byeolki_pinned_docs__submissions.md` | 200 | 1945 | `a438892ace70e5fea0e3361417b5558f3b95fec18145d7a0b1b1779a4fa54dc9` |
+| `coderdailyone_pinned_README.md` | 200 | 3686 | `648fa10751f797846915b44268cae8af139a5982cd98b24f3439d4f439ae5372` |
+| `coderdailyone_pinned_PLAN.md` | 200 | 10033 | `0ee2404a1c2bfc8bd1cb19d02e6dc4e09060148b2f4f095f9b4446db8642509f` |
+| `coderdailyone_pinned_work__train_cv.py` | 200 | 6797 | `dd3d1b87f3b671489221bbfab445a4dbe416d96e8e4782deeedee4f1fd68a525` |
+| `renx_pinned_README.md` | 200 | 3294 | `e9d825e38850c33874494d4e42c282412fed5b16855150a89d46b6cfc1c44054` |
+| `renx_pinned_outputs__technical_report__TECHNICAL_REPORT_DRAFT.md` | 200 | 15877 | `813bedf14135fc6e30f8c04e16f4c411704e9e0e80afcf52b3a21549fda4cb0d` |
+| `renx_pinned_outputs__aimo_v6_gpu_ready__validation_e10_ood_small__validation_result.json` | 200 | 5426 | `7f06f7b235f6c992eb5d1967567a34d5b4035a3f1adf1aae01688b07df939c99` |
+| `renx_pinned_outputs__aimo_v6_gpu_ready__validation_e10_ood_small__VALIDATION_REPORT.md` | 200 | 656 | `d544be11b65d4b621657e5b520748fe5d65c82079d7fda04d6306ab9ba5c8882` |
+| `renx_pinned_outputs__aimo_v6_gpu_ready__E10_PREREGISTRATION.md` | 200 | 3030 | `d4da08bacb7379d3aa5669061b4d9fcea8881d23f5ab927c492665726f9c8bed` |
+| `codabench_competition_16180.json` | 200 | 10002 | `9dcd7be4e95fa51d18fb8985339bf3c520fab6ce4f2026d9dc514658ca49201f` |

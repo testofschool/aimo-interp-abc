@@ -1,0 +1,17 @@
+{
+ "problem": "AIMO-Interp A/B/C handoff v1 would have shipped whichever experiment scored highest on train, with no control; the pre-handoff sweep ended NO_PROPOSAL_BEATS_BASELINE (2026-10-19).",
+ "evidence": [
+  {"kind": "failed", "claim": "v1 selection rule had no control bar", "source": "handoff v1 HANDOFF.md acceptance criterion 2 (zip sha256 1e1ee78a)", "quote": "the pick for B is the highest balanced accuracy"},
+  {"kind": "failed", "claim": "E1 as specified duplicated the organizer baseline", "source": "github.com/aimo-interp/getting-started solutions/trained-probe", "quote": "take the final prompt-token hidden state from best_layer_index"},
+  {"kind": "worked", "claim": "the official local scorer accepted the control bundle", "source": "getting-started@de794053 scripts/run_local.py, this session 2026-10-19 13:51 KST", "quote": "\"coverage\": 1.0, \"invalid_predictions\": 0"},
+  {"kind": "worked", "claim": "sweep.py refused an invalid ledger until fixed", "source": "direction-sweep/scripts/sweep.py check, this session", "quote": "R7: C3.substitute: a surviving proposal needs this slot attempted"}
+ ],
+ "candidates": [
+  {"id": "C1", "provenance": "upstream:hackathon-room-protocol (organizer baseline)"},
+  {"id": "C2", "provenance": "upstream:hackathon-room-protocol (organizer baseline)"},
+  {"id": "C3", "provenance": "designer", "excluded_from_pick": true}
+ ],
+ "device": {"type": "script", "path": "aimo-abc/tools/submit_gate.py", "blocks": "packaging/submitting any experiment whose leave-problem-out balanced accuracy is below best control + 0.07"},
+ "replay": {"input": "same 43 Small rows; v1 rule vs v2 gate on a random-score candidate and the TF-IDF candidate", "metric": "noise-level candidates (bacc below the text-length control) that would ship", "before": 1, "after": 0, "higher_is_better": false},
+ "deploy": {"delivered": true, "installed": "unverified", "readback": "handoff zip delivered to Felix; Codex has not run it; Codabench upload of the control bundle not yet done"}
+}

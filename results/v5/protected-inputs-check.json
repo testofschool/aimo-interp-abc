@@ -1,0 +1,41 @@
+{
+  "checks": [
+    {
+      "matches_pinned_build_input": true,
+      "path": "aimo-abc/upstream/getting-started/scripts/build.py",
+      "sha256": "42185f2ecc040ac9ab3496a7203fe44b38dd7a59669535a67d42156863c94d77"
+    },
+    {
+      "matches_pinned_build_input": true,
+      "path": "aimo-abc/upstream/getting-started/scripts/run_local.py",
+      "sha256": "f189e9a6a0d51f42e08ea30a46c35df8338bfb035f826567fba61f124105036f"
+    },
+    {
+      "matches_pinned_build_input": true,
+      "path": "aimo-abc/upstream/getting-started/scripts/import_hf_dataset.py",
+      "sha256": "4910f47a3ca35b7f3abb3e34e2420739bdebb1ce02c1df04bcaa8edf34c34f30"
+    },
+    {
+      "matches_pinned_build_input": true,
+      "path": "aimo-abc/upstream/getting-started/solutions/always-true/solution.py",
+      "sha256": "a3ae331303a39c13915140d5621d3347fbe1f9c0f35bf53942fb1f32ada8012f"
+    },
+    {
+      "matches_pinned_build_input": true,
+      "path": "aimo-abc/upstream/getting-started/components/ingestion_program/ingestion.py",
+      "sha256": "47ce02f9eed36ee2f4f9ab28d07401b4b079dba3b4ed5b42d32dcd1de83cfbfd"
+    },
+    {
+      "matches_pinned_build_input": true,
+      "path": "aimo-abc/upstream/getting-started/components/scoring_program/scoring.py",
+      "sha256": "df10d76c79129220aba37f0a23300df8d220c46af5dabec4dd20ad09fdda6191"
+    },
+    {
+      "path": "aimo-abc/bundles/solution-text-length-control-small.zip",
+      "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "unchanged": true
+    }
+  ],
+  "status": "PASS",
+  "upstream_worktree_clean_after": true
+}

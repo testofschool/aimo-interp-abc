@@ -1,0 +1,10 @@
+{"problem":"Round 4 (2026-10-20 00:xx KST): all four report framings died; the remaining risk is a hand-typed or cross-row number entering the report draft.",
+ "evidence":[
+  {"kind":"failed","claim":"a cross-row comparison was stated as a finding","source":"this session, 2026-10-19 13:4x KST reply","quote":"주최 측 불확실성 베이스라인이 0.626이니 그보다 높습니다"},
+  {"kind":"failed","claim":"a dotted key silently mismatched","source":"report_numbers.py --check, 2026-10-20","quote":"\"regenerated\": null"},
+  {"kind":"worked","claim":"the claims gate caught the dotted-key defect","source":"report_numbers.py --check","quote":"\"result\": \"FAIL\", \"checked\": 13"},
+  {"kind":"worked","claim":"reopen gate stayed CLOSED on the S=16 design","source":"reopen_gate.py replay","quote":"\"min_samples_ge_48\": false"}],
+ "candidates":[{"id":"Rb","provenance":"upstream:kill-report-convergence"},{"id":"Rd","provenance":"upstream:kill-report-convergence"}],
+ "device":{"type":"script","path":"aimo-abc/tools/render_report.py","blocks":"rendering report/REPORT_DRAFT.md when any decimal or percentage is hand-typed or any {{key}} is unknown"},
+ "replay":{"input":"the v2-era sentence 'text control (0.686) beats the organizer baseline (0.626)'","metric":"hand-typed numbers that reach the rendered draft","before":2,"after":0,"higher_is_better":false},
+ "deploy":{"delivered":true,"installed":"unverified","readback":"in aimo-abc-handoff v5 zip; not yet run by Codex"}}

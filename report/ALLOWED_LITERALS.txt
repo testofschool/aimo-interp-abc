@@ -1,0 +1,13 @@
+# literal  source
+0.6262 organizer-reported balanced accuracy, getting-started solutions/uncertainty-profiling/README.md
+0.6879 organizer-reported accuracy, same README
+58.37 organizer-reported probe accuracy, arXiv 2607.13899 §1.6
+69.23 organizer-reported uncertainty accuracy, arXiv 2607.13899 §1.6
+0.10 label threshold, train-main-v2 dataset card
+0.25 label threshold, train-main-v2 dataset card
+1.0 temperature, website FAQ 12
+0.95 top_p, website FAQ 12
+0.5 fixed logistic decision threshold, tools/report_numbers.py run()
+95% percentile interval coverage, tools/report_numbers.py clustered_intervals()
+1.6 bibliographic section identifier, arXiv 2607.13899
+2607.13899 bibliographic arXiv identifier, https://arxiv.org/abs/2607.13899

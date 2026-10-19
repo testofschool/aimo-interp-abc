@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+data/*.parquet
+report/build/
+report/neurips_2026.sty
+results/reproduction/
+results/rebuilt_bundles/
+.DS_Store

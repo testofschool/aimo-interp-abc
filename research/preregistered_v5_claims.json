@@ -1,0 +1,69 @@
+{
+ "claims": [
+  {
+   "text": "Text control (length+digits) LOPO balanced accuracy on the 43 Small rows",
+   "key": "control_lopo_small_bacc",
+   "value": 0.6855
+  },
+  {
+   "text": "On the organizer baseline's own 141 rows and CV scheme, the text control mean balanced accuracy (10 seeds) vs organizer uncertainty baseline 0.6262",
+   "key": "control_agg_sgkf_bacc_mean",
+   "value": 0.6754
+  },
+  {
+   "text": "Text control trained on train-main-v2 transfers to the 141-row set at",
+   "key": "control_transfer_train_to_agg_bacc",
+   "value": 0.4913
+  },
+  {
+   "text": "Cross-model concordance on train-main-v2, gpt-oss efforts collapsed",
+   "key": "conc_train_gptoss_collapsed.concordant",
+   "value": 14
+  },
+  {
+   "text": "Same, under the decay==0 label rule",
+   "key": "conc_train_decay0_rule_gptoss_collapsed.concordant",
+   "value": 8
+  },
+  {
+   "text": "Concordance on sample-full under the max-drop rule",
+   "key": "conc_sample_full_maxdrop_rule.concordant",
+   "value": 1
+  },
+  {
+   "text": "141-row set: JSON-list rows robust",
+   "key": "agg_format_crosstab.list_rows_robust",
+   "value": 36
+  },
+  {
+   "text": "141-row set: plain-string rows non-robust",
+   "key": "agg_format_crosstab.string_rows_nonrobust",
+   "value": 105
+  },
+  {
+   "text": "141-row set: one-bit format flag balanced accuracy",
+   "key": "agg_format_flag_bacc",
+   "value": 1.0
+  },
+  {
+   "text": "141-row set: majority-class accuracy",
+   "key": "agg_majority_acc",
+   "value": 0.7447
+  },
+  {
+   "text": "train-main-v2 multi-config rows: share of max_drop variance explained by problem",
+   "key": "r2_problem_train_multi",
+   "value": 0.7822
+  },
+  {
+   "text": "sample-full (8 other models): share explained by problem",
+   "key": "r2_problem_sample_full",
+   "value": 0.1813
+  },
+  {
+   "text": "Concordance without dropping the 0.10-0.25 band",
+   "key": "conc_train_nogap_p10.concordant",
+   "value": 10
+  }
+ ]
+}

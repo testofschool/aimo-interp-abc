@@ -1,0 +1,16 @@
+{
+ "problem": "Round 2 (2026-10-19 22:2x KST): every method candidate died or lacked detectable signal at n=43; the risk moved to the report, where an unmatched-row comparison had already been stated once.",
+ "evidence": [
+  {"kind": "failed", "claim": "a cross-row comparison was stated as a finding", "source": "this session, 2026-10-19 13:4x KST reply", "quote": "주최 측 불확실성 베이스라인이 0.626이니 그보다 높습니다"},
+  {"kind": "failed", "claim": "an agent-cited figure without organizer text entered the handoff", "source": "HANDOFF v2 F3", "quote": "issue #6 reports \"30–50 questions, ~170 s/sample\""},
+  {"kind": "worked", "claim": "submit_gate refused noise-level candidates", "source": "aimo-abc/tools/submit_gate.py replay 2026-10-19", "quote": "random_cand.csv FAIL 0.5847 need 0.7555"},
+  {"kind": "worked", "claim": "Codex measured 43+6 and stopped E2' on a count mismatch", "source": "owner relay 2026-10-19 19:29 KST", "quote": "원본 데이터의 Small Track은 43개 라벨 행 + 미라벨 6개 행입니다"}
+ ],
+ "candidates": [
+  {"id": "C3", "provenance": "requester"},
+  {"id": "C2", "provenance": "upstream:kill-report-convergence"}
+ ],
+ "device": {"type": "script", "path": "aimo-abc/tools/report_numbers.py --check research/claims.json", "blocks": "any number entering the report draft that does not regenerate from the public data (exit 1)"},
+ "replay": {"input": "the v2-era claim 'text control beats organizer baseline' encoded as a claim on the baseline's rows", "metric": "unsupported comparison claims that pass into the report", "before": 1, "after": 0, "higher_is_better": false},
+ "deploy": {"delivered": true, "installed": "unverified", "readback": "delivered in aimo-abc-handoff v3 zip; Codex has not run it"}
+}

@@ -1,0 +1,299 @@
+{
+ "schema": "direction-sweep/1",
+ "question": "AIMO-Interp round 3: does any data source outside the competition's own data give a working method? (owner: if not, fold)",
+ "success_line": {
+  "text": "a method that beats the text control by >=0.07 with a detectable effect, else fold (owner, 2026-10-19 23:02 KST)",
+  "status": "given"
+ },
+ "swept_at": "2026-10-19T23:13:48+09:00",
+ "note": "Round 3. External sources surveyed (25 datasets); 3 candidates, 3 independent killers; X2 noise and X3 AUROC reproduced by the author.",
+ "candidates": [
+  {
+   "id": "X1",
+   "label": "label-free external difficulty score (Omni-MATH TF-IDF ridge)",
+   "kind": "proposal",
+   "provenance": "upstream:evidence-mining",
+   "axis": "external problem difficulty",
+   "premises": {
+    "payer": {
+     "claim": "selector rewards it",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Submissions are ranked by accuracy in classifying each problem–model instance",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "difficulty predicts robustness with a usable threshold",
+     "verdict": "fails",
+     "status": "read",
+     "source": "file:/tmp/claude-0/x1/s (killer) + scratchpad/x1",
+     "quote": "tuned on gpt-oss rows threshold 5.21 -> Small bacc 0.554; fixed thresholds 0.457-0.624, all below control 0.686",
+     "tier": "primary"
+    },
+    "substitute": {
+     "claim": "adds to the text control",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "file:scratchpad/x1",
+     "quote": "AUC diff vs loglen CI95 [-0.298, 0.478]",
+     "tier": "primary"
+    },
+    "reach": {
+     "claim": "no model needed, fits time",
+     "verdict": "holds",
+     "status": "read",
+     "source": "file:scratchpad/x1",
+     "quote": "TF-IDF ridge prediction on CPU",
+     "tier": "primary"
+    },
+    "input": {
+     "claim": "external data reachable",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/KbsdJames/Omni-MATH",
+     "quote": "4,428 rows with difficulty 1-10",
+     "tier": "primary"
+    }
+   },
+   "kill": {
+    "verdict": "dead",
+    "angle": "mechanism",
+    "sentence": "no threshold set without target labels beats the text control",
+    "source": "file:/tmp/claude-0/x1/s",
+    "quote": "X1 scores balanced accuracy 0.554 on the 43 Small rows"
+   }
+  },
+  {
+   "id": "X2",
+   "label": "self-generated labels: 40 problems x 4 models, K=2, S=16 (~$12-14)",
+   "kind": "proposal",
+   "provenance": "upstream:kill-report-convergence",
+   "axis": "new target-model labels",
+   "premises": {
+    "payer": {
+     "claim": "selector rewards it",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Submissions are ranked by accuracy in classifying each problem–model instance",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "S=16 labels are reliable under the max-drop rule",
+     "verdict": "fails",
+     "status": "read",
+     "source": "file:scratchpad/sim (reproduced by author)",
+     "quote": "true drop 0 -> labelled non-robust 0.075-0.180; band 0.26-0.28; true 0.30 drop caught 0.698",
+     "tier": "primary"
+    },
+    "substitute": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "reach": {
+     "claim": "fits $24",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://www.databasemart.com/blog/vllm-gpu-benchmark-pro6000",
+     "quote": "Qwen3-8B 2,658 output tok/s at 50 prompts",
+     "tier": "third_party"
+    },
+    "input": {
+     "claim": "external data reachable",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/KbsdJames/Omni-MATH",
+     "quote": "4,428 rows with difficulty 1-10",
+     "tier": "primary"
+    }
+   },
+   "kill": {
+    "verdict": "dead",
+    "angle": "mechanism",
+    "sentence": "at S=16, K=2 most non-robust positives would be sampling noise",
+    "source": "file:scratchpad/sim.py",
+    "quote": "a problem whose true drop is zero still gets labelled non-robust 14-18% of the time"
+   }
+  },
+  {
+   "id": "X3",
+   "label": "public generation dumps -> predicted base accuracy",
+   "kind": "proposal",
+   "provenance": "upstream:evidence-mining",
+   "axis": "base accuracy proxy",
+   "premises": {
+    "payer": {
+     "claim": "selector rewards it",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Submissions are ranked by accuracy in classifying each problem–model instance",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "base accuracy predicts robustness",
+     "verdict": "fails",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/aimo-interp/val-sample",
+     "quote": "oracle base_accuracy AUROC 0.733 (24 deduplicated pairs); 8 of 15 non-robust have base accuracy 1.0",
+     "tier": "primary"
+    },
+    "substitute": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "reach": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "input": {
+     "claim": "dumps cover the exact 4 checkpoints",
+     "verdict": "fails",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/mlfoundations-dev/Skywork-OR1-7B_eval_5554",
+     "quote": "dump is Skywork-OR1-7B, not Skywork-OR1-Math-7B; Olmo dump is greedy single sample; Qwen3.5-4B dump has 30 problems",
+     "tier": "primary"
+    }
+   },
+   "kill": {
+    "verdict": "dead",
+    "angle": "mechanism",
+    "sentence": "even oracle base accuracy predicts robustness weakly",
+    "source": "https://huggingface.co/datasets/aimo-interp/val-sample",
+    "quote": "8 of the 15 non-robust (model, problem) cases have base_accuracy = 1.0"
+   }
+  },
+  {
+   "id": "S1",
+   "label": "keep the valid text-control entry + report (no new method)",
+   "kind": "substitute",
+   "provenance": "requester",
+   "axis": "baseline",
+   "premises": {
+    "payer": {
+     "claim": "selector rewards it",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Submissions are ranked by accuracy in classifying each problem–model instance",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "substitute": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "reach": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "input": {
+     "claim": "external data reachable",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/KbsdJames/Omni-MATH",
+     "quote": "4,428 rows with difficulty 1-10",
+     "tier": "primary"
+    }
+   }
+  },
+  {
+   "id": "W1",
+   "label": "fold: stop all further work and spending",
+   "kind": "wait",
+   "provenance": "requester",
+   "axis": "wait",
+   "premises": {
+    "payer": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "mechanism": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "substitute": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "reach": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "input": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    }
+   }
+  }
+ ],
+ "escapes": [
+  {
+   "text": "model-specific labels with many samples per item (S>=48) on the exact 4 checkpoints, validated against the 43 official rows",
+   "named_by": [
+    "X2",
+    "X3"
+   ]
+  },
+  {
+   "text": "a model-dependent signal on top of difficulty (base pass rate or internals)",
+   "named_by": [
+    "X1",
+    "X3"
+   ]
+  }
+ ],
+ "pick": {
+  "candidate": "S1",
+  "kill_criterion": {
+   "assumption": "no affordable data source yields reliable target-model labels (S>=48, 4 exact checkpoints, >=150 rows, >=0.80 agreement with the 43 official rows)",
+   "cheapest_test": "tools/reopen_gate.py --labels <file> exits 0",
+   "pass_rule": "gate exit 0 -> reopen the method track with a new sweep",
+   "fail_rule": "gate exit 1 -> method track stays folded; keep the text-control entry",
+   "stop_rule": "no paid method job while the gate is CLOSED; the decision re-checks only if the owner adds budget >= $45 before 2026-10-27",
+   "registered_at": "2026-10-19T23:14:33+09:00",
+   "check_by": "2026-10-27T23:59:00+09:00"
+  }
+ }
+}

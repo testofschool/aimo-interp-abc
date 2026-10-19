@@ -1,0 +1,10 @@
+{"problem":"Round 3 (2026-10-19 23:xx KST): all three external-data candidates died; the owner's rule is to fold if nothing works, but every earlier round reopened spending on the next idea without a data check.",
+ "evidence":[
+  {"kind":"failed","claim":"a paid job ran for a recipe that later died","source":"Codex EXECUTION_REPORT.md (J0)","quote":"실제 청구: 9분 · $0.412497"},
+  {"kind":"failed","claim":"label noise at S=16 makes self-made labels mostly noise","source":"author reproduction 2026-10-19","quote":"true drop 0 -> labelled non-robust 0.180"},
+  {"kind":"worked","claim":"report_numbers.py refused a cross-row claim","source":"aimo-abc/tools/report_numbers.py replay","quote":"\"result\": \"FAIL\""},
+  {"kind":"worked","claim":"submit_gate refused noise candidates","source":"aimo-abc/tools/submit_gate.py replay","quote":"random_cand.csv FAIL 0.5847 need 0.7555"}],
+ "candidates":[{"id":"X2","provenance":"upstream:kill-report-convergence"},{"id":"X3","provenance":"upstream:evidence-mining"}],
+ "device":{"type":"script","path":"aimo-abc/tools/reopen_gate.py","blocks":"starting any paid method job while self-made labels fail the S>=48 / 4-checkpoint / 150-row / 0.80-agreement conditions"},
+ "replay":{"input":"the X2 design (S=16, 4 models, 40 new problems + official rows) as a label file","metric":"paid method jobs the pipeline would start on unreliable labels","before":1,"after":0,"higher_is_better":false},
+ "deploy":{"delivered":true,"installed":"unverified","readback":"in aimo-abc-handoff v4 zip; not yet run by Codex"}}

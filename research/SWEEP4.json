@@ -1,0 +1,360 @@
+{
+ "schema": "direction-sweep/1",
+ "question": "AIMO-Interp round 4: which lead claim for the writeup report",
+ "success_line": {
+  "text": "report selected for a writeup prize (owner's goal A); minimum = report submitted by 2026-11-15 with all numbers regenerating",
+  "status": "given"
+ },
+ "swept_at": "2026-10-19T23:34:56+09:00",
+ "note": "Round 4: 4 framings, 4 independent killers + competitor evidence extraction (7 repos, issue #10). R2 values reproduced by author (0.78 / 0.18).",
+ "candidates": [
+  {
+   "id": "Ra",
+   "label": "text control beats organizer baseline on its own rows",
+   "kind": "proposal",
+   "provenance": "upstream:kill-report-convergence",
+   "axis": "surface control vs baseline",
+   "premises": {
+    "payer": {
+     "claim": "writeup selection",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "particularly interested in work on generalization of interpretability methods, actionable interpretability, negative results or efficient methods",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "negative-results report eligible",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/issues/10",
+     "quote": "Definitely, it is perfectly eligible.",
+     "tier": "official"
+    },
+    "substitute": {
+     "claim": "not already published",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "byeolki: Surface difficulty ... carries no signal on the official rows",
+     "tier": "third_party"
+    },
+    "reach": {
+     "claim": "solo, 9 pages by 11-15",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "file:HANDOFF_v4",
+     "quote": "report track only",
+     "tier": "primary"
+    },
+    "input": {
+     "claim": "numbers regenerate",
+     "verdict": "holds",
+     "status": "read",
+     "source": "file:research/claims.json",
+     "quote": "13 claims, PASS, exit 0",
+     "tier": "primary"
+    }
+   },
+   "kill": {
+    "verdict": "dead",
+    "angle": "mechanism",
+    "sentence": "on the 141-row set a format flag scores 1.00 and majority 0.745",
+    "source": "file:research/report_numbers.json",
+    "quote": "agg_format_flag_bacc 1.0, agg_majority_acc 0.7447"
+   }
+  },
+  {
+   "id": "Rb",
+   "label": "labels are a property of the problem (concordance)",
+   "kind": "proposal",
+   "provenance": "upstream:kill-report-convergence",
+   "axis": "label concordance",
+   "premises": {
+    "payer": {
+     "claim": "writeup selection",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "particularly interested in work on generalization of interpretability methods, actionable interpretability, negative results or efficient methods",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "negative-results report eligible",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/issues/10",
+     "quote": "Definitely, it is perfectly eligible.",
+     "tier": "official"
+    },
+    "substitute": {
+     "claim": "not already published",
+     "verdict": "contested",
+     "status": "read",
+     "source": "https://github.com/byeolki/aimo-interp",
+     "quote": "byeolki: none of them has mixed labels",
+     "tier": "third_party"
+    },
+    "reach": {
+     "claim": "solo, 9 pages by 11-15",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "file:HANDOFF_v4",
+     "quote": "report track only",
+     "tier": "primary"
+    },
+    "input": {
+     "claim": "numbers regenerate",
+     "verdict": "holds",
+     "status": "read",
+     "source": "file:research/claims.json",
+     "quote": "13 claims, PASS, exit 0",
+     "tier": "primary"
+    }
+   },
+   "kill": {
+    "verdict": "dead",
+    "angle": "mechanism",
+    "sentence": "frontier-model set: problem explains R2 0.18 vs 0.78 on train",
+    "source": "file:research/report_numbers.json",
+    "quote": "r2_problem_sample_full 0.1813"
+   }
+  },
+  {
+   "id": "Rc",
+   "label": "power and data audit",
+   "kind": "proposal",
+   "provenance": "upstream:kill-report-convergence",
+   "axis": "power audit",
+   "premises": {
+    "payer": {
+     "claim": "writeup selection",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "particularly interested in work on generalization of interpretability methods, actionable interpretability, negative results or efficient methods",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "negative-results report eligible",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/issues/10",
+     "quote": "Definitely, it is perfectly eligible.",
+     "tier": "official"
+    },
+    "substitute": {
+     "claim": "not already published",
+     "verdict": "contested",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/issues/10",
+     "quote": "issue #10: preregistered power review",
+     "tier": "third_party"
+    },
+    "reach": {
+     "claim": "solo, 9 pages by 11-15",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "file:HANDOFF_v4",
+     "quote": "report track only",
+     "tier": "primary"
+    },
+    "input": {
+     "claim": "numbers regenerate",
+     "verdict": "holds",
+     "status": "read",
+     "source": "file:research/claims.json",
+     "quote": "13 claims, PASS, exit 0",
+     "tier": "primary"
+    }
+   },
+   "kill": {
+    "verdict": "dead",
+    "angle": "competitor",
+    "sentence": "another participant's approved report covers the same thesis",
+    "source": "https://github.com/aimo-interp/getting-started/issues/10",
+    "quote": "a token-cost experiment that was stopped before execution after a preregistered power review",
+    "adequacy_quote": "Definitely, it is perfectly eligible."
+   }
+  },
+  {
+   "id": "Rd",
+   "label": "label-construction audit with required controls",
+   "kind": "proposal",
+   "provenance": "upstream:kill-report-convergence",
+   "axis": "benchmark construction",
+   "premises": {
+    "payer": {
+     "claim": "writeup selection",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "particularly interested in work on generalization of interpretability methods, actionable interpretability, negative results or efficient methods",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "negative-results report eligible",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/issues/10",
+     "quote": "Definitely, it is perfectly eligible.",
+     "tier": "official"
+    },
+    "substitute": {
+     "claim": "not already published",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "renx: 0.20 accuracy against an 0.80 always-negative baseline",
+     "tier": "third_party"
+    },
+    "reach": {
+     "claim": "solo, 9 pages by 11-15",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "file:HANDOFF_v4",
+     "quote": "report track only",
+     "tier": "primary"
+    },
+    "input": {
+     "claim": "numbers regenerate",
+     "verdict": "holds",
+     "status": "read",
+     "source": "file:research/claims.json",
+     "quote": "13 claims, PASS, exit 0",
+     "tier": "primary"
+    }
+   },
+   "kill": {
+    "verdict": "dead",
+    "angle": "mechanism",
+    "sentence": "the 141-row and frontier sets are never scored",
+    "source": "https://github.com/aimo-interp/getting-started/blob/main/README.md",
+    "quote": "the :low-suffixed names and the closed API models that appear in the public sample datasets are never passed during the Competition phase"
+   }
+  },
+  {
+   "id": "S1",
+   "label": "minimal report: control + numbers, no lead claim",
+   "kind": "substitute",
+   "provenance": "requester",
+   "axis": "baseline",
+   "premises": {
+    "payer": {
+     "claim": "writeup selection",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "particularly interested in work on generalization of interpretability methods, actionable interpretability, negative results or efficient methods",
+     "tier": "official",
+     "ladder_level": 0
+    },
+    "mechanism": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "substitute": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "reach": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "input": {
+     "claim": "numbers regenerate",
+     "verdict": "holds",
+     "status": "read",
+     "source": "file:research/claims.json",
+     "quote": "13 claims, PASS, exit 0",
+     "tier": "primary"
+    }
+   }
+  },
+  {
+   "id": "W1",
+   "label": "fold completely",
+   "kind": "wait",
+   "provenance": "requester",
+   "axis": "wait",
+   "premises": {
+    "payer": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "mechanism": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "substitute": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "reach": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "input": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    }
+   }
+  }
+ ],
+ "escapes": [
+  {
+   "text": "scored data only: problem identity explains ~80% of max_drop; problem-only/text control matches probes under grouped CV; test whether it survives unseen problems via Codabench private val",
+   "named_by": [
+    "Rb",
+    "Rd"
+   ]
+  },
+  {
+   "text": "report plain accuracy and trivial baselines (majority, format) beside balanced accuracy",
+   "named_by": [
+    "Ra",
+    "Rd"
+   ]
+  }
+ ],
+ "pick": {
+  "candidate": "S1",
+  "kill_criterion": {
+   "assumption": "a short report built on the converged escape (problem identity ~80% of max_drop on scored data; problem-only control; survival on unseen problems via Codabench) is selectable",
+   "cheapest_test": "Codabench private-val accuracy of the text control vs always-true, uploaded before 2026-11-01 11:55Z",
+   "pass_rule": "control >= always-true on Codabench -> section 3 reports 'survives'; else reports 'collapses' (both are publishable results)",
+   "fail_rule": "no Codabench rows by 2026-11-01 11:55Z -> section 3 is cut and the report states the limitation",
+   "stop_rule": "report frozen 2026-11-12 23:59 KST; no paid jobs",
+   "registered_at": "2026-10-19T23:35:45+09:00",
+   "check_by": "2026-11-15T23:59:00+09:00"
+  }
+ }
+}

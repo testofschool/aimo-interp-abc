@@ -1,0 +1,119 @@
+{
+  "Codabench_upload": "UNRUN",
+  "build_command": [
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/aimo-abc/.venv/bin/python",
+    "-I",
+    "-B",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/release-support/pinned-upstream/scripts/build.py",
+    "solutions",
+    "--small"
+  ],
+  "build_exit": 0,
+  "bundle": "bundles/solution-always-true-small.zip",
+  "bundle_bytes": 519,
+  "bundle_sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+  "competition_image_parity": "UNRUN",
+  "copied_sources": [
+    {
+      "copied_path": "pinned-upstream/scripts/build.py",
+      "git_commit_bytes_match": true,
+      "sha256": "42185f2ecc040ac9ab3496a7203fe44b38dd7a59669535a67d42156863c94d77",
+      "upstream_path": "scripts/build.py"
+    },
+    {
+      "copied_path": "pinned-upstream/scripts/run_local.py",
+      "git_commit_bytes_match": true,
+      "sha256": "f189e9a6a0d51f42e08ea30a46c35df8338bfb035f826567fba61f124105036f",
+      "upstream_path": "scripts/run_local.py"
+    },
+    {
+      "copied_path": "pinned-upstream/scripts/import_hf_dataset.py",
+      "git_commit_bytes_match": true,
+      "sha256": "4910f47a3ca35b7f3abb3e34e2420739bdebb1ce02c1df04bcaa8edf34c34f30",
+      "upstream_path": "scripts/import_hf_dataset.py"
+    },
+    {
+      "copied_path": "pinned-upstream/solutions/always-true/solution.py",
+      "git_commit_bytes_match": true,
+      "sha256": "a3ae331303a39c13915140d5621d3347fbe1f9c0f35bf53942fb1f32ada8012f",
+      "upstream_path": "solutions/always-true/solution.py"
+    },
+    {
+      "copied_path": "pinned-upstream/components/ingestion_program/ingestion.py",
+      "git_commit_bytes_match": true,
+      "sha256": "47ce02f9eed36ee2f4f9ab28d07401b4b079dba3b4ed5b42d32dcd1de83cfbfd",
+      "upstream_path": "components/ingestion_program/ingestion.py"
+    },
+    {
+      "copied_path": "pinned-upstream/components/scoring_program/scoring.py",
+      "git_commit_bytes_match": true,
+      "sha256": "df10d76c79129220aba37f0a23300df8d220c46af5dabec4dd20ad09fdda6191",
+      "upstream_path": "components/scoring_program/scoring.py"
+    }
+  ],
+  "host_contract_command": [
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/aimo-abc/.venv/bin/python",
+    "-I",
+    "-B",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/release-support/pinned-upstream/scripts/run_local.py",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/release-support/bundles/solution-always-true-small.zip",
+    "--small",
+    "--input-dir",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/release-support/host-contract-data/input",
+    "--reference-dir",
+    "/Users/felix/Desktop/AIMO Interpretability Challenge/v5-execution/release-support/host-contract-data/reference"
+  ],
+  "host_contract_data": {
+    "cases": 24,
+    "duplicate_rows_removed": 4,
+    "label_counts": {
+      "false": 15,
+      "true": 9
+    },
+    "source_rows": 28
+  },
+  "host_contract_exit": 0,
+  "host_contract_scores": {
+    "accuracy": 0.375,
+    "coverage": 1.0,
+    "invalid_predictions": 0
+  },
+  "kind": "CPU host contract sanity only",
+  "members": [
+    {
+      "bytes": 0,
+      "external_attr": 2175008768,
+      "path": "small.txt",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "timestamp": [
+        2020,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    },
+    {
+      "bytes": 601,
+      "external_attr": 2175008768,
+      "path": "solution.py",
+      "sha256": "a3ae331303a39c13915140d5621d3347fbe1f9c0f35bf53942fb1f32ada8012f",
+      "timestamp": [
+        2020,
+        1,
+        1,
+        0,
+        0,
+        0
+      ]
+    }
+  ],
+  "original_control_sha256_after": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+  "original_control_sha256_before": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+  "original_control_unchanged": true,
+  "private_val_accuracy": "UNMEASURED",
+  "status": "PASS",
+  "upstream_commit": "de794053debe75a711400696e66b60937cebbb1b",
+  "upstream_repository": "https://github.com/aimo-interp/getting-started"
+}

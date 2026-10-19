@@ -1,0 +1,322 @@
+{
+ "schema": "direction-sweep/1",
+ "question": "AIMO-Interp: which experiment carries the Small-Track entry, the White-Box ablation and the writeup",
+ "success_line": {
+  "text": "A+B+C: valid Small-Track entry visible on Codabench by 2026-11-01, White-Box ablation in report, report submitted by 2026-11-15",
+  "status": "given"
+ },
+ "swept_at": "2026-10-19T13:46:15+09:00",
+ "note": "Competition framing: payer=selector/scorer, substitute=organizer baseline. Kill reports from 3 independent agents 2026-10-19; C3 re-measured by the author. 2026-10-19 cell edit: C3 dead->wounded (counter-evidence uses a different model set). Organizer issue #11 (2026-10-17) allows using other models as tools. Text-length control measured LOPO bacc 0.6855 on 43 Small rows.",
+ "candidates": [
+  {
+   "id": "C1",
+   "label": "E1 final-prompt-token hidden-state probe",
+   "kind": "proposal",
+   "provenance": "upstream:hackathon-room-protocol (organizer baseline)",
+   "axis": "pre-reasoning hidden-state readout",
+   "premises": {
+    "payer": {
+     "claim": "the scorer/selector rewards it (accuracy rank, White-Box ablation, or writeup selection)",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Submissions are ranked by accuracy in classifying each problem–model instance",
+     "ladder_level": 0,
+     "tier": "official"
+    },
+    "mechanism": {
+     "claim": "the hidden state carries model-specific robustness signal",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started",
+     "quote": "take the final prompt-token hidden state from best_layer_index",
+     "tier": "official"
+    },
+    "substitute": {
+     "claim": "organizers' trained-probe baseline does not already do it",
+     "verdict": "contested",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/tree/main/solutions/trained-probe",
+     "quote": "take the final prompt-token hidden state from best_layer_index, compute all stored seed/fold probe margins",
+     "tier": "official"
+    },
+    "reach": {
+     "claim": "fits 3600 s and the $25 budget",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/blob/main/README.md",
+     "quote": "Time limit: 3600 seconds per evaluation run",
+     "tier": "official"
+    },
+    "input": {
+     "claim": "train labels and cached models are available",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/aimo-interp/train-main-v2",
+     "quote": "94 rows: 59 robust, 21 non-robust, 14 unlabelled, over 36 problems.",
+     "tier": "official"
+    }
+   },
+   "kill": {
+    "verdict": "dead",
+    "angle": "incumbent",
+    "sentence": "E1 is the organizers' trained-probe baseline almost verbatim; ablation vs a problem-text control would likely show no substantial effect",
+    "source": "https://github.com/aimo-interp/getting-started/tree/main/solutions/trained-probe",
+    "quote": "take the final prompt-token hidden state from best_layer_index",
+    "adequacy_quote": "balanced accuracy is 0.6262 (organizer baseline family, uncertainty variant) — no adequacy quote for the probe itself"
+   }
+  },
+  {
+   "id": "C2",
+   "label": "E2 uncertainty-profiling extended to 4 models",
+   "kind": "proposal",
+   "provenance": "upstream:hackathon-room-protocol (organizer baseline)",
+   "axis": "black-box generation uncertainty",
+   "premises": {
+    "payer": {
+     "claim": "the scorer/selector rewards it (accuracy rank, White-Box ablation, or writeup selection)",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Submissions are ranked by accuracy in classifying each problem–model instance",
+     "ladder_level": 0,
+     "tier": "official"
+    },
+    "mechanism": {
+     "claim": "uncertainty features predict robustness",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/tree/main/solutions/uncertainty-profiling",
+     "quote": "balanced accuracy is 0.6262, plain accuracy is 0.6879",
+     "tier": "official"
+    },
+    "substitute": {
+     "claim": "organizer baseline does not cover these models",
+     "verdict": "contested",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/tree/main/solutions/uncertainty-profiling",
+     "quote": "Its grouped out-of-fold decision threshold is 0.5760",
+     "tier": "official"
+    },
+    "reach": {
+     "claim": "fits 3600 s and the $25 budget",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/blob/main/README.md",
+     "quote": "Time limit: 3600 seconds per evaluation run",
+     "tier": "official"
+    },
+    "input": {
+     "claim": "train labels and cached models are available",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/aimo-interp/train-main-v2",
+     "quote": "94 rows: 59 robust, 21 non-robust, 14 unlabelled, over 36 problems.",
+     "tier": "official"
+    }
+   },
+   "kill": {
+    "verdict": "wounded",
+    "angle": "incumbent",
+    "sentence": "cannot be expected to beat 0.63-0.69 with 43 rows while 18/56 Small entries already sit at >=0.71; survives only as an unsubmitted black-box control",
+    "source": "https://github.com/aimo-interp/getting-started/tree/main/solutions/uncertainty-profiling",
+    "quote": "balanced accuracy is 0.6262, plain accuracy is 0.6879"
+   }
+  },
+  {
+   "id": "C3",
+   "label": "E3 problem-level majority target",
+   "kind": "proposal",
+   "provenance": "designer",
+   "axis": "labels are a problem property",
+   "premises": {
+    "payer": {
+     "claim": "the scorer/selector rewards it (accuracy rank, White-Box ablation, or writeup selection)",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Submissions are ranked by accuracy in classifying each problem–model instance",
+     "ladder_level": 0,
+     "tier": "official"
+    },
+    "mechanism": {
+     "claim": "cross-model label concordance holds beyond train",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/aimo-interp/val-sample",
+     "quote": "val-sample 1/6 and sample-full 1/10 concordant, but both use other models (GLM, Gemini, gpt-5.2 :low); train-main-v2 (the competition models) shows 15/16",
+     "tier": "primary"
+    },
+    "substitute": {
+     "claim": "organizers have not already published the problem-level finding",
+     "verdict": "unknown",
+     "status": "read",
+     "tier": "official",
+     "source": "https://aimo-interp.github.io",
+     "quote": "A case is robust when the model's accuracy holds up across every perturbation we apply"
+    },
+    "reach": {
+     "claim": "fits 3600 s and the $25 budget",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://github.com/aimo-interp/getting-started/blob/main/README.md",
+     "quote": "Time limit: 3600 seconds per evaluation run",
+     "tier": "official"
+    },
+    "input": {
+     "claim": "train labels and cached models are available",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/aimo-interp/train-main-v2",
+     "quote": "94 rows: 59 robust, 21 non-robust, 14 unlabelled, over 36 problems.",
+     "tier": "official"
+    }
+   },
+   "kill": {
+    "verdict": "wounded",
+    "angle": "mechanism",
+    "sentence": "concordance does not replicate on organizer sets built from other models; untested on the competition model set beyond train",
+    "source": "https://huggingface.co/datasets/aimo-interp/val-sample",
+    "quote": "the validation set is close to balanced"
+   }
+  },
+  {
+   "id": "S1",
+   "label": "submit the measured problem-text control (length + digit count, logistic) as the guaranteed valid entry",
+   "kind": "substitute",
+   "provenance": "requester",
+   "axis": "baseline",
+   "premises": {
+    "payer": {
+     "claim": "the scorer/selector rewards it (accuracy rank, White-Box ablation, or writeup selection)",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Submissions are ranked by accuracy in classifying each problem–model instance",
+     "ladder_level": 0,
+     "tier": "official"
+    },
+    "mechanism": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "substitute": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "reach": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "input": {
+     "claim": "train labels and cached models are available",
+     "verdict": "holds",
+     "status": "read",
+     "source": "https://huggingface.co/datasets/aimo-interp/train-main-v2",
+     "quote": "94 rows: 59 robust, 21 non-robust, 14 unlabelled, over 36 problems.",
+     "tier": "official"
+    }
+   }
+  },
+  {
+   "id": "W1",
+   "label": "do not enter; wait for the 11-15 reports/next AIMO round",
+   "kind": "wait",
+   "provenance": "requester",
+   "axis": "wait",
+   "premises": {
+    "payer": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "mechanism": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "substitute": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "reach": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "input": {
+     "claim": "x",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    }
+   }
+  }
+ ],
+ "escapes": [
+  {
+   "text": "short decode (<=512 tokens) / prefill features instead of 4096-token generation",
+   "named_by": [
+    "C1",
+    "C2"
+   ]
+  },
+  {
+   "text": "writeup on negative result: probe vs problem/text-only control under leave-problem-out; label concordance is split-dependent",
+   "named_by": [
+    "C1",
+    "C3"
+   ]
+  },
+  {
+   "text": "model-specific perturbation-response feature (hidden-state divergence original vs paraphrase)",
+   "named_by": [
+    "C1"
+   ]
+  },
+  {
+   "text": "continuous max_drop target + pool train-main-v2, val-sample, sample-full with model one-hot; submit only if nested LOPO >= 0.76",
+   "named_by": [
+    "C2"
+   ]
+  },
+  {
+   "text": "beat a problem-text control (length+digits LOPO bacc 0.6855) before any claim; report the control if nothing beats it",
+   "named_by": [
+    "C1",
+    "C3"
+   ]
+  }
+ ],
+ "pick": {
+  "candidate": "S1",
+  "kill_criterion": {
+   "assumption": "no experiment (E1 white-box, E2 short-decode uncertainty, E3 problem-level) beats the measured text-length control (LOPO bacc 0.6855 on 43 Small rows) by one public case (0.07)",
+   "cheapest_test": "tools/submit_gate.py on each experiment's leave-problem-out oof.csv against controls/always_true.csv + controls/text_length.csv",
+   "pass_rule": "an experiment exits 0 -> it replaces the control as the Small-Track entry; if it is white-box and also exits 0 against its own ablation, it is the White-Box claim",
+   "fail_rule": "all exit 1 -> the text-length control stays the Small-Track entry and the report is a negative-results writeup (eligible per issue #10)",
+   "stop_rule": "no new experiment starts after 2026-10-29 23:59 KST; HF Jobs spend capped at 25 USD",
+   "registered_at": "2026-10-19T13:50:32+09:00",
+   "check_by": "2026-10-30T23:59:00+09:00"
+  }
+ }
+}

@@ -1,0 +1,20 @@
+V1_original actual exit 0
+{
+ "result": "PASS",
+ "checked": 13,
+ "mismatches": []
+}
+V2_original actual exit 0
+{"result": "PASS", "placeholders": 17, "out": "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-_9zjwyin/original.md"}
+V1_final actual exit 0
+{
+ "result": "PASS",
+ "checked": 87,
+ "mismatches": []
+}
+V3 PASS: 12 registered values
+V2_final actual exit 0
+{"result": "PASS", "placeholders": 89, "out": "/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/aimo-report-_9zjwyin/final.md"}
+V4 actual exit 1
+{"result": "CLOSED", "reason": "no self-made labels supplied; method track stays folded"}
+ALL_CPU_GATES_PASS; V4_CLOSED_EXPECTED

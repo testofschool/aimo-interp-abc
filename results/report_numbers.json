@@ -1,0 +1,115 @@
+{
+ "control_lopo_small_bacc": 0.6855,
+ "small_rows": 43,
+ "small_problems": 22,
+ "control_lopo_small_acc": 0.7674,
+ "always_true_small_acc": 0.7209,
+ "always_true_small_bacc": 0.5,
+ "control_small_correct": 33,
+ "always_true_small_correct": 31,
+ "control_small_tp": 27,
+ "control_small_tn": 6,
+ "small_robust_rows": 31,
+ "small_nonrobust_rows": 12,
+ "small_bootstrap": {
+  "draws": 4000,
+  "seed": 0,
+  "valid_draws": 4000,
+  "bacc_ci95": {
+   "low": 0.4759,
+   "high": 0.9378
+  },
+  "acc_ci95": {
+   "low": 0.5556,
+   "high": 0.9556
+  },
+  "delta_bacc_ci95": {
+   "low": -0.0241,
+   "high": 0.4378
+  },
+  "delta_bacc_sd": 0.1234
+ },
+ "control_small_delta_bacc": 0.1855,
+ "train_rows": 94,
+ "train_problems": 36,
+ "train_labelled_rows": 80,
+ "train_labelled_problems": 33,
+ "train_unlabelled_rows": 14,
+ "control_agg_sgkf_bacc_mean": 0.6754,
+ "control_agg_sgkf_bacc_min": 0.6159,
+ "control_agg_sgkf_bacc_max": 0.6996,
+ "agg_rows": 141,
+ "agg_problems": 137,
+ "control_agg_sgkf_acc_mean": 0.6865,
+ "control_transfer_train_to_agg_bacc": 0.4913,
+ "control_transfer_train_to_val_bacc": 0.5409,
+ "control_transfer_train_to_agg_acc": 0.2695,
+ "control_transfer_train_to_val_acc": 0.5357,
+ "val_sample_rows": 28,
+ "val_sample_pairs": 24,
+ "conc_val_sample_dedup": {
+  "multi": 5,
+  "concordant": 0,
+  "expected_independent": 1.04
+ },
+ "val_oracle_base_accuracy_auc": 0.7333,
+ "val_nonrobust_base1": 8,
+ "val_nonrobust_pairs": 15,
+ "conc_train_all_configs": {
+  "multi": 16,
+  "concordant": 15,
+  "expected_independent": 5.94
+ },
+ "conc_train_gptoss_collapsed": {
+  "multi": 14,
+  "concordant": 14,
+  "expected_independent": 5.52
+ },
+ "conc_train_small_only": {
+  "multi": 11,
+  "concordant": 11,
+  "expected_independent": 4.89
+ },
+ "conc_train_decay0_rule_gptoss_collapsed": {
+  "multi": 15,
+  "concordant": 8,
+  "expected_independent": 5.07
+ },
+ "conc_val_sample": {
+  "multi": 6,
+  "concordant": 1,
+  "expected_independent": 1.55
+ },
+ "conc_sample_full_maxdrop_rule": {
+  "multi": 10,
+  "concordant": 1,
+  "expected_independent": 0.25
+ },
+ "agg_format_crosstab": {
+  "list_rows_robust": 36,
+  "list_rows_nonrobust": 0,
+  "string_rows_robust": 0,
+  "string_rows_nonrobust": 105
+ },
+ "agg_format_flag_bacc": 1.0,
+ "agg_majority_acc": 0.7447,
+ "r2_problem_train_multi": 0.7822,
+ "r2_problem_train_multi_rows": 76,
+ "r2_problem_train_multi_problems": 18,
+ "r2_problem_train_multi_single_model_problems": 3,
+ "r2_problem_train_true_multi": 0.7369,
+ "r2_problem_train_true_multi_rows": 70,
+ "r2_problem_train_true_multi_problems": 15,
+ "r2_problem_small_multi": 0.7811,
+ "r2_problem_small_multi_rows": 39,
+ "r2_problem_small_multi_problems": 14,
+ "r2_problem_sample_full": 0.1813,
+ "r2_problem_sample_full_pairs": 80,
+ "sample_full_models": 8,
+ "sample_full_problems": 10,
+ "conc_train_nogap_p10": {
+  "multi": 15,
+  "concordant": 10,
+  "expected_independent": 3.59
+ }
+}

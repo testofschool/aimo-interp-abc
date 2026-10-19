@@ -1,0 +1,51 @@
+{
+  "result": "PASS",
+  "checks": [
+    {
+      "name": "valid",
+      "fixture": "SYNTHETIC_RENDERER_GUARD_NOT_EXPERIMENT",
+      "exit_code": 0,
+      "expected": 0,
+      "stdout": "{\"result\": \"PASS\", \"placeholders\": 1, \"out\": \"/var/folders/14/76vt1lk92056gjht3hr6xwq00000gn/T/v5-render-guard-tqho_j2z/valid.md\"}\n",
+      "stderr": ""
+    },
+    {
+      "name": "unregistered",
+      "fixture": "SYNTHETIC_RENDERER_GUARD_NOT_EXPERIMENT",
+      "exit_code": 1,
+      "expected": 1,
+      "stdout": "{\n \"result\": \"FAIL\",\n \"errors\": [\n  \"unregistered key {{score}}\"\n ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "mismatch",
+      "fixture": "SYNTHETIC_RENDERER_GUARD_NOT_EXPERIMENT",
+      "exit_code": 1,
+      "expected": 1,
+      "stdout": "{\n \"result\": \"FAIL\",\n \"errors\": [\n  \"claim mismatch for {{score}}\"\n ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "unknown",
+      "fixture": "SYNTHETIC_RENDERER_GUARD_NOT_EXPERIMENT",
+      "exit_code": 1,
+      "expected": 1,
+      "stdout": "{\n \"result\": \"FAIL\",\n \"errors\": [\n  \"unknown key {{missing}}\"\n ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "literal",
+      "fixture": "SYNTHETIC_RENDERER_GUARD_NOT_EXPERIMENT",
+      "exit_code": 1,
+      "expected": 1,
+      "stdout": "{\n \"result\": \"FAIL\",\n \"errors\": [\n  \"line 1: hand-typed number '0.6855' \u2014 use a {{key}} or list it in ALLOWED_LITERALS.txt with its source\"\n ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "name": "data_hash_mismatch",
+      "fixture": "SYNTHETIC_CORRUPTED_COPY",
+      "exit_code": 1,
+      "stopped_before_metrics": true
+    }
+  ]
+}

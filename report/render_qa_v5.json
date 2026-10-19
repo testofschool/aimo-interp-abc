@@ -1,0 +1,42 @@
+{
+  "status": "TECHNICAL_DRAFT_NOT_SUBMITTED",
+  "pdf": "report/aimo-interp-report-v5.pdf",
+  "pdf_sha256": "1ec9bfb0ac7e48c78ef13ae8ee78d9acdce953bd12bac1038a3bee08719194cf",
+  "pages": 5,
+  "body_pages": [
+    1,
+    2,
+    3,
+    4
+  ],
+  "references_pages": [
+    5
+  ],
+  "engine": "pdflatex",
+  "bibliography": "inline",
+  "build_receipt": "report/qa_v5/build-receipt.json",
+  "desktop_compiler": "SUCCESS final source",
+  "type3_fonts": 0,
+  "unresolved_refs": 0,
+  "broken_citations": 0,
+  "pdf_battery_exit": 0,
+  "key_strings": 35,
+  "visual_inspection": {
+    "status": "PASS",
+    "scope": "All five final page PNGs inspected by Codex; no clipping, overlap, missing text, or broken references observed",
+    "page_images": [
+      "report/qa_v5/page-1.png",
+      "report/qa_v5/page-2.png",
+      "report/qa_v5/page-3.png",
+      "report/qa_v5/page-4.png",
+      "report/qa_v5/page-5.png"
+    ]
+  },
+  "source_sha256": "95e9dde2250115e4a2475325a8719aa29527ac0992305257ab5ee2d1f3fa242b",
+  "limitations": [
+    "Author designation/review pending",
+    "Private validation and test UNMEASURED",
+    "Final OpenReview form and receipt unverified",
+    "Public remote fresh clone unrun"
+  ]
+}

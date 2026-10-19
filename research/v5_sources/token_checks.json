@@ -1,0 +1,13 @@
+{
+  "source": "website.txt",
+  "basis": "derived from website.html; script/style removed; ASCII case-insensitive word boundaries",
+  "counts": {
+    "OpenReview": 0,
+    "template": 0,
+    "nine-page": 0,
+    "Report": 6,
+    "Reviewing": 2,
+    "November": 5
+  },
+  "interpretation": "Bounded page-token observation only; no claim about uninspected Discord or final submission form."
+}

@@ -1,0 +1,440 @@
+{
+  "protocol": "Original 13 claims preserved; additions fixed before report expansion. Data SHA256 must match.",
+  "claims": [
+    {
+      "text": "Text control (length+digits) LOPO balanced accuracy on the 43 Small rows",
+      "key": "control_lopo_small_bacc",
+      "value": 0.6855
+    },
+    {
+      "text": "On the organizer baseline's own 141 rows and CV scheme, the text control mean balanced accuracy (10 seeds) vs organizer uncertainty baseline 0.6262",
+      "key": "control_agg_sgkf_bacc_mean",
+      "value": 0.6754
+    },
+    {
+      "text": "Text control trained on train-main-v2 transfers to the 141-row set at",
+      "key": "control_transfer_train_to_agg_bacc",
+      "value": 0.4913
+    },
+    {
+      "text": "Cross-model concordance on train-main-v2, gpt-oss efforts collapsed",
+      "key": "conc_train_gptoss_collapsed.concordant",
+      "value": 14
+    },
+    {
+      "text": "Same, under the decay==0 label rule",
+      "key": "conc_train_decay0_rule_gptoss_collapsed.concordant",
+      "value": 8
+    },
+    {
+      "text": "Concordance on sample-full under the max-drop rule",
+      "key": "conc_sample_full_maxdrop_rule.concordant",
+      "value": 1
+    },
+    {
+      "text": "141-row set: JSON-list rows robust",
+      "key": "agg_format_crosstab.list_rows_robust",
+      "value": 36
+    },
+    {
+      "text": "141-row set: plain-string rows non-robust",
+      "key": "agg_format_crosstab.string_rows_nonrobust",
+      "value": 105
+    },
+    {
+      "text": "141-row set: one-bit format flag balanced accuracy",
+      "key": "agg_format_flag_bacc",
+      "value": 1.0
+    },
+    {
+      "text": "141-row set: majority-class accuracy",
+      "key": "agg_majority_acc",
+      "value": 0.7447
+    },
+    {
+      "text": "train-main-v2 multi-config rows: share of max_drop variance explained by problem",
+      "key": "r2_problem_train_multi",
+      "value": 0.7822
+    },
+    {
+      "text": "sample-full (8 other models): share explained by problem",
+      "key": "r2_problem_sample_full",
+      "value": 0.1813
+    },
+    {
+      "text": "Concordance without dropping the 0.10-0.25 band",
+      "key": "conc_train_nogap_p10.concordant",
+      "value": 10
+    },
+    {
+      "text": "Reproducible CPU report metric: small_rows",
+      "key": "small_rows",
+      "value": 43
+    },
+    {
+      "text": "Reproducible CPU report metric: small_problems",
+      "key": "small_problems",
+      "value": 22
+    },
+    {
+      "text": "Reproducible CPU report metric: control_lopo_small_acc",
+      "key": "control_lopo_small_acc",
+      "value": 0.7674
+    },
+    {
+      "text": "Reproducible CPU report metric: always_true_small_acc",
+      "key": "always_true_small_acc",
+      "value": 0.7209
+    },
+    {
+      "text": "Reproducible CPU report metric: always_true_small_bacc",
+      "key": "always_true_small_bacc",
+      "value": 0.5
+    },
+    {
+      "text": "Reproducible CPU report metric: control_small_correct",
+      "key": "control_small_correct",
+      "value": 33
+    },
+    {
+      "text": "Reproducible CPU report metric: always_true_small_correct",
+      "key": "always_true_small_correct",
+      "value": 31
+    },
+    {
+      "text": "Reproducible CPU report metric: control_small_tp",
+      "key": "control_small_tp",
+      "value": 27
+    },
+    {
+      "text": "Reproducible CPU report metric: control_small_tn",
+      "key": "control_small_tn",
+      "value": 6
+    },
+    {
+      "text": "Reproducible CPU report metric: small_robust_rows",
+      "key": "small_robust_rows",
+      "value": 31
+    },
+    {
+      "text": "Reproducible CPU report metric: small_nonrobust_rows",
+      "key": "small_nonrobust_rows",
+      "value": 12
+    },
+    {
+      "text": "Reproducible CPU report metric: small_bootstrap.draws",
+      "key": "small_bootstrap.draws",
+      "value": 4000
+    },
+    {
+      "text": "Reproducible CPU report metric: small_bootstrap.seed",
+      "key": "small_bootstrap.seed",
+      "value": 0
+    },
+    {
+      "text": "Reproducible CPU report metric: small_bootstrap.valid_draws",
+      "key": "small_bootstrap.valid_draws",
+      "value": 4000
+    },
+    {
+      "text": "Reproducible CPU report metric: small_bootstrap.bacc_ci95.low",
+      "key": "small_bootstrap.bacc_ci95.low",
+      "value": 0.4759
+    },
+    {
+      "text": "Reproducible CPU report metric: small_bootstrap.bacc_ci95.high",
+      "key": "small_bootstrap.bacc_ci95.high",
+      "value": 0.9378
+    },
+    {
+      "text": "Reproducible CPU report metric: small_bootstrap.acc_ci95.low",
+      "key": "small_bootstrap.acc_ci95.low",
+      "value": 0.5556
+    },
+    {
+      "text": "Reproducible CPU report metric: small_bootstrap.acc_ci95.high",
+      "key": "small_bootstrap.acc_ci95.high",
+      "value": 0.9556
+    },
+    {
+      "text": "Reproducible CPU report metric: small_bootstrap.delta_bacc_ci95.low",
+      "key": "small_bootstrap.delta_bacc_ci95.low",
+      "value": -0.0241
+    },
+    {
+      "text": "Reproducible CPU report metric: small_bootstrap.delta_bacc_ci95.high",
+      "key": "small_bootstrap.delta_bacc_ci95.high",
+      "value": 0.4378
+    },
+    {
+      "text": "Reproducible CPU report metric: small_bootstrap.delta_bacc_sd",
+      "key": "small_bootstrap.delta_bacc_sd",
+      "value": 0.1234
+    },
+    {
+      "text": "Reproducible CPU report metric: control_small_delta_bacc",
+      "key": "control_small_delta_bacc",
+      "value": 0.1855
+    },
+    {
+      "text": "Reproducible CPU report metric: train_rows",
+      "key": "train_rows",
+      "value": 94
+    },
+    {
+      "text": "Reproducible CPU report metric: train_problems",
+      "key": "train_problems",
+      "value": 36
+    },
+    {
+      "text": "Reproducible CPU report metric: train_labelled_rows",
+      "key": "train_labelled_rows",
+      "value": 80
+    },
+    {
+      "text": "Reproducible CPU report metric: train_labelled_problems",
+      "key": "train_labelled_problems",
+      "value": 33
+    },
+    {
+      "text": "Reproducible CPU report metric: train_unlabelled_rows",
+      "key": "train_unlabelled_rows",
+      "value": 14
+    },
+    {
+      "text": "Reproducible CPU report metric: control_agg_sgkf_bacc_min",
+      "key": "control_agg_sgkf_bacc_min",
+      "value": 0.6159
+    },
+    {
+      "text": "Reproducible CPU report metric: control_agg_sgkf_bacc_max",
+      "key": "control_agg_sgkf_bacc_max",
+      "value": 0.6996
+    },
+    {
+      "text": "Reproducible CPU report metric: agg_rows",
+      "key": "agg_rows",
+      "value": 141
+    },
+    {
+      "text": "Reproducible CPU report metric: agg_problems",
+      "key": "agg_problems",
+      "value": 137
+    },
+    {
+      "text": "Reproducible CPU report metric: control_agg_sgkf_acc_mean",
+      "key": "control_agg_sgkf_acc_mean",
+      "value": 0.6865
+    },
+    {
+      "text": "Reproducible CPU report metric: control_transfer_train_to_val_bacc",
+      "key": "control_transfer_train_to_val_bacc",
+      "value": 0.5409
+    },
+    {
+      "text": "Reproducible CPU report metric: control_transfer_train_to_agg_acc",
+      "key": "control_transfer_train_to_agg_acc",
+      "value": 0.2695
+    },
+    {
+      "text": "Reproducible CPU report metric: control_transfer_train_to_val_acc",
+      "key": "control_transfer_train_to_val_acc",
+      "value": 0.5357
+    },
+    {
+      "text": "Reproducible CPU report metric: val_sample_rows",
+      "key": "val_sample_rows",
+      "value": 28
+    },
+    {
+      "text": "Reproducible CPU report metric: val_sample_pairs",
+      "key": "val_sample_pairs",
+      "value": 24
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_val_sample_dedup.multi",
+      "key": "conc_val_sample_dedup.multi",
+      "value": 5
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_val_sample_dedup.concordant",
+      "key": "conc_val_sample_dedup.concordant",
+      "value": 0
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_val_sample_dedup.expected_independent",
+      "key": "conc_val_sample_dedup.expected_independent",
+      "value": 1.04
+    },
+    {
+      "text": "Reproducible CPU report metric: val_oracle_base_accuracy_auc",
+      "key": "val_oracle_base_accuracy_auc",
+      "value": 0.7333
+    },
+    {
+      "text": "Reproducible CPU report metric: val_nonrobust_base1",
+      "key": "val_nonrobust_base1",
+      "value": 8
+    },
+    {
+      "text": "Reproducible CPU report metric: val_nonrobust_pairs",
+      "key": "val_nonrobust_pairs",
+      "value": 15
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_train_all_configs.multi",
+      "key": "conc_train_all_configs.multi",
+      "value": 16
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_train_all_configs.concordant",
+      "key": "conc_train_all_configs.concordant",
+      "value": 15
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_train_all_configs.expected_independent",
+      "key": "conc_train_all_configs.expected_independent",
+      "value": 5.94
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_train_gptoss_collapsed.multi",
+      "key": "conc_train_gptoss_collapsed.multi",
+      "value": 14
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_train_gptoss_collapsed.expected_independent",
+      "key": "conc_train_gptoss_collapsed.expected_independent",
+      "value": 5.52
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_train_small_only.multi",
+      "key": "conc_train_small_only.multi",
+      "value": 11
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_train_small_only.concordant",
+      "key": "conc_train_small_only.concordant",
+      "value": 11
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_train_small_only.expected_independent",
+      "key": "conc_train_small_only.expected_independent",
+      "value": 4.89
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_train_decay0_rule_gptoss_collapsed.multi",
+      "key": "conc_train_decay0_rule_gptoss_collapsed.multi",
+      "value": 15
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_train_decay0_rule_gptoss_collapsed.expected_independent",
+      "key": "conc_train_decay0_rule_gptoss_collapsed.expected_independent",
+      "value": 5.07
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_val_sample.multi",
+      "key": "conc_val_sample.multi",
+      "value": 6
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_val_sample.concordant",
+      "key": "conc_val_sample.concordant",
+      "value": 1
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_val_sample.expected_independent",
+      "key": "conc_val_sample.expected_independent",
+      "value": 1.55
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_sample_full_maxdrop_rule.multi",
+      "key": "conc_sample_full_maxdrop_rule.multi",
+      "value": 10
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_sample_full_maxdrop_rule.expected_independent",
+      "key": "conc_sample_full_maxdrop_rule.expected_independent",
+      "value": 0.25
+    },
+    {
+      "text": "Reproducible CPU report metric: agg_format_crosstab.list_rows_nonrobust",
+      "key": "agg_format_crosstab.list_rows_nonrobust",
+      "value": 0
+    },
+    {
+      "text": "Reproducible CPU report metric: agg_format_crosstab.string_rows_robust",
+      "key": "agg_format_crosstab.string_rows_robust",
+      "value": 0
+    },
+    {
+      "text": "Reproducible CPU report metric: r2_problem_train_multi_rows",
+      "key": "r2_problem_train_multi_rows",
+      "value": 76
+    },
+    {
+      "text": "Reproducible CPU report metric: r2_problem_train_multi_problems",
+      "key": "r2_problem_train_multi_problems",
+      "value": 18
+    },
+    {
+      "text": "Reproducible CPU report metric: r2_problem_train_multi_single_model_problems",
+      "key": "r2_problem_train_multi_single_model_problems",
+      "value": 3
+    },
+    {
+      "text": "Reproducible CPU report metric: r2_problem_train_true_multi",
+      "key": "r2_problem_train_true_multi",
+      "value": 0.7369
+    },
+    {
+      "text": "Reproducible CPU report metric: r2_problem_train_true_multi_rows",
+      "key": "r2_problem_train_true_multi_rows",
+      "value": 70
+    },
+    {
+      "text": "Reproducible CPU report metric: r2_problem_train_true_multi_problems",
+      "key": "r2_problem_train_true_multi_problems",
+      "value": 15
+    },
+    {
+      "text": "Reproducible CPU report metric: r2_problem_small_multi",
+      "key": "r2_problem_small_multi",
+      "value": 0.7811
+    },
+    {
+      "text": "Reproducible CPU report metric: r2_problem_small_multi_rows",
+      "key": "r2_problem_small_multi_rows",
+      "value": 39
+    },
+    {
+      "text": "Reproducible CPU report metric: r2_problem_small_multi_problems",
+      "key": "r2_problem_small_multi_problems",
+      "value": 14
+    },
+    {
+      "text": "Reproducible CPU report metric: r2_problem_sample_full_pairs",
+      "key": "r2_problem_sample_full_pairs",
+      "value": 80
+    },
+    {
+      "text": "Reproducible CPU report metric: sample_full_models",
+      "key": "sample_full_models",
+      "value": 8
+    },
+    {
+      "text": "Reproducible CPU report metric: sample_full_problems",
+      "key": "sample_full_problems",
+      "value": 10
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_train_nogap_p10.multi",
+      "key": "conc_train_nogap_p10.multi",
+      "value": 15
+    },
+    {
+      "text": "Reproducible CPU report metric: conc_train_nogap_p10.expected_independent",
+      "key": "conc_train_nogap_p10.expected_independent",
+      "value": 3.59
+    }
+  ]
+}
