@@ -1,0 +1,41 @@
+[
+  {
+    "path": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/bundles/solution-always-true-small.zip",
+    "bytes": 519,
+    "sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+    "members": [
+      {
+        "name": "small.txt",
+        "uncompressed_bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "solution.py",
+        "uncompressed_bytes": 601,
+        "sha256": "a3ae331303a39c13915140d5621d3347fbe1f9c0f35bf53942fb1f32ada8012f"
+      }
+    ]
+  },
+  {
+    "path": "/Users/felix/Desktop/AIMO Interpretability Challenge/v6-execution/work/bundles/solution-text-length-control-small.zip",
+    "bytes": 1387,
+    "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+    "members": [
+      {
+        "name": "artifacts/text_length.joblib",
+        "uncompressed_bytes": 1027,
+        "sha256": "e78784044aa5acefb48e956e27d84b15065c26f83d295663834808424dcd180d"
+      },
+      {
+        "name": "small.txt",
+        "uncompressed_bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "name": "solution.py",
+        "uncompressed_bytes": 692,
+        "sha256": "c392619d3c8e78353e9ad51705b228eea134fe259c5965b574b265a2ae8eb02b"
+      }
+    ]
+  }
+]

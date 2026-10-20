@@ -87,6 +87,8 @@ def body(markdown):
                 abstract = True
             elif heading == "Source index":
                 references = True
+            elif heading == "AI Use Statement":
+                output.append(r"\section*{AI Use Statement}")
             else:
                 output.append(r"\section{" + inline(re.sub(r"^\d+\.\s*", "", heading)) + "}")
             i += 1

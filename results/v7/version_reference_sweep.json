@@ -1,0 +1,42 @@
+{
+  "result": "PASS",
+  "active_report_pointers": "v7",
+  "v6_references_retained": [
+    {
+      "path": "RELEASE_FILES.json",
+      "classification": "Current v7 pointers with preserved v6 history"
+    },
+    {
+      "path": "RUN_STATUS.json",
+      "classification": "Current v7 pointers with preserved v6 history"
+    },
+    {
+      "path": "report/regen_source_checks_v6.json",
+      "classification": "Historical v6 evidence or explicit v6 canon comparison"
+    },
+    {
+      "path": "report/render_qa_v6.json",
+      "classification": "Historical v6 evidence or explicit v6 canon comparison"
+    },
+    {
+      "path": "results/v6/publication/receipt.json",
+      "classification": "Historical v6 evidence or explicit v6 canon comparison"
+    },
+    {
+      "path": "results/v6/publication/steps.json",
+      "classification": "Historical v6 evidence or explicit v6 canon comparison"
+    },
+    {
+      "path": "results/v7/fixture_replays.json",
+      "classification": "Historical v6 evidence or explicit v6 canon comparison"
+    },
+    {
+      "path": "results/v7/input_checks.json",
+      "classification": "Historical v6 evidence or explicit v6 canon comparison"
+    },
+    {
+      "path": "results/v7/protected_inputs.json",
+      "classification": "Historical v6 evidence or explicit v6 canon comparison"
+    }
+  ]
+}

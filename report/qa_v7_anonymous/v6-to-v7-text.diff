@@ -1,0 +1,33 @@
+--- v6-anonymous
++++ v7-anonymous
+@@ -438,17 +438,24 @@
+ tablish what was executed and which artifacts can be rebuilt; compilation alone does not validate the
+ assumptions of the statistical model. The raw leaderboard retains source identifiers for auditability,
+ while the scientific report discusses aggregated owner counts and neutral source titles.
+-AI assistance disclosure: Claude prepared the inherited research summaries, planning materials
+-and initial outline. OpenAI Codex implemented and ran CPU analyses, expanded and revised the
+-manuscript, checked source evidence and used independent AI agents for analysis, report prepara-
+-tion and gates. No new robustness labels or model predictions were generated for this report. Source
+-claims, numerical outputs and limitations are separated so that AI-generated prose is not treated as
+-experimental evidence.
+ The practical result is a reproducible evidential boundary: under a declared calibration model, the
+ visible validation grid separates only perfect observed outcomes after selection and multiplicity, and
+ has low single-method power for the stated moderate effects. A larger confirmation set, item-level
+ paired outcomes and explicit grouping/balance rules would make the board more informative about
+ robustness predictors and about the interpretability claims attached to them.
++
++AI Use Statement
++We used AI assistance for Ideation (screening hypotheses and research directions, literature and
++prior-report search, and summarizing sources), Coding (writing and running CPU reproduction and
++analysis scripts, gates and fetchers), Analysis (deriving and cross-checking reported statistics and
++independently recomputing the leaderboard analysis), and Writing (drafting and editing the report
++text and structure). The tools were Anthropic Claude and OpenAI Codex, including independent
++AI agents used for cross-checks. AI was not used to create or alter the source leaderboard or ro-
++bustness labels, to fabricate measurements, or to write peer reviews. AI-assisted code computed
++the reported statistics from the released source data; those derived computations are distinguished
++from source observations. The author is responsible for reviewing all AI-assisted content and veri-
++fying reported numbers against the released code and data, and takes full responsibility for the final
++content, including AI-assisted text, claims, code and other artifacts.
+ 
+ 
+ 

@@ -1,4 +1,4 @@
-# AIMO-Interp report v6
+# AIMO-Interp report v7
 
 `REPORT_OUTLINE.md` is the editable manuscript with numeric placeholders.
 `REPORT_DRAFT.md` is its gated rendering against `results/report_numbers.json`
@@ -12,7 +12,11 @@ differences between variants are author identity and PDF author metadata. Both
 embed unchanged official `neurips_2026.sty` bytes from the hash-pinned author kit.
 The preprint option, font/package choices, page geometry and body typesetting
 defaults are preserved from v5. The two variants remain available while the
-venue's anonymity policy is unresolved.
+venue's anonymity policy is unresolved. The v7 PDFs are locally prepared, with a
+separate unnumbered AI Use Statement on page 8 before references on page 9.
+The statement describes review responsibility without claiming unverified
+completed human review. Actual author review and the form's matching completed
+review confirmation remain necessary before submission.
 
 The v6 lead is a conditional, selection-adjusted analysis of the public
 private-validation leaderboard and an exact power calculation. The paper
@@ -47,11 +51,20 @@ uses the LaTeX-production skill's compiler/QA workflow; its execution receipt,
 page counts, PDF/source hashes and Type-3 font checks accompany the publication
 record. A successful compile is distinct from inspecting every rendered page.
 
-`REGEN_SPEC_v6.md` predeclares the changes against the hash-verified five-page v5
-PDF and its generation specification. `REGEN_FIDELITY_v6.md` records the final
-text and formatting comparison after render review. Historical v5 PDF and QA
-files remain versioned evidence for that earlier artifact. The v6 target is six
-to eight body pages plus references with no font or margin compression.
+`REGEN_SPEC_v7.md` predeclares the disclosure-only changes against the verified
+v6 PDFs and generation specification. `REGEN_FIDELITY_v7.md` records the text,
+formatting and per-page pixel comparison. The historical v5/v6 PDFs and QA files
+remain versioned evidence. Both v7 variants retain nine pages and the original
+font and margin settings.
+
+The supplied `tools/openreview_payload_gate.py` is preserved byte-for-byte.
+Its four attachment replay fixtures produce the expected exits, and both v7
+PDFs pass its current form checks. This is a limited structural check: it does
+not verify completed human review, reviewer commitments, authenticated account
+access, invitation freshness, or all nested author/reviewer constraints.
+`tools/openreview_submission_preflight.py` adds stricter local validation and
+keeps the current artifact at READY_FOR_AUTHOR_REVIEW. The prepared payload is
+`plans/payload_v7.json`; its abstract comes directly from the gated manuscript.
 
 Raw source URLs and immutable revisions for earlier public participant reports
 are kept in the research evidence manifest. The manuscript uses neutral report

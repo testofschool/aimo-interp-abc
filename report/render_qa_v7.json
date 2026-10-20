@@ -1,0 +1,36 @@
+{
+  "variants": {
+    "named": {
+      "pdf": "report/aimo-interp-report-v7-named.pdf",
+      "sha256": "433f19fc65d970c7be58289a7a9e01564fad4e7f31f13462db60f88f4cde909e",
+      "source_sha256": "bcf50e5b595011a247df8598271a4f097f7768e8565d96f65b030773b4c77001",
+      "source_date_epoch": "1792484749",
+      "latex_runs": 2,
+      "compile": "PASS",
+      "visual_review": "PASS",
+      "pages": 9,
+      "body_pages": 8,
+      "reference_pages": 1,
+      "type3_count": 0,
+      "visual_scope": "Both complete nine-page contact sheets inspected; named changed page 8 also inspected at full resolution. Pixels on pages 1-7 and 9 match v6 exactly.",
+      "defects": []
+    },
+    "anonymous": {
+      "pdf": "report/aimo-interp-report-v7-anonymous.pdf",
+      "sha256": "a86f03a92c77e0d97979d259c2f140c665f68f02aa3f6169cc303395b83a1b88",
+      "source_sha256": "13b59d52006a4930f57d40ab4e6b28aeedd53b1a01663bdce2fef4f4fbddc9f9",
+      "source_date_epoch": "1792484749",
+      "latex_runs": 2,
+      "compile": "PASS",
+      "visual_review": "PASS",
+      "pages": 9,
+      "body_pages": 8,
+      "reference_pages": 1,
+      "type3_count": 0,
+      "visual_scope": "Both complete nine-page contact sheets inspected; named changed page 8 also inspected at full resolution. Pixels on pages 1-7 and 9 match v6 exactly.",
+      "defects": []
+    }
+  },
+  "reviewer": "Codex page inspection and independent read-only agent render/pixel QA",
+  "submission_status": "READY_FOR_AUTHOR_REVIEW"
+}

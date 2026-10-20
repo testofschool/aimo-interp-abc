@@ -1,0 +1,110 @@
+{
+  "checked_at": "2026-10-20T09:31:06.526414+00:00",
+  "base_head": "a429a9e71b65e804481394f8b3a5f6799a9a6987",
+  "public_head": "a429a9e71b65e804481394f8b3a5f6799a9a6987",
+  "preregistered_checks": [
+    {
+      "path": "report/aimo-interp-report-v6-named.pdf",
+      "expected_sha256": "6114f15549c07c12efce021a6521d0d72d20c53adc46079d3a4bba9558eef9ef",
+      "actual_sha256": "6114f15549c07c12efce021a6521d0d72d20c53adc46079d3a4bba9558eef9ef",
+      "bytes": 193450,
+      "passed": true
+    },
+    {
+      "path": "bundles/solution-text-length-control-small.zip",
+      "expected_sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "actual_sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "bytes": 1387,
+      "passed": true
+    },
+    {
+      "path": "bundles/solution-always-true-small.zip",
+      "expected_sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "actual_sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "bytes": 519,
+      "passed": true
+    },
+    {
+      "path": "attach/tools/openreview_payload_gate.py",
+      "expected_sha256": "3a213f34831587bb5eabcfe3fd59e477a2604976c01e54b84e1ff2127fdb865f",
+      "actual_sha256": "3a213f34831587bb5eabcfe3fd59e477a2604976c01e54b84e1ff2127fdb865f",
+      "passed": true
+    },
+    {
+      "path": "attach/fixtures/payload_v7.json",
+      "expected_sha256": "caa2d5437dd865e4b88fd1a78c6086517be0ca62adbcd0bdb45989aa836b5d20",
+      "actual_sha256": "caa2d5437dd865e4b88fd1a78c6086517be0ca62adbcd0bdb45989aa836b5d20",
+      "passed": true
+    },
+    {
+      "path": "attach/fixtures/invitation_live_2026-10-20T0917Z.json",
+      "expected_sha256": "1461a07c32e4851a8a58a95e14fc7458919060e4c65e0cb776cea55bf586d350",
+      "actual_sha256": "1461a07c32e4851a8a58a95e14fc7458919060e4c65e0cb776cea55bf586d350",
+      "passed": true
+    }
+  ],
+  "manifest_entries": [
+    {
+      "path": "./MANIFEST.sha256",
+      "expected_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "actual_sha256": "9e9556428481a83d4cc8b472f97fa6264af04320cb8f29cc3d979826da9c7025",
+      "passed": false
+    },
+    {
+      "path": "./evidence/SWEEP_R3.json",
+      "expected_sha256": "83de3330380fc2cf8046c5713969fd2fd52887c876241166860e4edb7e8035d4",
+      "actual_sha256": "83de3330380fc2cf8046c5713969fd2fd52887c876241166860e4edb7e8035d4",
+      "passed": true
+    },
+    {
+      "path": "./evidence/SWEEP_R3_REPORT.md",
+      "expected_sha256": "b2526492f2e4c48c76e64f0bce6a65a8f0943699221884bb47b4c865338d841c",
+      "actual_sha256": "b2526492f2e4c48c76e64f0bce6a65a8f0943699221884bb47b4c865338d841c",
+      "passed": true
+    },
+    {
+      "path": "./fixtures/ctrl.pdf",
+      "expected_sha256": "4bdad7a2943ec3f6cf20e84c86c47beaa5d24b628fb00b938213d7d28ff6e23e",
+      "actual_sha256": "4bdad7a2943ec3f6cf20e84c86c47beaa5d24b628fb00b938213d7d28ff6e23e",
+      "passed": true
+    },
+    {
+      "path": "./fixtures/ctrl.tex",
+      "expected_sha256": "5d4f2ea6336de0968994c1d8dd7bd5876c892589616517a309d61d2a1568750c",
+      "actual_sha256": "5d4f2ea6336de0968994c1d8dd7bd5876c892589616517a309d61d2a1568750c",
+      "passed": true
+    },
+    {
+      "path": "./fixtures/ctrl_bad.pdf",
+      "expected_sha256": "d77e7f5f2892c34096cba6744ef6570460338e9da58e42b22db4664946e79a0f",
+      "actual_sha256": "d77e7f5f2892c34096cba6744ef6570460338e9da58e42b22db4664946e79a0f",
+      "passed": true
+    },
+    {
+      "path": "./fixtures/invitation_live_2026-10-20T0917Z.json",
+      "expected_sha256": "1461a07c32e4851a8a58a95e14fc7458919060e4c65e0cb776cea55bf586d350",
+      "actual_sha256": "1461a07c32e4851a8a58a95e14fc7458919060e4c65e0cb776cea55bf586d350",
+      "passed": true
+    },
+    {
+      "path": "./fixtures/payload_as_planned_before_form_change.json",
+      "expected_sha256": "778c71ea0cf2ecad876ab40bad923e741443b7f9272eae27670452c832472c63",
+      "actual_sha256": "778c71ea0cf2ecad876ab40bad923e741443b7f9272eae27670452c832472c63",
+      "passed": true
+    },
+    {
+      "path": "./fixtures/payload_v7.json",
+      "expected_sha256": "caa2d5437dd865e4b88fd1a78c6086517be0ca62adbcd0bdb45989aa836b5d20",
+      "actual_sha256": "caa2d5437dd865e4b88fd1a78c6086517be0ca62adbcd0bdb45989aa836b5d20",
+      "passed": true
+    },
+    {
+      "path": "./tools/openreview_payload_gate.py",
+      "expected_sha256": "3a213f34831587bb5eabcfe3fd59e477a2604976c01e54b84e1ff2127fdb865f",
+      "actual_sha256": "3a213f34831587bb5eabcfe3fd59e477a2604976c01e54b84e1ff2127fdb865f",
+      "passed": true
+    }
+  ],
+  "manifest_result": "9_PASS_1_SELF_ENTRY_FAIL",
+  "decision": "Individual preregistered input pins all pass. Original manifest retained unmodified; its impossible empty-self-hash is a packaging defect, not a modification of pinned content."
+}

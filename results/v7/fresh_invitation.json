@@ -1,0 +1,9 @@
+{
+  "path": "plans/invitation_20261020T093737Z.json",
+  "url": "https://api2.openreview.net/invitations?id=NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/-/Submission",
+  "fetched_at_utc": "2026-10-20T09:37:37.325280+00:00",
+  "sha256": "6d62fa0cedd0c5679fd5d20d8096b6f9acb3c9bc69f1b297ce4476e0f5b86ca5",
+  "mdate": 1792484749788,
+  "duedate": 1793520000000,
+  "expdate": 1793521800000
+}

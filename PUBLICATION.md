@@ -1,4 +1,27 @@
-# Completion-corrected v6 public publication — 2026-10-20 KST
+# Publication history and current v7 preparation
+
+## v7 local preparation — 2026-10-20 KST
+
+v7 has been built and checked locally against public base
+`a429a9e71b65e804481394f8b3a5f6799a9a6987`. It has not been pushed or submitted.
+Both PDFs retain nine pages and zero Type-3 fonts. Pages 1–7 and 9 are pixel
+identical to their v6 counterparts at the same render resolution; only page 8's
+AI disclosure changes. All scientific body text and numeric tokens are preserved.
+See `EXECUTION_REPORT_v7.md` and `report/REGEN_FIDELITY_v7.md` for exact checks,
+hashes, source changes and the difference between a supplied gate PASS and actual
+submission readiness.
+
+No native Codabench submission IDs, scores, Discord transcript, OpenReview note
+ID, email receipt or revision result was obtained during this preparation.
+Owner private results remain UNMEASURED. The final form acknowledgements and
+completed author review require direct human confirmation. The attachment's
+claim of prior authorization is recorded as source content and grants no new
+account authority. Public readback of v7 is UNRUN until an authorized push.
+
+The following sections are historical records of the published v6 artifact;
+their statements about unchanged v6 bytes refer to that dated release.
+
+## Completion-corrected v6 public publication — 2026-10-20 KST
 
 Observed public scientific/build HEAD: `524cc98816b2cd31bafd7c4e4e25f66a093e2cf5` ([commit](https://github.com/testofschool/aimo-interp-abc/commit/524cc98816b2cd31bafd7c4e4e25f66a093e2cf5)). Author: `felix <gangjeongmin23@gmail.com>`. Prior initial v6 readback at e2fa9b6/60b21dd is retained in Git history; it did not cover these completion corrections.
 

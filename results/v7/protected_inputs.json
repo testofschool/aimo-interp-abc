@@ -1,0 +1,53 @@
+{
+  "result": "PASS",
+  "files": {
+    "bundles/solution-text-length-control-small.zip": {
+      "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "unchanged_from_base": true
+    },
+    "bundles/solution-always-true-small.zip": {
+      "sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "unchanged_from_base": true
+    },
+    "report/aimo-interp-report-v6-named.pdf": {
+      "sha256": "6114f15549c07c12efce021a6521d0d72d20c53adc46079d3a4bba9558eef9ef",
+      "unchanged_from_base": true
+    },
+    "report/aimo-interp-report-v6-anonymous.pdf": {
+      "sha256": "f1d2a4df94c1669c6f0e2e3dc67c7dda6324b51b8ccc83b28a95a77d79d88ebb",
+      "unchanged_from_base": true
+    },
+    "requirements-local.txt": {
+      "sha256": "a37eb58d8c0278e1643bdb132b53b3d382013a9e39e86a03f3501d4acf4769ae",
+      "unchanged_from_base": true
+    },
+    "research/PREREG_v6.json": {
+      "sha256": "cd0ee93fbb536f9de02f626164b40915eb3be7ed95b69b5b154f0fd3fed81a36",
+      "unchanged_from_base": true
+    },
+    "research/claims.json": {
+      "sha256": "759c24ece59323610147a958c13fa1e798f350f3110e81ec39d31b2db8c687a5",
+      "unchanged_from_base": true
+    },
+    "results/report_numbers.json": {
+      "sha256": "cc31e5a71cd04134504a246552aecf583a3536b36e2b0f1cae1732d3625f940c",
+      "unchanged_from_base": true
+    },
+    "data/manifest.json": {
+      "sha256": "13bca65e74537ce8fa252a86b899110bb526abd45a198e1fe819ca17b506f771",
+      "unchanged_from_base": true
+    },
+    "tools/prereg_codabench_gate.py": {
+      "sha256": "07b09da4e05af061f3457268e0ac10e0a45b2bdd28484477345fad8337ff1d9d",
+      "unchanged_from_base": true
+    },
+    "tools/render_report.py": {
+      "sha256": "2a4b96bfa97abfb37ab46ec9fa9fd1b0090e69e34c712ac36a8831c61131b142",
+      "unchanged_from_base": true
+    },
+    "tools/reproduce_report.py": {
+      "sha256": "f701f1154defc62feb8eee614a2a22fbd219a90451dd8816b8c99db3c9215ebf",
+      "unchanged_from_base": true
+    }
+  }
+}

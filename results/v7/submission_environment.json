@@ -1,0 +1,16 @@
+{
+  "environment": "/Users/felix/Desktop/AIMO Interpretability Challenge/v7-execution/.venv-submission",
+  "purpose": "Isolated optional API environment; no client authenticated or instantiated",
+  "packages": {
+    "openreview-py": "2.9.0",
+    "requests": "2.34.2"
+  },
+  "api_signatures": {
+    "put_attachment": "(self, file_path, invitation, name)",
+    "post_note_edit": "(self, invitation, signatures, note=None, readers=None, writers=None, nonreaders=None, content=None, await_process=False)",
+    "get_note": "(self, id, details=None)",
+    "get_note_edits": "(self, note_id=None, invitation=None, with_count=None, sort=None, trash=None, limit=None)"
+  },
+  "authenticated": false,
+  "account_actions": 0
+}

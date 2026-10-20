@@ -1,6 +1,6 @@
 # AIMO-Interp: validation leaderboard identifiability
 
-The v6 report asks what can be resolved from a small public validation leaderboard.
+The v7 report asks what can be resolved from a small public validation leaderboard.
 On the pinned October 19 snapshot (retrieved October 20, 2026 KST), owner-selection
 adjustment followed by Benjamini–Hochberg leaves 2 of 61 Small owners and 1 of 41
 Main owners significant under an independent fair-coin item null. All survivors
@@ -17,9 +17,12 @@ selection or multiple-owner correction. The report keeps those limits explicit.
 Public anonymous fresh-clone V1–V6 passed at scientific commit `524cc98816b2cd31bafd7c4e4e25f66a093e2cf5`;
 see `PUBLICATION.md` and `results/v6/publication/`.
 
-Read `report/REPORT_DRAFT.md`, the named and anonymous v6 PDFs under `report/`,
-`EXECUTION_REPORT_v6.md`, and `PUBLICATION.md`. The v5 report and its execution
-receipts remain historical evidence. Two frozen owner bundle scores and final-test
+Read `report/REPORT_DRAFT.md`, the named and anonymous v7 PDFs under `report/`,
+`EXECUTION_REPORT_v7.md`, and `PUBLICATION.md`. v7 replaces the inline disclosure
+with a separate AI Use Statement; scientific content and measured values are
+unchanged. The v7 files are locally prepared and have not been pushed or submitted.
+The published v6 report and earlier execution receipts remain historical evidence.
+Two frozen owner bundle scores and final-test
 performance remain **UNMEASURED**. No GPU/model generation run was launched.
 
 ## Reproduce
@@ -61,8 +64,9 @@ A hash mismatch stops before computation.
 
 `report/create_source.py` produces named and anonymous NeurIPS sources from the
 same gated body. See `report/README.md` for build and font/render verification.
-Both variants are retained while the actual OpenReview invitation's anonymity
-policy is unavailable. This repository's publication is not an OpenReview receipt.
+Both variants are retained while venue anonymity instructions remain unverified.
+The current public invitation is readable, but does not settle an anonymity policy.
+This repository's publication is not an OpenReview receipt.
 
 An October 20 public portal recheck found an unresolved report-deadline conflict:
 the Submission invitation currently configures November 1 at 17:00 KST, while the
@@ -81,4 +85,4 @@ are in `HANDOFF_v6.md` and `research/identifiability_usage_v6.md`. Method reopen
 remains CLOSED. AI assistance and all statistical assumptions are disclosed in
 the report. Current release receipts supersede historical v5 state statements.
 
-The full completion audit is in `COMPLETION_AUDIT_v6.md`. It records corrected snapshot membership, verbatim label rules and the protected owner-result rendering block; required owner evidence and the actual October 31 rescrape are still pending.
+The historical v6 completion audit is in `COMPLETION_AUDIT_v6.md`. It records corrected snapshot membership, verbatim label rules and the protected owner-result rendering block. `EXECUTION_REPORT_v7.md` records the current local checks, supplied-gate limitations and remaining author/account work. Required owner evidence and the actual October 31 rescrape are still pending.

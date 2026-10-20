@@ -1,0 +1,20 @@
+{
+ "title": "Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp",
+ "authors": [
+  {
+   "fullname": "Jung Min Kang",
+   "username": "~Jung_Min_Kang1"
+  }
+ ],
+ "keywords": [
+  "interpretability",
+  "robustness prediction",
+  "evaluation",
+  "leaderboard identifiability",
+  "statistical power",
+  "negative results"
+ ],
+ "abstract": "How much evidence does a small public leaderboard provide about robustness prediction? We analyze a hash-pinned AIMO-Interp leaderboard snapshot using its observed score grid. The smallest compatible item counts are 14 for Small and 21 for Main. Under an explicit independent fair-coin item null and an independentsubmission model, we adjust each owner’s best visible score for its number of scored submissions, then apply Benjamini–Hochberg across owners. Only 2 of 61 Small owners and 1 of 41 Main owners reject that conditional null; every surviving owner has a perfect score. Non-rejection does not establish chance performance, method equivalence, or a pairwise ranking. Exact one-sided binomial power at true accuracy 0.6 is 0.12 and 0.2 on the respective grids. Power first reaches 0.8 at 158 items for accuracy 0.6 and 69 for 0.65; discreteness makes the sustained thresholds larger. We recommend at least 76–169 independent items for those stated effects before accounting for leaderboard selection. A supporting public-label audit finds no mixed labels among 11 Small problems with multiple checkpoints. We provide CPU reproduction, parsing and sensitivity contracts, and distinguish observed leaderboard statistics from unmeasured private results for our own controls.",
+ "email_sharing": "yes",
+ "data_release": "yes"
+}

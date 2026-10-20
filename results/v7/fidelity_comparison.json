@@ -1,0 +1,118 @@
+{
+  "named": {
+    "old_pages": 9,
+    "new_pages": 9,
+    "pixel_comparison": [
+      {
+        "page": 1,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 2,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 3,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 4,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 5,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 6,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 7,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 8,
+        "pixel_identical": false,
+        "difference_bbox": [
+          165,
+          509,
+          770,
+          836
+        ]
+      },
+      {
+        "page": 9,
+        "pixel_identical": true,
+        "difference_bbox": null
+      }
+    ]
+  },
+  "anonymous": {
+    "old_pages": 9,
+    "new_pages": 9,
+    "pixel_comparison": [
+      {
+        "page": 1,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 2,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 3,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 4,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 5,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 6,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 7,
+        "pixel_identical": true,
+        "difference_bbox": null
+      },
+      {
+        "page": 8,
+        "pixel_identical": false,
+        "difference_bbox": [
+          165,
+          509,
+          770,
+          836
+        ]
+      },
+      {
+        "page": 9,
+        "pixel_identical": true,
+        "difference_bbox": null
+      }
+    ]
+  },
+  "manuscript_except_disclosure_identical": true,
+  "outline_diff": "report/REPORT_OUTLINE.md only replaces old disclosure with new section",
+  "preamble_identical": true,
+  "numeric_token_sequence_identical": true
+}

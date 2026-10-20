@@ -1,0 +1,107 @@
+{
+  "result": "PASS",
+  "scope": "Synthetic fixtures, not account evidence",
+  "checks": [
+    {
+      "name": "old_payload_v6",
+      "argv": [
+        ".venv/bin/python",
+        "-I",
+        "tools/openreview_payload_gate.py",
+        "attach/fixtures/invitation_live_2026-10-20T0917Z.json",
+        "attach/fixtures/payload_as_planned_before_form_change.json",
+        "report/aimo-interp-report-v6-named.pdf"
+      ],
+      "exit": 1,
+      "stdout": {
+        "result": "BLOCKED",
+        "pages": 9,
+        "form_mdate": 1792484749788,
+        "violations": [
+          "payload key 'email_sharing' is not a field of the live form (form changed?)",
+          "payload key 'data_release' is not a field of the live form (form changed?)",
+          "required field 'reciprocal_reviewers' missing",
+          "required field 'ai_assistance' missing",
+          "required field 'ai_use_statement' missing",
+          "required field 'reciprocal_reviewing_acknowledgement' missing",
+          "required field 'rules_compliance' missing",
+          "PDF: no 'AI Use Statement' section heading"
+        ]
+      },
+      "stderr": "",
+      "expected_exit": 1,
+      "expected_violations": 8,
+      "passed": true
+    },
+    {
+      "name": "new_payload_v6",
+      "argv": [
+        ".venv/bin/python",
+        "-I",
+        "tools/openreview_payload_gate.py",
+        "attach/fixtures/invitation_live_2026-10-20T0917Z.json",
+        "attach/fixtures/payload_v7.json",
+        "report/aimo-interp-report-v6-named.pdf"
+      ],
+      "exit": 1,
+      "stdout": {
+        "result": "BLOCKED",
+        "pages": 9,
+        "form_mdate": 1792484749788,
+        "violations": [
+          "PDF: no 'AI Use Statement' section heading"
+        ]
+      },
+      "stderr": "",
+      "expected_exit": 1,
+      "expected_violations": 1,
+      "passed": true
+    },
+    {
+      "name": "new_payload_ctrl",
+      "argv": [
+        ".venv/bin/python",
+        "-I",
+        "tools/openreview_payload_gate.py",
+        "attach/fixtures/invitation_live_2026-10-20T0917Z.json",
+        "attach/fixtures/payload_v7.json",
+        "attach/fixtures/ctrl.pdf"
+      ],
+      "exit": 0,
+      "stdout": {
+        "result": "PASS",
+        "pages": 1,
+        "form_mdate": 1792484749788,
+        "violations": []
+      },
+      "stderr": "",
+      "expected_exit": 0,
+      "expected_violations": 0,
+      "passed": true
+    },
+    {
+      "name": "new_payload_badctrl",
+      "argv": [
+        ".venv/bin/python",
+        "-I",
+        "tools/openreview_payload_gate.py",
+        "attach/fixtures/invitation_live_2026-10-20T0917Z.json",
+        "attach/fixtures/payload_v7.json",
+        "attach/fixtures/ctrl_bad.pdf"
+      ],
+      "exit": 1,
+      "stdout": {
+        "result": "BLOCKED",
+        "pages": 1,
+        "form_mdate": 1792484749788,
+        "violations": [
+          "PDF AI Use Statement does not mention ticked box 'Writing'"
+        ]
+      },
+      "stderr": "",
+      "expected_exit": 1,
+      "expected_violations": 1,
+      "passed": true
+    }
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "result": "PASS",
+  "source_preamble_identical": true,
+  "scientific_body_outside_disclosure_identical": true,
+  "numeric_token_sequence_identical": true,
+  "variants": {
+    "named": {
+      "pdf": "report/aimo-interp-report-v7-named.pdf",
+      "source_sha256": "bcf50e5b595011a247df8598271a4f097f7768e8565d96f65b030773b4c77001"
+    },
+    "anonymous": {
+      "pdf": "report/aimo-interp-report-v7-anonymous.pdf",
+      "source_sha256": "13b59d52006a4930f57d40ab4e6b28aeedd53b1a01663bdce2fef4f4fbddc9f9"
+    }
+  }
+}
