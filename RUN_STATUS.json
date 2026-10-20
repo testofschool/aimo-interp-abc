@@ -51,7 +51,8 @@
     "private_validation": "UNMEASURED",
     "final_test": "UNMEASURED",
     "discord": "NOT_READ",
-    "openreview_receipt": "ABSENT"
+    "openreview_receipt": "ABSENT",
+    "status_confirmed_by_user": "2026-10-20: not yet submitted or announcements checked"
   },
   "schedule": {
     "task": "T5",
@@ -82,5 +83,18 @@
     "Owner Codabench receipts",
     "Owner verbatim Discord instructions",
     "October 31 actual rescrape and kill-rule decision"
-  ]
+  ],
+  "submission_portal": {
+    "checked_at_utc": "2026-10-20T02:13:21.758010+00:00",
+    "invitation": "READABLE_API_V2_ONE_RECORD",
+    "api_fromCache": true,
+    "configured_due_utc": "2026-11-01T08:00:00+00:00",
+    "configured_due_kst": "2026-11-01T17:00:00+09:00",
+    "expiration_is_due_date": false,
+    "website_report_date": "2026-11-15",
+    "deadline_status": "CONFLICT_UNRECONCILED",
+    "pdf_anonymity": "UNVERIFIED",
+    "authenticated_rendered_form": "NOT_OBSERVED",
+    "evidence": "research/v6_sources/PORTAL_CHECK_2026-10-20.md"
+  }
 }

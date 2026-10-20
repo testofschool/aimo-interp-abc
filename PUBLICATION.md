@@ -46,3 +46,20 @@ T4: Felix must upload both unchanged Small bundles and provide linked native sco
 T5: the October 31 rescrape and kill-rule decision have not run. A single follow-up is active for October 31 at 20:00 Asia/Seoul, target completion by 21:00; ID aimo-v6-leaderboard-rescrape. A configured schedule is not completion. The full goal therefore remains incomplete.
 
 New GPU jobs: 0. New paid-service spend: USD 0.
+
+## October 20 portal-status follow-up
+
+The exact public Submission API now returns a readable invitation. Its configured
+duedate is November 1 at 08:00 UTC / 17:00 KST, conflicting with the website's
+November 15 report date. This conflict is unresolved. The authenticated rendered
+form and Discord were not observed, and PDF anonymity remains UNVERIFIED. The
+owner confirmed that submissions and announcement checks have not yet been done.
+See `research/v6_sources/PORTAL_CHECK_2026-10-20.md` for URLs, source hashes and scope.
+
+This follow-up updates owner guidance and status evidence only. The complete
+scientific/build tree, manuscripts, PDFs, inputs, numerical outputs, fixtures,
+requirements and bundles remain byte-identical to `8ba307210f27487313b26b439e3ac647e2506ad4`.
+The earlier public fresh-clone/new-venv V1-V6 receipts continue to cover those
+unchanged bytes. New documentation requires separate public readback; it is not
+covered by the earlier numerical test receipts.
+The goal remains incomplete for owner actions and the actual October 31 rescrape.

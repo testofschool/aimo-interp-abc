@@ -24,9 +24,15 @@ Codex does not click Codabench/OpenReview or message organizers or participants.
    ordinary uploads do not establish nomination.
 5. Review both PDF variants. The author block is Jung Min Kang, independent.
    Verify final page/anonymity/file/deadline instructions in the actual submission
-   invitation before choosing the variant. It is not publicly readable in this
-   audit; retain both variants. Website context says November 15, 2026 for reports,
-   but the final hour/timezone is unverified.
+   invitation before choosing the variant. Its public API is now readable, but
+   explicit PDF anonymity/page-limit instructions remain UNVERIFIED; retain both
+   variants. The current portal duedate is November 1, 2026 at 17:00 KST (08:00
+   UTC), while the official website still gives November 15 and a November 1-15
+   report window. This is CONFLICT_UNRECONCILED. The portal's 17:30 KST expiration
+   is not its due date. Open the exact invitation linked in
+   `research/v6_sources/PORTAL_CHECK_2026-10-20.md`, preserve its displayed deadline
+   and PDF author instructions, and compare with the current Discord announcement.
+   Do not rely on November 15 as a confirmed portal cutoff.
 6. Perform the OpenReview final click and preserve its receipt. Teams considered
    for awards commit to up to three reviews during November 15–30, 2026.
 
@@ -36,3 +42,6 @@ October 31 rescrape: scheduled in this chat for 20:00 KST, target completion by
 
 Sources: [official website](https://aimo-interp.github.io/) and
 [organizer issue 10](https://github.com/aimo-interp/getting-started/issues/10).
+
+Owner confirmed on October 20 that submissions and announcement checks have not
+yet been performed. Scores remain UNMEASURED; no receipt is implied by this checklist.

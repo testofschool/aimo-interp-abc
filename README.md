@@ -64,6 +64,11 @@ same gated body. See `report/README.md` for build and font/render verification.
 Both variants are retained while the actual OpenReview invitation's anonymity
 policy is unavailable. This repository's publication is not an OpenReview receipt.
 
+An October 20 public portal recheck found an unresolved report-deadline conflict:
+the Submission invitation currently configures November 1 at 17:00 KST, while the
+official website says November 15. See `research/v6_sources/PORTAL_CHECK_2026-10-20.md`
+and `OWNER_CHECKLIST_v6.md`. PDF anonymity remains unverified; both variants stay.
+
 The owner uploads the unchanged Small bundles listed in `OWNER_CHECKLIST_v6.md`,
 records native receipts and screenshots, reads current Discord instructions,
 nominates final-test submissions, and performs the final OpenReview submission.
