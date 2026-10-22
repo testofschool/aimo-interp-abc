@@ -1,0 +1,423 @@
+--- v7-named
++++ v8-named
+@@ -8,28 +8,29 @@
+ 
+ 
+                                                Abstract
+-
+-            How much evidence does a small public leaderboard provide about robustness pre-
+-            diction? We analyze a hash-pinned AIMO-Interp leaderboard snapshot using its
+-            observed score grid. The smallest compatible item counts are 14 for Small and 21
+-            for Main. Under an explicit independent fair-coin item null and an independent-
+-            submission model, we adjust each owner’s best visible score for its number of
+-            scored submissions, then apply Benjamini–Hochberg across owners. Only 2 of
+-            61 Small owners and 1 of 41 Main owners reject that conditional null; every sur-
+-            viving owner has a perfect score. Non-rejection does not establish chance per-
+-            formance, method equivalence, or a pairwise ranking. Exact one-sided binomial
+-            power at true accuracy 0.6 is 0.12 and 0.2 on the respective grids. Power first
+-            reaches 0.8 at 158 items for accuracy 0.6 and 69 for 0.65; discreteness makes the
+-            sustained thresholds larger. We recommend at least 76–169 independent items
+-            for those stated effects before accounting for leaderboard selection. A supporting
+-            public-label audit finds no mixed labels among 11 Small problems with multiple
+-            checkpoints. We provide CPU reproduction, parsing and sensitivity contracts, and
+-            distinguish observed leaderboard statistics from unmeasured private results for our
+-            own controls.
++            On the frozen AIMO-Interp public validation board (14 Small and 21 Main items,
++            inferred from the score grid), no score below perfect is separable from the in-
++            dependent fair-coin null after per-owner selection and across-owner Benjamini–
++            Hochberg correction: 59 of 61 Small owners and 40 of 41 Main owners are not
++            rejected, including an owner with a 12/14 Small result. We analyze a hash-pinned
++            AIMO-Interp leaderboard snapshot using its observed score grid. The smallest
++            compatible item counts are 14 for Small and 21 for Main. Under an explicit in-
++            dependent fair-coin item null and an independent-submission model, we adjust
++            each owner’s best visible score for its number of scored submissions, then apply
++            Benjamini–Hochberg across owners. Only 2 of 61 Small owners and 1 of 41 Main
++            owners reject that conditional null; every surviving owner has a perfect score.
++            Non-rejection leaves chance performance, method equivalence and pairwise rank-
++            ing unresolved. Exact one-sided binomial power at true accuracy 0.6 is 0.12 and
++            0.2 on the respective grids. Power first reaches 0.8 at 158 items for accuracy 0.6
++            and 69 for 0.65; discreteness makes the sustained thresholds larger. We recom-
++            mend at least 76–169 independent items for those stated effects before accounting
++            for leaderboard selection. A supporting public-label audit finds no mixed labels
++            among 11 Small problems with multiple checkpoints. We provide CPU repro-
++            duction, parsing and sensitivity contracts, and distinguish observed leaderboard
++            statistics from unmeasured private results for our own controls.
+ 
+ 
+ 1    Task and the evidence a leaderboard supplies
+-
+ The AIMO Interpretability Challenge asks whether a model will answer a mathematical problem
+ robustly under meaning-preserving perturbations. A predictor receives a problem and access to a
+ specified model, then produces a binary robustness decision. The Small track uses a fixed set of
+@@ -47,21 +48,24 @@
+ test. Our statistical claims below are conditional on a declared null and scoring model. [1, 2, 5]
+ The scientific question is whether the public validation board can separate plausible improvements
+ in accuracy from score variation and repeated selection. A board with few items can still detect an
++
++Preprint.
++ extreme outcome. It can simultaneously have little power for a useful but moderate improvement,
+ especially when owners can try several methods and retain the best score. The relevant unit for the
+-
+-Preprint.
+- selection adjustment is the owner within each track, rather than each displayed score row. Neither an
+ isolated significant owner nor a collection of non-significant owners is itself an ordering of methods.
+ Our main contribution is an executable, snapshot-specific assessment of that evidential limit. We
+-specify how the score grid is reconstructed, how invalid predictions and duplicate rows enter the
+-denominator, how an owner’s best visible result is adjusted, and what sample size detects stated
+-effects under the same null. We then connect this result to a supporting label audit: a training set
+-dominated by problem identity cannot by itself teach the contrast that a balanced per-problem test is
+-designed to measure. That latter observation overlaps prior public work and is not our lead novelty
+-claim. The report concerns evaluation design and uncertainty; it does not propose a new robustness
+-predictor.
++specify how the score grid is reconstructed, how invalid predictions and duplicate rows enter the de-
++nominator, how an owner’s best visible result is adjusted, and what sample size detects stated effects
++under the same null. We then connect this result to a supporting label audit: a training set dominated
++by problem identity cannot by itself teach the contrast that a balanced per-problem test is designed
++to measure. That latter observation overlaps prior public work and remains supporting context rather
++than our lead novelty claim. For organizers and later evaluations of robustness predictors, the ac-
++tionable single-predictor planning rule is at least 76 independent correctness items for true accuracy
++0.65 (169 for 0.6), sustaining power 0.8 at level 0.05 against the fair-coin reference before any se-
++lection correction. Method comparisons should separately use paired, problem-clustered outcomes
++and size those comparisons separately.
+ 
+ 2     A conditional analysis of the visible leaderboard
+ 2.1   Snapshot, units and score reconstruction
+@@ -97,42 +101,39 @@
+ null makes item correctness independent with common probability one half. The one-sided exact
+ upper-tail probability for an observed count k is
+ 
+-                                                              N
+-                                                              X      
+-                                                                    N −N
+-                        p(k, N ) =       Pr      (K ≥ k) =              2 .
+-                                     K∼Bin(N,1/2)                   j
++                                                              N  
++                                                              X  N
++                        p(k, N ) =       Pr      (K ≥ k) =               2−N .
++                                     K∼Bin(N,1/2)                    j
+                                                               j=k
+ 
+ The fair-coin null is a calibration model. It is not a claim that actual submissions guess, nor a
+ randomization test justified solely by class balance. A deterministic constant predictor under exact
++
++
++                                                    2
++ fixed balance, for example, has a different conditional score distribution. Correlated problem–model
+ outcomes, unequal item difficulties or an imperfectly balanced label composition can also invalidate
+ the binomial calibration. The analysis should therefore be read as “what this small grid can estab-
+ lish under this transparent reference,” rather than as unconditional evidence about the private task
+ distribution.
+-
+-
+-                                                    2
+- For an owner with m scored submissions and best single-submission tail probability p, we com-
+ pute the probability of observing at least one equally extreme result under independent, identically
+ calibrated submission scores:
+ 
+                                         padj = 1 − (1 − p)m .
+-
+ This is the independent-submission selection adjustment. It grows with the number of opportuni-
+ ties to obtain a high score. For independent counts obeying the stated binomial null, it is exact at
+ attainable score thresholds; with merely valid discrete p-values it is conservative. We do not fit a
+ distribution of latent owner skill. The calculation is fully determined by the best score, the track
+ denominator and the visible scored-submission count.
+ We apply the Benjamini–Hochberg step-up rule separately within Small and Main at false-discovery-
+-rate target 0.05. Sorting the adjusted p-values across the M scored owners, the rule retains the largest
+-rank r satisfying the threshold below and rejects the preceding ranks. Bonferroni at level 0.05 is
++rate target 0.05. Sorting the adjusted p-values across the M scored owners, the rule finds the largest
++rank r satisfying the threshold below and rejects ranks 1 through r. Bonferroni at level 0.05 is
+ reported as a sensitivity check. [9]
+ 
+-                                          padj,(r) ≤ q r/M.
+-
++                                         padj,(r) ≤ q r/M.
+ The conventional false-discovery-rate guarantee requires valid owner p-values and suitable depen-
+ dence conditions, such as independent owners. Public methods can share code, data, observations
+ and leaderboard feedback. We do not observe those dependencies. Bonferroni avoids the across-
+@@ -145,38 +146,34 @@
+ Table 1: Owner-level results under the declared independent-item and independent-submission null.
+ All surviving owners have perfect scores.
+ 
+-Track             Inferred items   Scored owners       BH survivors    Bonferroni        Perfect-score
+-                                                                       survivors         owners
+-Small             14               61                  2               2                 2
+-Main              21               41                  1               1                 1
++Track             Inferred items   Scored owners       BH survivors   Bonferroni       Perfect-score
++                                                                      survivors        owners
++Small             14               61                  2              2                2
++Main              21               41                  1              1                1
+ 
+ Only 2 Small owners and 1 Main owners survive either correction, and each has a perfect observed
+ score. A further sensitivity replaces the within-owner adjustment by the union bound, min(1, m p),
+ followed by across-owner Bonferroni. It gives 2 Small and 1 Main survivors. For a fixed family
+-of attempts and owners with valid single-submission binomial p-values, this bound requires no in-
+-dependence among attempts or among owners. With score-adaptive stopping, the observed-count
++of attempts and owners with valid single-submission binomial p-values, this bound allows arbitrary
++dependence among attempts and among owners. With score-adaptive stopping, the observed-count
+ result is descriptive unless p-value validity holds conditional on the observed family and counts.
+ The next Small owner has 12/14 correct across 5 scored submissions, with independent-submission
+ adjusted tail probability 0.0319. The next Main owner has 17/21 across 6 submissions, with adjusted
+ tail probability 0.0214. These next-best results fail the across-owner rule despite looking strong as
+ raw accuracy fractions.
+ A perfect score is an extreme event under this null regardless of the procedure that produced it.
+-Significance therefore cannot establish that the procedure used a model-internal signal, avoided
+-leakage, or generalizes to new problems. The snapshot records 1 perfect Small submission through
+-the queue named aimo_organizer_rerun. We report this as an observed queue label and make
+-no inference about how that run was produced or why it used that queue. The analysis assigns no
+-causal interpretation or accusation to a score or a queue.
++Whether the procedure used a model-internal signal, avoided leakage, or generalizes to new prob-
++lems requires separate evidence.
+ Conversely, a non-rejected owner may have useful accuracy. Low power, multiplicity and a small
+-number of visible trials can all prevent rejection. Our survivor count is neither the number of valid
+-methods nor the number of methods better than random in the target population. It is a count of
+-visible owners separated from the stated reference under the stated analysis. The surviving owners
+-are also not ordered against each other by a significance test. Ranking two predictors requires their
++number of visible trials can all prevent rejection. The survivor count measures visible owners sep-
++arated from the stated reference under this analysis; counting valid methods or ordering predictors
+ 
+ 
+                                                    3
+ -paired item outcomes, an estimand for their accuracy difference, and uncertainty accounting for
+-selection; aggregate best scores do not supply those ingredients.
++requires additional evidence. Ranking two predictors requires paired item outcomes, an estimand
++for their accuracy difference, and uncertainty accounting for selection. Aggregate best scores leave
++those ingredients unresolved.
+ 
+ 3      Exact power and an actionable item budget
+ 3.1    Single-submission planning calculation
+@@ -189,10 +186,10 @@
+              c(N ) = min{k : p(k, N ) ≤ α},        π(N, a) =          Pr     {K ≥ c(N )}.
+                                                                K∼Bin(N,a)
+ 
+-If no count satisfies the level constraint, power is zero. Using the exact integer threshold preserves
+-the conservative behavior of a discrete test. It also makes power non-monotone in N near the target:
+-adding an item sometimes increases the required correct count. A normal approximation or a single
+-first-crossing value hides this sawtooth behavior.
++When every attainable upper-tail probability exceeds the level constraint, power is zero. Using the
++exact integer threshold preserves the conservative behavior of a discrete test. It also makes power
++non-monotone in N near the target: adding an item sometimes increases the required correct count.
++A normal approximation or a single first-crossing value hides this sawtooth behavior.
+ 
+ Table 2: Exact single-submission binomial power on the inferred validation grids. This calculation
+ precedes selection and multiplicity correction.
+@@ -205,9 +202,9 @@
+ 
+ At true accuracy 0.6, the single-submission test has power 0.12 on the Small grid and 0.2 on Main.
+ At 0.65, these rise to 0.22 and 0.36. These probabilities describe repeated independent evaluations
+-under the model; they are not confidence levels for any named submission. They explain why a
+-moderate gain can remain unresolved on a tiny leaderboard even before correcting a best-of-many
+-search.
++under the model; submission-specific confidence levels require a separate calculation. They explain
++why a moderate gain can remain unresolved on a tiny leaderboard even before correcting a best-of-
++many search.
+ 
+ 3.2    First crossing and sustained power
+ 
+@@ -262,9 +259,7 @@
+ is to publish its effective evaluation units and uncertainty, rather than infer its adequacy from the
+ validation grid.
+ 
+-
+ 4     Supporting label audit and problem-only controls
+-
+ 4.1   Training agreement does not identify model contrasts
+ 
+ The pinned training table has 94 rows over 36 problems, with 80 labelled rows and 14 rows in an
+@@ -290,6 +285,7 @@
+ missions rather than prove exact per-problem balance. Final-test performance of these bundles is
+ also UNMEASURED. This owner-result limitation is separate from our observed analysis of the
+ public board.
++Private-validation receipts are pending.
+ 
+ 
+                                                   5
+@@ -297,10 +293,10 @@
+ 4.2    Descriptive drop variance and label concordance
+ 
+ For continuous maximum drop, we compute one minus within-problem squared error divided by
+-total squared error, using each observed problem mean to estimate its residuals. This in-sample R-
+-squared describes the public panel; it is not cross-validated prediction. Unlabelled rows are retained
+-where continuous drops are present. Repeated configurations include effort variants, so they are not
+-all distinct model checkpoints.
++total squared error, using each observed problem mean to estimate its residuals. This in-sample
++R-squared describes the public panel rather than cross-validated prediction. Unlabelled rows are
++retained where continuous drops are present. Repeated configurations include effort variants of the
++same model checkpoint.
+ 
+       Table 4: Observed maximum-drop variance grouped by problem; an in-sample description.
+ 
+@@ -335,46 +331,49 @@
+ 
+ A group is concordant when all included binary labels agree. The reference count sums the proba-
+ bilities of all-positive or all-negative labels at each observed group size under independent Bernoulli
+-draws at pooled prevalence. It is descriptive, not a significance test. The no-gap sensitivity labels
+-every training row by the lower public threshold, then collapses the larger checkpoint’s effort vari-
+-ants by the minimum binary label. Both the cohort and collapse rule change. The sample proxy
+-uses the public threshold band and is not a private competition label. These distinctions prevent a
+-label-concordance table from being read as evidence about unseen private outcomes.
++draws at pooled prevalence. This descriptive reference leaves significance testing to a separately
++justified model. The no-gap sensitivity labels every training row by the lower public threshold, then
++collapses the larger checkpoint’s effort variants by the minimum binary label. Both the cohort and
++collapse rule change. The sample proxy uses the public threshold band rather than private competi-
++tion labels. These distinctions confine the table to the observed public panels.
+ 
+ 4.3    A weak control with appropriately wide uncertainty
+ 
+ The control uses log-one-plus character length and digit count of the original problem. Class-
+ balanced logistic regression is fitted on all labelled Main-table rows, excluding every row with the
+ held-out problem string in each leave-one-problem-out fold. Evaluation uses only labelled Small
+-rows. The fixed decision threshold is 0.5, with no hyperparameter search or model-internal input.
++rows. The fixed decision threshold is 0.5, using fixed hyperparameters and only these problem-text
++features.
+ Holding out whole problems prevents the same problem string from entering both sides of a fold,
+-including effort variants. It does not remedy the absence of mixed labels or reproduce the private
+-test composition. We hold the out-of-fold predictions fixed and bootstrap the 22 problem clusters,
+-drawing the same number of clusters with replacement using seed 0 for 4000 replicates. One-class
+-draws are discarded, leaving 4000 valid draws. The balanced-accuracy 95% interval is [0.4759,
+-0.9378]; the plain-accuracy interval is [0.5556, 0.9556]. The paired balanced-accuracy improvement
++including effort variants. The absence of mixed labels and the difference from private test compo-
++sition remain limitations. We hold the out-of-fold predictions fixed and bootstrap the 22 problem
++clusters, drawing the same number of clusters with replacement using seed 0 for 4000 replicates.
++One-class draws are discarded, leaving 4000 valid draws. The balanced-accuracy 95% interval is
+ 
+ 
+                                                    6
+        Table 6: Problem-grouped public Small evaluation; these are public training outcomes.
+ 
+-Public Small              Plain accuracy               Balanced accuracy        Correct rows
++Public Small              Plain accuracy              Balanced accuracy        Correct rows
+ out-of-fold rule
+-Length and digit count    0.7674                       0.6855                   33 / 43
+-Always robust             0.7209                       0.5                      31 / 43
+-
+-
+-
+-over always robust is 0.1855, with interval [-0.0241, 0.4378], including zero. These intervals omit
+-retraining and method-selection variation.
++Length and digit count    0.7674                      0.6855                   33 / 43
++Always robust             0.7209                      0.5                      31 / 43
++
++
++
++
++[0.4759, 0.9378]; the plain-accuracy interval is [0.5556, 0.9556]. The paired balanced-accuracy
++improvement over always robust is 0.1855, with interval [-0.0241, 0.4378], including zero. These
++intervals omit retraining and method-selection variation.
+ Applying the fitted training control unchanged to public samples yields balanced accuracy 0.4913
+-on the aggregate sample and 0.5409 on the original validation sample rows. These samples have
+-different configurations and label conventions, with possible problem overlap, so this is not a verified
+-disjoint-problem transfer test. In the aggregate sample, the formatting of a perturbation-description
+-field perfectly associates with the observed label: a field-format flag has accuracy 1.0. That field
+-is not an original problem-only feature. It demonstrates why strong results on an unscored sample
+-panel cannot alone establish actionable interpretability or private-task performance. [3, 4]
++on the aggregate sample and 0.5409 on the original validation sample rows. Different configura-
++tions, label conventions and possible problem overlap leave disjoint-problem transfer unverified. In
++the aggregate sample, the formatting of a perturbation-description field perfectly associates with
++the observed label: a field-format flag has accuracy 1.0. That flag uses perturbation metadata out-
++side the original problem-only feature set. Establishing actionable interpretability or private-task
++performance requires evaluation beyond this unscored sample panel. [3, 4]
++
+ 
+ 
+ 5   Limitations and sensitivity directions
+@@ -385,54 +384,47 @@
+ also rely on the smallest compatible unweighted score grid. We report these assumptions at the point
+ of the main result because a small p-value under a convenient null is not an unconditional validation
+ of a predictor.
+-The within-owner selection adjustment assumes independent submissions. Closely related submis-
+-sions are likely to be positively correlated, so they can provide fewer effective opportunities than
+-m independent draws. Under such positive dependence the independence adjustment can be too
+-large and reduce the number of rejections. Other dependence patterns can have a different direction;
+-negative dependence can make it too small relative to the union event. Score-adaptive development
+-and stopping can invalidate both a fixed-trial model and a correction using the realized number of
+-attempts. The union-bound sensitivity also needs a fixed family or conditional validity given the
+-family and counts; observing all attempts alone does not establish that condition. We cannot esti-
+-mate effective attempts or stopping rules from aggregate scores. The release therefore exposes the
+-unadjusted tail, visible m and adjusted tail rather than hiding this choice in a single survivor count.
+-Only visible scored submissions are counted. Holding the observed best score fixed and retaining
+-the same independent-submission null, including additional hidden attempts would increase the ad-
+-justed tail and could only reduce the reported survivors. In that restricted sensitivity analysis, the
+-visible count is an optimistic upper bound. This is not an unconditional upper bound under unknown
+-dependence, missing owners, an unseen higher best score or a misspecified null. The two directions
+-must be read together: unobserved attempts can strengthen the selection penalty, while redundant
+-positively correlated attempts can weaken it.
+-Across-owner dependence presents an additional issue for the Benjamini–Hochberg interpretation.
+-Shared solutions or public discoveries can correlate owner outcomes. The matching Bonferroni
+-count is helpful because its family-wise bound allows arbitrary dependence across valid owner p-
+-values. It does not validate the within-owner p-values. We avoid describing the adjusted analysis as
+-a causal measurement of leaderboard overfitting or as a diagnosis of any individual submission.
++Selection and multiplicity introduce three dependence sensitivities. Within an owner, closely related
++submissions can be positively correlated: fewer effective opportunities can make the independent-
++submission adjustment too large and reduce rejections; negative dependence can make it too small
++relative to the union event. Score-adaptive development and stopping can invalidate a fixed-trial
++model or a correction based on realized attempts. The union-bound sensitivity needs a fixed family
++or p-value validity conditional on the family and counts. Aggregate scores leave effective attempts
++and stopping rules unidentified, so the release exposes the unadjusted tail, visible m and adjusted
++tail. Counting only visible scored submissions gives a conditional upper bound on survivors when
++the observed best score and independent-submission null are fixed: additional hidden attempts in-
++crease the adjusted tail. Unknown dependence, missing owners, an unseen higher best score or
++null misspecification defeat that bound. Across owners, shared solutions and public discoveries
++can correlate outcomes. Bonferroni permits arbitrary across-owner dependence among valid owner
++p-values, while still inheriting within-owner calibration assumptions. The matching count is a sensi-
++tivity result rather than a causal measurement of overfitting or a diagnosis of individual submissions.
+ The snapshot is finite and time-specific. New submissions, scoring changes, owner visibility or an
+-altered evaluator can change the result. The report has not measured our own frozen bundles on
+-private validation and has no final-test outcomes. Public-training concordance, sample metadata as-
+-sociations and reported participant experiences support evaluation cautions; they are not substitutes
+-for those missing results. A prior text-control report and a prior probe stress test discuss weaker pub-
+-lic performance under distribution shift, which supplies context rather than a matched comparison
+-to our analysis. [6, 7]
+-
+-
+-                                                   7
+--Finally, single-method power is not ranking power. The item recommendations concern a one-sided
+-test against the fair-coin reference at the stated effects and target. Pairwise ranking, small accuracy
+-gaps, correlated outcomes, multiple comparisons and repeated validation feedback can require more
+-data or a different design. We have not established that a method lacking significance is equivalent
+-to chance, that surviving methods differ from one another, or that the public board predicts the final
+-ordering.
+-
++altered evaluator can change the result. Private-validation receipts for our frozen bundles remain
++pending; the report has no final-test outcomes. Public-training concordance, sample metadata asso-
++ciations and reported participant experiences provide context for evaluation cautions while the owner
++measurements remain unavailable. A prior text-control report and a prior probe stress test discuss
++weaker public performance under distribution shift, which supplies context rather than a matched
++comparison to our analysis. [6, 7]
++Finally, the item recommendations concern single-method power for a one-sided test against the
++fair-coin reference at the stated effects and target. Pairwise ranking, small accuracy gaps, corre-
++lated outcomes, multiple comparisons and repeated validation feedback can require more data or a
++different design. Chance equivalence for non-rejected methods, differences among survivors and
++agreement with the final ordering each require their own evidence.
++
++
++                                                  7
++ 6   Reproduction and assistance
+-The release supplies a hash-pinned CPU pipeline rather than additional model runs. It verifies the
+-leaderboard snapshot and parquet inputs before computing; registers measured values in a claims
+-ledger; renders every reported measurement through checked numeric keys; and builds both author
+-variants from one Markdown manuscript using the unchanged official NeurIPS style. The leader-
+-board tool records denominator fits, parsing resolutions, owner counts, corrected tails, exact power at
+-the current grids and the sustained-threshold certification. The reproduction gates also test missing,
+-early, mismatched and bad-hash receipt fixtures without treating them as real submissions.
++The release supplies a hash-pinned CPU pipeline rather than additional model runs. The public re-
++production repository is https://github.com/testofschool/aimo-interp-abc. The v8 manuscript source
++base is 1962a9511d72b753ddd49dc3f2c7d92943d52a71; the build provenance records subse-
++quent text-only corrections. It verifies the leaderboard snapshot and parquet inputs before com-
++puting; registers measured values in a claims ledger; renders every reported measurement through
++checked numeric keys; and builds both author variants from one Markdown manuscript using the un-
++changed official NeurIPS style. The leaderboard tool records denominator fits, parsing resolutions,
++owner counts, corrected tails, exact power at the current grids and the sustained-threshold certifi-
++cation. The reproduction gates also test missing, early, mismatched and bad-hash receipt fixtures
++without treating them as real submissions.
+ The archive includes immutable dataset revisions, file hashes and a downloader. It does not re-
+ distribute third-party labelled data with unresolved licence terms. A separate publication record
+ contains clean-clone checks, source/PDF hashes, page counts and render review. Those records es-
+@@ -488,7 +480,7 @@
+      preserved in the research evidence manifest.
+  [8] Codabench. AIMO-Interp public private-validation leaderboard, frozen dated snapshot October 19,
+      2026; fetched October 20, 2026. Public leaderboard API. Hashed JSON pages and parser provenance
+-     accompany the reproduction archive.
++     accompany the reproduction archive: https://github.com/testofschool/aimo-interp-abc.
+  [9] Yoav Benjamini and Yosef Hochberg. Controlling the false discovery rate: a practical and powerful
+      approach to multiple testing. Journal of the Royal Statistical Society, Series B, 1995. Original article.
+ 

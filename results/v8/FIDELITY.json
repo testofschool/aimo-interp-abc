@@ -1,0 +1,224 @@
+{
+  "exact_outline_reconstructed_from_reported_changes": true,
+  "reported_change_count": 27,
+  "unreported_source_text_changes": 0,
+  "AI_statement_byte_identical": true,
+  "generator_byte_identical": true,
+  "preambles": {
+    "main.tex": true,
+    "main-anonymous.tex": true
+  },
+  "original_numeric_values_unchanged": true,
+  "derived_counts": {
+    "lb_small_nonrejected_owners": 59,
+    "lb_main_nonrejected_owners": 40
+  },
+  "style_sha256": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a",
+  "text_changes_file": "TEXT_CHANGES.json",
+  "pages": {
+    "named": [
+      {
+        "page": 1,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          164,
+          392,
+          771,
+          1093
+        ]
+      },
+      {
+        "page": 2,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          165,
+          114,
+          770,
+          1103
+        ]
+      },
+      {
+        "page": 3,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          165,
+          114,
+          771,
+          1104
+        ]
+      },
+      {
+        "page": 4,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          165,
+          114,
+          770,
+          945
+        ]
+      },
+      {
+        "page": 5,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          165,
+          184,
+          771,
+          1104
+        ]
+      },
+      {
+        "page": 6,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          163,
+          161,
+          770,
+          1104
+        ]
+      },
+      {
+        "page": 7,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          163,
+          255,
+          771,
+          1104
+        ]
+      },
+      {
+        "page": 8,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          165,
+          112,
+          770,
+          836
+        ]
+      },
+      {
+        "page": 9,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          397,
+          530,
+          669,
+          543
+        ]
+      }
+    ],
+    "anonymous": [
+      {
+        "page": 1,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          164,
+          375,
+          771,
+          1093
+        ]
+      },
+      {
+        "page": 2,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          165,
+          114,
+          770,
+          1103
+        ]
+      },
+      {
+        "page": 3,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          165,
+          114,
+          771,
+          1104
+        ]
+      },
+      {
+        "page": 4,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          165,
+          114,
+          770,
+          945
+        ]
+      },
+      {
+        "page": 5,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          165,
+          184,
+          771,
+          1104
+        ]
+      },
+      {
+        "page": 6,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          163,
+          161,
+          770,
+          1104
+        ]
+      },
+      {
+        "page": 7,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          163,
+          255,
+          771,
+          1104
+        ]
+      },
+      {
+        "page": 8,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          165,
+          112,
+          770,
+          836
+        ]
+      },
+      {
+        "page": 9,
+        "same_page_geometry_and_render_dimensions": true,
+        "pixel_identical": false,
+        "changed_bbox": [
+          397,
+          530,
+          669,
+          543
+        ]
+      }
+    ]
+  },
+  "format_difference_scope": "All text reflow follows reported E1-E5 edits and explicit source-base label; generator/preamble/style/font choices unchanged.",
+  "visual_inspection_evidence": "independent-qa/FINAL.json"
+}

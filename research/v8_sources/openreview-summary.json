@@ -1,0 +1,36 @@
+{
+  "sha256": "fa8f7c5d1686368e1b3734b6950d21cd7c8884b075ab70b87b3b7d1fc6d06a4a",
+  "bytes": 9528,
+  "tmdate": 1792599149662,
+  "duedate": 1793969940000,
+  "expdate": 1793971740000,
+  "required": [
+    "abstract",
+    "ai_assistance",
+    "ai_use_statement",
+    "authors",
+    "keywords",
+    "leaderboard_submission_ids",
+    "pdf",
+    "reciprocal_reviewers",
+    "reciprocal_reviewing_acknowledgement",
+    "rules_compliance",
+    "title",
+    "venue",
+    "venueid"
+  ],
+  "optional": [
+    "TLDR",
+    "white_box_award"
+  ],
+  "note_id_optional": true,
+  "license_enum": [
+    {
+      "value": "CC BY-SA 4.0",
+      "description": "CC BY-SA 4.0"
+    }
+  ],
+  "tmdate_KST": "2026-10-22T01:12:29.662000+09:00",
+  "duedate_KST": "2026-11-06T21:59:00+09:00",
+  "expdate_KST": "2026-11-06T22:29:00+09:00"
+}

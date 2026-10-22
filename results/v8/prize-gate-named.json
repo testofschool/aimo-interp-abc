@@ -1,0 +1,86 @@
+{
+ "result": "FAIL",
+ "failed": [
+  "ID_FIELD",
+  "OWN_SCORE"
+ ],
+ "passed": 10,
+ "total": 12,
+ "blocks": "T3 push and T4 OpenReview submit",
+ "rows": [
+  {
+   "check": "ID_FIELD",
+   "source": "[FORM]+[RULE5]",
+   "ok": false,
+   "fix": "needs 'submission id <id>' and no UNMEASURED"
+  },
+  {
+   "check": "OWN_SCORE",
+   "source": "[K1]+[K3]",
+   "ok": false,
+   "fix": "needs 'scored k/14' and an ISO timestamp"
+  },
+  {
+   "check": "REPO_URL",
+   "source": "[RULE4]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "BH_WORDING",
+   "source": "[K2]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NO_QUEUE_NAME",
+   "source": "[K1]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NO_SELF_NEGATION",
+   "source": "[K1]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "ACTIONABLE",
+   "source": "[PRIZE] actionable",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NEGATIVE_RESULT",
+   "source": "[PRIZE] negative results",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "GENERALIZATION",
+   "source": "[PRIZE] generalization",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "EFFICIENT",
+   "source": "[PRIZE] efficient methods",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "AI_STATEMENT",
+   "source": "[FORM]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NEGATIONS",
+   "source": "[K1]",
+   "ok": true,
+   "value": 39,
+   "max": 40,
+   "fix": null
+  }
+ ]
+}

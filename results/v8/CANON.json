@@ -1,0 +1,23 @@
+{
+  "base_commit": "2b48022663019c23f61cd5f34dcce99eb6d0b322",
+  "files": {
+    "report/REPORT_OUTLINE.md": "b0447c304b981135e092f44fbe4709e167b5afdb626035b56777a1a738fbb4f5",
+    "report/REPORT_DRAFT.md": "320bb50bb0eaf09444d07aa09c101063a6832251a0e5e815105da5b68e34fb32",
+    "report/create_source.py": "525be4ff4b6a3767517b0f81d3733773cb4ce4903ddbd1a799792c8bf9cb4ed0",
+    "report/main.tex": "bcf50e5b595011a247df8598271a4f097f7768e8565d96f65b030773b4c77001",
+    "report/main-anonymous.tex": "13b59d52006a4930f57d40ab4e6b28aeedd53b1a01663bdce2fef4f4fbddc9f9",
+    "report/source_provenance.json": "ee8bfe9fd5d057b8d330ae40b06fb937fde4c3fbba80b361ad8f9405ccdb3cb0",
+    "report/README.md": "fd30bed6c0e4854e07befe7369c2030dab89b771a42e51febca47823de02f648",
+    "report/aimo-interp-report-v7-named.pdf": "433f19fc65d970c7be58289a7a9e01564fad4e7f31f13462db60f88f4cde909e",
+    "report/aimo-interp-report-v7-anonymous.pdf": "a86f03a92c77e0d97979d259c2f140c665f68f02aa3f6169cc303395b83a1b88",
+    "research/claims.json": "759c24ece59323610147a958c13fa1e798f350f3110e81ec39d31b2db8c687a5",
+    "results/report_numbers.json": "cc31e5a71cd04134504a246552aecf583a3536b36e2b0f1cae1732d3625f940c",
+    "tools/report_numbers.py": "37f24afae0ae0b3e2ae8ce8a6f49f28f43482df61da45d067831ac230cb875aa",
+    "tools/render_report.py": "2a4b96bfa97abfb37ab46ec9fa9fd1b0090e69e34c712ac36a8831c61131b142",
+    "README.md": "eac0cd1d2fbaf6c04a0147b87d066e1b337160783e64961c85914e9402e79553"
+  },
+  "source": {
+    "prize_rubric_gate.py": "27da04b81760c2ae2c083286051314066c0e91b0f68611fb9240a2c751c81402",
+    "HANDOFF_v8.md": "9aee88e8a4bf8096df15d0028e26c18936cebda85bd91acaa545b3e87fef9c3f"
+  }
+}

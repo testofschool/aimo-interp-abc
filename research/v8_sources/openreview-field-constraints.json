@@ -1,0 +1,231 @@
+{
+  "enums_and_items": {
+    "white_box_award": {
+      "items": [
+        {
+          "value": "Consider this submission for the White-Box Award",
+          "description": "Consider this submission for the White-Box Award",
+          "optional": true
+        }
+      ]
+    },
+    "ai_assistance": {
+      "items": [
+        {
+          "value": "Ideation",
+          "description": "Ideation: proposing or refining hypotheses, developing theoretical models or conceptual frameworks, formulating mathematical claims or proofs, designing methodology or experiments, brainstorming topics, literature search and summarization",
+          "optional": true
+        },
+        {
+          "value": "Coding",
+          "description": "Coding: implementing methods, creating or editing code, suggesting experimental parameters, generating synthetic data, cleaning or reformatting datasets",
+          "optional": true
+        },
+        {
+          "value": "Analysis",
+          "description": "Analysis: interpreting results, supporting qualitative or thematic analysis, creating or modifying figures",
+          "optional": true
+        },
+        {
+          "value": "Writing",
+          "description": "Writing: drafting parts of the paper, translation, editing for readability, suggesting structure, title or keywords, formatting references",
+          "optional": true
+        },
+        {
+          "value": "No AI assistance was used",
+          "description": "No AI assistance was used",
+          "optional": true
+        }
+      ]
+    },
+    "ai_use_statement": {
+      "enum": [
+        "We confirm that our paper includes an AI Use Statement consistent with the boxes ticked above, and that we take full responsibility for all AI-assisted content."
+      ]
+    },
+    "reciprocal_reviewing_acknowledgement": {
+      "enum": [
+        "We acknowledge that this submission must nominate two different authors as reciprocal reviewers if it has three or more authors, and one author if it has one or two authors; that the nominated reviewers must complete all of their assigned reviews on time, and that failure to do so (including missing, late, low-effort, or undisclosed AI-generated reviews) may result in desk rejection of this submission."
+      ]
+    },
+    "rules_compliance": {
+      "enum": [
+        "We confirm that this submission follows all rules of the challenge, and we acknowledge that submissions found to violate the rules may be desk rejected or disqualified."
+      ]
+    }
+  },
+  "constraints": {
+    "title": {
+      "type": "string",
+      "regex": "^.{1,250}$"
+    },
+    "authors": {
+      "type": "author{}",
+      "properties": {
+        "fullname": {
+          "param": {
+            "type": "string"
+          }
+        },
+        "username": {
+          "param": {
+            "type": "string",
+            "regex": "^~\\S+$",
+            "mismatchError": "must be a valid profile ID"
+          }
+        },
+        "institutions": {
+          "param": {
+            "type": "object{}",
+            "properties": {
+              "name": {
+                "param": {
+                  "type": "string"
+                }
+              },
+              "domain": {
+                "param": {
+                  "type": "string"
+                }
+              },
+              "country": {
+                "param": {
+                  "type": "string"
+                }
+              }
+            },
+            "optional": true
+          }
+        }
+      }
+    },
+    "reciprocal_reviewers": {
+      "fieldName": "Reciprocal Reviewers",
+      "type": "profile[]",
+      "regex": "^~\\S+$",
+      "mismatchError": "must be a valid OpenReview profile ID starting with ~."
+    },
+    "keywords": {
+      "type": "string[]",
+      "regex": ".+"
+    },
+    "TLDR": {
+      "fieldName": "TL;DR",
+      "type": "string",
+      "maxLength": 250,
+      "optional": true,
+      "deletable": true
+    },
+    "abstract": {
+      "type": "string",
+      "maxLength": 5000,
+      "markdown": true,
+      "input": "textarea"
+    },
+    "pdf": {
+      "type": "file",
+      "maxSize": 50,
+      "extensions": [
+        "pdf"
+      ]
+    },
+    "leaderboard_submission_ids": {
+      "fieldName": "Leaderboard Submission IDs",
+      "type": "string[]",
+      "regex": "^\\S+$",
+      "mismatchError": "each submission ID must be a single value without spaces"
+    },
+    "white_box_award": {
+      "type": "string[]",
+      "optional": true,
+      "items": [
+        {
+          "value": "Consider this submission for the White-Box Award",
+          "description": "Consider this submission for the White-Box Award",
+          "optional": true
+        }
+      ],
+      "input": "checkbox"
+    },
+    "ai_assistance": {
+      "fieldName": "AI Assistance",
+      "type": "string[]",
+      "items": [
+        {
+          "value": "Ideation",
+          "description": "Ideation: proposing or refining hypotheses, developing theoretical models or conceptual frameworks, formulating mathematical claims or proofs, designing methodology or experiments, brainstorming topics, literature search and summarization",
+          "optional": true
+        },
+        {
+          "value": "Coding",
+          "description": "Coding: implementing methods, creating or editing code, suggesting experimental parameters, generating synthetic data, cleaning or reformatting datasets",
+          "optional": true
+        },
+        {
+          "value": "Analysis",
+          "description": "Analysis: interpreting results, supporting qualitative or thematic analysis, creating or modifying figures",
+          "optional": true
+        },
+        {
+          "value": "Writing",
+          "description": "Writing: drafting parts of the paper, translation, editing for readability, suggesting structure, title or keywords, formatting references",
+          "optional": true
+        },
+        {
+          "value": "No AI assistance was used",
+          "description": "No AI assistance was used",
+          "optional": true
+        }
+      ],
+      "input": "checkbox"
+    },
+    "ai_use_statement": {
+      "fieldName": "AI Use Statement in Paper",
+      "type": "string",
+      "enum": [
+        "We confirm that our paper includes an AI Use Statement consistent with the boxes ticked above, and that we take full responsibility for all AI-assisted content."
+      ],
+      "input": "radio"
+    },
+    "reciprocal_reviewing_acknowledgement": {
+      "fieldName": "Reciprocal Reviewing Acknowledgment",
+      "type": "string",
+      "enum": [
+        "We acknowledge that this submission must nominate two different authors as reciprocal reviewers if it has three or more authors, and one author if it has one or two authors; that the nominated reviewers must complete all of their assigned reviews on time, and that failure to do so (including missing, late, low-effort, or undisclosed AI-generated reviews) may result in desk rejection of this submission."
+      ],
+      "input": "radio"
+    },
+    "rules_compliance": {
+      "fieldName": "Rules Compliance",
+      "type": "string",
+      "enum": [
+        "We confirm that this submission follows all rules of the challenge, and we acknowledge that submissions found to violate the rules may be desk rejected or disqualified."
+      ],
+      "input": "radio"
+    },
+    "venue": {
+      "const": "NeurIPS 2026 Workshop AIMOInterp Challenge Submission",
+      "hidden": true
+    },
+    "venueid": {
+      "const": "NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/Submission",
+      "hidden": true
+    }
+  },
+  "note_id": {
+    "param": {
+      "withVenueid": "NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/Submission",
+      "optional": true
+    }
+  },
+  "license": {
+    "param": {
+      "enum": [
+        {
+          "value": "CC BY-SA 4.0",
+          "description": "CC BY-SA 4.0"
+        }
+      ]
+    }
+  }
+}

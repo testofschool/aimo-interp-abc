@@ -1,0 +1,160 @@
+{
+  "captured_at_kst": "2026-10-22T10:43:21.581994+09:00",
+  "scope": "Read-only unauthenticated public GitHub, OpenReview and Codabench preflight only. No credentials, account APIs, submissions or other external mutations.",
+  "checks": {
+    "P1": {
+      "status": "MATCH",
+      "expected": "a429a9e71b65e804481394f8b3a5f6799a9a6987",
+      "observed": "a429a9e71b65e804481394f8b3a5f6799a9a6987",
+      "source": "https://github.com/testofschool/aimo-interp-abc.git",
+      "evidence": "git-ls-remote.stdout.txt"
+    },
+    "P4": {
+      "status": "MATCH",
+      "expected": {
+        "tmdate": 1792599149662,
+        "duedate": 1793969940000,
+        "expdate": 1793971740000
+      },
+      "observed": {
+        "tmdate": 1792599149662,
+        "duedate": 1793969940000,
+        "expdate": 1793971740000
+      },
+      "dates_kst": {
+        "tmdate": "2026-10-22T01:12:29.662000+09:00",
+        "duedate": "2026-11-06T21:59:00+09:00",
+        "expdate": "2026-11-06T22:29:00+09:00"
+      },
+      "raw_sha256_expected": "fdcfe127a68652302ad81e0e049c17acdfc7f3dee14238f5589a27b61a9fd4f6",
+      "raw_sha256_observed": "fa8f7c5d1686368e1b3734b6950d21cd7c8884b075ab70b87b3b7d1fc6d06a4a",
+      "raw_sha256_matches": false,
+      "raw_hash_note": "Advisory byte mismatch; HANDOFF_v8 specifies tmdate as the binding comparison rather than raw hash. No claim is made about the byte-difference cause.",
+      "source": "https://api2.openreview.net/invitations?id=NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/-/Submission",
+      "evidence": "openreview-invitation.raw.json"
+    },
+    "P5": {
+      "status": "MATCH",
+      "expected": {
+        "required": [
+          "abstract",
+          "ai_assistance",
+          "ai_use_statement",
+          "authors",
+          "keywords",
+          "leaderboard_submission_ids",
+          "pdf",
+          "reciprocal_reviewers",
+          "reciprocal_reviewing_acknowledgement",
+          "rules_compliance",
+          "title",
+          "venue",
+          "venueid"
+        ],
+        "optional": [
+          "TLDR",
+          "white_box_award"
+        ],
+        "note_id_optional": true
+      },
+      "observed": {
+        "required": [
+          "abstract",
+          "ai_assistance",
+          "ai_use_statement",
+          "authors",
+          "keywords",
+          "leaderboard_submission_ids",
+          "pdf",
+          "reciprocal_reviewers",
+          "reciprocal_reviewing_acknowledgement",
+          "rules_compliance",
+          "title",
+          "venue",
+          "venueid"
+        ],
+        "optional": [
+          "TLDR",
+          "white_box_award"
+        ],
+        "note_id_optional": true
+      },
+      "missing_required": [],
+      "unexpected_required": [],
+      "source": "https://api2.openreview.net/invitations?id=NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/-/Submission",
+      "evidence": "openreview-field-constraints.json",
+      "enum_checks": {
+        "ai_assistance_selected_expected": [
+          "Ideation",
+          "Coding",
+          "Analysis",
+          "Writing"
+        ],
+        "ai_assistance_available_observed": [
+          "Ideation",
+          "Coding",
+          "Analysis",
+          "Writing",
+          "No AI assistance was used"
+        ],
+        "all_selected_values_available": true,
+        "single_confirmation_fields": {
+          "ai_use_statement": {
+            "enum_values": [
+              "We confirm that our paper includes an AI Use Statement consistent with the boxes ticked above, and that we take full responsibility for all AI-assisted content."
+            ],
+            "single_enum": true
+          },
+          "reciprocal_reviewing_acknowledgement": {
+            "enum_values": [
+              "We acknowledge that this submission must nominate two different authors as reciprocal reviewers if it has three or more authors, and one author if it has one or two authors; that the nominated reviewers must complete all of their assigned reviews on time, and that failure to do so (including missing, late, low-effort, or undisclosed AI-generated reviews) may result in desk rejection of this submission."
+            ],
+            "single_enum": true
+          },
+          "rules_compliance": {
+            "enum_values": [
+              "We confirm that this submission follows all rules of the challenge, and we acknowledge that submissions found to violate the rules may be desk rejected or disqualified."
+            ],
+            "single_enum": true
+          }
+        }
+      }
+    },
+    "P6": {
+      "status": "MATCH",
+      "expected": [
+        "CC BY-SA 4.0"
+      ],
+      "observed": [
+        "CC BY-SA 4.0"
+      ],
+      "source": "https://api2.openreview.net/invitations?id=NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/-/Submission",
+      "evidence": "openreview-field-constraints.json"
+    },
+    "P7": {
+      "status": "UNVERIFIED",
+      "blocking_condition": "CONNECTION_FAILED",
+      "expected": {
+        "competition_id": 16180,
+        "phase_id": 30038,
+        "phase_end_utc": "2026-11-01T11:55:00Z",
+        "phase_end_kst": "2026-11-01T20:55:00+09:00",
+        "small_task_id": 36241,
+        "main_task_id": 36237,
+        "daily_limit": 10,
+        "per_person_limit": 300
+      },
+      "observed": null,
+      "source": "https://www.codabench.org/api/competitions/16180/",
+      "request": "Unauthenticated GET only",
+      "curl_exit_code": 28,
+      "http_status": null,
+      "error": "Failed to connect to www.codabench.org port 443 after 75375 ms: Couldn't connect to server",
+      "evidence": [
+        "codabench-public.meta.json",
+        "codabench-public.stderr.txt",
+        "codabench-public.headers.txt"
+      ]
+    }
+  }
+}

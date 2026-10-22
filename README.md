@@ -1,6 +1,6 @@
 # AIMO-Interp: validation leaderboard identifiability
 
-The v7 report asks what can be resolved from a small public validation leaderboard.
+The locally prepared v8 report asks what can be resolved from a small public validation leaderboard.
 On the pinned October 19 snapshot (retrieved October 20, 2026 KST), owner-selection
 adjustment followed by Benjamini–Hochberg leaves 2 of 61 Small owners and 1 of 41
 Main owners significant under an independent fair-coin item null. All survivors
@@ -17,11 +17,14 @@ selection or multiple-owner correction. The report keeps those limits explicit.
 Public anonymous fresh-clone V1–V6 passed at scientific commit `524cc98816b2cd31bafd7c4e4e25f66a093e2cf5`;
 see `PUBLICATION.md` and `results/v6/publication/`.
 
-Read `report/REPORT_DRAFT.md`, the named and anonymous v7 PDFs under `report/`,
-`EXECUTION_REPORT_v7.md`, and `PUBLICATION.md`. v7 replaces the inline disclosure
-with a separate AI Use Statement; scientific content and measured values are
-unchanged. The v7 files are locally prepared and have not been pushed or submitted.
-The published v6 report and earlier execution receipts remain historical evidence.
+Read `report/REPORT_DRAFT.md`, both v8 PDF variants under `report/`,
+`EXECUTION_REPORT_v8.md`, and `PUBLICATION.md`. v8 corrects the BH wording,
+removes queue discussion, leads with conditional non-rejection counts and an
+independent-item planning rule, and reduces redundant hedging. The existing 150
+claims, frozen data and bundles are unchanged; two complementary owner counts
+are derived from existing values. The local v8 prize gate is 10/12: genuine owner
+submission IDs and scores are still absent. Publication and submission are pending.
+The published v6 report and v5-v7 artifacts remain historical evidence.
 Two frozen owner bundle scores and final-test
 performance remain **UNMEASURED**. No GPU/model generation run was launched.
 
@@ -68,21 +71,25 @@ Both variants are retained while venue anonymity instructions remain unverified.
 The current public invitation is readable, but does not settle an anonymity policy.
 This repository's publication is not an OpenReview receipt.
 
-An October 20 public portal recheck found an unresolved report-deadline conflict:
-the Submission invitation currently configures November 1 at 17:00 KST, while the
-official website says November 15. See `research/v6_sources/PORTAL_CHECK_2026-10-20.md`
-and `OWNER_CHECKLIST_v6.md`. PDF anonymity remains unverified; both variants stay.
+The October 22 live Submission invitation configures November 6 at 21:59 KST
+(expiration 22:29), requires leaderboard submission IDs and offers only CC BY-SA
+4.0. This supersedes the October 20 portal configuration preserved in historical
+receipts. Fresh field/enum constraints are under `research/v8_sources/`.
+The named variant is planned for author review. The alternative changes the author
+block and PDF author metadata; the repository URL still reveals the author, so it
+must not be described as fully double-blind anonymized.
 
 The owner uploads the unchanged Small bundles listed in `OWNER_CHECKLIST_v6.md`,
-records native receipts and screenshots, reads current Discord instructions,
+records native receipts and screenshots, reviews current Discord instructions,
 nominates final-test submissions, and performs the final OpenReview submission.
 Two aggregate scores can check receipt expectations; they cannot establish
 per-problem label balance. Missing evidence never becomes a zero or a passed gate.
 
-The October 31 rescrape is scheduled for 20:00 Asia/Seoul in the current Codex chat.
-It has not run. The registered kill rule and immutable future-snapshot invocation
+The earlier v6 workflow recorded an October 31 rescrape scheduled for 20:00
+Asia/Seoul. This v8 run did not verify or modify that schedule; the future rescrape
+has not been executed as part of this run. The registered kill rule and immutable future-snapshot invocation
 are in `HANDOFF_v6.md` and `research/identifiability_usage_v6.md`. Method reopening
 remains CLOSED. AI assistance and all statistical assumptions are disclosed in
 the report. Current release receipts supersede historical v5 state statements.
 
-The historical v6 completion audit is in `COMPLETION_AUDIT_v6.md`. It records corrected snapshot membership, verbatim label rules and the protected owner-result rendering block. `EXECUTION_REPORT_v7.md` records the current local checks, supplied-gate limitations and remaining author/account work. Required owner evidence and the actual October 31 rescrape are still pending.
+The historical v6 completion audit is in `COMPLETION_AUDIT_v6.md`. It records corrected snapshot membership, verbatim label rules and the protected owner-result rendering block. `EXECUTION_REPORT_v8.md` records the current local checks, supplied-gate limitations and remaining author/account work. Required owner evidence and the actual October 31 rescrape are still pending.

@@ -1,0 +1,72 @@
+{
+  "status": "LOCAL_BUILD_RECEIPTS_AND_AUTHOR_PENDING",
+  "variants": {
+    "named": {
+      "pdf": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-named.pdf",
+      "sha256": "b0f1a5f7b38984422965b955d356d6ec778d3c760b71f302588de117b2b1acf6",
+      "pages": 9,
+      "Type3": 0,
+      "negations": 39,
+      "prize_rubric_gate": {
+        "exit": 1,
+        "passed": 10,
+        "total": 12,
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ]
+      },
+      "build_verdict": "AUTOMATED_PASS_VISUAL_REVIEW_REQUIRED",
+      "page_images": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-named/main-li0wz2dj/pages/page-1.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-named/main-li0wz2dj/pages/page-2.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-named/main-li0wz2dj/pages/page-3.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-named/main-li0wz2dj/pages/page-4.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-named/main-li0wz2dj/pages/page-5.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-named/main-li0wz2dj/pages/page-6.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-named/main-li0wz2dj/pages/page-7.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-named/main-li0wz2dj/pages/page-8.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-named/main-li0wz2dj/pages/page-9.png"
+      ],
+      "openreview_payload_gate_exit": 1,
+      "openreview_strict_gate_exit": 1
+    },
+    "anonymous": {
+      "pdf": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-anonymous.pdf",
+      "sha256": "04741254e308e2dd43a4c906587e531f9a83005dbddbe5e607c99547b3b58c59",
+      "pages": 9,
+      "Type3": 0,
+      "negations": 39,
+      "prize_rubric_gate": {
+        "exit": 1,
+        "passed": 10,
+        "total": 12,
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ]
+      },
+      "build_verdict": "AUTOMATED_PASS_VISUAL_REVIEW_REQUIRED",
+      "page_images": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-anonymous/main-anonymous-_why2k0q/pages/page-1.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-anonymous/main-anonymous-_why2k0q/pages/page-2.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-anonymous/main-anonymous-_why2k0q/pages/page-3.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-anonymous/main-anonymous-_why2k0q/pages/page-4.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-anonymous/main-anonymous-_why2k0q/pages/page-5.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-anonymous/main-anonymous-_why2k0q/pages/page-6.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-anonymous/main-anonymous-_why2k0q/pages/page-7.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-anonymous/main-anonymous-_why2k0q/pages/page-8.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/review-anonymous/main-anonymous-_why2k0q/pages/page-9.png"
+      ],
+      "openreview_payload_gate_exit": 1,
+      "openreview_strict_gate_exit": 1
+    }
+  },
+  "submission_text_gate_exit": 0,
+  "report_numbers_check_exit": 0,
+  "numeric_claims_checked": 152,
+  "visual_inspection": "PASS_ALL_18_FINAL_PAGES_COVERED",
+  "visual_inspection_evidence": "independent-qa/FINAL.json",
+  "source_base_commit": "1962a9511d72b753ddd49dc3f2c7d92943d52a71",
+  "unreported_source_text_changes": 0
+}

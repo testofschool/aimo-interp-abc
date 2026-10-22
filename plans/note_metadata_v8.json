@@ -1,0 +1,10 @@
+{
+  "license": "CC BY-SA 4.0",
+  "state": "PREPARED_NOT_ATTESTED",
+  "authors_and_reciprocal_reviewer": "PROPOSED_UNTIL_DIRECT_AUTHOR_APPROVAL",
+  "missing": [
+    "leaderboard_submission_ids from two authentic scored owner receipts",
+    "direct completed author review and external-action approval"
+  ],
+  "warning": "The form enum strings are prepared text, not verified author attestations. License is note metadata, not a content key."
+}

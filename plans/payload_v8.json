@@ -1,0 +1,32 @@
+{
+  "title": "Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp",
+  "authors": [
+    {
+      "fullname": "Jung Min Kang",
+      "username": "~Jung_Min_Kang1"
+    }
+  ],
+  "reciprocal_reviewers": [
+    "~Jung_Min_Kang1"
+  ],
+  "keywords": [
+    "interpretability",
+    "robustness prediction",
+    "evaluation",
+    "leaderboard identifiability",
+    "statistical power",
+    "negative results"
+  ],
+  "TLDR": "On the frozen AIMO-Interp validation snapshot, only perfect-score owners survive selection plus BH; sustained single-rule power needs 76 or 169 independent items at the stated effects.",
+  "abstract": "On the frozen AIMO-Interp public validation board (14 Small and 21 Main items, inferred from the score grid), no score below perfect is separable from the independent fair-coin null after per-owner selection and across-owner Benjamini–Hochberg correction: 59 of 61 Small owners and 40 of 41 Main owners are not rejected, including an owner with a 12/14 Small result. We analyze a hash-pinned AIMO-Interp leaderboard snapshot using its observed score grid. The smallest compatible item counts are 14 for Small and 21 for Main. Under an explicit independent fair-coin item null and an independent-submission model, we adjust each owner's best visible score for its number of scored submissions, then apply Benjamini–Hochberg across owners. Only 2 of 61 Small owners and 1 of 41 Main owners reject that conditional null; every surviving owner has a perfect score. Non-rejection leaves chance performance, method equivalence and pairwise ranking unresolved. Exact one-sided binomial power at true accuracy 0.6 is 0.12 and 0.2 on the respective grids. Power first reaches 0.8 at 158 items for accuracy 0.6 and 69 for 0.65; discreteness makes the sustained thresholds larger. We recommend at least 76–169 independent items for those stated effects before accounting for leaderboard selection. A supporting public-label audit finds no mixed labels among 11 Small problems with multiple checkpoints. We provide CPU reproduction, parsing and sensitivity contracts, and distinguish observed leaderboard statistics from unmeasured private results for our own controls.",
+  "ai_assistance": [
+    "Ideation",
+    "Coding",
+    "Analysis",
+    "Writing"
+  ],
+  "ai_use_statement": "We confirm that our paper includes an AI Use Statement consistent with the boxes ticked above, and that we take full responsibility for all AI-assisted content.",
+  "reciprocal_reviewing_acknowledgement": "We acknowledge that this submission must nominate two different authors as reciprocal reviewers if it has three or more authors, and one author if it has one or two authors; that the nominated reviewers must complete all of their assigned reviews on time, and that failure to do so (including missing, late, low-effort, or undisclosed AI-generated reviews) may result in desk rejection of this submission.",
+  "rules_compliance": "We confirm that this submission follows all rules of the challenge, and we acknowledge that submissions found to violate the rules may be desk rejected or disqualified.",
+  "leaderboard_submission_ids": []
+}
