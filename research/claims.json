@@ -750,6 +750,18 @@
       "text": "Hash-pinned v6 identifiability metric or explicit analysis protocol constant: lb_main_union_bonferroni_survivors",
       "key": "lb_main_union_bonferroni_survivors",
       "value": 1
+    },
+    {
+      "key": "lb_small_nonrejected_owners",
+      "value": 59,
+      "text": "Small scored owners minus BH survivors under the frozen leaderboard analysis",
+      "source": "tools/report_numbers.py: lb_small_owners_scored - lb_small_bh_survivors; same pinned v6 inputs"
+    },
+    {
+      "key": "lb_main_nonrejected_owners",
+      "value": 40,
+      "text": "Main scored owners minus BH survivors under the frozen leaderboard analysis",
+      "source": "tools/report_numbers.py: lb_main_owners_scored - lb_main_bh_survivors; same pinned v6 inputs"
     }
   ]
 }

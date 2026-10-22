@@ -174,5 +174,7 @@
  "train_small_rows": 43,
  "train_small_problems": 22,
  "train_small_multi_model_problems": 11,
- "train_small_mixed": 0
+ "train_small_mixed": 0,
+ "lb_small_nonrejected_owners": 59,
+ "lb_main_nonrejected_owners": 40
 }

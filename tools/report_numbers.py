@@ -196,6 +196,11 @@ def run(d):
     identifiability = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(identifiability)
     out.update(identifiability.run(Path(d) / "leaderboard/2026-10-19", d)["numbers"])
+    # v8 exposes complementary owner counts; existing measurements stay intact.
+    for track in ("small", "main"):
+        out[f"lb_{track}_nonrejected_owners"] = (
+            out[f"lb_{track}_owners_scored"] - out[f"lb_{track}_bh_survivors"]
+        )
     return out
 
 
