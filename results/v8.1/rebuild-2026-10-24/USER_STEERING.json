@@ -1,0 +1,23 @@
+{
+  "received_context": "2026-10-24 KST",
+  "user_observation_as_of_KST": "2026-10-24T06:00:00+09:00",
+  "workaround_url": "NONE_REPORTED_BY_FELIX",
+  "T2": "KEEP_BLOCKED_EXTERNAL_CAUSE",
+  "existing_two_submissions_approval": "VALID",
+  "authorized_current_work": [
+    "T1 v8.1 rebuild",
+    "gates",
+    "G-AUTHOR preparation"
+  ],
+  "URL_handoff": "Felix will paste workaround URL into Codex session when observed",
+  "fallback_trigger_KST": "2026-11-03T12:00:00+09:00",
+  "fallback_actions": [
+    "literal none in leaderboard_submission_ids",
+    "planned-not-run baseline wording",
+    "held email workflow"
+  ],
+  "fallback_executed": false,
+  "fallback_email_sender_per_handoff": "Felix",
+  "fallback_organizer_acceptance": "UNVERIFIED",
+  "prize_gate_fallback_conflict": "unchanged17-check prize gate still requires actual IDs/scores; do not silently change it"
+}

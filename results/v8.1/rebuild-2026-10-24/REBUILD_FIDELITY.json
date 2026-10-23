@@ -1,0 +1,68 @@
+{
+  "variants": {
+    "named": {
+      "old_sha256": "edde59e523d7cc6c7d0cf51565e0b1c0520a42ca6f319844c617da6920841a9c",
+      "new_sha256": "4cf4e1acc585e33ae27bf9484b6e1f7d1df75f2a887edc56cabef96743eb1639",
+      "text_identical": true,
+      "fonts_identical": true,
+      "page_pixels_identical_to_verified_canon": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": true,
+        "9": true
+      },
+      "pages": 9,
+      "Type3": 0,
+      "negations": 40,
+      "prize": {
+        "exit": 1,
+        "passed": 15,
+        "total": 17,
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ]
+      },
+      "byte_difference_classification": "PDF build metadata only; text, source, fonts, geometry and rendered content unchanged"
+    },
+    "anonymous": {
+      "old_sha256": "debdea93d205e95ce71fb04fe0ad4cda07e7c06a996cc199ba742d6ce49d06af",
+      "new_sha256": "a290cac61a5dbf98c65f91e0f8f44ec350dc973b2ee81c568ce9ecf5199a1542",
+      "text_identical": true,
+      "fonts_identical": true,
+      "page_pixels_identical_to_verified_canon": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": true,
+        "9": true
+      },
+      "pages": 9,
+      "Type3": 0,
+      "negations": 40,
+      "prize": {
+        "exit": 1,
+        "passed": 15,
+        "total": 17,
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ]
+      },
+      "byte_difference_classification": "PDF build metadata only; text, source, fonts, geometry and rendered content unchanged"
+    }
+  },
+  "unreported_content_or_format_changes": 0,
+  "numeric_claims_checked": 152,
+  "source_checks": "SOURCE_CHECKS.json",
+  "inspection": "Root visually inspected both new contact sheets; all18 pages pixel-identical to previously independently inspected verified canon"
+}

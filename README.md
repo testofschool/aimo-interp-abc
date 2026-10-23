@@ -1,5 +1,7 @@
 # AIMO-Interp: validation leaderboard identifiability
 
+최신 T1 재빌드·검토 준비는 `EXECUTION_REPORT_T1_REBUILD_2026-10-24.md`와 `report/G_AUTHOR_v8.1.md`에 기록했다. 본문·수치·렌더는 같고, 현재 PDF 해시는 BUILD.json의 재빌드 기록을 따른다. T2는 외부 원인으로 blocked다.
+
 The locally prepared v8.1 report asks what can be resolved from a small public validation leaderboard.
 On the pinned October 19 snapshot (retrieved October 20, 2026 KST), owner-selection
 adjustment followed by Benjamini–Hochberg leaves 2 of 61 Small owners and 1 of 41

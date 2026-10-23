@@ -1,0 +1,201 @@
+{
+  "audit_at_utc": "2026-10-23T21:04:58.900876+00:00",
+  "scope": "Public unauthenticated invitation GET and read-only local schema/payload/preflight audit. No messages, private account reads, credentials, uploads, or mutations.",
+  "source_url": "https://api2.openreview.net/invitations?id=NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/-/Submission",
+  "source_tmdate": 1792785352965,
+  "source_tmdate_kst": "2026-10-24T04:55:52.965000+09:00",
+  "submission_due_kst": "2026-11-06T21:59:00+09:00",
+  "invitation_expiration_kst": "2026-11-06T22:29:00+09:00",
+  "raw_sha256": "fc1e071245f12c4c8da4f3f2f83135a012d8ccf7158f5c00413d0ca386be3c39",
+  "v8_1_snapshot_path": "v6-execution/work/research/v8_1_sources/invitation_2026-10-24.json",
+  "v8_1_snapshot_sha256": "fc1e071245f12c4c8da4f3f2f83135a012d8ccf7158f5c00413d0ca386be3c39",
+  "raw_bytes_match_v8_1_snapshot": true,
+  "semantic_invitation_diff": [],
+  "required_content_fields": [
+    "title",
+    "authors",
+    "reciprocal_reviewers",
+    "keywords",
+    "abstract",
+    "pdf",
+    "leaderboard_submission_ids",
+    "submission_track",
+    "ai_assistance",
+    "ai_use_statement",
+    "reciprocal_reviewing_acknowledgement",
+    "rules_compliance",
+    "venue",
+    "venueid"
+  ],
+  "automatic_or_attachment_fields": [
+    "pdf",
+    "venue",
+    "venueid"
+  ],
+  "exact_single_choice_enums": {
+    "ai_use_statement": [
+      "We confirm that our paper includes an AI Use Statement consistent with the boxes ticked above, and that we take full responsibility for all AI-assisted content."
+    ],
+    "reciprocal_reviewing_acknowledgement": [
+      "We acknowledge that the nominated reviewers must complete all of their assigned reviews on time, and that failure to do so (including missing, late, low-effort, or undisclosed AI-generated reviews) may result in desk rejection of this submission."
+    ],
+    "rules_compliance": [
+      "We confirm that this submission follows all rules of the challenge, and we acknowledge that submissions found to violate the rules may be desk rejected or disqualified."
+    ]
+  },
+  "exact_checkbox_choices": {
+    "submission_track": [
+      "Main track",
+      "Small models track"
+    ],
+    "white_box_award": [
+      "Consider this submission for the White-Box Award"
+    ],
+    "ai_assistance": [
+      "Ideation",
+      "Coding",
+      "Analysis",
+      "Writing",
+      "No AI assistance was used"
+    ]
+  },
+  "note_license_choices": [
+    {
+      "value": "CC BY-SA 4.0",
+      "description": "CC BY-SA 4.0"
+    }
+  ],
+  "note_id_optional": {
+    "param": {
+      "withVenueid": "NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/Submission",
+      "optional": true
+    }
+  },
+  "author_payload_type": "author{}",
+  "reciprocal_reviewing_obligation": {
+    "nominated_profile": [
+      "~Jung_Min_Kang1"
+    ],
+    "assigned_review_count": 3,
+    "source": "$.edit.note.content.reciprocal_reviewers.description",
+    "timeliness_and_quality_acknowledgement_exact": "We acknowledge that the nominated reviewers must complete all of their assigned reviews on time, and that failure to do so (including missing, late, low-effort, or undisclosed AI-generated reviews) may result in desk rejection of this submission.",
+    "review_due_date_in_invitation": false,
+    "review_due_date_external_evidence_required": "HANDOFF_v8.1 and user-supplied announcements give 2026-11-12 23:59 AoE = 2026-11-13 20:59 KST; this invitation does not independently prove that date."
+  },
+  "payload_current_values": {
+    "authors": [
+      {
+        "fullname": "Jung Min Kang",
+        "username": "~Jung_Min_Kang1"
+      }
+    ],
+    "reciprocal_reviewers": [
+      "~Jung_Min_Kang1"
+    ],
+    "submission_track": [
+      "Small models track"
+    ],
+    "ai_assistance": [
+      "Ideation",
+      "Coding",
+      "Analysis",
+      "Writing"
+    ],
+    "leaderboard_submission_ids": [],
+    "white_box_award_omitted": true,
+    "abstract_length": 1444,
+    "TLDR_length": 184
+  },
+  "payload_enum_equality": {
+    "ai_use_statement": true,
+    "reciprocal_reviewing_acknowledgement": true,
+    "rules_compliance": true
+  },
+  "preflight_exit": 1,
+  "preflight_result": {
+    "result": "BLOCKED",
+    "technical_checks": "FAIL",
+    "author_review_and_attestations": "NOT_VERIFIED",
+    "completed_review_wording": "NOT_CONFIRMED_IN_PAPER",
+    "invitation_fetch_freshness": "NOT_VERIFIED_BY_THIS_LOCAL_TOOL",
+    "external_venue_rules_and_profile_ownership": "NOT_VERIFIED_BY_THIS_LOCAL_TOOL",
+    "submission_authority": "NOT_GRANTED_BY_THIS_TOOL",
+    "submitted": false,
+    "original_gate": {
+      "result": "BLOCKED",
+      "pages": 9,
+      "form_mdate": 1792785352965,
+      "violations": [
+        "required field 'leaderboard_submission_ids' missing"
+      ]
+    },
+    "violations": [
+      "payload.leaderboard_submission_ids: required field missing",
+      "original payload gate returned 1"
+    ]
+  },
+  "input_sha256_before": {
+    "v8-execution/resume-2026-10-24/author-review-2026-10-24/portal/invitation.raw.json": "fc1e071245f12c4c8da4f3f2f83135a012d8ccf7158f5c00413d0ca386be3c39",
+    "v6-execution/work/plans/payload_v8.1.json": "b61324cf1b9ebb8e4aa79fcaeeda307c3b4dc9594fcd033dfc7153fe43e44069",
+    "v6-execution/work/report/aimo-interp-report-v8-named.pdf": "edde59e523d7cc6c7d0cf51565e0b1c0520a42ca6f319844c617da6920841a9c",
+    "v6-execution/work/report/main.tex": "164ab0536fb0268c57cec43ef1eebb9a782091a3eeb3411b73e6c929781fbdb0",
+    "v6-execution/work/tools/openreview_submission_preflight.py": "96f387eb7b4b0074f098fb5dc4e6917babc02705e4a16a42efeac0f44b27be5a",
+    "v6-execution/work/tools/openreview_payload_gate.py": "3a213f34831587bb5eabcfe3fd59e477a2604976c01e54b84e1ff2127fdb865f"
+  },
+  "input_sha256_after": {
+    "v8-execution/resume-2026-10-24/author-review-2026-10-24/portal/invitation.raw.json": "fc1e071245f12c4c8da4f3f2f83135a012d8ccf7158f5c00413d0ca386be3c39",
+    "v6-execution/work/plans/payload_v8.1.json": "b61324cf1b9ebb8e4aa79fcaeeda307c3b4dc9594fcd033dfc7153fe43e44069",
+    "v6-execution/work/report/aimo-interp-report-v8-named.pdf": "edde59e523d7cc6c7d0cf51565e0b1c0520a42ca6f319844c617da6920841a9c",
+    "v6-execution/work/report/main.tex": "164ab0536fb0268c57cec43ef1eebb9a782091a3eeb3411b73e6c929781fbdb0",
+    "v6-execution/work/tools/openreview_submission_preflight.py": "96f387eb7b4b0074f098fb5dc4e6917babc02705e4a16a42efeac0f44b27be5a",
+    "v6-execution/work/tools/openreview_payload_gate.py": "3a213f34831587bb5eabcfe3fd59e477a2604976c01e54b84e1ff2127fdb865f"
+  },
+  "inputs_stable_during_preflight": true,
+  "G_AUTHOR_required_human_confirmations": [
+    {
+      "item": "final_named_PDF_review",
+      "state": "PENDING_DIRECT_HUMAN_CONFIRMATION",
+      "detail": "Felix opens the final named v8.1 PDF and confirms review. Rebuilds and machine gates do not prove this."
+    },
+    {
+      "item": "all_AI_assisted_work_review",
+      "state": "PENDING_DIRECT_HUMAN_CONFIRMATION",
+      "detail": "Review and assume responsibility for all AI-assisted text, claims, code and artifacts; confirm Ideation, Coding, Analysis, Writing disclosure. Current AI Use Statement states responsibility but does not claim completed review."
+    },
+    {
+      "item": "reciprocal_reviewing",
+      "state": "PENDING_DIRECT_HUMAN_CONFIRMATION",
+      "detail": "~Jung_Min_Kang1 accepts all three assigned reciprocal reviews and their timeliness/quality obligations; author writes reviews himself."
+    },
+    {
+      "item": "rules_compliance",
+      "state": "PENDING_DIRECT_HUMAN_CONFIRMATION",
+      "detail": "Confirm current rules_compliance enum on behalf of the author."
+    },
+    {
+      "item": "public_license",
+      "state": "PENDING_DIRECT_HUMAN_CONFIRMATION",
+      "detail": "Approve note-level CC BY-SA 4.0 license."
+    },
+    {
+      "item": "public_GitHub_push_and_OpenReview_submission_revision",
+      "state": "PENDING_DIRECT_HUMAN_ACTION_AUTHORIZATION",
+      "detail": "Existing Codabench authorization does not authorize GitHub push, upload, OpenReview post_note_edit or trial revision."
+    }
+  ],
+  "existing_Codabench_authorization": {
+    "state": "PRESERVED",
+    "detail": "User reconfirmed unchanged frozen bundles x2 only; T2 externally blocked. This is separate from G-AUTHOR and does not grant GitHub/OpenReview authority."
+  },
+  "conditional_fallback": {
+    "enabled_now": false,
+    "trigger_kst": "2026-11-03T12:00:00+09:00",
+    "schema_representation_if_triggered": {
+      "leaderboard_submission_ids": [
+        "none"
+      ]
+    },
+    "schema_observation": "Field is required string[] with regex ^\\S+$; [\"none\"] is syntactically accepted. Schema acceptance alone does not establish organizer eligibility. No fallback applied in this audit."
+  },
+  "gates_remaining": "Missing scored receipt IDs currently block payload gate; after IDs or authorized date-triggered fallback, direct author review/attestations and G-AUTHOR remain independent. T3/T4 also require prize gate 17/17."
+}

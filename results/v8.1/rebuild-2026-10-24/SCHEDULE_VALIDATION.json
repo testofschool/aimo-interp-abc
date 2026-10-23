@@ -1,0 +1,11 @@
+{
+  "automation_id": "aimo-11-3-fallback",
+  "type": "single heartbeat in current chat",
+  "rule_file": "/Users/felix/.codex/automations/aimo-11-3-fallback/automation.toml",
+  "occurrence_count": 1,
+  "expected_local_occurrence": "2026-11-03T12:00:00+09:00",
+  "local_timezone": "Asia/Seoul",
+  "yearly_count1_means_only_one_execution": true,
+  "status": "ACTIVE_SAVED_CONFIGURATION_VERIFIED",
+  "fallback_not_executed_now": true
+}

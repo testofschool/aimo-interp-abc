@@ -1,0 +1,51 @@
+{
+  "result": "PASS",
+  "stages": {
+    "numbers": {
+      "exit": 0,
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "tools/report_numbers.py",
+        "--data-dir",
+        "data",
+        "--out",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/resume-2026-10-24/author-review-2026-10-24/report_numbers.json",
+        "--check",
+        "research/claims.json"
+      ]
+    },
+    "render": {
+      "exit": 0,
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "tools/render_report.py",
+        "report/REPORT_OUTLINE.md",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v8-execution/resume-2026-10-24/author-review-2026-10-24/report_numbers.json",
+        "report/REPORT_DRAFT.md"
+      ]
+    },
+    "source": {
+      "exit": 0,
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "report/create_source.py"
+      ]
+    },
+    "submission-text": {
+      "exit": 0,
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "tools/submission_text_gate.py",
+        "report/main.tex",
+        "report/main-anonymous.tex",
+        "report/REPORT_DRAFT.md"
+      ]
+    }
+  },
+  "source_files_byte_identical": true,
+  "computed_numbers_equal": true
+}

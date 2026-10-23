@@ -1,5 +1,7 @@
 # AIMO-Interp report v8.1
 
+최신 재빌드와 저자 검토 자료는 `G_AUTHOR_v8.1.md` 및 `../EXECUTION_REPORT_T1_REBUILD_2026-10-24.md`를 따른다. 본문·숫자·서식 변경 없이 재빌드했으며, 현재 PDF 해시는 `../results/v8.1/BUILD.json`에 기록했다.
+
 `REPORT_OUTLINE.md` is the editable manuscript with numeric placeholders.
 `REPORT_DRAFT.md` is its gated rendering against `results/report_numbers.json`
 and the measured-value registry in `research/claims.json`. Measured values must

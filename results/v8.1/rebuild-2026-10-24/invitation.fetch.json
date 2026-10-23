@@ -1,0 +1,9 @@
+{
+  "url": "https://api2.openreview.net/invitations?id=NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/-/Submission",
+  "fetched_at_utc": "2026-10-23T21:04:34.349622+00:00",
+  "authenticated": false,
+  "credential_reads": false,
+  "exit_code": 0,
+  "bytes": 10485,
+  "sha256": "fc1e071245f12c4c8da4f3f2f83135a012d8ccf7158f5c00413d0ca386be3c39"
+}
