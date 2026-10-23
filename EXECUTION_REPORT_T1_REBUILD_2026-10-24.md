@@ -1,5 +1,7 @@
 # T1 v8.1 재빌드 및 G-AUTHOR 준비
 
+이 문서는 직접 저자 승인 전 단계의 보존 기록이다. 현재 확인·PDF 상태는 `AUTHOR_APPROVAL_INTEGRATION_2026-10-24.md`와 최신 BUILD 기록을 따른다.
+
 2026-10-24 KST. 사용자 지시대로 T2는 외부 원인 blocked로 유지하고, 기존 Codabench 동결 Small 번들 2건 승인을 보존했다. 현재 작업 범위인 재빌드·게이트·저자 검토 자료 준비는 마쳤다. 전체 목표의 공개 push·OpenReview 제출은 실행하지 않았다.
 
 ## 재빌드 결과

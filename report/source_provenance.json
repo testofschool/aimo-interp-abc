@@ -5,20 +5,20 @@
   "style_sha256": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a",
   "style_embedded_unmodified": true,
   "style_option": "preprint",
-  "content_sha256": "e2edaf949e473e7cde1f12a0ce75cb1f64663b496e4e6bd7917643a349b56f08",
+  "content_sha256": "872f580305249a99ff49439fd7c37d7f11ae930de92686cf3a64d7eb37987366",
   "variants": {
     "named": {
       "path": "report/main.tex",
-      "sha256": "164ab0536fb0268c57cec43ef1eebb9a782091a3eeb3411b73e6c929781fbdb0",
+      "sha256": "26cf3f7d0a69ed257d34a27a3db29c350fffe027b88db78b9485aba95fa4965f",
       "author": "Jung Min Kang"
     },
     "anonymous": {
       "path": "report/main-anonymous.tex",
-      "sha256": "6cedbe413d89f960456129c8f8c144f751f9b242bccb2114c87a7f6f811df510",
+      "sha256": "ad95d17c873518d3e4ef9046937363b49341c697dae8fa17368f025cadbcfe27",
       "author": "Anonymous Author(s)"
     }
   },
-  "source_sha256": "164ab0536fb0268c57cec43ef1eebb9a782091a3eeb3411b73e6c929781fbdb0",
+  "source_sha256": "26cf3f7d0a69ed257d34a27a3db29c350fffe027b88db78b9485aba95fa4965f",
   "content_path": "report/REPORT_DRAFT.md",
   "content_source": "Gated REPORT_OUTLINE.md rendered with results/report_numbers.json"
 }

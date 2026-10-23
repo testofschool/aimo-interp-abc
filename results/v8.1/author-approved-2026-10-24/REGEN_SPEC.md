@@ -1,0 +1,5 @@
+# Completed-author-review disclosure integration
+
+Current canon: approved v8.1 at fdf2513, source/PDF pair copied under canon/. Keep the unchanged generator/style/preamble, numeric registry/data, manuscript body and references. The sole content delta is replacing the final AI Use Statement sentence with completed author review and responsibility, now directly confirmed by the human. Do not claim any native receipt, private score or publication/submission. Record approval in form metadata; pass --author-review-confirmed only because the direct message exists. Rebuild both PDFs and verify source/text diffs, unchanged pages/fonts/geometry and all rendered pages; page8 disclosure reflow is an expected reported consequence. Preserve existing gate failure ID_FIELD/OWN_SCORE.
+
+Now-false statements: author review and reciprocal-review acceptance are no longer pending. Update current pointers, metadata and G-AUTHOR packet accordingly; historical execution records remain historical. The original10-minute push expectation cannot trigger publication while prerequisites remain unmet: user explicitly made publication authority conditional.

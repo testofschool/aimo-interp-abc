@@ -1,10 +1,10 @@
 {
-  "status": "LOCAL_VERIFIED_PRIZE_GATE_15_OF_17_EXTERNAL_INCOMPLETE",
+  "status": "AUTHOR_APPROVED_CONDITIONAL_RECEIPTS_PENDING",
   "source_base_commit": "6f81bc3b31472dfeb1179b25c31fd7bb128dd19f",
   "variants": {
     "named": {
       "pdf": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-named.pdf",
-      "sha256": "4cf4e1acc585e33ae27bf9484b6e1f7d1df75f2a887edc56cabef96743eb1639",
+      "sha256": "31c5ee0c79278c7b31a038acde4ed3f6ff61fbc2dbc361280000fc485b512c95",
       "pages": 9,
       "Type3": 0,
       "negations": 40,
@@ -17,21 +17,35 @@
           "OWN_SCORE"
         ]
       },
+      "page_pixel_equal_to_human_reviewed_canon": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": false,
+        "9": true
+      },
+      "font_table_identical": true,
+      "completed_review_wording": "PRESENT",
+      "author_review_and_attestations": "CONFIRMED_BY_DIRECT_HUMAN",
       "page_images": [
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-1.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-2.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-3.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-4.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-5.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-6.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-7.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-8.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-9.png"
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/named/page-1.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/named/page-2.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/named/page-3.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/named/page-4.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/named/page-5.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/named/page-6.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/named/page-7.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/named/page-8.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/named/page-9.png"
       ]
     },
     "anonymous": {
       "pdf": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-anonymous.pdf",
-      "sha256": "a290cac61a5dbf98c65f91e0f8f44ec350dc973b2ee81c568ce9ecf5199a1542",
+      "sha256": "b6c3fc29778c622b1476186e1ba0406126643516ed851c37ce3e90062e605bd8",
       "pages": 9,
       "Type3": 0,
       "negations": 40,
@@ -44,31 +58,52 @@
           "OWN_SCORE"
         ]
       },
+      "page_pixel_equal_to_human_reviewed_canon": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": false,
+        "9": true
+      },
+      "font_table_identical": true,
+      "completed_review_wording": "PRESENT",
+      "author_review_and_attestations": "CONFIRMED_BY_DIRECT_HUMAN",
       "page_images": [
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-1.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-2.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-3.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-4.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-5.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-6.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-7.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-8.png",
-        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-9.png"
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/anonymous/page-1.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/anonymous/page-2.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/anonymous/page-3.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/anonymous/page-4.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/anonymous/page-5.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/anonymous/page-6.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/anonymous/page-7.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/anonymous/page-8.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/author-approved-2026-10-24/anonymous/page-9.png"
       ]
     }
   },
   "numeric_claims_checked": 152,
   "report_numbers_check_exit": 0,
   "submission_text_gate_exit": 0,
-  "visual_inspection": "PASS_ALL18_PIXELS_IDENTICAL_PLUS_NEW_CONTACT_REVIEW",
+  "visual_inspection": "PASS: page8 of both variants visually inspected without clipping, overlap or missing glyphs; other16 pages pixel-identical to reviewed canon",
   "external_submissions": 0,
   "push_performed": false,
-  "visual_qa": "results/v8.1/rebuild-2026-10-24/REBUILD_FIDELITY.json",
+  "visual_qa": "results/v8.1/author-approved-2026-10-24/BUILD.json",
   "page_limit_status": "NINE_PAGES_UNCONFIRMED_OFFICIAL_CAP",
   "rebuild_date_KST": "2026-10-24",
   "rebuild_receipt": "results/v8.1/rebuild-2026-10-24/REBUILD_FIDELITY.json",
-  "G_AUTHOR": "PREPARATION_READY_NOT_CONFIRMED",
+  "G_AUTHOR": "CONFIRMED_DIRECT_HUMAN",
   "T2": "BLOCKED_EXTERNAL_USER_CONFIRMED",
   "fallback_policy": "User confirmed Nov3 12:00KST no-path condition; not yet executed",
-  "fallback_heartbeat": "aimo-11-3-fallback; one occurrence2026-11-03 12:00Asia/Seoul"
+  "fallback_heartbeat": "aimo-11-3-fallback; one occurrence2026-11-03 12:00Asia/Seoul",
+  "author_review_confirmed": true,
+  "reciprocal_review_commitment_confirmed": true,
+  "authority_record": "research/AUTHOR_APPROVAL_v8.1.json",
+  "latest_build_receipt": "results/v8.1/author-approved-2026-10-24/BUILD.json",
+  "sole_latest_text_delta": "AI Use Statement confirms completed author review and responsibility",
+  "T3": "NOT_PUSHED_PRIZE_GATE_PENDING",
+  "T4": "NOT_SUBMITTED_IDS_PENDING"
 }

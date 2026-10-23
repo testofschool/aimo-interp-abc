@@ -1,6 +1,6 @@
 # AIMO-Interp report v8.1
 
-최신 재빌드와 저자 검토 자료는 `G_AUTHOR_v8.1.md` 및 `../EXECUTION_REPORT_T1_REBUILD_2026-10-24.md`를 따른다. 본문·숫자·서식 변경 없이 재빌드했으며, 현재 PDF 해시는 `../results/v8.1/BUILD.json`에 기록했다.
+저자 직접 확인 완료 상태는 `G_AUTHOR_v8.1.md`와 `../AUTHOR_APPROVAL_INTEGRATION_2026-10-24.md`를 따른다. AI Use Statement의 검토 완료·책임 문장만 갱신했고, 현재 PDF 해시는 `../results/v8.1/BUILD.json`에 기록했다.
 
 `REPORT_OUTLINE.md` is the editable manuscript with numeric placeholders.
 `REPORT_DRAFT.md` is its gated rendering against `results/report_numbers.json`
@@ -16,9 +16,7 @@ The preprint option, font/package choices, page geometry and body typesetting
 defaults are preserved from v5. The two variants remain available while the
 venue's anonymity policy is unresolved. The v8 PDFs are locally prepared, with a
 separate unnumbered AI Use Statement on page 8 before references on page 9.
-The statement describes review responsibility without claiming unverified
-completed human review. Actual author review and the form's matching completed
-review confirmation remain necessary before submission.
+The author directly confirmed final-PDF and AI-assisted-work review and responsibility. The statement now records completed review; the direct authority is stored in research/AUTHOR_APPROVAL_v8.1.json.
 
 The v6 lead is a conditional, selection-adjusted analysis of the public
 private-validation leaderboard and an exact power calculation. The paper
@@ -57,7 +55,7 @@ Page counts, PDF/source hashes, fonts and complete render review are recorded th
 PDFs and unchanged generation specification. `REGEN_FIDELITY_v8.md` records the
 source/PDF text and formatting comparison. Historical v5-v7 PDFs and QA files
 remain evidence. Both v8 variants retain nine pages, the original font and margin
-settings, and the unchanged AI disclosure. The two variants differ in author block
+settings, with only the final AI disclosure sentence updated after direct author confirmation. The two variants differ in author block
 and PDF author metadata; the shared repository URL reveals identity.
 
 The supplied `tools/openreview_payload_gate.py` is preserved byte-for-byte.
@@ -66,10 +64,10 @@ PDFs fail the current form check only for missing genuine leaderboard submission
 not verify completed human review, reviewer commitments, authenticated account
 access, invitation freshness, or all nested author/reviewer constraints.
 `tools/openreview_submission_preflight.py` adds stricter local validation and
-keeps the current artifact blocked while IDs and author attestations remain absent.
+keeps the current artifact blocked by absent native IDs; author attestations and completed-review wording are now confirmed.
 The prepared payload is `plans/payload_v8.json`; its abstract comes directly from
 the gated manuscript and exact confirmation strings come from the live invitation.
-The strings are prepared text rather than completed author attestations. Licence
+The exact strings are backed by direct human attestations recorded separately. Licence
 is recorded separately as note metadata in `plans/note_metadata_v8.json`.
 
 Raw source URLs and immutable revisions for earlier public participant reports

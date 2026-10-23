@@ -1,0 +1,6 @@
+{
+  "before": "The author is responsible for reviewing all AI-assisted content and verifying reported numbers against the released code and data, and takes full responsibility for the final content, including AI-assisted text, claims, code and other artifacts.",
+  "after": "The author has reviewed all AI-assisted work and takes full responsibility for the final content, including AI-assisted text, claims, code, reported statistics and other artifacts.",
+  "reason": "Direct human attestation in current chat",
+  "scientific_body_changed": false
+}

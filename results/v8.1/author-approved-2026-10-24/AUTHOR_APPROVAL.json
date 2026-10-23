@@ -1,0 +1,29 @@
+{
+  "recorded_at_utc": "2026-10-23T21:13:07.688069+00:00",
+  "recorded_date_KST": "2026-10-24",
+  "authority_source": "DIRECT_HUMAN_USER_MESSAGE_IN_CURRENT_CHAT",
+  "quote_verbatim": "v8.1 최종 기명 PDF와 AI 보조 작업을 검토했고 최종 내용에 책임집니다. ~Jung_Min_Kang1 상호 심사 3건 참여와 규정 준수, CC BY-SA 4.0에 동의합니다. 필수 실행 조건이 충족된 이 최종본의 GitHub push와 OpenReview 제출·시험 수정·원복을 승인합니다. Codabench 동결 2건 승인은 유지합니다.",
+  "reviewed_local_commit": "fdf2513a53ca25057dbf2b661ce0d82dddba4a5f",
+  "reviewed_named_pdf_sha256": "4cf4e1acc585e33ae27bf9484b6e1f7d1df75f2a887edc56cabef96743eb1639",
+  "author_profile": "~Jung_Min_Kang1",
+  "author_review_confirmed": true,
+  "ai_assisted_work_reviewed_and_responsibility_confirmed": true,
+  "reciprocal_review_commitment_confirmed": true,
+  "reciprocal_reviews": 3,
+  "rules_compliance_confirmed": true,
+  "license": "CC BY-SA 4.0",
+  "conditional_authorizations": [
+    "GitHub push after mandatory prerequisites",
+    "OpenReview submission after mandatory prerequisites",
+    "trial revision and TLDR revert after mandatory prerequisites"
+  ],
+  "codabench_two_frozen_submissions_authorization": "RETAINED",
+  "prerequisites_not_waived": [
+    "actual evaluation access and native receipt-backed IDs/scores or explicit due fallback",
+    "current phase/account/quota checks before submissions",
+    "unchanged prize gate result truthfully reported",
+    "current invitation and payload checks"
+  ],
+  "new_measurements_or_receipts_claimed": false,
+  "mechanical_disclosure_change_authorized": "Reflect the directly confirmed completed review and responsibility; no scientific content change"
+}

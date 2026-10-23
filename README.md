@@ -1,6 +1,6 @@
 # AIMO-Interp: validation leaderboard identifiability
 
-최신 T1 재빌드·검토 준비는 `EXECUTION_REPORT_T1_REBUILD_2026-10-24.md`와 `report/G_AUTHOR_v8.1.md`에 기록했다. 본문·수치·렌더는 같고, 현재 PDF 해시는 BUILD.json의 재빌드 기록을 따른다. T2는 외부 원인으로 blocked다.
+G-AUTHOR 직접 확인을 기록하고 AI Use Statement에 검토 완료·책임 문구를 반영했다. 현재 상태는 `report/G_AUTHOR_v8.1.md`, `AUTHOR_APPROVAL_INTEGRATION_2026-10-24.md`, `results/v8.1/BUILD.json`을 따른다. T2는 외부 원인으로 blocked이며 상금 게이트는 실제 접수번호·점수가 없어 15/17이다.
 
 The locally prepared v8.1 report asks what can be resolved from a small public validation leaderboard.
 On the pinned October 19 snapshot (retrieved October 20, 2026 KST), owner-selection
@@ -83,7 +83,7 @@ earlier than the portal; the existing decision uses the portal deadline. The pag
 cap remains unconfirmed. Organizer context, proposal citation and the independent-item
 design target are recorded in the v8.1 report; the frozen snapshot predates the
 October 21 removals, without identifying affected owners.
-The named variant is planned for author review. The alternative changes the author
+The author directly confirmed review of the named variant and AI-assisted work on October 24; the disclosure now records completed review and responsibility. The alternative changes the author
 block and PDF author metadata; the repository URL still reveals the author, so it
 must not be described as fully double-blind anonymized.
 
@@ -100,4 +100,4 @@ are in `HANDOFF_v6.md` and `research/identifiability_usage_v6.md`. Method reopen
 remains CLOSED. AI assistance and all statistical assumptions are disclosed in
 the report. Current release receipts supersede historical v5 state statements.
 
-The historical v6 completion audit is in `COMPLETION_AUDIT_v6.md`. It records corrected snapshot membership, verbatim label rules and the protected owner-result rendering block. `EXECUTION_REPORT_v8.md` records the current local checks, supplied-gate limitations and remaining author/account work. Required owner evidence and the actual October 31 rescrape are still pending.
+The historical v6 completion audit is in `COMPLETION_AUDIT_v6.md`. It records corrected snapshot membership, verbatim label rules and the protected owner-result rendering block. `EXECUTION_REPORT_v8.md` is historical. `AUTHOR_APPROVAL_INTEGRATION_2026-10-24.md` records the latest author confirmation, checks and remaining account/receipt work. Required owner evidence and the actual October 31 rescrape are still pending.

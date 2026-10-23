@@ -1,0 +1,68 @@
+{
+  "status": "G_AUTHOR_CONFIRMED_RECEIPTS_PENDING",
+  "variants": {
+    "named": {
+      "pdf": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-named.pdf",
+      "sha256": "31c5ee0c79278c7b31a038acde4ed3f6ff61fbc2dbc361280000fc485b512c95",
+      "pages": 9,
+      "Type3": 0,
+      "negations": 40,
+      "prize_rubric_gate": {
+        "exit": 1,
+        "passed": 15,
+        "total": 17,
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ]
+      },
+      "page_pixel_equal_to_human_reviewed_canon": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": false,
+        "9": true
+      },
+      "font_table_identical": true,
+      "completed_review_wording": "PRESENT",
+      "author_review_and_attestations": "CONFIRMED_BY_DIRECT_HUMAN"
+    },
+    "anonymous": {
+      "pdf": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-anonymous.pdf",
+      "sha256": "b6c3fc29778c622b1476186e1ba0406126643516ed851c37ce3e90062e605bd8",
+      "pages": 9,
+      "Type3": 0,
+      "negations": 40,
+      "prize_rubric_gate": {
+        "exit": 1,
+        "passed": 15,
+        "total": 17,
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ]
+      },
+      "page_pixel_equal_to_human_reviewed_canon": {
+        "1": true,
+        "2": true,
+        "3": true,
+        "4": true,
+        "5": true,
+        "6": true,
+        "7": true,
+        "8": false,
+        "9": true
+      },
+      "font_table_identical": true,
+      "completed_review_wording": "PRESENT",
+      "author_review_and_attestations": "CONFIRMED_BY_DIRECT_HUMAN"
+    }
+  },
+  "scientific_body_unchanged": true,
+  "sole_text_delta": "Completed author review and responsibility sentence",
+  "visual_review": "PASS: page8 of both variants visually inspected without clipping, overlap or missing glyphs; other16 pages pixel-identical to reviewed canon"
+}

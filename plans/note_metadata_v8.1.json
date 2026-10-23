@@ -1,15 +1,16 @@
 {
   "license": "CC BY-SA 4.0",
-  "state": "PREPARED_NOT_ATTESTED",
-  "authors_and_reciprocal_reviewer": "PROPOSED_UNTIL_DIRECT_AUTHOR_APPROVAL",
+  "state": "AUTHOR_ATTESTED_RECEIPTS_PENDING",
+  "authors_and_reciprocal_reviewer": "CONFIRMED_BY_DIRECT_HUMAN_USER",
   "missing": [
-    "leaderboard_submission_ids from two authentic scored owner receipts",
-    "direct completed author review and external-action approval"
+    "leaderboard_submission_ids from authentic owner receipts or due authorized fallback"
   ],
-  "warning": "The form enum strings are prepared text, not verified author attestations. License is note metadata, not a content key.",
+  "warning": "Author attestations are directly confirmed. This prepared file is not a submission receipt; publication remains conditional on mandatory execution gates.",
   "invitation_tmdate": 1792785352965,
-  "author_review_confirmed": false,
-  "reciprocal_review_commitment_confirmed": false,
-  "status": "PREPARED_NOT_ATTESTED_NOT_SUBMITTED",
-  "source_base_commit": "6f81bc3b31472dfeb1179b25c31fd7bb128dd19f"
+  "author_review_confirmed": true,
+  "reciprocal_review_commitment_confirmed": true,
+  "status": "AUTHOR_APPROVED_CONDITIONAL_NOT_SUBMITTED",
+  "source_base_commit": "6f81bc3b31472dfeb1179b25c31fd7bb128dd19f",
+  "authority_record": "research/AUTHOR_APPROVAL_v8.1.json",
+  "reviewed_named_pdf_sha256": "4cf4e1acc585e33ae27bf9484b6e1f7d1df75f2a887edc56cabef96743eb1639"
 }

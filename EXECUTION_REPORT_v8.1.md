@@ -1,6 +1,6 @@
 # AIMO-Interp v8.1 execution — 2026-10-24 KST
 
-현재 재빌드 기록은 `EXECUTION_REPORT_T1_REBUILD_2026-10-24.md`를 따른다. 아래는 최초 v8.1 산출물 커밋 4b14400 당시의 보존 기록이다.
+현재 재빌드·직접 승인 기록은 `AUTHOR_APPROVAL_INTEGRATION_2026-10-24.md`를 따른다. 아래는 최초 v8.1 산출물 커밋 4b14400 당시의 보존 기록이다.
 
 Status: **LOCAL_ARTIFACTS_VERIFIED; EXTERNAL_WORK_INCOMPLETE**. Both final PDFs
 are nine pages with Type3=0 and 40 main-text negations. All 152 numeric claims

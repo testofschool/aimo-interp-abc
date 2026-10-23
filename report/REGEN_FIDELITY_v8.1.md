@@ -1,5 +1,7 @@
 # v8.1 regeneration fidelity
 
+이 문서는 직접 저자 승인 전 단계의 보존 기록이다. 현재 확인·PDF 상태는 `AUTHOR_APPROVAL_INTEGRATION_2026-10-24.md`와 최신 BUILD 기록을 따른다.
+
 Content canon: final v8 at commit 542f44b, saved before editing in
 `v8-execution/resume-2026-10-24/canon-v8`. The v7 preregistration artifacts remain
 unchanged. Format canon: unchanged generator, NeurIPS2026 preprint style, source

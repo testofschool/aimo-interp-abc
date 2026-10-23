@@ -1,0 +1,11 @@
+{
+  "sole_disclosure_delta_exact": true,
+  "claims_numeric_outputs_generator_unchanged": true,
+  "preambles_style_unchanged": true,
+  "scientific_body_unchanged": true,
+  "unreported_changes": 0,
+  "strict_preflight_flag": "--author-review-confirmed",
+  "flag_authority": "DIRECT_HUMAN_USER_MESSAGE recorded in research/AUTHOR_APPROVAL_v8.1.json",
+  "new_unit_tests": "NOT_NEEDED_FOR_DISCLOSURE_AND_METADATA_ONLY_CHANGE",
+  "private_measurements": "UNMEASURED"
+}
