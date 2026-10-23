@@ -1,0 +1,12 @@
+{
+  "observed_at_utc": "2026-10-23T21:32:35.264474+00:00",
+  "user_request": "Replace supplied v2.2 and handoff; fix/verify and rerun nine tests on Mac; preserve G-AUTHOR and Codabench2 approvals",
+  "base_commit": "c7797daa8cc9d2a26600bcd6e0945121460bde65",
+  "files": {
+    "prize_rubric_gate.py": "38a23f9febc62e45c492bc982db2180e26ee67611c9cfeff5f050861ed369031",
+    "HANDOFF_v8.md": "2dd6c0481f6dda715f0d46664ce138e819e4e2a36370a76b12aa6426fc6d3179"
+  },
+  "source_preserved_unchanged": true,
+  "scientific_body_change": false,
+  "external_actions_authorized_by_this_file": false
+}

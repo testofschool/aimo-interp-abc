@@ -3,8 +3,14 @@
 every item the AIMO-Interp writeup-prize judge and the submission form can check.
 
 Usage:  python3 prize_rubric_gate.py REPORT.pdf [--negations-max 40] [--json OUT.json]
+        python3 prize_rubric_gate.py REPORT.pdf --fallback-none [--now ISO8601]
+          Fallback mode (HANDOFF §3): only when no evaluation path exists by 2026-11-03 12:00 KST.
+          ID_FIELD/OWN_SCORE then pass only if (a) the clock is past the fallback time and (b) the PDF
+          states why no id exists: the Codabench outage and the organizers' announcement. Without this mode
+          the gate would block submission forever during an outage — a rule that makes the goal impossible.
         (or REPORT.txt already produced by `pdftotext -layout`)
-Exit 0 = PASS (push/submit may proceed) · 1 = FAIL (named checks) · 2 = unusable input.
+Exit 0 = PASS or PASS_FALLBACK (push/submit may proceed) · 1 = FAIL · 2 = unusable input · 3 = TEST_ONLY
+(any run with --now or --probe-result; a test clock or a faked probe can never unblock a step).
 Stdlib + poppler `pdftotext` only. Every rule names its primary source.
 
 Sources:
@@ -23,7 +29,11 @@ Sources:
            10/21 removal of two 100% submissions for label profiling, 10/23 required citation): snapshot must be stated
            pre-removal, owners not identified, queue explained, bundles = baselines, item budget = design target.
 """
-import json, re, subprocess, sys, shutil, argparse
+import json, re, subprocess, sys, shutil, argparse, datetime
+
+FALLBACK_AT = datetime.datetime(2026, 11, 3, 12, 0, tzinfo=datetime.timezone(datetime.timedelta(hours=9)))
+ANNOUNCE_RE = re.compile(r"(24 October|October 24|2026-10-24)[^\n]{0,160}(announce|Discord)|(announce|Discord)[^\n]{0,160}(24 October|October 24|2026-10-24)", re.I)
+OUTAGE_RE = re.compile(r"Codabench[^.]{0,120}(outage|unavailable|inaccessible|unreachable)", re.I)
 
 
 def load_text(path):
@@ -107,7 +117,32 @@ def main(argv=None):
     ap.add_argument("report")
     ap.add_argument("--negations-max", type=int, default=40)
     ap.add_argument("--json")
+    ap.add_argument("--fallback-none", action="store_true")
+    ap.add_argument("--now", help="TEST ONLY: ISO8601 with offset; any run with --now reports TEST_ONLY and exits 3")
+    ap.add_argument("--ids", help="comma-separated leaderboard_submission_ids exactly as they will be posted")
+    ap.add_argument("--probe-url", default="https://www.codabench.org/", help="live outage probe target")
+    ap.add_argument("--probe-result", choices=["down", "up"], help="TEST ONLY: skip the live probe (forces TEST_ONLY)")
     a = ap.parse_args(argv)
+    _probe = {}
+    def probe_state():
+        if "v" in _probe:
+            return _probe["v"]
+        if a.probe_result:
+            _probe["v"] = a.probe_result
+            return _probe["v"]
+        import urllib.request
+        try:
+            with urllib.request.urlopen(urllib.request.Request(a.probe_url, method="HEAD"), timeout=15) as r:
+                _probe["v"] = "up" if r.status < 500 else "down"
+        except Exception as e:
+            code = getattr(e, "code", None)
+            _probe["v"] = "up" if (code is not None and code < 500) else "down"
+        return _probe["v"]
+    ap_test = bool(a.now) or bool(a.probe_result)  # --now is a test clock: the run can never unblock a step (result TEST_ONLY, exit 3)
+    now = datetime.datetime.fromisoformat(a.now) if a.now else datetime.datetime.now(datetime.timezone.utc)
+    if a.fallback_none and not a.ids:
+        print(json.dumps({"result": "UNUSABLE", "error": "--fallback-none requires --ids with the exact payload value(s); only ['none'] is accepted in fallback"}))
+        return 2
     text, err = load_text(a.report)
     if text is None or len(text.strip()) < 500:
         print(json.dumps({"result": "UNUSABLE", "error": err or "empty text"}))
@@ -117,7 +152,20 @@ def main(argv=None):
     for cid, src, desc, fn in CHECKS:
         scope = text if cid in ("AI_STATEMENT", "CITE_PROPOSAL", "REPO_URL") else mt
         ok, detail = fn(scope)
-        rows.append({"check": cid, "source": src, "ok": ok, "fix": None if ok else detail})
+        if a.fallback_none and cid in ("ID_FIELD", "OWN_SCORE") and not ok:
+            if now < FALLBACK_AT:
+                detail = f"fallback refused: now {now.isoformat()} is before {FALLBACK_AT.isoformat()}"
+            elif not OUTAGE_RE.search(mt):
+                detail = "fallback refused: the PDF must state that no evaluation id exists because of the Codabench outage"
+            elif not ANNOUNCE_RE.search(text):
+                detail = "fallback refused: the PDF must cite the organizers' outage announcement (24 October, Discord #announcements)"
+            elif [x.strip() for x in a.ids.split(",")] != ["none"]:
+                detail = f"fallback refused: payload ids must be exactly ['none'], got {a.ids!r}"
+            elif probe_state() != "down":
+                detail = f"fallback refused: live probe says Codabench is {probe_state()} — submit the two baselines instead"
+            else:
+                ok, detail = True, f"fallback: time reached, outage + announcement cited, ids=['none'], probe={probe_state()}"
+        rows.append({"check": cid, "source": src, "ok": ok, "fix": (detail if (ok and str(detail).startswith("fallback:")) else (None if ok else detail))})
         if not ok:
             fails.append(cid)
     n = negation_count(mt)
@@ -126,12 +174,19 @@ def main(argv=None):
                  "fix": None if ok else f"cut hedging: {n} > {a.negations_max}"})
     if not ok:
         fails.append("NEGATIONS")
-    out = {"result": "PASS" if not fails else "FAIL", "failed": fails, "passed": len(rows) - len(fails), "total": len(rows),
-           "blocks": "T3 push and T4 OpenReview submit" if fails else None, "rows": rows}
+    used_fallback = a.fallback_none and any(r["check"] in ("ID_FIELD", "OWN_SCORE") and r["ok"] and (r.get("fix") or "").startswith("fallback:") for r in rows)
+    label = ("PASS_FALLBACK" if used_fallback else "PASS") if not fails else "FAIL"
+    if ap_test:
+        label = "TEST_ONLY(" + label + ")"
+    out = {"result": label, "failed": fails, "passed": len(rows) - len(fails), "total": len(rows),
+           "blocks": "T3 push and T4 OpenReview submit" if fails else None,
+           "mode": "fallback-none" if a.fallback_none else "normal", "rows": rows}
     s = json.dumps(out, indent=1, ensure_ascii=False)
     print(s)
     if a.json:
         open(a.json, "w", encoding="utf-8").write(s)
+    if ap_test:
+        return 3
     return 0 if not fails else 1
 
 
