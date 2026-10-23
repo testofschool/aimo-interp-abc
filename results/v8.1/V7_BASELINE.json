@@ -1,0 +1,48 @@
+{
+  "named": {
+    "sha256": "433f19fc65d970c7be58289a7a9e01564fad4e7f31f13462db60f88f4cde909e",
+    "pages": 9,
+    "Type3": 0,
+    "prize_exit": 1,
+    "passed": 5,
+    "total": 17,
+    "failures": [
+      "ID_FIELD",
+      "OWN_SCORE",
+      "REPO_URL",
+      "BH_WORDING",
+      "QUEUE_EXPLAINED",
+      "CITE_PROPOSAL",
+      "PRE_REMOVAL",
+      "NO_OWNER_ID",
+      "BASELINES_NOT_PROBES",
+      "DESIGN_TARGET",
+      "NEGATIVE_RESULT",
+      "NEGATIONS"
+    ],
+    "negations": 67
+  },
+  "anonymous": {
+    "sha256": "a86f03a92c77e0d97979d259c2f140c665f68f02aa3f6169cc303395b83a1b88",
+    "pages": 9,
+    "Type3": 0,
+    "prize_exit": 1,
+    "passed": 5,
+    "total": 17,
+    "failures": [
+      "ID_FIELD",
+      "OWN_SCORE",
+      "REPO_URL",
+      "BH_WORDING",
+      "QUEUE_EXPLAINED",
+      "CITE_PROPOSAL",
+      "PRE_REMOVAL",
+      "NO_OWNER_ID",
+      "BASELINES_NOT_PROBES",
+      "DESIGN_TARGET",
+      "NEGATIVE_RESULT",
+      "NEGATIONS"
+    ],
+    "negations": 67
+  }
+}

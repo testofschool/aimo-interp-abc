@@ -1,0 +1,7 @@
+{
+  "result": "PASS",
+  "checked": 152,
+  "mismatches": [],
+  "command": ".venv/bin/python -I tools/report_numbers.py --data-dir data --check research/claims.json",
+  "evidence": "Observed successful current-run command output; numeric sources and inputs unchanged after that check"
+}

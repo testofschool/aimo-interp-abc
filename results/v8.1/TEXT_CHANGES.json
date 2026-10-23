@@ -75,5 +75,10 @@
     "before": "submitted once each when the service and owner session permit.",
     "after": "planned for one submission each when the service and owner session permit.",
     "reason": "Prevent planned submission from reading as completed"
+  },
+  {
+    "before": "The v8 manuscript source base is `1962a9511d72b753ddd49dc3f2c7d92943d52a71`",
+    "after": "The v8.1 manuscript source base is `6f81bc3b31472dfeb1179b25c31fd7bb128dd19f`",
+    "reason": "Identify real local source commit; final artifact commit remains external to PDF"
   }
 ]

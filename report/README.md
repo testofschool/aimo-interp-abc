@@ -46,10 +46,9 @@ python3 -I tools/submission_text_gate.py report/main.tex report/main-anonymous.t
 
 For a conventional PDF build, run twice for each variant from `report/`, using a
 separate output directory per variant and `-no-shell-escape -halt-on-error
--interaction=nonstopmode`. There is no bibliography backend. The delivered build
-uses the LaTeX-production skill's compiler/QA workflow; its execution receipt,
-page counts, PDF/source hashes and Type-3 font checks accompany the publication
-record. A successful compile is distinct from inspecting every rendered page.
+-interaction=nonstopmode`. There is no bibliography backend. The current v8.1 build uses two pdflatex passes with -no-shell-escape;
+logs are under report/build/v8.1-final and final checks under results/v8.1.
+Page counts, PDF/source hashes, fonts and complete render review are recorded there. A successful compile is distinct from inspecting every rendered page.
 
 `REGEN_SPEC_v8.1.md` predeclares the October 24 text edits against saved v8 canon;
 `REGEN_FIDELITY_v8.1.md` records their final check. `REGEN_SPEC_v8.md` predeclares the text edits against the hash-verified v7

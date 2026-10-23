@@ -1,0 +1,346 @@
+{
+  "schema_version": 1,
+  "release": "v8.1",
+  "verdict": "PASS",
+  "rerender_required": false,
+  "scope": "Visual production QA only; does not adjudicate scientific claims, publication eligibility or receipt status.",
+  "checked_at_utc": "2026-10-23T20:51:56.458221+00:00",
+  "method": {
+    "direct_visual_inspection": [
+      "named pages 1-9",
+      "anonymous pages 1-2"
+    ],
+    "equivalence_coverage": "anonymous pages 3-9 were byte/pixel compared to directly inspected named pages",
+    "pdf_render_binding": "Independently rerendered each supplied final PDF with pdftoppm -scale-to 1600 -png, then compared RGB pixels to the inspected PNG files",
+    "text_extraction_used_for_verdict": false
+  },
+  "checks": {
+    "clipping": "PASS",
+    "overlap": "PASS",
+    "missing_glyphs": "PASS",
+    "tables_complete_and_inside_margins": "PASS",
+    "orphan_headings": "PASS",
+    "references_complete_and_legible": "PASS",
+    "ai_use_statement_complete_and_legible": "PASS",
+    "page_counts": {
+      "named": 9,
+      "anonymous": 9
+    }
+  },
+  "issues": [],
+  "observations": [
+    {
+      "severity": "cosmetic",
+      "pages": [
+        "named:2",
+        "anonymous:2"
+      ],
+      "detail": "Citation [8] wraps onto its own line after the snapshot paragraph. It is legible and inside the body margin; no content loss or rerender requirement."
+    }
+  ],
+  "pdfs": {
+    "named": {
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-named.pdf",
+      "sha256": "edde59e523d7cc6c7d0cf51565e0b1c0520a42ca6f319844c617da6920841a9c",
+      "bytes": 196533
+    },
+    "anonymous": {
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-anonymous.pdf",
+      "sha256": "debdea93d205e95ce71fb04fe0ad4cda07e7c06a996cc199ba742d6ce49d06af",
+      "bytes": 196473
+    }
+  },
+  "pages": [
+    {
+      "variant": "named",
+      "page": 1,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-1.png",
+      "sha256": "02ce45dc8fbaf97ddd6a575cb1fdf978a507318498cacbf660f6374d802ecb76",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "direct_visual",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "named",
+      "page": 2,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-2.png",
+      "sha256": "77b8e6dcd7f0157b7a3b8adc97ae266f7196c3dd268dab24d619ca8c3acbabc0",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "direct_visual",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "named",
+      "page": 3,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-3.png",
+      "sha256": "4af25691190bef1d24ba8ba882668cba9d5ce1c9b56b499531d195d46149d93d",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "direct_visual",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "named",
+      "page": 4,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-4.png",
+      "sha256": "85a758bf04c5e01a57be10078bfa4b88c5742a8a4067e2d69670a17897f009c0",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "direct_visual",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "named",
+      "page": 5,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-5.png",
+      "sha256": "18a1dd022faa1e37bf9eaadafdcd6570f2e4683a0ecd7f4bb82c4fa24221a79b",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "direct_visual",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "named",
+      "page": 6,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-6.png",
+      "sha256": "53e21c114aa25d0cc42ed02d4eaf84f7fe6c95e8f78c1f73c732699782782b3d",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "direct_visual",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "named",
+      "page": 7,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-7.png",
+      "sha256": "152d8b3398cb4f71ac445d98c087e9a10e4c0afebf3a4551abce8454e2ca6dd0",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "direct_visual",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "named",
+      "page": 8,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-8.png",
+      "sha256": "4b2cdb4d61742168e780908322c22c614d7b92110066291041becec78be54213",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "direct_visual",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "named",
+      "page": 9,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-9.png",
+      "sha256": "21e4f7a083493e403ec8338a4a4ee0c428e0c5adb58a5075a5bbf510c05ca08e",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "direct_visual",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "anonymous",
+      "page": 1,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-1.png",
+      "sha256": "d4790a564a4b32cbccc73e24e20186e67cb43ef0e1df1409ab52996d5cdd05a5",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "direct_visual",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "anonymous",
+      "page": 2,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-2.png",
+      "sha256": "85af6a8b159d4d8500957646d6e6754355961c8b5d109b2701a41c4ba624a023",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "direct_visual",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "anonymous",
+      "page": 3,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-3.png",
+      "sha256": "4af25691190bef1d24ba8ba882668cba9d5ce1c9b56b499531d195d46149d93d",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "pixel_equivalent_to_direct_visual_named_page",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "anonymous",
+      "page": 4,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-4.png",
+      "sha256": "85a758bf04c5e01a57be10078bfa4b88c5742a8a4067e2d69670a17897f009c0",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "pixel_equivalent_to_direct_visual_named_page",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "anonymous",
+      "page": 5,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-5.png",
+      "sha256": "18a1dd022faa1e37bf9eaadafdcd6570f2e4683a0ecd7f4bb82c4fa24221a79b",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "pixel_equivalent_to_direct_visual_named_page",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "anonymous",
+      "page": 6,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-6.png",
+      "sha256": "53e21c114aa25d0cc42ed02d4eaf84f7fe6c95e8f78c1f73c732699782782b3d",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "pixel_equivalent_to_direct_visual_named_page",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "anonymous",
+      "page": 7,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-7.png",
+      "sha256": "152d8b3398cb4f71ac445d98c087e9a10e4c0afebf3a4551abce8454e2ca6dd0",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "pixel_equivalent_to_direct_visual_named_page",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "anonymous",
+      "page": 8,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-8.png",
+      "sha256": "4b2cdb4d61742168e780908322c22c614d7b92110066291041becec78be54213",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "pixel_equivalent_to_direct_visual_named_page",
+      "matches_independently_rendered_final_pdf": true
+    },
+    {
+      "variant": "anonymous",
+      "page": 9,
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-9.png",
+      "sha256": "21e4f7a083493e403ec8338a4a4ee0c428e0c5adb58a5075a5bbf510c05ca08e",
+      "dimensions_px": [
+        1237,
+        1600
+      ],
+      "review": "pixel_equivalent_to_direct_visual_named_page",
+      "matches_independently_rendered_final_pdf": true
+    }
+  ],
+  "variant_comparison": [
+    {
+      "page": 1,
+      "pixel_identical": false,
+      "file_sha256_identical": false,
+      "difference_bbox": [
+        218,
+        367,
+        1019,
+        1445
+      ],
+      "reason_if_different": "Expected author-block height and first-page reflow; each distinct page inspected directly."
+    },
+    {
+      "page": 2,
+      "pixel_identical": false,
+      "file_sha256_identical": false,
+      "difference_bbox": [
+        218,
+        151,
+        1019,
+        1364
+      ],
+      "reason_if_different": "Expected author-block height and first-page reflow; each distinct page inspected directly."
+    },
+    {
+      "page": 3,
+      "pixel_identical": true,
+      "file_sha256_identical": true,
+      "difference_bbox": null,
+      "reason_if_different": null
+    },
+    {
+      "page": 4,
+      "pixel_identical": true,
+      "file_sha256_identical": true,
+      "difference_bbox": null,
+      "reason_if_different": null
+    },
+    {
+      "page": 5,
+      "pixel_identical": true,
+      "file_sha256_identical": true,
+      "difference_bbox": null,
+      "reason_if_different": null
+    },
+    {
+      "page": 6,
+      "pixel_identical": true,
+      "file_sha256_identical": true,
+      "difference_bbox": null,
+      "reason_if_different": null
+    },
+    {
+      "page": 7,
+      "pixel_identical": true,
+      "file_sha256_identical": true,
+      "difference_bbox": null,
+      "reason_if_different": null
+    },
+    {
+      "page": 8,
+      "pixel_identical": true,
+      "file_sha256_identical": true,
+      "difference_bbox": null,
+      "reason_if_different": null
+    },
+    {
+      "page": 9,
+      "pixel_identical": true,
+      "file_sha256_identical": true,
+      "difference_bbox": null,
+      "reason_if_different": null
+    }
+  ]
+}

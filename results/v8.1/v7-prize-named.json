@@ -1,0 +1,126 @@
+{
+ "result": "FAIL",
+ "failed": [
+  "ID_FIELD",
+  "OWN_SCORE",
+  "REPO_URL",
+  "BH_WORDING",
+  "QUEUE_EXPLAINED",
+  "CITE_PROPOSAL",
+  "PRE_REMOVAL",
+  "NO_OWNER_ID",
+  "BASELINES_NOT_PROBES",
+  "DESIGN_TARGET",
+  "NEGATIVE_RESULT",
+  "NEGATIONS"
+ ],
+ "passed": 5,
+ "total": 17,
+ "blocks": "T3 push and T4 OpenReview submit",
+ "rows": [
+  {
+   "check": "ID_FIELD",
+   "source": "[FORM]+[RULE5]",
+   "ok": false,
+   "fix": "needs 'submission id <id>' and no UNMEASURED"
+  },
+  {
+   "check": "OWN_SCORE",
+   "source": "[K1]+[K3]",
+   "ok": false,
+   "fix": "needs 'scored k/14' and an ISO timestamp"
+  },
+  {
+   "check": "REPO_URL",
+   "source": "[RULE4]",
+   "ok": false,
+   "fix": "needs an https URL to the open-sourced implementation"
+  },
+  {
+   "check": "BH_WORDING",
+   "source": "[K2]",
+   "ok": false,
+   "fix": "replace 'rejects the preceding ranks' with 'rejects ranks 1 through r'"
+  },
+  {
+   "check": "QUEUE_EXPLAINED",
+   "source": "[K1]+[KC1]+[KC2] (Discord 10/16 L14)",
+   "ok": false,
+   "fix": "replace the queue paragraph with: rows from aimo_organizer_rerun are organizer re-evaluations under the 16 October per-problem protocol"
+  },
+  {
+   "check": "CITE_PROPOSAL",
+   "source": "[Discord 10/23 L63] required citation",
+   "ok": false,
+   "fix": "add the stefanik2026aimointerp citation (bibtex given in the 10/23 announcement)"
+  },
+  {
+   "check": "PRE_REMOVAL",
+   "source": "[KC1]+[KC2] (Discord 10/21 L41)",
+   "ok": false,
+   "fix": "state: snapshot predates the organizers' 21 Oct removal of two 100% submissions attributed to iterative label profiling (organizer announcement, Discord #announcements)"
+  },
+  {
+   "check": "NO_OWNER_ID",
+   "source": "[KC2] tone",
+   "ok": false,
+   "fix": "add: 'We do not identify which owners were affected.'"
+  },
+  {
+   "check": "BASELINES_NOT_PROBES",
+   "source": "[KC1] (Discord 10/21 L45 'exploit labels ... disqualified')",
+   "ok": false,
+   "fix": "describe the two bundles as reference baselines; remove any sentence that uses them to check label balance"
+  },
+  {
+   "check": "DESIGN_TARGET",
+   "source": "[KC1] (final set = unpublished AIMO sets)",
+   "ok": false,
+   "fix": "add: 'We offer this as a design target for future validation boards, not as a statement about the unpublished final set.'"
+  },
+  {
+   "check": "NO_SELF_NEGATION",
+   "source": "[K1]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "ACTIONABLE",
+   "source": "[PRIZE] actionable",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NEGATIVE_RESULT",
+   "source": "[PRIZE] negative results",
+   "ok": false,
+   "fix": "needs '59 of 61' and '40 of 41' in the abstract"
+  },
+  {
+   "check": "GENERALIZATION",
+   "source": "[PRIZE] generalization",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "EFFICIENT",
+   "source": "[PRIZE] efficient methods",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "AI_STATEMENT",
+   "source": "[FORM]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NEGATIONS",
+   "source": "[K1]",
+   "ok": false,
+   "value": 67,
+   "max": 40,
+   "fix": "cut hedging: 67 > 40"
+  }
+ ]
+}

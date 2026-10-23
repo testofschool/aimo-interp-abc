@@ -1,0 +1,1 @@
+{"result": "PASS", "placeholders": 139, "out": "report/REPORT_DRAFT.md", "owner_private_validation": {"measurement_status": "UNMEASURED", "rendered_variant": "canonical_unmeasured", "measured_score_statements_allowed": false, "render_gate_expired": false, "per_problem_balance_inference_allowed": false}}

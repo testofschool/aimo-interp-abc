@@ -6,5 +6,10 @@
     "leaderboard_submission_ids from two authentic scored owner receipts",
     "direct completed author review and external-action approval"
   ],
-  "warning": "The form enum strings are prepared text, not verified author attestations. License is note metadata, not a content key."
+  "warning": "The form enum strings are prepared text, not verified author attestations. License is note metadata, not a content key.",
+  "invitation_tmdate": 1792785352965,
+  "author_review_confirmed": false,
+  "reciprocal_review_commitment_confirmed": false,
+  "status": "PREPARED_NOT_ATTESTED_NOT_SUBMITTED",
+  "source_base_commit": "6f81bc3b31472dfeb1179b25c31fd7bb128dd19f"
 }

@@ -1,0 +1,34 @@
+{
+  "research/claims.json": {
+    "byte_identical_to_canon": true,
+    "sha256": "a4b0ab219f58032fd422c1898cbb31f01ef656975753664bfe83d2cab5f6b7ae"
+  },
+  "results/report_numbers.json": {
+    "byte_identical_to_canon": true,
+    "sha256": "de62c1478fd049a532daa3c85f59a775e8488fc19095ab2d64e0704c256097cb"
+  },
+  "report/create_source.py": {
+    "byte_identical_to_canon": true,
+    "sha256": "525be4ff4b6a3767517b0f81d3733773cb4ce4903ddbd1a799792c8bf9cb4ed0"
+  },
+  "report/main.tex": {
+    "preamble_identical": true
+  },
+  "report/main-anonymous.tex": {
+    "preamble_identical": true
+  },
+  "numeric_keys_identical": true,
+  "ai_statement_identical": true,
+  "protected_block_identical": true,
+  "anonymous_page_pixel_equal": {
+    "1": false,
+    "2": false,
+    "3": true,
+    "4": true,
+    "5": true,
+    "6": true,
+    "7": true,
+    "8": true,
+    "9": true
+  }
+}

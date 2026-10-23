@@ -1,0 +1,68 @@
+{
+  "status": "LOCAL_VERIFIED_PRIZE_GATE_15_OF_17_EXTERNAL_INCOMPLETE",
+  "source_base_commit": "6f81bc3b31472dfeb1179b25c31fd7bb128dd19f",
+  "variants": {
+    "named": {
+      "pdf": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-named.pdf",
+      "sha256": "edde59e523d7cc6c7d0cf51565e0b1c0520a42ca6f319844c617da6920841a9c",
+      "pages": 9,
+      "Type3": 0,
+      "negations": 40,
+      "prize_rubric_gate": {
+        "exit": 1,
+        "passed": 15,
+        "total": 17,
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ]
+      },
+      "page_images": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-1.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-2.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-3.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-4.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-5.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-6.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-7.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-8.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/named/page-9.png"
+      ]
+    },
+    "anonymous": {
+      "pdf": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-anonymous.pdf",
+      "sha256": "debdea93d205e95ce71fb04fe0ad4cda07e7c06a996cc199ba742d6ce49d06af",
+      "pages": 9,
+      "Type3": 0,
+      "negations": 40,
+      "prize_rubric_gate": {
+        "exit": 1,
+        "passed": 15,
+        "total": 17,
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ]
+      },
+      "page_images": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-1.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-2.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-3.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-4.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-5.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-6.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-7.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-8.png",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.1/anonymous/page-9.png"
+      ]
+    }
+  },
+  "numeric_claims_checked": 152,
+  "report_numbers_check_exit": 0,
+  "submission_text_gate_exit": 0,
+  "visual_inspection": "PASS_ALL_18_FINAL_PAGES",
+  "external_submissions": 0,
+  "push_performed": false,
+  "visual_qa": "results/v8.1/VISUAL_QA.json",
+  "page_limit_status": "NINE_PAGES_UNCONFIRMED_OFFICIAL_CAP"
+}

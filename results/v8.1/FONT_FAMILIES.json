@@ -1,0 +1,60 @@
+{
+  "named": {
+    "old": [
+      "CMEX10",
+      "CMMI10",
+      "CMMI7",
+      "CMR10",
+      "CMR7",
+      "CMSY10",
+      "CMSY7",
+      "NimbusRomNo9L-Medi",
+      "NimbusRomNo9L-Regu",
+      "SFTT0900",
+      "SFTT1000"
+    ],
+    "new": [
+      "CMEX10",
+      "CMMI10",
+      "CMMI7",
+      "CMR10",
+      "CMR7",
+      "CMSY10",
+      "CMSY7",
+      "NimbusRomNo9L-Medi",
+      "NimbusRomNo9L-Regu",
+      "SFTT0900",
+      "SFTT1000"
+    ],
+    "same": true
+  },
+  "anonymous": {
+    "old": [
+      "CMEX10",
+      "CMMI10",
+      "CMMI7",
+      "CMR10",
+      "CMR7",
+      "CMSY10",
+      "CMSY7",
+      "NimbusRomNo9L-Medi",
+      "NimbusRomNo9L-Regu",
+      "SFTT0900",
+      "SFTT1000"
+    ],
+    "new": [
+      "CMEX10",
+      "CMMI10",
+      "CMMI7",
+      "CMR10",
+      "CMR7",
+      "CMSY10",
+      "CMSY7",
+      "NimbusRomNo9L-Medi",
+      "NimbusRomNo9L-Regu",
+      "SFTT0900",
+      "SFTT1000"
+    ],
+    "same": true
+  }
+}

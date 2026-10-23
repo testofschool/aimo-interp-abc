@@ -1,0 +1,22 @@
+{
+  "result": "BLOCKED",
+  "technical_checks": "FAIL",
+  "author_review_and_attestations": "NOT_VERIFIED",
+  "completed_review_wording": "NOT_CONFIRMED_IN_PAPER",
+  "invitation_fetch_freshness": "NOT_VERIFIED_BY_THIS_LOCAL_TOOL",
+  "external_venue_rules_and_profile_ownership": "NOT_VERIFIED_BY_THIS_LOCAL_TOOL",
+  "submission_authority": "NOT_GRANTED_BY_THIS_TOOL",
+  "submitted": false,
+  "original_gate": {
+    "result": "BLOCKED",
+    "pages": 9,
+    "form_mdate": 1792785352965,
+    "violations": [
+      "required field 'leaderboard_submission_ids' missing"
+    ]
+  },
+  "violations": [
+    "payload.leaderboard_submission_ids: required field missing",
+    "original payload gate returned 1"
+  ]
+}
