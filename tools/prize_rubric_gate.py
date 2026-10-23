@@ -19,6 +19,9 @@ Sources:
            64 negations hide the result.
   [K2]     statistics killer 2026-10-22: "rejects the preceding ranks" contradicts BH (ranks 1..r).
   [K3]     rules killer 2026-10-22: no repo URL; own results UNMEASURED.
+  [KC1/KC2] 2026-10-24 kill round on the Discord #announcements transcript (10/9 balance warning, 10/16 re-evaluation,
+           10/21 removal of two 100% submissions for label profiling, 10/23 required citation): snapshot must be stated
+           pre-removal, owners not identified, queue explained, bundles = baselines, item budget = design target.
 """
 import json, re, subprocess, sys, shutil, argparse
 
@@ -57,8 +60,24 @@ CHECKS = [
     ("BH_WORDING", "[K2]", "BH step-up rule rejects ranks 1 through r, not 'the preceding ranks'",
      lambda t: ("preceding ranks" not in t and bool(re.search(r"ranks?\s+1\s+through\s+r", t)),
                 "replace 'rejects the preceding ranks' with 'rejects ranks 1 through r'")),
-    ("NO_QUEUE_NAME", "[K1]", "no organizer queue is named next to a perfect score",
-     lambda t: ("aimo_organizer_rerun" not in t, "delete the aimo_organizer_rerun sentences")),
+    ("QUEUE_EXPLAINED", "[K1]+[KC1]+[KC2] (Discord 10/16 L14)", "the organizer rerun queue, if named, is explained as the 16 Oct per-problem re-evaluation, never as an unexplained perfect score",
+     lambda t: ("make no inference about how that run was produced" not in t and
+                ("aimo_organizer_rerun" not in t or bool(re.search(r"organizer re-evaluation|re-evaluated by the organizers|per-problem protocol", t, re.I))),
+                "replace the queue paragraph with: rows from aimo_organizer_rerun are organizer re-evaluations under the 16 October per-problem protocol")),
+    ("CITE_PROPOSAL", "[Discord 10/23 L63] required citation", "the proposal paper arXiv 2607.13899 is cited",
+     lambda t: ("2607.13899" in t, "add the stefanik2026aimointerp citation (bibtex given in the 10/23 announcement)")),
+    ("PRE_REMOVAL", "[KC1]+[KC2] (Discord 10/21 L41)", "the snapshot is stated as taken before the organizers' 21 October removal of two 100% submissions, with the announcement cited",
+     lambda t: (bool(re.search(r"(21 October|October 21|2026-10-21)", t)) and bool(re.search(r"removed|removal", t)) and bool(re.search(r"profiling", t)),
+                "state: snapshot predates the organizers' 21 Oct removal of two 100% submissions attributed to iterative label profiling (organizer announcement, Discord #announcements)")),
+    ("NO_OWNER_ID", "[KC2] tone", "the report says it does not identify which owners were affected",
+     lambda t: (bool(re.search(r"do not identify which owners|does not identify which owners|without identifying", t, re.I)),
+                "add: 'We do not identify which owners were affected.'")),
+    ("BASELINES_NOT_PROBES", "[KC1] (Discord 10/21 L45 'exploit labels ... disqualified')", "own bundles are described as reference baselines, never as a check of label balance on the private board",
+     lambda t: (not re.search(r"(check|verify|test|probe)\w*\s+(the\s+)?(label\s+)?balance", t, re.I) and bool(re.search(r"reference baseline", t, re.I)),
+                "describe the two bundles as reference baselines; remove any sentence that uses them to check label balance")),
+    ("DESIGN_TARGET", "[KC1] (final set = unpublished AIMO sets)", "the item budget is offered as a design target for future validation boards, not a statement about the final set",
+     lambda t: (bool(re.search(r"design target|future validation boards|future editions", t, re.I)) and bool(re.search(r"not (as )?a statement about the (unpublished )?final", t, re.I)),
+                "add: 'We offer this as a design target for future validation boards, not as a statement about the unpublished final set.'")),
     ("NO_SELF_NEGATION", "[K1]", "the report does not say it proposes nothing",
      lambda t: ("does not propose a new robustness predictor" not in t,
                 "replace with the actionable rule for organizers")),
@@ -96,7 +115,7 @@ def main(argv=None):
     mt = main_text(text)
     rows, fails = [], []
     for cid, src, desc, fn in CHECKS:
-        scope = text if cid == "AI_STATEMENT" else mt
+        scope = text if cid in ("AI_STATEMENT", "CITE_PROPOSAL", "REPO_URL") else mt
         ok, detail = fn(scope)
         rows.append({"check": cid, "source": src, "ok": ok, "fix": None if ok else detail})
         if not ok:
