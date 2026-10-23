@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/research/gate_v2_2/source/prize_rubric_gate.py", line 194, in <module>
+    sys.exit(main())
+             ~~~~^^
+  File "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/research/gate_v2_2/source/prize_rubric_gate.py", line 142, in main
+    now = datetime.datetime.fromisoformat(a.now) if a.now else datetime.datetime.now(datetime.timezone.utc)
+          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^
+ValueError: Invalid isoformat string: 'not-a-time'

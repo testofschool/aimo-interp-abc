@@ -105,5 +105,16 @@
   "latest_build_receipt": "results/v8.1/author-approved-2026-10-24/BUILD.json",
   "sole_latest_text_delta": "AI Use Statement confirms completed author review and responsibility",
   "T3": "NOT_PUSHED_PRIZE_GATE_PENDING",
-  "T4": "NOT_SUBMITTED_IDS_PENDING"
+  "T4": "NOT_SUBMITTED_IDS_PENDING",
+  "current_prize_gate": {
+    "version": "2.2+local.1",
+    "sha256": "320869903e0448ea514383288743391981e7a5b8c28eda590acfdde3a7908c43",
+    "validation": "GATE_V2_2_VALIDATION.md",
+    "test_groups_passed": 9,
+    "test_groups_total": 9,
+    "test_cases_passed": 31,
+    "test_cases_total": 31,
+    "operational_gate": "FAIL_15_OF_17",
+    "operational_fallback_executed": false
+  }
 }

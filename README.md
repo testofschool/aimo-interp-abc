@@ -2,6 +2,8 @@
 
 G-AUTHOR 직접 확인을 기록하고 AI Use Statement에 검토 완료·책임 문구를 반영했다. 현재 상태는 `report/G_AUTHOR_v8.1.md`, `AUTHOR_APPROVAL_INTEGRATION_2026-10-24.md`, `results/v8.1/BUILD.json`을 따른다. T2는 외부 원인으로 blocked이며 상금 게이트는 실제 접수번호·점수가 없어 15/17이다.
 
+October 24 gate update: supplied v2.2 and the handoff are preserved with their exact hashes under `research/gate_v2_2/source/`. The active gate is the separately identified `2.2+local.1` hardening. Its nine test groups (31 cases) pass on macOS; the original supplied gate passes 3/9 groups (17/31 cases). These are protocol checks, not submission receipts. See `GATE_V2_2_VALIDATION.md` and `research/gate_v2_2/OPERATIONS.md`; the actual report remains 15/17 and fallback has not run operationally.
+
 The locally prepared v8.1 report asks what can be resolved from a small public validation leaderboard.
 On the pinned October 19 snapshot (retrieved October 20, 2026 KST), owner-selection
 adjustment followed by Benjamini–Hochberg leaves 2 of 61 Small owners and 1 of 41
@@ -24,7 +26,7 @@ Read `report/REPORT_DRAFT.md`, both v8 PDF variants under `report/`,
 removes queue discussion, leads with conditional non-rejection counts and an
 independent-item planning rule, and reduces redundant hedging. The existing 150
 claims, frozen data and bundles are unchanged; two complementary owner counts
-are derived from existing values. The October 24 supplied prize gate is 15/17: genuine owner
+are derived from existing values. The current normal prize gate is 15/17: genuine owner
 submission IDs and scores are still absent. Publication and submission are pending.
 The published v6 report and v5-v7 artifacts remain historical evidence.
 Two frozen owner bundle scores and final-test

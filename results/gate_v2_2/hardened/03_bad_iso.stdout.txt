@@ -1,0 +1,12 @@
+{
+ "result": "UNUSABLE",
+ "error": "Invalid isoformat string: 'not-a-time'",
+ "blocks": "T3 push and T4 OpenReview submit",
+ "version": "2.2+local.1",
+ "test_only": true,
+ "test_inputs": {
+  "clock": true,
+  "probe_result": true,
+  "alternate_probe_url": false
+ }
+}

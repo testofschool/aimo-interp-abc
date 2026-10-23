@@ -1,0 +1,16 @@
+SYNTHETIC PROTOCOL FIXTURE. All example material is invented for local tests.
+The frozen calculation reports 59 of 61 Small owners and 40 of 41 Main owners.
+The BH rule rejects ranks 1 through r. The 21 October removal was attributed to profiling.
+We do not identify which owners were affected. Reference baselines remain contextual methods.
+The design target is not as a statement about the unpublished final set.
+The calculation uses at least 76 independent items and 169 at a smaller effect; paired, problem-clustered comparisons need separate sizing.
+The held-out problem evaluation is CPU based rather than additional model runs.
+The source package is https://github.com/testofschool/aimo-interp-abc and the proposal is arXiv2607.13899.
+This fixture supplies lexical context only. It supplies no native receipt or actual private measurement.
+Private-validation results of both reference baselines remain UNMEASURED.
+The reference baselines are planned-not-run.
+Evaluation IDs: none.
+The organizers' 24 October Discord announcement reports the outage.
+
+AI Use Statement
+AI was not used to fabricate observations. The author takes full responsibility.

@@ -1,0 +1,28 @@
+{
+  "verified_at_utc": "2026-10-23T21:38:07.961435+00:00",
+  "supplied_source_sha256": {
+    "prize_rubric_gate.py": "38a23f9febc62e45c492bc982db2180e26ee67611c9cfeff5f050861ed369031",
+    "HANDOFF_v8.md": "2dd6c0481f6dda715f0d46664ce138e819e4e2a36370a76b12aa6426fc6d3179"
+  },
+  "active_version": "2.2+local.1",
+  "active_gate_sha256": "320869903e0448ea514383288743391981e7a5b8c28eda590acfdde3a7908c43",
+  "original_normal_CHECKS_AST_identical": true,
+  "negation_function_AST_identical": true,
+  "approved_pdfs": {
+    "named": {
+      "sha256": "31c5ee0c79278c7b31a038acde4ed3f6ff61fbc2dbc361280000fc485b512c95",
+      "matches_approved_build": true
+    },
+    "anonymous": {
+      "sha256": "b6c3fc29778c622b1476186e1ba0406126643516ed851c37ce3e90062e605bd8",
+      "matches_approved_build": true
+    }
+  },
+  "scientific_body_changed": false,
+  "G_AUTHOR": "CONFIRMED_DIRECT_HUMAN",
+  "codabench_two_submission_approval": "RETAINED",
+  "current_operational_result": "FAIL_15_OF_17",
+  "operational_fallback_executed": false,
+  "submission_publication_mail_actions_this_validation": 0,
+  "existing_heartbeat_prompt_updates": 1
+}

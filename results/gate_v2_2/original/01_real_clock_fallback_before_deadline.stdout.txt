@@ -1,0 +1,117 @@
+{
+ "result": "FAIL",
+ "failed": [
+  "ID_FIELD",
+  "OWN_SCORE"
+ ],
+ "passed": 15,
+ "total": 17,
+ "blocks": "T3 push and T4 OpenReview submit",
+ "mode": "fallback-none",
+ "rows": [
+  {
+   "check": "ID_FIELD",
+   "source": "[FORM]+[RULE5]",
+   "ok": false,
+   "fix": "fallback refused: now 2026-10-23T21:37:25.798752+00:00 is before 2026-11-03T12:00:00+09:00"
+  },
+  {
+   "check": "OWN_SCORE",
+   "source": "[K1]+[K3]",
+   "ok": false,
+   "fix": "fallback refused: now 2026-10-23T21:37:25.798752+00:00 is before 2026-11-03T12:00:00+09:00"
+  },
+  {
+   "check": "REPO_URL",
+   "source": "[RULE4]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "BH_WORDING",
+   "source": "[K2]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "QUEUE_EXPLAINED",
+   "source": "[K1]+[KC1]+[KC2] (Discord 10/16 L14)",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "CITE_PROPOSAL",
+   "source": "[Discord 10/23 L63] required citation",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "PRE_REMOVAL",
+   "source": "[KC1]+[KC2] (Discord 10/21 L41)",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NO_OWNER_ID",
+   "source": "[KC2] tone",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "BASELINES_NOT_PROBES",
+   "source": "[KC1] (Discord 10/21 L45 'exploit labels ... disqualified')",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "DESIGN_TARGET",
+   "source": "[KC1] (final set = unpublished AIMO sets)",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NO_SELF_NEGATION",
+   "source": "[K1]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "ACTIONABLE",
+   "source": "[PRIZE] actionable",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NEGATIVE_RESULT",
+   "source": "[PRIZE] negative results",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "GENERALIZATION",
+   "source": "[PRIZE] generalization",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "EFFICIENT",
+   "source": "[PRIZE] efficient methods",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "AI_STATEMENT",
+   "source": "[FORM]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NEGATIONS",
+   "source": "[K1]",
+   "ok": true,
+   "value": 40,
+   "max": 40,
+   "fix": null
+  }
+ ]
+}

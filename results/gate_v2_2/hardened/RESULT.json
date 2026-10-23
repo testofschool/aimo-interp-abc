@@ -1,0 +1,1177 @@
+{
+  "observed_at_utc": "2026-10-23T21:37:34.207700+00:00",
+  "platform": "darwin",
+  "python": "3.13.12 (main, Feb  3 2026, 17:53:27) [Clang 17.0.0 (clang-1700.6.3.2)]",
+  "gate": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+  "gate_sha256": "320869903e0448ea514383288743391981e7a5b8c28eda590acfdde3a7908c43",
+  "nine_group_mapping": "Grouped from prior review requirements; subcases include all named edge cases. This is not a claimed verbatim missing historical list.",
+  "result": "PASS",
+  "groups_passed": 9,
+  "groups_total": 9,
+  "cases_passed": 31,
+  "cases_total": 31,
+  "groups": [
+    {
+      "group": 1,
+      "title": "Actual PDF normal and current-clock fallback",
+      "status": "PASS",
+      "cases": 2,
+      "failed_cases": []
+    },
+    {
+      "group": 2,
+      "title": "Cutoff just-before, inclusive boundary and equivalent UTC",
+      "status": "PASS",
+      "cases": 3,
+      "failed_cases": []
+    },
+    {
+      "group": 3,
+      "title": "Invalid and timezone-free clocks fail cleanly",
+      "status": "PASS",
+      "cases": 2,
+      "failed_cases": []
+    },
+    {
+      "group": 4,
+      "title": "Injected clock, fake probe and alternate target cannot unblock",
+      "status": "PASS",
+      "cases": 4,
+      "failed_cases": []
+    },
+    {
+      "group": 5,
+      "title": "Each required outage/unmeasured/planned/ID/citation declaration",
+      "status": "PASS",
+      "cases": 6,
+      "failed_cases": []
+    },
+    {
+      "group": 6,
+      "title": "Exact none ID value and required IDs argument",
+      "status": "PASS",
+      "cases": 4,
+      "failed_cases": []
+    },
+    {
+      "group": 7,
+      "title": "Resolved outage and working workaround invalidate fallback",
+      "status": "PASS",
+      "cases": 3,
+      "failed_cases": []
+    },
+    {
+      "group": 8,
+      "title": "An answering HEAD probe blocks fallback, including HTTP errors",
+      "status": "PASS",
+      "cases": 5,
+      "failed_cases": []
+    },
+    {
+      "group": 9,
+      "title": "Normal measured semantics retained; fallback checks always apply",
+      "status": "PASS",
+      "cases": 2,
+      "failed_cases": []
+    }
+  ],
+  "cases": [
+    {
+      "group": 1,
+      "case": "real_normal",
+      "input_kind": "ACTUAL_APPROVED_PDF",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-named.pdf"
+      ],
+      "expected": {
+        "exit": 1,
+        "result": "FAIL"
+      },
+      "observed": {
+        "exit": 1,
+        "result": "FAIL",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true,
+        "15_of_17": true,
+        "genuine_missing_only": true
+      },
+      "ok": true
+    },
+    {
+      "group": 1,
+      "case": "real_clock_fallback_before_deadline",
+      "input_kind": "ACTUAL_APPROVED_PDF",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-named.pdf",
+        "--fallback-none",
+        "--ids",
+        "none"
+      ],
+      "expected": {
+        "exit": 1,
+        "result": "FAIL"
+      },
+      "observed": {
+        "exit": 1,
+        "result": "FAIL",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true,
+        "two_missing_checks": true
+      },
+      "ok": true
+    },
+    {
+      "group": 2,
+      "case": "before",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T11:59:59+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 2,
+      "case": "at_kst",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(PASS_FALLBACK)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(PASS_FALLBACK)",
+        "failed": [],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 2,
+      "case": "at_equivalent_utc",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T03:00:00+00:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(PASS_FALLBACK)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(PASS_FALLBACK)",
+        "failed": [],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 3,
+      "case": "bad_iso",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "not-a-time",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 2,
+        "result": "UNUSABLE"
+      },
+      "observed": {
+        "exit": 2,
+        "result": "UNUSABLE",
+        "failed": null,
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 3,
+      "case": "missing_offset",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 2,
+        "result": "UNUSABLE"
+      },
+      "observed": {
+        "exit": 2,
+        "result": "UNUSABLE",
+        "failed": null,
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 4,
+      "case": "clock_only",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/missing_outage.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 4,
+      "case": "probe_only",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 4,
+      "case": "simulation_never_unblocks",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(PASS_FALLBACK)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(PASS_FALLBACK)",
+        "failed": [],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true,
+        "blocks_present": true
+      },
+      "ok": true
+    },
+    {
+      "group": 4,
+      "case": "custom_probe_is_test_only",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--probe-url",
+        "http://127.0.0.1:64300/"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 5,
+      "case": "missing_outage",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/missing_outage.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 5,
+      "case": "missing_unmeasured",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/missing_unmeasured.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 5,
+      "case": "missing_planned",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/missing_planned.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 5,
+      "case": "missing_ids",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/missing_ids.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 5,
+      "case": "missing_announcement",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/missing_announcement.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 5,
+      "case": "valid_pdf_like_linewraps",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/valid_pdf_like_linewraps.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(PASS_FALLBACK)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(PASS_FALLBACK)",
+        "failed": [],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 6,
+      "case": "missing_ids",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none"
+      ],
+      "expected": {
+        "exit": 2,
+        "result": "UNUSABLE"
+      },
+      "observed": {
+        "exit": 2,
+        "result": "UNUSABLE",
+        "failed": null,
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 6,
+      "case": "numeric",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "123",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 6,
+      "case": "mixed",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none,123",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 6,
+      "case": "duplicate",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none,none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 7,
+      "case": "resolved_outage",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/resolved_outage.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 7,
+      "case": "contradictory_outage",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/contradictory_outage.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 7,
+      "case": "working_workaround",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/working_workaround.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 8,
+      "case": "injected_up",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-result",
+        "up"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 8,
+      "case": "http_200",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-url",
+        "http://127.0.0.1:64301/"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 8,
+      "case": "http_302",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-url",
+        "http://127.0.0.1:64303/"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 8,
+      "case": "http_404",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-url",
+        "http://127.0.0.1:64305/"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 8,
+      "case": "http_503",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/qualified_fallback.txt",
+        "--fallback-none",
+        "--ids",
+        "none",
+        "--now",
+        "2026-11-03T12:00:00+09:00",
+        "--probe-url",
+        "http://127.0.0.1:64307/"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(FAIL)",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 9,
+      "case": "measured_normal_fixture",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/synthetic_measured.txt",
+        "--probe-result",
+        "down"
+      ],
+      "expected": {
+        "exit": 3,
+        "result": "TEST_ONLY(PASS)"
+      },
+      "observed": {
+        "exit": 3,
+        "result": "TEST_ONLY(PASS)",
+        "failed": [],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    },
+    {
+      "group": 9,
+      "case": "fallback_cannot_skip_preconditions",
+      "input_kind": "SYNTHETIC_TEST_ONLY",
+      "command": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/tools/prize_rubric_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/gate_v2_2/hardened/synthetic_fixtures/synthetic_measured.txt",
+        "--fallback-none",
+        "--ids",
+        "123"
+      ],
+      "expected": {
+        "exit": 1,
+        "result": "FAIL"
+      },
+      "observed": {
+        "exit": 1,
+        "result": "FAIL",
+        "failed": [
+          "ID_FIELD",
+          "OWN_SCORE"
+        ],
+        "blocks": "T3 push and T4 OpenReview submit"
+      },
+      "checks": {
+        "exit": true,
+        "label": true,
+        "no_traceback": true
+      },
+      "ok": true
+    }
+  ],
+  "synthetic_evidence_is_not_service_receipts": true,
+  "publications_or_submissions": 0
+}

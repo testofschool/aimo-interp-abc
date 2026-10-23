@@ -77,7 +77,15 @@ source URLs. It attributes prior label/balance observations and does not claim
 those observations as a new contribution. The publication archive records what
 was executed; it is not an OpenReview submission receipt.
 
-The October 24 supplied `tools/prize_rubric_gate.py`, updated byte-for-byte, has
-15/17 checks passing for both current PDFs, with 40 main-text negations. Missing owner ID/score checks block
-push and submission. The protected UNMEASURED paragraph and pending-receipts
-sentence remain until verified native evidence supports replacement.
+The October 24 supplied v2.2 gate is preserved byte-for-byte under
+`research/gate_v2_2/source/`. The active `tools/prize_rubric_gate.py` is the
+separately hashed `2.2+local.1` hardening; its original normal predicates are
+unchanged. The current PDFs retain 15/17 normal checks and 40 main-text negations.
+Missing owner ID/score checks block push and submission at the current time.
+`../GATE_V2_2_VALIDATION.md` records nine passing protocol test groups (31 cases)
+and the original-source failures. Future fallback requires the actual cutoff,
+documented absence of an evaluation route, all fallback declarations, and a real
+probe; test-only PASS_FALLBACK never unblocks execution. The protected UNMEASURED
+paragraph remains until verified native evidence supports a measured replacement;
+any later fallback wording must retain UNMEASURED and follow
+`../research/gate_v2_2/OPERATIONS.md`.
