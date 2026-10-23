@@ -1,4 +1,4 @@
-# AIMO-Interp report v8
+# AIMO-Interp report v8.1
 
 `REPORT_OUTLINE.md` is the editable manuscript with numeric placeholders.
 `REPORT_DRAFT.md` is its gated rendering against `results/report_numbers.json`
@@ -51,7 +51,8 @@ uses the LaTeX-production skill's compiler/QA workflow; its execution receipt,
 page counts, PDF/source hashes and Type-3 font checks accompany the publication
 record. A successful compile is distinct from inspecting every rendered page.
 
-`REGEN_SPEC_v8.md` predeclares the text edits against the hash-verified v7
+`REGEN_SPEC_v8.1.md` predeclares the October 24 text edits against saved v8 canon;
+`REGEN_FIDELITY_v8.1.md` records their final check. `REGEN_SPEC_v8.md` predeclares the text edits against the hash-verified v7
 PDFs and unchanged generation specification. `REGEN_FIDELITY_v8.md` records the
 source/PDF text and formatting comparison. Historical v5-v7 PDFs and QA files
 remain evidence. Both v8 variants retain nine pages, the original font and margin
@@ -77,7 +78,7 @@ source URLs. It attributes prior label/balance observations and does not claim
 those observations as a new contribution. The publication archive records what
 was executed; it is not an OpenReview submission receipt.
 
-The unchanged supplied `tools/prize_rubric_gate.py` has 10/12 checks passing for
-both v8 PDFs, with 39 main-text negations. Missing owner ID/score checks block
+The October 24 supplied `tools/prize_rubric_gate.py`, updated byte-for-byte, has
+15/17 checks passing for both current PDFs, with 40 main-text negations. Missing owner ID/score checks block
 push and submission. The protected UNMEASURED paragraph and pending-receipts
 sentence remain until verified native evidence supports replacement.

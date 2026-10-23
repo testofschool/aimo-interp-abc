@@ -1,0 +1,287 @@
+{
+  "scope": "Read-only public portal audit. source-authority-gate applied; no credentials, account reads, Discord API, remote mutation or automation.",
+  "observed_range_utc": [
+    "2026-10-23T20:47:59.662659+00:00",
+    "2026-10-23T20:48:51.525087+00:00"
+  ],
+  "authority": {
+    "candidate_layers": [
+      "official website competition rules/FAQ",
+      "live OpenReview invitation form schema",
+      "organizer issue10 clarification",
+      "attached organizer announcements transcript"
+    ],
+    "governing_fields_deadline_license": "live OpenReview invitation; D-010 in handoff fixes portal binding",
+    "governing_writeup_eligibility": "organizer issue10 comment, subject to current official rules and form requirements",
+    "track_divergence": "writeup-prize eligibility differs from leaderboard-prize evaluation; schema still requires nomination IDs and a track"
+  },
+  "openreview": {
+    "url": "https://api2.openreview.net/invitations?id=NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/-/Submission",
+    "raw_sha256": "fc1e071245f12c4c8da4f3f2f83135a012d8ccf7158f5c00413d0ca386be3c39",
+    "raw_bytes": 10485,
+    "http_code": 200,
+    "tmdate": 1792785352965,
+    "duedate": 1793969940000,
+    "expdate": 1793971740000,
+    "tmdate_kst": "2026-10-24T04:55:52.965000+09:00",
+    "duedate_kst": "2026-11-06T21:59:00+09:00",
+    "expdate_kst": "2026-11-06T22:29:00+09:00",
+    "required_fields": [
+      "title",
+      "authors",
+      "reciprocal_reviewers",
+      "keywords",
+      "abstract",
+      "pdf",
+      "leaderboard_submission_ids",
+      "submission_track",
+      "ai_assistance",
+      "ai_use_statement",
+      "reciprocal_reviewing_acknowledgement",
+      "rules_compliance",
+      "venue",
+      "venueid"
+    ],
+    "optional_fields": [
+      "voluntary_reviewers",
+      "TLDR",
+      "white_box_award"
+    ],
+    "license_values": [
+      "CC BY-SA 4.0"
+    ],
+    "note_id_optional": true,
+    "submission_track_values": [
+      "Main track",
+      "Small models track"
+    ],
+    "reciprocal_reviewers_description": "Reciprocal Reviewer for your submission will be assigned three other submissions to review in exchange for your own reviews. Nominated reviewers must be listed as authors of this submission and must complete their assigned reviews on time. As the Authors rely on the timeliness of the reviews with registration slots, **submissions that do not meet this requirement, or whose nominated reviewers fail to submit their reviews, will be desk rejected and not considered for awards.** Search by name or profile ID for the authors of this submission.",
+    "leaderboard_submission_ids_description": "Enter the IDs of the challenge leaderboard submissions that this paper describes and that we should evaluate for the prizes. Insert one submission ID per line or comma-separated. We will evaluate and rank only the first two submission IDs provided.",
+    "grade": "raw-verified"
+  },
+  "preregistered_comparison": {
+    "P4_prime_tmdate_match": true,
+    "P4_prime_raw_hash_match": true,
+    "P4_prime_due_match": true,
+    "P4_prime_expiry_match": true,
+    "P5_legacy_fields_present": true,
+    "P5_effective_required_after_P4_prime_match": true,
+    "P5_effective_optional_after_P4_prime_match": true,
+    "P5_legacy_incomplete_note": "P5 predates P4-prime; current required submission_track and optional voluntary_reviewers are the P4-prime additions, not new drift.",
+    "P6_exact_license_match": true
+  },
+  "deadline_conflict": {
+    "website_and_transcript": "November 5, 2026 23:59 AoE",
+    "website_and_transcript_equivalent_kst": "2026-11-06T20:59:00+09:00",
+    "portal_due_kst": "2026-11-06T21:59:00+09:00",
+    "difference_minutes": 60,
+    "handling": "Preserve conflict. Existing handoff D-010 fixes portal date binding; do not claim public wording and portal are concordant."
+  },
+  "codabench": {
+    "grade": "unverified",
+    "ruling": "Public endpoints failed from this Mac before HTTP; this does not establish outage for all users, account approval, phase state or quota.",
+    "checks": {
+      "codabench_competition16180": {
+        "url": "https://www.codabench.org/competitions/16180/",
+        "curl_exit": 28,
+        "http_code": 0,
+        "bytes": 0,
+        "time_total": 10.005144,
+        "stderr": "curl: (28) Failed to connect to www.codabench.org port 443 after 10005 ms: Timeout was reached\n"
+      },
+      "codabench_home": {
+        "url": "https://www.codabench.org/",
+        "curl_exit": 28,
+        "http_code": 0,
+        "bytes": 0,
+        "time_total": 10.005159,
+        "stderr": "curl: (28) Failed to connect to www.codabench.org port 443 after 10005 ms: Timeout was reached\n"
+      },
+      "codabench_public_api16180": {
+        "url": "https://www.codabench.org/api/competitions/16180/",
+        "curl_exit": 28,
+        "http_code": 0,
+        "bytes": 0,
+        "time_total": 10.005218,
+        "stderr": "curl: (28) Failed to connect to www.codabench.org port 443 after 10005 ms: Timeout was reached\n"
+      }
+    },
+    "bounds_seconds": {
+      "curl_max_time": 20,
+      "connect_timeout": 10
+    },
+    "phase_metadata": "UNVERIFIED",
+    "account_eligibility": "NOT_READ",
+    "quota": "NOT_READ",
+    "workaround": "NOT_INVESTIGATED via Discord; attached transcript says planned, not shipped"
+  },
+  "issue10": {
+    "url": "https://github.com/aimo-interp/getting-started/issues/10#issuecomment-5765789797",
+    "comment_created": "2026-09-21T18:52:26Z",
+    "comment_updated": "2026-09-21T18:52:26Z",
+    "body": "Hi,\n1. Definitely, it is perfectly eligible.\n2. No, you do not need to submit a Codabench submission to be eligible for the writeup prize. But the writeup should report evaluations on our [public train set](https://huggingface.co/datasets/aimo-interp/train-main-v2), the private val set and test set through codabench submissions.\n3. If I understand it correctly, you're asking whether you can publish perturbation data you yourself generated? Or rather, you took our data, generated your own labels, you're asking whether you can publish that? Which data points do you have in mind exactly? The validation set in codabench? Maybe I don't fully understand you here. \n4. There isn't an official one yet. You can assume it will be some standard 9-page long paper forma using the NeuRIPS template (https://neurips.cc/Conferences/2026/MainTrackHandbook). AI assistance is allowed but please make full disclosure what is what used for. Submission be done through OpenReview. Please, monitor our Discord announcements.\n\nBest,\nAIMO Interpretability team\n\n",
+    "eligibility_ruling": "Organizer explicitly says Codabench submission is not needed for writeup-prize eligibility; same sentence requires care because the following clause says writeup should report public-train, private-validation and test-set evaluations. Preserve both.",
+    "none_fallback": {
+      "syntax_matches_regex": true,
+      "organizer_acceptance": "UNVERIFIED",
+      "handling": "Regex acceptance is syntax only; issue10 does not approve literal none. No fallback run or payload submission authorized here."
+    },
+    "grade": "raw-verified for quoted response; semantic fallback unresolved"
+  },
+  "page_limit": {
+    "ruling": "UNDETERMINED: no current numeric cap verified in public form schema or site. Issue10 September21 comment is tentative standard9-page expectation. No inbox consulted.",
+    "site_token_counts": {
+      "page": 0,
+      "limit": 2,
+      "report": 6,
+      "review": 2,
+      "deadline": 3,
+      "9-page": 0
+    },
+    "controls_nonzero": [
+      "report",
+      "deadline"
+    ],
+    "openreview_group_instructions": "",
+    "ai_use_statement_description": "Every paper must include a mandatory 'AI Use Statement' section after the main text and before the references. It does not count toward the page limit. The statement must (1) name the tasks for which generative AI tools were used and which tools, (2) name the relevant tasks for which they were not used, and (3) confirm that the authors reviewed all AI-assisted work and take full responsibility for the final content, including AI-assisted text, claims, code, and other artifacts. Suggested structure: 'In this work, we used generative AI tools for <tasks>. We did not use generative AI tools for <other tasks>. We have reviewed all AI-assisted work and take responsibility for the final content of this paper.' More detail is welcome. If no AI assistance was used, the statement must say so. Missing statements, or falsehoods, plagiarism or misrepresentation introduced through AI tools, are treated as violations of the Code of Ethics and may lead to desk rejection.",
+    "specific_resolution_if_needed": "Organizer must confirm numeric main-text limit and whether references and AI Use Statement are excluded; the latter exclusion is already explicit in current schema.",
+    "grade": "raw-verified evidence; cap unresolved"
+  },
+  "proposal_metadata": {
+    "v1": {
+      "citation_title": [
+        "AIMO Interpretability Challenge"
+      ],
+      "citation_author": [
+        "Štefánik, Michal",
+        "Mondorf, Philipp",
+        "Waldis, Andreas",
+        "Liu, Qianying",
+        "Yang, Chuan",
+        "Spiegel, Michal",
+        "Kuchař, Josef",
+        "Kadlčík, Marek",
+        "Vawda-Oomerjee, Adam",
+        "Liu, Chaoran",
+        "Frieder, Simon",
+        "Plank, Barbara",
+        "Barez, Fazl",
+        "Stenetorp, Pontus"
+      ],
+      "citation_date": [
+        "2026/07/15"
+      ],
+      "citation_online_date": [
+        "2026/07/15"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2607.13899"
+      ],
+      "citation_arxiv_id": [
+        "2607.13899"
+      ],
+      "citation_abstract": [
+        "We propose the AIMO Interpretability Challenge, a competition on distinguishing robust from spurious reasoning in frontier mathematical language models based on the models' internal mechanisms. The challenge is motivated by a central limitation of standard reasoning benchmarks: strong final-answer accuracy does not reveal whether a model relies on stable reasoning mechanisms or exploits brittle reasoning shortcuts. Building on AI Mathematical Olympiad (AIMO) problems and submissions, together with resources from the Fields Model Initiative, the competition will provide (1) newly-published olympiad-level math reasoning problems and their symbolic representations, allowing generation of novel functional variants, (2) access to frontier reasoning models, and (3) assessments of models' adversarial robustness on these problems. Participants will use these resources, along with our computing infrastructure support, to develop methods for identifying which models solve problems robustly. Our competition will also create a new, open robustness benchmark and baseline systems, aiming to provide a lasting foundation for standard benchmarking in mathematical reasoning and interpretability. Scientifically, the competition connects interpretability and generalization research around a central question in AI research: can we determine if, and to what extent, the decision-making of frontier AI models is generalizable and thus, reliable?"
+      ]
+    },
+    "latest": {
+      "citation_title": [
+        "AIMO Interpretability Challenge"
+      ],
+      "citation_author": [
+        "Štefánik, Michal",
+        "Mondorf, Philipp",
+        "Waldis, Andreas",
+        "Spiegel, Michal",
+        "Belanec, Robert",
+        "Yang, Chuan",
+        "Matveev, Maria",
+        "Mazak, Jan",
+        "Liu, Qianying",
+        "Schepers, Markus",
+        "Kuchař, Josef",
+        "Kadlčík, Marek",
+        "Vawda-Oomerjee, Adam",
+        "Liu, Chaoran",
+        "Frieder, Simon",
+        "Plank, Barbara",
+        "Barez, Fazl",
+        "Stenetorp, Pontus"
+      ],
+      "citation_date": [
+        "2026/07/15"
+      ],
+      "citation_online_date": [
+        "2026/10/20"
+      ],
+      "citation_pdf_url": [
+        "https://arxiv.org/pdf/2607.13899"
+      ],
+      "citation_arxiv_id": [
+        "2607.13899"
+      ],
+      "citation_abstract": [
+        "We propose the AIMO Interpretability Challenge, a competition on distinguishing robust from spurious reasoning in frontier mathematical language models based on the models' internal mechanisms. The challenge is motivated by a central limitation of standard reasoning benchmarks: strong final-answer accuracy does not reveal whether a model relies on stable reasoning mechanisms or exploits brittle reasoning shortcuts. Building on AI Mathematical Olympiad (AIMO) problems and submissions, together with resources from the Fields Model Initiative, the competition will provide (1) newly-published olympiad-level math reasoning problems and their symbolic representations, allowing generation of novel functional variants, (2) access to frontier reasoning models, and (3) assessments of models' adversarial robustness on these problems. Participants will use these resources, along with our computing infrastructure support, to develop methods for identifying which models solve problems robustly. Our competition will also create a new, open robustness benchmark and baseline systems, aiming to provide a lasting foundation for standard benchmarking in mathematical reasoning and interpretability. Scientifically, the competition connects interpretability and generalization research around a central question in AI research: can we determine if, and to what extent, the decision-making of frontier AI models is generalizable and thus, reliable?"
+      ]
+    },
+    "conflict": "Supplied 14-author citation matches arxiv v1 exactly in count/order; latest v2 has18 authors and a changed order. Use supplied citation with organizer/v1 provenance as parent directed.",
+    "v1_url": "https://arxiv.org/abs/2607.13899v1",
+    "latest_url": "https://arxiv.org/abs/2607.13899",
+    "grade": "raw-verified metadata only"
+  },
+  "web_verification": {
+    "issue10": "https://github.com/aimo-interp/getting-started/issues/10",
+    "website": "https://aimo-interp.github.io/",
+    "arxiv_v1": "https://arxiv.org/abs/2607.13899v1",
+    "arxiv_latest": "https://arxiv.org/abs/2607.13899",
+    "openreview_web_result": "JS Loading only; invitation API bytes obtained separately with curl",
+    "codabench_web_result": "timeout fetching competition page"
+  },
+  "evidence_files": [
+    "codabench_competition16180.headers",
+    "codabench_competition16180.meta.json",
+    "codabench_competition16180.stderr",
+    "codabench_home.headers",
+    "codabench_home.meta.json",
+    "codabench_home.stderr",
+    "codabench_public_api16180.headers",
+    "codabench_public_api16180.meta.json",
+    "codabench_public_api16180.stderr",
+    "official_site.headers",
+    "official_site.meta.json",
+    "official_site.raw",
+    "official_site.stderr",
+    "official_site.txt",
+    "openreview_group.headers",
+    "openreview_group.meta.json",
+    "openreview_group.raw",
+    "openreview_group.stderr",
+    "openreview_invitation.headers",
+    "openreview_invitation.meta.json",
+    "openreview_invitation.raw",
+    "openreview_invitation.stderr",
+    "openreview_schema_extracted.json",
+    "organizer_issue10.headers",
+    "organizer_issue10.meta.json",
+    "organizer_issue10.raw",
+    "organizer_issue10.stderr",
+    "organizer_issue10_comments.headers",
+    "organizer_issue10_comments.meta.json",
+    "organizer_issue10_comments.raw",
+    "organizer_issue10_comments.stderr",
+    "organizer_issue10_html.headers",
+    "organizer_issue10_html.meta.json",
+    "organizer_issue10_html.raw",
+    "organizer_issue10_html.stderr",
+    "proposal_arxiv.headers",
+    "proposal_arxiv.meta.json",
+    "proposal_arxiv.raw",
+    "proposal_arxiv.stderr",
+    "proposal_arxiv.txt",
+    "proposal_arxiv_v1.headers",
+    "proposal_arxiv_v1.meta.json",
+    "proposal_arxiv_v1.raw",
+    "proposal_arxiv_v1.stderr",
+    "proposal_arxiv_v1.txt"
+  ]
+}

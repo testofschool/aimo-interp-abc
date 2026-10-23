@@ -1,6 +1,6 @@
 # AIMO-Interp: validation leaderboard identifiability
 
-The locally prepared v8 report asks what can be resolved from a small public validation leaderboard.
+The locally prepared v8.1 report asks what can be resolved from a small public validation leaderboard.
 On the pinned October 19 snapshot (retrieved October 20, 2026 KST), owner-selection
 adjustment followed by Benjamini–Hochberg leaves 2 of 61 Small owners and 1 of 41
 Main owners significant under an independent fair-coin item null. All survivors
@@ -18,11 +18,11 @@ Public anonymous fresh-clone V1–V6 passed at scientific commit `524cc98816b2cd
 see `PUBLICATION.md` and `results/v6/publication/`.
 
 Read `report/REPORT_DRAFT.md`, both v8 PDF variants under `report/`,
-`EXECUTION_REPORT_v8.md`, and `PUBLICATION.md`. v8 corrects the BH wording,
+`EXECUTION_REPORT_v8.1.md`, and `PUBLICATION.md`. v8 corrects the BH wording,
 removes queue discussion, leads with conditional non-rejection counts and an
 independent-item planning rule, and reduces redundant hedging. The existing 150
 claims, frozen data and bundles are unchanged; two complementary owner counts
-are derived from existing values. The local v8 prize gate is 10/12: genuine owner
+are derived from existing values. The October 24 supplied prize gate is 15/17: genuine owner
 submission IDs and scores are still absent. Publication and submission are pending.
 The published v6 report and v5-v7 artifacts remain historical evidence.
 Two frozen owner bundle scores and final-test
@@ -71,10 +71,16 @@ Both variants are retained while venue anonymity instructions remain unverified.
 The current public invitation is readable, but does not settle an anonymity policy.
 This repository's publication is not an OpenReview receipt.
 
-The October 22 live Submission invitation configures November 6 at 21:59 KST
+The October 24 live Submission invitation configures November 6 at 21:59 KST
 (expiration 22:29), requires leaderboard submission IDs and offers only CC BY-SA
 4.0. This supersedes the October 20 portal configuration preserved in historical
-receipts. Fresh field/enum constraints are under `research/v8_sources/`.
+receipts. Fresh field/enum constraints are under `research/v8_1_sources/`. The new required
+submission track is Small models track. The revised reciprocal-reviewer obligation
+is three reviews. Website/announcements give November 6 at 20:59 KST, one hour
+earlier than the portal; the existing decision uses the portal deadline. The page
+cap remains unconfirmed. Organizer context, proposal citation and the independent-item
+design target are recorded in the v8.1 report; the frozen snapshot predates the
+October 21 removals, without identifying affected owners.
 The named variant is planned for author review. The alternative changes the author
 block and PDF author metadata; the repository URL still reveals the author, so it
 must not be described as fully double-blind anonymized.

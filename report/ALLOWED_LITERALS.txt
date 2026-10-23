@@ -13,3 +13,4 @@
 2607.13899 bibliographic arXiv identifier, https://arxiv.org/abs/2607.13899
 10.1111 bibliographic DOI prefix, Benjamini-Hochberg original article
 6161.1995 bibliographic DOI component, Benjamini-Hochberg original article
+10.48550 bibliographic DOI prefix, organizer-specified proposal citation in supplied announcements.txt; arxiv 2607.13899v1

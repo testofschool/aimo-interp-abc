@@ -1,0 +1,79 @@
+[
+  {
+    "before": "On the frozen AIMO-Interp public validation board ({{lb_small_items}} Small and {{lb_main_items}} Main items, inferred from the score grid), no score below perfect is separable from the independent fair-coin null after per-owner selection and across-owner Benjamini–Hochberg correction: {{lb_small_nonrejected_owners}} of {{lb_small_owners_scored}} Small owners and {{lb_main_nonrejected_owners}} of {{lb_main_owners_scored}} Main owners are not rejected, including an owner with a {{lb_small_next_best_correct}}/{{lb_small_items}} Small result. We analyze a hash-pinned AIMO-Interp leaderboard snapshot using its observed score grid. The smallest compatible item counts are {{lb_small_items}} for Small and {{lb_main_items}} for Main. Under an explicit independent fair-coin item null and an independent-submission model, we adjust each owner's best visible score for its number of scored submissions, then apply Benjamini–Hochberg across owners. Only {{lb_small_bh_survivors}} of {{lb_small_owners_scored}} Small owners and {{lb_main_bh_survivors}} of {{lb_main_owners_scored}} Main owners reject that conditional null; every surviving owner has a perfect score. Non-rejection leaves chance performance, method equivalence and pairwise ranking unresolved. Exact one-sided binomial power at true accuracy {{power_alternative_acc060}} is {{power_at_14_acc060}} and {{power_at_21_acc060}} on the respective grids. Power first reaches {{power_target}} at {{power_n80_first_acc060}} items for accuracy {{power_alternative_acc060}} and {{power_n80_first_acc065}} for {{power_alternative_acc065}}; discreteness makes the sustained thresholds larger. We recommend at least {{power_n80_sustained_acc065}}–{{power_n80_sustained_acc060}} independent items for those stated effects before accounting for leaderboard selection. A supporting public-label audit finds no mixed labels among {{train_small_multi_model_problems}} Small problems with multiple checkpoints. We provide CPU reproduction, parsing and sensitivity contracts, and distinguish observed leaderboard statistics from unmeasured private results for our own controls.",
+    "after": "On the frozen AIMO-Interp public validation board ({{lb_small_items}} Small and {{lb_main_items}} Main items, inferred from the score grid), no score below perfect is separable from the independent fair-coin null after per-owner selection and across-owner Benjamini–Hochberg correction: {{lb_small_nonrejected_owners}} of {{lb_small_owners_scored}} Small owners and {{lb_main_nonrejected_owners}} of {{lb_main_owners_scored}} Main owners are not rejected, including an owner with a {{lb_small_next_best_correct}}/{{lb_small_items}} Small result. The snapshot predates the organizers' 21 October removal of two perfect-score submissions attributed to iterative profiling of problems and labels. We do not identify which owners were affected. [S13] Our hash-pinned analysis adjusts each owner's best visible score for its number of scored submissions under an independent-submission model. Only perfect observed owner results reject the declared null; non-rejection leaves chance performance, method equivalence and pairwise ranking unresolved. A single pre-specified predictor needs at least {{power_n80_sustained_acc065}} independent correctness items at true accuracy {{power_alternative_acc065}}, or {{power_n80_sustained_acc060}} at {{power_alternative_acc060}}, to sustain power {{power_target}} at level {{power_alpha}} before selection correction. We offer this as a design target for future validation boards, not as a statement about the unpublished final set. Paired, problem-clustered method comparisons need separate sizing. A supporting public-label audit finds no mixed labels among {{train_small_multi_model_problems}} Small problems with multiple checkpoints. We provide CPU reproduction and frozen reference baselines whose private-validation results remain unmeasured."
+  },
+  {
+    "before": "A high development score and a model-specific explanation are separate claims. [S1, S2, S3]",
+    "after": "A high development score and a model-specific explanation are separate claims. [S1, S2, S3, S12]"
+  },
+  {
+    "before": "The public dataset card says that the validation set is close to balanced. An earlier public technical report states that validation and test are balanced per problem and per model, and describes an always-robust result on the Small validation set. We attribute that stronger balance statement to the prior report; we do not infer exact balance from the phrase “close to balanced.” The organizer website also says that the exact private evaluation criterion is unpublished. These sources motivate a fair-coin reference, but they do not establish the independence assumptions required for a binomial test. Our statistical claims below are conditional on a declared null and scoring model. [S1, S2, S7]",
+    "after": "The public dataset card says that the validation set is close to balanced. On 9 October, the organizers warned that several highly ranking submissions relied on balanced labels and called this overfitting. That warning motivates examining a fair-coin reference; it does not establish exact balance within each problem or model. An earlier public technical report makes the stronger per-problem and per-model balance claim, which remains attributed to that report. The organizer website says that the exact private evaluation criterion is unpublished. Binomial calibration requires the separate independence assumptions declared below. [S1, S2, S7, S13]"
+  },
+  {
+    "before": "The scientific question is whether the public validation board can separate plausible improvements in accuracy from score variation and repeated selection.",
+    "after": "The organizers have stated that validation-board problems are absent from final evaluation, which will use unpublished AIMO sets. [S13] Our question is whether this frozen validation board can separate plausible improvements in accuracy from score variation and repeated selection under the declared model."
+  },
+  {
+    "before": "the actionable single-predictor planning rule",
+    "after": "the single-predictor planning rule"
+  },
+  {
+    "before": "Method comparisons should separately use paired, problem-clustered outcomes and size those comparisons separately.",
+    "after": "Method comparisons should use paired, problem-clustered outcomes and be sized separately. We offer this as a design target for future validation boards, not as a statement about the unpublished final set."
+  },
+  {
+    "before": "### Results and what the perfect scores establish",
+    "after": "### Results and the later removal announcement"
+  },
+  {
+    "before": "A perfect score is an extreme event under this null regardless of the procedure that produced it. Whether the procedure used a model-internal signal, avoided leakage, or generalizes to new problems requires separate evidence.",
+    "after": "The snapshot predates the organizers' 21 October announcement that they removed two perfect-score submissions attributed to iterative profiling of problems and labels. We do not identify which owners were affected: the supplied announcement gives no submission IDs linking those removals to this frozen snapshot. On 16 October, the organizers had announced automatic re-evaluation of top submissions under a per-problem protocol. These announcements supply context rather than evidence about the cause or validity of a particular frozen score. [S13] A perfect score is extreme under this null; model-internal signals, leakage avoidance and generalization each require separate evidence."
+  },
+  {
+    "before": "## 3. Exact power and an actionable item budget",
+    "after": "## 3. Exact power and an item-budget design target"
+  },
+  {
+    "before": "We do not turn the single-test item budget into a universal minimum for ranking a field.",
+    "after": "We offer this as a design target for future validation boards, not as a statement about the unpublished final set or a universal minimum for ranking a field."
+  },
+  {
+    "before": "A constant prediction and a problem-only control are also informative reference methods under the actual private scoring protocol. Their measured scores test practical behavior; they cannot reconstruct hidden label balance from a small aggregate score.",
+    "after": "Reference baselines (a constant rule and a surface-feature control) provide contextual comparisons under the actual private scoring protocol. Paired differences require item-level outcomes."
+  },
+  {
+    "before": "Establishing actionable interpretability or private-task performance",
+    "after": "Establishing interpretability or private-task performance"
+  },
+  {
+    "before": "Private-validation receipts for our frozen bundles remain pending; the report has no final-test outcomes.",
+    "after": "Private-validation receipts for our frozen reference baselines (a constant rule and a surface-feature control) remain pending; the report has no final-test outcomes."
+  },
+  {
+    "before": "The release supplies a hash-pinned CPU pipeline rather than additional model runs.",
+    "after": "The release supplies a hash-pinned CPU pipeline rather than additional model runs, with frozen reference baselines (a constant rule and a surface-feature control)."
+  },
+  {
+    "before": "<!-- BEGIN_OWNER_PRIVATE_VALIDATION -->",
+    "after": "The two frozen bundles are reference baselines (a constant rule and a surface-feature control), submitted once each when the service and owner session permit.\n\n<!-- BEGIN_OWNER_PRIVATE_VALIDATION -->"
+  },
+  {
+    "before": "",
+    "after": "append S12 and S13 references"
+  },
+  {
+    "before": "We do not identify which owners were affected: the supplied announcement gives no submission IDs linking those removals to this frozen snapshot.",
+    "after": "Affected owners remain unidentified: the supplied announcement omits submission IDs linking those removals to this frozen snapshot.",
+    "reason": "Preserve owner-linkage caveat while reducing redundant negation"
+  },
+  {
+    "change": "S12 explicitly links v1 matching organizer-specified author list; v2 expanded authors recorded separately"
+  },
+  {
+    "before": "submitted once each when the service and owner session permit.",
+    "after": "planned for one submission each when the service and owner session permit.",
+    "reason": "Prevent planned submission from reading as completed"
+  }
+]

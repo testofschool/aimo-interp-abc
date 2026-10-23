@@ -1,0 +1,97 @@
+Michal Štefánik — 10/9/26, 8:02 PM
+@everyone we have noticed that several highly ranking submissions rely on the balanced distribution of labels. Please note that this is a sort of overfitting and will not be a reliable indicator on the final test set. 
+
+We're also thinking how to incorporate separate/per-problem evaluation back into the codabench evaluation on the validation set without breaking the existing models. The idea of defining are_robust instead of is_robust was to allow the optimisation of the inference (eg by batching/model_loading) but admittedly, this also opened up ways for improvements which would not transfer to the practice. 
+
+We will keep you posted about any refinements in the codabench but we will try to avoid any breaking changes at this point.
+Michal Štefánik — 10/16/26, 2:01 AM
+Hey @everyone! Following up on this, we rolled out a separate, per-problem evaluation that more closely reflects on how we'll run the final test evaluation.
+
+We wanted to avoid any breaking changes for you so we have decided to stay on the current are_robust(list) interface rather than switching to is_robust -- your submissions will now be called multiple times, always with a list containing a single sample.
+To offset the overhead of repeated model loading in your existing submissions, we are adding extra 10min of runtime to each submission (totalling 1h10m).
+Plus to reduce queues towards the competition's end, we are also allocating another worker with identical HW.
+
+The migration involves erasing a leaderboard and automatically re-evaluating a certain portion of top submissions from both tracks with the new protocol. This is running right now on separate workers. 
+If you can't find your submission in the leaderboard in ~24hrs, please just resubmit it again and check how you score!
+Andreas Waldis — 10/17/26, 2:55 AM
+Hey @everyone 
+
+New: White-Box Awards ($1,000 per track)
+
+While the competition also allows black-box and hybrid methods, we would also like to see more submissions experimenting with white-box signals as we think these signals can provide a generalizable source of information, but also teach us more about how reasoning in LLMs functions and how we should study it.
+
+For this purpose, we’re reserving $2,000 of the prize pool for two special awards for the best white-box methods in the AIMO Interpretability Challenge: $1,000 in the Main track and $1,000 in the Small Models track.
+
+What counts as white-box?
+Your method’s verdict must depend on signals beyond the generated text. For example:
+
+hidden-state activations, residual stream or attention patterns
+weights, gradients or parameter-space analysis
+probes, sparse autoencoders, transcoders or other learned readouts of internals
+interventions such as activation patching, ablation or steering
+
+Methods that rely only on generated text or chains of thought do not qualify.
+
+How is it awarded?
+
+In each track, the award goes to the highest-ranked white-box submission on the private test set.
+Your technical report must show that the white-box signal matters: include an ablation comparing your method with and without its white-box component.
+The organizers verify eligibility during the report review (Nov 15–30).
+Michal Štefánik — 10/21/26, 5:03 AM
+FYI we have removed from the leaderboard two 100% submissions that were a result of iterative profiling of problems and labels in the leaderboard through a long sequence of submissions.
+
+On this note, we again wanted to emphasize that the leaderboard, albeit private, does not cover problems that we will use in final evaluations. These will come from unpublished AIMO sets. Entailing that, we do not understand what is the benefit of efforts constructing solutions that clearly won't generalize. 
+
+We are not going to restrict the number of daily submissions that could avoid this, as this could also compromise other participants. But please keep in mind that attempts to exploit labels in validation sets are against our rules and will be disqualified. Please note that all uploaded submissions remain stored in codabench and can be later easily analysed or matched across participants.
+Michal Spiegel — Yesterday at 3:02 AM
+ Prize payment restrictions
+
+ Quick heads-up: the non-profit that will handle the prize transfers has restrictions on where it can send money, and we only recently got this information. Because of that, we can't pay prizes to recipients who live in, or whose bank is in, certain sanctioned or high-risk countries (e.g. Russia, Belarus, Iran, North Korea, Cuba, Syria, occupied regions of Ukraine). Please see FAQ #15 on the website for the full details: https://aimo-interp.github.io/#faq
+Andreas Waldis — Yesterday at 11:55 PM
+@everyone more details on submission and reviewing of the technical report
+
+The official submission of the technical report is open on OpenReview. See more details in the submission form.
+
+https://openreview.net/group?id=NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge
+
+Submission deadline: Thursday, November 5, 11:59 PM AoE
+Review deadline: Thursday, November 12, 11:59 PM AoE
+Reciprocal reviewer: each submission nominates one of its authors, who will review three other submissions.
+Voluntary reviewers: other authors can volunteer to review up to three submissions.
+Outstanding Reviewer Awards: reciprocal and voluntary reviewers are both eligible. After the review deadline, the organizers will select outstanding reviewers. Each outstanding reviewer receives an extra registration slot for NeurIPS 2026 in Paris.
+
+Finally, to equip the reader of your reports with the necessary context, you need to cite the proposal paper. You can find the latest version of the challenge description here: https://arxiv.org/abs/2607.13899. Please cite it as:
+
+@article{stefanik2026aimointerp
+  author       = {Michal Stef{\'{a}}nik and
+                  Philipp Mondorf and
+                  Andreas Waldis and
+                  Qianying Liu and
+                  Chuan Yang and
+                  Michal Spiegel and
+                  Josef Kuchar and
+                  Marek Kadlc{\'{\i}}k and
+                  Adam Vawda{-}Oomerjee and
+                  Chaoran Liu and
+                  Simon Frieder and
+                  Barbara Plank and
+                  Fazl Barez and
+                  Pontus Stenetorp},
+  title        = {{AIMO} Interpretability Challenge},
+  journal      = {CoRR},
+  volume       = {abs/2607.13899},
+  year         = {2026},
+  url          = {https://doi.org/10.48550/arXiv.2607.13899},
+  doi          = {10.48550/ARXIV.2607.13899},
+  eprinttype   = {arXiv},
+  eprint       = {2607.13899},
+}
+ 
+Michal Štefánik — 4:34 AM
+Hi @everyone, you may have noticed that we are facing a Codabench outage for around 48 hours now. It seems to us that Codabench team does not deal with this issue with the urgency that it deserves and so we are unsure how long this can take them. 
+
+Because of that, we started working on a temporary workaround that will allow you to evaluate your submissions through a super simple interface. We will try to roll this out in at least a minimal version asap. Hang tight!
+GitHub
+[Outage] CodaBench website inaccessible — October 22, 2026 · Iss...
+Description Hello CodaBench Team, I am experiencing an issue accessing the CodaBench website today (October 22, 2026). Neither the homepage nor the competition pages can be accessed. Affected URLs:...
+Description Hello CodaBench Team, I am experiencing an issue accessing the CodaBench website today (October 22, 2026). Neither the homepage nor the competition pages can be accessed. Affected URLs:...

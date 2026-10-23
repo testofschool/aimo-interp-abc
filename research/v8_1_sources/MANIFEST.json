@@ -1,0 +1,15 @@
+{
+  "received_date_KST": "2026-10-24",
+  "transcript_sha256": "340ffe7d11f3ad9959804117dfabe726628baae92e2e2327486bbcfaa6c8a7d6",
+  "source_type": "USER_SUPPLIED_TRANSCRIPT_NOT_LIVE_DISCORD_EXPORT",
+  "date_provenance": "Absolute displayed timestamps copied verbatim. Relative Yesterday and time-only labels retained; their 23-24 October dating comes from handoff context, not independently verified UI metadata.",
+  "citation_provenance": "Organizer-specified 14-author citation matches arxiv 2607.13899v1, verified live. Latest v2 has18 authors. Report explicitly cites v1.",
+  "files": {
+    "PORTAL_AUDIT.md": "4269139793002e61f1ceb492395bbf30f6d35027231c273b7a6526d225972dc4",
+    "announcements.txt": "340ffe7d11f3ad9959804117dfabe726628baae92e2e2327486bbcfaa6c8a7d6",
+    "invitation_2026-10-24.json": "fc1e071245f12c4c8da4f3f2f83135a012d8ccf7158f5c00413d0ca386be3c39",
+    "HANDOFF_v8.1.md": "3c4a047786d212fb00d8fccdbb20d4743d8fef2077d3e6eccbcadcb876331d25",
+    "PORTAL_AUDIT.json": "eb2c6ac71cfbd96135b773d68870d5ff435b56444fd9cadddbe5caacd1cfa63b",
+    "openreview_schema_extracted.json": "4a14c408c7d20da66ded1786aeadf016155b6ddb29da0af8219a37b602984e29"
+  }
+}
