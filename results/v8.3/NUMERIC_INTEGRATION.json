@@ -1,0 +1,24 @@
+{
+  "report_numbers_check": {
+    "exit": 0,
+    "result": "PASS",
+    "checked": 164,
+    "mismatches": []
+  },
+  "original_registry_records": 152,
+  "original_registry_records_identical": true,
+  "all_preexisting_report_number_values_identical": true,
+  "added_queue_keys": 12,
+  "frozen_paths_byte_identical": {
+    "research/PREREG_v6.json": true,
+    "tools/prereg_codabench_gate.py": true,
+    "tools/codabench_receipt_scope.py": true,
+    "report/OWNER_PRIVATE_VAL_UNMEASURED.md": true
+  },
+  "queue_test_count": 15,
+  "queue_test_result": "PASS",
+  "receipt_association_basis": "DIRECT_USER_SUPPLIED_BUNDLE_AND_HANDOFF",
+  "native_owner_receipt_verified": false,
+  "source_module_sha256": "e80e0fff014887a6304ad3d2edd30cdca24c89d5d3448013a4f682a0eedbf4fe",
+  "scope": "queuepublicobservations+registered14itemnull; noleaderboard,perproblembalance,pairedcomparisonsorfinaltestinference"
+}

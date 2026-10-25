@@ -1,0 +1,51 @@
+{
+  "metadata": {
+    "/Producer": "pdfTeX-1.40.29",
+    "/Author": "Anonymous Author(s)",
+    "/Title": "Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp",
+    "/Subject": "Leaderboard identifiability and evaluation design in AIMO-Interp",
+    "/Creator": "LaTeX with hyperref",
+    "/Keywords": "",
+    "/CreationDate": "D:20261025132018+09'00'",
+    "/ModDate": "D:20261025132018+09'00'",
+    "/Trapped": "/False",
+    "/PTEX.Fullbanner": "This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026/Homebrew) kpathsea version 6.4.2"
+  },
+  "URIs": [
+    {
+      "page": 7,
+      "uri": "https://aimo-interp.github.io/"
+    },
+    {
+      "page": 7,
+      "uri": "https://huggingface.co/datasets/aimo-interp/train-main-v2/blob/fa8af758c6519fc97a9d0bd9017feb6f12232b52/README.md"
+    },
+    {
+      "page": 7,
+      "uri": "https://github.com/aimo-interp/getting-started/blob/de794053debe75a711400696e66b60937cebbb1b/README.md"
+    },
+    {
+      "page": 7,
+      "uri": "https://github.com/aimo-interp/getting-started/blob/de794053debe75a711400696e66b60937cebbb1b/solutions/uncertainty-profiling/README.md"
+    },
+    {
+      "page": 7,
+      "uri": "https://www.codabench.org/api/phases/30038/get_leaderboard/"
+    },
+    {
+      "page": 7,
+      "uri": "https://doi.org/10.1111/j.2517-6161.1995.tb02031.x"
+    },
+    {
+      "page": 7,
+      "uri": "https://arxiv.org/abs/2607.13899v1"
+    }
+  ],
+  "identity_counts": {
+    "text": 0,
+    "metadata": 0,
+    "URIs": 0
+  },
+  "XMP_metadata_present": false,
+  "embedded_files_present": false
+}

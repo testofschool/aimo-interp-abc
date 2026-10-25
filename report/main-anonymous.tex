@@ -459,7 +459,7 @@
 \maketitle
 \begin{abstract}
 
-On the frozen AIMO-Interp public validation board (14 Small and 21 Main items, inferred from the score grid), no score below perfect is separable from the independent fair-coin null after per-owner selection and across-owner Benjamini--Hochberg correction: 59 of 61 Small owners and 40 of 41 Main owners are not rejected, including an owner with a 12/14 Small result. The snapshot predates the organizers' 21 October removal of two perfect-score submissions attributed to iterative profiling of problems and labels. We do not identify which owners were affected. \citep{S13} Our hash-pinned analysis adjusts each owner's best visible score for its number of scored submissions under an independent-submission model. Only perfect observed owner results reject the declared null; non-rejection leaves chance performance, method equivalence and pairwise ranking unresolved. A single pre-specified predictor needs at least 76 independent correctness items at true accuracy 0.65, or 169 at 0.6, to sustain power 0.8 at level 0.05 before selection correction. We offer this as a design target for future validation boards, not as a statement about the unpublished final set. Paired, problem-clustered method comparisons need separate sizing. A supporting public-label audit finds no mixed labels among 11 Small problems with multiple checkpoints. We provide CPU reproduction and frozen reference baselines whose private-validation results remain unmeasured.
+On the frozen AIMO-Interp public validation board (14 Small and 21 Main items, inferred from the score grid), no score below perfect is separable from the independent fair-coin null after per-owner selection and across-owner Benjamini--Hochberg correction: 59 of 61 Small owners and 40 of 41 Main owners are not rejected, including an owner with a 12/14 Small result. The snapshot predates the organizers' 21 October removal of two perfect-score submissions attributed to iterative profiling of problems and labels. \citep{S13} We do not identify which owners were affected. Our hash-pinned analysis adjusts each owner's best visible score for its number of scored submissions under an independent-submission model. Only perfect observed owner results reject the declared null; non-rejection leaves chance performance, method equivalence and pairwise ranking unresolved. A single pre-specified predictor needs at least 76 independent correctness items at true accuracy 0.65, or 169 at 0.6, to sustain power 0.8 at level 0.05 before selection correction. We offer this as a design target for future validation boards, not as a statement about the unpublished final set. Paired, problem-clustered method comparisons need separate sizing. A supporting public-label audit finds no mixed labels among 11 Small problems with multiple checkpoints. We provide CPU reproduction rather than additional model runs. Both reference baselines were scored once each through the organizers' temporary evaluation queue during the Codabench outage \citep{S13}; these runs are not on the leaderboard. The always-robust rule scored 7/14 (submission id bde5e370-4dba-4f19-8291-4a998bfecdcd, 2026-10-24 19:01:28 KST) and the length-and-digit control scored 7/14 (submission id 0c736e59-8248-4dee-8e4f-2df037c552d7, 2026-10-24 19:03:37 KST); each equals the fair-coin expectation and is not separable from it under the declared null.
 
 
 \end{abstract}
@@ -482,7 +482,7 @@ Our main contribution is an executable, snapshot-specific assessment of that evi
 
 \subsection{Snapshot, units and score reconstruction}
 
-We freeze the public private-validation leaderboard snapshot dated October 19, 2026, fetched on October 20 in Korea. The reproduction package stores the raw JSON pages, their hashes and the immutable analysis inputs. Snapshot date means the dated archive used for this calculation, not that every submitted run occurred on that date. The analysis refuses to compute after a snapshot hash mismatch. This avoids quietly replacing a published denominator when the online board changes. \citep{S10}
+We freeze the public private-validation leaderboard snapshot dated October 19, 2026, fetched on October 20 KST. The reproduction package stores the raw JSON pages, their hashes and the immutable analysis inputs. Snapshot date means the dated archive used for this calculation, not that every submitted run occurred on that date. The analysis refuses to compute after a snapshot hash mismatch. This avoids quietly replacing a published denominator when the online board changes. \citep{S10}
 
 
 The integer item counts are inferred from the score grid. For each track, the parser searches for the smallest item count compatible with the displayed accuracy and coverage after rounding, together with the integer invalid-prediction count. It represents a scored submission by its integer number of correct items divided by that denominator, counting invalid predictions as wrong. The smallest compatible counts are 14 and 21. This finite-grid assumption is explicit: the chosen unweighted integer score model and smallest-fit rule cannot reveal undocumented weighting or resampling. The exact item counts should ultimately be confirmed by the evaluator's item-level scoring contract.
@@ -656,6 +656,61 @@ For method comparison, a paired analysis is preferable to subtracting independen
 The final-test size is unpublished in the sources we inspected. We therefore make no claim that the eventual final ranking has the same limitations as this visible validation snapshot. A larger, well-designed final set could resolve differences that the public board cannot. The recommendation is to publish its effective evaluation units and uncertainty, rather than infer its adequacy from the validation grid.
 
 
+\clearpage
+
+\section*{Limitations and sensitivity directions}
+
+The strongest limitation is calibration. Our binomial null assumes independent items with the same correctness probability. Shared problems, models and perturbations can create dependence; exact balance can itself constrain the outcome distribution of particular rules. The inferred denominators also rely on the smallest compatible unweighted score grid. We report these assumptions at the point of the main result because a small p-value under a convenient null is not an unconditional validation of a predictor.
+
+
+Selection and multiplicity introduce three dependence sensitivities. Within an owner, closely related submissions can be positively correlated: fewer effective opportunities can make the independent-submission adjustment too large and reduce rejections; negative dependence can make it too small relative to the union event. Score-adaptive development and stopping can invalidate a fixed-trial model or a correction based on realized attempts. The union-bound sensitivity needs a fixed family or p-value validity conditional on the family and counts. Aggregate scores leave effective attempts and stopping rules unidentified, so the release exposes the unadjusted tail, visible m and adjusted tail. Counting only visible scored submissions gives a conditional upper bound on survivors when the observed best score and independent-submission null are fixed: additional hidden attempts increase the adjusted tail. Unknown dependence, missing owners, an unseen higher best score or null misspecification defeat that bound. Across owners, shared solutions and public discoveries can correlate outcomes. Bonferroni permits arbitrary across-owner dependence among valid owner p-values, while still inheriting within-owner calibration assumptions. The matching count is a sensitivity result rather than a causal measurement of overfitting or a diagnosis of individual submissions.
+
+
+The snapshot is finite and time-specific. New submissions, scoring changes, owner visibility or an altered evaluator can change the result. Both reference baselines were scored once each through the organizers' temporary evaluation queue during the Codabench outage \citep{S13}; these runs are not on the leaderboard. The always-robust rule scored 7/14 (submission id bde5e370-4dba-4f19-8291-4a998bfecdcd, 2026-10-24 19:01:28 KST) and the length-and-digit control scored 7/14 (submission id 0c736e59-8248-4dee-8e4f-2df037c552d7, 2026-10-24 19:03:37 KST); each equals the fair-coin expectation and is not separable from it under the declared null. The report has no final-test outcomes. Public-training concordance, sample metadata associations and reported participant experiences provide context for evaluation cautions. A prior text-control report and a prior probe stress test discuss weaker public performance under distribution shift, which supplies context rather than a matched comparison to our analysis. \citep{S8,S9}
+
+
+Finally, the item recommendations concern single-method power for a one-sided test against the fair-coin reference at the stated effects and target. Pairwise ranking, small accuracy gaps, correlated outcomes, multiple comparisons and repeated validation feedback can require more data or a different design. Chance equivalence for non-rejected methods, differences among survivors and agreement with the final ordering each require their own evidence.
+
+
+\section*{AI Use Statement}
+
+We used AI assistance for \textbf{Ideation} (screening hypotheses and research directions, literature and prior-report search, and summarizing sources), \textbf{Coding} (writing and running CPU reproduction and analysis scripts, gates and fetchers), \textbf{Analysis} (deriving and cross-checking reported statistics and independently recomputing the leaderboard analysis), and \textbf{Writing} (drafting and editing the report text and structure). The tools were Anthropic Claude and OpenAI Codex, including independent AI agents used for cross-checks. AI was not used to create or alter the source leaderboard or robustness labels, to fabricate measurements, or to write peer reviews. AI-assisted code computed the reported statistics from the released source data; those derived computations are distinguished from source observations. The author has reviewed all AI-assisted work and takes full responsibility for the final content, including AI-assisted text, claims, code, reported statistics and other artifacts.
+
+
+\clearpage
+
+\begin{thebibliography}{15}
+
+\small\raggedright
+
+\bibitem{S1} AIMO organizers. Official competition website, rules and FAQ. \href{https://aimo-interp.github.io/}{Competition description}.
+
+\bibitem{S2} AIMO organizers. \texttt{train-main-v2} dataset card, immutable revision fa8af758c6519fc97a9d0bd9017feb6f12232b52. \href{https://huggingface.co/datasets/aimo-interp/train-main-v2/blob/fa8af758c6519fc97a9d0bd9017feb6f12232b52/README.md}{Label rules and validation description}.
+
+\bibitem{S3} AIMO organizers. Getting-started README, immutable commit de794053debe75a711400696e66b60937cebbb1b. \href{https://github.com/aimo-interp/getting-started/blob/de794053debe75a711400696e66b60937cebbb1b/README.md}{Interface and sample scope}.
+
+\bibitem{S5} AIMO organizers. Uncertainty baseline README, immutable commit de794053debe75a711400696e66b60937cebbb1b. \href{https://github.com/aimo-interp/getting-started/blob/de794053debe75a711400696e66b60937cebbb1b/solutions/uncertainty-profiling/README.md}{Sample evaluation protocol}.
+
+\bibitem{S7} Prompt Probes Read Solve Rate, Not Robustness: Negative Results from the AIMO Interpretability Challenge. Public report, October 18, 2026; immutable source commit 3b678f62432dda6e2c3124b670fc4bcaed9453ab. Prior problem-level label agreement, reported evaluation balance and constant-rule result. Exact source location is preserved in the research evidence manifest.
+
+\bibitem{S8} Earlier public AIMO-Interp text-control report. Immutable source commit 48643c30e7a01cabd63f337711e79d962c7f8826. Text cross-validation and public-score comparison. Exact source location is preserved in the research evidence manifest.
+
+\bibitem{S9} Earlier public AIMO-Interp probe stress-test report. Immutable source commit e527debcfc1b4b92c3e25b529bf196a17a84b417. Distribution-shift study. Exact source location is preserved in the research evidence manifest.
+
+\bibitem{S10} Codabench. AIMO-Interp public private-validation leaderboard, frozen dated snapshot October 19, 2026; fetched October 20, 2026. \href{https://www.codabench.org/api/phases/30038/get_leaderboard/}{Public leaderboard API}. Hashed JSON pages and parser provenance accompany the reproduction archive: https://anonymous.4open.science/r/aimo-identifiability.
+
+\bibitem{S11} Yoav Benjamini and Yosef Hochberg. Controlling the false discovery rate: a practical and powerful approach to multiple testing. Journal of the Royal Statistical Society, Series B, 1995. \href{https://doi.org/10.1111/j.2517-6161.1995.tb02031.x}{Original article}.
+
+\bibitem{S12} Michal Štefánik, Philipp Mondorf, Andreas Waldis, Qianying Liu, Chuan Yang, Michal Spiegel, Josef Kuchar, Marek Kadlčík, Adam Vawda-Oomerjee, Chaoran Liu, Simon Frieder, Barbara Plank, Fazl Barez and Pontus Stenetorp. AIMO Interpretability Challenge. CoRR, abs/2607.13899, 2026. Organizer-specified proposal citation, matching arXiv v1. \href{https://arxiv.org/abs/2607.13899v1}{Challenge proposal, version cited}.
+
+\bibitem{S13} AIMO-Interp organizers (M. Štefánik, A. Waldis, M. Spiegel). Discord \#announcements. Supplied transcript received October 24, 2026; absolute message dates include 9, 16 and 21 October, while later posts retain relative timestamps. The 24 October temporary-evaluation-queue notice is documented in the supplied v8.3 handoff; the recorded queue responses accompany the archive. Original bytes, source hash and date-provenance notes accompany the evidence manifest in the reproduction archive.
+
+\end{thebibliography}
+
+\clearpage
+
+\appendix
+
 \section{Supporting label audit and problem-only controls}
 
 \subsection{Training agreement does not identify model contrasts}
@@ -675,13 +730,13 @@ This public rule does not specify the private-label procedure. The labelled Smal
 An earlier public report already identifies problem-level shortcuts and reports exact per-problem balance in validation and test. Under exact within-problem balance, any deterministic problem-only predictor that gives the same binary answer for all model instances of a problem has accuracy exactly 0.5 on that problem, and therefore overall under equal item scoring. This follows by counting correct positive and negative instances, regardless of how the predictor learned its problem-level answer. The conclusion is conditional on that balance contract and same-answer behavior; it is not a proof that every text-based system is incapable of generalization. \citep{S7}
 
 
-The two frozen bundles are reference baselines (a constant rule and a surface-feature control), planned for one submission each when the service and owner session permit.
+The two frozen bundles are reference baselines (a constant rule and a surface-feature control).
 
 
-We retain two frozen Small bundles: a length-and-digit control and an always-robust rule. Their own private-validation results are UNMEASURED because we have no linked owner receipt recording the bundle, submission identifier, status, accuracy and time. The anticipated constant/control results are receipt expectations motivated by public evidence, not pre-registered predictions of unknown labels. Even if both receipts match those expectations, they would show consistency for those submissions rather than prove exact per-problem balance. Final-test performance of these bundles is also UNMEASURED. This owner-result limitation is separate from our observed analysis of the public board.
+Both reference baselines were scored once each through the organizers' temporary evaluation queue during the Codabench outage \citep{S13}; these runs are not on the leaderboard. The always-robust rule scored 7/14 (submission id bde5e370-4dba-4f19-8291-4a998bfecdcd, 2026-10-24 19:01:28 KST) and the length-and-digit control scored 7/14 (submission id 0c736e59-8248-4dee-8e4f-2df037c552d7, 2026-10-24 19:03:37 KST); each equals the fair-coin expectation and is not separable from it under the declared null. Final-test performance of these bundles is also UNMEASURED. This owner-result limitation is separate from our observed analysis of the public board.
 
 
-Private-validation receipts are pending.
+The recorded queue receipt JSONs accompany the reproduction archive.
 
 
 \subsection{Descriptive drop variance and label concordance}
@@ -792,23 +847,9 @@ Holding out whole problems prevents the same problem string from entering both s
 Applying the fitted training control unchanged to public samples yields balanced accuracy 0.4913 on the aggregate sample and 0.5409 on the original validation sample rows. Different configurations, label conventions and possible problem overlap leave disjoint-problem transfer unverified. In the aggregate sample, the formatting of a perturbation-description field perfectly associates with the observed label: a field-format flag has accuracy 1.0. That flag uses perturbation metadata outside the original problem-only feature set. Establishing interpretability or private-task performance requires evaluation beyond this unscored sample panel. \citep{S3,S5}
 
 
-\section{Limitations and sensitivity directions}
-
-The strongest limitation is calibration. Our binomial null assumes independent items with the same correctness probability. Shared problems, models and perturbations can create dependence; exact balance can itself constrain the outcome distribution of particular rules. The inferred denominators also rely on the smallest compatible unweighted score grid. We report these assumptions at the point of the main result because a small p-value under a convenient null is not an unconditional validation of a predictor.
-
-
-Selection and multiplicity introduce three dependence sensitivities. Within an owner, closely related submissions can be positively correlated: fewer effective opportunities can make the independent-submission adjustment too large and reduce rejections; negative dependence can make it too small relative to the union event. Score-adaptive development and stopping can invalidate a fixed-trial model or a correction based on realized attempts. The union-bound sensitivity needs a fixed family or p-value validity conditional on the family and counts. Aggregate scores leave effective attempts and stopping rules unidentified, so the release exposes the unadjusted tail, visible m and adjusted tail. Counting only visible scored submissions gives a conditional upper bound on survivors when the observed best score and independent-submission null are fixed: additional hidden attempts increase the adjusted tail. Unknown dependence, missing owners, an unseen higher best score or null misspecification defeat that bound. Across owners, shared solutions and public discoveries can correlate outcomes. Bonferroni permits arbitrary across-owner dependence among valid owner p-values, while still inheriting within-owner calibration assumptions. The matching count is a sensitivity result rather than a causal measurement of overfitting or a diagnosis of individual submissions.
-
-
-The snapshot is finite and time-specific. New submissions, scoring changes, owner visibility or an altered evaluator can change the result. Private-validation receipts for our frozen reference baselines (a constant rule and a surface-feature control) remain pending; the report has no final-test outcomes. Public-training concordance, sample metadata associations and reported participant experiences provide context for evaluation cautions while the owner measurements remain unavailable. A prior text-control report and a prior probe stress test discuss weaker public performance under distribution shift, which supplies context rather than a matched comparison to our analysis. \citep{S8,S9}
-
-
-Finally, the item recommendations concern single-method power for a one-sided test against the fair-coin reference at the stated effects and target. Pairwise ranking, small accuracy gaps, correlated outcomes, multiple comparisons and repeated validation feedback can require more data or a different design. Chance equivalence for non-rejected methods, differences among survivors and agreement with the final ordering each require their own evidence.
-
-
 \section{Reproduction and assistance}
 
-The release supplies a hash-pinned CPU pipeline rather than additional model runs, with frozen reference baselines (a constant rule and a surface-feature control). The public reproduction repository is https://github.com/testofschool/aimo-interp-abc. The v8.1 manuscript source base is \texttt{6f81bc3b\allowbreak{}31472dfe\allowbreak{}b1179b25\allowbreak{}c31fd7bb\allowbreak{}128dd19f}; the build provenance records subsequent text-only corrections. It verifies the leaderboard snapshot and parquet inputs before computing; registers measured values in a claims ledger; renders every reported measurement through checked numeric keys; and builds both author variants from one Markdown manuscript using the unchanged official NeurIPS style. The leaderboard tool records denominator fits, parsing resolutions, owner counts, corrected tails, exact power at the current grids and the sustained-threshold certification. The reproduction gates also test missing, early, mismatched and bad-hash receipt fixtures without treating them as real submissions.
+The release supplies a hash-pinned CPU pipeline rather than additional model runs, with frozen reference baselines (a constant rule and a surface-feature control). The public reproduction repository is https://anonymous.4open.science/r/aimo-identifiability. The v8.1 manuscript source base is [withheld for anonymous review]; the build provenance records subsequent text-only corrections. It verifies the leaderboard snapshot and parquet inputs before computing; registers measured values in a claims ledger; renders every reported measurement through checked numeric keys; and builds both author variants from one Markdown manuscript using the unchanged official NeurIPS style. The leaderboard tool records denominator fits, parsing resolutions, owner counts, corrected tails, exact power at the current grids and the sustained-threshold certification. The reproduction gates also test missing, early, mismatched and bad-hash receipt fixtures without treating them as real submissions.
 
 
 The archive includes immutable dataset revisions, file hashes and a downloader. It does not redistribute third-party labelled data with unresolved licence terms. A separate publication record contains clean-clone checks, source/PDF hashes, page counts and render review. Those records establish what was executed and which artifacts can be rebuilt; compilation alone does not validate the assumptions of the statistical model. The raw leaderboard retains source identifiers for auditability, while the scientific report discusses aggregated owner counts and neutral source titles.
@@ -816,39 +857,4 @@ The archive includes immutable dataset revisions, file hashes and a downloader. 
 
 The practical result is a reproducible evidential boundary: under a declared calibration model, the visible validation grid separates only perfect observed outcomes after selection and multiplicity, and has low single-method power for the stated moderate effects. A larger confirmation set, item-level paired outcomes and explicit grouping/balance rules would make the board more informative about robustness predictors and about the interpretability claims attached to them.
 
-
-\section*{AI Use Statement}
-
-We used AI assistance for \textbf{Ideation} (screening hypotheses and research directions, literature and prior-report search, and summarizing sources), \textbf{Coding} (writing and running CPU reproduction and analysis scripts, gates and fetchers), \textbf{Analysis} (deriving and cross-checking reported statistics and independently recomputing the leaderboard analysis), and \textbf{Writing} (drafting and editing the report text and structure). The tools were Anthropic Claude and OpenAI Codex, including independent AI agents used for cross-checks. AI was not used to create or alter the source leaderboard or robustness labels, to fabricate measurements, or to write peer reviews. AI-assisted code computed the reported statistics from the released source data; those derived computations are distinguished from source observations. The author has reviewed all AI-assisted work and takes full responsibility for the final content, including AI-assisted text, claims, code, reported statistics and other artifacts.
-
-
-\clearpage
-
-\begin{thebibliography}{15}
-
-\small\raggedright
-
-\bibitem{S1} AIMO organizers. Official competition website, rules and FAQ. \href{https://aimo-interp.github.io/}{Competition description}.
-
-\bibitem{S2} AIMO organizers. \texttt{train-main-v2} dataset card, immutable revision fa8af758c6519fc97a9d0bd9017feb6f12232b52. \href{https://huggingface.co/datasets/aimo-interp/train-main-v2/blob/fa8af758c6519fc97a9d0bd9017feb6f12232b52/README.md}{Label rules and validation description}.
-
-\bibitem{S3} AIMO organizers. Getting-started README, immutable commit de794053debe75a711400696e66b60937cebbb1b. \href{https://github.com/aimo-interp/getting-started/blob/de794053debe75a711400696e66b60937cebbb1b/README.md}{Interface and sample scope}.
-
-\bibitem{S5} AIMO organizers. Uncertainty baseline README, immutable commit de794053debe75a711400696e66b60937cebbb1b. \href{https://github.com/aimo-interp/getting-started/blob/de794053debe75a711400696e66b60937cebbb1b/solutions/uncertainty-profiling/README.md}{Sample evaluation protocol}.
-
-\bibitem{S7} Prompt Probes Read Solve Rate, Not Robustness: Negative Results from the AIMO Interpretability Challenge. Public report, October 18, 2026; immutable source commit 3b678f62432dda6e2c3124b670fc4bcaed9453ab. Prior problem-level label agreement, reported evaluation balance and constant-rule result. Exact source location is preserved in the research evidence manifest.
-
-\bibitem{S8} Earlier public AIMO-Interp text-control report. Immutable source commit 48643c30e7a01cabd63f337711e79d962c7f8826. Text cross-validation and public-score comparison. Exact source location is preserved in the research evidence manifest.
-
-\bibitem{S9} Earlier public AIMO-Interp probe stress-test report. Immutable source commit e527debcfc1b4b92c3e25b529bf196a17a84b417. Distribution-shift study. Exact source location is preserved in the research evidence manifest.
-
-\bibitem{S10} Codabench. AIMO-Interp public private-validation leaderboard, frozen dated snapshot October 19, 2026; fetched October 20, 2026. \href{https://www.codabench.org/api/phases/30038/get_leaderboard/}{Public leaderboard API}. Hashed JSON pages and parser provenance accompany the reproduction archive: https://github.com/testofschool/aimo-interp-abc.
-
-\bibitem{S11} Yoav Benjamini and Yosef Hochberg. Controlling the false discovery rate: a practical and powerful approach to multiple testing. Journal of the Royal Statistical Society, Series B, 1995. \href{https://doi.org/10.1111/j.2517-6161.1995.tb02031.x}{Original article}.
-
-\bibitem{S12} Michal Štefánik, Philipp Mondorf, Andreas Waldis, Qianying Liu, Chuan Yang, Michal Spiegel, Josef Kuchar, Marek Kadlčík, Adam Vawda-Oomerjee, Chaoran Liu, Simon Frieder, Barbara Plank, Fazl Barez and Pontus Stenetorp. AIMO Interpretability Challenge. CoRR, abs/2607.13899, 2026. Organizer-specified proposal citation, matching arXiv v1. \href{https://arxiv.org/abs/2607.13899v1}{Challenge proposal, version cited}.
-
-\bibitem{S13} AIMO-Interp organizers (M. Štefánik, A. Waldis, M. Spiegel). Discord \#announcements. Supplied transcript received October 24, 2026; absolute message dates include 9, 16 and 21 October, while later posts retain relative timestamps. Original bytes, source hash and date-provenance notes accompany the evidence manifest in the reproduction archive.
-
-\end{thebibliography}
 \end{document}

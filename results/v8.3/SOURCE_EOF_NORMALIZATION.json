@@ -1,0 +1,15 @@
+{
+  "change": "remove one terminal blank line from outline/rendered Markdown",
+  "reason": "git diff --check EOF warning",
+  "TeX_before": {
+    "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/main.tex": "a8a93a714ae650defd8b4497748468ab32da7343e08871b34083d6f794d87f1c",
+    "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/main-anonymous.tex": "31f8ceb94cb94edec4f31712a0b8db49bf828b9afd3e82e8537dc680da604aeb"
+  },
+  "TeX_after": {
+    "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/main.tex": "a8a93a714ae650defd8b4497748468ab32da7343e08871b34083d6f794d87f1c",
+    "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/main-anonymous.tex": "31f8ceb94cb94edec4f31712a0b8db49bf828b9afd3e82e8537dc680da604aeb"
+  },
+  "TeX_bytes_identical": true,
+  "PDF_rebuild_required": false,
+  "scientific_text_or_format_change": false
+}

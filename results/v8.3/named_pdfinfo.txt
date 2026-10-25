@@ -1,0 +1,22 @@
+Title:           Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp
+Subject:         Leaderboard identifiability and evaluation design in AIMO-Interp
+Keywords:        
+Author:          Jung Min Kang
+Creator:         LaTeX with hyperref
+Producer:        pdfTeX-1.40.29
+CreationDate:    Sun Oct 25 13:21:01 2026 KST
+ModDate:         Sun Oct 25 13:21:01 2026 KST
+Custom Metadata: yes
+Metadata Stream: no
+Tagged:          no
+UserProperties:  no
+Suspects:        no
+Form:            none
+JavaScript:      no
+Pages:           10
+Encrypted:       no
+Page size:       612 x 792 pts (letter)
+Page rot:        0
+File size:       197416 bytes
+Optimized:       no
+PDF version:     1.7

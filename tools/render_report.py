@@ -45,23 +45,33 @@ def owner_private_validation(text, outline, *, receipts=None, now=None):
     begin, end = text.index(OWNER_BEGIN), text.index(OWNER_END)
     if end <= begin:
         raise ValueError("owner-private configuration error: markers are reversed")
-    section = re.search(r"^##\s+4\.[^\n]*$", text, re.M)
+    queue_mode = bool(re.search(r"\{\{queue_(?:always_true|text_length_control)_", text))
+    section_pattern = r"^##\s+Appendix A[^\n]*$" if queue_mode else r"^##\s+4\.[^\n]*$"
+    section = re.search(section_pattern, text, re.M)
     section_end = re.search(r"^##\s+", text[section.end():], re.M) if section else None
     stop = section.end() + section_end.start() if section and section_end else len(text)
     if not section or not section.end() <= begin < end < stop:
-        raise ValueError("owner-private configuration error: marker pair must be inside section 4")
+        raise ValueError("owner-private configuration error: marker pair must be inside " + ("Appendix A" if queue_mode else "section 4"))
     fallback_bytes = fallback.read_bytes()
     if hashlib.sha256(fallback_bytes).hexdigest() != OWNER_FALLBACK_SHA256:
         raise ValueError("owner-private configuration error: canonical UNMEASURED fallback hash mismatch")
     unmeasured = fallback_bytes.decode("utf-8")
     if not unmeasured.strip() or "OWNER_PRIVATE_VALIDATION" in unmeasured:
         raise ValueError("owner-private configuration error: fallback must be nonempty and marker-free")
-    spec = importlib.util.spec_from_file_location("codabench_receipt_scope", ROOT / "tools/codabench_receipt_scope.py")
+    module_name = "queue_receipt_scope_v83" if queue_mode else "codabench_receipt_scope"
+    spec = importlib.util.spec_from_file_location(module_name, ROOT / "tools" / (module_name + ".py"))
     scope_module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(scope_module)
-    state = scope_module.inspect(ROOT / "research/PREREG_v6.json",
-                                 Path(receipts) if receipts is not None else ROOT / "results/v6/codabench_receipts.json",
-                                 now if now is not None else datetime.now(timezone.utc))
+    if queue_mode:
+        state = scope_module.inspect(now=now)
+        # Queue facts occur in abstract and limitations too. A missing source
+        # must block the whole new rendering instead of leaking stale numbers.
+        if not state["measured_score_statements_allowed"]:
+            raise ValueError("queue receipt source invalid: " + "; ".join(state["errors"]))
+    else:
+        state = scope_module.inspect(ROOT / "research/PREREG_v6.json",
+                                     Path(receipts) if receipts is not None else ROOT / "results/v6/codabench_receipts.json",
+                                     now if now is not None else datetime.now(timezone.utc))
     candidate = text[begin + len(OWNER_BEGIN):end].strip()
     if not candidate:
         raise ValueError("owner-private configuration error: authored block is empty")
@@ -71,7 +81,10 @@ def owner_private_validation(text, outline, *, receipts=None, now=None):
     return rendered, {"measurement_status": state["measurement_status"],
                       "rendered_variant": "recorded_owner_scores" if allowed else "canonical_unmeasured",
                       "measured_score_statements_allowed": allowed,
-                      "render_gate_expired": state["render_gate_expired"],
+                      "render_gate_expired": state.get("render_gate_expired", False),
+                      "source": state.get("source", "CODABENCH_OWNER_RECEIPTS"),
+                      "association_basis": state.get("association_basis"),
+                      "native_owner_receipt_verified": state.get("native_owner_receipt_verified"),
                       "per_problem_balance_inference_allowed": False}
 
 

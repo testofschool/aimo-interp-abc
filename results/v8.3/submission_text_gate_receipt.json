@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-I",
+    "tools/submission_text_gate.py",
+    "report/main.tex",
+    "report/main-anonymous.tex",
+    "report/REPORT_DRAFT.md"
+  ],
+  "exit": 0,
+  "result": "CLEAN",
+  "hits": [],
+  "execution": "Executed before compilation; both TeX files remain byte-identical after source-only EOF cleanup"
+}

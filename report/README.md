@@ -1,91 +1,28 @@
-# AIMO-Interp report v8.1
+# AIMO-Interp report v8.3
 
-저자 직접 확인 완료 상태는 `G_AUTHOR_v8.1.md`와 `../AUTHOR_APPROVAL_INTEGRATION_2026-10-24.md`를 따른다. AI Use Statement의 검토 완료·책임 문장만 갱신했고, 현재 PDF 해시는 `../results/v8.1/BUILD.json`에 기록했다.
+The submission artifact is `aimo-interp-report-v8.3-anonymous.pdf`. The named variant is retained for later public/camera-ready use. Both have 10 total pages: main body 1–5, Limitations and AI Use Statement 6, References 7, and appendices 8–10. The exact supplied v3 normal gate returns PASS 19/19 on the anonymous PDF. The named PDF returns 18/19 because ANONYMIZED is intentionally false. Both have zero Type3 fonts.
 
-`REPORT_OUTLINE.md` is the editable manuscript with numeric placeholders.
-`REPORT_DRAFT.md` is its gated rendering against `results/report_numbers.json`
-and the measured-value registry in `research/claims.json`. Measured values must
-come through registered keys. `ALLOWED_LITERALS.txt` covers fixed public-label
-thresholds, protocol constants and bibliographic identifiers.
+Current hashes and receipts are in `../results/v8.3/BUILD.json` and `../EXECUTION_REPORT_v8.3_T1.md`. `G_LOOK_v8.3.md` records the pending new-PDF review. Existing v8.1 author approval is preserved; v8.3 approval has not been recorded. T3 and T4 are unrun.
 
-`create_source.py` builds both `main.tex` (Jung Min Kang, Independent) and
-`main-anonymous.tex` from that same rendered content. The only scientific-source
-differences between variants are author identity and PDF author metadata. Both
-embed unchanged official `neurips_2026.sty` bytes from the hash-pinned author kit.
-The preprint option, font/package choices, page geometry and body typesetting
-defaults are preserved from v5. The two variants remain available while the
-venue's anonymity policy is unresolved. The v8 PDFs are locally prepared, with a
-separate unnumbered AI Use Statement on page 8 before references on page 9.
-The author directly confirmed final-PDF and AI-assisted-work review and responsibility. The statement now records completed review; the direct authority is stored in research/AUTHOR_APPROVAL_v8.1.json.
+`REPORT_OUTLINE.md` is the editable source and `REPORT_DRAFT.md` the gated rendering. `report_numbers.py` verifies 164 claims: all previous 152 records and pre-existing values remain unchanged, with 12 queue-derived keys added. Supplied receipts are hash-checked under `../research/v8_3_sources/queue/`, with copies in `v8-execution/queue/`. They are public API views with the direct user/handoff bundle association; native owner logs have not been recovered. Final-test performance remains unmeasured. No paired-owner or per-problem-balance inference is drawn.
 
-The v6 lead is a conditional, selection-adjusted analysis of the public
-private-validation leaderboard and an exact power calculation. The paper
-explicitly states the independent fair-coin item null, finite score-grid model,
-submission-selection assumptions, dependence sensitivities and distinction
-between chance testing and pairwise ranking. The public training-label/control
-audit is supporting material. Private-validation results for our frozen bundles
-and their final-test performance remain UNMEASURED without linked owner
-receipts; matching expected constant/control scores would not establish
-per-problem balance.
+The frozen official Codabench numeric-ID guard, PREREG, and canonical UNMEASURED file remain unchanged. A distinct queue branch validates the new sources. Missing or tampered queue receipts stop the entire new render before emitting results in the abstract or Limitations.
 
-The editable outline marks the owner private-validation paragraph with one
-`BEGIN_OWNER_PRIVATE_VALIDATION` / `END_OWNER_PRIVATE_VALIDATION` pair. The
-renderer removes those markers and enforces
-`OWNER_PRIVATE_VAL_UNMEASURED.md` as the canonical paragraph whenever linked
-receipts do not authorize measured text. This guard applies after the deadline
-as well; a deadline does not create measurements. It changes only that paragraph
-and leaves the independent leaderboard analysis available.
+E11 moves the old supporting analysis and Tables 4–6 to Appendix A, and old reproduction text to Appendix B. Main sections 1–3 and all six table contents are preserved; no §2.3 shortening was needed. E4 updates baseline observations with individual submission-ID labels and the fair-coin comparison. E12 removes the location identifier, anonymizes self-URLs and the self-source commit hash, and moves the abstract removal citation. Intentional changes and text/format checks are recorded in `REGEN_SPEC_v8.3.md` and `REGEN_FIDELITY_v8.3.md`.
 
-To regenerate source from the repository root:
+`create_source.py` preserves the official NeurIPS 2026 style bytes, preprint option, fonts, margins, and captions. It adds section boundaries and anonymous redactions. The specified mirror URL is not proof that the mirror exists; G-MIRROR remains pending after T3. No mirror operation was performed.
+
+Reproduce sources from the repository root:
 
 ```sh
-python3 -I tools/render_report.py report/REPORT_OUTLINE.md results/report_numbers.json report/REPORT_DRAFT.md
-python3 -I report/create_source.py
-python3 -I tools/submission_text_gate.py report/main.tex report/main-anonymous.tex report/REPORT_DRAFT.md
+.venv/bin/python -I tools/report_numbers.py --out results/report_numbers.json --check research/claims.json
+.venv/bin/python -I tools/render_report.py report/REPORT_OUTLINE.md results/report_numbers.json report/REPORT_DRAFT.md
+.venv/bin/python -I report/create_source.py
+.venv/bin/python -I tools/submission_text_gate.py report/main.tex report/main-anonymous.tex report/REPORT_DRAFT.md
 ```
 
-For a conventional PDF build, run twice for each variant from `report/`, using a
-separate output directory per variant and `-no-shell-escape -halt-on-error
--interaction=nonstopmode`. There is no bibliography backend. The current v8.1 build uses two pdflatex passes with -no-shell-escape;
-logs are under report/build/v8.1-final and final checks under results/v8.1.
-Page counts, PDF/source hashes, fonts and complete render review are recorded there. A successful compile is distinct from inspecting every rendered page.
+The LaTeX builder used pdflatex reruns with inline bibliography and `-no-shell-escape`. Logs and page images are under `report/build/v8.3`; machine checks are under `results/v8.3`. Full render review is separate from compilation and gate PASS.
 
-`REGEN_SPEC_v8.1.md` predeclares the October 24 text edits against saved v8 canon;
-`REGEN_FIDELITY_v8.1.md` records their final check. `REGEN_SPEC_v8.md` predeclares the text edits against the hash-verified v7
-PDFs and unchanged generation specification. `REGEN_FIDELITY_v8.md` records the
-source/PDF text and formatting comparison. Historical v5-v7 PDFs and QA files
-remain evidence. Both v8 variants retain nine pages, the original font and margin
-settings, with only the final AI disclosure sentence updated after direct author confirmation. The two variants differ in author block
-and PDF author metadata; the shared repository URL reveals identity.
+`../results/v8.3/gate_controls/GATE_DIFF.md` compares exact v3 (`152e2a48…`) with the old gate (`32086990…`) without executing the old gate. v3 adds body/anonymity checks but does not retain every prior fallback protection. This run uses normal mode only. Historical v8.1 PDFs, approval, and v2.2 results remain preserved evidence.
 
-The supplied `tools/openreview_payload_gate.py` is preserved byte-for-byte.
-Its historical v7 four-fixture replay results remain preserved evidence. Both v8
-PDFs fail the current form check only for missing genuine leaderboard submission IDs. This is a limited structural check: it does
-not verify completed human review, reviewer commitments, authenticated account
-access, invitation freshness, or all nested author/reviewer constraints.
-`tools/openreview_submission_preflight.py` adds stricter local validation and
-keeps the current artifact blocked by absent native IDs; author attestations and completed-review wording are now confirmed.
-The prepared payload is `plans/payload_v8.json`; its abstract comes directly from
-the gated manuscript and exact confirmation strings come from the live invitation.
-The exact strings are backed by direct human attestations recorded separately. Licence
-is recorded separately as note metadata in `plans/note_metadata_v8.json`.
-
-Raw source URLs and immutable revisions for earlier public participant reports
-are kept in the research evidence manifest. The manuscript uses neutral report
-titles and commit identifiers, without participant handles in visible text or
-source URLs. It attributes prior label/balance observations and does not claim
-those observations as a new contribution. The publication archive records what
-was executed; it is not an OpenReview submission receipt.
-
-The October 24 supplied v2.2 gate is preserved byte-for-byte under
-`research/gate_v2_2/source/`. The active `tools/prize_rubric_gate.py` is the
-separately hashed `2.2+local.1` hardening; its original normal predicates are
-unchanged. The current PDFs retain 15/17 normal checks and 40 main-text negations.
-Missing owner ID/score checks block push and submission at the current time.
-`../GATE_V2_2_VALIDATION.md` records nine passing protocol test groups (31 cases)
-and the original-source failures. Future fallback requires the actual cutoff,
-documented absence of an evaluation route, all fallback declarations, and a real
-probe; test-only PASS_FALLBACK never unblocks execution. The protected UNMEASURED
-paragraph remains until verified native evidence supports a measured replacement;
-any later fallback wording must retain UNMEASURED and follow
-`../research/gate_v2_2/OPERATIONS.md`.
+`plans/payload_v8.json` is historical preparation, not a current upload instruction. Current intake requires an anonymized main body of at most five pages, one OpenReview note per first author, and later changes as revisions of that same note ID. Schema acceptance of queue UUIDs is distinct from organizer acceptance. No OpenReview authentication, upload, creation, or revision occurred in T1.

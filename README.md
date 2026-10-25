@@ -1,10 +1,10 @@
 # AIMO-Interp: validation leaderboard identifiability
 
-G-AUTHOR 직접 확인을 기록하고 AI Use Statement에 검토 완료·책임 문구를 반영했다. 현재 상태는 `report/G_AUTHOR_v8.1.md`, `AUTHOR_APPROVAL_INTEGRATION_2026-10-24.md`, `results/v8.1/BUILD.json`을 따른다. T2는 외부 원인으로 blocked이며 상금 게이트는 실제 접수번호·점수가 없어 15/17이다.
+v8.3 T1 로컬 빌드: 제출 대상 익명본은 본문5쪽·전체10쪽이며, 지정v3 게이트의 일반 모드19/19를 통과했다. 현재 상태는 `EXECUTION_REPORT_v8.3_T1.md`, `report/G_LOOK_v8.3.md`, `results/v8.3/BUILD.json`을 따른다. 기존G-AUTHOR는 유지하지만 새 익명PDF의 G-LOOK는 대기 중이다. Push·OpenReview 작업은 실행하지 않았다.
 
-October 24 gate update: supplied v2.2 and the handoff are preserved with their exact hashes under `research/gate_v2_2/source/`. The active gate is the separately identified `2.2+local.1` hardening. Its nine test groups (31 cases) pass on macOS; the original supplied gate passes 3/9 groups (17/31 cases). These are protocol checks, not submission receipts. See `GATE_V2_2_VALIDATION.md` and `research/gate_v2_2/OPERATIONS.md`; the actual report remains 15/17 and fallback has not run operationally.
+Active prize gate is the exact supplied v3, SHA152e2a48…c7630. The prior local gate32086990…8c43 was used for diff comparison only, never executed for v8.3. See `results/v8.3/gate_controls/GATE_DIFF.md`; older v2.2 results remain historical evidence.
 
-The locally prepared v8.1 report asks what can be resolved from a small public validation leaderboard.
+The locally prepared v8.3 report asks what can be resolved from a small public validation leaderboard.
 On the pinned October 19 snapshot (retrieved October 20, 2026 KST), owner-selection
 adjustment followed by Benjamini–Hochberg leaves 2 of 61 Small owners and 1 of 41
 Main owners significant under an independent fair-coin item null. All survivors
@@ -21,16 +21,14 @@ selection or multiple-owner correction. The report keeps those limits explicit.
 Public anonymous fresh-clone V1–V6 passed at scientific commit `524cc98816b2cd31bafd7c4e4e25f66a093e2cf5`;
 see `PUBLICATION.md` and `results/v6/publication/`.
 
-Read `report/REPORT_DRAFT.md`, both v8 PDF variants under `report/`,
-`EXECUTION_REPORT_v8.1.md`, and `PUBLICATION.md`. v8 corrects the BH wording,
+Read `report/REPORT_DRAFT.md`, the v8.3 PDF pair under `report/`,
+`EXECUTION_REPORT_v8.3_T1.md`, and the historical `PUBLICATION.md`. v8 corrects the BH wording,
 removes queue discussion, leads with conditional non-rejection counts and an
 independent-item planning rule, and reduces redundant hedging. The existing 150
 claims, frozen data and bundles are unchanged; two complementary owner counts
-are derived from existing values. The current normal prize gate is 15/17: genuine owner
-submission IDs and scores are still absent. Publication and submission are pending.
+are derived from existing values. The current anonymous PDF passes the19-check v3 normal gate. Publication and submission remain pending the new PDF review and subsequent required conditions.
 The published v6 report and v5-v7 artifacts remain historical evidence.
-Two frozen owner bundle scores and final-test
-performance remain **UNMEASURED**. No GPU/model generation run was launched.
+The two supplied temporary-queue receipts each record7/14 for the frozen reference baselines. The association is supplied by the user and hash-verified handoff; public API evidence is distinct from native owner-session proof. Final-test performance remains **UNMEASURED**. No GPU/model generation run was launched.
 
 ## Reproduce
 
@@ -71,29 +69,20 @@ A hash mismatch stops before computation.
 
 `report/create_source.py` produces named and anonymous NeurIPS sources from the
 same gated body. See `report/README.md` for build and font/render verification.
-Both variants are retained while venue anonymity instructions remain unverified.
-The current public invitation is readable, but does not settle an anonymity policy.
+The live invitation now requires an anonymized main body of at most5pages. The anonymous variant is the submission artifact; the named variant is retained for public/camera-ready use. The specified anonymous mirror URL is rendered, while G-MIRROR remains pending after T3.
 This repository's publication is not an OpenReview receipt.
 
 The October 24 live Submission invitation configures November 6 at 21:59 KST
 (expiration 22:29), requires leaderboard submission IDs and offers only CC BY-SA
 4.0. This supersedes the October 20 portal configuration preserved in historical
-receipts. Fresh field/enum constraints are under `research/v8_1_sources/`. The new required
-submission track is Small models track. The revised reciprocal-reviewer obligation
+receipts. Fresh field/enum constraints are under `research/v8_1_sources/`. The prepared entry chooses Small models track. The revised reciprocal-reviewer obligation
 is three reviews. Website/announcements give November 6 at 20:59 KST, one hour
-earlier than the portal; the existing decision uses the portal deadline. The page
-cap remains unconfirmed. Organizer context, proposal citation and the independent-item
-design target are recorded in the v8.1 report; the frozen snapshot predates the
+earlier than the portal; the binding handoff uses the earlier 20:59 KST deadline. The current PDF field explicitly requires anonymization and a five-page main-body cap. Organizer context, proposal citation and the independent-item
+design target are recorded in the v8.3 report; the frozen snapshot predates the
 October 21 removals, without identifying affected owners.
-The author directly confirmed review of the named variant and AI-assisted work on October 24; the disclosure now records completed review and responsibility. The alternative changes the author
-block and PDF author metadata; the repository URL still reveals the author, so it
-must not be described as fully double-blind anonymized.
+The author directly confirmed the v8.1 named variant and AI-assisted-work responsibility on October24. The new v8.3 anonymous PDF requires a fresh G-LOOK. Its self-repository URLs and self-source commit identifier are anonymized; actual mirror availability remains a separate pending condition.
 
-The owner uploads the unchanged Small bundles listed in `OWNER_CHECKLIST_v6.md`,
-records native receipts and screenshots, reviews current Discord instructions,
-nominates final-test submissions, and performs the final OpenReview submission.
-Two aggregate scores can check receipt expectations; they cannot establish
-per-problem label balance. Missing evidence never becomes a zero or a passed gate.
+The two frozen Small bundles in `OWNER_CHECKLIST_v6.md` already have the user-supplied temporary-queue results; do not submit them again to that queue. Future official Codabench submission and final-test nomination require their own evidence. OpenReview may have only one note per first author; subsequent operations must revise that same note. Two aggregate scores cannot establish per-problem label balance. Missing evidence never becomes a zero or a passed gate.
 
 The earlier v6 workflow recorded an October 31 rescrape scheduled for 20:00
 Asia/Seoul. This v8 run did not verify or modify that schedule; the future rescrape
@@ -102,4 +91,4 @@ are in `HANDOFF_v6.md` and `research/identifiability_usage_v6.md`. Method reopen
 remains CLOSED. AI assistance and all statistical assumptions are disclosed in
 the report. Current release receipts supersede historical v5 state statements.
 
-The historical v6 completion audit is in `COMPLETION_AUDIT_v6.md`. It records corrected snapshot membership, verbatim label rules and the protected owner-result rendering block. `EXECUTION_REPORT_v8.md` is historical. `AUTHOR_APPROVAL_INTEGRATION_2026-10-24.md` records the latest author confirmation, checks and remaining account/receipt work. Required owner evidence and the actual October 31 rescrape are still pending.
+The historical v6 completion audit is in `COMPLETION_AUDIT_v6.md`. It records corrected snapshot membership, verbatim label rules and the protected owner-result rendering block. `EXECUTION_REPORT_v8.md` is historical. `AUTHOR_APPROVAL_INTEGRATION_2026-10-24.md` records the latest author confirmation, checks and remaining account/receipt work. The new-PDF review, mirror, later external operations and actual October31 rescrape remain separate pending work.

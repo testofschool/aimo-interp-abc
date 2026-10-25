@@ -1,0 +1,132 @@
+{
+ "result": "PASS",
+ "failed": [],
+ "passed": 19,
+ "total": 19,
+ "blocks": null,
+ "mode": "normal",
+ "rows": [
+  {
+   "check": "ID_FIELD",
+   "source": "[FORM]+[RULE5]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "OWN_SCORE",
+   "source": "[K1]+[K3]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "REPO_URL",
+   "source": "[RULE4]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "BH_WORDING",
+   "source": "[K2]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "QUEUE_EXPLAINED",
+   "source": "[K1]+[KC1]+[KC2] (Discord 10/16 L14)",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "CITE_PROPOSAL",
+   "source": "[Discord 10/23 L63] required citation",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "PRE_REMOVAL",
+   "source": "[KC1]+[KC2] (Discord 10/21 L41)",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NO_OWNER_ID",
+   "source": "[KC2] tone",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "BASELINES_NOT_PROBES",
+   "source": "[KC1] (Discord 10/21 L45 'exploit labels ... disqualified')",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "DESIGN_TARGET",
+   "source": "[KC1] (final set = unpublished AIMO sets)",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NO_SELF_NEGATION",
+   "source": "[K1]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "ACTIONABLE",
+   "source": "[PRIZE] actionable",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "NEGATIVE_RESULT",
+   "source": "[PRIZE] negative results",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "GENERALIZATION",
+   "source": "[PRIZE] generalization",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "EFFICIENT",
+   "source": "[PRIZE] efficient methods",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "AI_STATEMENT",
+   "source": "[FORM]",
+   "ok": true,
+   "fix": null
+  },
+  {
+   "check": "MAIN_BODY_5_PAGES",
+   "source": "[FORM5]",
+   "ok": true,
+   "value": 5,
+   "first_unlimited_section_page": 6,
+   "fix": null
+  },
+  {
+   "check": "ANONYMIZED",
+   "source": "[FORM5]",
+   "ok": true,
+   "value": {
+    "identity_hits": 0,
+    "pdf_author_anonymous": true
+   },
+   "fix": null
+  },
+  {
+   "check": "NEGATIONS",
+   "source": "[K1]",
+   "ok": true,
+   "value": 33,
+   "max": 40,
+   "fix": null
+  }
+ ]
+}

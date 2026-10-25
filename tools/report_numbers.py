@@ -201,6 +201,14 @@ def run(d):
         out[f"lb_{track}_nonrejected_owners"] = (
             out[f"lb_{track}_owners_scored"] - out[f"lb_{track}_bh_survivors"]
         )
+    # v8.3 source-backed queue observations are distinct from CPU statistics.
+    # These exact public receipts were supplied and hash-verified by the user;
+    # their bundle association is not claimed as native owner-session evidence.
+    queue_path = Path(__file__).with_name("queue_receipt_scope_v83.py")
+    queue_spec = importlib.util.spec_from_file_location("queue_receipt_scope_v83", queue_path)
+    queue = importlib.util.module_from_spec(queue_spec)
+    queue_spec.loader.exec_module(queue)
+    out.update(queue.numbers(queue.inspect()))
     return out
 
 

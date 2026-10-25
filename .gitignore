@@ -7,3 +7,6 @@ report/neurips_2026.sty
 results/reproduction/
 results/rebuilt_bundles/
 .DS_Store
+
+# Private queue ownership and recovery files stay local.
+/v8-execution/private/

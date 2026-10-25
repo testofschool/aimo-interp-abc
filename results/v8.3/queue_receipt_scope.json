@@ -1,0 +1,40 @@
+{
+  "measurement_status": "RECORDED_TEMPORARY_QUEUE_PUBLIC_RECEIPTS",
+  "measured_score_statements_allowed": true,
+  "source": "USER_SUPPLIED_PUBLIC_TEMPORARY_QUEUE_RECEIPTS",
+  "association_basis": "DIRECT_USER_SUPPLIED_BUNDLE_AND_HANDOFF",
+  "native_owner_receipt_verified": false,
+  "on_codabench_leaderboard": false,
+  "final_test_status": "UNMEASURED",
+  "per_problem_balance_inference_allowed": false,
+  "pairwise_ranking_inference_allowed": false,
+  "rows": [
+    {
+      "bundle": "solution-always-true-small.zip",
+      "prefix": "queue_always_true",
+      "submission_id": "bde5e370-4dba-4f19-8291-4a998bfecdcd",
+      "k": 7,
+      "n": 14,
+      "accuracy": 0.5,
+      "created_at_kst": "2026-10-24 19:01:28",
+      "faircoin_one_sided_p": 0.604736328125,
+      "receipt_sha256": "b05a6f4e29e6c29730a7afff5e371ddc6c36d3acc202a0c4fc4ad5d87e5d7878",
+      "zip_sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "zip_bytes": 519
+    },
+    {
+      "bundle": "solution-text-length-control-small.zip",
+      "prefix": "queue_text_length_control",
+      "submission_id": "0c736e59-8248-4dee-8e4f-2df037c552d7",
+      "k": 7,
+      "n": 14,
+      "accuracy": 0.5,
+      "created_at_kst": "2026-10-24 19:03:37",
+      "faircoin_one_sided_p": 0.604736328125,
+      "receipt_sha256": "0dda2ed544e1ac6c27ab83d528136aa73acde5658dcc7ca2e0dfb28e04d41cd8",
+      "zip_sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "zip_bytes": 1387
+    }
+  ],
+  "errors": []
+}

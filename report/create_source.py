@@ -82,6 +82,16 @@ def body(markdown):
                 output.append(r"\end{abstract}")
                 abstract = False
             heading = line[3:]
+            if heading.startswith("Appendix "):
+                if started_bib:
+                    output.append(r"\end{thebibliography}")
+                    started_bib = False
+                references = False
+                if heading.startswith("Appendix A."):
+                    output.extend([r"\clearpage", r"\appendix"])
+                output.append(r"\section{" + inline(re.sub(r"^Appendix [A-Z]\.\s*", "", heading)) + "}")
+                i += 1
+                continue
             if heading == "Abstract":
                 output.append(r"\begin{abstract}")
                 abstract = True
@@ -89,6 +99,8 @@ def body(markdown):
                 references = True
             elif heading == "AI Use Statement":
                 output.append(r"\section*{AI Use Statement}")
+            elif heading.startswith("Limitations"):
+                output.extend([r"\clearpage", r"\section*{" + inline(heading) + "}"])
             else:
                 output.append(r"\section{" + inline(re.sub(r"^\d+\.\s*", "", heading)) + "}")
             i += 1
@@ -181,9 +193,17 @@ def main():
 """
     variants = {"named": ("main.tex", "Jung Min Kang", r"Jung Min Kang\\Independent"),
                 "anonymous": ("main-anonymous.tex", "Anonymous Author(s)", "Anonymous Author(s)")}
-    rendered_body = body(content)
     sources = {}
     for variant, (filename, metadata_author, author_block) in variants.items():
+        variant_content = content
+        if variant == "anonymous":
+            variant_content = variant_content.replace(
+                "https://github.com/testofschool/aimo-interp-abc",
+                "https://anonymous.4open.science/r/aimo-identifiability")
+            variant_content = variant_content.replace(
+                "`6f81bc3b31472dfeb1179b25c31fd7bb128dd19f`",
+                "[withheld for anonymous review]")
+        rendered_body = body(variant_content)
         source = (prefix + r"\hypersetup{pdftitle={" + plain(title)
                   + r"},pdfauthor={" + plain(metadata_author)
                   + r"},pdfsubject={Leaderboard identifiability and evaluation design in AIMO-Interp}}"
@@ -201,6 +221,8 @@ def main():
                   "author_kit_sha256": KIT_SHA, "style_sha256": hashlib.sha256(style).hexdigest(),
                   "style_embedded_unmodified": True, "style_option": "preprint",
                   "content_sha256": hashlib.sha256(content.encode()).hexdigest(),
+                  "anonymous_source_redactions": ["self-repository URLs", "self-source commit identifier"],
+                  "anonymous_mirror_status": "PENDING_G_MIRROR_AFTER_T3",
                   "variants": sources,
                   "source_sha256": sources["named"]["sha256"]}
     provenance["content_path"] = "report/REPORT_DRAFT.md"

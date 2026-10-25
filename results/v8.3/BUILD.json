@@ -1,0 +1,398 @@
+{
+  "status": "T1_VERIFIED_AWAITING_ANONYMOUS_PDF_G_LOOK",
+  "recorded_at_utc": "2026-10-25T04:24:37.594283+00:00",
+  "branch": "v8.3",
+  "base_commit": "144ce584548512cf903afe2b5486b35aac1f4cc9",
+  "gate_install_commit": "3912328",
+  "T0": "SKIPPED_DIRECT_USER_OVERRIDE_WORK_ON_MAC_STUDIO",
+  "zip_verification": {
+    "bundle_sha256": "a5b0e1f8feaf1ac0742dd8b14ad90d6935dd8cf363470ff330654552635a52a0",
+    "SHA256SUMS_checks": [
+      {
+        "file": "queue/receipt_always_robust.json",
+        "sha256": "b05a6f4e29e6c29730a7afff5e371ddc6c36d3acc202a0c4fc4ad5d87e5d7878",
+        "match": true
+      },
+      {
+        "file": "queue/receipt_length_digit.json",
+        "sha256": "0dda2ed544e1ac6c27ab83d528136aa73acde5658dcc7ca2e0dfb28e04d41cd8",
+        "match": true
+      },
+      {
+        "file": "HANDOFF_v8.3.md",
+        "sha256": "c420247bf88e7b32f113629018e3f70f205698ef40e4081f885c40b692eea833",
+        "match": true
+      },
+      {
+        "file": "prize_rubric_gate.py",
+        "sha256": "152e2a488eb0c3cdeadbe4195bb09ac90acab464df4326a612098dc63f5c7630",
+        "match": true
+      }
+    ],
+    "user_override": "SkipT0,workonMacStudio,startv8.3from144ce58,T1onlyuntilPDFreview",
+    "verified": true
+  },
+  "active_gate_sha256": "152e2a488eb0c3cdeadbe4195bb09ac90acab464df4326a612098dc63f5c7630",
+  "old_gate_32086990_executed": false,
+  "gate_diff": "results/v8.3/gate_controls/GATE_DIFF.md",
+  "variants": {
+    "anonymous": {
+      "pdf": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8.3-anonymous.pdf",
+      "sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+      "pages": 10,
+      "main_body_pages": 5,
+      "Type3": 0,
+      "gate_exit": 0,
+      "gate": {
+        "result": "PASS",
+        "failed": [],
+        "passed": 19,
+        "total": 19,
+        "blocks": null,
+        "mode": "normal",
+        "rows": [
+          {
+            "check": "ID_FIELD",
+            "source": "[FORM]+[RULE5]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "OWN_SCORE",
+            "source": "[K1]+[K3]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "REPO_URL",
+            "source": "[RULE4]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "BH_WORDING",
+            "source": "[K2]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "QUEUE_EXPLAINED",
+            "source": "[K1]+[KC1]+[KC2] (Discord 10/16 L14)",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "CITE_PROPOSAL",
+            "source": "[Discord 10/23 L63] required citation",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "PRE_REMOVAL",
+            "source": "[KC1]+[KC2] (Discord 10/21 L41)",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "NO_OWNER_ID",
+            "source": "[KC2] tone",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "BASELINES_NOT_PROBES",
+            "source": "[KC1] (Discord 10/21 L45 'exploit labels ... disqualified')",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "DESIGN_TARGET",
+            "source": "[KC1] (final set = unpublished AIMO sets)",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "NO_SELF_NEGATION",
+            "source": "[K1]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "ACTIONABLE",
+            "source": "[PRIZE] actionable",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "NEGATIVE_RESULT",
+            "source": "[PRIZE] negative results",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "GENERALIZATION",
+            "source": "[PRIZE] generalization",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "EFFICIENT",
+            "source": "[PRIZE] efficient methods",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "AI_STATEMENT",
+            "source": "[FORM]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "MAIN_BODY_5_PAGES",
+            "source": "[FORM5]",
+            "ok": true,
+            "value": 5,
+            "first_unlimited_section_page": 6,
+            "fix": null
+          },
+          {
+            "check": "ANONYMIZED",
+            "source": "[FORM5]",
+            "ok": true,
+            "value": {
+              "identity_hits": 0,
+              "pdf_author_anonymous": true
+            },
+            "fix": null
+          },
+          {
+            "check": "NEGATIONS",
+            "source": "[K1]",
+            "ok": true,
+            "value": 33,
+            "max": 40,
+            "fix": null
+          }
+        ]
+      },
+      "role": "SUBMISSION_CANDIDATE_PENDING_G_LOOK",
+      "automated_build_receipt": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.3/anonymous_build.json"
+    },
+    "named": {
+      "pdf": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8.3-named.pdf",
+      "sha256": "c8be7a4f3c4fac8da00d1c7c05f6edef9e17f2e974e97b8a190c371eb9927cc0",
+      "pages": 10,
+      "main_body_pages": 5,
+      "Type3": 0,
+      "gate_exit": 1,
+      "gate": {
+        "result": "FAIL",
+        "failed": [
+          "ANONYMIZED"
+        ],
+        "passed": 18,
+        "total": 19,
+        "blocks": "T3 push and T4 OpenReview submit",
+        "mode": "normal",
+        "rows": [
+          {
+            "check": "ID_FIELD",
+            "source": "[FORM]+[RULE5]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "OWN_SCORE",
+            "source": "[K1]+[K3]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "REPO_URL",
+            "source": "[RULE4]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "BH_WORDING",
+            "source": "[K2]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "QUEUE_EXPLAINED",
+            "source": "[K1]+[KC1]+[KC2] (Discord 10/16 L14)",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "CITE_PROPOSAL",
+            "source": "[Discord 10/23 L63] required citation",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "PRE_REMOVAL",
+            "source": "[KC1]+[KC2] (Discord 10/21 L41)",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "NO_OWNER_ID",
+            "source": "[KC2] tone",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "BASELINES_NOT_PROBES",
+            "source": "[KC1] (Discord 10/21 L45 'exploit labels ... disqualified')",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "DESIGN_TARGET",
+            "source": "[KC1] (final set = unpublished AIMO sets)",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "NO_SELF_NEGATION",
+            "source": "[K1]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "ACTIONABLE",
+            "source": "[PRIZE] actionable",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "NEGATIVE_RESULT",
+            "source": "[PRIZE] negative results",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "GENERALIZATION",
+            "source": "[PRIZE] generalization",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "EFFICIENT",
+            "source": "[PRIZE] efficient methods",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "AI_STATEMENT",
+            "source": "[FORM]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "MAIN_BODY_5_PAGES",
+            "source": "[FORM5]",
+            "ok": true,
+            "value": 5,
+            "first_unlimited_section_page": 6,
+            "fix": null
+          },
+          {
+            "check": "ANONYMIZED",
+            "source": "[FORM5]",
+            "ok": false,
+            "value": {
+              "identity_hits": 4,
+              "pdf_author_anonymous": false
+            },
+            "fix": "remove identity strings (counts only, tokens not echoed) and use an anonymized repository link (e.g. anonymous.4open.science); set PDF Author metadata to Anonymous"
+          },
+          {
+            "check": "NEGATIONS",
+            "source": "[K1]",
+            "ok": true,
+            "value": 33,
+            "max": 40,
+            "fix": null
+          }
+        ]
+      },
+      "role": "PUBLIC_CAMERA_READY_REFERENCE_ONLY",
+      "automated_build_receipt": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.3/named_build.json"
+    }
+  },
+  "numeric": {
+    "report_numbers_check": {
+      "exit": 0,
+      "result": "PASS",
+      "checked": 164,
+      "mismatches": []
+    },
+    "original_registry_records": 152,
+    "original_registry_records_identical": true,
+    "all_preexisting_report_number_values_identical": true,
+    "added_queue_keys": 12,
+    "frozen_paths_byte_identical": {
+      "research/PREREG_v6.json": true,
+      "tools/prereg_codabench_gate.py": true,
+      "tools/codabench_receipt_scope.py": true,
+      "report/OWNER_PRIVATE_VAL_UNMEASURED.md": true
+    },
+    "queue_test_count": 15,
+    "queue_test_result": "PASS",
+    "receipt_association_basis": "DIRECT_USER_SUPPLIED_BUNDLE_AND_HANDOFF",
+    "native_owner_receipt_verified": false,
+    "source_module_sha256": "e80e0fff014887a6304ad3d2edd30cdca24c89d5d3448013a4f682a0eedbf4fe",
+    "scope": "queuepublicobservations+registered14itemnull; noleaderboard,perproblembalance,pairedcomparisonsorfinaltestinference"
+  },
+  "page_order": {
+    "main": [
+      1,
+      5
+    ],
+    "Limitations_and_AI": 6,
+    "References": 7,
+    "Appendix_A": [
+      8,
+      9
+    ],
+    "Appendix_B": [
+      9,
+      10
+    ]
+  },
+  "visual_review": {
+    "anonymous": "results/v8.3/fidelity/ANONYMOUS_VISUAL_REVIEW.json",
+    "named": "results/v8.3/visual/NAMED_VISUAL_REVIEW.json",
+    "both": "PASS"
+  },
+  "fidelity": "results/v8.3/fidelity/FIDELITY_REVIEW.md",
+  "existing_G_AUTHOR": "RETAINED_V8_1_DIRECT_HUMAN",
+  "G_LOOK": "PENDING_NEW_ANONYMOUS_PDF_REVIEW",
+  "G_MIRROR": "PENDING_AFTER_T3",
+  "AUTHOR_APPROVAL_v8_3_created": false,
+  "T2": "EXISTING_QUEUE_RUNS_7_OF_14_EACH;NO_REPOST",
+  "T3": "NOT_PUSHED_STOP_AT_G_LOOK",
+  "T4": "NO_AUTH_UPLOAD_NOTE_CREATION_REVISION;ONE_NOTE_ONLY",
+  "new_queue_or_official_submissions": 0,
+  "private_key_or_cookie_committed": false,
+  "receipt_origin": "HASH_VERIFIED_USER_SUPPLIED_PUBLIC_API_VIEWS_AND_DIRECT_HANDOFF_BUNDLE_ASSOCIATION;NATIVE_OWNER_NOT_CLAIMED",
+  "external_messages_sent": 0,
+  "submission_text_gate": {
+    "command": [
+      ".venv/bin/python",
+      "-I",
+      "tools/submission_text_gate.py",
+      "report/main.tex",
+      "report/main-anonymous.tex",
+      "report/REPORT_DRAFT.md"
+    ],
+    "exit": 0,
+    "result": "CLEAN",
+    "hits": [],
+    "execution": "Executed before compilation; both TeX files remain byte-identical after source-only EOF cleanup"
+  },
+  "source_only_EOF_normalization": "results/v8.3/SOURCE_EOF_NORMALIZATION.json; both built TeX bytes/PDF hashes unchanged"
+}

@@ -1,0 +1,19 @@
+{
+  "original_claim_count": 152,
+  "original_records_identical": true,
+  "queue_added_keys": [
+    "queue_always_true_k",
+    "queue_always_true_n",
+    "queue_always_true_accuracy",
+    "queue_always_true_submission_id",
+    "queue_always_true_created_at_kst",
+    "queue_always_true_faircoin_one_sided_p",
+    "queue_text_length_control_k",
+    "queue_text_length_control_n",
+    "queue_text_length_control_accuracy",
+    "queue_text_length_control_submission_id",
+    "queue_text_length_control_created_at_kst",
+    "queue_text_length_control_faircoin_one_sided_p"
+  ],
+  "new_claim_count": 164
+}

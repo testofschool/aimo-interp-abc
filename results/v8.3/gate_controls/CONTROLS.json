@@ -1,0 +1,144 @@
+{
+  "verified_at_utc": "2026-10-25T04:18:22.048867+00:00",
+  "v3_sha256": "152e2a488eb0c3cdeadbe4195bb09ac90acab464df4326a612098dc63f5c7630",
+  "old_comparison_sha256": "320869903e0448ea514383288743391981e7a5b8c28eda590acfdde3a7908c43",
+  "old_gate_executed": false,
+  "old_gate_check_AST_changed_ids": [
+    "REPO_URL"
+  ],
+  "v3_installed_source_unchanged": true,
+  "results": [
+    {
+      "case": "v81_named",
+      "input": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-named.pdf",
+      "pdf_sha256": "31c5ee0c79278c7b31a038acde4ed3f6ff61fbc2dbc361280000fc485b512c95",
+      "exit": 1,
+      "result": "FAIL",
+      "passed": 15,
+      "total": 19,
+      "failed": [
+        "ID_FIELD",
+        "OWN_SCORE",
+        "MAIN_BODY_5_PAGES",
+        "ANONYMIZED"
+      ],
+      "rows": [
+        {
+          "check": "MAIN_BODY_5_PAGES",
+          "source": "[FORM5]",
+          "ok": false,
+          "value": 7,
+          "first_unlimited_section_page": 7,
+          "fix": "main body uses 7 pages (> 5): move sections to an appendix after Limitations/AI Use Statement"
+        },
+        {
+          "check": "ANONYMIZED",
+          "source": "[FORM5]",
+          "ok": false,
+          "value": {
+            "identity_hits": 5,
+            "pdf_author_anonymous": false
+          },
+          "fix": "remove identity strings (counts only, tokens not echoed) and use an anonymized repository link (e.g. anonymous.4open.science); set PDF Author metadata to Anonymous"
+        },
+        {
+          "check": "NEGATIONS",
+          "source": "[K1]",
+          "ok": true,
+          "value": 40,
+          "max": 40,
+          "fix": null
+        }
+      ]
+    },
+    {
+      "case": "v81_anonymous",
+      "input": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8-anonymous.pdf",
+      "pdf_sha256": "b6c3fc29778c622b1476186e1ba0406126643516ed851c37ce3e90062e605bd8",
+      "exit": 1,
+      "result": "FAIL",
+      "passed": 15,
+      "total": 19,
+      "failed": [
+        "ID_FIELD",
+        "OWN_SCORE",
+        "MAIN_BODY_5_PAGES",
+        "ANONYMIZED"
+      ],
+      "rows": [
+        {
+          "check": "MAIN_BODY_5_PAGES",
+          "source": "[FORM5]",
+          "ok": false,
+          "value": 7,
+          "first_unlimited_section_page": 7,
+          "fix": "main body uses 7 pages (> 5): move sections to an appendix after Limitations/AI Use Statement"
+        },
+        {
+          "check": "ANONYMIZED",
+          "source": "[FORM5]",
+          "ok": false,
+          "value": {
+            "identity_hits": 3,
+            "pdf_author_anonymous": true
+          },
+          "fix": "remove identity strings (counts only, tokens not echoed) and use an anonymized repository link (e.g. anonymous.4open.science); set PDF Author metadata to Anonymous"
+        },
+        {
+          "check": "NEGATIONS",
+          "source": "[K1]",
+          "ok": true,
+          "value": 40,
+          "max": 40,
+          "fix": null
+        }
+      ]
+    },
+    {
+      "case": "five_body_pages",
+      "input_kind": "SYNTHETIC_FUNCTION_CONTROL_NOT_SERVICE_EVIDENCE",
+      "observed_main_body_pages": 5,
+      "first_unlimited_page": 6,
+      "lines_before_unlimited": 0,
+      "expected_function_value": 5,
+      "ok": true
+    },
+    {
+      "case": "six_body_pages",
+      "input_kind": "SYNTHETIC_FUNCTION_CONTROL_NOT_SERVICE_EVIDENCE",
+      "observed_main_body_pages": 6,
+      "first_unlimited_page": 7,
+      "lines_before_unlimited": 0,
+      "expected_function_value": 6,
+      "ok": true
+    },
+    {
+      "case": "three_line_overflow_limit",
+      "input_kind": "SYNTHETIC_FUNCTION_CONTROL_NOT_SERVICE_EVIDENCE",
+      "observed_main_body_pages": 5,
+      "first_unlimited_page": 6,
+      "lines_before_unlimited": 3,
+      "expected_function_value": 5,
+      "ok": true
+    },
+    {
+      "case": "four_line_overflow",
+      "input_kind": "SYNTHETIC_FUNCTION_CONTROL_NOT_SERVICE_EVIDENCE",
+      "observed_main_body_pages": 6,
+      "first_unlimited_page": 6,
+      "lines_before_unlimited": 4,
+      "expected_function_value": 6,
+      "ok": true
+    },
+    {
+      "case": "exact_plural_E4",
+      "input_kind": "SYNTHETIC_LEXICAL_CONTROL",
+      "ID_FIELD": false
+    },
+    {
+      "case": "singular_label_E4",
+      "input_kind": "SYNTHETIC_LEXICAL_CONTROL",
+      "ID_FIELD": true
+    }
+  ]
+}

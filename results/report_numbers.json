@@ -176,5 +176,17 @@
  "train_small_multi_model_problems": 11,
  "train_small_mixed": 0,
  "lb_small_nonrejected_owners": 59,
- "lb_main_nonrejected_owners": 40
+ "lb_main_nonrejected_owners": 40,
+ "queue_always_true_k": 7,
+ "queue_always_true_n": 14,
+ "queue_always_true_accuracy": 0.5,
+ "queue_always_true_submission_id": "bde5e370-4dba-4f19-8291-4a998bfecdcd",
+ "queue_always_true_created_at_kst": "2026-10-24 19:01:28",
+ "queue_always_true_faircoin_one_sided_p": 0.604736328125,
+ "queue_text_length_control_k": 7,
+ "queue_text_length_control_n": 14,
+ "queue_text_length_control_accuracy": 0.5,
+ "queue_text_length_control_submission_id": "0c736e59-8248-4dee-8e4f-2df037c552d7",
+ "queue_text_length_control_created_at_kst": "2026-10-24 19:03:37",
+ "queue_text_length_control_faircoin_one_sided_p": 0.604736328125
 }

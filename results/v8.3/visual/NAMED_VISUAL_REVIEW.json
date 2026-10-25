@@ -1,0 +1,24 @@
+{
+  "variant": "named",
+  "pdf_sha256": "c8be7a4f3c4fac8da00d1c7c05f6edef9e17f2e974e97b8a190c371eb9927cc0",
+  "all_10_pages_reviewed_in_contact_sheets": true,
+  "individual_pages_rechecked": [
+    1,
+    5,
+    9
+  ],
+  "checks": {
+    "no_clipping": true,
+    "no_overlap": true,
+    "no_tofu": true,
+    "no_split_tables": true,
+    "main_body_ends_page5": true,
+    "page6_starts_Limitations": true
+  },
+  "result": "PASS",
+  "contact_sheets": [
+    "results/v8.3/visual/named_contact_1.png",
+    "results/v8.3/visual/named_contact_2.png",
+    "results/v8.3/visual/named_contact_3.png"
+  ]
+}

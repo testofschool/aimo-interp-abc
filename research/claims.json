@@ -762,6 +762,90 @@
       "value": 40,
       "text": "Main scored owners minus BH survivors under the frozen leaderboard analysis",
       "source": "tools/report_numbers.py: lb_main_owners_scored - lb_main_bh_survivors; same pinned v6 inputs"
+    },
+    {
+      "text": "User-supplied temporary queue receipt field queue_always_true_k",
+      "key": "queue_always_true_k",
+      "value": 7,
+      "source": "research/v8_3_sources/queue/*.json; supplied SHA256SUMS; queue_receipt_scope_v83.py",
+      "scope": "Public receipt observation and direct user supplied bundle association; not native owner evidence"
+    },
+    {
+      "text": "User-supplied temporary queue receipt field queue_always_true_n",
+      "key": "queue_always_true_n",
+      "value": 14,
+      "source": "research/v8_3_sources/queue/*.json; supplied SHA256SUMS; queue_receipt_scope_v83.py",
+      "scope": "Public receipt observation and direct user supplied bundle association; not native owner evidence"
+    },
+    {
+      "text": "User-supplied temporary queue receipt field queue_always_true_accuracy",
+      "key": "queue_always_true_accuracy",
+      "value": 0.5,
+      "source": "research/v8_3_sources/queue/*.json; supplied SHA256SUMS; queue_receipt_scope_v83.py",
+      "scope": "Public receipt observation and direct user supplied bundle association; not native owner evidence"
+    },
+    {
+      "text": "User-supplied temporary queue receipt field queue_always_true_submission_id",
+      "key": "queue_always_true_submission_id",
+      "value": "bde5e370-4dba-4f19-8291-4a998bfecdcd",
+      "source": "research/v8_3_sources/queue/*.json; supplied SHA256SUMS; queue_receipt_scope_v83.py",
+      "scope": "Public receipt observation and direct user supplied bundle association; not native owner evidence"
+    },
+    {
+      "text": "User-supplied temporary queue receipt field queue_always_true_created_at_kst",
+      "key": "queue_always_true_created_at_kst",
+      "value": "2026-10-24 19:01:28",
+      "source": "research/v8_3_sources/queue/*.json; supplied SHA256SUMS; queue_receipt_scope_v83.py",
+      "scope": "Public receipt observation and direct user supplied bundle association; not native owner evidence"
+    },
+    {
+      "text": "User-supplied temporary queue receipt field queue_always_true_faircoin_one_sided_p",
+      "key": "queue_always_true_faircoin_one_sided_p",
+      "value": 0.604736328125,
+      "source": "research/v8_3_sources/queue/*.json; supplied SHA256SUMS; queue_receipt_scope_v83.py",
+      "scope": "Public receipt observation and direct user supplied bundle association; not native owner evidence"
+    },
+    {
+      "text": "User-supplied temporary queue receipt field queue_text_length_control_k",
+      "key": "queue_text_length_control_k",
+      "value": 7,
+      "source": "research/v8_3_sources/queue/*.json; supplied SHA256SUMS; queue_receipt_scope_v83.py",
+      "scope": "Public receipt observation and direct user supplied bundle association; not native owner evidence"
+    },
+    {
+      "text": "User-supplied temporary queue receipt field queue_text_length_control_n",
+      "key": "queue_text_length_control_n",
+      "value": 14,
+      "source": "research/v8_3_sources/queue/*.json; supplied SHA256SUMS; queue_receipt_scope_v83.py",
+      "scope": "Public receipt observation and direct user supplied bundle association; not native owner evidence"
+    },
+    {
+      "text": "User-supplied temporary queue receipt field queue_text_length_control_accuracy",
+      "key": "queue_text_length_control_accuracy",
+      "value": 0.5,
+      "source": "research/v8_3_sources/queue/*.json; supplied SHA256SUMS; queue_receipt_scope_v83.py",
+      "scope": "Public receipt observation and direct user supplied bundle association; not native owner evidence"
+    },
+    {
+      "text": "User-supplied temporary queue receipt field queue_text_length_control_submission_id",
+      "key": "queue_text_length_control_submission_id",
+      "value": "0c736e59-8248-4dee-8e4f-2df037c552d7",
+      "source": "research/v8_3_sources/queue/*.json; supplied SHA256SUMS; queue_receipt_scope_v83.py",
+      "scope": "Public receipt observation and direct user supplied bundle association; not native owner evidence"
+    },
+    {
+      "text": "User-supplied temporary queue receipt field queue_text_length_control_created_at_kst",
+      "key": "queue_text_length_control_created_at_kst",
+      "value": "2026-10-24 19:03:37",
+      "source": "research/v8_3_sources/queue/*.json; supplied SHA256SUMS; queue_receipt_scope_v83.py",
+      "scope": "Public receipt observation and direct user supplied bundle association; not native owner evidence"
+    },
+    {
+      "text": "User-supplied temporary queue receipt field queue_text_length_control_faircoin_one_sided_p",
+      "key": "queue_text_length_control_faircoin_one_sided_p",
+      "value": 0.604736328125,
+      "source": "research/v8_3_sources/queue/*.json; supplied SHA256SUMS; queue_receipt_scope_v83.py",
+      "scope": "Public receipt observation and direct user supplied bundle association; not native owner evidence"
     }
   ]
 }
