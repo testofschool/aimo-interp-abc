@@ -1,0 +1,17 @@
+{
+ "created_at": "2026-10-24T10:03:37.289982471+00:00",
+ "id": "0c736e59-8248-4dee-8e4f-2df037c552d7",
+ "scores": {
+  "accuracy": 0.5,
+  "coverage": 1.0,
+  "invalid_predictions": 0
+ },
+ "stage": "scoring",
+ "status": "Finished",
+ "task": "small",
+ "_provenance": {
+  "source": "public GET https://codabench-queue.josefkuchar.com/ui-api/submissions/0c736e59-8248-4dee-8e4f-2df037c552d7",
+  "fetched_at_utc": "2026-10-25T03:40:52.680376+00:00",
+  "note": "public view; the native owner receipt and recovery key remain on the M5"
+ }
+}

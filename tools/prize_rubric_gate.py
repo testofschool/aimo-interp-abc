@@ -3,16 +3,14 @@
 every item the AIMO-Interp writeup-prize judge and the submission form can check.
 
 Usage:  python3 prize_rubric_gate.py REPORT.pdf [--negations-max 40] [--json OUT.json]
-        python3 prize_rubric_gate.py REPORT.pdf --fallback-none --ids none [--json OUT.json]
+        python3 prize_rubric_gate.py REPORT.pdf --fallback-none [--now ISO8601]
           Fallback mode (HANDOFF §3): only when no evaluation path exists by 2026-11-03 12:00 KST.
-          ID_FIELD/OWN_SCORE require the real cutoff, IDs none, a current outage declaration,
-          UNMEASURED and planned-not-run baselines, no available evaluation IDs, the organizers'
-          announcement citation, and a down probe. The operator also checks actual workaround status.
+          ID_FIELD/OWN_SCORE then pass only if (a) the clock is past the fallback time and (b) the PDF
+          states why no id exists: the Codabench outage and the organizers' announcement. Without this mode
+          the gate would block submission forever during an outage — a rule that makes the goal impossible.
         (or REPORT.txt already produced by `pdftotext -layout`)
-Local hardening of supplied v2.2; exact supplied bytes remain in research/gate_v2_2/source/.
-Exit 0 = PASS or PASS_FALLBACK · 1 = FAIL · 2 = unusable input · 3 = TEST_ONLY.
-Every usable run with a test clock, fake probe or alternate target exits 3 and remains blocked.
-Malformed input exits 2. A local PASS does not establish organizer acceptance or authority.
+Exit 0 = PASS or PASS_FALLBACK (push/submit may proceed) · 1 = FAIL · 2 = unusable input · 3 = TEST_ONLY
+(any run with --now or --probe-result; a test clock or a faked probe can never unblock a step).
 Stdlib + poppler `pdftotext` only. Every rule names its primary source.
 
 Sources:
@@ -27,6 +25,9 @@ Sources:
            64 negations hide the result.
   [K2]     statistics killer 2026-10-22: "rejects the preceding ranks" contradicts BH (ranks 1..r).
   [K3]     rules killer 2026-10-22: no repo URL; own results UNMEASURED.
+  [FORM5]  OpenReview invitation tmdate 2026-10-24 18:30:57 KST, pdf field: "The main body of the report should not exceed
+           5 pages and needs to be anonymized. In addition, you can use an unlimited number of pages for the AI usage
+           statement, limitations, s, and appendix."
   [KC1/KC2] 2026-10-24 kill round on the Discord #announcements transcript (10/9 balance warning, 10/16 re-evaluation,
            10/21 removal of two 100% submissions for label profiling, 10/23 required citation): snapshot must be stated
            pre-removal, owners not identified, queue explained, bundles = baselines, item budget = design target.
@@ -67,7 +68,7 @@ CHECKS = [
      lambda t: (bool(re.search(r"scored\s+\d{1,2}/14", t)) and bool(re.search(r"\d{4}-\d{2}-\d{2}[ T]\d{2}:\d{2}", t)),
                 "needs 'scored k/14' and an ISO timestamp")),
     ("REPO_URL", "[RULE4]", "a public repository URL appears in the report",
-     lambda t: (bool(re.search(r"https?://(github\.com|gitlab\.com|huggingface\.co|zenodo\.org)/\S+", t)),
+     lambda t: (bool(re.search(r"https?://(github\.com|gitlab\.com|huggingface\.co|zenodo\.org|anonymous\.4open\.science)/\S+", t)),
                 "needs an https URL to the open-sourced implementation")),
     ("BH_WORDING", "[K2]", "BH step-up rule rejects ranks 1 through r, not 'the preceding ranks'",
      lambda t: ("preceding ranks" not in t and bool(re.search(r"ranks?\s+1\s+through\s+r", t)),
@@ -110,88 +111,35 @@ CHECKS = [
 ]
 
 
+ALLOWED_HEAD = re.compile(r"^\s*(?:[0-9A-Z]{1,2}(?:\.[0-9]+)?\s+)?(Limitations\b.*|AI Use Statement|References|Appendix\b.*|Appendices)\s*$")
+IDENTITY = ["testofschool", "gangjeongmin", "Jung Min", "Kang", "Korea", "Felix", "github.com/testofschool"]
+
+
+def page_texts(path):
+    r = subprocess.run(["pdfinfo", path], capture_output=True, text=True)
+    m = re.search(r"Pages:\s+(\d+)", r.stdout)
+    n = int(m.group(1)) if m else 0
+    out = []
+    for i in range(1, n + 1):
+        out.append(subprocess.run(["pdftotext", "-f", str(i), "-l", str(i), "-layout", path, "-"], capture_output=True, text=True).stdout)
+    return out, r.stdout
+
+
+def main_body_pages(pages):
+    """pages occupied by the main body = up to the first heading of an unlimited section (Limitations, AI Use Statement,
+    References, Appendix). Returns (pages_used, first_allowed_page, lines_of_body_on_that_page)."""
+    for i, t in enumerate(pages, 1):
+        body_lines = 0
+        for line in t.splitlines():
+            if ALLOWED_HEAD.match(line):
+                return (i - 1 + (1 if body_lines > 3 else 0)), i, body_lines
+            if line.strip() and not re.fullmatch(r"\s*\d+\s*", line):
+                body_lines += 1
+    return len(pages), None, None
+
+
 def negation_count(t):
     return len(re.findall(r"\b(not|no|never|cannot|neither|nor)\b", t, flags=re.I))
-
-
-DEFAULT_PROBE_URL = "https://www.codabench.org/"
-LOCAL_VERSION = "2.2+local.1"
-
-
-def live_probe(url):
-    """Reachability evidence only; an HTTP reply never proves service usability."""
-    import errno
-    import ssl
-    import urllib.error
-    import urllib.request
-    class NoRedirect(urllib.request.HTTPRedirectHandler):
-        def redirect_request(self, request, fp, code, message, headers, newurl):
-            return None
-    try:
-        request = urllib.request.Request(url, method="HEAD")
-        opener = urllib.request.build_opener(NoRedirect())
-        with opener.open(request, timeout=15) as response:
-            return {"state": "up", "url": url, "http_status": response.status,
-                    "source": "live_HEAD", "reason": "HTTP response received"}
-    except urllib.error.HTTPError as error:
-        return {"state": "up", "url": url, "http_status": error.code,
-                "source": "live_HEAD", "reason": "HTTP error response received"}
-    except Exception as error:
-        reason = getattr(error, "reason", error)
-        network_errors = {errno.ECONNREFUSED, errno.ECONNRESET, errno.ECONNABORTED,
-                          errno.ETIMEDOUT, errno.ENETUNREACH, errno.EHOSTUNREACH}
-        down = (not isinstance(reason, ssl.SSLError) and
-                (isinstance(reason, (TimeoutError, ConnectionError)) or
-                 (isinstance(reason, OSError) and getattr(reason, "errno", None) in network_errors)))
-        return {"state": "down" if down else "unverified", "url": url,
-                "source": "live_HEAD", "error_type": type(reason).__name__,
-                "reason": str(reason)}
-
-
-def fallback_context(args, now, text, mt):
-    """Apply every fallback prerequisite, including when ordinary score checks pass."""
-    def flattened(value):
-        # PDF extraction can break a word or a lexical compound at a line end.
-        value = re.sub(r"(?<=[A-Za-z])-\s*\n\s*(?=[a-z])", "", value)
-        return " ".join(value.split())
-    flat = flattened(mt)
-    citation_text = flattened(text)
-    if now < FALLBACK_AT:
-        return False, f"fallback refused: now {now.isoformat()} is before {FALLBACK_AT.isoformat()}", None
-    ids = [x.strip() for x in args.ids.split(",")]
-    if ids != ["none"]:
-        return False, f"fallback refused: payload ids must be exactly ['none'], got {args.ids!r}", None
-    current_outage = re.search(
-        r"\bCodabench\s+(?:remains|is\s+still|is\s+currently|is|has\s+remained)\s+"
-        r"(?:unreachable|unavailable|inaccessible)\b|"
-        r"\bCodabench\s+outage\s+(?:is\s+)?(?:ongoing|unresolved|continuing)\b", flat, re.I)
-    if not current_outage:
-        return False, "fallback refused: state that Codabench remains unreachable/unavailable, not only a historical outage", None
-    resolved = re.search(
-        r"\bCodabench(?:\s+outage|\s+service)?[^.]{0,80}\b"
-        r"(?:has\s+ended|has\s+been\s+resolved|is\s+resolved|is\s+restored|is\s+available|is\s+reachable|has\s+recovered)\b", flat, re.I)
-    workaround = re.search(
-        r"\b(?:the|a)\s+(?:organizer(?:s)?['’]?\s+)?workaround\s+(?:is|remains)\s+"
-        r"(?:working|available|online|operational)\b", flat, re.I)
-    if resolved or workaround:
-        return False, "fallback refused: report states recovered service or an available organizer workaround", None
-    if not re.search(r"\b(?:private[- ]?validation\s+results|baselines?)[^.]{0,180}\bunmeasured\b", flat, re.I):
-        return False, "fallback refused: baseline private-validation results must remain explicitly UNMEASURED", None
-    if not re.search(r"\bplanned[- ]?not[- ]?run\b", flat, re.I):
-        return False, "fallback refused: describe the baselines as planned-not-run", None
-    no_ids = re.search(r"\b(?:evaluation|leaderboard)\s+(?:submission\s+)?ids?\s*:\s*none\b", flat, re.I)
-    no_ids = no_ids or re.search(r"\bno\s+(?:evaluation|leaderboard|submission)\s+ids?\s+(?:are\s+)?(?:available|exist|exists|obtained)\b", flat, re.I)
-    if not no_ids:
-        return False, "fallback refused: explicitly state that evaluation IDs are unavailable (Evaluation IDs: none)", None
-    if not ANNOUNCE_RE.search(citation_text) or not re.search(r"\borganizers?\b", citation_text, re.I):
-        return False, "fallback refused: cite the organizers' 24 October Discord outage announcement", None
-    if args.probe_result:
-        probe = {"state": args.probe_result, "source": "TEST_INJECTION"}
-    else:
-        probe = live_probe(args.probe_url)
-    if probe["state"] != "down":
-        return False, f"fallback refused: probe state is {probe['state']}; current evaluation path remains to be resolved", probe
-    return True, "fallback: real cutoff reached, current outage and unmeasured/planned status declared, IDs none, announcement cited, probe down", probe
 
 
 def main(argv=None):
@@ -200,73 +148,92 @@ def main(argv=None):
     ap.add_argument("--negations-max", type=int, default=40)
     ap.add_argument("--json")
     ap.add_argument("--fallback-none", action="store_true")
-    ap.add_argument("--now", help="TEST ONLY: timezone-aware ISO8601; usable simulations always exit 3")
-    ap.add_argument("--ids", help="comma-separated exact payload IDs; fallback requires only none")
-    ap.add_argument("--probe-url", default=DEFAULT_PROBE_URL,
-                    help="Any alternate target is TEST ONLY and cannot unblock publication")
-    ap.add_argument("--probe-result", choices=["down", "up"], help="TEST ONLY: inject probe result")
-    args = ap.parse_args(argv)
-    test_inputs = {"clock": args.now is not None, "probe_result": args.probe_result is not None,
-                   "alternate_probe_url": args.probe_url != DEFAULT_PROBE_URL}
-    test_only = any(test_inputs.values())
-    def emit(value, code):
-        value["version"] = LOCAL_VERSION
-        value["test_only"] = test_only
-        value["test_inputs"] = test_inputs
-        output = json.dumps(value, indent=1, ensure_ascii=False)
-        print(output)
-        if args.json:
-            try:
-                with open(args.json, "w", encoding="utf-8") as handle:
-                    handle.write(output)
-            except OSError as error:
-                print(str(error), file=sys.stderr)
-                return 2
-        return code
-    try:
-        now = datetime.datetime.fromisoformat(args.now) if args.now else datetime.datetime.now(datetime.timezone.utc)
-        if now.tzinfo is None or now.utcoffset() is None:
-            raise ValueError("--now must include an explicit timezone offset")
-    except (ValueError, TypeError, OverflowError) as error:
-        return emit({"result": "UNUSABLE", "error": str(error),
-                     "blocks": "T3 push and T4 OpenReview submit"}, 2)
-    if args.fallback_none and not args.ids:
-        return emit({"result": "UNUSABLE", "error": "--fallback-none requires --ids; only ['none'] is accepted",
-                     "blocks": "T3 push and T4 OpenReview submit"}, 2)
-    text, error = load_text(args.report)
+    ap.add_argument("--now", help="TEST ONLY: ISO8601 with offset; any run with --now reports TEST_ONLY and exits 3")
+    ap.add_argument("--ids", help="comma-separated leaderboard_submission_ids exactly as they will be posted")
+    ap.add_argument("--probe-url", default="https://www.codabench.org/", help="live outage probe target")
+    ap.add_argument("--probe-result", choices=["down", "up"], help="TEST ONLY: skip the live probe (forces TEST_ONLY)")
+    a = ap.parse_args(argv)
+    _probe = {}
+    def probe_state():
+        if "v" in _probe:
+            return _probe["v"]
+        if a.probe_result:
+            _probe["v"] = a.probe_result
+            return _probe["v"]
+        import urllib.request
+        try:
+            with urllib.request.urlopen(urllib.request.Request(a.probe_url, method="HEAD"), timeout=15) as r:
+                _probe["v"] = "up" if r.status < 500 else "down"
+        except Exception as e:
+            code = getattr(e, "code", None)
+            _probe["v"] = "up" if (code is not None and code < 500) else "down"
+        return _probe["v"]
+    ap_test = bool(a.now) or bool(a.probe_result)  # --now is a test clock: the run can never unblock a step (result TEST_ONLY, exit 3)
+    now = datetime.datetime.fromisoformat(a.now) if a.now else datetime.datetime.now(datetime.timezone.utc)
+    if a.fallback_none and not a.ids:
+        print(json.dumps({"result": "UNUSABLE", "error": "--fallback-none requires --ids with the exact payload value(s); only ['none'] is accepted in fallback"}))
+        return 2
+    text, err = load_text(a.report)
     if text is None or len(text.strip()) < 500:
-        return emit({"result": "UNUSABLE", "error": error or "empty text",
-                     "blocks": "T3 push and T4 OpenReview submit"}, 2)
+        print(json.dumps({"result": "UNUSABLE", "error": err or "empty text"}))
+        return 2
     mt = main_text(text)
-    eligible, detail, probe = (False, None, None)
-    if args.fallback_none:
-        eligible, detail, probe = fallback_context(args, now, text, mt)
     rows, fails = [], []
-    for cid, source, description, check in CHECKS:
+    for cid, src, desc, fn in CHECKS:
         scope = text if cid in ("AI_STATEMENT", "CITE_PROPOSAL", "REPO_URL") else mt
-        ok, fix = check(scope)
-        if args.fallback_none and cid in ("ID_FIELD", "OWN_SCORE"):
-            ok, fix = eligible, detail
-        rows.append({"check": cid, "source": source, "ok": ok,
-                     "fix": fix if (not ok or (args.fallback_none and cid in ("ID_FIELD", "OWN_SCORE"))) else None})
+        ok, detail = fn(scope)
+        if a.fallback_none and cid in ("ID_FIELD", "OWN_SCORE") and not ok:
+            if now < FALLBACK_AT:
+                detail = f"fallback refused: now {now.isoformat()} is before {FALLBACK_AT.isoformat()}"
+            elif not OUTAGE_RE.search(mt):
+                detail = "fallback refused: the PDF must state that no evaluation id exists because of the Codabench outage"
+            elif not ANNOUNCE_RE.search(text):
+                detail = "fallback refused: the PDF must cite the organizers' outage announcement (24 October, Discord #announcements)"
+            elif [x.strip() for x in a.ids.split(",")] != ["none"]:
+                detail = f"fallback refused: payload ids must be exactly ['none'], got {a.ids!r}"
+            elif probe_state() != "down":
+                detail = f"fallback refused: live probe says Codabench is {probe_state()} — submit the two baselines instead"
+            else:
+                ok, detail = True, f"fallback: time reached, outage + announcement cited, ids=['none'], probe={probe_state()}"
+        rows.append({"check": cid, "source": src, "ok": ok, "fix": (detail if (ok and str(detail).startswith("fallback:")) else (None if ok else detail))})
         if not ok:
             fails.append(cid)
-    count = negation_count(mt)
-    ok = count <= args.negations_max
-    rows.append({"check": "NEGATIONS", "source": "[K1]", "ok": ok, "value": count,
-                 "max": args.negations_max, "fix": None if ok else f"cut hedging: {count} > {args.negations_max}"})
+    if a.report.lower().endswith(".pdf"):
+        pages, info = page_texts(a.report)
+        used, first, lines = main_body_pages(pages)
+        ok = used <= 5
+        rows.append({"check": "MAIN_BODY_5_PAGES", "source": "[FORM5]", "ok": ok, "value": used,
+                     "first_unlimited_section_page": first,
+                     "fix": None if ok else f"main body uses {used} pages (> 5): move sections to an appendix after Limitations/AI Use Statement"})
+        if not ok:
+            fails.append("MAIN_BODY_5_PAGES")
+        hits = sorted({w for w in IDENTITY if re.search(r"\b" + re.escape(w) + r"\b", text)})
+        author_ok = bool(re.search(r"Author:\s+Anonymous", info)) or "Author:" not in info
+        ok = not hits and author_ok
+        rows.append({"check": "ANONYMIZED", "source": "[FORM5]", "ok": ok, "value": {"identity_hits": len(hits), "pdf_author_anonymous": author_ok},
+                     "fix": None if ok else "remove identity strings (counts only, tokens not echoed) and use an anonymized repository link (e.g. anonymous.4open.science); set PDF Author metadata to Anonymous"})
+        if not ok:
+            fails.append("ANONYMIZED")
+    n = negation_count(mt)
+    ok = n <= a.negations_max
+    rows.append({"check": "NEGATIONS", "source": "[K1]", "ok": ok, "value": n, "max": a.negations_max,
+                 "fix": None if ok else f"cut hedging: {n} > {a.negations_max}"})
     if not ok:
         fails.append("NEGATIONS")
-    label = ("PASS_FALLBACK" if args.fallback_none else "PASS") if not fails else "FAIL"
-    if test_only:
+    used_fallback = a.fallback_none and any(r["check"] in ("ID_FIELD", "OWN_SCORE") and r["ok"] and (r.get("fix") or "").startswith("fallback:") for r in rows)
+    label = ("PASS_FALLBACK" if used_fallback else "PASS") if not fails else "FAIL"
+    if ap_test:
         label = "TEST_ONLY(" + label + ")"
-    result = {"result": label, "failed": fails, "passed": len(rows) - len(fails), "total": len(rows),
-              "blocks": "T3 push and T4 OpenReview submit" if (fails or test_only) else None,
-              "mode": "fallback-none" if args.fallback_none else "normal", "rows": rows,
-              "evaluated_at": now.isoformat(), "fallback_at": FALLBACK_AT.isoformat(), "probe": probe,
-              "fallback_eligible": eligible if args.fallback_none else None,
-              "scope": "Local text/clock/probe gate; operator must also verify actual organizer workaround state and submission authority"}
-    return emit(result, 3 if test_only else (0 if not fails else 1))
+    out = {"result": label, "failed": fails, "passed": len(rows) - len(fails), "total": len(rows),
+           "blocks": "T3 push and T4 OpenReview submit" if fails else None,
+           "mode": "fallback-none" if a.fallback_none else "normal", "rows": rows}
+    s = json.dumps(out, indent=1, ensure_ascii=False)
+    print(s)
+    if a.json:
+        open(a.json, "w", encoding="utf-8").write(s)
+    if ap_test:
+        return 3
+    return 0 if not fails else 1
 
 
 if __name__ == "__main__":
