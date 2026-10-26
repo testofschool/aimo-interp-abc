@@ -1,0 +1,394 @@
+{
+  "scope": "v10.2 H2 precheck a-h of exact frozen v8.3 anonymous PDF; not author approval",
+  "observed_at_utc": "2026-10-26T16:27:32.792181+00:00",
+  "pdf": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/review/aimo-interp-report-v8.3-anonymous.pdf",
+  "pdf_sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+  "overall_result": "H2_CHECKS_HAVE_LITERAL_FAILURES; HUMAN_REVIEW_PENDING",
+  "H2": "PENDING",
+  "G_LOOK": "PENDING",
+  "human_confirmation_quote": null,
+  "required_human_confirmation": "v8.3 PDF 확인",
+  "failed_literal_checks": [
+    "a",
+    "e"
+  ],
+  "qualified_checks": [
+    "f"
+  ],
+  "checks": {
+    "a": {
+      "result": "FAIL_SOURCE_COMMIT_FRESHNESS",
+      "sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+      "expected_sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+      "exact_hash_match": true,
+      "original_pdf": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8.3-anonymous.pdf",
+      "original_sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+      "original_mtime_kst": "2026-10-25T13:20:19.319425+09:00",
+      "review_byte_copy_mtime_kst": "2026-10-27T00:55:32.107347+09:00",
+      "last_manuscript_source_commit": {
+        "hash": "33328fed2a38255f8a85b9d6ae1d54672c44e3bf",
+        "committed_kst": "2026-10-25T13:26:39+09:00",
+        "paths": [
+          "report/main-anonymous.tex",
+          "report/main.tex",
+          "report/REPORT_OUTLINE.md",
+          "report/REPORT_DRAFT.md",
+          "report/create_source.py",
+          "tools/report_numbers.py",
+          "research/claims.json"
+        ]
+      },
+      "bookkeeping_head": {
+        "hash": "e920ae00874ba95b71f3d143744c815096c45a71",
+        "committed_kst": "2026-10-27T01:11:37+09:00"
+      },
+      "original_mtime_later_than_source_commit": false,
+      "copy_mtime_later_than_source_commit": true,
+      "embedded_creation_date": "D:20261025132018+09'00'",
+      "interpretation": "Original PDF was built before its source+artifact capture commit. A later byte-copy mtime is not evidence of a later build. No touch, rebuild, or mtime manipulation performed.",
+      "source_and_pdf_capture": {
+        "commit": "33328fed2a38255f8a85b9d6ae1d54672c44e3bf",
+        "source_path": "report/main-anonymous.tex",
+        "source_sha256": "31f8ceb94cb94edec4f31712a0b8db49bf828b9afd3e82e8537dc680da604aeb",
+        "pdf_path": "report/aimo-interp-report-v8.3-anonymous.pdf",
+        "pdf_sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+        "same_capture_commit_verified": true,
+        "current_manuscript_sources_equal_capture": true,
+        "note": "The exact TeX/PDF were captured together in this source-and-artifact commit, after the build. Thus the literal mtime-after-commit requirement fails, while these bytes and 14 section-aware checks remain verified. A new build or artificial timestamp would conflict with the frozen expected PDF hash; neither was performed."
+      }
+    },
+    "b": {
+      "result": "PASS",
+      "evidence": "NEW_EXECUTION",
+      "gate_sha256": "152e2a488eb0c3cdeadbe4195bb09ac90acab464df4326a612098dc63f5c7630",
+      "executed_gate_source": "git show 33328fe:tools/prize_rubric_gate.py, byte-hash checked then executed from ignored runtime",
+      "command": [
+        "python3",
+        "-I",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/h2-precheck-2026-10-27/prize_rubric_gate_v3.py",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/review/aimo-interp-report-v8.3-anonymous.pdf"
+      ],
+      "exit": 0,
+      "mode": "normal",
+      "passed": 19,
+      "total": 19,
+      "gate_result": "PASS",
+      "fallback_or_test_flags": false,
+      "full_result": {
+        "result": "PASS",
+        "failed": [],
+        "passed": 19,
+        "total": 19,
+        "blocks": null,
+        "mode": "normal",
+        "rows": [
+          {
+            "check": "ID_FIELD",
+            "source": "[FORM]+[RULE5]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "OWN_SCORE",
+            "source": "[K1]+[K3]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "REPO_URL",
+            "source": "[RULE4]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "BH_WORDING",
+            "source": "[K2]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "QUEUE_EXPLAINED",
+            "source": "[K1]+[KC1]+[KC2] (Discord 10/16 L14)",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "CITE_PROPOSAL",
+            "source": "[Discord 10/23 L63] required citation",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "PRE_REMOVAL",
+            "source": "[KC1]+[KC2] (Discord 10/21 L41)",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "NO_OWNER_ID",
+            "source": "[KC2] tone",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "BASELINES_NOT_PROBES",
+            "source": "[KC1] (Discord 10/21 L45 'exploit labels ... disqualified')",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "DESIGN_TARGET",
+            "source": "[KC1] (final set = unpublished AIMO sets)",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "NO_SELF_NEGATION",
+            "source": "[K1]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "ACTIONABLE",
+            "source": "[PRIZE] actionable",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "NEGATIVE_RESULT",
+            "source": "[PRIZE] negative results",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "GENERALIZATION",
+            "source": "[PRIZE] generalization",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "EFFICIENT",
+            "source": "[PRIZE] efficient methods",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "AI_STATEMENT",
+            "source": "[FORM]",
+            "ok": true,
+            "fix": null
+          },
+          {
+            "check": "MAIN_BODY_5_PAGES",
+            "source": "[FORM5]",
+            "ok": true,
+            "value": 5,
+            "first_unlimited_section_page": 6,
+            "fix": null
+          },
+          {
+            "check": "ANONYMIZED",
+            "source": "[FORM5]",
+            "ok": true,
+            "value": {
+              "identity_hits": 0,
+              "pdf_author_anonymous": true
+            },
+            "fix": null
+          },
+          {
+            "check": "NEGATIONS",
+            "source": "[K1]",
+            "ok": true,
+            "value": 33,
+            "max": 40,
+            "fix": null
+          }
+        ]
+      }
+    },
+    "c": {
+      "result": "PASS",
+      "evidence": "NEW_TEXT_EXTRACTION_AND_RENDER_INSPECTION",
+      "total_pages": 10,
+      "main_body_pages": 5,
+      "page6_first_nonempty_line": "Limitations and sensitivity directions",
+      "Limitations_absent_on_pages_1_to_5": true
+    },
+    "d": {
+      "result": "PASS",
+      "case_insensitive_substring_counts": {
+        "text": {
+          "testofschool": 0,
+          "gangjeongmin": 0,
+          "Jung Min": 0,
+          "Kang": 0,
+          "Korea": 0,
+          "Felix": 0,
+          "github.com/testofschool": 0
+        },
+        "metadata": {
+          "testofschool": 0,
+          "gangjeongmin": 0,
+          "Jung Min": 0,
+          "Kang": 0,
+          "Korea": 0,
+          "Felix": 0,
+          "github.com/testofschool": 0
+        },
+        "link_uris": {
+          "testofschool": 0,
+          "gangjeongmin": 0,
+          "Jung Min": 0,
+          "Kang": 0,
+          "Korea": 0,
+          "Felix": 0,
+          "github.com/testofschool": 0
+        }
+      },
+      "Author": "Anonymous Author(s)",
+      "metadata_and_all_7_annotation_uris_inspected": true
+    },
+    "e": {
+      "result": "FAIL_LITERAL_SECTION5_ABSENT",
+      "literal_numbered_section5_exists": false,
+      "literal_numbered_section4_limitations_exists": false,
+      "corresponding_location": "Unnumbered Limitations and sensitivity directions, PDF page 6, moved from old v8.1 section 5 by E11. Current numbered main sections are 1-3.",
+      "E4_content_checks": {
+        "abstract": {
+          "both_queue_uuids_present": true,
+          "two_scored_7_over_14_statements": true,
+          "fair_coin_expectation_present": true,
+          "not_on_leaderboard_present": true,
+          "only_declared_null_comparison": true
+        },
+        "old_section5_correspondence_limitations_p6": {
+          "both_queue_uuids_present": true,
+          "two_scored_7_over_14_statements": true,
+          "fair_coin_expectation_present": true,
+          "not_on_leaderboard_present": true,
+          "only_declared_null_comparison": true
+        }
+      },
+      "corresponding_location_content_result": "PASS",
+      "strongest_non_perfect_owner_phrase_count": 0,
+      "queue_source_scope": "Public queue observations and user-supplied bundle association, not native official Codabench results or recovered M5 owner logs.",
+      "no_edit_for_missing_section_number": true,
+      "observed_numbered_main_section_headings": [
+        {
+          "page": 1,
+          "line": "1    Task and the evidence a leaderboard supplies"
+        },
+        {
+          "page": 2,
+          "line": "2     A conditional analysis of the visible leaderboard"
+        },
+        {
+          "page": 4,
+          "line": "3     Exact power and an item-budget design target"
+        }
+      ],
+      "detection_note": "Heading detection uses horizontal space only. A footer 5 followed by the next page Limitations heading is not a section-5 heading."
+    },
+    "f": {
+      "result": "PASS_WITH_PREVIOUSLY_DISCLOSED_LEXICAL_DELTAS",
+      "literal_narrow_only_E4_E11_E12_citation_move_claim": "QUALIFIED_BY_VERBATIM_DISCLOSURES_BELOW",
+      "reference_pdf": "v10-execution/reference/v8.1-named-approved.pdf",
+      "reference_pdf_sha256": "31c5ee0c79278c7b31a038acde4ed3f6ff61fbc2dbc361280000fc485b512c95",
+      "reference_layout_text_sha256": "b740a790bfca2bb0400ea3dc2f5dc84da20a92616b3d12f33d552031ad31dc0a",
+      "new_whitespace_only_word_diff_blocks": 36,
+      "full_pdf_text_diff": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/h2-precheck-2026-10-27/r1_to_v83.fulltext.diff",
+      "whitespace_word_diff": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/h2-precheck-2026-10-27/r1_to_v83.whitespace.opcodes.json",
+      "new_section_aware_checks": {
+        "method": "fresh section-aware comparison of git 144ce58 source to git 33328fe source, anchored to exact R1 PDF and actual reviewed PDF; PDF word-level opcodes retained separately",
+        "checks": {
+          "title_unchanged": true,
+          "section_order_E11": true,
+          "1. Task and the evidence a leaderboard supplies_verbatim": true,
+          "3. Exact power and an item-budget design target_verbatim": true,
+          "section2_only_Korea_to_KST": true,
+          "abstract_declared_E4_CPU_citation_only": true,
+          "AppendixA_only_E4_status_cleanup": true,
+          "AppendixB_moved_verbatim": true,
+          "Limitations_only_E4_status_cleanup": true,
+          "AI_statement_verbatim": true,
+          "References_only_disclosed_queue_provenance": true,
+          "six_tables_byte_identical": true,
+          "head_manuscript_sources_equal_33328fe": true,
+          "R1_named_pdf_equals_144ce58_blob": true
+        },
+        "failed": []
+      },
+      "previous_evidence": [
+        "results/v8.3/fidelity/FIDELITY_REVIEW.md",
+        "results/v8.3/fidelity/MECHANICAL_FINAL.json",
+        "report/REGEN_SPEC_v8.3.md"
+      ],
+      "verbatim_disclosed_deltas": [
+        {
+          "classification": "previously disclosed E4 lexical normalization, beyond literal queue replacement",
+          "old_verbatim": "We provide CPU reproduction and frozen reference baselines whose private-validation results remain unmeasured.",
+          "new_verbatim": "We provide CPU reproduction rather than additional model runs."
+        },
+        {
+          "classification": "previously disclosed reference provenance addition beyond moving [11]",
+          "old_verbatim": null,
+          "new_verbatim": "The 24 October temporary-evaluation-queue notice is documented in the supplied v8.3 handoff; the recorded queue responses accompany the archive."
+        },
+        {
+          "classification": "previously disclosed anonymous self-source privacy normalization under E12",
+          "old_verbatim": "6f81bc3b31472dfeb1179b25c31fd7bb128dd19f",
+          "new_verbatim": "[withheld for anonymous review]"
+        },
+        {
+          "classification": "E4 false-pending receipt cleanup, explicitly disclosed",
+          "old_verbatim": "Private-validation receipts are pending.",
+          "new_verbatim": "The recorded queue receipt JSONs accompany the reproduction archive."
+        }
+      ],
+      "unreported_source_semantic_differences_detected": 0,
+      "layout_reflow_footers_and_E11_moves_are_visible_in_full_diff": true
+    },
+    "g": {
+      "result": "PASS",
+      "Type3_count": 0,
+      "font_rows": 11,
+      "evidence": "NEW_PDFFONTS_EXECUTION"
+    },
+    "h": {
+      "result": "PASS",
+      "expected_repository_url": "https://anonymous.4open.science/r/aimo-identifiability",
+      "visible_exact_occurrences": 2,
+      "annotation_exact_occurrences": 0,
+      "mirror_existence_or_scrub_verification": "NOT_CHECKED_NOT_CLAIMED",
+      "annotation_note": "The repository addresses are rendered as literal text, not PDF URI annotations; no clickability requirement was imposed."
+    }
+  },
+  "page_excerpts": {
+    "page1_title_exact_layout": "Can a small validation leaderboard rank robustness\n     predictors? Identifiability limits in AIMO-Interp",
+    "page1_author_exact": "Anonymous Author(s)",
+    "page1_abstract_last_two_sentences_exact_layout": "Both reference baselines were\n            scored once each through the organizers’ temporary evaluation queue during the\n            Codabench outage [11]; these runs are not on the leaderboard. The always-robust\n            rule scored 7/14 (submission id bde5e370-4dba-4f19-8291-4a998bfecdcd, 2026-\n            10-24 19:01:28 KST) and the length-and-digit control scored 7/14 (submission\n            id 0c736e59-8248-4dee-8e4f-2df037c552d7, 2026-10-24 19:03:37 KST); each\n            equals the fair-coin expectation and is not separable from it under the declared\n            null.",
+    "page5_last_body_line_exact": "validation grid.",
+    "page5_last_printed_nonempty_line_exact": "5",
+    "page6_first_heading_exact": "Limitations and sensitivity directions"
+  },
+  "new_visual_observations": {
+    "pages_inspected": [
+      1,
+      5,
+      6
+    ],
+    "dpi": 100,
+    "result": "No clipping, overlap, missing glyphs or boundary ambiguity observed in these three pages. Prior all-ten-page review remains prior evidence, not rerun."
+  },
+  "actions": {
+    "PDF_edits": 0,
+    "PDF_rebuilds": 0,
+    "mtime_touches": 0,
+    "gate_edits": 0,
+    "network_requests": 0,
+    "git_commits": 0,
+    "author_approval_artifacts_created": 0
+  },
+  "runtime_evidence_directory": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/h2-precheck-2026-10-27"
+}

@@ -1,0 +1,766 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-26T16:27:41.074080+00:00",
+  "scope": "INDIVIDUAL_GIT_BLOBS_FRESH_VERIFIED_DATA_CACHED_PINNED_ENV",
+  "canonical_commit": "33328fe",
+  "status": "PASS",
+  "expected_claim_count": 164,
+  "actual_check_launched": true,
+  "check_result": {
+    "result": "PASS",
+    "checked": 164,
+    "mismatches": []
+  },
+  "actual_check": {
+    "argv": [
+      "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+      "-I",
+      "-X",
+      "importtime",
+      "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/tools/report_numbers.py",
+      "--data-dir",
+      "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data",
+      "--check",
+      "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/research/claims.json",
+      "--out",
+      "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/report_numbers.json"
+    ],
+    "status": "COMPLETED",
+    "exit_code": 0,
+    "bound_s": 60,
+    "elapsed_s": 21.14
+  },
+  "numpy_first_diagnostic": {
+    "step": "numpy_first_diagnostic",
+    "argv": [
+      "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+      "-I",
+      "-X",
+      "importtime",
+      "-c",
+      "import numpy;print(numpy.__version__)"
+    ],
+    "status": "COMPLETED",
+    "exit_code": 0,
+    "bound_s": 60,
+    "elapsed_s": 0.15,
+    "stdout_bytes": 6,
+    "stdout_sha256": "1f0496df9458c7e9824322a650b51d53cabd09ff63cc285c339f0198add99706",
+    "stderr_sha256": "3e6542197c5ed8158b3e0d2d43d0c1828384a4f68669e009cdfe96543d4cd13d"
+  },
+  "sources": [
+    {
+      "step": "gitshow_tools__report_numbers.py",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:tools/report_numbers.py"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 10,
+      "elapsed_s": 0.056,
+      "stdout_bytes": 13358,
+      "stdout_sha256": "940af84551d684888f83b897e45e2dffe0b434be1aac4395a86b99fba7d6f93a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "tools/report_numbers.py",
+      "git_blob": "73e704e32771bc3742ea18b733b21d19800fc336",
+      "git_blob_verified": true
+    },
+    {
+      "step": "gitshow_tools__leaderboard_identifiability.py",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:tools/leaderboard_identifiability.py"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 10,
+      "elapsed_s": 0.054,
+      "stdout_bytes": 16758,
+      "stdout_sha256": "66ec8bba1b6ad8d527fc9e02469596e2f85452219a405cd2937f305869505635",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "tools/leaderboard_identifiability.py",
+      "git_blob": "e80963f8ace737732c7fdb870f95cdf1ded45d5f",
+      "git_blob_verified": true
+    },
+    {
+      "step": "gitshow_tools__queue_receipt_scope_v83.py",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:tools/queue_receipt_scope_v83.py"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 10,
+      "elapsed_s": 0.049,
+      "stdout_bytes": 6415,
+      "stdout_sha256": "e80e0fff014887a6304ad3d2edd30cdca24c89d5d3448013a4f682a0eedbf4fe",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "tools/queue_receipt_scope_v83.py",
+      "git_blob": "1015ded0354871f75b79412ce3e516acc95b9d3e",
+      "git_blob_verified": true
+    },
+    {
+      "step": "gitshow_research__claims.json",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:research/claims.json"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 10,
+      "elapsed_s": 0.036,
+      "stdout_bytes": 31344,
+      "stdout_sha256": "c0213e5f470206f619bf3481a1d4f1d225e2cbf09f5135ed638c07044a3f8e4c",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "research/claims.json",
+      "git_blob": "250b19d109b8e7379d4c45ad438d197a17a72d82",
+      "git_blob_verified": true
+    },
+    {
+      "step": "gitshow_research__PREREG_v6.json",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:research/PREREG_v6.json"
+      ],
+      "status": "TIMEOUT",
+      "exit_code": null,
+      "bound_s": 10,
+      "elapsed_s": 10.006,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "research/PREREG_v6.json",
+      "git_blob_verified": false
+    },
+    {
+      "step": "gitshow_research__v8_3_sources__queue__receipt_always_robust.json",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:research/v8_3_sources/queue/receipt_always_robust.json"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 10,
+      "elapsed_s": 0.043,
+      "stdout_bytes": 532,
+      "stdout_sha256": "b05a6f4e29e6c29730a7afff5e371ddc6c36d3acc202a0c4fc4ad5d87e5d7878",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "research/v8_3_sources/queue/receipt_always_robust.json",
+      "git_blob": "61605ca9ff164b4e5f9dd4ed99573af6f7d64d01",
+      "git_blob_verified": true
+    },
+    {
+      "step": "gitshow_research__v8_3_sources__queue__receipt_length_digit.json",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:research/v8_3_sources/queue/receipt_length_digit.json"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 10,
+      "elapsed_s": 0.042,
+      "stdout_bytes": 532,
+      "stdout_sha256": "0dda2ed544e1ac6c27ab83d528136aa73acde5658dcc7ca2e0dfb28e04d41cd8",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "research/v8_3_sources/queue/receipt_length_digit.json",
+      "git_blob": "9e839abcb8991bae6ed5f2168bb1002f61b6b454",
+      "git_blob_verified": true
+    },
+    {
+      "step": "gitshow_bundles__solution-always-true-small.zip",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:bundles/solution-always-true-small.zip"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 10,
+      "elapsed_s": 0.025,
+      "stdout_bytes": 519,
+      "stdout_sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "bundles/solution-always-true-small.zip",
+      "git_blob": "0e4d0135fefd64b76f45e088a48fb2643f0abf09",
+      "git_blob_verified": true
+    },
+    {
+      "step": "gitshow_bundles__solution-text-length-control-small.zip",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:bundles/solution-text-length-control-small.zip"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 10,
+      "elapsed_s": 0.035,
+      "stdout_bytes": 1387,
+      "stdout_sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "bundles/solution-text-length-control-small.zip",
+      "git_blob": "c57dace4e086479bcfea864ff612ba7ab5649291",
+      "git_blob_verified": true
+    },
+    {
+      "step": "gitshow_data__leaderboard__2026-10-19__lb1.json",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:data/leaderboard/2026-10-19/lb1.json"
+      ],
+      "status": "TIMEOUT",
+      "exit_code": null,
+      "bound_s": 10,
+      "elapsed_s": 10.016,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "data/leaderboard/2026-10-19/lb1.json",
+      "git_blob_verified": false
+    },
+    {
+      "step": "gitshow_data__leaderboard__2026-10-19__lb2.json",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:data/leaderboard/2026-10-19/lb2.json"
+      ],
+      "status": "TIMEOUT",
+      "exit_code": null,
+      "bound_s": 10,
+      "elapsed_s": 10.015,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "data/leaderboard/2026-10-19/lb2.json",
+      "git_blob_verified": false
+    },
+    {
+      "step": "gitshow_data__leaderboard__2026-10-19__lb3.json",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:data/leaderboard/2026-10-19/lb3.json"
+      ],
+      "status": "TIMEOUT",
+      "exit_code": null,
+      "bound_s": 10,
+      "elapsed_s": 10.013,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "data/leaderboard/2026-10-19/lb3.json",
+      "git_blob_verified": false
+    },
+    {
+      "step": "gitshow_data__leaderboard__2026-10-19__lb4.json",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:data/leaderboard/2026-10-19/lb4.json"
+      ],
+      "status": "TIMEOUT",
+      "exit_code": null,
+      "bound_s": 10,
+      "elapsed_s": 10.02,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "data/leaderboard/2026-10-19/lb4.json",
+      "git_blob_verified": false
+    },
+    {
+      "step": "gitshow_data__leaderboard__2026-10-19__lb5.json",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:data/leaderboard/2026-10-19/lb5.json"
+      ],
+      "status": "TIMEOUT",
+      "exit_code": null,
+      "bound_s": 10,
+      "elapsed_s": 10.01,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "data/leaderboard/2026-10-19/lb5.json",
+      "git_blob_verified": false
+    },
+    {
+      "step": "gitshow_data__leaderboard__2026-10-19__lb6.json",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:data/leaderboard/2026-10-19/lb6.json"
+      ],
+      "status": "TIMEOUT",
+      "exit_code": null,
+      "bound_s": 10,
+      "elapsed_s": 10.012,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "data/leaderboard/2026-10-19/lb6.json",
+      "git_blob_verified": false
+    },
+    {
+      "step": "gitshow_data__leaderboard__2026-10-19__lb7.json",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:data/leaderboard/2026-10-19/lb7.json"
+      ],
+      "status": "TIMEOUT",
+      "exit_code": null,
+      "bound_s": 10,
+      "elapsed_s": 10.005,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "data/leaderboard/2026-10-19/lb7.json",
+      "git_blob_verified": false
+    },
+    {
+      "step": "gitshow_data__leaderboard__2026-10-19__lb8.json",
+      "argv": [
+        "git",
+        "show",
+        "33328fe:data/leaderboard/2026-10-19/lb8.json"
+      ],
+      "status": "TIMEOUT",
+      "exit_code": null,
+      "bound_s": 10,
+      "elapsed_s": 10.014,
+      "stdout_bytes": 0,
+      "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "path": "data/leaderboard/2026-10-19/lb8.json",
+      "git_blob_verified": false
+    }
+  ],
+  "data": [
+    {
+      "filename": "augmented-sample-math-agg.parquet",
+      "bytes": 50071,
+      "sha256": "b785750259a3f4524cbaf988f51660197cbdfca19d8f45cc35347d4ef29aa4db",
+      "verified": true
+    },
+    {
+      "filename": "sample-full.parquet",
+      "bytes": 94757,
+      "sha256": "2989ab6a018f2779a821209f414bd0049c9ef1c2488f589ff2d3bf4ed16942ff",
+      "verified": true
+    },
+    {
+      "filename": "train-main-v2.parquet",
+      "bytes": 11372,
+      "sha256": "e18eb44207e7987781ec2ff214793196038442bdc1466fdf5498f3e87ec58285",
+      "verified": true
+    },
+    {
+      "filename": "val-sample.parquet",
+      "bytes": 23788,
+      "sha256": "3919cb3d951bb360a120be3397e926f48b7819bcd97e12cfee4c01e76618560f",
+      "verified": true
+    }
+  ],
+  "elapsed_s": 20.213,
+  "new_installs": 0,
+  "code_changes": 0,
+  "pins_changed": false,
+  "canonical_venv_preserved": true,
+  "canonical_data_preserved": true,
+  "canonical_zips_preserved": true,
+  "prior_attempts_preserved": true,
+  "public_participant_results_queried": 0,
+  "authenticated_requests": 0,
+  "post_requests": 0,
+  "submissions": 0,
+  "evidence_directory": "v10-execution/numeric-runtime/individual-recovery/",
+  "runtime_ignored": true,
+  "resident_read_only_fallback": [
+    {
+      "step": "resident_research__PREREG_v6.json",
+      "argv": [
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+        "-I",
+        "-c",
+        "from pathlib import Path;import sys;Path(sys.argv[2]).write_bytes(Path(sys.argv[1]).read_bytes())",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/research/PREREG_v6.json",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/research/PREREG_v6.json"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 5,
+      "elapsed_s": 0.044,
+      "path": "research/PREREG_v6.json",
+      "resident_flags": 64,
+      "git_index_blob": "5aa7d20328c184a43ee320be697bdbcaa6c1db28",
+      "git_blob_verified": true,
+      "verification_route": "RESIDENT_BYTES_MATCH_TRACKED_GIT_INDEX; SNAPSHOT_SHA256_FURTHER_ENFORCED_BY_CANONICAL_REPORT_CODE",
+      "sha256": "cd0ee93fbb536f9de02f626164b40915eb3be7ed95b69b5b154f0fd3fed81a36",
+      "bytes": 1373
+    },
+    {
+      "step": "resident_data__leaderboard__2026-10-19__lb1.json",
+      "argv": [
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+        "-I",
+        "-c",
+        "from pathlib import Path;import sys;Path(sys.argv[2]).write_bytes(Path(sys.argv[1]).read_bytes())",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/data/leaderboard/2026-10-19/lb1.json",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data/leaderboard/2026-10-19/lb1.json"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 5,
+      "elapsed_s": 0.052,
+      "path": "data/leaderboard/2026-10-19/lb1.json",
+      "resident_flags": 64,
+      "git_index_blob": "8a211a2b7ea2dd34f5f4264c42aa8595992bd5fb",
+      "git_blob_verified": true,
+      "verification_route": "RESIDENT_BYTES_MATCH_TRACKED_GIT_INDEX; SNAPSHOT_SHA256_FURTHER_ENFORCED_BY_CANONICAL_REPORT_CODE",
+      "sha256": "fc7338524b81410324f3e3588aee42ff8a0bb67e5b3ad36b24a6903986d066c2",
+      "bytes": 34412
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb2.json",
+      "status": "SKIPPED_DATALESS",
+      "git_blob_verified": false
+    },
+    {
+      "step": "resident_data__leaderboard__2026-10-19__lb3.json",
+      "argv": [
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+        "-I",
+        "-c",
+        "from pathlib import Path;import sys;Path(sys.argv[2]).write_bytes(Path(sys.argv[1]).read_bytes())",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/data/leaderboard/2026-10-19/lb3.json",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data/leaderboard/2026-10-19/lb3.json"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 5,
+      "elapsed_s": 0.049,
+      "path": "data/leaderboard/2026-10-19/lb3.json",
+      "resident_flags": 64,
+      "git_index_blob": "6f7a53c8589d691d5c3e27b2b1efbcb81c1a5406",
+      "git_blob_verified": true,
+      "verification_route": "RESIDENT_BYTES_MATCH_TRACKED_GIT_INDEX; SNAPSHOT_SHA256_FURTHER_ENFORCED_BY_CANONICAL_REPORT_CODE",
+      "sha256": "ac33b9f4cd4e1e626f19a71b397d5a1a8a756f3fd78ef37e91c7477568a705df",
+      "bytes": 33836
+    },
+    {
+      "step": "resident_data__leaderboard__2026-10-19__lb4.json",
+      "argv": [
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+        "-I",
+        "-c",
+        "from pathlib import Path;import sys;Path(sys.argv[2]).write_bytes(Path(sys.argv[1]).read_bytes())",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/data/leaderboard/2026-10-19/lb4.json",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data/leaderboard/2026-10-19/lb4.json"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 5,
+      "elapsed_s": 0.046,
+      "path": "data/leaderboard/2026-10-19/lb4.json",
+      "resident_flags": 64,
+      "git_index_blob": "2a825b3e2692cdc5da7f0e766e3201a60b75e9db",
+      "git_blob_verified": true,
+      "verification_route": "RESIDENT_BYTES_MATCH_TRACKED_GIT_INDEX; SNAPSHOT_SHA256_FURTHER_ENFORCED_BY_CANONICAL_REPORT_CODE",
+      "sha256": "22331c134be761029c5adefe18a08620f5a8ee84c70a6e4ca205779307abdc1e",
+      "bytes": 33130
+    },
+    {
+      "step": "resident_data__leaderboard__2026-10-19__lb5.json",
+      "argv": [
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+        "-I",
+        "-c",
+        "from pathlib import Path;import sys;Path(sys.argv[2]).write_bytes(Path(sys.argv[1]).read_bytes())",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/data/leaderboard/2026-10-19/lb5.json",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data/leaderboard/2026-10-19/lb5.json"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 5,
+      "elapsed_s": 0.049,
+      "path": "data/leaderboard/2026-10-19/lb5.json",
+      "resident_flags": 64,
+      "git_index_blob": "2c980eba00a96b0cdacf4ab63b4a874bdace1ae0",
+      "git_blob_verified": true,
+      "verification_route": "RESIDENT_BYTES_MATCH_TRACKED_GIT_INDEX; SNAPSHOT_SHA256_FURTHER_ENFORCED_BY_CANONICAL_REPORT_CODE",
+      "sha256": "89822694e89aaa4c5743ee2a84113b97386dbfa9a2ae13dc090a72df35b382a4",
+      "bytes": 33365
+    },
+    {
+      "step": "resident_data__leaderboard__2026-10-19__lb6.json",
+      "argv": [
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+        "-I",
+        "-c",
+        "from pathlib import Path;import sys;Path(sys.argv[2]).write_bytes(Path(sys.argv[1]).read_bytes())",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/data/leaderboard/2026-10-19/lb6.json",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data/leaderboard/2026-10-19/lb6.json"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 5,
+      "elapsed_s": 0.046,
+      "path": "data/leaderboard/2026-10-19/lb6.json",
+      "resident_flags": 64,
+      "git_index_blob": "bbbff34120ccd46e1677f3c5b42be090d924a460",
+      "git_blob_verified": true,
+      "verification_route": "RESIDENT_BYTES_MATCH_TRACKED_GIT_INDEX; SNAPSHOT_SHA256_FURTHER_ENFORCED_BY_CANONICAL_REPORT_CODE",
+      "sha256": "cc94df6dcee715c110332b8df677e917151501cbeb76fec21cdcd4448c34043e",
+      "bytes": 33333
+    },
+    {
+      "step": "resident_data__leaderboard__2026-10-19__lb7.json",
+      "argv": [
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+        "-I",
+        "-c",
+        "from pathlib import Path;import sys;Path(sys.argv[2]).write_bytes(Path(sys.argv[1]).read_bytes())",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/data/leaderboard/2026-10-19/lb7.json",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data/leaderboard/2026-10-19/lb7.json"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 5,
+      "elapsed_s": 0.044,
+      "path": "data/leaderboard/2026-10-19/lb7.json",
+      "resident_flags": 64,
+      "git_index_blob": "25f4fc97cbf158029cf738f45d625125a35d2e1c",
+      "git_blob_verified": true,
+      "verification_route": "RESIDENT_BYTES_MATCH_TRACKED_GIT_INDEX; SNAPSHOT_SHA256_FURTHER_ENFORCED_BY_CANONICAL_REPORT_CODE",
+      "sha256": "e909516e2644adca80b744d2a10a88b788fbf6b7bce2a96be8e3e921d8765464",
+      "bytes": 33433
+    },
+    {
+      "step": "resident_data__leaderboard__2026-10-19__lb8.json",
+      "argv": [
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+        "-I",
+        "-c",
+        "from pathlib import Path;import sys;Path(sys.argv[2]).write_bytes(Path(sys.argv[1]).read_bytes())",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/data/leaderboard/2026-10-19/lb8.json",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data/leaderboard/2026-10-19/lb8.json"
+      ],
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "bound_s": 5,
+      "elapsed_s": 0.043,
+      "path": "data/leaderboard/2026-10-19/lb8.json",
+      "resident_flags": 64,
+      "git_index_blob": "5b82ead7fcdd9221a6b382f387ebadc8cea8ba52",
+      "git_blob_verified": true,
+      "verification_route": "RESIDENT_BYTES_MATCH_TRACKED_GIT_INDEX; SNAPSHOT_SHA256_FURTHER_ENFORCED_BY_CANONICAL_REPORT_CODE",
+      "sha256": "fa507d52739648f820ecb253f6ab1c5f1f6d08a2415d609628d2ad61fb1bea9f",
+      "bytes": 33095
+    }
+  ],
+  "resident_fallback_originals_modified": false,
+  "prior_individual_summary_sha256": "b89c03e9b557255482b1def4cc294341a14871b6be585a953de1fcd85654de01",
+  "evidence_sha256": {
+    "pre_resident_fallback_summary.json": "b89c03e9b557255482b1def4cc294341a14871b6be585a953de1fcd85654de01",
+    "actual_report_numbers_check.stdout.txt": "73166acfad805a5f741a3090654aed427d5899451c6edf762eb2cca01e1f5f9e",
+    "actual_report_numbers_check.stderr.txt": "090bfe9ab97e08f678ca94538230edd001b72112b0aad384d8bcb6a5b9bfe169",
+    "report_numbers.json": "01b3d474d58cd394175e2f405db5c5ecf19070cbf662695fb942ceeb39d972e4",
+    "resident_git_index.txt": "483002602323a4b341b1da54820f73020adb1a7fe6739f5be0a4a0e8ed022a8f"
+  },
+  "old_local_clone_recovery": {
+    "source": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/public-fresh-clone/data/leaderboard/2026-10-19/lb2.json",
+    "destination": "data/leaderboard/2026-10-19/lb2.json",
+    "bytes": 32636,
+    "sha256": "7fcb939214bfb1e673975cf1f3f9de100a074ba5c459da067af90ccc2ef1a4cd",
+    "git_index_blob": "e0541112b63cfb18dbcda0ced069b20e706bb337",
+    "registered_snapshot_sha256_match": true,
+    "git_index_blob_match": true,
+    "source_original_modified": false,
+    "new_network_requests": 0
+  },
+  "actual_report_execution_count_this_recovery": 1,
+  "reason": "Actual unchanged canonical report_numbers.py --check completed with PASS164/164 and zero mismatches.",
+  "final_inputs_verified": true,
+  "final_input_count": 17,
+  "final_inputs": [
+    {
+      "path": "tools/report_numbers.py",
+      "bytes": 13358,
+      "sha256": "940af84551d684888f83b897e45e2dffe0b434be1aac4395a86b99fba7d6f93a",
+      "git_blob": "73e704e32771bc3742ea18b733b21d19800fc336",
+      "tracked_index_blob": "73e704e32771bc3742ea18b733b21d19800fc336",
+      "git_index_blob_matches": true,
+      "route": "GIT_SHOW_33328FE"
+    },
+    {
+      "path": "tools/leaderboard_identifiability.py",
+      "bytes": 16758,
+      "sha256": "66ec8bba1b6ad8d527fc9e02469596e2f85452219a405cd2937f305869505635",
+      "git_blob": "e80963f8ace737732c7fdb870f95cdf1ded45d5f",
+      "tracked_index_blob": "e80963f8ace737732c7fdb870f95cdf1ded45d5f",
+      "git_index_blob_matches": true,
+      "route": "GIT_SHOW_33328FE"
+    },
+    {
+      "path": "tools/queue_receipt_scope_v83.py",
+      "bytes": 6415,
+      "sha256": "e80e0fff014887a6304ad3d2edd30cdca24c89d5d3448013a4f682a0eedbf4fe",
+      "git_blob": "1015ded0354871f75b79412ce3e516acc95b9d3e",
+      "tracked_index_blob": "1015ded0354871f75b79412ce3e516acc95b9d3e",
+      "git_index_blob_matches": true,
+      "route": "GIT_SHOW_33328FE"
+    },
+    {
+      "path": "research/claims.json",
+      "bytes": 31344,
+      "sha256": "c0213e5f470206f619bf3481a1d4f1d225e2cbf09f5135ed638c07044a3f8e4c",
+      "git_blob": "250b19d109b8e7379d4c45ad438d197a17a72d82",
+      "tracked_index_blob": "250b19d109b8e7379d4c45ad438d197a17a72d82",
+      "git_index_blob_matches": true,
+      "route": "GIT_SHOW_33328FE"
+    },
+    {
+      "path": "research/PREREG_v6.json",
+      "bytes": 1373,
+      "sha256": "cd0ee93fbb536f9de02f626164b40915eb3be7ed95b69b5b154f0fd3fed81a36",
+      "git_blob": "5aa7d20328c184a43ee320be697bdbcaa6c1db28",
+      "tracked_index_blob": "5aa7d20328c184a43ee320be697bdbcaa6c1db28",
+      "git_index_blob_matches": true,
+      "route": "READ_ONLY_RESIDENT_WORKTREE_COPY"
+    },
+    {
+      "path": "research/v8_3_sources/queue/receipt_always_robust.json",
+      "bytes": 532,
+      "sha256": "b05a6f4e29e6c29730a7afff5e371ddc6c36d3acc202a0c4fc4ad5d87e5d7878",
+      "git_blob": "61605ca9ff164b4e5f9dd4ed99573af6f7d64d01",
+      "tracked_index_blob": "61605ca9ff164b4e5f9dd4ed99573af6f7d64d01",
+      "git_index_blob_matches": true,
+      "route": "GIT_SHOW_33328FE"
+    },
+    {
+      "path": "research/v8_3_sources/queue/receipt_length_digit.json",
+      "bytes": 532,
+      "sha256": "0dda2ed544e1ac6c27ab83d528136aa73acde5658dcc7ca2e0dfb28e04d41cd8",
+      "git_blob": "9e839abcb8991bae6ed5f2168bb1002f61b6b454",
+      "tracked_index_blob": "9e839abcb8991bae6ed5f2168bb1002f61b6b454",
+      "git_index_blob_matches": true,
+      "route": "GIT_SHOW_33328FE"
+    },
+    {
+      "path": "bundles/solution-always-true-small.zip",
+      "bytes": 519,
+      "sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "git_blob": "0e4d0135fefd64b76f45e088a48fb2643f0abf09",
+      "tracked_index_blob": "0e4d0135fefd64b76f45e088a48fb2643f0abf09",
+      "git_index_blob_matches": true,
+      "route": "GIT_SHOW_33328FE"
+    },
+    {
+      "path": "bundles/solution-text-length-control-small.zip",
+      "bytes": 1387,
+      "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "git_blob": "c57dace4e086479bcfea864ff612ba7ab5649291",
+      "tracked_index_blob": "c57dace4e086479bcfea864ff612ba7ab5649291",
+      "git_index_blob_matches": true,
+      "route": "GIT_SHOW_33328FE"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb1.json",
+      "bytes": 34412,
+      "sha256": "fc7338524b81410324f3e3588aee42ff8a0bb67e5b3ad36b24a6903986d066c2",
+      "git_blob": "8a211a2b7ea2dd34f5f4264c42aa8595992bd5fb",
+      "tracked_index_blob": "8a211a2b7ea2dd34f5f4264c42aa8595992bd5fb",
+      "git_index_blob_matches": true,
+      "route": "READ_ONLY_RESIDENT_WORKTREE_COPY"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb2.json",
+      "bytes": 32636,
+      "sha256": "7fcb939214bfb1e673975cf1f3f9de100a074ba5c459da067af90ccc2ef1a4cd",
+      "git_blob": "e0541112b63cfb18dbcda0ced069b20e706bb337",
+      "tracked_index_blob": "e0541112b63cfb18dbcda0ced069b20e706bb337",
+      "git_index_blob_matches": true,
+      "route": "READ_ONLY_PRIOR_LOCAL_FRESH_CLONE"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb3.json",
+      "bytes": 33836,
+      "sha256": "ac33b9f4cd4e1e626f19a71b397d5a1a8a756f3fd78ef37e91c7477568a705df",
+      "git_blob": "6f7a53c8589d691d5c3e27b2b1efbcb81c1a5406",
+      "tracked_index_blob": "6f7a53c8589d691d5c3e27b2b1efbcb81c1a5406",
+      "git_index_blob_matches": true,
+      "route": "READ_ONLY_RESIDENT_WORKTREE_COPY"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb4.json",
+      "bytes": 33130,
+      "sha256": "22331c134be761029c5adefe18a08620f5a8ee84c70a6e4ca205779307abdc1e",
+      "git_blob": "2a825b3e2692cdc5da7f0e766e3201a60b75e9db",
+      "tracked_index_blob": "2a825b3e2692cdc5da7f0e766e3201a60b75e9db",
+      "git_index_blob_matches": true,
+      "route": "READ_ONLY_RESIDENT_WORKTREE_COPY"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb5.json",
+      "bytes": 33365,
+      "sha256": "89822694e89aaa4c5743ee2a84113b97386dbfa9a2ae13dc090a72df35b382a4",
+      "git_blob": "2c980eba00a96b0cdacf4ab63b4a874bdace1ae0",
+      "tracked_index_blob": "2c980eba00a96b0cdacf4ab63b4a874bdace1ae0",
+      "git_index_blob_matches": true,
+      "route": "READ_ONLY_RESIDENT_WORKTREE_COPY"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb6.json",
+      "bytes": 33333,
+      "sha256": "cc94df6dcee715c110332b8df677e917151501cbeb76fec21cdcd4448c34043e",
+      "git_blob": "bbbff34120ccd46e1677f3c5b42be090d924a460",
+      "tracked_index_blob": "bbbff34120ccd46e1677f3c5b42be090d924a460",
+      "git_index_blob_matches": true,
+      "route": "READ_ONLY_RESIDENT_WORKTREE_COPY"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb7.json",
+      "bytes": 33433,
+      "sha256": "e909516e2644adca80b744d2a10a88b788fbf6b7bce2a96be8e3e921d8765464",
+      "git_blob": "25f4fc97cbf158029cf738f45d625125a35d2e1c",
+      "tracked_index_blob": "25f4fc97cbf158029cf738f45d625125a35d2e1c",
+      "git_index_blob_matches": true,
+      "route": "READ_ONLY_RESIDENT_WORKTREE_COPY"
+    },
+    {
+      "path": "data/leaderboard/2026-10-19/lb8.json",
+      "bytes": 33095,
+      "sha256": "fa507d52739648f820ecb253f6ab1c5f1f6d08a2415d609628d2ad61fb1bea9f",
+      "git_blob": "5b82ead7fcdd9221a6b382f387ebadc8cea8ba52",
+      "tracked_index_blob": "5b82ead7fcdd9221a6b382f387ebadc8cea8ba52",
+      "git_index_blob_matches": true,
+      "route": "READ_ONLY_RESIDENT_WORKTREE_COPY"
+    }
+  ],
+  "all_eight_snapshot_sha256_pins_enforced_by_report": true,
+  "runtime_distribution_versions": {
+    "huggingface-hub": "1.5.0",
+    "joblib": "1.5.3",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "pyarrow": "23.0.1",
+    "scikit-learn": "1.8.0",
+    "scipy": "1.18.1"
+  },
+  "canonical_requirements_sha256": "a37eb58d8c0278e1643bdb132b53b3d382013a9e39e86a03f3501d4acf4769ae",
+  "runtime_distribution_versions_sha256": "43b2996fb6e17129863994d055c97b73b7c5c8ce566d58a5aff68369892c0829",
+  "source_recovery_limitations": "Historical Git tree/blob reads timed out. Resident snapshot/prereg bytes were copied read-only and matched tracked Git-index blob IDs; the unchanged canonical report independently verified all eight frozen snapshot SHA256 pins.",
+  "numeric_check_scope": "Existing 164 CPU/report claims only; no new official owner results or new probe/ablation claims."
+}

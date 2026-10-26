@@ -1,0 +1,18 @@
+{
+  "state": "LOCAL_CLI_READY_PENDING_INDEPENDENT_REVIEW",
+  "prepared_at_utc": "2026-10-26T16:41:21.802447+00:00",
+  "script": "tools/codabench_v101_upload.py",
+  "script_sha256": "9144dc2fac29b6ecd9dca33ce32ef27c0af9828770f3f004ad469467620aa4da",
+  "check_local": "PASS",
+  "synthetic_safety_tests": {
+    "passed": 10,
+    "failed": 0,
+    "real_outcome_fixtures": false
+  },
+  "non_tty_run_test": "HOLD before password; no authentication/network",
+  "authenticated_run_performed": false,
+  "upload_performed": false,
+  "native_receipts_created": false,
+  "prereg_commit": "773b39e1a2ca0f1c4001e0ae1459e7d567e56c80",
+  "remaining_gate": "Independent code review then Felix local TTY password input; do not paste credentials into chat"
+}

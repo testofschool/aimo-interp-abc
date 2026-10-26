@@ -28,3 +28,11 @@ results/rebuilt_bundles/
 /v10-execution/openreview_install.log
 
 /v10-execution/openreview/runtime/
+
+/v10-execution/codabench/api-flow-sources/
+
+/v9-execution/official-upload.lock
+
+/v9-execution/official-upload-journal.json.tmp
+
+/v9-execution/SCORES.json.tmp

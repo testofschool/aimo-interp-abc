@@ -1,0 +1,7 @@
+{
+  "helper_sha256": "9144dc2fac29b6ecd9dca33ce32ef27c0af9828770f3f004ad469467620aa4da",
+  "status": "NO_CRITICAL_BLOCKER_FOUND",
+  "reviewed": "static safety, AST, --help and actual --check-local",
+  "auth_or_network_run_by_reviewer": false,
+  "actual_authentication_or_upload_proven": false
+}

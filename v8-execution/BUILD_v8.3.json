@@ -15,7 +15,7 @@
     "payload_gate": "PASS",
     "strict_preflight": "TECHNICAL_PASS_READY_FOR_AUTHOR_REVIEW",
     "numeric_historical": "PASS_164_OF_164_FROM_EXISTING_T1",
-    "numeric_current": "UNRUN",
+    "numeric_current": "PASS_164_OF_164_NEW_EXECUTION",
     "new_build": false
   },
   "named_pdf_sha256": "c8be7a4f3c4fac8da00d1c7c05f6edef9e17f2e974e97b8a190c371eb9927cc0",
@@ -23,5 +23,7 @@
   "H2": "PENDING",
   "AUTHOR_APPROVAL_v8_3_created": false,
   "official_ids": "NOT_AVAILABLE_USE_EXPLICIT_QUEUE_FALLBACK",
-  "queue_UUID_acceptance_by_organizers": "UNVERIFIED"
+  "queue_UUID_acceptance_by_organizers": "UNVERIFIED",
+  "numeric_recovery": "v10-execution/NUMERIC_RECOVERY.json",
+  "H2_checks": "v8-execution/H2_CHECKS.json"
 }

@@ -1,0 +1,254 @@
+{
+  "reviewed_at_utc": "2026-10-26T16:32:26.305137+00:00",
+  "scope": "Public source/schema GET only; no authentication or participant/leaderboard/outcome requests",
+  "competition": 16180,
+  "phase": 30038,
+  "task": 36241,
+  "backend_source_commit": "69b44570b9ddf36c3a08b753e90e2299062dc806",
+  "live_backend_revision_verified": false,
+  "source_manifest": [
+    {
+      "path": "v10-execution/codabench/api-flow-sources/client.js",
+      "url": "https://www.codabench.org/static/js/ours/client.fefe1b56f5fb.js",
+      "bytes": 19064,
+      "sha256": "d8e59fb63fbb7eb5d77d789fae16cce1cddc4562d5633810f00dfac619cf1249",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/riot.js",
+      "url": "https://www.codabench.org/static/generated/riot.beac9934b561.js",
+      "bytes": 662414,
+      "sha256": "3fa2a8de43cc3de00c8f164f57a183a0a933be3511010df0c655128b170b1128",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/login.html",
+      "url": "https://www.codabench.org/accounts/login/",
+      "bytes": 14617,
+      "sha256": "c8da2be19ca2e636af42e95c9bd054cd0e5d8536725a0b5a59d34e17195cc470",
+      "public_csrf_values_redacted": true
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/api-docs.html",
+      "url": "https://www.codabench.org/api/docs/",
+      "bytes": 4608,
+      "sha256": "41d7a3f099a352450e2063899db1e97be86bcc8d9bb4705757799ca7b36eed05",
+      "public_csrf_values_redacted": true
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/openapi.json",
+      "url": "https://www.codabench.org/api/api/schema/",
+      "bytes": 353319,
+      "sha256": "e581f7db447e9d124fe2bcdc1fe9a3a6f43a6c34a2eb8bce1dd254889809e1ef",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/init.js",
+      "url": "https://www.codabench.org/static/js/ours/init.10d4a2033fec.js",
+      "bytes": 1065,
+      "sha256": "07206d6eb9479f42f435d24cdcd3ec79790b412038d05d2c1ce7ca4e65075dab",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/utils-live.js",
+      "url": "https://www.codabench.org/static/js/ours/utils.bba00d0965f0.js",
+      "bytes": 12119,
+      "sha256": "36302d9a3f08433a1d225836fa774d9b72348d9d5a76607dc88dcc1af9214b78",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/github-tree.json",
+      "url": "https://api.github.com/repos/codalab/codabench/git/trees/master?recursive=1",
+      "bytes": 335839,
+      "sha256": "f9bcda57ef750ae31e33e4ac5c802f1132e9a4ae08a8b37fb6c7624861e3e16e",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/backend-submissions.py",
+      "url": "https://raw.githubusercontent.com/codalab/codabench/69b44570b9ddf36c3a08b753e90e2299062dc806/src/apps/api/views/submissions.py",
+      "bytes": 31303,
+      "sha256": "1d9ca88d718e97a96551b799d186e042486b685dc112b28a387a416776ee868e",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/serializer-submissions.py",
+      "url": "https://raw.githubusercontent.com/codalab/codabench/69b44570b9ddf36c3a08b753e90e2299062dc806/src/apps/api/serializers/submissions.py",
+      "bytes": 13852,
+      "sha256": "07e607db237b40129ba24d9b845a524b17f2950709f00c167ee99a95c56ff065",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/context-processors.py",
+      "url": "https://raw.githubusercontent.com/codalab/codabench/69b44570b9ddf36c3a08b753e90e2299062dc806/src/utils/context_processors.py",
+      "bytes": 2443,
+      "sha256": "ca0b875035675bdb74f5b5911c5d648d21e00fc925994ebb249ac1c22d231146",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/base.html",
+      "url": "https://raw.githubusercontent.com/codalab/codabench/69b44570b9ddf36c3a08b753e90e2299062dc806/src/templates/base.html",
+      "bytes": 19003,
+      "sha256": "133b0a4787b30283a0d62808e9d34bf8afc45dcf21594f9a04fe00ec35f7bbfb",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/urls.py",
+      "url": "https://raw.githubusercontent.com/codalab/codabench/69b44570b9ddf36c3a08b753e90e2299062dc806/src/urls.py",
+      "bytes": 1807,
+      "sha256": "1b8c2e0e88b2a81009252d1d763505afadca1e6ed0c67961835e633ee45fa797",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/backend-datasets.py",
+      "url": "https://raw.githubusercontent.com/codalab/codabench/69b44570b9ddf36c3a08b753e90e2299062dc806/src/apps/api/views/datasets.py",
+      "bytes": 11299,
+      "sha256": "18833826cf288b428c67a2a17c4aa77c8199fb35b8b117b8f8ee957721d26a08",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/accounts-urls.py",
+      "url": "https://raw.githubusercontent.com/codalab/codabench/69b44570b9ddf36c3a08b753e90e2299062dc806/src/apps/profiles/urls_accounts.py",
+      "bytes": 985,
+      "sha256": "e243a0ce5b62b360b98531ac7249c69198c36974b43cc3418a4622ac7e820176",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/serializer-scores.py",
+      "url": "https://raw.githubusercontent.com/codalab/codabench/69b44570b9ddf36c3a08b753e90e2299062dc806/src/apps/api/serializers/submission_leaderboard.py",
+      "bytes": 2560,
+      "sha256": "4faf23066f17f90d665442d2f5b6d77722dc5d88e000499f48b2f96d01075b85",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/utils.js",
+      "url": "https://raw.githubusercontent.com/codalab/codabench/69b44570b9ddf36c3a08b753e90e2299062dc806/src/static/js/ours/utils.js",
+      "bytes": 12119,
+      "sha256": "36302d9a3f08433a1d225836fa774d9b72348d9d5a76607dc88dcc1af9214b78",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/profiles-views.py",
+      "url": "https://raw.githubusercontent.com/codalab/codabench/69b44570b9ddf36c3a08b753e90e2299062dc806/src/apps/profiles/views.py",
+      "bytes": 18600,
+      "sha256": "3ac97bfe5b8cecde58f0e8598b25e4b2cc856fa5b420b11a02bc243ffbdd981c",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/competition-models.py",
+      "url": "https://raw.githubusercontent.com/codalab/codabench/69b44570b9ddf36c3a08b753e90e2299062dc806/src/apps/competitions/models.py",
+      "bytes": 35870,
+      "sha256": "f5ba38cda5c53b08c9b4883c635d0f6fad9f4cb370fd81cd11242154202a4be3",
+      "public_csrf_values_redacted": false
+    },
+    {
+      "path": "v10-execution/codabench/api-flow-sources/competition-tasks.py",
+      "url": "https://raw.githubusercontent.com/codalab/codabench/69b44570b9ddf36c3a08b753e90e2299062dc806/src/apps/competitions/tasks.py",
+      "bytes": 38185,
+      "sha256": "0f724db9bae6e88255d5ccea785ff68efab62179495e3fa7785e5489d9f9c8ab",
+      "public_csrf_values_redacted": false
+    }
+  ],
+  "flow": [
+    {
+      "method": "POST",
+      "path": "/api/datasets/",
+      "json": {
+        "type": "submission",
+        "competition": 16180,
+        "request_sassy_file_name": "<zip basename>",
+        "file_name": "<zip basename>",
+        "file_size": "<actual bytes>"
+      },
+      "success": "201 JSON key and sassy_url"
+    },
+    {
+      "method": "PUT",
+      "path": "<returned sassy_url>",
+      "body": "raw ZIP bytes",
+      "headers": {
+        "Content-Type": "application/zip"
+      },
+      "cross_origin": "Do not send platform CSRF/Authorization headers; live platform storage is s3"
+    },
+    {
+      "method": "PUT",
+      "path": "/api/datasets/completed/<dataset.key>/",
+      "success": "200 JSON key in current backend source"
+    },
+    {
+      "method": "POST",
+      "path": "/api/submissions/",
+      "json": {
+        "data": "<dataset.key>",
+        "phase": 30038,
+        "tasks": [
+          36241
+        ],
+        "fact_sheet_answers": {},
+        "organization": null,
+        "queue": "<competition.queue.id or null>",
+        "selected_groups": []
+      },
+      "success": "201 SubmissionCreation JSON with numeric id"
+    }
+  ],
+  "authentication": {
+    "login_form": "POST /accounts/login/ application/x-www-form-urlencoded username,password,csrfmiddlewaretoken",
+    "session": "sessionid cookie",
+    "api_csrf": "X-CSRFToken from current csrftoken cookie on same-origin unsafe requests",
+    "verification": "GET / then parse CODALAB.state.user JSON; require logged_in=true and username=testofschool",
+    "credentials_read_or_used": false
+  },
+  "own_list": {
+    "path": "/api/submissions/",
+    "query": {
+      "phase": 30038,
+      "page": 1,
+      "page_size": 100
+    },
+    "no_owner_query_field": true,
+    "server_filter_source": "GET anonymous returns none. Nonstaff/nonsuperuser owner OR competition creator/collaborator filter. Must independently require every result owner=testofschool.",
+    "pagination": "count,next,previous,results; live client also tolerates bare list. Follow same-origin next only.",
+    "strong_duplicate_hash_exposed": false,
+    "filename_exposed": true,
+    "file_size_exposed_in_list": false,
+    "consequence": "Latest root-relayed user policy permits unique exact filename + owner/phase/Small task receipt linkage, with server SHA explicitly unverified. Contradiction or multiple matches HOLD.",
+    "cli_strict_pagination": "CLI requires count/results/next envelope, consistent total, unique ids, same-phase same-origin next and exact final count."
+  },
+  "score_contract": {
+    "list_scores": "array of nonhidden score objects, despite OpenAPI string annotation",
+    "score_keys": [
+      "id",
+      "index",
+      "score",
+      "column_key",
+      "precision",
+      "is_primary"
+    ],
+    "submission_identity": [
+      "id",
+      "pk",
+      "owner",
+      "phase",
+      "task",
+      "parent",
+      "children",
+      "filename",
+      "created_when",
+      "status",
+      "status_details"
+    ],
+    "score_decimal": "string",
+    "k_N_not_proven_by_API_schema": true,
+    "denominator": "unknown unless task scoring contract explicitly establishes it; never assume 14"
+  },
+  "schema_mismatches": [
+    "DataRequest omits backend-required file_size",
+    "Data response omits actual key/sassy_url create context",
+    "completed response says no body but current backend returns key",
+    "Submission.scores marked string but serializer/live UI consume array",
+    "is_primary marked string but serializer returns boolean"
+  ],
+  "no_mutations_performed": true,
+  "parent_child_semantics": "Multiple tasks or multiple group queues produce children; single task/single queue reuses submitted id and sets task. Verify Small score id independently."
+}

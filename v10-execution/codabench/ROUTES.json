@@ -1,0 +1,35 @@
+{
+  "A": {
+    "status": "UNAVAILABLE",
+    "separate_automation_browser": "Codabench page shows Login; unauthenticated",
+    "existing_user_Chrome": "Felix profile, existing Codabench tab found",
+    "control_failures": [
+      "initial inventory timeout30s",
+      "tab binding timeout45s",
+      "direct user.claimTab/domSnapshot timeout30s",
+      "fresh browser.user.openTabs call timeout15s"
+    ],
+    "owner_identity_verified": false
+  },
+  "B": {
+    "status": "UNAVAILABLE_NO_AUTHENTICATED_PAGE_CONTEXT",
+    "POSTs": 0,
+    "reason": "Existing logged-in tab could not be controlled; separate browser lacks that session."
+  },
+  "C": {
+    "status": "GETPASS_PROMPT_ACTIVE_LOCAL_INPUT_PENDING",
+    "session_id": 86398,
+    "prompt": "Codabench testofschool password (local terminal only):",
+    "open_in_codex": "QUEUED_NOT_CONFIRMED_VISIBLE",
+    "authentication_attempts": 0,
+    "submission_POSTs": 0,
+    "helper_sha256": "9144dc2fac29b6ecd9dca33ce32ef27c0af9828770f3f004ad469467620aa4da",
+    "independent_review": "NO_CRITICAL_BLOCKER",
+    "safety_tests": "PASS_10_OF_10"
+  },
+  "D": {
+    "status": "NOT_USED"
+  },
+  "new_official_uploads": 0,
+  "prior_submissions": "UNKNOWN_NOT_AUTHENTICATED"
+}
