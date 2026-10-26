@@ -1,0 +1,37 @@
+[
+  {
+    "order": 1,
+    "name": "solution-always-true-small.zip",
+    "path": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v9-execution/upload-order/solution-always-true-small.zip",
+    "bytes": 519,
+    "sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+    "expected_sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+    "match": true,
+    "root_small_marker": true,
+    "CRC": "PASS",
+    "members": [
+      "small.txt",
+      "solution.py"
+    ],
+    "source": "byte-identical git144ce58 blob; not repacked",
+    "original_worktree_file_flags": "compressed,dataless; native read could not complete"
+  },
+  {
+    "order": 2,
+    "name": "solution-text-length-control-small.zip",
+    "path": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v9-execution/upload-order/solution-text-length-control-small.zip",
+    "bytes": 1387,
+    "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+    "expected_sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+    "match": true,
+    "root_small_marker": true,
+    "CRC": "PASS",
+    "members": [
+      "artifacts/text_length.joblib",
+      "small.txt",
+      "solution.py"
+    ],
+    "source": "byte-identical git144ce58 blob; not repacked",
+    "original_worktree_file_flags": "compressed,dataless; native read could not complete"
+  }
+]

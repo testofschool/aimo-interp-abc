@@ -10,3 +10,17 @@ results/rebuilt_bundles/
 
 # Private queue ownership and recovery files stay local.
 /v8-execution/private/
+
+/v9-execution/gs/
+
+/v9-execution/bundle3-trained-probe-small.zip
+
+/v10-execution/orvenv/
+
+/v9-execution/upload-order/
+
+/v10-execution/reference/
+
+/v10-execution/review/
+
+/v10-execution/numeric-runtime/

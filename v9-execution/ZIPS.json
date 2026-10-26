@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "target": "official Codabench competition16180 Small task36241",
+  "new_uploads_performed": 0,
+  "upload_order": [
+    {
+      "order": 1,
+      "name": "solution-always-true-small.zip",
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v9-execution/upload-order/solution-always-true-small.zip",
+      "bytes": 519,
+      "sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "status": "READY_FOR_H1_OFFICIAL_UPLOAD",
+      "provenance": "byte-identical git144ce58 blob; not repacked",
+      "official_submission_id": null,
+      "official_score": "UNMEASURED"
+    },
+    {
+      "order": 2,
+      "name": "solution-text-length-control-small.zip",
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v9-execution/upload-order/solution-text-length-control-small.zip",
+      "bytes": 1387,
+      "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "status": "READY_FOR_H1_OFFICIAL_UPLOAD",
+      "provenance": "byte-identical git144ce58 blob; not repacked",
+      "official_submission_id": null,
+      "official_score": "UNMEASURED"
+    },
+    {
+      "order": 3,
+      "name": "bundle3-trained-probe-small.zip",
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v9-execution/bundle3-trained-probe-small.zip",
+      "bytes": 27662500,
+      "sha256": "852fff17372ebdcf967549a4270339a2e792372c1b5496da968b2df884ccc67b",
+      "status": "READY_FOR_H1_AFTER_PREREG_COMMIT",
+      "provenance": "Unmodified official trained-probe source/artifact at de794053debe75a711400696e66b60937cebbb1b; empty small.txt added per Small track contract",
+      "official_submission_id": null,
+      "official_score": "UNMEASURED",
+      "upload_only_if": "H0 confirmed; root preregistration committed; Felix performs H1 official manual upload"
+    }
+  ],
+  "before_any_upload": "PREREG.md must be committed by root; do not mistake this inventory for preregistration",
+  "no_queue_resubmissions": true,
+  "H0": {
+    "status": "CONFIRMED",
+    "choice": "v9 진행",
+    "authority": "Direct human reply relayed by parent; no upload performed"
+  }
+}

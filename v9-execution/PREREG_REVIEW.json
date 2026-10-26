@@ -1,0 +1,20 @@
+{
+  "reviewed_at_utc": "2026-10-26T16:03:15Z",
+  "scope": "PRE_OFFICIAL_UPLOAD_AND_PRE_OFFICIAL_RESULT",
+  "H0": "v9 진행",
+  "direct_user_adoption": "v10을 새 실행 사양으로 적용",
+  "primary_comparison": "official organizer trained probe bundle 3 versus text control bundle 2",
+  "independent_review": "PASS_NO_BLOCKING_DEFECT",
+  "synthetic_tests": "PASS_18",
+  "known_prior_information": "temporary-queue baselines both 7/14; explicitly disclosed in PREREG.md",
+  "official_results_seen_in_this_run": false,
+  "uploads_in_this_run": 0,
+  "clarification_of_handoff": "Same-board totals are dependent. Use exact matched test when identified, otherwise feasible paired-table p bounds. Do not mislabel totals as independent samples.",
+  "nonblocking_limit": "Aggregate-only N80 remains UNMEASURED even if a particular total pair uniquely determines a table; conservative policy.",
+  "timing_rule": "This review alone does not establish preregistration. Git commit must precede official probe upload/result; prior outcome exposure makes the analysis exploratory.",
+  "reviewed_files": {
+    "PREREG.md": "c8f4d89a0a4efca1f458e65c61167551056bd34ade8d542db5682a56545d3ddc",
+    "paired_protocol.py": "1fade7edee89a5086766afdf1ebe8cfb61ea6e5f53e3d4adbeb91bbc5d5dbad5",
+    "tests/test_paired_protocol.py": "6f1cc4b5f4fec8033bdf061f005afea564e8f17d682e96672786c232cfd6e6bf"
+  }
+}

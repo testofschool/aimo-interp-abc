@@ -1,0 +1,17 @@
+{
+  "direct_user_request": "v10을 새 실행 사양으로 적용",
+  "archive_sha256": "393723d878de5fd95bf8709d9f8f91d8578aac5df4cba53f1434813ce9a08a3d",
+  "archive_CRC": "PASS",
+  "standalone_handoff_matches_archive": true,
+  "start_commit": "33328fed2a38255f8a85b9d6ae1d54672c44e3bf",
+  "branch": "v10",
+  "actual_executor": "Mac Studio at /Users/felix; not M5",
+  "machine_spec_mismatch": "Record and reuse accessible hash-verified Studio canon instead of claiming M5 reconstruction",
+  "H0": "CONFIRMED",
+  "H1": "PENDING_OFFICIAL_IDS",
+  "H2": "PENDING_EXISTING_ANONYMOUS_PDF_REVIEW",
+  "publications_or_submissions": 0,
+  "H0_quote": "v9 진행",
+  "H0_authority": "DIRECT_USER_TOOL_ANSWER_IN_THIS_CHAT",
+  "H0_recorded_at_utc": "2026-10-26T15:53:14.288779+00:00"
+}

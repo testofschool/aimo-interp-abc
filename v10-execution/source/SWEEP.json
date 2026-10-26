@@ -1,0 +1,307 @@
+{
+ "schema": "direction-sweep/1",
+ "question": "AIMO-Interp writeup prize: what should the report lead with so that it is selected (decision 2026-11-15 AoE)?",
+ "success_line": {
+  "text": "Report named among the 'selected technical reports' in the 2026-11-15 AoE award decision (selector criterion: 'judged on their scientific contribution')",
+  "status": "given"
+ },
+ "swept_at": "2026-10-26T23:27:00+09:00",
+ "candidates": [
+  {
+   "id": "C1",
+   "label": "Lead = leaderboard identifiability (current v8.3)",
+   "kind": "proposal",
+   "provenance": "upstream:decisions D-007",
+   "axis": "statistics of the public validation board",
+   "premises": {
+    "payer": {
+     "claim": "the selectors reward a board-statistics report",
+     "verdict": "unknown",
+     "status": "read",
+     "ladder_level": 0,
+     "tier": "official",
+     "source": "https://aimo-interp.github.io",
+     "quote": "$4,000 will be awarded for selected technical reports, regardless of their ranking, judged on their scientific contribution"
+    },
+    "mechanism": {
+     "claim": "the final evaluation still lacks enough items, so a design target is news to the organizers",
+     "verdict": "fails",
+     "status": "read",
+     "tier": "official",
+     "source": "https://arxiv.org/pdf/2607.13899",
+     "quote": "We aim to include at least 8 top-performing models in our evaluations, resulting in roughly 1200 training and 240 test instances."
+    },
+    "substitute": {
+     "claim": "no public report already states the board-size limit",
+     "verdict": "contested",
+     "status": "read",
+     "tier": "third_party",
+     "source": "https://raw.githubusercontent.com/byeolki/aimo-interp/main/report/report.pdf",
+     "quote": "rule-based perturbations, the never-solved-is-robust convention, and a 14-case leaderboard"
+    },
+    "reach": {
+     "claim": "the report reaches the selectors via OpenReview",
+     "verdict": "holds",
+     "status": "read",
+     "tier": "official",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Technical reports are submitted through the AIMO-Interp Challenge OpenReview forum."
+    },
+    "input": {
+     "claim": "the numbers exist and were reproduced",
+     "verdict": "holds",
+     "status": "read",
+     "tier": "self_report",
+     "source": "file:claude/AIMO_FACTS.md",
+     "quote": "Snapshot 2026-10-19 (fetched 10-20): Small 2/61, Main 1/41 BH survivors, all perfect; rescrape 10-20 Small 2/65, Main 1/43 [independently reproduced]."
+    }
+   },
+   "kill": {
+    "verdict": "dead",
+    "angle": "mechanism",
+    "sentence": "The organizers already plan ~240 test instances and paired significance testing, above the 69-169 item design target, and the site marks the 14/21 board as provisional.",
+    "source": "https://arxiv.org/pdf/2607.13899",
+    "quote": "resulting in roughly 1200 training and 240 test instances"
+   }
+  },
+  {
+   "id": "C2",
+   "label": "Lead = task difficulty + audit of existing solutions (problem-identity shortcut)",
+   "kind": "proposal",
+   "provenance": "requester",
+   "axis": "label construction and probe shortcuts",
+   "premises": {
+    "payer": {
+     "claim": "the selectors reward a negative-result audit",
+     "verdict": "unknown",
+     "status": "read",
+     "ladder_level": 0,
+     "tier": "official",
+     "source": "https://aimo-interp.github.io",
+     "quote": "We are particularly interested in work on generalization of interpretability methods, actionable interpretability, negative results or efficient methods."
+    },
+    "mechanism": {
+     "claim": "the organizers treat a black-box-sufficiency or shortcut finding as a contribution",
+     "verdict": "holds",
+     "status": "read",
+     "tier": "official",
+     "source": "https://arxiv.org/pdf/2607.13899",
+     "quote": "While this is just an assumption, we note that showing the contrary would have significant implications for a reliability of deployments, itself being a valuable contribution."
+    },
+    "substitute": {
+     "claim": "no public report already makes this audit",
+     "verdict": "contested",
+     "status": "read",
+     "tier": "third_party",
+     "source": "https://raw.githubusercontent.com/byeolki/aimo-interp/main/report/report.pdf",
+     "quote": "but those rows never give different labels to different models on the same problem, so it can succeed by reading problem difficulty."
+    },
+    "reach": {
+     "claim": "the report reaches the selectors via OpenReview",
+     "verdict": "holds",
+     "status": "read",
+     "tier": "official",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Technical reports are submitted through the AIMO-Interp Challenge OpenReview forum."
+    },
+    "input": {
+     "claim": "the operator holds measured controls",
+     "verdict": "holds",
+     "status": "read",
+     "tier": "self_report",
+     "source": "file:claude/AIMO_FACTS.md",
+     "quote": "Text control LOPO bacc 0.6855 [verified]."
+    }
+   },
+   "kill": {
+    "verdict": "wounded",
+    "angle": "competitor",
+    "sentence": "byeolki's public report already states the diagnosis, the grouped evaluation and the model-identity baseline; no adequacy evidence that judges treat it as settled, so R11 records wounded.",
+    "source": "https://raw.githubusercontent.com/byeolki/aimo-interp/main/report/report.pdf",
+    "quote": "Evaluating on per-problem balanced subsets, and against a model-identity-only baseline, exposed this for both our shared and self probes."
+   }
+  },
+  {
+   "id": "C3",
+   "label": "Lead = new game-changing robustness predictor",
+   "kind": "proposal",
+   "provenance": "requester",
+   "axis": "new predictor that beats existing approaches",
+   "premises": {
+    "payer": {
+     "claim": "the selectors reward a new method",
+     "verdict": "unknown",
+     "status": "read",
+     "ladder_level": 0,
+     "tier": "official",
+     "source": "https://arxiv.org/pdf/2607.13899",
+     "quote": "highlighting strong results and generalizable methodological lessons"
+    },
+    "mechanism": {
+     "claim": "a clear win can be shown and scored before the interface closes",
+     "verdict": "fails",
+     "status": "read",
+     "tier": "official",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Nov 1, 2026 (AoE) Final submission deadline — closing of the submission interface"
+    },
+    "substitute": {
+     "claim": "the reference baselines do not already cover it",
+     "verdict": "contested",
+     "status": "read",
+     "tier": "official",
+     "source": "https://aimo-interp.github.io",
+     "quote": "draw on the reference baselines for worked implementations"
+    },
+    "reach": {
+     "claim": "the report reaches the selectors via OpenReview",
+     "verdict": "holds",
+     "status": "read",
+     "tier": "official",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Technical reports are submitted through the AIMO-Interp Challenge OpenReview forum."
+    },
+    "input": {
+     "claim": "the operator can train a better predictor",
+     "verdict": "fails",
+     "status": "read",
+     "tier": "self_report",
+     "source": "file:claude/decisions.md",
+     "quote": "After 3 sweep rounds (in-competition methods E1–E3/E1″/E2″/C4, external X1–X3; 25 external sources) all died, the method track is folded"
+    }
+   },
+   "kill": {
+    "verdict": "dead",
+    "angle": "mechanism",
+    "sentence": "About 6 days remain to build, package and score a method; a 14-item board needs 11/14 to beat chance, and three sweep rounds found nothing above the text control.",
+    "source": "https://aimo-interp.github.io",
+    "quote": "Nov 1, 2026 (AoE) Final submission deadline — closing of the submission interface"
+   }
+  },
+  {
+   "id": "S1",
+   "label": "Substitute: byeolki's public negative-result report (what judges already have)",
+   "kind": "substitute",
+   "provenance": "upstream:kill-report-convergence",
+   "premises": {
+    "payer": {
+     "claim": "selected",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "mechanism": {
+     "claim": "fits the negative-result interest",
+     "verdict": "holds",
+     "status": "read",
+     "tier": "third_party",
+     "source": "https://raw.githubusercontent.com/byeolki/aimo-interp/main/report/report.pdf",
+     "quote": "A model's hidden state predicts its own solve rate (r = 0.70 to 0.74), better than the agreement of four sampled answers (r = 0.56), but not its robustness"
+    },
+    "substitute": {
+     "claim": "n/a",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "reach": {
+     "claim": "public",
+     "verdict": "holds",
+     "status": "read",
+     "tier": "third_party",
+     "source": "https://raw.githubusercontent.com/byeolki/aimo-interp/main/report/report.pdf",
+     "quote": "Prompt Probes Read Solve Rate, Not Robustness"
+    },
+    "input": {
+     "claim": "has a scored submission",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    }
+   }
+  },
+  {
+   "id": "W1",
+   "label": "Wait: submit v8.3 unchanged (HANDOFF_v8.5)",
+   "kind": "wait",
+   "provenance": "upstream:decisions D-019",
+   "premises": {
+    "payer": {
+     "claim": "selected",
+     "verdict": "unknown",
+     "status": "not_attempted",
+     "source": "",
+     "quote": ""
+    },
+    "mechanism": {
+     "claim": "same as C1",
+     "verdict": "fails",
+     "status": "read",
+     "tier": "official",
+     "source": "https://arxiv.org/pdf/2607.13899",
+     "quote": "resulting in roughly 1200 training and 240 test instances"
+    },
+    "substitute": {
+     "claim": "same as C1",
+     "verdict": "unknown",
+     "status": "read",
+     "source": "https://raw.githubusercontent.com/byeolki/aimo-interp/main/report/report.pdf",
+     "quote": ""
+    },
+    "reach": {
+     "claim": "OpenReview",
+     "verdict": "holds",
+     "status": "read",
+     "tier": "official",
+     "source": "https://aimo-interp.github.io",
+     "quote": "Technical reports are submitted through the AIMO-Interp Challenge OpenReview forum."
+    },
+    "input": {
+     "claim": "PDF exists",
+     "verdict": "holds",
+     "status": "read",
+     "tier": "self_report",
+     "source": "file:claude/AIMO_FACTS.md",
+     "quote": "Approved v8.1 named PDF sha256 31c5ee0c79278c7b31a038acde4ed3f6ff61fbc2dbc361280000fc485b512c95"
+    }
+   }
+  }
+ ],
+ "escapes": [
+  {
+   "text": "Lead with an own, Codabench-scored submission plus a dedicated ablation: white-box probe vs problem-only/text control under the per-problem-balanced protocol, pre-registered, reported whichever way it comes out (countable: one scored ID by 2026-11-01 20:55 KST; N label-varying within-problem cases)",
+   "named_by": [
+    "C1",
+    "C2",
+    "C3"
+   ]
+  },
+  {
+   "text": "Recast the board-size result as power at the organizers' planned ~240 test instances",
+   "named_by": [
+    "C1"
+   ]
+  },
+  {
+   "text": "Reconcile the 'text control matches probes' result with byeolki's ablation (r 0.70 -> 0.33)",
+   "named_by": [
+    "C2"
+   ]
+  }
+ ],
+ "pick": {
+  "candidate": "C2",
+  "kill_criterion": {
+   "assumption": "substitute: judges read our audit as distinct from byeolki's public report",
+   "cheapest_test": "claim-diff table (ours vs byeolki report) plus one Codabench-scored paired run under testofschool on the Small task: organizers' trained-probe bundle vs our text control vs always-true",
+   "pass_rule": "at least one countable result byeolki lacks is in the main body: official submission ids with scores on the post-10/16 board, and a paired probe-vs-control test with the item count needed to separate them",
+   "fail_rule": "no scored official id by 2026-11-01 20:55 KST, or every main-body claim already appears in byeolki's report",
+   "stop_rule": "on fail, submit v8.3 (W1) with the board section recast to the organizers' planned 240 test instances; no further method work",
+   "registered_at": "2026-10-26T23:29:00+09:00",
+   "check_by": "2026-11-01T20:55:00+09:00"
+  }
+ }
+}

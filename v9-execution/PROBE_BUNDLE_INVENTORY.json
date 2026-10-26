@@ -1,0 +1,85 @@
+{
+  "status": "PACKAGED_LOCAL_ONLY",
+  "recorded_at_utc": "2026-10-26T15:52:43.909383+00:00",
+  "repository": "https://github.com/aimo-interp/getting-started",
+  "expected_HEAD": "de794053debe75a711400696e66b60937cebbb1b",
+  "actual_HEAD": "de794053debe75a711400696e66b60937cebbb1b",
+  "GS1": "MATCH",
+  "GS2": {
+    "bytes": 54729307,
+    "sha256": "8607478c7408922a6490adb7bda34d6a7d95403b7aa62f80dd3f2649139ccdeb",
+    "result": "MATCH",
+    "LFS_pointer": false
+  },
+  "bundle_path": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v9-execution/bundle3-trained-probe-small.zip",
+  "bundle_bytes": 27662500,
+  "bundle_sha256": "852fff17372ebdcf967549a4270339a2e792372c1b5496da968b2df884ccc67b",
+  "members": [
+    {
+      "name": "solution.py",
+      "bytes": 1041,
+      "compressed_bytes": 527,
+      "CRC32": "36d82f98",
+      "sha256": "6614121fa697135894cf860909e407d2028503e859631438569e5e39c4c1eed1",
+      "source_bytes_identical": true
+    },
+    {
+      "name": "probe_inference.py",
+      "bytes": 14701,
+      "compressed_bytes": 4856,
+      "CRC32": "69cd1d06",
+      "sha256": "7eed1b4ea248fdbf58dc81b4c6aa956e86a83cb5243172857952deb2bc17ddd6",
+      "source_bytes_identical": true
+    },
+    {
+      "name": "probe_artifacts/",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC32": "00000000",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes_identical": true
+    },
+    {
+      "name": "probe_artifacts/probe_artifact.pkl",
+      "bytes": 54729307,
+      "compressed_bytes": 27656279,
+      "CRC32": "44592ba7",
+      "sha256": "8607478c7408922a6490adb7bda34d6a7d95403b7aa62f80dd3f2649139ccdeb",
+      "source_bytes_identical": true
+    },
+    {
+      "name": "small.txt",
+      "bytes": 0,
+      "compressed_bytes": 0,
+      "CRC32": "00000000",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_bytes_identical": true
+    }
+  ],
+  "CRC": "PASS",
+  "root_small_marker": true,
+  "tracked_official_code_modified": false,
+  "only_added_file": "solutions/trained-probe/small.txt (empty marker)",
+  "official_source_executed": false,
+  "artifact_unpickled": false,
+  "uploads": 0,
+  "score": "UNMEASURED",
+  "H0": "CONFIRMED_DIRECT_USER_V9_PROCEED_RELAYED_BY_PARENT",
+  "upload_authorized": "H0_V9_SELECTED; H1_MANUAL_UPLOAD_PENDING; PREREG_COMMIT_MUST_PRECEDE_UPLOAD",
+  "license": "NO_LICENSE_OR_COPYING_FILE_IN_REPOSITORY_TREE_AT_PINNED_COMMIT; README explicitly documents competition packaging; broad redistribution license not inferred",
+  "runtime_from_official_README": {
+    "offline": true,
+    "time_limit_seconds_per_stage": 3600,
+    "GPU": "RTX PRO 6000 96GB",
+    "torch": "2.12.1",
+    "CUDA": "13.2",
+    "transformers": "5.13.0",
+    "numpy": "imported by source; supplied runtime dependency transitively"
+  },
+  "source_execution_required_for_performance": "Native official scored run remains UNMEASURED; structural packaging does not prove inference or leaderboard success",
+  "static_scope_notes": [
+    "solution.are_robust accepts but ignores reasoning_effort",
+    "generic artifact fallback is supported; _encode_problem loads artifact.model_id",
+    "No artifact deserialization or inference coverage/performance check was performed; do not infer target-model coverage from packaging success"
+  ]
+}

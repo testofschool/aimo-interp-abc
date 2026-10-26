@@ -1,0 +1,23 @@
+{
+  "scope": "PRE_SCORE_LOCAL_PREPARATION_ONLY",
+  "official_scores_queried": false,
+  "model_or_pickle_execution": false,
+  "uploads": 0,
+  "synthetic_test_count": 18,
+  "synthetic_test_result": "PASS",
+  "files": {
+    "PREREG.md": "c8f4d89a0a4efca1f458e65c61167551056bd34ade8d542db5682a56545d3ddc",
+    "paired_protocol.py": "1fade7edee89a5086766afdf1ebe8cfb61ea6e5f53e3d4adbeb91bbc5d5dbad5",
+    "tests/test_paired_protocol.py": "6f1cc4b5f4fec8033bdf061f005afea564e8f17d682e96672786c232cfd6e6bf"
+  },
+  "sources": [
+    "https://www.statsmodels.org/stable/generated/statsmodels.stats.contingency_tables.mcnemar.html",
+    "https://www.statsmodels.org/stable/_modules/statsmodels/stats/contingency_tables.html#mcnemar",
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html"
+  ],
+  "notes": [
+    "Raw native schema/pairing authenticity requires operator review.",
+    "No equivalence or causal ablation claim follows from these tests.",
+    "Preregistration is not effective until root reviews and commits before any new upload."
+  ]
+}
