@@ -1,0 +1,178 @@
+{
+  "observed_at_utc": "2026-10-26T15:51:49.864827+00:00",
+  "CB1": {
+    "expected_http": 200,
+    "actual_http": 200,
+    "match": true
+  },
+  "CB2": {
+    "competition": 16180,
+    "phase": 30038,
+    "name": "Competition phase",
+    "status": "Current",
+    "end": "2026-11-01T11:55:00Z",
+    "end_KST": "2026-11-01T20:55:00+09:00",
+    "max_submissions_per_day": 10,
+    "max_submissions_per_person": 300,
+    "tasks": {
+      "36237": "AIMO Robustness Validation v8 - Main Track",
+      "36241": "AIMO Robustness Validation v8 - Small Model Track"
+    },
+    "execution_time_limit": 4200,
+    "hide_prediction_output": false,
+    "enable_detailed_results": false,
+    "match": true,
+    "account_state": "UNVERIFIED; publicused_submissions0notauthenticatedquota"
+  },
+  "OR1": {
+    "expected_tmdate": 1793023952361,
+    "actual_tmdate": 1793023952361,
+    "match": true,
+    "duedate_KST": "2026-11-06T21:59:00+09:00",
+    "expdate_KST": "2026-11-06T22:29:00+09:00",
+    "pdf": {
+      "order": 7,
+      "description": "Upload a PDF file that ends with .pdf. The main body of the report should not exceed 5 pages and needs to be anonymized. In addition, you can use an unlimited number of pages for the AI usage statement, limitations, s, and appendix.",
+      "value": {
+        "param": {
+          "type": "file",
+          "maxSize": 50,
+          "extensions": [
+            "pdf"
+          ]
+        }
+      }
+    },
+    "supplementary_material": {
+      "order": 8,
+      "description": "Optional supplementary material (e.g., code or datasets). Please upload a single ZIP file. The maximum file size is 50 MB.",
+      "value": {
+        "param": {
+          "type": "file",
+          "extensions": [
+            "zip"
+          ],
+          "maxSize": 50,
+          "optional": true,
+          "deletable": true
+        }
+      }
+    },
+    "license": {
+      "param": {
+        "enum": [
+          {
+            "value": "CC BY-SA 4.0",
+            "description": "CC BY-SA 4.0"
+          }
+        ]
+      }
+    }
+  },
+  "OR2": {
+    "required_or_hidden_const": [
+      "abstract",
+      "ai_assistance",
+      "ai_use_statement",
+      "authors",
+      "keywords",
+      "leaderboard_submission_ids",
+      "pdf",
+      "reciprocal_reviewers",
+      "reciprocal_reviewing_acknowledgement",
+      "rules_compliance",
+      "submission_track",
+      "title",
+      "venue",
+      "venueid"
+    ],
+    "optional": [
+      "TLDR",
+      "supplementary_material",
+      "voluntary_reviewers",
+      "white_box_award"
+    ],
+    "match": true,
+    "leaderboard_ids": {
+      "order": 9,
+      "description": "Enter the IDs of the challenge leaderboard submissions that this paper describes and that we should evaluate for the prizes. Insert one submission ID per line or comma-separated. We will evaluate and rank only the first two submission IDs provided.",
+      "value": {
+        "param": {
+          "fieldName": "Codabench Leaderboard Submission IDs",
+          "type": "string[]",
+          "regex": "^\\S+$",
+          "mismatchError": "each submission ID must be a single value without spaces"
+        }
+      }
+    },
+    "authors": "Search author profile by name or profile ID. All authors must have an OpenReview profile prior to submitting a paper. **Please note that we only allow one technical report per the first author.** We will check that each OpenReview submission is associated with Codabench submission_ids linked to the same Codabench user_id and only consider the first submission. If the submission is eligible for any prize, the first author will also need to undertake identity verification matching the name with OpenReview Author.",
+    "track": {
+      "order": 10,
+      "description": "Pick track(s) for which you want your submission(s) to be considered",
+      "value": {
+        "param": {
+          "fieldName": "Submission Track",
+          "type": "string[]",
+          "items": [
+            {
+              "value": "Main track",
+              "description": "Main track",
+              "optional": true
+            },
+            {
+              "value": "Small models track",
+              "description": "Small models track",
+              "optional": true
+            }
+          ],
+          "input": "checkbox"
+        }
+      }
+    }
+  },
+  "repo_heads": {
+    "GS1": {
+      "expected": "de794053debe75a711400696e66b60937cebbb1b",
+      "actual": "de794053debe75a711400696e66b60937cebbb1b",
+      "exit": 0,
+      "match": true
+    },
+    "P1": {
+      "expected": "a429a9e71b65e804481394f8b3a5f6799a9a6987",
+      "actual": "a429a9e71b65e804481394f8b3a5f6799a9a6987",
+      "exit": 0,
+      "match": true
+    }
+  },
+  "D1_website": {
+    "report_deadline": {
+      "token": "November 5, 2026",
+      "hits": 1,
+      "context": "dered for awards must submit a technical report with details on their submission and its open-sourced implementation by November 5, 2026 (AoE) for compliance checks. The report must not exceed 5 pages, excluding the AI usage statement, limitations, references, and appendix. Transparency: teams considered for awards must enable the org"
+    },
+    "page_limit": {
+      "token": "must not exceed 5 pages",
+      "hits": 1,
+      "context": "ils on their submission and its open-sourced implementation by November 5, 2026 (AoE) for compliance checks. The report must not exceed 5 pages, excluding the AI usage statement, limitations, references, and appendix. Transparency: teams considered for awards must enable the organizers to reproduce their score from the instructions in the te"
+    },
+    "one_note": {
+      "token": "only one submission per first author",
+      "hits": 1,
+      "context": "nterp Challenge OpenReview forum . All authors must have an OpenReview profile before the report is submitted. We allow only one submission per first author. Each OpenReview submission must list the Codabench submission IDs it describes; we check that these are linked to the same Codabench user ID, and where a first author has several OpenReview submissi"
+    },
+    "codabench_user": {
+      "token": "same Codabench user ID",
+      "hits": 1,
+      "context": ". Each OpenReview submission must list the Codabench submission IDs it describes; we check that these are linked to the same Codabench user ID, and where a first author has several OpenReview submissions we only consider the first one. If a submission is eligible for a prize, the first author will additionally need to complete identity veri"
+    }
+  },
+  "scope": {
+    "authenticated": false,
+    "credential_read": false,
+    "POSTs": 0,
+    "submissions": 0,
+    "push": 0,
+    "leaderboard_or_participant_outcomes_inspected": false,
+    "package_installs": 0
+  }
+}

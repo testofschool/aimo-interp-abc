@@ -1,0 +1,135 @@
+[
+  {
+    "name": "CB1_HEAD",
+    "url": "https://www.codabench.org/",
+    "method": "HEAD",
+    "recorded_at_utc": "2026-10-26T15:50:18.190015+00:00",
+    "curl_exit": 0,
+    "http": "200",
+    "bytes": 439,
+    "body_sha256": "ae1ff6e4f34d6633829b4072434386a59ed2fda0e86420ffd6d2b2f71a1f205e",
+    "host_responded": true,
+    "sensitive_header_lines_removed": {
+      ".headers": 1,
+      ".body": 1
+    },
+    "stored_body_sha256": "c956b95e05cefc587ef579722370b705a54e2fbdadc8af3ba194f03872442677",
+    "headers_note": "Response cookies/auth header lines removed before public-receipt retention; HTTP status and body retained. HEAD .body is header text."
+  },
+  {
+    "name": "HOST_GITHUB",
+    "url": "https://github.com/",
+    "method": "HEAD",
+    "recorded_at_utc": "2026-10-26T15:50:18.192462+00:00",
+    "curl_exit": 0,
+    "http": "200",
+    "bytes": 5504,
+    "body_sha256": "4304270261fc600e7bf9006401cca45ef7e1fbd86f58bd10ccb00a19decb3a97",
+    "host_responded": true,
+    "sensitive_header_lines_removed": {
+      ".headers": 3,
+      ".body": 3
+    },
+    "stored_body_sha256": "023d7378bf61265356a1712b52f8985f77e606189aa9b45d9fefd0e234d9fa02",
+    "headers_note": "Response cookies/auth header lines removed before public-receipt retention; HTTP status and body retained. HEAD .body is header text."
+  },
+  {
+    "name": "HOST_HF",
+    "url": "https://huggingface.co/",
+    "method": "HEAD",
+    "recorded_at_utc": "2026-10-26T15:50:18.194457+00:00",
+    "curl_exit": 0,
+    "http": "200",
+    "bytes": 788,
+    "body_sha256": "60a8b901c792569e68dab93c21cb60c980ba175b03cbf3473bd3cbc6da72c06b",
+    "host_responded": true,
+    "sensitive_header_lines_removed": {
+      ".headers": 0,
+      ".body": 0
+    },
+    "stored_body_sha256": "60a8b901c792569e68dab93c21cb60c980ba175b03cbf3473bd3cbc6da72c06b",
+    "headers_note": "Response cookies/auth header lines removed before public-receipt retention; HTTP status and body retained. HEAD .body is header text."
+  },
+  {
+    "name": "HOST_OPENREVIEW",
+    "url": "https://api2.openreview.net/",
+    "method": "HEAD",
+    "recorded_at_utc": "2026-10-26T15:50:18.196364+00:00",
+    "curl_exit": 0,
+    "http": "301",
+    "bytes": 230,
+    "body_sha256": "653bae294dfe23bc4f7704941546d76757bbbb42da4df8af80aa6a20456b3ef6",
+    "host_responded": true,
+    "sensitive_header_lines_removed": {
+      ".headers": 0,
+      ".body": 0
+    },
+    "stored_body_sha256": "653bae294dfe23bc4f7704941546d76757bbbb42da4df8af80aa6a20456b3ef6",
+    "headers_note": "Response cookies/auth header lines removed before public-receipt retention; HTTP status and body retained. HEAD .body is header text."
+  },
+  {
+    "name": "HOST_ANON",
+    "url": "https://anonymous.4open.science/",
+    "method": "HEAD",
+    "recorded_at_utc": "2026-10-26T15:50:18.201160+00:00",
+    "curl_exit": 0,
+    "http": "200",
+    "bytes": 836,
+    "body_sha256": "4155c656e1b7d97e7ebe94d07650143a7eb048efe929873643694ff272fa1280",
+    "host_responded": true,
+    "sensitive_header_lines_removed": {
+      ".headers": 0,
+      ".body": 0
+    },
+    "stored_body_sha256": "4155c656e1b7d97e7ebe94d07650143a7eb048efe929873643694ff272fa1280",
+    "headers_note": "Response cookies/auth header lines removed before public-receipt retention; HTTP status and body retained. HEAD .body is header text."
+  },
+  {
+    "name": "CB2_COMPETITION",
+    "url": "https://www.codabench.org/api/competitions/16180/",
+    "method": "GET",
+    "recorded_at_utc": "2026-10-26T15:50:18.202872+00:00",
+    "curl_exit": 0,
+    "http": "200",
+    "bytes": 10000,
+    "body_sha256": "0b9c16a8de236ca7fb30feeec8de357602dce6fa48e92f077cd49ae670818ef4",
+    "host_responded": true,
+    "sensitive_header_lines_removed": {
+      ".headers": 0
+    },
+    "stored_body_sha256": "0b9c16a8de236ca7fb30feeec8de357602dce6fa48e92f077cd49ae670818ef4",
+    "headers_note": "Response cookies/auth header lines removed before public-receipt retention; HTTP status and body retained. HEAD .body is header text."
+  },
+  {
+    "name": "OR1_INVITATION",
+    "url": "https://api2.openreview.net/invitations?id=NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/-/Submission",
+    "method": "GET",
+    "recorded_at_utc": "2026-10-26T15:50:18.204378+00:00",
+    "curl_exit": 0,
+    "http": "200",
+    "bytes": 11356,
+    "body_sha256": "5b6c0a3c4a915377f73764781fe77f6edeac3e9e1500acb5309b459b957fd3e8",
+    "host_responded": true,
+    "sensitive_header_lines_removed": {
+      ".headers": 1
+    },
+    "stored_body_sha256": "5b6c0a3c4a915377f73764781fe77f6edeac3e9e1500acb5309b459b957fd3e8",
+    "headers_note": "Response cookies/auth header lines removed before public-receipt retention; HTTP status and body retained. HEAD .body is header text."
+  },
+  {
+    "name": "OFFICIAL_SITE",
+    "url": "https://aimo-interp.github.io/",
+    "method": "GET",
+    "recorded_at_utc": "2026-10-26T15:50:18.204462+00:00",
+    "curl_exit": 0,
+    "http": "200",
+    "bytes": 95085,
+    "body_sha256": "8fc76b33b7ff03a6f3856495afe0d5f538a9eae4e8eee50039cc112b047343c8",
+    "host_responded": true,
+    "sensitive_header_lines_removed": {
+      ".headers": 0
+    },
+    "stored_body_sha256": "8fc76b33b7ff03a6f3856495afe0d5f538a9eae4e8eee50039cc112b047343c8",
+    "headers_note": "Response cookies/auth header lines removed before public-receipt retention; HTTP status and body retained. HEAD .body is header text."
+  }
+]

@@ -1,0 +1,18 @@
+{
+  "strategy": "Reuse byte-identical approved Mac Studio canon from git144ce58 instead of fictitious M5 rebuild",
+  "actual_host": "Mac Studio",
+  "new_M5_rebuild": false,
+  "base": "33328fed2a38255f8a85b9d6ae1d54672c44e3bf",
+  "approved_pdf": {
+    "sha256": "31c5ee0c79278c7b31a038acde4ed3f6ff61fbc2dbc361280000fc485b512c95",
+    "pages": 9,
+    "Type3": 0
+  },
+  "approved_layout_text_sha256": "b740a790bfca2bb0400ea3dc2f5dc84da20a92616b3d12f33d552031ad31dc0a",
+  "approved_reference_match": true,
+  "reference_residual_diff_lines": 0,
+  "reference_diff_meaning": "Same exact approved PDF blob; does not claim a new source rebuild.",
+  "existing_v83_changes": "Only declared E4 queue observations, E11 section moves, E12 anonymization, citation move and disclosed CPU wording; prior fidelity evidence results/v8.3/fidelity/FIDELITY_REVIEW.md.",
+  "v83_existing_numeric_evidence": "results/v8.3/report_numbers_check.json: PASS164/164 at original T1",
+  "current_numeric_attempt": "v10-execution/NUMERIC_RECHECK.json; consult current state, not historic PASS"
+}

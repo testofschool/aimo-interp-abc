@@ -1,0 +1,11 @@
+{
+  "status": "IMPORT_VERIFIED",
+  "openreview-py": "2.9.1",
+  "python": "3.10 isolated v10-execution/orvenv",
+  "client_instantiated": false,
+  "authentication_attempts": 0,
+  "POSTs": 0,
+  "install_log": "v10-execution/openreview_install.log",
+  "sdk_credential_caveat": "Bare OpenReviewClient may read environment and log in. Supply explicit credentials only at H4; never construct bare client during preparation.",
+  "MFA_caveat": "SDK default MFA uses echoing input; future local prompt must use getpass, never print login return or token."
+}

@@ -1,0 +1,43 @@
+{
+  "status": "LOCAL_TECHNICAL_CHECKS_PASS_H2_PENDING",
+  "PDF_sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+  "checks": {
+    "payload_gate": {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/openreview/runtime/tools/openreview_payload_gate.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/openreview/runtime/invitation.json",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/openreview/payload-v83.json",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/review/aimo-interp-report-v8.3-anonymous.pdf"
+      ],
+      "exit": 0,
+      "result": "PASS",
+      "technical_checks": null,
+      "violations": [],
+      "full_output": "payload_gate.stdout.json"
+    },
+    "submission_preflight": {
+      "command": [
+        "/Library/Developer/CommandLineTools/usr/bin/python3",
+        "-I",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/openreview/runtime/tools/openreview_submission_preflight.py",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/openreview/runtime/invitation.json",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/openreview/payload-v83.json",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/review/aimo-interp-report-v8.3-anonymous.pdf",
+        "--tex-source",
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/openreview/runtime/main-anonymous.tex"
+      ],
+      "exit": 1,
+      "result": "READY_FOR_AUTHOR_REVIEW",
+      "technical_checks": "PASS",
+      "violations": [],
+      "full_output": "submission_preflight.stdout.json"
+    }
+  },
+  "author_review_confirmed_flag_used": false,
+  "submitted": false,
+  "uploads": 0,
+  "POSTs": 0,
+  "one_note_only": true
+}

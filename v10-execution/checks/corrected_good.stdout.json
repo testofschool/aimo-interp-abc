@@ -1,0 +1,50 @@
+{
+ "result": "PASS",
+ "failed": [],
+ "passed": 7,
+ "total": 7,
+ "rows": [
+  {
+   "check": "OWN_SCORED_IDS",
+   "source": "[SITE] FAQ 16 + [KILL]",
+   "ok": true,
+   "needs": null
+  },
+  {
+   "check": "WHITEBOX_RUN",
+   "source": "[KILL] converged escape",
+   "ok": true,
+   "needs": null
+  },
+  {
+   "check": "ABLATION",
+   "source": "[SITE] White-Box Award text + [KILL]",
+   "ok": true,
+   "needs": null
+  },
+  {
+   "check": "PREREGISTERED",
+   "source": "[KILL] C3 escape",
+   "ok": true,
+   "needs": null
+  },
+  {
+   "check": "PRIOR_WORK",
+   "source": "[BYEOL]",
+   "ok": true,
+   "needs": null
+  },
+  {
+   "check": "FINAL_SET_240",
+   "source": "[PAPER] + C1 escape",
+   "ok": true,
+   "needs": null
+  },
+  {
+   "check": "BLACKBOX_SUFFICIENCY",
+   "source": "[PAPER] footnote 4",
+   "ok": true,
+   "needs": null
+  }
+ ]
+}

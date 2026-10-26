@@ -1,0 +1,42 @@
+{
+  "status": "LOCAL_PREPARATION_H2_PENDING_NOT_SUBMITTED",
+  "recorded_at_utc": "2026-10-26T16:07:23.523109+00:00",
+  "invitation": "NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/-/Submission",
+  "invitation_tmdate": 1793023952361,
+  "invitation_source": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v9-execution/preflight/OR1_INVITATION.body",
+  "invitation_sha256": "5b6c0a3c4a915377f73764781fe77f6edeac3e9e1500acb5309b459b957fd3e8",
+  "payload": "payload-v83.json",
+  "payload_sha256": "54d8bed253c705faf999f42da65acb2defbb6b48cba9517a625ffbe73b942a89",
+  "license": "CC BY-SA 4.0",
+  "pdf": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/review/aimo-interp-report-v8.3-anonymous.pdf",
+  "pdf_sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+  "tex_source": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/openreview/runtime/main-anonymous.tex",
+  "tex_sha256": "31f8ceb94cb94edec4f31712a0b8db49bf828b9afd3e82e8537dc680da604aeb",
+  "source_commit": "33328fed2a38255f8a85b9d6ae1d54672c44e3bf",
+  "author_source": "git33328fe:plans/payload_v8.1.json; existing authority; no live profile ownership verification",
+  "abstract_source": "git33328fe:report/REPORT_DRAFT.md Abstract; S13 rendered as [11] according to same TeX bibliography",
+  "TLDR_source": "verbatim sentence from v8.3 abstract",
+  "three_acknowledgements_source": "exact live invitation enum strings",
+  "leaderboard_ID_source": "v10 permits temporary queue fallback until H1 official IDs exist",
+  "official_Codabench_IDs": "NOT_OBSERVED_REPLACE_AFTER_H1",
+  "queue_UUID_organizer_acceptance": "UNVERIFIED",
+  "author_review_confirmed": false,
+  "H2": "PENDING_NEW_PDF_DIRECT_CONFIRMATION",
+  "one_note_only": true,
+  "existing_note_id": "NOT_AUTHENTICATED_LOOKUP_YET",
+  "note_creation_performed": false,
+  "SDK_imports": false,
+  "network_calls": 0,
+  "POSTs": 0,
+  "uploads": 0,
+  "omitted_fields": [
+    "white_box_award",
+    "voluntary_reviewers",
+    "supplementary_material"
+  ],
+  "pdf_venue_venueid_handling": "auto/file-upload metadata supplied separately at real post; no local path placed in note content",
+  "tool_sources": {
+    "openreview_payload_gate.py": "3a213f34831587bb5eabcfe3fd59e477a2604976c01e54b84e1ff2127fdb865f",
+    "openreview_submission_preflight.py": "96f387eb7b4b0074f098fb5dc4e6917babc02705e4a16a42efeac0f44b27be5a"
+  }
+}

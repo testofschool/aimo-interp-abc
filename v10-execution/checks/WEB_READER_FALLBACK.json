@@ -1,0 +1,6 @@
+{
+  "web_reader": "Codabench competition URL returned unrelated non-competition prose; OpenReview API URL inaccessible to web reader.",
+  "used_as_evidence": false,
+  "fallback": "Raw bounded HTTPS responses validated and stored at v9-execution/preflight/, primary API schema and competition metadata matched expectations.",
+  "claim_limit": "No conclusion about site integrity or official score availability follows from web-parser output."
+}

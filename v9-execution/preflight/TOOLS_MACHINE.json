@@ -1,0 +1,164 @@
+{
+  "observed_at_utc": "2026-10-26T15:51:16.611857+00:00",
+  "cwd": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work",
+  "expected_executor": "M5 /Users/kangjungmin; handoff expected startingHEAD542f44bunlesslaterwork",
+  "actual_executor": "Mac Studio /Users/felix; hardwarecodeMac13,1",
+  "executor_match": false,
+  "tools": {
+    "git": "/usr/bin/git",
+    "python3": "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+    "zip": "/usr/bin/zip",
+    "curl": "/usr/bin/curl",
+    "gh": "/opt/homebrew/bin/gh",
+    "pdftotext": "/opt/homebrew/bin/pdftotext",
+    "pdfinfo": "/opt/homebrew/bin/pdfinfo",
+    "pdffonts": "/opt/homebrew/bin/pdffonts",
+    "brew": "/opt/homebrew/bin/brew"
+  },
+  "versions": {
+    "git": {
+      "argv": [
+        "git",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "git version 2.54.0 (Apple Git-157)",
+      "stderr": ""
+    },
+    "python3": {
+      "argv": [
+        "python3",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "Python 3.10.11",
+      "stderr": ""
+    },
+    "zip": {
+      "argv": [
+        "zip",
+        "-v"
+      ],
+      "exit": 0,
+      "stdout": "Copyright (c) 1990-2008 Info-ZIP - Type 'zip \"-L\"' for software license.\nThis is Zip 3.0 (July 5th 2008), by Info-ZIP, with modifications by Apple Inc.\nPlease report bugs to Apple.\n",
+      "stderr": ""
+    },
+    "curl": {
+      "argv": [
+        "curl",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "curl 8.7.1 (x86_64-apple-darwin25.0) libcurl/8.7.1 (SecureTransport) LibreSSL/3.3.6 zlib/1.2.12 nghttp2/1.68.1\nRelease-Date: 2024-03-27\nProtocols: dict file ftp ftps gopher gophers http https imap imaps ipfs ipns ldap ldaps mqtt pop3 pop3s rtsp smb smbs smtp smtps telnet tftp\nFeatures: alt-svc AsynchDNS GSS-API HSTS HTTP2 HTTPS-proxy IPv6 Kerberos Largefile libz MultiSSL NTLM SPNEGO SSL threadsafe UnixSockets",
+      "stderr": ""
+    },
+    "gh": {
+      "argv": [
+        "gh",
+        "--version"
+      ],
+      "exit": 0,
+      "stdout": "gh version 2.97.0 (2026-07-31)\nhttps://github.com/cli/cli/releases/tag/v2.97.0",
+      "stderr": ""
+    },
+    "pdftotext": {
+      "argv": [
+        "pdftotext",
+        "-v"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "pdftotext version 26.04.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC"
+    },
+    "pdfinfo": {
+      "argv": [
+        "pdfinfo",
+        "-v"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "pdfinfo version 26.04.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC"
+    },
+    "pdffonts": {
+      "argv": [
+        "pdffonts",
+        "-v"
+      ],
+      "exit": 0,
+      "stdout": "",
+      "stderr": "pdffonts version 26.04.0\nCopyright 2005-2026 The Poppler Developers - http://poppler.freedesktop.org\nCopyright 1996-2011, 2022 Glyph & Cog, LLC"
+    }
+  },
+  "openreview_import": {
+    "default_python": {
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-c",
+        "import openreview; import importlib.metadata; print(importlib.metadata.version(\"openreview-py\"))"
+      ],
+      "exit": 1,
+      "stdout": "",
+      "stderr": "Traceback (most recent call last):\n  File \"<string>\", line 1, in <module>\nModuleNotFoundError: No module named 'openreview'\n"
+    },
+    "project_venv": {
+      "argv": [
+        "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/.venv/bin/python",
+        "-c",
+        "import openreview; import importlib.metadata; print(importlib.metadata.version(\"openreview-py\"))"
+      ],
+      "state": "TIMEOUT_NOT_ABSENCE",
+      "timeout_seconds": 20
+    }
+  },
+  "local_observations": {
+    "hardware": {
+      "argv": [
+        "sysctl",
+        "hw.memsize",
+        "hw.model"
+      ],
+      "exit": 0,
+      "stdout": "hw.memsize: 68719476736\nhw.model: Mac13,1\n",
+      "stderr": ""
+    },
+    "os": {
+      "argv": [
+        "sw_vers"
+      ],
+      "exit": 0,
+      "stdout": "ProductName:\t\tmacOS\nProductVersion:\t\t26.6.2\nBuildVersion:\t\t25G83\n",
+      "stderr": ""
+    },
+    "disk": {
+      "argv": [
+        "df",
+        "-Pk",
+        "."
+      ],
+      "exit": 0,
+      "stdout": "Filesystem   1024-blocks      Used Available Capacity  Mounted on\n/dev/disk3s1   971350180 911227420  11245976    99%    /System/Volumes/Data\n",
+      "stderr": ""
+    },
+    "git_HEAD": {
+      "argv": [
+        "git",
+        "rev-parse",
+        "HEAD"
+      ],
+      "exit": 0,
+      "stdout": "33328fed2a38255f8a85b9d6ae1d54672c44e3bf\n",
+      "stderr": ""
+    },
+    "branch": {
+      "argv": [
+        "git",
+        "branch",
+        "--show-current"
+      ],
+      "exit": 0,
+      "stdout": "v10\n",
+      "stderr": ""
+    }
+  },
+  "installs_performed": 0
+}

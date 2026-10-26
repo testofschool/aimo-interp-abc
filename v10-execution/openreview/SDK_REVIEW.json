@@ -1,0 +1,69 @@
+{
+  "status": "LOCAL_STATIC_PREPARATION_ONLY",
+  "review_date_kst": "2026-10-27",
+  "sdk": {
+    "distribution": "openreview-py",
+    "version": "2.9.1",
+    "metadata": "v10-execution/orvenv/lib/python3.10/site-packages/openreview_py-2.9.1.dist-info/METADATA",
+    "client_source": "v10-execution/orvenv/lib/python3.10/site-packages/openreview/api/client.py",
+    "client_sha256": "6197fb3107c825dc3e6751ee692201abcd458231c21d0595fc488d729b1551da",
+    "findings": [
+      "Constructor falls back to OPENREVIEW_USERNAME and OPENREVIEW_PASSWORD and can initiate login; no client instantiated in this review.",
+      "login_user returns authentication response including token; never print or persist that response.",
+      "Default MFA code prompt in openreview/mfa.py uses input, not getpass; arrange private local entry before authentication.",
+      "get_notes supports tauthor plus pagination; get_all_notes does not accept tauthor.",
+      "get_all_notes can enumerate all authenticated visible notes by invitation, including trash when requested.",
+      "get_note and get_attachment retrieve established-note readbacks; get_note_edits can reconcile edit history.",
+      "post_note_edit creates or updates; an existing Note.id is required to target a revision.",
+      "The SDK mounts a POST-retrying adapter for edit endpoints; reconcile unknown creation outcomes and use a single-attempt creation policy."
+    ]
+  },
+  "local_invitation": {
+    "path": "v9-execution/preflight/OR1_INVITATION.body",
+    "sha256": "5b6c0a3c4a915377f73764781fe77f6edeac3e9e1500acb5309b459b957fd3e8",
+    "id": "NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/-/Submission",
+    "tmdate": 1793023952361,
+    "duedate": 1793969940000,
+    "live_freshness": "NOT_RECHECKED_IN_THIS_PREPARATION",
+    "required_fields": ["title", "authors", "reciprocal_reviewers", "keywords", "abstract", "pdf", "leaderboard_submission_ids", "submission_track", "ai_assistance", "ai_use_statement", "reciprocal_reviewing_acknowledgement", "rules_compliance", "venue", "venueid"],
+    "optional_fields": ["voluntary_reviewers", "TLDR", "supplementary_material", "white_box_award"],
+    "constraints": [
+      "One technical report per first author; only the first submission is considered.",
+      "Listed Codabench submissions must be linked to the same Codabench user_id.",
+      "Only the first two leaderboard_submission_ids are evaluated and ranked.",
+      "Anonymous PDF with main body at most five pages.",
+      "TLDR maxLength 250; optional and deletable.",
+      "CC BY-SA 4.0 is the permitted note license."
+    ]
+  },
+  "existing_local_validators": {
+    "tools/openreview_payload_gate.py": {
+      "inspection_source": "git show HEAD:tools/openreview_payload_gate.py",
+      "inspected_source_sha256": "3a213f34831587bb5eabcfe3fd59e477a2604976c01e54b84e1ff2127fdb865f",
+      "executed": false
+    },
+    "tools/openreview_submission_preflight.py": {
+      "inspection_source": "git show HEAD:tools/openreview_submission_preflight.py",
+      "inspected_source_sha256": "96f387eb7b4b0074f098fb5dc4e6917babc02705e4a16a42efeac0f44b27be5a",
+      "executed": false
+    },
+    "working_tree_byte_equality": "NOT_VERIFIED_DIRECT_READS_STALLED"
+  },
+  "prior_note_reconciliation": {
+    "local_filename_inventory": "Completed without opening credential files; existing OpenReview validation/profile/source records are present in older execution folders.",
+    "authenticated_authored_notes_query": "NOT_RUN",
+    "prior_ledger_content_reconciliation": "NOT_RUN",
+    "existing_note_count": null,
+    "new_note_creation_allowed_by_this_record": false
+  },
+  "actions_in_this_preparation": {
+    "sdk_client_instantiated": false,
+    "credentials_or_auth_environment_values_read": false,
+    "network_requests": 0,
+    "attachment_uploads": 0,
+    "note_creations": 0,
+    "note_revisions": 0,
+    "git_commits": 0,
+    "new_cli_implemented": false
+  }
+}

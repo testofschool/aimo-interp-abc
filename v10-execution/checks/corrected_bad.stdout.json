@@ -1,0 +1,53 @@
+{
+ "result": "FAIL",
+ "failed": [
+  "ABLATION",
+  "FINAL_SET_240"
+ ],
+ "passed": 5,
+ "total": 7,
+ "rows": [
+  {
+   "check": "OWN_SCORED_IDS",
+   "source": "[SITE] FAQ 16 + [KILL]",
+   "ok": true,
+   "needs": null
+  },
+  {
+   "check": "WHITEBOX_RUN",
+   "source": "[KILL] converged escape",
+   "ok": true,
+   "needs": null
+  },
+  {
+   "check": "ABLATION",
+   "source": "[SITE] White-Box Award text + [KILL]",
+   "ok": false,
+   "needs": "the probe is compared against a control with the white-box signal removed (ablation)"
+  },
+  {
+   "check": "PREREGISTERED",
+   "source": "[KILL] C3 escape",
+   "ok": true,
+   "needs": null
+  },
+  {
+   "check": "PRIOR_WORK",
+   "source": "[BYEOL]",
+   "ok": true,
+   "needs": null
+  },
+  {
+   "check": "FINAL_SET_240",
+   "source": "[PAPER] + C1 escape",
+   "ok": false,
+   "needs": "the board-size result is restated against the organizers' planned 240 test instances"
+  },
+  {
+   "check": "BLACKBOX_SUFFICIENCY",
+   "source": "[PAPER] footnote 4",
+   "ok": true,
+   "needs": null
+  }
+ ]
+}

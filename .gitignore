@@ -24,3 +24,7 @@ results/rebuilt_bundles/
 /v10-execution/review/
 
 /v10-execution/numeric-runtime/
+
+/v10-execution/openreview_install.log
+
+/v10-execution/openreview/runtime/

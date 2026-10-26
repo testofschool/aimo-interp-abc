@@ -1,0 +1,17 @@
+{
+  "result": "READY_FOR_AUTHOR_REVIEW",
+  "technical_checks": "PASS",
+  "author_review_and_attestations": "NOT_VERIFIED",
+  "completed_review_wording": "PRESENT",
+  "invitation_fetch_freshness": "NOT_VERIFIED_BY_THIS_LOCAL_TOOL",
+  "external_venue_rules_and_profile_ownership": "NOT_VERIFIED_BY_THIS_LOCAL_TOOL",
+  "submission_authority": "NOT_GRANTED_BY_THIS_TOOL",
+  "submitted": false,
+  "original_gate": {
+    "result": "PASS",
+    "pages": 10,
+    "form_mdate": 1793023952361,
+    "violations": []
+  },
+  "violations": []
+}

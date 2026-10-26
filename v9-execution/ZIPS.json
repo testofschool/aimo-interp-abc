@@ -31,18 +31,20 @@
       "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v9-execution/bundle3-trained-probe-small.zip",
       "bytes": 27662500,
       "sha256": "852fff17372ebdcf967549a4270339a2e792372c1b5496da968b2df884ccc67b",
-      "status": "READY_FOR_H1_AFTER_PREREG_COMMIT",
+      "status": "READY_FOR_H1_OFFICIAL_UPLOAD",
       "provenance": "Unmodified official trained-probe source/artifact at de794053debe75a711400696e66b60937cebbb1b; empty small.txt added per Small track contract",
       "official_submission_id": null,
       "official_score": "UNMEASURED",
       "upload_only_if": "H0 confirmed; root preregistration committed; Felix performs H1 official manual upload"
     }
   ],
-  "before_any_upload": "PREREG.md must be committed by root; do not mistake this inventory for preregistration",
+  "before_any_upload": "Local preregistration is committed. Felix must first check prior official submissions; prior exposure makes inference exploratory.",
   "no_queue_resubmissions": true,
   "H0": {
     "status": "CONFIRMED",
     "choice": "v9 진행",
     "authority": "Direct human reply relayed by parent; no upload performed"
-  }
+  },
+  "prereg_commit": "773b39e1a2ca0f1c4001e0ae1459e7d567e56c80",
+  "prereg_commit_time_KST": "2026-10-27T01:03:42+09:00"
 }

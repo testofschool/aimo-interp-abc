@@ -1,0 +1,27 @@
+{
+  "gate_sha256": "a8a0cede549cdc5fd5add4a55bc2525af8314aa50529925f9cdb12283af0c0c4",
+  "gate_modified": false,
+  "controls": {
+    "literal_handoff_good": {
+      "exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "WHITEBOX_RUN"
+      ]
+    },
+    "corrected_good": {
+      "exit": 0,
+      "result": "PASS",
+      "failed": []
+    },
+    "corrected_bad": {
+      "exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "ABLATION",
+        "FINAL_SET_240"
+      ]
+    }
+  },
+  "actual_results_are_not_measured_by_this_test": true
+}

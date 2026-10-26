@@ -1,0 +1,13 @@
+{
+  "status": "UPDATED",
+  "existing": [
+    "aimo-codabench",
+    "aimo-11-3-fallback"
+  ],
+  "new": "aimo-zip-h1",
+  "six_hour_monitor_until": "2026-11-06T20:00:00+09:00",
+  "H1_reminder": "2026-10-31T12:00:00+09:00",
+  "note_check": "2026-11-03T12:00:00+09:00",
+  "notification": "Meaningful changes, failures, completion, or required user action only; no outbound email/Discord authority.",
+  "authority": "Direct adoption of v10 T-POLL; preserved previous recurring schedule and target thread."
+}

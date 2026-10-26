@@ -1,0 +1,22 @@
+Pre-registered
+scored 8/14 (Codabench submission id 412345
+Codabench submission id 412346
+
+text-only control
+Unlike byeolki
+black-box control matches
+
+The organizers trained probe, unmodified.
+SYNTHETIC LOCAL CONTROL ONLY. This fixture is not service evidence.
+SYNTHETIC LOCAL CONTROL ONLY. This fixture is not service evidence.
+SYNTHETIC LOCAL CONTROL ONLY. This fixture is not service evidence.
+SYNTHETIC LOCAL CONTROL ONLY. This fixture is not service evidence.
+SYNTHETIC LOCAL CONTROL ONLY. This fixture is not service evidence.
+SYNTHETIC LOCAL CONTROL ONLY. This fixture is not service evidence.
+SYNTHETIC LOCAL CONTROL ONLY. This fixture is not service evidence.
+SYNTHETIC LOCAL CONTROL ONLY. This fixture is not service evidence.
+SYNTHETIC LOCAL CONTROL ONLY. This fixture is not service evidence.
+SYNTHETIC LOCAL CONTROL ONLY. This fixture is not service evidence.
+SYNTHETIC LOCAL CONTROL ONLY. This fixture is not service evidence.
+SYNTHETIC LOCAL CONTROL ONLY. This fixture is not service evidence.
+Limitations

@@ -1,0 +1,27 @@
+{
+  "recorded_at_utc": "2026-10-26T16:10:41.454944+00:00",
+  "active_specification": "HANDOFF_v10",
+  "strategy": "REUSE_BYTE_IDENTICAL_COMPLETED_v8.3_T1",
+  "source_commit": "33328fed2a38255f8a85b9d6ae1d54672c44e3bf",
+  "original_build_receipt": "results/v8.3/BUILD.json",
+  "current_status": "v10-execution/STATUS.json",
+  "anonymous": {
+    "anonymous_pdf": "v10-execution/review/aimo-interp-report-v8.3-anonymous.pdf",
+    "sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+    "main_body_pages": 5,
+    "total_pages": 10,
+    "Type3": 0,
+    "v3_normal_gate": "PASS_19_OF_19",
+    "payload_gate": "PASS",
+    "strict_preflight": "TECHNICAL_PASS_READY_FOR_AUTHOR_REVIEW",
+    "numeric_historical": "PASS_164_OF_164_FROM_EXISTING_T1",
+    "numeric_current": "UNRUN",
+    "new_build": false
+  },
+  "named_pdf_sha256": "c8be7a4f3c4fac8da00d1c7c05f6edef9e17f2e974e97b8a190c371eb9927cc0",
+  "exact_gate_sha256": "152e2a488eb0c3cdeadbe4195bb09ac90acab464df4326a612098dc63f5c7630",
+  "H2": "PENDING",
+  "AUTHOR_APPROVAL_v8_3_created": false,
+  "official_ids": "NOT_AVAILABLE_USE_EXPLICIT_QUEUE_FALLBACK",
+  "queue_UUID_acceptance_by_organizers": "UNVERIFIED"
+}

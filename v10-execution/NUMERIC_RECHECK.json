@@ -1,0 +1,128 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-26T16:08:21.352158+00:00",
+  "scope": "ISOLATED_NUMERIC_RECHECK_NO_CANONICAL_REPLACEMENT",
+  "status": "UNRUN",
+  "reason": "The bounded canonical Git archive extraction failed before the actual numeric check could launch.",
+  "expected_claim_count": 164,
+  "report_numbers_check_executed": false,
+  "canonical_commit": "33328fe",
+  "data_download": {
+    "downloaded": 4,
+    "files": 4,
+    "sha256": {
+      "augmented-sample-math-agg.parquet": "b785750259a3f4524cbaf988f51660197cbdfca19d8f45cc35347d4ef29aa4db",
+      "sample-full.parquet": "2989ab6a018f2779a821209f414bd0049c9ef1c2488f589ff2d3bf4ed16942ff",
+      "train-main-v2.parquet": "e18eb44207e7987781ec2ff214793196038442bdc1466fdf5498f3e87ec58285",
+      "val-sample.parquet": "3919cb3d951bb360a120be3397e926f48b7819bcd97e12cfee4c01e76618560f"
+    },
+    "status": "PASS"
+  },
+  "canonical_pins_install": {
+    "result": "PASS",
+    "runtime_versions_import_verified": false,
+    "pins": [
+      "# Control refit + OOF evaluator. GPU extraction uses the competition image.",
+      "numpy==2.5.4",
+      "scipy==1.18.1",
+      "pandas==2.3.3",
+      "pyarrow==23.0.1",
+      "scikit-learn==1.8.0",
+      "joblib==1.5.3",
+      "huggingface-hub==1.5.0"
+    ]
+  },
+  "python": "3.12.14 bundled runtime; new system-site-packages venv; original .venv untouched",
+  "canonical_fetcher_sha256": "a6eef5df3c40059625a1253a2d2f6714e942d85fdf2e7269549361411e2142d8",
+  "manifest_sha256": "13bca65e74537ce8fa252a86b899110bb526abd45a198e1fe819ca17b506f771",
+  "elapsed_s": 42.023,
+  "original_data_preserved": true,
+  "original_venv_preserved": true,
+  "orvenv_preserved": true,
+  "official_score_queries": 0,
+  "submissions": 0,
+  "runtime_path": "v10-execution/numeric-runtime/",
+  "runtime_ignored": true,
+  "evidence": {
+    "canonical_fetcher.stdout.txt": "a6eef5df3c40059625a1253a2d2f6714e942d85fdf2e7269549361411e2142d8",
+    "pinned_download.stdout.txt": "de47a2b87e39d9cc3826618ff44d9945b45ea84cbed400bb0b5aca5608dcf169",
+    "canonical_pins_install.stdout.txt": "47091b4a5899ebffbf379fd280d7a385cde12583c893356959b665648a32e001",
+    "canonical_pins_install.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime_import.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "runtime_import.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "ATTEMPT.json": "976c066923ec10afc7ea55223833182d6adec1a021632843eac3fb3136ee6798",
+    "retry_git_paths.json": "a827aebd5ac26743e2b07f578e158c6c7bf68ab05eed2a44457f4a4b0f0c5589",
+    "retry_git_archive.stdout.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "retry_git_archive.stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "first_attempt_summary.json": "ddaea2afb58df51547b2e707e611a28f3ad34e343529c7a4882ddf34d74bca85"
+  },
+  "steps": [
+    {
+      "step": "canonical_fetcher",
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "elapsed_s": 0.046
+    },
+    {
+      "step": "venv_create",
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "elapsed_s": 1.88
+    },
+    {
+      "step": "pinned_download",
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "elapsed_s": 4.75
+    },
+    {
+      "step": "canonical_pins_install",
+      "status": "COMPLETED",
+      "exit_code": 0,
+      "elapsed_s": 20.115
+    },
+    {
+      "step": "runtime_import",
+      "status": "TIMEOUT",
+      "exit_code": null,
+      "elapsed_s": 20.025
+    }
+  ],
+  "interpretation": "Only an actual report_numbers --check verdict establishes the numeric reproduction result; prior import timeout evidence is preserved.",
+  "prior_attempt": {
+    "status": "UNRUN",
+    "reason": "Fresh isolated runtime package import exceeded its 20-second bound; report_numbers.py --check was not launched.",
+    "elapsed_s": 42.023,
+    "summary_sha256": "ddaea2afb58df51547b2e707e611a28f3ad34e343529c7a4882ddf34d74bca85",
+    "preserved_at": "v10-execution/numeric-runtime/first_attempt_summary.json"
+  },
+  "check_result": null,
+  "final_recovery_attempt_count": 1,
+  "recovery_steps": [
+    {
+      "step": "retry_git_archive",
+      "status": "TIMEOUT",
+      "exit_code": null,
+      "bound_s": 20,
+      "elapsed_s": 20.004,
+      "argv": [
+        "git",
+        "archive",
+        "--format=tar",
+        "33328fe",
+        "tools",
+        "research/claims.json",
+        "data/leaderboard",
+        "research/PREREG_v6.json",
+        "research/v8_3_sources/queue",
+        "bundles/solution-always-true-small.zip",
+        "bundles/solution-text-length-control-small.zip"
+      ]
+    }
+  ],
+  "canonical_git_blobs": [],
+  "recovery_elapsed_s": 20.005,
+  "recovery_runtime_path": "v10-execution/numeric-runtime/repro/",
+  "v8_execution_queue_in_commit": false,
+  "canonical_queue_receipts_path": "research/v8_3_sources/queue/"
+}

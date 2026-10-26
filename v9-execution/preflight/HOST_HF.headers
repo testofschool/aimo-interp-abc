@@ -1,0 +1,20 @@
+HTTP/2 200 
+content-type: text/html; charset=utf-8
+content-length: 175003
+date: Mon, 26 Oct 2026 15:50:00 GMT
+etag: W/"2ab9b-MwNKusF+OKii6RzGGSvCJMCzE7Q"
+x-powered-by: huggingface-moon
+x-request-id: Root=1-6adf76a8-1a1d626d2d212b285bdbf448
+cross-origin-opener-policy: same-origin
+referrer-policy: strict-origin-when-cross-origin
+link: </.well-known/ai-catalog.json>; rel="ai-catalog"; type="application/ai-catalog+json"
+link: </.well-known/api-catalog>; rel="api-catalog"
+x-frame-options: DENY
+x-cache: Hit from cloudfront
+via: 1.1 d49fccba7dc2263d606b0c81c6f76f08.cloudfront.net (CloudFront)
+x-amz-cf-pop: ICN57-P4
+alt-svc: h3=":443"; ma=86400
+x-amz-cf-id: PpNYhADV1UKJyi5Zer43r6S8FKrrAzKDtanh2JLqTrrVRgE1GHGV5w==
+age: 18
+strict-transport-security: max-age=31536000
+
