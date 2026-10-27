@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+    "-I",
+    "-X",
+    "importtime",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/tools/report_numbers.py",
+    "--data-dir",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data",
+    "--check",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/research/claims.json",
+    "--out",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v8.3/two-edits-20261027/ai-exception/numeric/report_numbers.json"
+  ],
+  "cwd": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro",
+  "canonical_numeric_source_commit": "33328fed2a38255f8a85b9d6ae1d54672c44e3bf",
+  "scope": "Fresh numeric check under AI-section-exception decision; no changes to paper/numerical pipeline; this command takes data/claims, not PDF"
+}

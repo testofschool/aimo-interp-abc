@@ -1,0 +1,171 @@
+{
+ "result": "PASS",
+ "text_method": "pypdf",
+ "failed": [],
+ "rows": [
+  {
+   "check": "SHA256",
+   "ok": true,
+   "value": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa"
+  },
+  {
+   "check": "PAGES",
+   "ok": true,
+   "value": 10
+  },
+  {
+   "check": "BODY_LE_5",
+   "ok": true,
+   "value": 5
+  },
+  {
+   "check": "P5_ENDS_validation_grid",
+   "ok": true,
+   "value": ", rather than infer its adequacy from the validation grid. 5"
+  },
+  {
+   "check": "IDENTITY_0",
+   "ok": true,
+   "value": {
+    "hits_by_index": {},
+    "author_meta_is_anonymous": true
+   }
+  },
+  {
+   "check": "URL_ANON",
+   "ok": true,
+   "value": true
+  },
+  {
+   "check": "QUEUE_IDS_IN_E4",
+   "ok": true,
+   "value": [
+    true,
+    true
+   ]
+  },
+  {
+   "check": "E4_7_14_FAIRCOIN",
+   "ok": true,
+   "value": null
+  },
+  {
+   "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+   "ok": true,
+   "value": {
+    "AI_heading_count": 1,
+    "References_heading_count": 1,
+    "ordered_unique_boundaries": true,
+    "Codex_inside_allowed_section": 1,
+    "Codex_outside_allowed_section": 0
+   }
+  },
+  {
+   "check": "FORBIDDEN_0",
+   "ok": true,
+   "value": {}
+  },
+  {
+   "check": "CITE_2607_13899",
+   "ok": true,
+   "value": null
+  },
+  {
+   "check": "TYPE3_0",
+   "ok": true,
+   "value": 0
+  },
+  {
+   "check": "SENTENCE_DIFF_vs_v8.1",
+   "ok": true,
+   "value": {
+    "added_count": 52,
+    "removed_count": 48,
+    "added": [
+     "Can a small validation leaderboard rank robustness predictors?",
+     "Identifiability limits in AIMO-Interp Anonymous Author(s) Abstract On the frozen AIMO-Interp public validation board (14 Small and 21 Main items, inferred from the score grid), no score below perfect is separable from the independent fair-coin null after per-owner selection and across-owner Benjamini– Hochberg correction: 59 of 61 Small owners and 40 of 41 Main owners are not rejected, including an owner with a 12/14 Small result.",
+     "[11] We do not identify which owners were affected.",
+     "Our hash-pinned analysis adjusts each owner’s best visible score for its number of scored submissions under an independent-submission model.",
+     "A single pre-specified predictor needs at least 76 independent correctness items at true accuracy 0.65, or 169 at 0.6, to sustain power 0.8 at level 0.05 before selection correction.",
+     "We provide CPU reproduction rather than additional model runs.",
+     "Both reference baselines were scored once each through the organizers’ temporary evaluation queue during the Codabench outage [11]; these runs are not on the leaderboard.",
+     "The always-robust rule scored 7/14 (submission id bde5e370-4dba-4f19-8291-4a998bfecdcd, 2026- 10-24 19:01:28 KST) and the length-and-digit control scored 7/14 (submission id 0c736e59-8248-4dee-8e4f-2df037c552d7, 2026-10-24 19:03:37 KST); each equals the fair-coin expectation and is not separable from it under the declared null.",
+     "The organizer website says that Preprint.",
+     "the exact private evaluation criterion is unpublished.",
+     "[11] Our question is whether this frozen validation board can separate plausible improvements in accuracy from score variation and repeated selection under the declared model.",
+     "2 A conditional analysis of the visible leaderboard 2.1 Snapshot, units and score reconstruction We freeze the public private-validation leaderboard snapshot dated October 19, 2026, fetched on October 20 KST.",
+     "2 2.2 Null, selection adjustment and multiplicity For a single pre-specified submission, let K be its number of correct items among N.",
+     "The one-sided exact upper-tail probability for an observed count k is p(k, N) = Pr K∼Bin(N,1/2) (K≥k) = NX j=k \u0012N j \u0013 2−N .",
+     "The fair-coin null is a calibration model.",
+     "For an owner with m scored submissions and best single-submission tail probability p, we compute the probability of observing at least one equally extreme result under independent, identically calibrated submission scores: padj = 1−(1−p) m.",
+     "Track Inferred items Scored owners BH survivors Bonferroni survivors Perfect-score owners Small 14 61 2 2 2 Main 21 41 1 1 1 Only 2 Small owners and 1 Main owners survive either correction, and each has a perfect observed score.",
+     "With score-adaptive stopping, the observed-count 3 result is descriptive unless p-value validity holds conditional on the observed family and counts.",
+     "On 16 October, the organizers had announced automatic re-evaluation of top submissions under a per-problem protocol.",
+     "Under an alternative accuracy a with independent items, power is the probability of reaching that count: c(N) = min{k:p(k, N)≤α}, π(N, a) = Pr K∼Bin(N,a) {K≥c(N)}.",
+     "When every attainable upper-tail probability exceeds the level constraint, power is zero.",
+     "Grid Rejection count Actual null rejection probability Power at accuracy 0.6 Power at accuracy 0.65 Small, N = 14 11 0.0287 0.12 0.22 Main, N = 21 15 0.0392 0.2 0.36 At true accuracy 0.6, the single-submission test has power 0.12 on the Small grid and 0.2 on Main.",
+     "4 Table 3: First crossing and sustained target power under independent-item planning.",
+     "A nearby larger sample should not be assumed adequate from the first crossing alone.",
+     "5 Limitations and sensitivity directions The strongest limitation is calibration.",
+     "Both reference baselines were scored once each through the organizers’ temporary evaluation queue during the Codabench outage [11]; these runs are not on the leaderboard.",
+     "The always-robust rule scored 7/14 (submission id bde5e370-4dba-4f19-8291- 4a998bfecdcd, 2026-10-24 19:01:28 KST) and the length-and-digit control scored 7/14 (submission id 0c736e59-8248-4dee-8e4f-2df037c552d7, 2026-10-24 19:03:37 KST); each equals the fair-coin expectation and is not separable from it under the declared null.",
+     "The report has no final-test outcomes.",
+     "Public-training concordance, sample metadata associations and reported participant experiences provide context for evaluation cautions.",
+     "AI Use Statement We used AI assistance forIdeation(screening hypotheses and research directions, literature and prior-report search, and summarizing sources),Coding(writing and running CPU reproduction and analysis scripts, gates and fetchers),Analysis(deriving and cross-checking reported statistics and independently recomputing the leaderboard analysis), andWriting(drafting and editing the report text and structure).",
+     "6 References [1] AIMO organizers.",
+     "[2] AIMO organizers.train-main-v2dataset card, immutable revision fa8af758c6519fc97a9d0bd9017feb6f12232b52.",
+     "Hashed JSON pages and parser provenance accompany the reproduction archive: https://anonymous.4open.science/r/aimo-identifiability.",
+     "[10] Michal Štefánik, Philipp Mondorf, Andreas Waldis, Qianying Liu, Chuan Yang, Michal Spiegel, Josef Kuchar, Marek Kadlˇcík, Adam Vawda-Oomerjee, Chaoran Liu, Simon Frieder, Barbara Plank, Fazl Barez and Pontus Stenetorp.",
+     "The organizers announced the temporary evaluation queue on 24 October (AIMO-Interp Discord #announcements); the recorded queue responses accompany the reproduction archive.",
+     "7 A Supporting label audit and problem-only controls A.1 Training agreement does not identify model contrasts The pinned training table has 94 rows over 36 problems, with 80 labelled rows and 14 rows in an unlabelled gap.",
+     "The dataset card states the labelled-row rule verbatim: is_robust = trueiffmax_drop <= 0.10 is_robust = falseiffmax_drop >= 0.25 This public rule does not specify the private-label procedure.",
+     "[5] The two frozen bundles are reference baselines (a constant rule and a surface-feature control).",
+     "Both reference baselines were scored once each through the organizers’ temporary evaluation queue during the Codabench outage [11]; these runs are not on the leaderboard.",
+     "The always-robust rule scored 7/14 (submission id bde5e370-4dba-4f19-8291-4a998bfecdcd, 2026-10-24 19:01:28 KST) and the length-and-digit control scored 7/14 (submission id 0c736e59-8248-4dee-8e4f- 2df037c552d7, 2026-10-24 19:03:37 KST); each equals the fair-coin expectation and is not separable from it under the declared null."
+    ],
+    "removed": [
+     " Can a small validation leaderboard rank robustness predictors?",
+     "Identifiability limits in AIMO-Interp Jung Min Kang Independent Abstract On the frozen AIMO-Interp public validation board (14 Small and 21 Main items, inferred from the score grid), no score below perfect is separable from the in- dependent fair-coin null after per-owner selection and across-owner Benjamini– Hochberg correction: 59 of 61 Small owners and 40 of 41 Main owners are not rejected, including an owner with a 12/14 Small result.",
+     "We do not identify which owners were affected.",
+     "[11] Our hash-pinned analysis adjusts each owner’s best visible score for its number of scored submissions under an independent-submission model.",
+     "A sin- gle pre-specified predictor needs at least 76 independent correctness items at true accuracy 0.65, or 169 at 0.6, to sustain power 0.8 at level 0.05 before selection correction.",
+     "We provide CPU re- production and frozen reference baselines whose private-validation results remain unmeasured.",
+     "The organizer website says that the exact private evaluation criterion is unpublished.",
+     "[11] Our question is whether this frozen validation board can separate plausible improvements in accuracy from score variation and repeated selection under the Preprint.",
+     "2 A conditional analysis of the visible leaderboard 2.1 Snapshot, units and score reconstruction We freeze the public private-validation leaderboard snapshot dated October 19, 2026, fetched on October 20 in Korea.",
+     "2.2 Null, selection adjustment and multiplicity For a single pre-specified submission, let K be its number of correct items among N.",
+     "The one-sided exact upper-tail probability for an observed count k is N \u0012 \u0013 X N p(k, N ) = Pr (K ≥ k) = 2−N .",
+     "K∼Bin(N,1/2) j j=k 2 The fair-coin null is a calibration model.",
+     "For an owner with m scored submissions and best single-submission tail probability p, we compute the probability of observing at least one equally extreme result under independent, identically calibrated submission scores: padj = 1 − (1 − p)m .",
+     "Track Inferred items Scored owners BH survivors Bonferroni Perfect-score survivors owners Small 14 61 2 2 2 Main 21 41 1 1 1 Only 2 Small owners and 1 Main owners survive either correction, and each has a perfect observed score.",
+     "With score-adaptive stopping, the observed-count result is descriptive unless p-value validity holds conditional on the observed family and counts.",
+     "On 16 October, the organizers had announced automatic re-evaluation of top submissions 3 under a per-problem protocol.",
+     "Under an alternative accuracy a with independent items, power is the probability of reaching that count: c(N ) = min{k : p(k, N ) ≤ α}, π(N, a) = Pr {K ≥ c(N )}.",
+     "K∼Bin(N,a) When every attainable upper-tail probability exceeds the level constraint, power is zero.",
+     "Grid Rejection count Actual null Power at Power at rejection accuracy 0.6 accuracy 0.65 probability Small, N = 14 11 0.0287 0.12 0.22 Main, N = 21 15 0.0392 0.2 0.36 At true accuracy 0.6, the single-submission test has power 0.12 on the Small grid and 0.2 on Main.",
+     "Table 3: First crossing and sustained target power under independent-item planning.",
+     "A 4 nearby larger sample should not be assumed adequate from the first crossing alone.",
+     "4 Supporting label audit and problem-only controls 4.1 Training agreement does not identify model contrasts The pinned training table has 94 rows over 36 problems, with 80 labelled rows and 14 rows in an unlabelled gap.",
+     "The dataset card states the labelled-row rule verbatim: is_robust = true iff max_drop <= 0.10 is_robust = false iff max_drop >= 0.25 This public rule does not specify the private-label procedure.",
+     "[5] The two frozen bundles are reference baselines (a constant rule and a surface-feature control), planned for one submission each when the service and owner session permit.",
+     "5 We retain two frozen Small bundles: a length-and-digit control and an always-robust rule.",
+     "Their own private-validation results are UNMEASURED because we have no linked owner receipt recording the bundle, submission identifier, status, accuracy and time.",
+     "The anticipated constant/control results are receipt expectations motivated by public evidence, not pre-registered predictions of unknown labels.",
+     "Even if both receipts match those expectations, they would show consistency for those submissions rather than prove exact per-problem balance.",
+     "Final-test performance of these bundles is also UNMEASURED.",
+     "Private-validation receipts are pending.",
+     "4.2 Descriptive drop variance and label concordance For continuous maximum drop, we compute one minus within-problem squared error divided by total squared error, using each observed problem mean to estimate its residuals.",
+     "Public panel Rows or pairs Problems Descriptive R-squared Train, repeated 76 18 0.7822 configurations Train, multi-checkpoint 70 15 0.7369 problems Small, distinct 39 14 0.7811 checkpoints Public sample-full 80 10 0.1813 configurations The repeated-configuration training cohort includes 3 problems represented only by effort variants of the same larger checkpoint.",
+     "Table 5: Observed label agreement; the Bernoulli reference count is not a significance test.",
+     "Label agreement panel Concordant / repeated groups Independent-Bernoulli reference count Train, original labelled 15 / 16 5.94 configurations Train, labelled Small checkpoints 11 / 11 4.89 Train, no-gap sensitivity, worst 10 / 15 3.59 effort Sample-full, public-rule proxy 1 / 10 0.25 labels A group is concordant when all included binary labels agree.",
+     "6 4.3 A weak control with appropriately wide uncertainty The control uses log-one-plus character length and digit count of the original problem.",
+     "Public Small Plain accuracy Balanced accuracy Correct rows out-of-fold rule Length and digit count 0.7674 0.6855 33 / 43 Always robust 0.7209 0.5 31 / 43 Holding out whole problems prevents the same problem string from entering both sides of a fold, including effort variants.",
+     "[3, 4] 5 Limitations and sensitivity directions The strongest limitation is calibration.",
+     "Private-validation receipts for our frozen reference baselines (a constant rule and a surface-feature control) remain pending; the report has no final-test outcomes.",
+     "Public-training concordance, sample metadata associations and reported participant ex- 7 periences provide context for evaluation cautions while the owner measurements remain unavailable.",
+     "6 Reproduction and assistance The release supplies a hash-pinned CPU pipeline rather than additional model runs, with frozen reference baselines (a constant rule and a surface-feature control)."
+    ]
+   }
+  }
+ ]
+}

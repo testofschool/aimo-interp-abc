@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-27T01:55:02.507485+00:00",
+  "status": "PASS",
+  "scope": "Verbatim AI-use disclosure text check from actual installed anonymous PDF, cross-checked against current DRAFT and both TeX sources",
+  "pdf": "report/aimo-interp-report-v8.3-anonymous.pdf",
+  "pdf_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+  "pdf_page": 6,
+  "extraction_command": [
+    "/opt/homebrew/bin/pdftotext",
+    "-f",
+    "6",
+    "-l",
+    "6",
+    "-layout",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8.3-anonymous.pdf",
+    "-"
+  ],
+  "extraction_method": "pdftotext -layout; only AI Use Statement paragraph retained; line wraps unfolded into single paragraph; page footer6 removed",
+  "verbatim_full_paragraph": "We used AI assistance for Ideation (screening hypotheses and research directions, literature and prior-report search, and summarizing sources), Coding (writing and running CPU reproduction and analysis scripts, gates and fetchers), Analysis (deriving and cross-checking reported statistics and independently recomputing the leaderboard analysis), and Writing (drafting and editing the report text and structure). The tools were Anthropic Claude and OpenAI Codex, including independent AI agents used for cross-checks. AI was not used to create or alter the source leaderboard or robustness labels, to fabricate measurements, or to write peer reviews. AI-assisted code computed the reported statistics from the released source data; those derived computations are distinguished from source observations. The author has reviewed all AI-assisted work and takes full responsibility for the final content, including AI-assisted text, claims, code, reported statistics and other artifacts.",
+  "Claude_present": true,
+  "OpenAI_Codex_present": true,
+  "addition_required": false,
+  "paper_change_required": false,
+  "disclosure_tools_sentence": "The tools were Anthropic Claude and OpenAI Codex, including independent AI agents used for cross-checks.",
+  "DRAFT_plaintext_matches_PDF": true,
+  "TeX_plaintext_matches_PDF": {
+    "report/main-anonymous.tex": true,
+    "report/main.tex": true
+  },
+  "source_sha256": {
+    "report/REPORT_DRAFT.md": "5a626e6f62dca8644d1d9dd868b50e3b5f0ba8db1a2f4ae7e7e304cb59b77fae",
+    "report/main-anonymous.tex": "d56fcfe42fc26d7dca1b31f2026821b36d05b580efb4a255bc83b6be2f69309e",
+    "report/main.tex": "045e6b9f2d01bd4f0f0580cc62b39eaa265760c429b9e58bffb4f6fa0fe39a5d"
+  },
+  "AI_USE_STATEMENT_sha256": "1ba42d76100dfbb1e0cbc5ae9983262e59c77bffac4702bf5253521999cb698f",
+  "raw_paragraph_extraction_sha256": "09ad1a1b518f71644dc1519498ec984bbb1faa55148127bd161c904f3adbe623",
+  "footer6_excluded": true,
+  "paper_edits": 0,
+  "PDF_edits": 0,
+  "gate_edits": 0,
+  "auth_or_H1_interactions": 0,
+  "git_commits": 0
+}

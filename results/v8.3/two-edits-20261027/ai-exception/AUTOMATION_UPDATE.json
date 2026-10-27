@@ -1,0 +1,14 @@
+{
+  "observed_at_utc": "2026-10-27T01:59:12.375660+00:00",
+  "automation_id": "aimo-codabench",
+  "mode": "update",
+  "tool_result": "Updated automation in the app",
+  "name": "AIMO Codabench 복구와 제출 양식 확인",
+  "status": "ACTIVE",
+  "schedule_preserved": true,
+  "target_thread_id": "01a16a84-5272-77c0-9cda-bd8e14596e28",
+  "current_prompt_sha256": "21e506221d2f472c9645f63d084579e6e0be9733853ed5ee053477337777c5b3",
+  "latest_amendment_present": true,
+  "H2_still_pending": true,
+  "new_automation_created": false
+}

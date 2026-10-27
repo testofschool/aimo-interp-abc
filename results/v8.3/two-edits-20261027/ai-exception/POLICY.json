@@ -1,0 +1,28 @@
+{
+  "recorded_at_utc": "2026-10-27T01:57:56.605710+00:00",
+  "status": "APPLIED_BY_DIRECT_USER_AUTHORIZATION",
+  "direct_user_quote": "1 — AI 고지 예외 보완판 적용. 대조 2건(본문 Codex → FAIL, AI Use Statement 내 Codex → PASS) 결과를 같이 보고. 그리고 AI Use Statement 전문을 그대로 인용해줘. Claude(Anthropic)가 빠져 있으면 \"Claude (Anthropic) for analysis, planning and audit\" 취지로 도구 목록에 추가하고 게이트 v3·숫자·보완 감사를 다시 돌린 뒤 H2 요청.",
+  "scope": "Only the Codex token in one unique ordered line-heading AI Use Statement to References region is exempt. Missing, duplicate or reversed headings fail closed. Every other forbidden token stays global; UNMEASURED stays body-only.",
+  "original_script": "v10-execution/audit_v83.py",
+  "original_375_sha256": "375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c",
+  "original_result": "FAIL_FORBIDDEN_0_CODEX_1_PRESERVED",
+  "original_receipt": "results/v8.3/two-edits-20261027/revised-audit/EXECUTION.json",
+  "supplemental_script": "v10-execution/audit_v83_ai_exception.py",
+  "supplemental_sha256": "a1c05d7722dddf4b345ef82f8fe167cac52d6ff0b64c79c7a0e3d07527527645",
+  "result": "PASS",
+  "control_result": "PASS13/13",
+  "requested_controls": {
+    "main_body_Codex": "FAIL_AS_EXPECTED",
+    "AI_Use_Statement_Codex": "PASS_AS_EXPECTED"
+  },
+  "control_type": "synthetic in-memory extracted-text observations; PDF unchanged",
+  "Claude_already_present": true,
+  "paper_change_required": false,
+  "PDF_rebuilt_this_step": false,
+  "PDF_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+  "H2": "PENDING_DIRECT_PDF_CONFIRMATION",
+  "pushes": 0,
+  "OpenReview_actions": 0,
+  "H1": "UNCHANGED_PASSWORD_WAIT",
+  "independent_review": "PASS19/19"
+}

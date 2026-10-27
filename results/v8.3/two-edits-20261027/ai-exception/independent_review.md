@@ -1,0 +1,15 @@
+# Independent review: AI disclosure exception
+
+**PASS for the authorized policy-only exception.** Supplemental SHA `a1c05d7722dddf4b345ef82f8fe167cac52d6ff0b64c79c7a0e3d07527527645`; current PDF SHA `8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa`. The exact375 checker and its FAIL history are preserved.
+
+Independent full-main checks met **19/19 expectations**: current-artifact snapshot PASS; required main-body Codex FAIL; required AI-disclosure Codex PASS; bibliography Codex FAIL; missing/duplicate literal AI or References headings FAIL; reversed boundaries FAIL; main-body UNMEASURED FAIL; and all nine other forbidden terms placed inside the AI section FAIL.
+
+The code validates headings before normalization (lines45–60), adds a separate invalid-boundary failure (104–105), changes the search interval for Codex alone (106–108), and preserves BODY_ONLY (109). The original FORBIDDEN/BODY_ONLY/identity/header/URL/UUID definitions are AST-identical. Heading matching is literal and case-sensitive. This review approves the implemented interval rule for the verified artifact; it does not claim a general PDF heading-hierarchy parser or repair unrelated inherited checker limitations.
+
+The eighteen mutated-text fixtures are **in-memory observations**, not authored PDFs or submission evidence. Real unchanged PDF hash/fonts/metadata are reused by the full main function. The separate actual CLI PASS is recorded in EXECUTION.json; these controls establish policy behavior rather than scientific or rendering correctness.
+
+The complete page6 AI statement was independently extracted, with line breaks unfolded and footer6 removed. It equals the recorded TXT and the Markdown paragraph after removing only bold markup on its four category names:
+
+> We used AI assistance for Ideation (screening hypotheses and research directions, literature and prior-report search, and summarizing sources), Coding (writing and running CPU reproduction and analysis scripts, gates and fetchers), Analysis (deriving and cross-checking reported statistics and independently recomputing the leaderboard analysis), and Writing (drafting and editing the report text and structure). The tools were Anthropic Claude and OpenAI Codex, including independent AI agents used for cross-checks. AI was not used to create or alter the source leaderboard or robustness labels, to fabricate measurements, or to write peer reviews. AI-assisted code computed the reported statistics from the released source data; those derived computations are distinguished from source observations. The author has reviewed all AI-assisted work and takes full responsibility for the final content, including AI-assisted text, claims, code, reported statistics and other artifacts.
+
+Anthropic Claude and OpenAI Codex are already named, so the conditional addition is unnecessary and no paper edit was made. **H2 remains PENDING.** H1 wait was not inspected, altered or resumed. No authentication, POST, push or commit occurred.

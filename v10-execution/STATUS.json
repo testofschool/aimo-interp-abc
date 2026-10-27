@@ -1,6 +1,6 @@
 {
-  "recorded_at_utc": "2026-10-27T00:59:40.234415+00:00",
-  "status": "WAITING_AUDIT_POLICY_DECISION_AND_H1_AUTH",
+  "recorded_at_utc": "2026-10-27T01:57:56.605710+00:00",
+  "status": "WAITING_H2_AND_H1_AUTH",
   "branch": "v10",
   "authority": {
     "adoption": "v10을 새 실행 사양으로 적용",
@@ -11,7 +11,8 @@
     "H2_amendment": "Direct user reply HANDOFF_v10.2: mechanical checks then typed PDF confirmation; not approval by handoff.",
     "v10_3": "Direct user: v10.3 적용·보완검사 병행",
     "two_edits": "Directuserexact2prosechangesonly; revised375auditPASSrequired before newH2; pushonlyspecifiedrepository",
-    "revised_audit_patch": "Directhumanprovidedexactpatch; applyandhashthenrun, retainactualhash/diffonmismatch"
+    "revised_audit_patch": "Directhumanprovidedexactpatch; applyandhashthenrun, retainactualhash/diffonmismatch",
+    "AI_disclosure_exception": "Direct user: AI 고지 예외 보완판 적용; two controls and full disclosure quote; conditional Claude addition only if missing."
   },
   "prereg_commit": "773b39e1a2ca0f1c4001e0ae1459e7d567e56c80",
   "prereg_time_KST": "2026-10-27T01:03:42+09:00",
@@ -36,21 +37,31 @@
     "numeric_current": "PASS164/164_NEW_EXECUTION",
     "new_build": true,
     "numeric_recovery": "v10-execution/NUMERIC_RECOVERY.json",
-    "H2_checks": "375_SCRIPT_HASH_MATCH_BUT_FAIL_CODEX_1",
+    "H2_checks": "AUTHORIZED_SCOPED_AUDIT_PASS_WITH_PRIOR_DIFF_DISCLOSURES",
     "H2_literal_exceptions": [
       "a removed byv10.3 asmtimefalsealarm",
       "e PASS abstract+unnumberedLimitations perE11",
       "f four disclosed lexical deltas remain explicit"
     ],
     "current_build_receipt": "results/v8.3/two-edits-20261027/BUILD.json",
-    "previous_PDF": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51"
+    "previous_PDF": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+    "authorized_scoped_audit": {
+      "path": "v10-execution/audit_v83_ai_exception.py",
+      "sha256": "a1c05d7722dddf4b345ef82f8fe167cac52d6ff0b64c79c7a0e3d07527527645",
+      "result": "PASS",
+      "exit": 0,
+      "policy_receipt": "results/v8.3/two-edits-20261027/ai-exception/POLICY.json",
+      "execution_receipt": "results/v8.3/two-edits-20261027/ai-exception/EXECUTION.json",
+      "controls": "PASS13/13",
+      "original_375_result": "FAIL_PRESERVED"
+    }
   },
   "H1": "C_LOCAL_GETPASS_PROMPT_ACTIVE_SESSION86398_WAITING_USER_INPUT",
-  "H2": "PENDING_REQUIRED_AUDIT_FAIL_CODEX_IN_AI_USE_STATEMENT",
+  "H2": "PENDING_DIRECT_v8.3_PDF_CONFIRMATION",
   "H3": "NOT_CREATED_PREFERRED_AFTER_PUSH",
   "H4": "LOCAL_AUTH_NOT_ATTEMPTED",
   "T_SCORE": "UNMEASURED_NO_OFFICIAL_IDS",
-  "T_PUSH": "NOT_RUN_REQUIRED_AUDIT_NOT_PASS_AND_H2_PENDING",
+  "T_PUSH": "NOT_RUN_H2_PENDING",
   "T_POST": "NOT_RUN_ONE_NOTE_ONLY_PRIOR_NOTES_UNKNOWN",
   "T_V9": "PREREG_AND_HELPER_READY_NO_PDF_UNTIL_ACTUAL_SCORE",
   "T_V9_POST": "NOT_RUN",
@@ -67,7 +78,7 @@
     "Literal handoff positive gate fixture omitted probe and failed WHITEBOX_RUN; corrected synthetic fixture PASS7/7, negative FAIL2 as intended. Gate bytes unchanged.",
     "Canonical M5 executor is unavailable here; exact verified Studio canon reused without claiming M5 work."
   ],
-  "next_user_actions": "Decide whetherCodex ban may exempt validated AI Use Statement section; paperstaysunchanged. H1passwordwait unchanged.",
+  "next_user_actions": "Review current anonymous PDF8c78…b98aa and type v8.3 PDF 확인. Existing H1 local password wait unchanged.",
   "monitoring": "v10-execution/AUTOMATIONS.json",
   "audit_v10_3": {
     "status": "BUNDLE_VERIFIED_WAITING_H_ATTACH_OR_H2",
@@ -86,5 +97,10 @@
     "external_transmissions": 0,
     "independent_verification": "PASS20/20",
     "artifact_role": "HISTORICAL_BEFORE_TWO_APPROVED_EDITS"
+  },
+  "AI_exception_independent_review": {
+    "result": "PASS",
+    "expectations": "19/19",
+    "receipt": "results/v8.3/two-edits-20261027/ai-exception/independent_review.json"
   }
 }

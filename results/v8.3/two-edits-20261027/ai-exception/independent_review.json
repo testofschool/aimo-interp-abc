@@ -1,0 +1,210 @@
+{
+  "reviewed_at_utc": "2026-10-27T01:59:37.402475+00:00",
+  "result": "PASS_POLICY_EXCEPTION_REVIEW",
+  "script_sha256": "a1c05d7722dddf4b345ef82f8fe167cac52d6ff0b64c79c7a0e3d07527527645",
+  "pinned375_sha256": "375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c",
+  "pinned375_FAIL_preserved": true,
+  "PDF_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+  "PDF_unchanged": true,
+  "static_globals_unchanged": {
+    "FORBIDDEN": true,
+    "BODY_ONLY": true,
+    "ID_ASCII": true,
+    "HEAD": true,
+    "URL": true,
+    "QUEUE_IDS": true
+  },
+  "scope": "One exact literal case-sensitive whole-line AI Use Statement heading and one later References heading; only Codex in their interval is exempt. Invalid boundaries fail a separate check; other forbidden terms remain global. This is an interval parser for the verified artifact, not a general PDF heading-hierarchy verifier.",
+  "minimal_diff": "Documentation, codex_ai_scope helper, explicit boundary check, and Codex-only alternate search text; original forbidden lists and other checks unchanged.",
+  "independent_controls": {
+    "passed": 19,
+    "total": 19,
+    "cases": [
+      {
+        "name": "actual_current_PDF_snapshot",
+        "expected_exit": 0,
+        "actual_exit": 0,
+        "failed": [],
+        "expectation_met": true
+      },
+      {
+        "name": "REQUIRED_MAIN_BODY_CODEX_FAIL",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "REQUIRED_AI_DISCLOSURE_CODEX_PASS",
+        "expected_exit": 0,
+        "actual_exit": 0,
+        "failed": [],
+        "expectation_met": true
+      },
+      {
+        "name": "bibliography_Codex_FAIL",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "missing_AI_FAIL",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "CODEX_AI_SCOPE_UNAMBIGUOUS",
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "duplicate_AI_FAIL",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "CODEX_AI_SCOPE_UNAMBIGUOUS",
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "missing_References_FAIL",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "CODEX_AI_SCOPE_UNAMBIGUOUS",
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "duplicate_References_FAIL",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "CODEX_AI_SCOPE_UNAMBIGUOUS",
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "References_before_AI_FAIL",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "CODEX_AI_SCOPE_UNAMBIGUOUS",
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "body_UNMEASURED_FAIL",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "AI_other_forbidden_strongest non-perfect owner",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "AI_other_forbidden_does not propose a new robustness predictor",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "AI_other_forbidden_Working draft",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "AI_other_forbidden_Not submitted",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "AI_other_forbidden_pending owner",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "AI_other_forbidden_preceding ranks",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "AI_other_forbidden_handoff",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "AI_other_forbidden_Claude Code",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      },
+      {
+        "name": "AI_other_forbidden_session log",
+        "expected_exit": 1,
+        "actual_exit": 1,
+        "failed": [
+          "FORBIDDEN_0"
+        ],
+        "expectation_met": true
+      }
+    ],
+    "limitation": "18 fixtures mutate extracted text in memory and inject pages_text while reusing the real unchanged PDF for hash/fonts/metadata. They verify checker policy, not a newly authored PDF, rendering or scientific correctness. The actual unmodified CLI result is separately recorded in EXECUTION.json."
+  },
+  "full_AI_Use_Statement": "We used AI assistance for Ideation (screening hypotheses and research directions, literature and prior-report search, and summarizing sources), Coding (writing and running CPU reproduction and analysis scripts, gates and fetchers), Analysis (deriving and cross-checking reported statistics and independently recomputing the leaderboard analysis), and Writing (drafting and editing the report text and structure). The tools were Anthropic Claude and OpenAI Codex, including independent AI agents used for cross-checks. AI was not used to create or alter the source leaderboard or robustness labels, to fabricate measurements, or to write peer reviews. AI-assisted code computed the reported statistics from the released source data; those derived computations are distinguished from source observations. The author has reviewed all AI-assisted work and takes full responsibility for the final content, including AI-assisted text, claims, code, reported statistics and other artifacts.",
+  "quote_matches_PDF_and_root_TXT": true,
+  "Claude_present": true,
+  "OpenAI_Codex_present": true,
+  "conditional_paper_addition_required": false,
+  "paper_edits": 0,
+  "checker_edits_by_reviewer": 0,
+  "inherited_limitations": "Original expected-hash/metadata/font/E4/sentence-diff coverage limits are unchanged; independent full-hash/fidelity records remain separate.",
+  "H2": "PENDING_NEW_PDF_USER_CONFIRMATION",
+  "H1": "Wait not inspected or changed by reviewer",
+  "auth_POST_push_commit": 0,
+  "quote_matches_MD_after_removing_bold_markup_on_four_category_names": true
+}

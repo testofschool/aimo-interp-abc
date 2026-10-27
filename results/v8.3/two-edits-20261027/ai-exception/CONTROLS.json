@@ -1,0 +1,372 @@
+{
+  "result": "PASS",
+  "control_type": "synthetic in-memory extracted-text observations; not edited PDFs or submission evidence",
+  "PDF_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+  "PDF_unchanged": true,
+  "supplemental_script_sha256": "a1c05d7722dddf4b345ef82f8fe167cac52d6ff0b64c79c7a0e3d07527527645",
+  "passed": 13,
+  "total": 13,
+  "cases": [
+    {
+      "name": "actual_frozen_PDF",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "failed": [],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": true,
+        "value": {
+          "AI_heading_count": 1,
+          "References_heading_count": 1,
+          "ordered_unique_boundaries": true,
+          "Codex_inside_allowed_section": 1,
+          "Codex_outside_allowed_section": 0
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": true,
+        "value": {}
+      }
+    },
+    {
+      "name": "REQUESTED_main_body_Codex_FAIL",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "FORBIDDEN_0"
+      ],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": true,
+        "value": {
+          "AI_heading_count": 1,
+          "References_heading_count": 1,
+          "ordered_unique_boundaries": true,
+          "Codex_inside_allowed_section": 1,
+          "Codex_outside_allowed_section": 1
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": false,
+        "value": {
+          "Codex": 1
+        }
+      }
+    },
+    {
+      "name": "REQUESTED_AI_disclosure_Codex_PASS",
+      "expected_exit": 0,
+      "actual_exit": 0,
+      "result": "PASS",
+      "failed": [],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": true,
+        "value": {
+          "AI_heading_count": 1,
+          "References_heading_count": 1,
+          "ordered_unique_boundaries": true,
+          "Codex_inside_allowed_section": 2,
+          "Codex_outside_allowed_section": 0
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": true,
+        "value": {}
+      }
+    },
+    {
+      "name": "bibliography_Codex_FAIL",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "FORBIDDEN_0"
+      ],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": true,
+        "value": {
+          "AI_heading_count": 1,
+          "References_heading_count": 1,
+          "ordered_unique_boundaries": true,
+          "Codex_inside_allowed_section": 1,
+          "Codex_outside_allowed_section": 1
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": false,
+        "value": {
+          "Codex": 1
+        }
+      }
+    },
+    {
+      "name": "appendix_Codex_FAIL",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "FORBIDDEN_0"
+      ],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": true,
+        "value": {
+          "AI_heading_count": 1,
+          "References_heading_count": 1,
+          "ordered_unique_boundaries": true,
+          "Codex_inside_allowed_section": 1,
+          "Codex_outside_allowed_section": 1
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": false,
+        "value": {
+          "Codex": 1
+        }
+      }
+    },
+    {
+      "name": "AI_other_forbidden_handoff_FAIL",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "FORBIDDEN_0"
+      ],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": true,
+        "value": {
+          "AI_heading_count": 1,
+          "References_heading_count": 1,
+          "ordered_unique_boundaries": true,
+          "Codex_inside_allowed_section": 1,
+          "Codex_outside_allowed_section": 0
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": false,
+        "value": {
+          "handoff": 1
+        }
+      }
+    },
+    {
+      "name": "main_body_lowercase_codex_FAIL",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "FORBIDDEN_0"
+      ],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": true,
+        "value": {
+          "AI_heading_count": 1,
+          "References_heading_count": 1,
+          "ordered_unique_boundaries": true,
+          "Codex_inside_allowed_section": 1,
+          "Codex_outside_allowed_section": 1
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": false,
+        "value": {
+          "Codex": 1
+        }
+      }
+    },
+    {
+      "name": "main_body_UNMEASURED_FAIL",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "FORBIDDEN_0"
+      ],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": true,
+        "value": {
+          "AI_heading_count": 1,
+          "References_heading_count": 1,
+          "ordered_unique_boundaries": true,
+          "Codex_inside_allowed_section": 1,
+          "Codex_outside_allowed_section": 0
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": false,
+        "value": {
+          "UNMEASURED (body)": 1
+        }
+      }
+    },
+    {
+      "name": "missing_AI_heading_FAIL",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "FORBIDDEN_0"
+      ],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": false,
+        "value": {
+          "AI_heading_count": 0,
+          "References_heading_count": 1,
+          "ordered_unique_boundaries": false,
+          "Codex_inside_allowed_section": 0,
+          "Codex_outside_allowed_section": 1
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": false,
+        "value": {
+          "Codex": 1
+        }
+      }
+    },
+    {
+      "name": "duplicate_AI_heading_FAIL",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "FORBIDDEN_0"
+      ],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": false,
+        "value": {
+          "AI_heading_count": 2,
+          "References_heading_count": 1,
+          "ordered_unique_boundaries": false,
+          "Codex_inside_allowed_section": 0,
+          "Codex_outside_allowed_section": 1
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": false,
+        "value": {
+          "Codex": 1
+        }
+      }
+    },
+    {
+      "name": "missing_References_heading_FAIL",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "FORBIDDEN_0"
+      ],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": false,
+        "value": {
+          "AI_heading_count": 1,
+          "References_heading_count": 0,
+          "ordered_unique_boundaries": false,
+          "Codex_inside_allowed_section": 0,
+          "Codex_outside_allowed_section": 1
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": false,
+        "value": {
+          "Codex": 1
+        }
+      }
+    },
+    {
+      "name": "duplicate_References_heading_FAIL",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "FORBIDDEN_0"
+      ],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": false,
+        "value": {
+          "AI_heading_count": 1,
+          "References_heading_count": 2,
+          "ordered_unique_boundaries": false,
+          "Codex_inside_allowed_section": 0,
+          "Codex_outside_allowed_section": 1
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": false,
+        "value": {
+          "Codex": 1
+        }
+      }
+    },
+    {
+      "name": "References_before_AI_FAIL",
+      "expected_exit": 1,
+      "actual_exit": 1,
+      "result": "FAIL",
+      "failed": [
+        "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "FORBIDDEN_0"
+      ],
+      "expectation_met": true,
+      "scope": {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": false,
+        "value": {
+          "AI_heading_count": 1,
+          "References_heading_count": 1,
+          "ordered_unique_boundaries": false,
+          "Codex_inside_allowed_section": 0,
+          "Codex_outside_allowed_section": 1
+        }
+      },
+      "forbidden": {
+        "check": "FORBIDDEN_0",
+        "ok": false,
+        "value": {
+          "Codex": 1
+        }
+      }
+    }
+  ]
+}

@@ -5,6 +5,16 @@
   "starting_HEAD": "ef5ab08717a45b6fca04b95a0dbb5c2ef5d07a66",
   "must_report_live_HEAD_before_push": true,
   "H2": "PENDING",
-  "required_revised_audit": "MISSING_375a9823_582c",
-  "pushes_this_step": 0
+  "required_revised_audit": "ORIGINAL_375_FAIL_PRESERVED_AUTHORIZED_SCOPED_SUPPLEMENT_PASS",
+  "pushes_this_step": 0,
+  "supplemental_audit": {
+    "path": "v10-execution/audit_v83_ai_exception.py",
+    "sha256": "a1c05d7722dddf4b345ef82f8fe167cac52d6ff0b64c79c7a0e3d07527527645",
+    "result": "PASS",
+    "exit": 0,
+    "policy_receipt": "results/v8.3/two-edits-20261027/ai-exception/POLICY.json",
+    "execution_receipt": "results/v8.3/two-edits-20261027/ai-exception/EXECUTION.json",
+    "controls": "PASS13/13",
+    "original_375_result": "FAIL_PRESERVED"
+  }
 }

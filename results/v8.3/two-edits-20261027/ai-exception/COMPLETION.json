@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-27T02:00:27.162160+00:00",
+  "status": "COMPLETE_LOCAL_CHECKER_TASK_AWAITING_H2",
+  "PDF_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+  "supplemental_audit": "PASS",
+  "v3": "PASS19/19_normal",
+  "numeric": "PASS164/164_mismatches0",
+  "root_controls": "PASS13/13",
+  "independent_expectations": "PASS19/19",
+  "original375_script_and_FAIL_history": "UNCHANGED",
+  "paper_and_PDF_edits_this_step": 0,
+  "Claude_already_present": true,
+  "H2": "PENDING_DIRECT_PDF_CONFIRMATION",
+  "H1": "UNCHANGED_PASSWORD_WAIT",
+  "pushes": 0,
+  "OpenReview_actions": 0,
+  "hostname": "Jungs-Mac-Studio.local",
+  "repository": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work",
+  "starting_HEAD": "0d82c1c2605018e12e22ed57e067eadfcfad0cb9",
+  "note": "The next local checkpoint commit does not constitute an upload, push, H2 approval or external publication."
+}

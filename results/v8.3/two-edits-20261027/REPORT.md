@@ -1,16 +1,13 @@
-# v8.3 두 문구 수정 결과
+# v8.3 두 문구 수정 및 AI 고지 보완 감사 결과
 
-기준 PDF: 2edf06ab…82e51. 변경 내용은 사용자가 지정한 두 치환뿐입니다. 원고·서식의 다른 변경은 없습니다. 참고문헌7쪽과 부록8쪽의 문장 길이에 따른 자동 재배치만 발생했으며, 나머지8쪽은 픽셀도 동일합니다.
+AI 고지 예외 보완판을 직접 승인된 범위로 적용했습니다. 유일하고 순서가 맞는 AI Use Statement → References 구간의 Codex만 예외로 처리합니다. 제목 경계 누락·중복·역전, 본문·부록·참고문헌 Codex, 나머지 전역 금지어는 계속 차단합니다. 원본 375 스크립트와 기존 Codex:1 FAIL 영수증은 그대로 보존했습니다.
 
-- 익명본 SHA256: `8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa`
-- 기명본 SHA256: `9264c4d28af807b447c5a0a2accce9a5dc47f3f7d42b08bf1e7f3e74567bc27f`
-- 익명본 본문5쪽 / 전체10쪽 / Type3=0.
-- 승인된 v3 일반모드19/19 PASS, exit0. 게이트 파일은 변경하지 않았습니다.
-- report_numbers --check164/164 PASS, 불일치0, exit0,6.764초. 코드·claims·데이터 고정값은 그대로입니다.
-- source/full-text/format fidelity21/21 PASS. 익명·기명 각10쪽을 개별 시각 확인했습니다.
-- 요청한 수정판은 직접 제공된 patch로 만들었고 SHA375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c와 일치합니다. 실제 결과는 FAIL/exit1, FORBIDDEN_0 {Codex:1}이며 기존 AI Use Statement 한 건입니다.
+현재 익명 PDF SHA256: `8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa`. 본문 5쪽 / 전체 10쪽. Anthropic Claude와 OpenAI Codex가 이미 고지돼 있어 이 단계의 원고·PDF 수정 및 재빌드는 0건입니다. 이전에 승인된 정확한 두 문구 수정만 유지됩니다.
 
-수정판의 필수 PASS가 충족되지 않아 새 H2를 요청하지 않습니다. 원고는 추가 수정하지 않았으며 AI 고지에 대한 한정 예외 정책은 제안만 하고 미적용 상태입니다. 이전2edf PDF에 대한 H2 요청은 현재 수정 요청으로 대체됐습니다. H1 비밀번호 대기는 유지합니다. push·OpenReview 작업은 없습니다.
+새 보완판 SHA256: `a1c05d7722dddf4b345ef82f8fe167cac52d6ff0b64c79c7a0e3d07527527645`. 실제 PDF 감사 PASS; 요청 대조는 본문 Codex FAIL / AI Use Statement 내 Codex PASS. 전체 합성 텍스트 대조 13/13 기대값 충족(PDF 변경 없음). v3 일반모드 19/19 PASS, 숫자 재검증 164/164 PASS·불일치 0. 기존 동일 바이트 PDF의 fidelity 21/21 및 익명·기명 전쪽 시각검사 PASS는 계속 유효합니다.
 
-허용 push 기계: `Jungs-Mac-Studio.local`.
-허용 저장소: `/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work` 하나뿐입니다. 실제 push 직전에 hostname·절대경로·현재 HEAD를 다시 보고합니다.
+H2는 요청 준비 상태이며 승인되지 않았습니다. 현재 PDF를 직접 확인한 뒤 `v8.3 PDF 확인`을 입력해야 합니다. 기존 f의 네 가지 어휘 차이 공시는 H2_CHECKS에 유지했고, e의 옛 §5는 무번호 Limitations로 이동한 상태입니다. H3 미러 성공은 아직 확인되지 않았습니다. H1 비밀번호 대기는 유지하며 push·OpenReview 작업은 수행하지 않았습니다.
+
+push 직전에 실제 hostname·저장소 절대경로·HEAD를 다시 보고합니다. 허용 기계는 Jungs-Mac-Studio.local, 저장소는 `/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work` 하나입니다.
+
+기명본 SHA256: `9264c4d28af807b447c5a0a2accce9a5dc47f3f7d42b08bf1e7f3e74567bc27f`. 전 단계 원본·FAIL 영수증은 revised-audit/에 있습니다. 이번 보완판 영수증·대조·전문 인용은 ai-exception/에 있습니다.
