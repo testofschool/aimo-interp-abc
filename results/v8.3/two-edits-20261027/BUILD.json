@@ -1,6 +1,6 @@
 {
   "recorded_at_utc": "2026-10-27T00:48:24.213547+00:00",
-  "status": "REBUILT_TWO_EDITS_VERIFIED_EXCEPT_MISSING_REQUIRED_AUDIT",
+  "status": "REBUILT_TWO_EDITS_REQUIRED_AUDIT_FAILED_AI_DISCLOSURE_FALSE_POSITIVE",
   "hostname": "Jungs-Mac-Studio.local",
   "repository": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work",
   "starting_HEAD": "ef5ab08717a45b6fca04b95a0dbb5c2ef5d07a66",
@@ -37,18 +37,26 @@
     "fidelity": "PASS21/21_unreported0",
     "anonymous_visual": "PASS10/10",
     "named_visual": "PASS10/10",
-    "revised_audit_375a9823_582c": "MISSING_UNRUN"
+    "revised_audit_375a9823_582c": "FAIL_FORBIDDEN_0_CODEX_1"
   },
   "required_audit": {
     "expected_prefix": "375a9823",
     "expected_suffix": "582c",
-    "actual_path": null,
-    "full_sha256": null,
-    "exit": null,
-    "result": "MISSING",
-    "old_b2_audit_substituted": false
+    "actual_path": "v10-execution/audit_v83.py",
+    "full_sha256": "375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c",
+    "exit": 1,
+    "result": "FAIL",
+    "old_b2_audit_substituted": false,
+    "hash_match": true,
+    "failed": [
+      "FORBIDDEN_0"
+    ],
+    "forbidden": {
+      "Codex": 1
+    },
+    "reason": "Unchanged AI Use Statement names OpenAI Codex"
   },
-  "H2": "NOT_REQUESTED_YET_REQUIRED_REVISED_AUDIT_PENDING",
+  "H2": "PENDING_AUDIT_POLICY_DECISION",
   "old_H2_requests": "SUPERSEDED_BY_CURRENT_TWO_EDITS_REQUEST",
   "H1": "UNCHANGED_EXISTING_PASSWORD_WAIT_SESSION86398",
   "pushes": 0,

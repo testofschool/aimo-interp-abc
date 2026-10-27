@@ -1,3 +1,9 @@
+# Current checkpoint: supplied patch hash matches, audit FAIL
+
+The direct user patch was applied to theoldb2 script copy atv10-execution/audit_v83.py. Patch exit0 and native shasum exactly375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c. Actual auditFAIL/exit1 onlyFORBIDDEN_0 {Codex:1}, traced to the unchanged p6 AI Use Statement naming OpenAI Codex. Handoff0, bodyUNMEASURED0; allother auditchecksPASS. Paper and375 code stayunchanged. A narrow validated-AI-section exception is proposed, not applied; H2 waits for a policy decision. H1passwordwaitunchanged, no push/OpenReview. Primary logs and independent review: results/v8.3/two-edits-20261027/revised-audit/.
+
+The missing-file descriptions below are historical observations resolved by the directly supplied patch, not currentstatus.
+
 # Current checkpoint: exact two edits before new H2
 
 The two requested substitutions are rebuilt; current anonymous SHA8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa, main5/total10. Immutablev3normalPASS19/19, freshnumericPASS164/164, fidelityPASS21/21, anonymous+named full-page visualPASS10/10 each. Requested revised audit SHA375a9823…582c isMISSING/UNRUN. New H2 is not requested before this required audit passes. H1-auth unchanged; no push orOpenReview action.

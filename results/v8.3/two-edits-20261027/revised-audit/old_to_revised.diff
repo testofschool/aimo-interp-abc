@@ -1,0 +1,24 @@
+--- old_b2bd/audit_v83.py
++++ revised/audit_v83.py
+@@ -10,7 +10,9 @@
+ 
+ ID_ASCII = ["testofschool", "gangjeongmin", "Felix", "felix", "Kang", "Korea", "Jung Min"]
+ FORBIDDEN = ["strongest non-perfect owner", "does not propose a new robustness predictor",
+-             "Working draft", "Not submitted", "pending owner", "UNMEASURED", "preceding ranks"]
++             "Working draft", "Not submitted", "pending owner", "preceding ranks",
++             "handoff", "Codex", "Claude Code", "session log"]
++BODY_ONLY = ["UNMEASURED"]  # gate v3 ID_FIELD scope: main body only
+ URL = "https://anonymous.4open.science/r/aimo-identifiability"
+ QUEUE_IDS = ["bde5e370-4dba-4f19-8291-4a998bfecdcd", "0c736e59-8248-4dee-8e4f-2df037c552d7"]
+ HEAD = re.compile(r"^\s*(?:[0-9A-Z]{1,2}(?:\.[0-9]+)?\s+)?(Limitations\b|AI Use Statement|References|Appendix\b)", re.M)
+@@ -75,7 +77,9 @@
+     add("URL_ANON", URL in full.replace(" ", "") or URL in full, URL in full)
+     add("QUEUE_IDS_IN_E4", all(q in full.replace(" ", "") for q in QUEUE_IDS), [q[:8] in full for q in QUEUE_IDS])
+     add("E4_7_14_FAIRCOIN", ("7/14" in full) and ("fair-coin" in full or "fair coin" in full), None)
+-    bad = {f: full.count(f) for f in FORBIDDEN if f in full}
++    body = norm("\n".join(pages[:body_end or len(pages)]))
++    bad = {f: full.count(f) for f in FORBIDDEN if f.lower() in full.lower()}
++    bad.update({f + " (body)": body.count(f) for f in BODY_ONLY if f in body})
+     add("FORBIDDEN_0", not bad, bad)
+     add("CITE_2607_13899", "2607.13899" in full, None)
+     t3 = None

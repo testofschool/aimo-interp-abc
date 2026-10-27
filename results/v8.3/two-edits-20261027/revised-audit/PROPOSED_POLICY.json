@@ -1,0 +1,21 @@
+{
+  "status": "PROPOSED_NOT_APPLIED",
+  "reason": "Pinned375 checker globally forbids Codex; frozenPDF has exactlyone mention in the unchanged AI Use Statement, so actualFAIL cannot be recorded asPASS.",
+  "paper_changes_proposed": 0,
+  "checker_policy_change_proposed": "For the Codex token only, exclude the validated AI Use Statement section from the forbidden-token scan; retain prohibition everywhere else.",
+  "boundaries": "Exactlyone line-heading AI Use Statement through the subsequent References heading; missing/duplicate/ambiguous boundaries fail closed.",
+  "preserved_rules": [
+    "handoff/Claude Code/session log remain forbidden across the fullPDF",
+    "UNMEASURED body-only rule remains",
+    "Codex in main body/appendix/bibliography remains forbidden",
+    "pinned375 script/result preserved as history; any further checker has a new independently reported hash"
+  ],
+  "required_negative_controls": [
+    "Actual frozen AI disclosure allowed",
+    "Codex inserted in mainbody rejected",
+    "Codex outside AI section rejected",
+    "Missing/duplicate AI heading rejected"
+  ],
+  "canonical_checker_changed": false,
+  "H2": "PENDING_USER_POLICY_DECISION"
+}

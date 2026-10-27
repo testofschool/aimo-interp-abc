@@ -1,0 +1,18 @@
+{
+  "recorded_at_utc": "2026-10-27T00:58:04.457639+00:00",
+  "direct_user_authority": "Apply supplied two-hunk patch; onfailure manualsamechanges; onhashmismatch recordactual/diffandcontinueaudit",
+  "source_sha256": "b2bd47f681dc332a6fa17225f9e75f15f4072f7b2543109a938e1e152ec37392",
+  "patch_sha256": "94793e96171e2ae3dc316fc3c30d9a757b9ba10581f36a7228db1276cc48870f",
+  "patch_argv": [
+    "patch",
+    "audit_v83.py",
+    "audit_v83.patch"
+  ],
+  "patch_exit": 0,
+  "manual_fallback": false,
+  "expected_sha256": "375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c",
+  "actual_sha256": "375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c",
+  "hash_match": true,
+  "PDF_changed": false,
+  "H2": "PENDING_AUDIT_RESULT"
+}

@@ -18,11 +18,11 @@
     "numeric_current": "PASS164/164_NEW_EXECUTION",
     "new_build": false,
     "H2_checks": "v8-execution/H2_CHECKS.json",
-    "revised_audit": "MISSING_UNRUN_375a9823_582c"
+    "revised_audit": "SHA_MATCH_375_BUT_FAIL_CODEX_1_AI_DISCLOSURE"
   },
   "named_pdf_sha256": "9264c4d28af807b447c5a0a2accce9a5dc47f3f7d42b08bf1e7f3e74567bc27f",
   "exact_gate_sha256": "152e2a488eb0c3cdeadbe4195bb09ac90acab464df4326a612098dc63f5c7630",
-  "H2": "PENDING_REVISED_AUDIT_THEN_NEW_PDF_REVIEW",
+  "H2": "PENDING_AUDIT_POLICY_DECISION",
   "AUTHOR_APPROVAL_v8_3_created": false,
   "official_ids": "NOT_AVAILABLE_USE_EXPLICIT_QUEUE_FALLBACK",
   "queue_UUID_acceptance_by_organizers": "UNVERIFIED",

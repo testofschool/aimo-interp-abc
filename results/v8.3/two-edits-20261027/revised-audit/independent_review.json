@@ -1,0 +1,108 @@
+{
+  "reviewed_at_utc": "2026-10-27T00:59:16.289681+00:00",
+  "scope": "Independent read-only source/PDF and executor-output review; this reviewer did not execute the audit script or alter PDF/checker",
+  "result": "CONFIRMED_REVISED_AUDIT_FAIL_ON_RETAINED_AI_DISCLOSURE",
+  "expected_script_sha256": "375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c",
+  "actual_script_sha256": "375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c",
+  "exact_script_hash_match": true,
+  "executor_evidence": {
+    "execution": "EXECUTION.json",
+    "stdout": "audit_v83.stdout.json",
+    "exit": 1,
+    "result": "FAIL",
+    "failed": [
+      "FORBIDDEN_0"
+    ],
+    "forbidden_value": {
+      "Codex": 1
+    },
+    "stderr_empty": true
+  },
+  "PDF": {
+    "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8.3-anonymous.pdf",
+    "sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+    "git_commit": "9d4530995fb44d93575b598f31c2da761db072a5",
+    "committed_PDF_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+    "unchanged_from_committed_exact_two_edit_build": true
+  },
+  "actual_keyword_match": {
+    "page": 6,
+    "section": "AI Use Statement",
+    "verbatim_clause": "The tools were Anthropic Claude and OpenAI Codex, including independent AI agents used for cross-checks.",
+    "Codex_full_PDF_count_case_sensitive": 1,
+    "handoff_full_PDF_count_case_sensitive": 0,
+    "source_rule_lines": [
+      12,
+      13,
+      14,
+      81,
+      83
+    ],
+    "classification": "The global keyword prohibition operates as written and matches the retained named AI-tool disclosure. This is not an additional paper-content delta or human-identity leak."
+  },
+  "scope_resolution": {
+    "requested_paper_changes": "Exactly two prior text edits; AI Use Statement was required to remain unchanged.",
+    "unchanged_disclosure_is_outside_two_edit_scope": true,
+    "do_not_remove_or_obfuscate_AI_tool_name_to_force_PASS": true,
+    "do_not_edit_checker_or_relabel_FAIL_in_this_review": true,
+    "new_PDF_fidelity_evidence": "../fidelity/MECHANICAL.json; ../fidelity/VISUAL.json; independent 21/21 and ten-page visual PASS are separate from this revised audit FAIL"
+  },
+  "remaining_code_limits": [
+    {
+      "lines": [
+        55
+      ],
+      "issue": "SHA256 row is unconditionally True; full expected hash is verified separately by this review, not by that row."
+    },
+    {
+      "lines": [
+        69,
+        76
+      ],
+      "issue": "Text identity matching remains case sensitive and anonymous Author boolean is reported without entering IDENTITY_0 ok."
+    },
+    {
+      "lines": [
+        28,
+        30,
+        74,
+        87,
+        88,
+        89
+      ],
+      "issue": "Subprocess return codes remain unchecked; empty failed pdffonts stdout can be counted as zero Type3."
+    },
+    {
+      "lines": [
+        78,
+        79
+      ],
+      "issue": "E4 checks are global presence tests rather than separate abstract/Limitations score-ID-time bindings."
+    },
+    {
+      "lines": [
+        95,
+        96,
+        97
+      ],
+      "issue": "Sentence diff ok is always True; raw named-reference sentence output can include identity text and is not an anonymous supplement."
+    },
+    {
+      "lines": [
+        81
+      ],
+      "issue": "Predicate is case insensitive, but full.count(f) is case sensitive; another capitalization can produce a forbidden key with displayed count0 while still failing."
+    }
+  ],
+  "H2": "PENDING_REVISED_AUDIT_FAIL_REQUIRES_DISCLOSED_RESOLUTION",
+  "H1": "Not inspected, changed, cancelled or resumed by this review; existing authentication wait preserved",
+  "actions": {
+    "PDF_edits": 0,
+    "checker_edits": 0,
+    "audit_script_runs_by_this_reviewer": 0,
+    "authentication": 0,
+    "POSTs": 0,
+    "pushes": 0,
+    "git_commits": 0
+  }
+}

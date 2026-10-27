@@ -8,9 +8,9 @@
 - 승인된 v3 일반모드19/19 PASS, exit0. 게이트 파일은 변경하지 않았습니다.
 - report_numbers --check164/164 PASS, 불일치0, exit0,6.764초. 코드·claims·데이터 고정값은 그대로입니다.
 - source/full-text/format fidelity21/21 PASS. 익명·기명 각10쪽을 개별 시각 확인했습니다.
-- 요청한 수정판 audit_v83.py SHA375a9823…582c는 현재 접근 가능한 파일 경로에 없어 MISSING/UNRUN입니다. 구판b2로 대체하거나 PASS를 만들지 않았습니다.
+- 요청한 수정판은 직접 제공된 patch로 만들었고 SHA375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c와 일치합니다. 실제 결과는 FAIL/exit1, FORBIDDEN_0 {Codex:1}이며 기존 AI Use Statement 한 건입니다.
 
-수정판 파일이 확인되어 실제 PASS를 얻기 전에는 새 H2를 요청하지 않습니다. 이전2edf PDF에 대한 H2 요청은 현재 수정 요청으로 대체됐습니다. H1 비밀번호 대기는 유지합니다. push·OpenReview 작업은 없습니다.
+수정판의 필수 PASS가 충족되지 않아 새 H2를 요청하지 않습니다. 원고는 추가 수정하지 않았으며 AI 고지에 대한 한정 예외 정책은 제안만 하고 미적용 상태입니다. 이전2edf PDF에 대한 H2 요청은 현재 수정 요청으로 대체됐습니다. H1 비밀번호 대기는 유지합니다. push·OpenReview 작업은 없습니다.
 
 허용 push 기계: `Jungs-Mac-Studio.local`.
 허용 저장소: `/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work` 하나뿐입니다. 실제 push 직전에 hostname·절대경로·현재 HEAD를 다시 보고합니다.
