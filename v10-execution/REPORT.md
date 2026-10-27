@@ -62,3 +62,7 @@ Route C is now implemented and independently reviewed (helper SHA9144dc2f…20aa
 ## v10.3 local audit
 
 Directly adopted with supplemental checks. Exact originalA0 executes with pypdf and returns FAIL/exit1 solelyFORBIDDEN_0 for one truthful final-testUNMEASURED statement; A1 is MISMATCH and the original result is retained. Wrong-PDF/missing-file controls return1/2. Immutablev3 fresh normal runPASS19/19. Separate supplemental actual artifact checksPASS19/19, negativecontrols13/13, and the same checker re-executed on bundle bytesPASS19/19. No PDF/source/gate edit or rebuild. The158 receipt remainsUNVERIFIABLE; the164 raw data/claims run is verified and the PDF association is through build receipts. UpdatedH2_CHECKS and the one-minuteH2_REVIEW correcta/e while preserving prior evidence and allfourdisclosedchanges. H2/H1-auth remainpending; DesktopZIP packaging/integrity receipt follows.
+
+Desktop audit ZIP created: /Users/felix/Desktop/AUDIT_BUNDLE_v8.3.zip; SHA256 e61f2205dad1005ca956a5826cb769fff63683caed9a699e1bc0c68d64976776. Root readback CRC PASS and all56 payload hashes PASS across57 members including SHA256SUMS. ZIP hash stays outside the ZIP. H2/H-ATTACH are pending and no external transfer was performed.
+
+Independent final readback PASS20/20 (INDEPENDENT_BUNDLE_VERIFY.json): safe57 members, CRC,56/56 payloadSHA256, originalFAIL/sidecarPASS/raw164/unknown158/authorpending state preserved. No further audit work remains before the user H-ATTACH/H2 steps.

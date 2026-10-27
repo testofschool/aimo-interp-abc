@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-27T00:32:03.745719+00:00",
+  "recorded_at_utc": "2026-10-27T00:34:23.661483+00:00",
   "status": "WAITING_H1_AUTH_AND_H2_PDF_REVIEW",
   "branch": "v10",
   "authority": {
@@ -63,16 +63,23 @@
     "Literal handoff positive gate fixture omitted probe and failed WHITEBOX_RUN; corrected synthetic fixture PASS7/7, negative FAIL2 as intended. Gate bytes unchanged.",
     "Canonical M5 executor is unavailable here; exact verified Studio canon reused without claiming M5 work."
   ],
-  "next_user_actions": "Input password ONLY in local terminal session86398, never in chat. H2 PDF review and exact typed confirmation still pending.",
+  "next_user_actions": "Felix may attach Desktop AUDIT_BUNDLE_v8.3.zip to Claude (H-ATTACH); actual PDF review then direct v8.3 PDF 확인 closes H2. Existing local H1-auth remains pending; never send credentials in chat.",
   "monitoring": "v10-execution/AUTOMATIONS.json",
   "audit_v10_3": {
-    "status": "CHECKS_COMPLETE_PACKAGING",
+    "status": "BUNDLE_VERIFIED_WAITING_H_ATTACH_OR_H2",
     "original_A1": "MISMATCH_FAIL_FORBIDDEN_UNMEASURED",
     "v3": "PASS19/19",
     "supplemental": "PASS19/19",
     "negative_controls": "PASS13/13",
     "numbers": "158_UNVERIFIABLE_164_RAW_LOG_VERIFIED",
     "H2": "PENDING",
-    "H_ATTACH": "PENDING_FELIX_MANUAL_ZIP_TRANSFER_OR_DIRECT_H2"
+    "H_ATTACH": "PENDING_FELIX_MANUAL_ZIP_TRANSFER_OR_DIRECT_H2",
+    "bundle_path": "/Users/felix/Desktop/AUDIT_BUNDLE_v8.3.zip",
+    "bundle_sha256": "e61f2205dad1005ca956a5826cb769fff63683caed9a699e1bc0c68d64976776",
+    "bundle_bytes": 343461,
+    "manifest_payload_count": 56,
+    "member_count": 57,
+    "external_transmissions": 0,
+    "independent_verification": "PASS20/20"
   }
 }
