@@ -1,0 +1,10 @@
+{
+  "preserved_without_edit": [
+    "v10-execution/NUMERIC_RECHECK.json",
+    "v10-execution/numeric-runtime/first_attempt_summary.json",
+    "v10-execution/numeric-runtime/ATTEMPT.json",
+    "v10-execution/numeric-runtime/individual-recovery/pre_resident_fallback_summary.json"
+  ],
+  "prior_status": "UNRUN",
+  "interpretation": "Earlier bounded import/Git extraction failures remain prior UNRUN evidence. The later actual164 execution is separate; this audit does not rewrite the prior failures."
+}

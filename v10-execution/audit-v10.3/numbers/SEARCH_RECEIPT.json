@@ -1,0 +1,51 @@
+{
+  "recorded_at_utc": "2026-10-27T00:26:35.827589+00:00",
+  "scope": "Bounded current-project evidence and related current-thread summaries; not a search of all sessions or other hosts",
+  "missing_handoff_runtime_paths": [
+    {
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v84-execution/rebuild",
+      "exists": false
+    },
+    {
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v84-execution",
+      "exists": false
+    },
+    {
+      "path": "/Users/kangjungmin/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v84-execution/rebuild",
+      "exists": false
+    }
+  ],
+  "read_documents": [
+    "results/v8.3/BUILD.json",
+    "results/v8.3/frozen_claims_preserved.json",
+    "results/v8.3/report_numbers_check.json",
+    "v8-execution/BUILD_v8.3.json",
+    "v8-execution/H2_CHECKS.json",
+    "v10-execution/H2_REVIEW.md",
+    "v10-execution/NUMERIC_RECOVERY.json"
+  ],
+  "related_thread": {
+    "thread_id": "01a16a84-5272-77c0-9cda-bd8e14596e28",
+    "pages_read": 2,
+    "turn_limit_per_page": 10,
+    "include_outputs": false,
+    "original_158_execution_receipt_found": false,
+    "original_alleged_0853_0859_pair_found": false
+  },
+  "project_keyword_search": {
+    "patterns": [
+      "158/158",
+      "checked158",
+      "08:53",
+      "08:59"
+    ],
+    "directories": [
+      "v8-execution",
+      "v10-execution",
+      "results",
+      "report"
+    ],
+    "status": "BOUNDED_SEARCH_INTERRUPTED_WITH_NO_MATCH_OUTPUT; dataless-file risk; not claimed exhaustive"
+  },
+  "conclusion": "158 source remains unverified within this evidence boundary. Other-host evidence may exist; it was not accessed."
+}

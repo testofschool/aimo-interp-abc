@@ -58,3 +58,7 @@ H2 prechecks are [H2_CHECKS.json](../v8-execution/H2_CHECKS.json) and [H2_REVIEW
 
 
 Route C is now implemented and independently reviewed (helper SHA9144dc2f…20aa4da), local ZIP/prereg checks PASS and synthetic safety10/10 PASS. The interactive process86398 successfully read the public login form and reached the local getpass prompt; no password had been read at that observation. The app terminal-open request returned QUEUED and visibility was not established. H1-auth is pending local input; do not launch a second helper while this process holds the single-uploader lock. See codabench/ROUTES.json, CLI_README.md and CLI_INDEPENDENT_REVIEW.json. No official ID or score is yet available, so no SCORES.json is manufactured.
+
+## v10.3 local audit
+
+Directly adopted with supplemental checks. Exact originalA0 executes with pypdf and returns FAIL/exit1 solelyFORBIDDEN_0 for one truthful final-testUNMEASURED statement; A1 is MISMATCH and the original result is retained. Wrong-PDF/missing-file controls return1/2. Immutablev3 fresh normal runPASS19/19. Separate supplemental actual artifact checksPASS19/19, negativecontrols13/13, and the same checker re-executed on bundle bytesPASS19/19. No PDF/source/gate edit or rebuild. The158 receipt remainsUNVERIFIABLE; the164 raw data/claims run is verified and the PDF association is through build receipts. UpdatedH2_CHECKS and the one-minuteH2_REVIEW correcta/e while preserving prior evidence and allfourdisclosedchanges. H2/H1-auth remainpending; DesktopZIP packaging/integrity receipt follows.

@@ -1,0 +1,53 @@
+{
+  "recorded_at_utc": "2026-10-27T00:31:11.526985+00:00",
+  "interpreter": "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+  "pypdf_version": "6.10.0",
+  "pdftotext": "/opt/homebrew/bin/pdftotext",
+  "pdffonts": "/opt/homebrew/bin/pdffonts",
+  "commands": [
+    {
+      "argv": [
+        "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/audit-v10.3/supplemental/supplemental_audit.py",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/review/aimo-interp-report-v8.3-anonymous.pdf",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/reference/v8.1-named-approved.txt"
+      ],
+      "exit": 0,
+      "result": "PASS",
+      "passed": 19,
+      "total": 19
+    },
+    {
+      "argv": [
+        "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/audit-v10.3/supplemental/negative_controls.py",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/review/aimo-interp-report-v8.3-anonymous.pdf",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/reference/v8.1-named-approved.txt"
+      ],
+      "exit": 0,
+      "result": "PASS",
+      "controls_rejected_or_distinguished": 13,
+      "control_total": 13
+    }
+  ],
+  "hashes": {
+    "v10-execution/review/aimo-interp-report-v8.3-anonymous.pdf": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+    "v10-execution/reference/v8.1-named-approved.txt": "b740a790bfca2bb0400ea3dc2f5dc84da20a92616b3d12f33d552031ad31dc0a",
+    "v10-execution/audit-v10.3/source/audit_v83.py": "b2bd47f681dc332a6fa17225f9e75f15f4072f7b2543109a938e1e152ec37392",
+    "v10-execution/audit-v10.3/supplemental/negative_controls.py": "4d0ace8e580fcb9c3ed1ca7234e9d22c73004d18e9f27ebfa2b70981bbc65fe9",
+    "v10-execution/audit-v10.3/supplemental/supplemental_audit.py": "2c61c7a1411d56f89f389a9edf49a54a10b81fa17c50a8fca2c37e193a138c75",
+    "v10-execution/audit-v10.3/supplemental/actual.stdout.json": "ee5bb9f278d50ee8625d5e9a29e53e3600bc9152eb3825d61642df16ee35473a",
+    "v10-execution/audit-v10.3/supplemental/negative_controls.stdout.json": "9be180e0fd020253c5a85cf89f75e26f9cc1fbd4c781352da7a91b539e88d532",
+    "v10-execution/audit-v10.3/supplemental/README.md": "776bf5266d975219f439a55a35f3f4b49f9e91c1ddc0d9d4d971e98225b37e65"
+  },
+  "H2": "PENDING",
+  "author_approval": false,
+  "scope": "Sidecar only; actual-PDF checks and invented negative controls are separate. Pinned original and v3 gate untouched. No PDF authored, edited or rebuilt.",
+  "network_requests": 0,
+  "authentication": false,
+  "POSTs": 0,
+  "git_commits": 0,
+  "independent_static_review": "No critical false-PASS found; empty-page indexing guard added after review."
+}

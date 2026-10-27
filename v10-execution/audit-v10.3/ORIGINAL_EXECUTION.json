@@ -1,0 +1,57 @@
+{
+  "observed_at_utc": "2026-10-27T00:25:01.173958+00:00",
+  "script_sha256": "b2bd47f681dc332a6fa17225f9e75f15f4072f7b2543109a938e1e152ec37392",
+  "PDF_sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+  "source_edited": false,
+  "runs": {
+    "actual": {
+      "argv": [
+        "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "v10-execution/audit-v10.3/bundle/audit_v83.py",
+        "v10-execution/audit-v10.3/bundle/aimo-interp-report-v8.3-anonymous.pdf",
+        "v10-execution/audit-v10.3/bundle/reference/v8.1-named-approved.txt"
+      ],
+      "exit": 1,
+      "elapsed_s": 0.448,
+      "result": "FAIL",
+      "failed": [
+        "FORBIDDEN_0"
+      ],
+      "stdout_sha256": "63abeea3cbf1e4c7728e93d7171f1a7a201198fde33f2aeb202d94d27004d44a",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "wrong_pdf": {
+      "argv": [
+        "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "v10-execution/audit-v10.3/bundle/audit_v83.py",
+        "v10-execution/review/aimo-interp-report-v8.3-named.pdf"
+      ],
+      "exit": 1,
+      "elapsed_s": 0.221,
+      "result": "FAIL",
+      "failed": [
+        "IDENTITY_0",
+        "URL_ANON",
+        "FORBIDDEN_0"
+      ],
+      "stdout_sha256": "8d1b3d7ff66ff2225dbc60e8a688e1bb42ad82dee8ddc062694715e9fbcad875",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "missing_file": {
+      "argv": [
+        "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+        "-I",
+        "v10-execution/audit-v10.3/bundle/audit_v83.py",
+        "v10-execution/audit-v10.3/raw/intentionally-missing.pdf"
+      ],
+      "exit": 2,
+      "elapsed_s": 0.035,
+      "result": "UNUSABLE",
+      "failed": [],
+      "stdout_sha256": "17bc97bdf8596c915af58c4e105593e29cb1b7b084c042642b1f9bfcd341fcf7",
+      "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

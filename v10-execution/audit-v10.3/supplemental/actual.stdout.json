@@ -1,0 +1,199 @@
+{
+  "result": "PASS",
+  "failed": [],
+  "passed": 19,
+  "total": 19,
+  "rows": [
+    {
+      "check": "EXACT_FROZEN_SHA256",
+      "ok": true,
+      "value": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51"
+    },
+    {
+      "check": "REFERENCE_TEXT_SHA256",
+      "ok": true,
+      "value": null
+    },
+    {
+      "check": "TEXT_EXTRACTION_SUCCEEDED",
+      "ok": true,
+      "value": null
+    },
+    {
+      "check": "TOTAL_PAGES_10",
+      "ok": true,
+      "value": 10
+    },
+    {
+      "check": "MAIN_ENDS_5_LIMITATIONS_STARTS_6",
+      "ok": true,
+      "value": null
+    },
+    {
+      "check": "IDENTITY_TEXT_METADATA_URI_CASE_INSENSITIVE_ZERO",
+      "ok": true,
+      "value": {
+        "text": {
+          "token#0": 0,
+          "token#1": 0,
+          "token#2": 0,
+          "token#3": 0,
+          "token#4": 0,
+          "token#5": 0,
+          "token#6": 0
+        },
+        "document_metadata": {
+          "token#0": 0,
+          "token#1": 0,
+          "token#2": 0,
+          "token#3": 0,
+          "token#4": 0,
+          "token#5": 0,
+          "token#6": 0
+        },
+        "xmp_metadata": {
+          "token#0": 0,
+          "token#1": 0,
+          "token#2": 0,
+          "token#3": 0,
+          "token#4": 0,
+          "token#5": 0,
+          "token#6": 0
+        },
+        "URIs": {
+          "token#0": 0,
+          "token#1": 0,
+          "token#2": 0,
+          "token#3": 0,
+          "token#4": 0,
+          "token#5": 0,
+          "token#6": 0
+        }
+      }
+    },
+    {
+      "check": "AUTHOR_METADATA_REQUIRED_ANONYMOUS",
+      "ok": true,
+      "value": null
+    },
+    {
+      "check": "NO_EMBEDDED_ATTACHMENTS",
+      "ok": true,
+      "value": {
+        "embedded_attachment_count": 0,
+        "file_attachment_annotations": 0,
+        "associated_files_count": 0
+      }
+    },
+    {
+      "check": "PDFFONTS_SUCCESS_VALID_ROWS_TYPE3_ZERO",
+      "ok": true,
+      "value": {
+        "returncode": 0,
+        "valid_font_rows": 11,
+        "Type3": 0
+      }
+    },
+    {
+      "check": "E4_ABSTRACT_TWO_SCORE_ID_TIMESTAMP_BINDINGS",
+      "ok": true,
+      "value": {
+        "exact_expected_E4_paragraph_present": true
+      }
+    },
+    {
+      "check": "E4_LIMITS_TWO_SCORE_ID_TIMESTAMP_BINDINGS",
+      "ok": true,
+      "value": {
+        "exact_expected_E4_paragraph_present": true
+      }
+    },
+    {
+      "check": "NO_STRONGEST_NONPERFECT_OWNER_COMPARISON",
+      "ok": true,
+      "value": null
+    },
+    {
+      "check": "FINAL_TEST_UNMEASURED_CONTEXT_PRESERVED",
+      "ok": true,
+      "value": null
+    },
+    {
+      "check": "EXACT_ANONYMOUS_REPOSITORY_URL",
+      "ok": true,
+      "value": {
+        "visible_occurrences": 2,
+        "mirror_verified": false
+      }
+    },
+    {
+      "check": "DISCLOSED_DELTA_1_PRESENT",
+      "ok": true,
+      "value": "We provide CPU reproduction rather than additional model runs."
+    },
+    {
+      "check": "DISCLOSED_DELTA_2_PRESENT",
+      "ok": true,
+      "value": "The 24 October temporary-evaluation-queue notice is documented in the supplied v8.3 handoff; the recorded queue responses accompany the archive."
+    },
+    {
+      "check": "DISCLOSED_DELTA_3_PRESENT",
+      "ok": true,
+      "value": "[withheld for anonymous review]"
+    },
+    {
+      "check": "DISCLOSED_DELTA_4_PRESENT",
+      "ok": true,
+      "value": "The recorded queue receipt JSONs accompany the reproduction archive."
+    },
+    {
+      "check": "SECTION_FIDELITY_ONLY_EXPLICIT_TRANSFORMS",
+      "ok": true,
+      "value": {
+        "section_equal_after_explicit_transforms": {
+          "prologue": true,
+          "abstract": true,
+          "s1": true,
+          "s2": true,
+          "s3": true,
+          "a": true,
+          "limits": true,
+          "b": true,
+          "ai": true,
+          "refs": true
+        },
+        "transforms_applied_exactly_once": {
+          "prologue:0": true,
+          "abstract:1": true,
+          "abstract:2": true,
+          "s2:3": true,
+          "a:4": true,
+          "a:5": true,
+          "a:6": true,
+          "a:7": true,
+          "a:8": true,
+          "a:9": true,
+          "limits:10": true,
+          "limits:11": true,
+          "refs:12": true,
+          "refs:13": true,
+          "b:14": true,
+          "b:source_commit_mask": true
+        },
+        "E11_section_order": true,
+        "disclosed_changed_lines_verbatim": [
+          "We provide CPU reproduction rather than additional model runs.",
+          "The 24 October temporary-evaluation-queue notice is documented in the supplied v8.3 handoff; the recorded queue responses accompany the archive.",
+          "[withheld for anonymous review]",
+          "The recorded queue receipt JSONs accompany the reproduction archive."
+        ],
+        "normalization": "page-number/Preprint footers, Unicode ligatures/quotes/dashes, whitespace and alphabetic display hyphenation; no other text is ignored"
+      }
+    }
+  ],
+  "scope": "Supplemental frozen-artifact checks, separate from pinned audit_v83.py; not scientific truth verification or external receipt authentication",
+  "H2": "PENDING",
+  "author_approval": false,
+  "PDF_edited_or_rebuilt": false,
+  "full_visual_review": "NOT_RERUN; exact hash anchors prior ten-page visual review"
+}

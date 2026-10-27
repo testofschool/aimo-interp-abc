@@ -1,5 +1,5 @@
 {
-  "recorded_at_utc": "2026-10-26T16:43:41.346015+00:00",
+  "recorded_at_utc": "2026-10-27T00:32:03.745719+00:00",
   "status": "WAITING_H1_AUTH_AND_H2_PDF_REVIEW",
   "branch": "v10",
   "authority": {
@@ -8,7 +8,8 @@
     "existing_G_AUTHOR": "RETAINED",
     "frozen_two_submission_approval": "RETAINED",
     "H1_amendment": "Direct user reply HANDOFF_v10.1: Codex routes A/B, then local getpass C, then manual D only if needed.",
-    "H2_amendment": "Direct user reply HANDOFF_v10.2: mechanical checks then typed PDF confirmation; not approval by handoff."
+    "H2_amendment": "Direct user reply HANDOFF_v10.2: mechanical checks then typed PDF confirmation; not approval by handoff.",
+    "v10_3": "Direct user: v10.3 적용·보완검사 병행"
   },
   "prereg_commit": "773b39e1a2ca0f1c4001e0ae1459e7d567e56c80",
   "prereg_time_KST": "2026-10-27T01:03:42+09:00",
@@ -35,9 +36,9 @@
     "numeric_recovery": "v10-execution/NUMERIC_RECOVERY.json",
     "H2_checks": "v8-execution/H2_CHECKS.json",
     "H2_literal_exceptions": [
-      "a: build precedes same-source/PDF capture commit; hash/source equality verified",
-      "e: old section5 is now unnumbered Limitations per E11",
-      "f: four previously disclosed additional lexical changes listed verbatim"
+      "a removed byv10.3 asmtimefalsealarm",
+      "e PASS abstract+unnumberedLimitations perE11",
+      "f four disclosed lexical deltas remain explicit"
     ]
   },
   "H1": "C_LOCAL_GETPASS_PROMPT_ACTIVE_SESSION86398_WAITING_USER_INPUT",
@@ -63,5 +64,15 @@
     "Canonical M5 executor is unavailable here; exact verified Studio canon reused without claiming M5 work."
   ],
   "next_user_actions": "Input password ONLY in local terminal session86398, never in chat. H2 PDF review and exact typed confirmation still pending.",
-  "monitoring": "v10-execution/AUTOMATIONS.json"
+  "monitoring": "v10-execution/AUTOMATIONS.json",
+  "audit_v10_3": {
+    "status": "CHECKS_COMPLETE_PACKAGING",
+    "original_A1": "MISMATCH_FAIL_FORBIDDEN_UNMEASURED",
+    "v3": "PASS19/19",
+    "supplemental": "PASS19/19",
+    "negative_controls": "PASS13/13",
+    "numbers": "158_UNVERIFIABLE_164_RAW_LOG_VERIFIED",
+    "H2": "PENDING",
+    "H_ATTACH": "PENDING_FELIX_MANUAL_ZIP_TRANSFER_OR_DIRECT_H2"
+  }
 }

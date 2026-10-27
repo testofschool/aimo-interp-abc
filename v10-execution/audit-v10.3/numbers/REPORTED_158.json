@@ -1,0 +1,14 @@
+{
+  "status": "UNVERIFIABLE_WITH_CURRENT_MAC_STUDIO_EVIDENCE",
+  "reported_count": "158/158",
+  "attributed_time": "2026-10-27 08:53 KST",
+  "attribution_source": "/Users/felix/Downloads/HANDOFF_v10.3_AUDIT.md",
+  "attribution_source_sha256": "5046af8e054eeff9cfebbbd42a0144a4b78d7f59e212fc94d2209ed0bfc884aa",
+  "source_quote": "| 3 | numbers **158/158** (08:53) and **164/164** (08:59) | **UNMEASURED inconsistency**: same PDF or a rebuild? | step 1 |",
+  "raw_execution_receipt_found": false,
+  "pdf_sha256": null,
+  "commit": null,
+  "exact_command": null,
+  "raw_stdout_tail": null,
+  "interpretation": "This is a statement in the supplied audit handoff. It is not the missing original execution receipt. No158 check, source registry or PDF association is inferred from164 or from arithmetic."
+}

@@ -1,0 +1,20 @@
+{
+  "argv": [
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+    "-I",
+    "-X",
+    "importtime",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/tools/report_numbers.py",
+    "--data-dir",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data",
+    "--check",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/research/claims.json",
+    "--out",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/report_numbers.json"
+  ],
+  "shell_rendering": "'/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python' -I -X importtime '/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/tools/report_numbers.py' --data-dir '/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data' --check '/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/research/claims.json' --out '/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/report_numbers.json'",
+  "executed_working_directory": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro",
+  "canonical_source_commit": "33328fed2a38255f8a85b9d6ae1d54672c44e3bf",
+  "source_commit_role": "report_numbers/claims source snapshot; runtime path is an isolated byte-verified reproduction",
+  "pdf_is_argument": false
+}

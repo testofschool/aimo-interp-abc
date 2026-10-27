@@ -1,0 +1,16 @@
+{
+  "argv": [
+    "python3",
+    "-I",
+    "v10-execution/review/prize_rubric_gate_v3.py",
+    "v10-execution/audit-v10.3/bundle/aimo-interp-report-v8.3-anonymous.pdf"
+  ],
+  "exit": 0,
+  "result": "PASS",
+  "passed": 19,
+  "total": 19,
+  "mode": "normal",
+  "gate_sha256": "152e2a488eb0c3cdeadbe4195bb09ac90acab464df4326a612098dc63f5c7630",
+  "PDF_sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+  "gate_modified": false
+}

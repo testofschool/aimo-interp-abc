@@ -1,0 +1,14 @@
+{
+  "scope": "ARTIFACT_ASSOCIATION_ONLY_NOT_A_PDF_NUMERIC_TEST",
+  "pdf": "v10-execution/review/aimo-interp-report-v8.3-anonymous.pdf",
+  "current_pdf_sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+  "build_receipt_pdf_sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+  "source_capture_commit": "33328fed2a38255f8a85b9d6ae1d54672c44e3bf",
+  "build_receipt": "results/v8.3/BUILD.json",
+  "build_receipt_sha256": "ab6f47ddb182bd94169ad9e110f566733f39033df10e73edf7033be21766c052",
+  "current_hash_matches_capture_receipt": true,
+  "numeric_tool_reads_pdf": false,
+  "same_pdf_between_alleged_0853_and_0859_reports": "UNVERIFIABLE_NO_ORIGINAL_REPORT_PAIR",
+  "changed_source_files_between_alleged_reports": null,
+  "byte_deltas_between_alleged_reports": null
+}

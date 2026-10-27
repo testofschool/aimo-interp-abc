@@ -1,0 +1,13 @@
+{
+  "status": "158_UNVERIFIABLE_164_VERIFIED",
+  "h2_one_line": "158/158은 원본 영수증 미확보로 UNVERIFIABLE;164/164는33328fe의 고정 데이터·claims 대조 원시 로그로 확인(PASS, 불일치0); PDF2edf06ab…82e51은 build receipt로 연결.",
+  "audit_markdown": "v8-execution/AUDIT_numbers.md",
+  "audit_markdown_sha256": "0254ff03b40eca8473e995469b482da1023eb4fc98ab741a91b3689b5eee9361",
+  "numeric_reruns": 0,
+  "official_requests": 0,
+  "auth_requests": 0,
+  "uploads": 0,
+  "pushes": 0,
+  "commits": 0,
+  "prior_unrun_logs_preserved": true
+}

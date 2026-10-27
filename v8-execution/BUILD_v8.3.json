@@ -16,7 +16,8 @@
     "strict_preflight": "TECHNICAL_PASS_READY_FOR_AUTHOR_REVIEW",
     "numeric_historical": "PASS_164_OF_164_FROM_EXISTING_T1",
     "numeric_current": "PASS_164_OF_164_NEW_EXECUTION",
-    "new_build": false
+    "new_build": false,
+    "H2_checks": "v8-execution/H2_CHECKS.json"
   },
   "named_pdf_sha256": "c8be7a4f3c4fac8da00d1c7c05f6edef9e17f2e974e97b8a190c371eb9927cc0",
   "exact_gate_sha256": "152e2a488eb0c3cdeadbe4195bb09ac90acab464df4326a612098dc63f5c7630",
@@ -25,5 +26,13 @@
   "official_ids": "NOT_AVAILABLE_USE_EXPLICIT_QUEUE_FALLBACK",
   "queue_UUID_acceptance_by_organizers": "UNVERIFIED",
   "numeric_recovery": "v10-execution/NUMERIC_RECOVERY.json",
-  "H2_checks": "v8-execution/H2_CHECKS.json"
+  "H2_checks": "v8-execution/H2_CHECKS.json",
+  "audit_v10_3": {
+    "A1": "MISMATCH_ORIGINAL_FAIL_FORBIDDEN_UNMEASURED",
+    "supplemental": "PASS19/19",
+    "negative_controls": "PASS13/13",
+    "numbers": "158_UNVERIFIABLE_164_VERIFIED",
+    "H2": "PENDING",
+    "PDF_unchanged": true
+  }
 }

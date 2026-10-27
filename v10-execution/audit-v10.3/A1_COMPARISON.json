@@ -1,0 +1,42 @@
+{
+  "recorded_at_utc": "2026-10-27T00:25:11.715864+00:00",
+  "comparison": "MISMATCH",
+  "expected_result": "PASS",
+  "actual_result": "FAIL",
+  "actual_exit": 1,
+  "text_method": "pypdf",
+  "failed": [
+    "FORBIDDEN_0"
+  ],
+  "rows": {
+    "PAGES": {
+      "expected": 10,
+      "actual": 10,
+      "ok": true
+    },
+    "BODY_LE_5": {
+      "expected": 5,
+      "actual": 5,
+      "ok": true
+    },
+    "TYPE3_0": {
+      "expected": 0,
+      "actual": 0,
+      "ok": true
+    },
+    "FORBIDDEN_0": {
+      "expected": {},
+      "actual": {
+        "UNMEASURED": 1
+      },
+      "ok": false
+    }
+  },
+  "identity_hits": {},
+  "reason": "The original script bans UNMEASURED everywhere, including the truthful statement that final-test performance was not measured. No official final-test result exists to replace it.",
+  "original_script_modified": false,
+  "PDF_modified": false,
+  "supplemental_result": "PASS_19_OF_19_SEPARATE_FROM_ORIGINAL",
+  "H2": "PENDING_HUMAN_PDF_CONFIRMATION",
+  "supplemental_negative_controls": "PASS_13_OF_13"
+}

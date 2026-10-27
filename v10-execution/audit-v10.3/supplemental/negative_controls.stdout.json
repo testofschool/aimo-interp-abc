@@ -1,0 +1,133 @@
+{
+  "result": "PASS",
+  "actual_baseline_result": "PASS",
+  "negative_controls_correctly_rejected": 13,
+  "negative_control_count": 13,
+  "controls": [
+    {
+      "control": "named Author outside the text token list",
+      "expected_failed_check": "AUTHOR_METADATA_REQUIRED_ANONYMOUS",
+      "actual_failed_checks": [
+        "AUTHOR_METADATA_REQUIRED_ANONYMOUS"
+      ],
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_IN_MEMORY_OBSERVATION_NOT_A_PDF_OR_RECEIPT"
+    },
+    {
+      "control": "empty Author",
+      "expected_failed_check": "AUTHOR_METADATA_REQUIRED_ANONYMOUS",
+      "actual_failed_checks": [
+        "AUTHOR_METADATA_REQUIRED_ANONYMOUS"
+      ],
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_IN_MEMORY_OBSERVATION_NOT_A_PDF_OR_RECEIPT"
+    },
+    {
+      "control": "pdffonts process fails with empty stdout",
+      "expected_failed_check": "PDFFONTS_SUCCESS_VALID_ROWS_TYPE3_ZERO",
+      "actual_failed_checks": [
+        "PDFFONTS_SUCCESS_VALID_ROWS_TYPE3_ZERO"
+      ],
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_IN_MEMORY_OBSERVATION_NOT_A_PDF_OR_RECEIPT"
+    },
+    {
+      "control": "pdffonts exits zero but has no font rows",
+      "expected_failed_check": "PDFFONTS_SUCCESS_VALID_ROWS_TYPE3_ZERO",
+      "actual_failed_checks": [
+        "PDFFONTS_SUCCESS_VALID_ROWS_TYPE3_ZERO"
+      ],
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_IN_MEMORY_OBSERVATION_NOT_A_PDF_OR_RECEIPT"
+    },
+    {
+      "control": "wrong full SHA",
+      "expected_failed_check": "EXACT_FROZEN_SHA256",
+      "actual_failed_checks": [
+        "EXACT_FROZEN_SHA256"
+      ],
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_IN_MEMORY_OBSERVATION_NOT_A_PDF_OR_RECEIPT"
+    },
+    {
+      "control": "UUID exists elsewhere but not abstract E4",
+      "expected_failed_check": "E4_ABSTRACT_TWO_SCORE_ID_TIMESTAMP_BINDINGS",
+      "actual_failed_checks": [
+        "E4_ABSTRACT_TWO_SCORE_ID_TIMESTAMP_BINDINGS",
+        "SECTION_FIDELITY_ONLY_EXPLICIT_TRANSFORMS"
+      ],
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_IN_MEMORY_OBSERVATION_NOT_A_PDF_OR_RECEIPT"
+    },
+    {
+      "control": "uppercase identity in hidden URI",
+      "expected_failed_check": "IDENTITY_TEXT_METADATA_URI_CASE_INSENSITIVE_ZERO",
+      "actual_failed_checks": [
+        "IDENTITY_TEXT_METADATA_URI_CASE_INSENSITIVE_ZERO"
+      ],
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_IN_MEMORY_OBSERVATION_NOT_A_PDF_OR_RECEIPT"
+    },
+    {
+      "control": "unexpected embedded attachment",
+      "expected_failed_check": "NO_EMBEDDED_ATTACHMENTS",
+      "actual_failed_checks": [
+        "NO_EMBEDDED_ATTACHMENTS"
+      ],
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_IN_MEMORY_OBSERVATION_NOT_A_PDF_OR_RECEIPT"
+    },
+    {
+      "control": "pdftotext process failure despite stale text",
+      "expected_failed_check": "TEXT_EXTRACTION_SUCCEEDED",
+      "actual_failed_checks": [
+        "TEXT_EXTRACTION_SUCCEEDED"
+      ],
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_IN_MEMORY_OBSERVATION_NOT_A_PDF_OR_RECEIPT"
+    },
+    {
+      "control": "new undisclosed claim in section 3",
+      "expected_failed_check": "SECTION_FIDELITY_ONLY_EXPLICIT_TRANSFORMS",
+      "actual_failed_checks": [
+        "MAIN_ENDS_5_LIMITATIONS_STARTS_6",
+        "SECTION_FIDELITY_ONLY_EXPLICIT_TRANSFORMS"
+      ],
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_IN_MEMORY_OBSERVATION_NOT_A_PDF_OR_RECEIPT"
+    },
+    {
+      "control": "blank page 6 is rejected without indexing exception",
+      "expected_failed_check": "MAIN_ENDS_5_LIMITATIONS_STARTS_6",
+      "actual_failed_checks": [
+        "TEXT_EXTRACTION_SUCCEEDED",
+        "MAIN_ENDS_5_LIMITATIONS_STARTS_6",
+        "E4_ABSTRACT_TWO_SCORE_ID_TIMESTAMP_BINDINGS",
+        "E4_LIMITS_TWO_SCORE_ID_TIMESTAMP_BINDINGS",
+        "FINAL_TEST_UNMEASURED_CONTEXT_PRESERVED",
+        "SECTION_FIDELITY_ONLY_EXPLICIT_TRANSFORMS"
+      ],
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_IN_MEMORY_OBSERVATION_NOT_A_PDF_OR_RECEIPT"
+    },
+    {
+      "control": "removed final-test unknown status",
+      "expected_failed_check": "FINAL_TEST_UNMEASURED_CONTEXT_PRESERVED",
+      "actual_failed_checks": [
+        "FINAL_TEST_UNMEASURED_CONTEXT_PRESERVED",
+        "SECTION_FIDELITY_ONLY_EXPLICIT_TRANSFORMS"
+      ],
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_IN_MEMORY_OBSERVATION_NOT_A_PDF_OR_RECEIPT"
+    },
+    {
+      "control": "Unicode mathematical minus remains distinct",
+      "expected": "words('x\u2212y') differs from words('xy')",
+      "correctly_rejected": true,
+      "fixture_kind": "SYNTHETIC_NORMALIZER_DISTINCTION_NOT_A_PDF_OR_RECEIPT"
+    }
+  ],
+  "PDFs_created_or_modified": 0,
+  "network_requests": 0,
+  "H2": "PENDING"
+}

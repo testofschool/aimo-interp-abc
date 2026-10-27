@@ -1,0 +1,76 @@
+{
+  "current_registry_sha256": "c0213e5f470206f619bf3481a1d4f1d225e2cbf09f5135ed638c07044a3f8e4c",
+  "current_claim_count": 164,
+  "current_unique_key_count": 164,
+  "current_non_queue_claim_count": 152,
+  "current_queue_claim_count": 12,
+  "queue_keys": [
+    {
+      "position_1_based": 153,
+      "key": "queue_always_true_k"
+    },
+    {
+      "position_1_based": 154,
+      "key": "queue_always_true_n"
+    },
+    {
+      "position_1_based": 155,
+      "key": "queue_always_true_accuracy"
+    },
+    {
+      "position_1_based": 156,
+      "key": "queue_always_true_submission_id"
+    },
+    {
+      "position_1_based": 157,
+      "key": "queue_always_true_created_at_kst"
+    },
+    {
+      "position_1_based": 158,
+      "key": "queue_always_true_faircoin_one_sided_p"
+    },
+    {
+      "position_1_based": 159,
+      "key": "queue_text_length_control_k"
+    },
+    {
+      "position_1_based": 160,
+      "key": "queue_text_length_control_n"
+    },
+    {
+      "position_1_based": 161,
+      "key": "queue_text_length_control_accuracy"
+    },
+    {
+      "position_1_based": 162,
+      "key": "queue_text_length_control_submission_id"
+    },
+    {
+      "position_1_based": 163,
+      "key": "queue_text_length_control_created_at_kst"
+    },
+    {
+      "position_1_based": 164,
+      "key": "queue_text_length_control_faircoin_one_sided_p"
+    }
+  ],
+  "historical_152_preservation_receipt": {
+    "path": "results/v8.3/frozen_claims_preserved.json",
+    "sha256": "de695d40250295136adb84bc109d1c1410905abd98d9fb2757d9c1ddfcf8ccc7",
+    "original_claim_count": 152,
+    "original_records_identical_reported": true,
+    "new_claim_count": 164
+  },
+  "base144ce58_registry_independent_read": {
+    "command": [
+      "git",
+      "show",
+      "144ce58:research/claims.json"
+    ],
+    "status": "TIMEOUT",
+    "bound_s": 8,
+    "old_registry_bytes_recovered": false
+  },
+  "scope": "Mechanical registry count audit only; no new scientific/statistical analysis.",
+  "not_an_explanation_for_158": "Although positions153-158 contain the six always-true queue keys and159-164 contain the six text-control keys, no original158 registry/command/stdout establishes that only the first group was checked."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "VERIFIED_INDEPENDENT_LOCAL_EXECUTION",
+  "result": {
+    "result": "PASS",
+    "checked": 164,
+    "mismatches": []
+  },
+  "exit_code": 0,
+  "elapsed_s": 21.14,
+  "source_recorded_at_utc": "2026-10-26T16:27:41.074080+00:00",
+  "timestamp_role": "Receipt metadata time, not an authenticated timestamp for the alleged08:59 report",
+  "canonical_source_commit": "33328fed2a38255f8a85b9d6ae1d54672c44e3bf",
+  "claims_path": "research/claims.json",
+  "claims_sha256": "c0213e5f470206f619bf3481a1d4f1d225e2cbf09f5135ed638c07044a3f8e4c",
+  "claims_git_blob": "250b19d109b8e7379d4c45ad438d197a17a72d82",
+  "report_numbers_sha256": "940af84551d684888f83b897e45e2dffe0b434be1aac4395a86b99fba7d6f93a",
+  "command_file": "report_numbers.command.json",
+  "stdout_sha256": "73166acfad805a5f741a3090654aed427d5899451c6edf762eb2cca01e1f5f9e",
+  "stderr_sha256": "090bfe9ab97e08f678ca94538230edd001b72112b0aad384d8bcb6a5b9bfe169",
+  "source_receipt": "v10-execution/NUMERIC_RECOVERY.json",
+  "source_receipt_sha256": "74455146d633cd507ecee9ee12fd97e054d76fa26ba595828a681574a142aa6e",
+  "new_rerun_performed_for_this_audit": false,
+  "reason_no_new_rerun": "Existing actual execution has complete raw logs, immutable inputs and a zero-mismatch verdict. It was copied byte-for-byte and hash-checked.",
+  "pdf_association": "PDF_ASSOCIATION.json"
+}

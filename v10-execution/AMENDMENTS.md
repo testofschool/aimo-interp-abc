@@ -19,3 +19,7 @@ The handoff explicitly retains human H2: Felix must see the PDF and type **v8.3 
 Only after the typed H2: record the actual quote/time/exact PDF SHA, push without force, verify remote HEAD/fresh numeric reproduction/private-path count, then ask Felix for the anonymous mirror (H3) and private local OpenReview login (H4). The mirror is preferred; after the prescribed wait use the v10 fallback only with its changed PDF and gates truthfully recorded. One first-author OpenReview note only; reconcile ledger and authenticated authored notes before first creation, and revise that same note thereafter. Trial TLDR edit/revert must have readbacks and exact PDF hash verification.
 
 Official E4-only receipt substitution follows the retained v10 authorization; other PDF content changes need a new look. v9 needs its own actual scored results and later **v9 PDF 확인**. No email or Discord sending is authorized.
+
+## v10.3 — additional local audit, directly adopted
+
+The user answered **v10.3 적용·보완검사 병행**. Preserve/run exact supplied audit_v83.py and record its own output, supplement missing checks separately, explain158/164 only from available primary evidence, and create Desktop/AUDIT_BUNDLE_v8.3.zip with a complete payload hash manifest. The actual executor remains the Studio; M5-only report receipts are not manufactured. The prior a/e false alarms are dropped/reinterpreted as the adopted document specifies. H2 is still a direct PDF confirmation gate. H-ATTACH is Felix's manual ZIP transfer to Claude; Codex does not send it automatically.

@@ -1,0 +1,25 @@
+{
+  "recorded_at_utc": "2026-10-27T00:28:39.797631+00:00",
+  "direct_user_decision": "v10.3 적용·보완검사 병행",
+  "source_of_authority": "Direct human answer to request_user_input_async in this chat",
+  "actual_host": "Mac Studio /Users/felix",
+  "document_host_reference": "M5 /Users/kangjungmin (not present here)",
+  "scope": [
+    "Preserve and execute exact A0 original",
+    "Supplement omitted checks separately",
+    "Explain158/164 with available primary evidence",
+    "Create and hash Desktop AUDIT_BUNDLE_v8.3.zip"
+  ],
+  "not_granted_by_this_decision": [
+    "H2 author PDF approval",
+    "GitHub push beforeH2",
+    "OpenReview posting beforeH2",
+    "Automatic transmission toClaude/email/Discord"
+  ],
+  "H2": "PENDING",
+  "H1_auth": "Retained prior pending local getpass workflow; no duplicate uploader started",
+  "inputs": {
+    "audit_v83.py": "b2bd47f681dc332a6fa17225f9e75f15f4072f7b2543109a938e1e152ec37392",
+    "HANDOFF_v10.3_AUDIT.md": "5046af8e054eeff9cfebbbd42a0144a4b78d7f59e212fc94d2209ed0bfc884aa"
+  }
+}
