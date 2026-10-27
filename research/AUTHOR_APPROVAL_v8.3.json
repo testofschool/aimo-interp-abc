@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-27T08:54:22.690795+00:00",
+  "recorded_at_KST": "2026-10-27T17:54:22.690795+09:00",
+  "authority_source": "DIRECT_HUMAN_USER_MESSAGE_IN_CURRENT_CHAT",
+  "quote_verbatim": "v8.3 PDF 확인, Codabench는 띄워줘 내가 로그인해 줄게",
+  "reviewed_local_commit": "5bbb85342867ace7b5fdd48a5734eea54eab5dc4",
+  "reviewed_anonymous_pdf": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8.3-anonymous.pdf",
+  "reviewed_anonymous_pdf_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+  "author_review_confirmed": true,
+  "H2": "APPROVED_FOR_EXACT_PDF_BYTES",
+  "retained_G_AUTHOR_record": "research/AUTHOR_APPROVAL_v8.1.json",
+  "AI_disclosure_exception_approved_previously": true,
+  "mandatory_checks": {
+    "v3": "PASS19/19_normal",
+    "report_numbers": "PASS164/164",
+    "authorized_scoped_audit": "PASS",
+    "requested_controls": "main_body_Codex_FAIL_AI_statement_Codex_PASS"
+  },
+  "scope": "Existing adopted v10.1/v10.2 publication and one-note workflow; no scientific or PDF edit is authorized by this bookkeeping record. Live authentication and service/readback gates remain.",
+  "Codabench_login": "Human requests browser login page; password remains local, no credential inspection."
+}

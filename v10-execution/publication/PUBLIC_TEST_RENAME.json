@@ -1,0 +1,13 @@
+{
+  "recorded_at_utc": "2026-10-27T08:55:59.339085+00:00",
+  "purpose": "Resolve false positive in explicitly requested lowercase private filename check; keep public synthetic receipt-rendering tests intact.",
+  "old_path": "tests/test_owner_private_renderer.py",
+  "new_path": "tests/test_owner_receipt_renderer.py",
+  "byte_sha256_before": "9e4e64b8291969634ab14a4301091ff46b5a68f0a1261478de5f93d578475b85",
+  "byte_sha256_after": "9e4e64b8291969634ab14a4301091ff46b5a68f0a1261478de5f93d578475b85",
+  "content_unchanged": true,
+  "private_payloads_found": false,
+  "PDF_or_manuscript_changed": false,
+  "gate_changed": false,
+  "historical_path_references": "Retained as historical build evidence; this test is discovered by its test_ basename or run directly."
+}

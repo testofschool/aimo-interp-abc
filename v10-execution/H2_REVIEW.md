@@ -1,4 +1,10 @@
-# v8.3 H2 — 현재 익명 PDF 확인
+# H2 approved for current exact PDF
+
+Direct quote: “v8.3 PDF 확인, Codabench는 띄워줘 내가 로그인해 줄게”.
+
+SHA256: `8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa`. Receipt: research/AUTHOR_APPROVAL_v8.3.json.
+
+# Historical review request fulfilled by direct message above
 
 PDF: [aimo-interp-report-v8.3-anonymous.pdf](../report/aimo-interp-report-v8.3-anonymous.pdf)
 

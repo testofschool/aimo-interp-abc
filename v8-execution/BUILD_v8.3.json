@@ -32,8 +32,8 @@
   },
   "named_pdf_sha256": "9264c4d28af807b447c5a0a2accce9a5dc47f3f7d42b08bf1e7f3e74567bc27f",
   "exact_gate_sha256": "152e2a488eb0c3cdeadbe4195bb09ac90acab464df4326a612098dc63f5c7630",
-  "H2": "PENDING_DIRECT_PDF_CONFIRMATION",
-  "AUTHOR_APPROVAL_v8_3_created": false,
+  "H2": "APPROVED_EXACT_PDF_8c78e829_b98aa",
+  "AUTHOR_APPROVAL_v8_3_created": true,
   "official_ids": "NOT_AVAILABLE_USE_EXPLICIT_QUEUE_FALLBACK",
   "queue_UUID_acceptance_by_organizers": "UNVERIFIED",
   "numeric_recovery": "v10-execution/NUMERIC_RECOVERY.json",
@@ -53,5 +53,6 @@
     "result": "PASS",
     "expectations": "19/19",
     "receipt": "results/v8.3/two-edits-20261027/ai-exception/independent_review.json"
-  }
+  },
+  "author_approval_record": "research/AUTHOR_APPROVAL_v8.3.json"
 }

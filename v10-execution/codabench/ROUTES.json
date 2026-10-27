@@ -1,6 +1,6 @@
 {
   "A": {
-    "status": "UNAVAILABLE",
+    "status": "LOGIN_PAGE_OPEN_FOR_DIRECT_USER_INPUT",
     "separate_automation_browser": "Codabench page shows Login; unauthenticated",
     "existing_user_Chrome": "Felix profile, existing Codabench tab found",
     "control_failures": [
@@ -9,7 +9,9 @@
       "direct user.claimTab/domSnapshot timeout30s",
       "fresh browser.user.openTabs call timeout15s"
     ],
-    "owner_identity_verified": false
+    "owner_identity_verified": false,
+    "tab_id": "1752531639",
+    "observed_header": "testofschool; authenticated owned submissions not yet read"
   },
   "B": {
     "status": "UNAVAILABLE_NO_AUTHENTICATED_PAGE_CONTEXT",
@@ -17,7 +19,7 @@
     "reason": "Existing logged-in tab could not be controlled; separate browser lacks that session."
   },
   "C": {
-    "status": "GETPASS_PROMPT_ACTIVE_LOCAL_INPUT_PENDING",
+    "status": "SESSION_HANDLE_UNAVAILABLE_NOT_RESTARTED",
     "session_id": 86398,
     "prompt": "Codabench testofschool password (local terminal only):",
     "open_in_codex": "QUEUED_NOT_CONFIRMED_VISIBLE",
@@ -25,11 +27,15 @@
     "submission_POSTs": 0,
     "helper_sha256": "9144dc2fac29b6ecd9dca33ce32ef27c0af9828770f3f004ad469467620aa4da",
     "independent_review": "NO_CRITICAL_BLOCKER",
-    "safety_tests": "PASS_10_OF_10"
+    "safety_tests": "PASS_10_OF_10",
+    "previous_status": "GETPASS_PROMPT_ACTIVE_LOCAL_INPUT_PENDING",
+    "last_poll_error": "Unknown process id 86398; does not by itself establish native process state"
   },
   "D": {
     "status": "NOT_USED"
   },
   "new_official_uploads": 0,
-  "prior_submissions": "UNKNOWN_NOT_AUTHENTICATED"
+  "prior_submissions": "UNKNOWN_NOT_AUTHENTICATED",
+  "updated_at_utc": "2026-10-27T08:54:22.690795+00:00",
+  "single_uploader_lock_observation": "FREE_AT_CHECK_NO_AUTH_OR_UPLOAD_STARTED"
 }

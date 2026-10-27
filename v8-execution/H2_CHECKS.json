@@ -4,9 +4,9 @@
   "pdf": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8.3-anonymous.pdf",
   "pdf_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
   "overall_result": "H2_REVIEW_READY_WITH_PRIOR_DIFF_DISCLOSURES",
-  "H2": "PENDING",
-  "G_LOOK": "PENDING",
-  "human_confirmation_quote": null,
+  "H2": "APPROVED_EXACT_PDF_8c78e829_b98aa",
+  "G_LOOK": "APPROVED",
+  "human_confirmation_quote": "v8.3 PDF 확인, Codabench는 띄워줘 내가 로그인해 줄게",
   "required_human_confirmation": "v8.3 PDF 확인",
   "qualified_checks": [
     "f"
@@ -91,5 +91,6 @@
     "original_375_result": "FAIL_PRESERVED"
   },
   "disclosure": "results/v8.3/two-edits-20261027/ai-exception/DISCLOSURE_CHECK.json",
-  "historical_checklist": "results/v8.3/two-edits-20261027/ai-exception/H2_CHECKS_previous.json"
+  "historical_checklist": "results/v8.3/two-edits-20261027/ai-exception/H2_CHECKS_previous.json",
+  "author_approval_record": "research/AUTHOR_APPROVAL_v8.3.json"
 }
