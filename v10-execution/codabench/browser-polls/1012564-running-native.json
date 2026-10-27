@@ -1,0 +1,20 @@
+{
+  "observed_at_utc": "2026-10-27T09:37:24.253670+00:00",
+  "source": "authenticated own API page, DOM-visible response JSON; whitelisted fields only",
+  "receipt": {
+    "id": 1012564,
+    "phase": 30038,
+    "owner": "testofschool",
+    "status": "Running",
+    "created_when": "2026-10-27T09:34:57.351246Z",
+    "parent": null,
+    "children": [],
+    "has_children": false,
+    "filename": "bundle3-trained-probe-small.zip",
+    "task": {
+      "id": 36241,
+      "name": "AIMO Robustness Validation v8 - Small Model Track"
+    },
+    "scores": []
+  }
+}

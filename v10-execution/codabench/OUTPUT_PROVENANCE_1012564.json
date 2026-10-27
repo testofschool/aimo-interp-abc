@@ -1,0 +1,76 @@
+{
+  "observed_at_utc": "2026-10-27T09:48:29.882047+00:00",
+  "source": "Native download controls for own Finished submission1012564; no signed storage URLs saved",
+  "raw_artifacts_outside_Git": true,
+  "artifacts": [
+    {
+      "submission_id": 1012564,
+      "artifact": "prediction_result.zip",
+      "local_private_cache_path": "/Users/felix/.cache/aimo-official-outputs/1012564/prediction_result.zip",
+      "sha256": "93a71e6191734906e6a4322394a458faf210091b08ed22457892efb96d8c3db9",
+      "zip_bytes": 794,
+      "members": [
+        {
+          "name": "predictions.jsonl",
+          "uncompressed_bytes": 980,
+          "nonempty_JSON_records": 14,
+          "record_key_names": [
+            "id",
+            "is_robust",
+            "valid"
+          ],
+          "private_values_printed": false
+        },
+        {
+          "name": "ingestion_summary.json",
+          "uncompressed_bytes": 148,
+          "top_level_type": "dict",
+          "key_names": [
+            "case_timeout_s",
+            "cases",
+            "elapsed_s",
+            "invalid_predictions",
+            "job_timeout_s",
+            "skipped_for_deadline",
+            "timeouts"
+          ],
+          "aggregate_metrics": {
+            "invalid_predictions": 0
+          }
+        },
+        {
+          "name": "metadata",
+          "uncompressed_bytes": 107
+        }
+      ]
+    },
+    {
+      "submission_id": 1012564,
+      "artifact": "scoring_result.zip",
+      "local_private_cache_path": "/Users/felix/.cache/aimo-official-outputs/1012564/scoring_result.zip",
+      "sha256": "4df0d22b9523c9251b09936099936ddfdb9715fe3b6d13bf4d8083b117ff5ae8",
+      "zip_bytes": 336,
+      "members": [
+        {
+          "name": "scores.json",
+          "uncompressed_bytes": 61,
+          "top_level_type": "dict",
+          "key_names": [
+            "accuracy",
+            "coverage",
+            "invalid_predictions"
+          ],
+          "aggregate_metrics": {
+            "accuracy": 0.5,
+            "coverage": 1.0,
+            "invalid_predictions": 0
+          }
+        },
+        {
+          "name": "metadata",
+          "uncompressed_bytes": 95
+        }
+      ]
+    }
+  ]
+}

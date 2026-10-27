@@ -1,0 +1,369 @@
+{
+  "schema_version": 1,
+  "prereg_commit": "773b39e1a2ca0f1c4001e0ae1459e7d567e56c80",
+  "created_at_utc": "2026-10-27T09:14:51.193784+00:00",
+  "exploratory": false,
+  "route": "A_BROWSER_UI",
+  "authenticated_user": {
+    "username": "testofschool",
+    "id": null,
+    "source": "authenticated browser header + own My Submissions UI"
+  },
+  "run_state": "ALL_THREE_NATIVE_FINISHED",
+  "registration_consent_quote": "참가 등록·약관 동의 승인",
+  "registration_observed": true,
+  "existing_submissions_check": {
+    "source": "My Submissions Competition phase",
+    "visible_rows": 0,
+    "total": 0,
+    "pages": 1,
+    "daily_used": 0,
+    "daily_limit": 10,
+    "total_used": 0,
+    "total_limit": 300,
+    "pagination_complete": true
+  },
+  "task_selection": {
+    "Main_36237": false,
+    "Small_36241": true,
+    "source": "native checkbox values verified immediately before upload"
+  },
+  "bundles": [
+    {
+      "order": 1,
+      "name": "solution-always-true-small.zip",
+      "path": "v9-execution/upload-order/solution-always-true-small.zip",
+      "bytes": 519,
+      "sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "state": "ACCEPTED_FINISHED",
+      "browser_selection_intent_utc": "2026-10-27T09:15:39.701411+00:00",
+      "upload_attempts": 1,
+      "submission_id": 1012526,
+      "accepted_at_utc": "2026-10-27T09:16:33.108482+00:00",
+      "last_observed_utc": "2026-10-27T09:24:27.127623+00:00",
+      "route": "A_BROWSER_UI",
+      "receipt": {
+        "id": 1012526,
+        "phase": 30038,
+        "owner": "testofschool",
+        "status": "Finished",
+        "created_when": "2026-10-27T09:15:52.385534Z",
+        "parent": null,
+        "children": [],
+        "has_children": false,
+        "filename": "solution-always-true-small.zip",
+        "task": {
+          "id": 36241,
+          "name": "AIMO Robustness Validation v8 - Small Model Track"
+        },
+        "scores": [
+          {
+            "column_key": "accuracy",
+            "id": 3145155,
+            "index": 1,
+            "is_primary": true,
+            "precision": 2,
+            "score": "0.5000000000"
+          },
+          {
+            "column_key": "coverage",
+            "id": 3145156,
+            "index": 2,
+            "is_primary": false,
+            "precision": 2,
+            "score": "1.0000000000"
+          },
+          {
+            "column_key": "invalid_predictions",
+            "id": 3145157,
+            "index": 3,
+            "is_primary": false,
+            "precision": 2,
+            "score": "0.0000000000"
+          }
+        ]
+      },
+      "server_ZIP_sha256": "UNVERIFIED; linkage from one chooser selection of local hash-verified file and native matching filename",
+      "small_score_submission_id": 1012526,
+      "small_score_receipt": {
+        "id": 1012526,
+        "phase": 30038,
+        "owner": "testofschool",
+        "status": "Finished",
+        "created_when": "2026-10-27T09:15:52.385534Z",
+        "parent": null,
+        "children": [],
+        "has_children": false,
+        "filename": "solution-always-true-small.zip",
+        "task": {
+          "id": 36241,
+          "name": "AIMO Robustness Validation v8 - Small Model Track"
+        },
+        "scores": [
+          {
+            "column_key": "accuracy",
+            "id": 3145155,
+            "index": 1,
+            "is_primary": true,
+            "precision": 2,
+            "score": "0.5000000000"
+          },
+          {
+            "column_key": "coverage",
+            "id": 3145156,
+            "index": 2,
+            "is_primary": false,
+            "precision": 2,
+            "score": "1.0000000000"
+          },
+          {
+            "column_key": "invalid_predictions",
+            "id": 3145157,
+            "index": 3,
+            "is_primary": false,
+            "precision": 2,
+            "score": "0.0000000000"
+          }
+        ]
+      },
+      "observed_finished_KST": "2026-10-27T18:24:27.127623+09:00",
+      "native_finished_time_KST": null,
+      "receipt_source": "authenticated own API page, DOM-visible response JSON; whitelisted fields only; no credentials/CSRF/signed URLs read or saved"
+    },
+    {
+      "order": 2,
+      "name": "solution-text-length-control-small.zip",
+      "path": "v9-execution/upload-order/solution-text-length-control-small.zip",
+      "bytes": 1387,
+      "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "state": "ACCEPTED_FINISHED",
+      "browser_selection_intent_utc": "2026-10-27T09:27:31.893281+00:00",
+      "upload_attempts": 1,
+      "existing_before_upload": {
+        "source": "fresh authenticated Competition phase My Submissions",
+        "total": 1,
+        "pages": 1,
+        "ids": [
+          1012526
+        ],
+        "only_existing_name": "solution-always-true-small.zip",
+        "this_bundle_match_count": 0
+      },
+      "Small_only_reverified": true,
+      "submission_id": 1012549,
+      "accepted_at_utc": "2026-10-27T09:29:33.255332+00:00",
+      "last_observed_utc": "2026-10-27T09:33:31.419211+00:00",
+      "receipt": {
+        "id": 1012549,
+        "phase": 30038,
+        "owner": "testofschool",
+        "status": "Finished",
+        "created_when": "2026-10-27T09:27:40.282618Z",
+        "parent": null,
+        "children": [],
+        "has_children": false,
+        "filename": "solution-text-length-control-small.zip",
+        "task": {
+          "id": 36241,
+          "name": "AIMO Robustness Validation v8 - Small Model Track"
+        },
+        "scores": [
+          {
+            "column_key": "accuracy",
+            "id": 3145231,
+            "index": 1,
+            "is_primary": true,
+            "precision": 2,
+            "score": "0.5000000000"
+          },
+          {
+            "column_key": "coverage",
+            "id": 3145232,
+            "index": 2,
+            "is_primary": false,
+            "precision": 2,
+            "score": "1.0000000000"
+          },
+          {
+            "column_key": "invalid_predictions",
+            "id": 3145233,
+            "index": 3,
+            "is_primary": false,
+            "precision": 2,
+            "score": "0.0000000000"
+          }
+        ]
+      },
+      "small_score_submission_id": 1012549,
+      "small_score_receipt": {
+        "id": 1012549,
+        "phase": 30038,
+        "owner": "testofschool",
+        "status": "Finished",
+        "created_when": "2026-10-27T09:27:40.282618Z",
+        "parent": null,
+        "children": [],
+        "has_children": false,
+        "filename": "solution-text-length-control-small.zip",
+        "task": {
+          "id": 36241,
+          "name": "AIMO Robustness Validation v8 - Small Model Track"
+        },
+        "scores": [
+          {
+            "column_key": "accuracy",
+            "id": 3145231,
+            "index": 1,
+            "is_primary": true,
+            "precision": 2,
+            "score": "0.5000000000"
+          },
+          {
+            "column_key": "coverage",
+            "id": 3145232,
+            "index": 2,
+            "is_primary": false,
+            "precision": 2,
+            "score": "1.0000000000"
+          },
+          {
+            "column_key": "invalid_predictions",
+            "id": 3145233,
+            "index": 3,
+            "is_primary": false,
+            "precision": 2,
+            "score": "0.0000000000"
+          }
+        ]
+      },
+      "receipt_source": "authenticated own API page, DOM-visible response JSON; whitelisted fields only",
+      "server_ZIP_sha256": "UNVERIFIED; native matching filename linked to one hash-verified local chooser selection",
+      "observed_finished_KST": "2026-10-27T18:33:31.419211+09:00",
+      "native_finished_time_KST": null
+    },
+    {
+      "order": 3,
+      "name": "bundle3-trained-probe-small.zip",
+      "path": "v9-execution/bundle3-trained-probe-small.zip",
+      "bytes": 27662500,
+      "sha256": "852fff17372ebdcf967549a4270339a2e792372c1b5496da968b2df884ccc67b",
+      "state": "ACCEPTED_FINISHED",
+      "browser_selection_intent_utc": "2026-10-27T09:34:30.791597+00:00",
+      "upload_attempts": 1,
+      "existing_before_upload": {
+        "source": "fresh authenticated Competition phase My Submissions",
+        "total": 2,
+        "pages": 1,
+        "ids": [
+          1012526,
+          1012549
+        ],
+        "this_bundle_match_count": 0
+      },
+      "Small_only_reverified": true,
+      "submission_id": 1012564,
+      "accepted_at_utc": "2026-10-27T09:37:24.253670+00:00",
+      "last_observed_utc": "2026-10-27T09:44:15.357184+00:00",
+      "receipt": {
+        "id": 1012564,
+        "phase": 30038,
+        "owner": "testofschool",
+        "status": "Finished",
+        "created_when": "2026-10-27T09:34:57.351246Z",
+        "parent": null,
+        "children": [],
+        "has_children": false,
+        "filename": "bundle3-trained-probe-small.zip",
+        "task": {
+          "id": 36241,
+          "name": "AIMO Robustness Validation v8 - Small Model Track"
+        },
+        "scores": [
+          {
+            "column_key": "accuracy",
+            "id": 3145329,
+            "index": 1,
+            "is_primary": true,
+            "precision": 2,
+            "score": "0.5000000000"
+          },
+          {
+            "column_key": "coverage",
+            "id": 3145330,
+            "index": 2,
+            "is_primary": false,
+            "precision": 2,
+            "score": "1.0000000000"
+          },
+          {
+            "column_key": "invalid_predictions",
+            "id": 3145331,
+            "index": 3,
+            "is_primary": false,
+            "precision": 2,
+            "score": "0.0000000000"
+          }
+        ]
+      },
+      "small_score_submission_id": 1012564,
+      "small_score_receipt": {
+        "id": 1012564,
+        "phase": 30038,
+        "owner": "testofschool",
+        "status": "Finished",
+        "created_when": "2026-10-27T09:34:57.351246Z",
+        "parent": null,
+        "children": [],
+        "has_children": false,
+        "filename": "bundle3-trained-probe-small.zip",
+        "task": {
+          "id": 36241,
+          "name": "AIMO Robustness Validation v8 - Small Model Track"
+        },
+        "scores": [
+          {
+            "column_key": "accuracy",
+            "id": 3145329,
+            "index": 1,
+            "is_primary": true,
+            "precision": 2,
+            "score": "0.5000000000"
+          },
+          {
+            "column_key": "coverage",
+            "id": 3145330,
+            "index": 2,
+            "is_primary": false,
+            "precision": 2,
+            "score": "1.0000000000"
+          },
+          {
+            "column_key": "invalid_predictions",
+            "id": 3145331,
+            "index": 3,
+            "is_primary": false,
+            "precision": 2,
+            "score": "0.0000000000"
+          }
+        ]
+      },
+      "receipt_source": "authenticated own API page, DOM-visible response JSON; whitelisted fields only",
+      "server_ZIP_sha256": "UNVERIFIED; native matching filename linked to one hash-verified local chooser selection",
+      "prereg_chronology": {
+        "prereg_commit": "773b39e1a2ca0f1c4001e0ae1459e7d567e56c80",
+        "prereg_commit_time_utc": "2026-10-26T16:03:42+00:00",
+        "native_submission_created_when": "2026-10-27T09:34:57.351246Z",
+        "status": "PREREG_PRECEDES_SUBMISSION",
+        "classification": "PREREG_CHRONOLOGY_VERIFIED"
+      },
+      "observed_finished_KST": "2026-10-27T18:44:15.357184+09:00",
+      "native_finished_time_KST": null
+    }
+  ],
+  "last_submission_attempt_utc": "2026-10-27T09:37:24.253670+00:00",
+  "next_bundle_not_before_utc": "2026-10-27T09:18:33.108482+00:00",
+  "next_status_poll_not_before_utc": "2026-10-27T09:39:24.253670+00:00",
+  "prereg_source_unchanged_before_probe": true,
+  "all_three_accepted_once": true,
+  "all_three_finished_utc": "2026-10-27T09:44:15.357184+00:00"
+}

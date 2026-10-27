@@ -1,0 +1,45 @@
+{
+  "observed_at_utc": "2026-10-27T09:33:31.419211+00:00",
+  "source": "authenticated own API page, DOM-visible response JSON; whitelisted fields only",
+  "receipt": {
+    "id": 1012549,
+    "phase": 30038,
+    "owner": "testofschool",
+    "status": "Finished",
+    "created_when": "2026-10-27T09:27:40.282618Z",
+    "parent": null,
+    "children": [],
+    "has_children": false,
+    "filename": "solution-text-length-control-small.zip",
+    "task": {
+      "id": 36241,
+      "name": "AIMO Robustness Validation v8 - Small Model Track"
+    },
+    "scores": [
+      {
+        "column_key": "accuracy",
+        "id": 3145231,
+        "index": 1,
+        "is_primary": true,
+        "precision": 2,
+        "score": "0.5000000000"
+      },
+      {
+        "column_key": "coverage",
+        "id": 3145232,
+        "index": 2,
+        "is_primary": false,
+        "precision": 2,
+        "score": "1.0000000000"
+      },
+      {
+        "column_key": "invalid_predictions",
+        "id": 3145233,
+        "index": 3,
+        "is_primary": false,
+        "precision": 2,
+        "score": "0.0000000000"
+      }
+    ]
+  }
+}

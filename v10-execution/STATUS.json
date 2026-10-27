@@ -1,6 +1,6 @@
 {
-  "recorded_at_utc": "2026-10-27T08:54:22.690795+00:00",
-  "status": "H2_APPROVED_H1_BROWSER_LOGIN_PENDING",
+  "recorded_at_utc": "2026-10-27T10:16:42.499219+00:00",
+  "status": "H1_COMPLETE_H2_APPROVED_WAITING_MAC_UNLOCK_FOR_GIT_DOWNLOAD",
   "branch": "v10",
   "authority": {
     "adoption": "v10을 새 실행 사양으로 적용",
@@ -56,17 +56,17 @@
       "original_375_result": "FAIL_PRESERVED"
     }
   },
-  "H1": "BROWSER_LOGIN_PAGE_OPEN_FOR_USER; C_SESSION_HANDLE86398_UNAVAILABLE_NOT_RESTARTED",
+  "H1": "COMPLETE_NATIVE3_OF3_FINISHED_7_OF14_COVERAGE1_INVALID0",
   "H2": "APPROVED_EXACT_PDF_8c78e829_b98aa",
   "H3": "NOT_CREATED_PREFERRED_AFTER_PUSH",
   "H4": "LOCAL_AUTH_NOT_ATTEMPTED",
-  "T_SCORE": "UNMEASURED_NO_OFFICIAL_IDS",
-  "T_PUSH": "AUTHORIZED_PREPARING_IN_SPECIFIED_REPOSITORY",
+  "T_SCORE": "NATIVE_COUNT_PROOF_AND_PREREG_PAIRED_ANALYSIS_COMPLETE",
+  "T_PUSH": "NOT_COMPLETED_ICLOUD_OBJECTS_MAC_LOCKED_ATTEMPTS_STOPPED",
   "T_POST": "NOT_RUN_ONE_NOTE_ONLY_PRIOR_NOTES_UNKNOWN",
   "T_V9": "PREREG_AND_HELPER_READY_NO_PDF_UNTIL_ACTUAL_SCORE",
   "T_V9_POST": "NOT_RUN",
   "new_queue_submissions": 0,
-  "new_official_submissions": 0,
+  "new_official_submissions": 3,
   "pushes": 0,
   "OpenReview_attachment_uploads": 0,
   "OpenReview_note_creations": 0,
@@ -78,7 +78,7 @@
     "Literal handoff positive gate fixture omitted probe and failed WHITEBOX_RUN; corrected synthetic fixture PASS7/7, negative FAIL2 as intended. Gate bytes unchanged.",
     "Canonical M5 executor is unavailable here; exact verified Studio canon reused without claiming M5 work."
   ],
-  "next_user_actions": "Log in to Codabench testofschool in opened Chrome tab; H3 mirror and H4 local OpenReview login follow push.",
+  "next_user_actions": "Unlock Mac locally; Finder cannot be operated while locked. Codabench requires no further uploads. H3 mirror/H4 OpenReview follow verifiedpush.",
   "monitoring": "v10-execution/AUTOMATIONS.json",
   "audit_v10_3": {
     "status": "BUNDLE_VERIFIED_WAITING_H_ATTACH_OR_H2",

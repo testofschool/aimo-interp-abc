@@ -1,0 +1,27 @@
+{
+  "recorded_at_utc": "2026-10-27T10:16:42.499219+00:00",
+  "hostname": "Jungs-Mac-Studio.local",
+  "repository": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work",
+  "attempted_HEAD": "6dfd889d5b92f6fa13b1c603dcb5c7cf3c91c9e1",
+  "destination": "origin refs/heads/main",
+  "attempts": [
+    {
+      "session": 55172,
+      "result": "INTERRUPTED_EXIT130_LOCAL_ICLOUD_OBJECT_IO",
+      "remote_after": "a429a9e71b65e804481394f8b3a5f6799a9a6987"
+    },
+    {
+      "session": 76299,
+      "result": "INTERRUPTED_EXIT130_LOCAL_ICLOUD_OBJECT_IO",
+      "temporary_git_option": "pack.readReverseIndex=false",
+      "remote_after": "a429a9e71b65e804481394f8b3a5f6799a9a6987"
+    }
+  ],
+  "completed_pushes": 0,
+  "force_pushes": 0,
+  "other_repository_pushes": 0,
+  "local_recovery": "Exact canonical object hashes verified; original cloud placeholders preserved; no logical source/history/PDF changes",
+  "current_external_block": "Finder tool reports Mac locked; manual unlock required for download UI",
+  "ten_minute_completion_requirement": "NOT_MET; no success claimed",
+  "next_step": "After manual Mac unlock, download remaining original objects in Finder, then report livehostname/root/HEAD before a fresh normal push."
+}

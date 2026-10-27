@@ -1,0 +1,18 @@
+{
+  "status": "NO_MATHEMATICAL_BLOCKER_FOUND",
+  "reviewer": "independent read-only subagent official_contract_review",
+  "scope": "Frozen public scorer and preregistered helper only; reviewer did not read native cache, gold labels, item IDs or prediction rows",
+  "findings": [
+    "Under correct/total, covered/total and invalid=(total-covered)+malformed+duplicates+extras, coverage1/invalid0 plus14unique valid binary predictions establishes N14 and exact accuracy0.5 establishes k7.",
+    "Matched binary predictions plus common binary-label contract give m=b+c; equal correct totals imply b=c=m/2 and require even parity.",
+    "Exact conditional McNemar p=1 when b=c, including m0; this is not equivalence, black-box sufficiency or causal ablation.",
+    "Equal plug-in p10,p01 specifies no nonzero directional effect, so no80% discrimination first_n can honestly be supplied."
+  ],
+  "remaining_limits": [
+    "Frozen official source is not an independently authenticated server deployment hash.",
+    "iid paired conditional reference is not a cluster-robust or unconditional generalization guarantee."
+  ],
+  "private_cache_reads": 0,
+  "network_requests": 0,
+  "edits": 0
+}

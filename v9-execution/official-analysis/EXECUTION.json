@@ -1,0 +1,27 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-27T10:05:46.521177+00:00",
+  "status": "PASS",
+  "script_sha256": "5aea09c8f1b0a11e10ef0bd9e2a11d62f5adcfc337c97111ef8ea50380584511",
+  "protocol_sha256": "1fade7edee89a5086766afdf1ebe8cfb61ea6e5f53e3d4adbeb91bbc5d5dbad5",
+  "outputs": {
+    "NATIVE_OUTPUT_CHECK.json": "18aa8282087e476f585199a1937498d6f89c3806d2a87bdc0c0db7b1d81085d9",
+    "ABLATION.json": "af0e3f3605312e717461f2aa8d3326337a773cd0d36ab9fe18a3dd1d17d77e2c"
+  },
+  "private_cache_read_only": true,
+  "raw_output_files_copied_into_git": 0,
+  "network_requests": 0,
+  "auth_requests": 0,
+  "uploads": 0,
+  "paper_or_gate_edits": 0,
+  "SCORES_or_journal_edits": 0,
+  "git_commits": 0,
+  "argv": [
+    "/Users/felix/.cache/codex-runtimes/codex-primary-runtime/dependencies/python/bin/python3",
+    "-I",
+    "v9-execution/official_native_analysis.py"
+  ],
+  "working_directory": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work",
+  "exit_code": 0,
+  "native_item_rows_not_in_receipts": true
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-27T10:05:46.521177+00:00",
+  "status": "MEASURED_PREREGISTERED_COMPARATIVE_CONTROL",
+  "comparison": "organizer trained probe bundle3 minus frozen length-and-digit control bundle2",
+  "label": "comparative control, not causal white-box signal ablation",
+  "scope": "Official Small validation task36241, same14 native stable item IDs; conditional iid paired reference only",
+  "preregistered": true,
+  "exploratory": false,
+  "prereg_chronology": {
+    "prereg_commit": "773b39e1a2ca0f1c4001e0ae1459e7d567e56c80",
+    "prereg_commit_time_KST": "2026-10-27T01:03:42+09:00",
+    "prereg_sha256": "c8f4d89a0a4efca1f458e65c61167551056bd34ade8d542db5682a56545d3ddc",
+    "current_git_metadata_recheck": {
+      "status": "CURRENT_GIT_METADATA_RECHECK_MATCH",
+      "commit_time": "2026-10-27T01:03:42+09:00"
+    },
+    "native_probe_created_KST": "2026-10-27T18:34:57.351246+09:00",
+    "seconds_prereg_to_probe_submission": 63075.351246,
+    "status": "PREREG_PRECEDES_NATIVE_PROBE_SUBMISSION",
+    "prior_official_results_seen": false,
+    "scope": "Local actual-Git prereg receipt and native server submission creation; not a fabricated server finish time"
+  },
+  "pairing_route": "stable-item binary predictions plus two validated score totals",
+  "validated_score_contract": {
+    "same_evaluation_items": true,
+    "unweighted_binary_accuracy": true,
+    "probe_coverage": 1.0,
+    "control_coverage": 1.0,
+    "probe_invalid_predictions": 0,
+    "control_invalid_predictions": 0
+  },
+  "native_validation": "v9-execution/NATIVE_OUTPUT_CHECK.json",
+  "paired_protocol_sha256": "1fade7edee89a5086766afdf1ebe8cfb61ea6e5f53e3d4adbeb91bbc5d5dbad5",
+  "primary": {
+    "mode": "PAIRED_EXACT_CONDITIONAL_MCNEMAR",
+    "table": {
+      "both_correct": 3,
+      "probe_only": 4,
+      "control_only": 4,
+      "both_wrong": 3
+    },
+    "n": 14,
+    "probe_correct": 7,
+    "control_correct": 7,
+    "accuracy_difference_probe_minus_control": 0.0,
+    "discordant_items": 8,
+    "pvalue": 1.0,
+    "pvalue_fraction": "1",
+    "alpha": 0.05,
+    "reject_reference_null": false,
+    "independence_status": "CONDITIONAL_REFERENCE_ASSUMPTION_NOT_PROVEN",
+    "equivalence_claim_allowed": false,
+    "causal_signal_ablation_claim_allowed": false
+  },
+  "secondary_paired_n80": {
+    "status": "NO_NONZERO_DIRECTIONAL_EFFECT_IN_SPECIFIED_MODEL",
+    "first_n": null,
+    "max_n": 2000,
+    "target": 0.8,
+    "model": {
+      "p10": 0.2857142857142857,
+      "p01": 0.2857142857142857
+    },
+    "scope": "equal discordance probabilities are the reference null; not proof of actual equivalence",
+    "status_qualification": "EXPLORATORY_OBSERVED_JOINT_PLUG_IN_NOT_CONFIRMED_SAMPLE_REQUIREMENT"
+  },
+  "pvalue": 1.0,
+  "N80": null,
+  "reporting": {
+    "equivalence_claim_allowed": false,
+    "black_box_sufficiency_claim_allowed": false,
+    "absence_of_white_box_benefit_claim_allowed": false,
+    "causal_signal_ablation_claim_allowed": false,
+    "final_test_ranking_claim_allowed": false,
+    "problem_cluster_structure": "UNMEASURED; iid conditional reference, not cluster-robust inference",
+    "reference_label_stability": "Same native task/phase and stable matched case IDs; private reference hash not exposed; no individual labels reconstructed"
+  },
+  "sources": [
+    "https://www.statsmodels.org/stable/generated/statsmodels.stats.contingency_tables.mcnemar.html",
+    "https://www.statsmodels.org/stable/_modules/statsmodels/stats/contingency_tables.html#mcnemar",
+    "https://docs.scipy.org/doc/scipy/reference/generated/scipy.stats.binomtest.html"
+  ]
+}

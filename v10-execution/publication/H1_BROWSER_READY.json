@@ -1,0 +1,37 @@
+{
+  "recorded_at_utc": "2026-10-27T09:12:06.783153+00:00",
+  "result": "PASS3/3",
+  "bundles": [
+    {
+      "bundle": "always_true",
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v9-execution/upload-order/solution-always-true-small.zip",
+      "bytes": 519,
+      "sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "match": true,
+      "empty_small_txt_at_root": true,
+      "CRC": "PASS"
+    },
+    {
+      "bundle": "text_control",
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v9-execution/upload-order/solution-text-length-control-small.zip",
+      "bytes": 1387,
+      "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "match": true,
+      "empty_small_txt_at_root": true,
+      "CRC": "PASS"
+    },
+    {
+      "bundle": "trained_probe",
+      "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v9-execution/bundle3-trained-probe-small.zip",
+      "bytes": 27662500,
+      "sha256": "852fff17372ebdcf967549a4270339a2e792372c1b5496da968b2df884ccc67b",
+      "match": true,
+      "empty_small_txt_at_root": true,
+      "CRC": "PASS"
+    }
+  ],
+  "pickle_or_model_executed": false,
+  "prereg_commit": "773b39e1a2ca0f1c4001e0ae1459e7d567e56c80",
+  "registration_consent_quote": "참가 등록·약관 동의 승인",
+  "registration_observation": "Browser shows You have been registered!; existing displayed submissions0, daily0/10,total0/300; no agent registration click was performed after consent because UI was already registered."
+}

@@ -1,0 +1,10 @@
+{
+  "observed_at_utc": "2026-10-27T09:19:24.653742+00:00",
+  "parent": {
+    "id_requested": 1012526,
+    "http_status": 404,
+    "curl_exit": 0,
+    "transport": "Unauthenticated read-only GET of known own native ID; browser ownership already verified"
+  },
+  "children": []
+}

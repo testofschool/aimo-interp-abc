@@ -1,0 +1,45 @@
+{
+  "observed_at_utc": "2026-10-27T09:24:27.127623+00:00",
+  "source": "authenticated own API page, DOM-visible response JSON; whitelisted fields only; no credentials/CSRF/signed URLs read or saved",
+  "receipt": {
+    "id": 1012526,
+    "phase": 30038,
+    "owner": "testofschool",
+    "status": "Finished",
+    "created_when": "2026-10-27T09:15:52.385534Z",
+    "parent": null,
+    "children": [],
+    "has_children": false,
+    "filename": "solution-always-true-small.zip",
+    "task": {
+      "id": 36241,
+      "name": "AIMO Robustness Validation v8 - Small Model Track"
+    },
+    "scores": [
+      {
+        "column_key": "accuracy",
+        "id": 3145155,
+        "index": 1,
+        "is_primary": true,
+        "precision": 2,
+        "score": "0.5000000000"
+      },
+      {
+        "column_key": "coverage",
+        "id": 3145156,
+        "index": 2,
+        "is_primary": false,
+        "precision": 2,
+        "score": "1.0000000000"
+      },
+      {
+        "column_key": "invalid_predictions",
+        "id": 3145157,
+        "index": 3,
+        "is_primary": false,
+        "precision": 2,
+        "score": "0.0000000000"
+      }
+    ]
+  }
+}

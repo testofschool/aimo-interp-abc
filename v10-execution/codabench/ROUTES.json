@@ -1,6 +1,6 @@
 {
   "A": {
-    "status": "LOGIN_PAGE_OPEN_FOR_DIRECT_USER_INPUT",
+    "status": "COMPLETE_NATIVE_BROWSER3_OF3_FINISHED",
     "separate_automation_browser": "Codabench page shows Login; unauthenticated",
     "existing_user_Chrome": "Felix profile, existing Codabench tab found",
     "control_failures": [
@@ -9,17 +9,32 @@
       "direct user.claimTab/domSnapshot timeout30s",
       "fresh browser.user.openTabs call timeout15s"
     ],
-    "owner_identity_verified": false,
+    "owner_identity_verified": true,
     "tab_id": "1752531639",
-    "observed_header": "testofschool; authenticated owned submissions not yet read"
+    "observed_header": "testofschool; authenticated owned submissions not yet read",
+    "registration": "OBSERVED_REGISTERED_AFTER_CURRENT_HUMAN_TERMS_CONSENT",
+    "accepted_ids": [
+      1012526,
+      1012549,
+      1012564
+    ],
+    "Small_only_verified": true,
+    "all_small_task36241_verified": true,
+    "all_native_output_counts_verified": "7/14, coverage1, invalid0",
+    "submission_attempts_per_bundle": [
+      1,
+      1,
+      1
+    ],
+    "new_uploads_allowed": false
   },
   "B": {
-    "status": "UNAVAILABLE_NO_AUTHENTICATED_PAGE_CONTEXT",
+    "status": "NOT_NEEDED",
     "POSTs": 0,
     "reason": "Existing logged-in tab could not be controlled; separate browser lacks that session."
   },
   "C": {
-    "status": "SESSION_HANDLE_UNAVAILABLE_NOT_RESTARTED",
+    "status": "NOT_NEEDED_NO_RESTART",
     "session_id": 86398,
     "prompt": "Codabench testofschool password (local terminal only):",
     "open_in_codex": "QUEUED_NOT_CONFIRMED_VISIBLE",
@@ -32,10 +47,12 @@
     "last_poll_error": "Unknown process id 86398; does not by itself establish native process state"
   },
   "D": {
-    "status": "NOT_USED"
+    "status": "NOT_NEEDED"
   },
-  "new_official_uploads": 0,
-  "prior_submissions": "UNKNOWN_NOT_AUTHENTICATED",
+  "new_official_uploads": 3,
+  "prior_submissions": "NATIVE_OWN_COMPETITION_UI0_ALL1PAGE_BEFORE_FIRST_UPLOAD",
   "updated_at_utc": "2026-10-27T08:54:22.690795+00:00",
-  "single_uploader_lock_observation": "FREE_AT_CHECK_NO_AUTH_OR_UPLOAD_STARTED"
+  "single_uploader_lock_observation": "FREE_AT_CHECK_NO_AUTH_OR_UPLOAD_STARTED",
+  "browser_lock_session": 50937,
+  "browser_workflow_lock": "RELEASED_AFTER_ALL3_FINISHED"
 }

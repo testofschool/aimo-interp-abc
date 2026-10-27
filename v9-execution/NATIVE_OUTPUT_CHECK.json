@@ -1,0 +1,220 @@
+{
+  "schema_version": 1,
+  "recorded_at_utc": "2026-10-27T10:05:46.521177+00:00",
+  "status": "PASS",
+  "scope": "Own native Small outputs; aggregate-only verification; no gold-label access",
+  "scorer_contract": {
+    "organizer_commit": "de794053debe75a711400696e66b60937cebbb1b",
+    "source_sha256": "df10d76c79129220aba37f0a23300df8d220c46af5dabec4dd20ad09fdda6191",
+    "frozen_git_source_match": true,
+    "unweighted_binary_accuracy": true,
+    "denominator_proof": "coverage=covered/total=1 and invalid=(total-covered)+malformed+duplicate+extra=0; all unique valid predictions therefore cover exactly the reference cases; count14 and accuracy0.5 give k7",
+    "server_deployment_source_hash_authenticated": false,
+    "deployment_limit": "Frozen official source and native schema/values establish the declared reference contract; server deployment bytes and private reference hash are not exposed."
+  },
+  "runs": [
+    {
+      "run_order": 1,
+      "bundle": "solution-always-true-small.zip",
+      "native_submission_id": 1012526,
+      "native_small_task": 36241,
+      "native_phase": 30038,
+      "status": "Finished",
+      "zips": {
+        "submitted-bundle.zip": {
+          "sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+          "bytes": 519,
+          "member_count": 2,
+          "crc_ok": true,
+          "unique_safe_paths": true
+        },
+        "prediction_result.zip": {
+          "sha256": "81e302a57cb908e6138cecd05ba40763e21dbed0b138a82101664040a1749300",
+          "bytes": 794,
+          "member_count": 3,
+          "crc_ok": true,
+          "unique_safe_paths": true
+        },
+        "scoring_result.zip": {
+          "sha256": "97dcf9eed333a6f217dd85ea21e99a644d9ab4a4cb4e3098fd48c145fc19d56b",
+          "bytes": 336,
+          "member_count": 2,
+          "crc_ok": true,
+          "unique_safe_paths": true
+        }
+      },
+      "prediction_rows": 14,
+      "unique_ids": 14,
+      "all_prediction_rows_valid_binary": true,
+      "summary_cases": 14,
+      "summary_invalid_predictions": 0,
+      "summary_timeouts": 0,
+      "summary_skipped": 0,
+      "native_scoring_json_matches_api": true,
+      "accuracy_native_raw": "0.5000000000",
+      "coverage_native_raw": "1.0000000000",
+      "invalid_predictions_native_raw": "0E-10",
+      "N": 14,
+      "k": 7,
+      "count_identification": "public unweighted binary scorer + native full coverage/zero structural invalid + unique valid predictions count",
+      "native_created_when": "2026-10-27T09:15:52.385534Z",
+      "native_created_KST": "2026-10-27T18:15:52.385534+09:00",
+      "native_exact_finished_time": null,
+      "native_exact_finished_time_status": "NOT_EXPOSED_BY_SAVED_NATIVE_API",
+      "observed_finished_KST": "2026-10-27T18:24:27.127623+09:00"
+    },
+    {
+      "run_order": 2,
+      "bundle": "solution-text-length-control-small.zip",
+      "native_submission_id": 1012549,
+      "native_small_task": 36241,
+      "native_phase": 30038,
+      "status": "Finished",
+      "zips": {
+        "submitted-bundle.zip": {
+          "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+          "bytes": 1387,
+          "member_count": 3,
+          "crc_ok": true,
+          "unique_safe_paths": true
+        },
+        "prediction_result.zip": {
+          "sha256": "71127cde4bce9f39a69a1e292cc7acf1ee5f0f8083b7c97d75ed473876d8140b",
+          "bytes": 802,
+          "member_count": 3,
+          "crc_ok": true,
+          "unique_safe_paths": true
+        },
+        "scoring_result.zip": {
+          "sha256": "a4f6fc34287d0b0af03fecb25b7407a3a0e8b9d754356c6bf1009ceebc7dceaa",
+          "bytes": 337,
+          "member_count": 2,
+          "crc_ok": true,
+          "unique_safe_paths": true
+        }
+      },
+      "prediction_rows": 14,
+      "unique_ids": 14,
+      "all_prediction_rows_valid_binary": true,
+      "summary_cases": 14,
+      "summary_invalid_predictions": 0,
+      "summary_timeouts": 0,
+      "summary_skipped": 0,
+      "native_scoring_json_matches_api": true,
+      "accuracy_native_raw": "0.5000000000",
+      "coverage_native_raw": "1.0000000000",
+      "invalid_predictions_native_raw": "0E-10",
+      "N": 14,
+      "k": 7,
+      "count_identification": "public unweighted binary scorer + native full coverage/zero structural invalid + unique valid predictions count",
+      "native_created_when": "2026-10-27T09:27:40.282618Z",
+      "native_created_KST": "2026-10-27T18:27:40.282618+09:00",
+      "native_exact_finished_time": null,
+      "native_exact_finished_time_status": "NOT_EXPOSED_BY_SAVED_NATIVE_API",
+      "observed_finished_KST": "2026-10-27T18:33:31.419211+09:00"
+    },
+    {
+      "run_order": 3,
+      "bundle": "bundle3-trained-probe-small.zip",
+      "native_submission_id": 1012564,
+      "native_small_task": 36241,
+      "native_phase": 30038,
+      "status": "Finished",
+      "zips": {
+        "submitted-bundle.zip": {
+          "sha256": "852fff17372ebdcf967549a4270339a2e792372c1b5496da968b2df884ccc67b",
+          "bytes": 27662500,
+          "member_count": 5,
+          "crc_ok": true,
+          "unique_safe_paths": true
+        },
+        "prediction_result.zip": {
+          "sha256": "93a71e6191734906e6a4322394a458faf210091b08ed22457892efb96d8c3db9",
+          "bytes": 794,
+          "member_count": 3,
+          "crc_ok": true,
+          "unique_safe_paths": true
+        },
+        "scoring_result.zip": {
+          "sha256": "4df0d22b9523c9251b09936099936ddfdb9715fe3b6d13bf4d8083b117ff5ae8",
+          "bytes": 336,
+          "member_count": 2,
+          "crc_ok": true,
+          "unique_safe_paths": true
+        }
+      },
+      "prediction_rows": 14,
+      "unique_ids": 14,
+      "all_prediction_rows_valid_binary": true,
+      "summary_cases": 14,
+      "summary_invalid_predictions": 0,
+      "summary_timeouts": 0,
+      "summary_skipped": 0,
+      "native_scoring_json_matches_api": true,
+      "accuracy_native_raw": "0.5000000000",
+      "coverage_native_raw": "1.0000000000",
+      "invalid_predictions_native_raw": "0E-10",
+      "N": 14,
+      "k": 7,
+      "count_identification": "public unweighted binary scorer + native full coverage/zero structural invalid + unique valid predictions count",
+      "native_created_when": "2026-10-27T09:34:57.351246Z",
+      "native_created_KST": "2026-10-27T18:34:57.351246+09:00",
+      "native_exact_finished_time": null,
+      "native_exact_finished_time_status": "NOT_EXPOSED_BY_SAVED_NATIVE_API",
+      "observed_finished_KST": "2026-10-27T18:44:15.357184+09:00"
+    }
+  ],
+  "same_real_item_id_sets_all_three": true,
+  "individual_item_ids_or_prediction_rows_published": false,
+  "raw_native_outputs_remain_outside_git": true,
+  "raw_member_sha256": [
+    {
+      "run_order": 1,
+      "prediction_member_sha256": "ba4f452773d204c234e309a93d8c1aaf57f3fc2f7e89e5f36853b970904c50fd",
+      "ingestion_summary_sha256": "1584d77e8f396b1a277eefacc512998599c3907b9451a55b3c7624cbb042f5e0",
+      "scores_member_sha256": "bf92a7a6932fe0ae525d56dfb05aa8cda1584f08442ae66779126ec27fc1d7c3"
+    },
+    {
+      "run_order": 2,
+      "prediction_member_sha256": "ff44b22bc7727842d12abf71756f2b681685834126df30ea12715f6157f6c134",
+      "ingestion_summary_sha256": "ad47f38b301cb2c2d0d0c9ee9f8b3ad2f4bc91e3886333b6b63daf3ee8ba9a00",
+      "scores_member_sha256": "bf92a7a6932fe0ae525d56dfb05aa8cda1584f08442ae66779126ec27fc1d7c3"
+    },
+    {
+      "run_order": 3,
+      "prediction_member_sha256": "16df2580fbedebf90c24420d2de02ac44fe807805d81517193f5ea620d8e5f2b",
+      "ingestion_summary_sha256": "a1f557425e02416a92a5622b77c38d539f9d6efcd128f9afe1bbd9ef276b8b9a",
+      "scores_member_sha256": "bf92a7a6932fe0ae525d56dfb05aa8cda1584f08442ae66779126ec27fc1d7c3"
+    }
+  ],
+  "prereg_chronology": {
+    "prereg_commit": "773b39e1a2ca0f1c4001e0ae1459e7d567e56c80",
+    "prereg_commit_time_KST": "2026-10-27T01:03:42+09:00",
+    "prereg_sha256": "c8f4d89a0a4efca1f458e65c61167551056bd34ade8d542db5682a56545d3ddc",
+    "current_git_metadata_recheck": {
+      "status": "CURRENT_GIT_METADATA_RECHECK_MATCH",
+      "commit_time": "2026-10-27T01:03:42+09:00"
+    },
+    "native_probe_created_KST": "2026-10-27T18:34:57.351246+09:00",
+    "seconds_prereg_to_probe_submission": 63075.351246,
+    "status": "PREREG_PRECEDES_NATIVE_PROBE_SUBMISSION",
+    "prior_official_results_seen": false,
+    "scope": "Local actual-Git prereg receipt and native server submission creation; not a fabricated server finish time"
+  },
+  "input_receipts": {
+    "SCORES_sha256": "dc1ac04cbd0cd27b41f3c090de948132252c765641daf03f743fef963d6f06bc",
+    "journal_sha256": "af1a8c21245757c06556cb6eaab86092a7c40835f3c5b14d1cffe0927d63da57"
+  },
+  "source_receipts_unchanged_during_analysis": true,
+  "no_signed_urls_in_outputs": true,
+  "input_receipts_snapshots": {
+    "v9-execution/SCORES.json": {
+      "snapshot": "v9-execution/official-analysis/inputs/SCORES.pre-count-enrichment.json",
+      "sha256": "dc1ac04cbd0cd27b41f3c090de948132252c765641daf03f743fef963d6f06bc"
+    },
+    "v9-execution/official-upload-journal.json": {
+      "snapshot": "v9-execution/official-analysis/inputs/journal.pre-count-enrichment.json",
+      "sha256": "af1a8c21245757c06556cb6eaab86092a7c40835f3c5b14d1cffe0927d63da57"
+    }
+  }
+}

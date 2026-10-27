@@ -1,0 +1,8 @@
+{
+  "result": "PASS",
+  "scope": "SYNTHETIC renderer cases only; no owner or service measurements",
+  "tests": 7,
+  "failures": 0,
+  "errors": 0,
+  "details": "test_expired_deadline_keeps_missing_receipts_unmeasured (__main__.OwnerPrivateRenderingTests) ... ok\ntest_fallback_tampering_cannot_license_measured_claims (__main__.OwnerPrivateRenderingTests) ... ok\ntest_guarded_candidate_still_requires_numeric_registry (__main__.OwnerPrivateRenderingTests) ... ok\ntest_historical_v5_outline_stays_markerless (__main__.OwnerPrivateRenderingTests) ... ok\ntest_missing_receipts_replace_only_owner_block (__main__.OwnerPrivateRenderingTests) ... ok\ntest_structure_errors_are_explicit (__main__.OwnerPrivateRenderingTests) ... ok\ntest_valid_strict_receipts_allow_registered_candidate (__main__.OwnerPrivateRenderingTests) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.109s\n\nOK\n"
+}
