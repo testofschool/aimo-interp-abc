@@ -1,0 +1,104 @@
+{
+  "result": "PASS",
+  "checks": {
+    "pinned_audit_executed": true,
+    "complete_historical_checkset": true,
+    "exact_build_pdf_sha256": true,
+    "build_source_sha256": true,
+    "all_applicable_scoped_assertions": true,
+    "historical_queue_only_failure": true,
+    "validated_native_source": true,
+    "strict_anonymous_author_metadata": true,
+    "font_command_success": true,
+    "type3_zero": true,
+    "only_three_E4_source_deltas": true,
+    "E4_values_match_native_receipts": true,
+    "three_complete_expected_E4_blocks": true,
+    "official_ids_three_times_each": true,
+    "no_queue_UUIDs_in_current_PDF": true
+  },
+  "pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+  "historical_scoped_audit": {
+    "result": "FAIL",
+    "text_method": "pypdf",
+    "failed": [
+      "QUEUE_IDS_IN_E4"
+    ],
+    "rows": [
+      {
+        "check": "SHA256",
+        "ok": true,
+        "value": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae"
+      },
+      {
+        "check": "PAGES",
+        "ok": true,
+        "value": 10
+      },
+      {
+        "check": "BODY_LE_5",
+        "ok": true,
+        "value": 5
+      },
+      {
+        "check": "P5_ENDS_validation_grid",
+        "ok": true,
+        "value": ", rather than infer its adequacy from the validation grid. 5"
+      },
+      {
+        "check": "IDENTITY_0",
+        "ok": true,
+        "value": {
+          "hits_by_index": {},
+          "author_meta_is_anonymous": true
+        }
+      },
+      {
+        "check": "URL_ANON",
+        "ok": true,
+        "value": true
+      },
+      {
+        "check": "QUEUE_IDS_IN_E4",
+        "ok": false,
+        "value": [
+          false,
+          false
+        ]
+      },
+      {
+        "check": "E4_7_14_FAIRCOIN",
+        "ok": true,
+        "value": null
+      },
+      {
+        "check": "CODEX_AI_SCOPE_UNAMBIGUOUS",
+        "ok": true,
+        "value": {
+          "AI_heading_count": 1,
+          "References_heading_count": 1,
+          "ordered_unique_boundaries": true,
+          "Codex_inside_allowed_section": 1,
+          "Codex_outside_allowed_section": 0
+        }
+      },
+      {
+        "check": "FORBIDDEN_0",
+        "ok": true,
+        "value": {}
+      },
+      {
+        "check": "CITE_2607_13899",
+        "ok": true,
+        "value": null
+      },
+      {
+        "check": "TYPE3_0",
+        "ok": true,
+        "value": 0
+      }
+    ]
+  },
+  "historical_policy_interpretation": "Queue UUID assertion is replaced only by validated official E4 identity/time/score and exact scope checks. Original FAIL remains recorded.",
+  "review_basis": "Human-reviewed base8c plus adopted official-E4-only revision waiver; this is not a new human PDF review."
+}

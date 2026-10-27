@@ -209,7 +209,37 @@ def run(d):
     queue = importlib.util.module_from_spec(queue_spec)
     queue_spec.loader.exec_module(queue)
     out.update(queue.numbers(queue.inspect()))
+    # Official own-run aggregates are a distinct source from historical queue
+    # observations. Reproduce their paired test without private native rows.
+    official_path = Path(__file__).with_name("official_receipt_numbers.py")
+    official_spec = importlib.util.spec_from_file_location("official_receipt_numbers", official_path)
+    official = importlib.util.module_from_spec(official_spec)
+    official_spec.loader.exec_module(official)
+    out.update(official.numbers(official.inspect()))
+    # The original exact single-predictor reference, before selection correction;
+    # this is not paired probe-versus-control power or a final-test guarantee.
+    for suffix, accuracy in (("acc060", 0.60), ("acc065", 0.65)):
+        out[f"power_at_240_{suffix}"] = round(identifiability.exact_power(240, accuracy), 4)
     return out
+
+
+def claim_mismatches(nums, claims):
+    """A registered null is allowed; an absent key never counts as a null."""
+    bad = []
+    for claim in claims:
+        cur, missing = nums, False
+        for key in claim["key"].split("."):
+            if not isinstance(cur, dict) or key not in cur:
+                cur, missing = None, True
+                break
+            cur = cur[key]
+        if missing or cur != claim["value"]:
+            row = {"claim": claim["text"], "key": claim["key"],
+                   "claimed": claim["value"], "regenerated": cur}
+            if missing:
+                row["missing_key"] = True
+            bad.append(row)
+    return bad
 
 
 def main():
@@ -225,13 +255,7 @@ def main():
         print(json.dumps(nums, indent=1))
         return 0
     claims = json.load(open(a.check))
-    bad = []
-    for c in claims["claims"]:
-        cur = nums
-        for k in c["key"].split("."):
-            cur = cur.get(k) if isinstance(cur, dict) else None
-        if cur != c["value"]:
-            bad.append({"claim": c["text"], "key": c["key"], "claimed": c["value"], "regenerated": cur})
+    bad = claim_mismatches(nums, claims["claims"])
     print(json.dumps({"result": "PASS" if not bad else "FAIL", "checked": len(claims["claims"]), "mismatches": bad}, indent=1, ensure_ascii=False))
     return 0 if not bad else 1
 

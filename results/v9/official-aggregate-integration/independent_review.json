@@ -1,0 +1,183 @@
+{
+  "reviewed_at_utc": "2026-10-27T10:43:47.616841+00:00",
+  "reviewer": "/root/v10_attachment_readonly_audit",
+  "base_commit": "45bfd70",
+  "verdict": "PASS_WITH_SCOPE_LIMITS",
+  "blockers": [],
+  "review_scope": "Independent static integration review, current-file hash verification, exact original claim preservation and pure JSON number-to-claim comparison. No full numeric pipeline or test suite rerun.",
+  "current_pinned_input_hash_checks": [
+    {
+      "path": "v9-execution/SCORES.json",
+      "sha256": "f5cd2423cc88236c350ae2abecb7b1785075a21fc152d32e3f0ab56c238e0b94",
+      "expected_sha256": "f5cd2423cc88236c350ae2abecb7b1785075a21fc152d32e3f0ab56c238e0b94",
+      "match": true
+    },
+    {
+      "path": "v9-execution/NATIVE_OUTPUT_CHECK.json",
+      "sha256": "8ea086829b9e6f0defaab7d477842a22357b757c9c6931f286fb92334c555839",
+      "expected_sha256": "8ea086829b9e6f0defaab7d477842a22357b757c9c6931f286fb92334c555839",
+      "match": true
+    },
+    {
+      "path": "v9-execution/ABLATION.json",
+      "sha256": "af0e3f3605312e717461f2aa8d3326337a773cd0d36ab9fe18a3dd1d17d77e2c",
+      "expected_sha256": "af0e3f3605312e717461f2aa8d3326337a773cd0d36ab9fe18a3dd1d17d77e2c",
+      "match": true
+    },
+    {
+      "path": "v9-execution/paired_protocol.py",
+      "sha256": "1fade7edee89a5086766afdf1ebe8cfb61ea6e5f53e3d4adbeb91bbc5d5dbad5",
+      "expected_sha256": "1fade7edee89a5086766afdf1ebe8cfb61ea6e5f53e3d4adbeb91bbc5d5dbad5",
+      "match": true
+    },
+    {
+      "path": "v9-execution/PREREG.md",
+      "sha256": "c8f4d89a0a4efca1f458e65c61167551056bd34ade8d542db5682a56545d3ddc",
+      "expected_sha256": "c8f4d89a0a4efca1f458e65c61167551056bd34ade8d542db5682a56545d3ddc",
+      "match": true
+    }
+  ],
+  "integration_source_hash_checks": [
+    {
+      "path": "tools/official_receipt_numbers.py",
+      "sha256": "7994f39d07dcb21678305ae00210c485d9dd6c7c26cc6eb4ebb0c537850e8d2f",
+      "expected_sha256": "7994f39d07dcb21678305ae00210c485d9dd6c7c26cc6eb4ebb0c537850e8d2f",
+      "match": true
+    },
+    {
+      "path": "tools/report_numbers.py",
+      "sha256": "b32fdda57031e1b384a109c744422737f9ba458f436fc47b2d4a19fa908437d5",
+      "expected_sha256": "b32fdda57031e1b384a109c744422737f9ba458f436fc47b2d4a19fa908437d5",
+      "match": true
+    },
+    {
+      "path": "tools/render_report.py",
+      "sha256": "751ebc351d46afc2efd77e93bfd5b934c0e11cee4312ac0f125fe31c913ee673",
+      "expected_sha256": "751ebc351d46afc2efd77e93bfd5b934c0e11cee4312ac0f125fe31c913ee673",
+      "match": true
+    },
+    {
+      "path": "tests/test_official_receipt_numbers.py",
+      "sha256": "1b1a013d7d8735f48da6f957b666b2fe6b66fba8d3f0595c06387912964e33c0",
+      "expected_sha256": "1b1a013d7d8735f48da6f957b666b2fe6b66fba8d3f0595c06387912964e33c0",
+      "match": true
+    },
+    {
+      "path": "tests/test_official_receipt_renderer.py",
+      "sha256": "624a7b92b1f302a13a4c56ad09a0de6bbfa833f2e89a1b16e43d8d2d480620d9",
+      "expected_sha256": "624a7b92b1f302a13a4c56ad09a0de6bbfa833f2e89a1b16e43d8d2d480620d9",
+      "match": true
+    },
+    {
+      "path": "tests/test_report_claim_check.py",
+      "sha256": "b8aa11cf326236ae0640a93b72227b13eaf7e9807d3cadf20bd7665a8550de89",
+      "expected_sha256": "b8aa11cf326236ae0640a93b72227b13eaf7e9807d3cadf20bd7665a8550de89",
+      "match": true
+    },
+    {
+      "path": "research/claims.json",
+      "sha256": "20351cfa1e1042cc96ac8002e2eb78e81a958b4a94bfc5305b60431adbf7c3dc",
+      "expected_sha256": "20351cfa1e1042cc96ac8002e2eb78e81a958b4a94bfc5305b60431adbf7c3dc",
+      "match": true
+    },
+    {
+      "path": "results/report_numbers.json",
+      "sha256": "1ae207236283bd25fe8602c205c0931c5eb09c834da55c3ec4224937e5673005",
+      "expected_sha256": "1ae207236283bd25fe8602c205c0931c5eb09c834da55c3ec4224937e5673005",
+      "match": true
+    }
+  ],
+  "immutable_gate_and_protocol_checks": [
+    {
+      "path": "tools/prize_rubric_gate.py",
+      "sha256": "152e2a488eb0c3cdeadbe4195bb09ac90acab464df4326a612098dc63f5c7630",
+      "same_as_45bfd70": true
+    },
+    {
+      "path": "tools/v9_lead_gate.py",
+      "sha256": "a8a0cede549cdc5fd5add4a55bc2525af8314aa50529925f9cdb12283af0c0c4",
+      "same_as_45bfd70": true
+    },
+    {
+      "path": "tools/prereg_codabench_gate.py",
+      "sha256": "07b09da4e05af061f3457268e0ac10e0a45b2bdd28484477345fad8337ff1d9d",
+      "same_as_45bfd70": true
+    },
+    {
+      "path": "v10-execution/audit_v83.py",
+      "sha256": "375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c",
+      "same_as_45bfd70": true
+    },
+    {
+      "path": "v10-execution/audit_v83_ai_exception.py",
+      "sha256": "a1c05d7722dddf4b345ef82f8fe167cac52d6ff0b64c79c7a0e3d07527527645",
+      "same_as_45bfd70": true
+    },
+    {
+      "path": "v9-execution/paired_protocol.py",
+      "sha256": "1fade7edee89a5086766afdf1ebe8cfb61ea6e5f53e3d4adbeb91bbc5d5dbad5",
+      "same_as_45bfd70": true
+    }
+  ],
+  "original_claim_count": 164,
+  "current_claim_count": 199,
+  "original_164_records_exactly_preserved": true,
+  "claim_keys_unique": true,
+  "independent_registered_value_comparison": {
+    "checked": 199,
+    "mismatches": [],
+    "null_vs_missing_distinguished": true
+  },
+  "recorded_test_evidence": {
+    "source": "TESTS.json + legacy owner renderer stdout",
+    "tests": 54,
+    "test_groups": [
+      18,
+      10,
+      4,
+      15,
+      7
+    ],
+    "all_recorded_exit_codes_zero": true,
+    "independently_reexecuted_tests": 0
+  },
+  "static_findings": {
+    "source_provenance": "Five exact source pins plus pinned prior input snapshots; snapshot resolve constrained to reproduction root. Hash mismatch blocks source selection.",
+    "identity_order_binding": "Fixed three-run order is checked against expected bundle filenames, immutable ZIP hashes, native submission IDs and before/after API receipt equality. Wrong array reordering rejects rather than silently cross-associating.",
+    "counts": "N is an integer fixed at14 and equals prediction rows, unique IDs and summary cases; full binary validity, coverage1, invalid0, no skips/timeouts, and exact Decimal(native_accuracy)*N==k are required.",
+    "marginals_inference": "Stored paired primary is recomputed from the joint table; counts must match both official native score margins; N80 and p are recalculated using unchanged pinned protocol.",
+    "renderer_fail_closed": "Official namespace requires correct marker placement and allowed pinned official source; invalid or missing official source raises. Mixed queue/official placeholders require both sources.",
+    "null_handling": "Claim checker rejects absent keys even if registered value is null. Renderer refuses null-valued placeholders; N80 must be described from its explicit status rather than emitted as literal None.",
+    "private_cache": "Helper opens only pinned aggregate receipts/snapshots and unchanged paired helper. No raw native item cache dependency found. Existing denied-private-cache guard reports0 attempts.",
+    "error_handling": "Loader errors keep measured_score_statements_allowed false; numbers() raises. Unhandled programming/schema errors fail hard instead of yielding a successful render.",
+    "identity_output": "Official scalar outputs contain aggregate counts, numeric submission IDs and KST creation timestamps; no owner name, raw item IDs or prediction rows are emitted by this helper."
+  },
+  "limitations": [
+    "This verifies reproducibility and internal consistency of previously validated pinned aggregates; it does not independently authenticate the live server, deployed scorer source, private per-item correctness or native exact finish times.",
+    "The source pins intentionally freeze one three-run order and the verified14-item contract. Different receipts or ordering require a reviewed provenance update; the helper is not a generic future-score importer.",
+    "N80=null is the recorded zero-directional-effect plug-in result, not missing-key acceptance, equivalence, black-box sufficiency or an asserted80% future-sample requirement.",
+    "The199/199 full numeric computation and54 tests were executed by the integration author; this reviewer read their raw receipts and independently verified registry consistency and source hashes without rerunning the full pipeline.",
+    "Renderer confirms supplied numbers against the claims registry, not a fresh numerical regeneration by itself. The mandatory report_numbers.py --check execution remains necessary; the recorded199/199 execution covers that separate boundary."
+  ],
+  "actions": {
+    "source_edits": 0,
+    "pdf_edits_or_builds": 0,
+    "gate_edits": 0,
+    "raw_native_case_or_credentials_cookies_inspection": 0,
+    "network_auth_browser_uploader_interactions": 0,
+    "git_commits_pushes_or_ref_changes": 0,
+    "only_output_written": "results/v9/official-aggregate-integration/independent_review.json"
+  },
+  "second_static_review": {
+    "reviewer": "/root/v10_attachment_readonly_audit/supplemental_static_review",
+    "verdict": "NO_CURRENT_BLOCKING_DEFECT_FOUND",
+    "scope": "Static source and tests inspection; no test execution or writes by second reviewer",
+    "confirmed": [
+      "33 aggregate keys",
+      "array positions bound to expected filename/SHA/native IDs/prior receipt equality",
+      "native N14 and exact score marginal checks",
+      "aggregate-only snapshot dependency",
+      "official-source invalidity blocks whole render"
+    ]
+  }
+}

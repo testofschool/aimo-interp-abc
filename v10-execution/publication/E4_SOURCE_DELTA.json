@@ -1,0 +1,12 @@
+{
+  "result": "SOURCE_DELTA_PASS",
+  "occurrences": 3,
+  "old_template": "Both reference baselines were scored once each through the organizers' temporary evaluation queue during the Codabench outage [S13]; these runs are not on the leaderboard. The always-robust rule scored {{queue_always_true_k}}/{{queue_always_true_n}} (submission id {{queue_always_true_submission_id}}, {{queue_always_true_created_at_kst}} KST) and the length-and-digit control scored {{queue_text_length_control_k}}/{{queue_text_length_control_n}} (submission id {{queue_text_length_control_submission_id}}, {{queue_text_length_control_created_at_kst}} KST); each equals the fair-coin expectation and is not separable from it under the declared null.",
+  "new_template": "Both reference baselines were scored once each on the official Codabench Small Model Track. The always-robust rule scored {{official_always_true_k}}/{{official_always_true_n}} (Codabench submission id {{official_always_true_submission_id}}, {{official_always_true_submitted_at_kst}} KST) and the length-and-digit control scored {{official_text_length_control_k}}/{{official_text_length_control_n}} (Codabench submission id {{official_text_length_control_submission_id}}, {{official_text_length_control_submitted_at_kst}} KST); each equals the fair-coin expectation and is not separable from it under the declared null.",
+  "only_E4_changed": true,
+  "approved_base_pdf_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+  "human_review_receipt_unchanged": "research/AUTHOR_APPROVAL_v8.3.json",
+  "new_revision_authority": "Adopted v10 T-POLL official-E4-only receipt substitution; AMENDMENTS.md:21",
+  "old_outline_sha256": "fe3ee691c120cee7461311e48e06e34e90e5f30d3e1bfc65d9c9df97f0a992cd",
+  "new_outline_sha256": "c26fad550fa86f1e59d248724d2d6805d4503c0f7ffa807009ad8779d336a6f9"
+}

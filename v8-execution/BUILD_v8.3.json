@@ -54,5 +54,38 @@
     "expectations": "19/19",
     "receipt": "results/v8.3/two-edits-20261027/ai-exception/independent_review.json"
   },
-  "author_approval_record": "research/AUTHOR_APPROVAL_v8.3.json"
+  "author_approval_record": "research/AUTHOR_APPROVAL_v8.3.json",
+  "historical_human_reviewed_base_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+  "current_authorized_E4_revision": {
+    "status": "AUTHORIZED_RECEIPT_ONLY_REVISION_VALIDATED",
+    "recorded_at_utc": "2026-10-27T11:03:25.004696+00:00",
+    "human_approved_base_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+    "human_reviewed_artifact": "v10-execution/review/aimo-interp-report-v8.3-reviewed-8c78e829.pdf",
+    "human_approval_receipt": "research/AUTHOR_APPROVAL_v8.3.json",
+    "direct_waiver": "AdoptedHANDOFF_v10 T-POLL E4-only official receipt substitution; v10-execution/AMENDMENTS.md:21",
+    "new_pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+    "new_named_pdf_sha256": "9d3c91905d9e31a2ec1b0e3484cb4af15b6d8b39a93342330777f5075ba27376",
+    "new_human_review_claimed": false,
+    "scope": "ExactlythreeE4paragraphs only;sourcebytesoutsideE4identical. Explanatoryparagraphnaturallyreflows5to4;Table3remains5unchanged.",
+    "numeric_check": "PASS199/199",
+    "v3_normal": "PASS19/19",
+    "native_official_E4_audit": "PASS15/15",
+    "adapter_controls": "PASS10/10",
+    "visual_anonymous": "PASS10/10",
+    "visual_named": "PASS10/10",
+    "body_pages": 5,
+    "pages": 10,
+    "Type3": 0,
+    "historical_a1_audit": "FAIL_QUEUE_IDS_IN_E4_PRESERVED_SUPERSEDED_BY_NATIVE_ID_CHECK",
+    "proofs": [
+      "v10-execution/publication/E4_SOURCE_FIDELITY.json",
+      "v10-execution/publication/E4_FIDELITY_FINAL.json",
+      "v10-execution/publication/E4_AUDIT.json",
+      "v10-execution/publication/E4_ADAPTER_CONTROLS.json",
+      "v10-execution/publication/E4_ADAPTER_REVIEW_FINAL.json",
+      "v10-execution/publication/E4_NAMED_VISUAL.json"
+    ]
+  },
+  "current_anonymous_pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+  "current_named_pdf_sha256": "9d3c91905d9e31a2ec1b0e3484cb4af15b6d8b39a93342330777f5075ba27376"
 }

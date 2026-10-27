@@ -1,0 +1,20 @@
+{
+  "result": "PASS",
+  "passed": 10,
+  "total": 10,
+  "checks": {
+    "numeric_minus_preserved": true,
+    "date_hyphens_preserved": true,
+    "header_only_fonts_FAIL": true,
+    "failed_font_command_FAIL": true,
+    "valid_Type1_row_PASS": true,
+    "gibberish_8word_row_FAIL": true,
+    "nonpositive_font_object_FAIL": true,
+    "empty_source_proof_FAIL": true,
+    "partial_source_proof_FAIL": true,
+    "old_queue_PDF_FAIL": true
+  },
+  "adapter_sha256": "68eb6ca8d19f1724f4ba151b10a814d9c830c7878aadfe531d968ac4a9cde8b6",
+  "negative_input_pdf_modified": false,
+  "pinned_audit_modified": false
+}

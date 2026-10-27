@@ -1,0 +1,51 @@
+{
+  "result": "PASS_WITH_REPORTED_REFLOW",
+  "source_delta": "ExactlythreeE4paragraphs;allothernamed/anonymous sourcebytesidentical",
+  "PDF_text_classification": [
+    {
+      "difference": "ThreeE4queueparagraphs becomeverifiedofficialbaselineparagraphs",
+      "classification": "AuthorizedE4receipt-onlyrevision"
+    },
+    {
+      "difference": "Unchanged first-crossing explanation reflows before the unchangedTable3 in extracted reading order",
+      "explanation_old_pages": [
+        5
+      ],
+      "explanation_new_pages": [
+        4
+      ],
+      "Table3_old_pages": [
+        5
+      ],
+      "Table3_new_pages": [
+        5
+      ],
+      "classification": "ReportednaturalE4paragraphreflow;Table3remainsPage5anditscontents/stylesareunchanged"
+    }
+  ],
+  "identical_table3_block": true,
+  "no_other_PDF_text_difference": true,
+  "remaining_unreported_differences": 0,
+  "pages_old_new": [
+    10,
+    10
+  ],
+  "page_boxes_unchanged": true,
+  "fonts": {
+    "anonymous": {
+      "exit": 0,
+      "font_rows": 11,
+      "Type3": 0
+    },
+    "named": {
+      "exit": 0,
+      "font_rows": 11,
+      "Type3": 0
+    }
+  },
+  "old_human_review_receipt_unchanged": true,
+  "old_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+  "new_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+  "raw_order_comparison_FAIL_preserved": "v10-execution/publication/E4_PDF_TEXT_FIDELITY.json",
+  "anonymous_visual": "Root viewedall10pagesvia3contactsheetimages;nooverlap/tofu/clippedtable/orphanheading;main5/Limitations6/AI6/Refs7/AppendixA8."
+}

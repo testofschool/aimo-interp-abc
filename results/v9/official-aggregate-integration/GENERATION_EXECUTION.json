@@ -1,0 +1,15 @@
+{
+  "argv": [
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+    "-I",
+    "tools/report_numbers.py",
+    "--data-dir",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data",
+    "--out",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v9/official-aggregate-integration/report_numbers.generated.json"
+  ],
+  "cwd": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work",
+  "status": "COMPLETED",
+  "exit_code": 0,
+  "elapsed_s": 6.708
+}

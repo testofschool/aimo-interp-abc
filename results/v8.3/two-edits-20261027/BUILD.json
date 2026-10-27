@@ -1,6 +1,6 @@
 {
   "recorded_at_utc": "2026-10-27T00:48:24.213547+00:00",
-  "status": "CHECKS_PASS_AWAITING_H2",
+  "status": "HISTORICAL_CHECKS_PASS_H2_APPROVED_BASE8c",
   "hostname": "Jungs-Mac-Studio.local",
   "repository": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work",
   "starting_HEAD": "ef5ab08717a45b6fca04b95a0dbb5c2ef5d07a66",
@@ -80,5 +80,9 @@
     "expectations": "19/19",
     "receipt": "results/v8.3/two-edits-20261027/ai-exception/independent_review.json"
   },
-  "author_approval_record": "research/AUTHOR_APPROVAL_v8.3.json"
+  "author_approval_record": "research/AUTHOR_APPROVAL_v8.3.json",
+  "artifact_role": "HISTORICAL_HUMAN_REVIEWED_BASE_BEFORE_AUTHORIZED_OFFICIAL_E4_REVISION",
+  "historical_reviewed_anonymous_artifact": "v10-execution/review/aimo-interp-report-v8.3-reviewed-8c78e829.pdf",
+  "current_revision_receipt": "v10-execution/publication/AUTHORIZED_E4_REVISION.json",
+  "status_at_original_build": "CHECKS_PASS_AWAITING_H2"
 }

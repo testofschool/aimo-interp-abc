@@ -1,0 +1,23 @@
+{
+  "argv": [
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+    "-I",
+    "tools/report_numbers.py",
+    "--data-dir",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data",
+    "--check",
+    "research/claims.json",
+    "--out",
+    "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v9/official-aggregate-integration/report_numbers.checked.json"
+  ],
+  "cwd": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work",
+  "status": "COMPLETED",
+  "exit_code": 0,
+  "elapsed_s": 4.998,
+  "source_sha256": {
+    "tools/report_numbers.py": "b32fdda57031e1b384a109c744422737f9ba458f436fc47b2d4a19fa908437d5",
+    "tools/official_receipt_numbers.py": "7994f39d07dcb21678305ae00210c485d9dd6c7c26cc6eb4ebb0c537850e8d2f",
+    "tools/render_report.py": "ea8302bc595b5d3edf521ab13329ee03ee80d2d97b9ae3fb92435eb976db01da",
+    "research/claims.json": "20351cfa1e1042cc96ac8002e2eb78e81a958b4a94bfc5305b60431adbf7c3dc"
+  }
+}

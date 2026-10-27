@@ -1,0 +1,186 @@
+{
+  "reviewed_at_utc": "2026-10-27T10:52:06.322360+00:00",
+  "reviewer": "/root/v10_attachment_readonly_audit",
+  "variant": "named official-E4",
+  "result": "PASS",
+  "reviewed_pdf": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/official-e4-20261027/main-qhfidn41/main.pdf",
+  "reviewed_pdf_sha256": "9d3c91905d9e31a2ec1b0e3484cb4af15b6d8b39a93342330777f5075ba27376",
+  "page_count": 10,
+  "all_pages_actually_viewed": true,
+  "inspection_method": "All ten existing full-page110dpi PNG renders were individually emitted with view_image and visually inspected in two batches; no PDF editing or rerender was performed by reviewer.",
+  "page_checks": [
+    {
+      "page": 1,
+      "image": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/official-e4-20261027/main-qhfidn41/pages/page-01.png",
+      "image_sha256": "9b9c0e5334907356d38fcd500ed9e9421ccf8ebe49c5bb339ba43fc33d7a1cb7",
+      "pixel_dimensions": [
+        935,
+        1210
+      ],
+      "actually_viewed_full_page": true,
+      "visual_verdict": "PASS",
+      "notes": "Named title and author block are clear; abstract official IDs1012526/1012549 and7/14 with native creation times wrap inside text margins; section1 and preprint footer are unobstructed."
+    },
+    {
+      "page": 2,
+      "image": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/official-e4-20261027/main-qhfidn41/pages/page-02.png",
+      "image_sha256": "f18b841fefa295df7e4e0cca9453287355e00cce33f921afa590eb4765fe63e8",
+      "pixel_dimensions": [
+        935,
+        1210
+      ],
+      "actually_viewed_full_page": true,
+      "visual_verdict": "PASS",
+      "notes": "Running prose and section2/2.1/2.2 hierarchy are clean; subsection2.2 has several body lines before the following-page equation, with no isolated heading."
+    },
+    {
+      "page": 3,
+      "image": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/official-e4-20261027/main-qhfidn41/pages/page-03.png",
+      "image_sha256": "86f612efcdd92efbab7c6a1defd64e9ac61b93b78f469b90ebbee0246b644e4f",
+      "pixel_dimensions": [
+        935,
+        1210
+      ],
+      "actually_viewed_full_page": true,
+      "visual_verdict": "PASS",
+      "notes": "Equations and Table1 fit the text width; wrapped column headers and all rows remain legible without overlap."
+    },
+    {
+      "page": 4,
+      "image": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/official-e4-20261027/main-qhfidn41/pages/page-04.png",
+      "image_sha256": "23c1add4406d418c232807556bb1569f959539b95d2a0071261e9d01492f259c",
+      "pixel_dimensions": [
+        935,
+        1210
+      ],
+      "actually_viewed_full_page": true,
+      "visual_verdict": "PASS",
+      "notes": "Power equation, Table2 and subsection3.2 retain consistent spacing; formulas and table rows are unclipped."
+    },
+    {
+      "page": 5,
+      "image": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/official-e4-20261027/main-qhfidn41/pages/page-05.png",
+      "image_sha256": "1494afcd3bd94424fd1aa1c5f13075749552b2007a764ce170139dc008bd1c92",
+      "pixel_dimensions": [
+        935,
+        1210
+      ],
+      "actually_viewed_full_page": true,
+      "visual_verdict": "PASS",
+      "notes": "Table3 is legible; section3.3 concludes the main body with validation grid.; page5 contains no Limitations heading."
+    },
+    {
+      "page": 6,
+      "image": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/official-e4-20261027/main-qhfidn41/pages/page-06.png",
+      "image_sha256": "586647b195597f628fc2d721b246d6e248cccea55771610cd43f2d5d37f3a822",
+      "pixel_dimensions": [
+        935,
+        1210
+      ],
+      "actually_viewed_full_page": true,
+      "visual_verdict": "PASS",
+      "notes": "Limitations starts at the top of page6; the official E4 receipts and full AI Use Statement including tool names/responsibility fit on the page with a clear footer gap."
+    },
+    {
+      "page": 7,
+      "image": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/official-e4-20261027/main-qhfidn41/pages/page-07.png",
+      "image_sha256": "80740da7e27481819b78ecb224f3177870b43a8f03283623ba3299386ea5f7fa",
+      "pixel_dimensions": [
+        935,
+        1210
+      ],
+      "actually_viewed_full_page": true,
+      "visual_verdict": "PASS",
+      "notes": "All11 references are readable with ordinary wrapping of hashes and links; accents render normally and the reference text stays within margins."
+    },
+    {
+      "page": 8,
+      "image": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/official-e4-20261027/main-qhfidn41/pages/page-08.png",
+      "image_sha256": "043cdc5d08cc67d49d04bd60a5b26eb2601f3bf10f67337f1fd1c84c6f122046",
+      "pixel_dimensions": [
+        935,
+        1210
+      ],
+      "actually_viewed_full_page": true,
+      "visual_verdict": "PASS",
+      "notes": "AppendixA begins clearly; official E4 receipt paragraph and final-private-test-pending limitation are legible; Table4 and following prose do not collide with the footer."
+    },
+    {
+      "page": 9,
+      "image": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/official-e4-20261027/main-qhfidn41/pages/page-09.png",
+      "image_sha256": "e74bbfbce183cc401f11523fddc37e1bffca43a234709b0f855bb56da4bfde03",
+      "pixel_dimensions": [
+        935,
+        1210
+      ],
+      "actually_viewed_full_page": true,
+      "visual_verdict": "PASS",
+      "notes": "Tables5 and6 have clear rules, columns and captions; AppendixB heading has substantive text beneath it before the page break."
+    },
+    {
+      "page": 10,
+      "image": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/official-e4-20261027/main-qhfidn41/pages/page-10.png",
+      "image_sha256": "ab2cd9f68a5a8ab1ebfd2c56844383fcc5680b81d0d5ee7a693ebe34ed702385",
+      "pixel_dimensions": [
+        935,
+        1210
+      ],
+      "actually_viewed_full_page": true,
+      "visual_verdict": "PASS",
+      "notes": "AppendixB continuation and final three prose blocks are legible; ordinary continuation hyphenation from page9 is intact, with no clipped text, isolated heading or glyph squares."
+    }
+  ],
+  "document_checks": {
+    "main_body_pages1_through5": "PASS",
+    "limitations_starts_page6": "PASS",
+    "AI_statement_entirely_page6": "PASS",
+    "named_author_block_intentional": "PASS",
+    "consistent_NeurIPS_style_margins_typography": "PASS",
+    "tables1_through6_legible_and_unclipped": "PASS",
+    "no_text_or_table_overlap": "PASS",
+    "no_missing_glyph_squares_or_tofu_observed": "PASS",
+    "no_isolated_section_heading_or_harmful_orphan_observed": "PASS",
+    "page_numbers_and_footers_clear": "PASS",
+    "E4_IDs_scores_timestamps_fit": "PASS"
+  },
+  "source_fidelity_evidence": {
+    "record": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/publication/E4_SOURCE_FIDELITY.json",
+    "record_sha256": "0b58b20596dbebb36113007a198b5041eaf3cd5618bf7c152b46a0c2c7c3dfff",
+    "approved_base_anonymous_pdf_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+    "recorded_remaining_unreported_source_differences": 0,
+    "current_sources_match_record": [
+      {
+        "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/REPORT_DRAFT.md",
+        "current_sha256": "fde22a3beb9465147d7c998d3dc8ca0f1a374a58f878a58013eafe193a5ed019",
+        "matches_fidelity_after_sha256": true,
+        "root_recorded_only_E4_changed": true,
+        "root_recorded_occurrences": 3
+      },
+      {
+        "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/main.tex",
+        "current_sha256": "dd1cc698fd799a2180c38ecec96f63c1dc5563c452e60a117c54b2a24801e2a1",
+        "matches_fidelity_after_sha256": true,
+        "root_recorded_only_E4_changed": true,
+        "root_recorded_occurrences": 3
+      },
+      {
+        "path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/main-anonymous.tex",
+        "current_sha256": "5f725550f6bc6f3d388e22536e4022548614c72868824a7fb62bff8fd79468a2",
+        "matches_fidelity_after_sha256": true,
+        "root_recorded_only_E4_changed": true,
+        "root_recorded_occurrences": 3
+      }
+    ],
+    "scope_note": "Source-only E4 replacement proof is attributed to the existing root-authored E4_SOURCE_FIDELITY record. This reviewer independently confirmed current source hash bindings and visual appearance, without relabelling that source proof as a new independent old/new source comparison."
+  },
+  "limits": [
+    "This is a named-variant visual review, not an anonymous identity audit or a new author H2 confirmation.",
+    "Scientific receipt authenticity, exact counts and numeric provenance remain covered by the separate native/aggregate checks; visual legibility alone does not establish those facts."
+  ],
+  "actions": {
+    "paper_source_edits": 0,
+    "PDF_edits_or_rebuilds": 0,
+    "Git_OS_configuration_network_auth_browser_actions": 0,
+    "only_output_written": "v10-execution/publication/E4_NAMED_VISUAL.json"
+  }
+}

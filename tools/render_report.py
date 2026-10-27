@@ -36,7 +36,8 @@ def owner_private_validation(text, outline, *, receipts=None, now=None):
     fallback = outline.parent / "OWNER_PRIVATE_VAL_UNMEASURED.md"
     has_markers = "BEGIN_OWNER_PRIVATE_VALIDATION" in text or "END_OWNER_PRIVATE_VALIDATION" in text
     required = outline.name == "REPORT_OUTLINE.md" and fallback.exists()
-    if not has_markers and not required:
+    official_mode = bool(re.search(r"\{\{official_", text))
+    if not has_markers and not required and not official_mode:
         return text, None  # Historical v5 outline and unrelated fixture outlines.
     if not fallback.is_file():
         raise ValueError("owner-private configuration error: canonical UNMEASURED fallback is missing")
@@ -46,23 +47,36 @@ def owner_private_validation(text, outline, *, receipts=None, now=None):
     if end <= begin:
         raise ValueError("owner-private configuration error: markers are reversed")
     queue_mode = bool(re.search(r"\{\{queue_(?:always_true|text_length_control)_", text))
-    section_pattern = r"^##\s+Appendix A[^\n]*$" if queue_mode else r"^##\s+4\.[^\n]*$"
+    section_pattern = r"^##\s+Appendix A[^\n]*$" if queue_mode or official_mode else r"^##\s+4\.[^\n]*$"
     section = re.search(section_pattern, text, re.M)
     section_end = re.search(r"^##\s+", text[section.end():], re.M) if section else None
     stop = section.end() + section_end.start() if section and section_end else len(text)
     if not section or not section.end() <= begin < end < stop:
-        raise ValueError("owner-private configuration error: marker pair must be inside " + ("Appendix A" if queue_mode else "section 4"))
+        raise ValueError("owner-private configuration error: marker pair must be inside " + ("Appendix A" if queue_mode or official_mode else "section 4"))
     fallback_bytes = fallback.read_bytes()
     if hashlib.sha256(fallback_bytes).hexdigest() != OWNER_FALLBACK_SHA256:
         raise ValueError("owner-private configuration error: canonical UNMEASURED fallback hash mismatch")
     unmeasured = fallback_bytes.decode("utf-8")
     if not unmeasured.strip() or "OWNER_PRIVATE_VALIDATION" in unmeasured:
         raise ValueError("owner-private configuration error: fallback must be nonempty and marker-free")
-    module_name = "queue_receipt_scope_v83" if queue_mode else "codabench_receipt_scope"
+    module_name = "official_receipt_numbers" if official_mode else ("queue_receipt_scope_v83" if queue_mode else "codabench_receipt_scope")
     spec = importlib.util.spec_from_file_location(module_name, ROOT / "tools" / (module_name + ".py"))
     scope_module = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(scope_module)
-    if queue_mode:
+    if official_mode:
+        state = scope_module.inspect()
+        if not state["measured_score_statements_allowed"]:
+            raise ValueError("official aggregate receipt source invalid: " + "; ".join(state["errors"]))
+        if queue_mode:
+            # A deliberate historical queue citation in an official candidate
+            # still needs its own source; neither provenance substitutes for it.
+            queue_spec = importlib.util.spec_from_file_location("mixed_queue_scope", ROOT / "tools/queue_receipt_scope_v83.py")
+            queue = importlib.util.module_from_spec(queue_spec)
+            queue_spec.loader.exec_module(queue)
+            queue_state = queue.inspect(now=now)
+            if not queue_state["measured_score_statements_allowed"]:
+                raise ValueError("historical queue receipt source invalid: " + "; ".join(queue_state["errors"]))
+    elif queue_mode:
         state = scope_module.inspect(now=now)
         # Queue facts occur in abstract and limitations too. A missing source
         # must block the whole new rendering instead of leaking stale numbers.

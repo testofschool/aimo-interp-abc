@@ -1,0 +1,8 @@
+{
+  "anonymous_pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+  "anonymous_source_sha256": "5f725550f6bc6f3d388e22536e4022548614c72868824a7fb62bff8fd79468a2",
+  "builder_receipt": "v10-execution/publication/E4_ANONYMOUS_BUILD.json",
+  "source_path": "report/main-anonymous.tex",
+  "approved_base_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+  "new_human_review_claimed": false
+}

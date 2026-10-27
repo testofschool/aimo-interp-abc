@@ -5,7 +5,7 @@
   "style_sha256": "c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a",
   "style_embedded_unmodified": true,
   "style_option": "preprint",
-  "content_sha256": "5a626e6f62dca8644d1d9dd868b50e3b5f0ba8db1a2f4ae7e7e304cb59b77fae",
+  "content_sha256": "fde22a3beb9465147d7c998d3dc8ca0f1a374a58f878a58013eafe193a5ed019",
   "anonymous_source_redactions": [
     "self-repository URLs",
     "self-source commit identifier"
@@ -14,16 +14,16 @@
   "variants": {
     "named": {
       "path": "report/main.tex",
-      "sha256": "045e6b9f2d01bd4f0f0580cc62b39eaa265760c429b9e58bffb4f6fa0fe39a5d",
+      "sha256": "dd1cc698fd799a2180c38ecec96f63c1dc5563c452e60a117c54b2a24801e2a1",
       "author": "Jung Min Kang"
     },
     "anonymous": {
       "path": "report/main-anonymous.tex",
-      "sha256": "d56fcfe42fc26d7dca1b31f2026821b36d05b580efb4a255bc83b6be2f69309e",
+      "sha256": "5f725550f6bc6f3d388e22536e4022548614c72868824a7fb62bff8fd79468a2",
       "author": "Anonymous Author(s)"
     }
   },
-  "source_sha256": "045e6b9f2d01bd4f0f0580cc62b39eaa265760c429b9e58bffb4f6fa0fe39a5d",
+  "source_sha256": "dd1cc698fd799a2180c38ecec96f63c1dc5563c452e60a117c54b2a24801e2a1",
   "content_path": "report/REPORT_DRAFT.md",
   "content_source": "Gated REPORT_OUTLINE.md rendered with results/report_numbers.json"
 }

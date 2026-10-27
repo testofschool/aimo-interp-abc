@@ -1,6 +1,6 @@
 {
-  "recorded_at_utc": "2026-10-27T10:16:42.499219+00:00",
-  "status": "H1_COMPLETE_H2_APPROVED_WAITING_MAC_UNLOCK_FOR_GIT_DOWNLOAD",
+  "recorded_at_utc": "2026-10-27T11:03:25.004696+00:00",
+  "status": "H1_COMPLETE_V83_E4_AUTHORIZED_V9_REVIEW_PENDING_MAC_UNLOCK_PUSH_PENDING",
   "branch": "v10",
   "authority": {
     "adoption": "v10을 새 실행 사양으로 적용",
@@ -22,11 +22,11 @@
     "openreview_sdk": "IMPORT_VERIFIED_2.9.1",
     "record": "v9-execution/preflight/PUBLIC_PREFLIGHT.json"
   },
-  "T_ZIP": "READY_3_OF_3_HASH_VERIFIED_NO_UPLOAD",
+  "T_ZIP": "COMPLETE_3_OF_3_FROZEN_HASH_VERIFIED_NATIVE_SMALL_ACCEPTED_ONCE",
   "T_CANON": "EXACT_APPROVED_STUDIO_BLOB_REUSED_NOT_M5_REBUILD",
   "T_BUILD83": {
     "anonymous_pdf": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8.3-anonymous.pdf",
-    "sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+    "sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
     "main_body_pages": 5,
     "total_pages": 10,
     "Type3": 0,
@@ -34,7 +34,7 @@
     "payload_gate": "PASS",
     "strict_preflight": "TECHNICAL_PASS_READY_FOR_AUTHOR_REVIEW",
     "numeric_historical": "PASS_164_OF_164_FROM_EXISTING_T1",
-    "numeric_current": "PASS164/164_NEW_EXECUTION",
+    "numeric_current": "PASS199/199_NATIVE_INTEGRATED_OLD164_PRESERVED",
     "new_build": true,
     "numeric_recovery": "v10-execution/NUMERIC_RECOVERY.json",
     "H2_checks": "AUTHORIZED_SCOPED_AUDIT_PASS_WITH_PRIOR_DIFF_DISCLOSURES",
@@ -43,7 +43,7 @@
       "e PASS abstract+unnumberedLimitations perE11",
       "f four disclosed lexical deltas remain explicit"
     ],
-    "current_build_receipt": "results/v8.3/two-edits-20261027/BUILD.json",
+    "current_build_receipt": "v10-execution/publication/AUTHORIZED_E4_REVISION.json",
     "previous_PDF": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
     "authorized_scoped_audit": {
       "path": "v10-execution/audit_v83_ai_exception.py",
@@ -54,16 +54,19 @@
       "execution_receipt": "results/v8.3/two-edits-20261027/ai-exception/EXECUTION.json",
       "controls": "PASS13/13",
       "original_375_result": "FAIL_PRESERVED"
-    }
+    },
+    "H2_review_state": "APPROVED_BASE8c_PLUS_AUTHORIZED_E4_ONLY_REVISION9446",
+    "human_reviewed_base_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+    "authorized_official_E4_audit": "PASS15/15_CONTROLS10/10"
   },
   "H1": "COMPLETE_NATIVE3_OF3_FINISHED_7_OF14_COVERAGE1_INVALID0",
   "H2": "APPROVED_EXACT_PDF_8c78e829_b98aa",
   "H3": "NOT_CREATED_PREFERRED_AFTER_PUSH",
   "H4": "LOCAL_AUTH_NOT_ATTEMPTED",
-  "T_SCORE": "NATIVE_COUNT_PROOF_AND_PREREG_PAIRED_ANALYSIS_COMPLETE",
+  "T_SCORE": "COMPLETE_NATIVE_ANALYSIS_AND_199_CLAIM_PIPELINE_54_TESTS",
   "T_PUSH": "NOT_COMPLETED_ICLOUD_OBJECTS_MAC_LOCKED_ATTEMPTS_STOPPED",
   "T_POST": "NOT_RUN_ONE_NOTE_ONLY_PRIOR_NOTES_UNKNOWN",
-  "T_V9": "PREREG_AND_HELPER_READY_NO_PDF_UNTIL_ACTUAL_SCORE",
+  "T_V9": "CANDIDATE_BUILT_8_PAGES_BODY3_V3_19_OF19_V9_7_OF7_WAITING_NEW_H2",
   "T_V9_POST": "NOT_RUN",
   "new_queue_submissions": 0,
   "new_official_submissions": 3,
@@ -78,7 +81,7 @@
     "Literal handoff positive gate fixture omitted probe and failed WHITEBOX_RUN; corrected synthetic fixture PASS7/7, negative FAIL2 as intended. Gate bytes unchanged.",
     "Canonical M5 executor is unavailable here; exact verified Studio canon reused without claiming M5 work."
   ],
-  "next_user_actions": "Unlock Mac locally; Finder cannot be operated while locked. Codabench requires no further uploads. H3 mirror/H4 OpenReview follow verifiedpush.",
+  "next_user_actions": "UnlockMaclocally; separatelyreviewv9PDFandtype v9 PDF 확인. H3mirror/H4authfollowverifiedpush. NoCodabenchuploadsremain.",
   "monitoring": "v10-execution/AUTOMATIONS.json",
   "audit_v10_3": {
     "status": "BUNDLE_VERIFIED_WAITING_H_ATTACH_OR_H2",
@@ -103,5 +106,8 @@
     "expectations": "19/19",
     "receipt": "results/v8.3/two-edits-20261027/ai-exception/independent_review.json"
   },
-  "AUTHOR_APPROVAL_v8_3": "research/AUTHOR_APPROVAL_v8.3.json"
+  "AUTHOR_APPROVAL_v8_3": "research/AUTHOR_APPROVAL_v8.3.json",
+  "H2_v9": "PENDING_EXACT_04421b6f0eb3af7478ababcd42a8aaa0f372ebbb338493de2f941ec85d3be953",
+  "T_V9_publication": "NOT_AUTHORIZED_BEFORE_NEW_PDF_CONFIRMATION",
+  "T_V9_candidate_receipt": "v9-execution/BUILD_v9.json"
 }

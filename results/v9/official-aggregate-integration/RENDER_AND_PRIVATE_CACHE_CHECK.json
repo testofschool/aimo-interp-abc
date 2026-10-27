@@ -1,0 +1,64 @@
+{
+  "render_smoke_checks": [
+    {
+      "name": "current_outline_render",
+      "argv": [
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+        "-I",
+        "tools/render_report.py",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/official-render-smoke/report/REPORT_OUTLINE.md",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v9/official-aggregate-integration/report_numbers.checked.json",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/official-render-smoke/report/REPORT_OUTLINE.md.rendered.md"
+      ],
+      "exit_code": 0,
+      "result": {
+        "result": "PASS",
+        "placeholders": 163,
+        "out": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/official-render-smoke/report/REPORT_OUTLINE.md.rendered.md",
+        "owner_private_validation": {
+          "measurement_status": "RECORDED_TEMPORARY_QUEUE_PUBLIC_RECEIPTS",
+          "rendered_variant": "recorded_owner_scores",
+          "measured_score_statements_allowed": true,
+          "render_gate_expired": false,
+          "source": "USER_SUPPLIED_PUBLIC_TEMPORARY_QUEUE_RECEIPTS",
+          "association_basis": "DIRECT_USER_SUPPLIED_BUNDLE_AND_HANDOFF",
+          "native_owner_receipt_verified": false,
+          "per_problem_balance_inference_allowed": false
+        }
+      }
+    },
+    {
+      "name": "official_fixture_render",
+      "argv": [
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+        "-I",
+        "tools/render_report.py",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/official-render-smoke/report/official_fixture.md",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/results/v9/official-aggregate-integration/report_numbers.checked.json",
+        "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/official-render-smoke/report/official_fixture.md.rendered.md"
+      ],
+      "exit_code": 0,
+      "result": {
+        "result": "PASS",
+        "placeholders": 11,
+        "out": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/official-render-smoke/report/official_fixture.md.rendered.md",
+        "owner_private_validation": {
+          "measurement_status": "NATIVE_OFFICIAL_SMALL_AGGREGATES_VERIFIED",
+          "rendered_variant": "recorded_owner_scores",
+          "measured_score_statements_allowed": true,
+          "render_gate_expired": false,
+          "source": "PINNED_NATIVE_OFFICIAL_AGGREGATE_RECEIPTS",
+          "association_basis": "native authenticated API receipts plus prior native-output aggregate verification",
+          "native_owner_receipt_verified": true,
+          "per_problem_balance_inference_allowed": false
+        }
+      }
+    }
+  ],
+  "current_outline_sha256": "fe3ee691c120cee7461311e48e06e34e90e5f30d3e1bfc65d9c9df97f0a992cd",
+  "actual_manuscript_files_modified": false,
+  "private_cache_open_denied": true,
+  "private_cache_open_attempts": 0,
+  "aggregate_only_source_keys_regenerated": 33,
+  "aggregate_only_private_cache_guard_result": "PASS"
+}

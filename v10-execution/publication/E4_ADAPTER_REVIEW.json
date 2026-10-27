@@ -1,0 +1,57 @@
+{
+  "reviewed_at_utc": "2026-10-27T10:53:31.507070+00:00",
+  "reviewer": "/root/v10_attachment_readonly_audit with second static reviewer /root/v10_attachment_readonly_audit/supplemental_static_review",
+  "source_path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/audit_official_e4.py",
+  "source_sha256": "2b188a1fba3e8374ce254c1886e3179cbac1adf128cd61bb2d685b2c59635412",
+  "verdict": "ADAPTER_ALONE_HAS_FAIL_OPEN_LIMITATIONS; NO_CURRENT_PDF_VISUAL_DEFECT_FOUND",
+  "review_mode": "Static source inspection only; no adapter or controls executed by reviewers; no source edits",
+  "findings": [
+    {
+      "line": 27,
+      "issue": "Global ASCII hyphen deletion can hide a numeric minus sign in PDF-to-E4 comparison",
+      "static_counterexample": "compact(\"scored -7/14\") equals compact(\"scored 7/14\") under the reviewed implementation",
+      "effect": "A changed sign in one E4 block can be normalized away; other blocks still satisfy the inherited broad scored-k/14 assertion. Dates and ID punctuation are also erased.",
+      "remedy": "Preserve numeric signs and meaningful date/ID hyphens; limit normalization to whitespace, soft hyphens and explicitly validated alphabetic display-line breaks. Include a minus-sign negative control."
+    },
+    {
+      "line": 61,
+      "issue": "Font command rc0 plus a first line containing name does not require any valid font rows",
+      "static_counterexample": "Header-only pdffonts output has no Type3 rows and can satisfy both font_command_success and type3_zero",
+      "effect": "A malformed/truncated font report can be reported as strict font success",
+      "remedy": "Require a valid header/separator and at least one schema-valid font row; retain nonzero-return and malformed/header-only negative controls."
+    },
+    {
+      "line": 64,
+      "issue": "all() over fidelity files is vacuously true for an empty list; the complete unique required source set is not enforced",
+      "effect": "An empty/partial source-fidelity receipt can pass current-source hash binding; recorded per-file occurrences and only_E4_changed flags are not required by the adapter",
+      "remedy": "Require exactly the intended REPORT_DRAFT.md/main.tex/main-anonymous.tex set once each, each with three E4 replacements and only_E4_changed true; bind the approved-base SHA explicitly."
+    },
+    {
+      "line": 71,
+      "issue": "Actual PDF SHA is emitted but not compared with a verified build artifact SHA",
+      "effect": "Source-file hashes alone do not bind every PDF byte or all non-E4 PDF text to the reviewed source; the adapter relies on separate build/fidelity/visual receipts for this assurance",
+      "remedy": "Bind the tested PDF hash to the corresponding verified source-and-build receipt and preserve the separate full-source fidelity evidence."
+    }
+  ],
+  "correct_retained_behavior": [
+    "Original authorized disclosure-scoped audit source is hash-pinned",
+    "Original sole QUEUE_IDS_IN_E4 FAIL is explicitly retained and never relabelled as PASS",
+    "Official native source validation runs through the pinned aggregate loader",
+    "Strict Anonymous Author(s) metadata is required by this anonymous adapter",
+    "Official IDs occur exactly three times and queue UUIDs must be absent"
+  ],
+  "current_artifact_context": {
+    "anonymous_E4_audit_pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+    "named_visual_record": "v10-execution/publication/E4_NAMED_VISUAL.json",
+    "named_all10_pages_actually_seen_PASS": true,
+    "current_source_hashes_match_existing_fidelity_record": true,
+    "interpretation": "These static counterexamples are not claims that the current PDFs contain negative scores, missing fonts, incomplete source records or wrong build bytes. Current named E4 values are visually positive7/14 and correctly rendered; source proof is separately recorded."
+  },
+  "actions": {
+    "adapter_executions": 0,
+    "negative_control_executions": 0,
+    "source_gate_pdf_edits": 0,
+    "Git_OS_configuration_network_actions": 0,
+    "only_output_written": "v10-execution/publication/E4_ADAPTER_REVIEW.json"
+  }
+}

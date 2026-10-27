@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "checks": {
+    "minus_sign_preserved": true,
+    "date_hyphens_preserved": true,
+    "header_only_fonts_fail": true,
+    "nonzero_font_exit_fails": true,
+    "one_font_row_passes": true,
+    "empty_source_proof_fails": true,
+    "old_reviewed_queue_PDF_fails_new_official_checks": true
+  },
+  "negative_input_pdf_modified": false,
+  "pinned_audit_modified": false
+}

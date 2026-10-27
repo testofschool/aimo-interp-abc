@@ -1,0 +1,77 @@
+[
+  {
+    "argv": [
+      "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+      "-I",
+      "tests/test_official_receipt_numbers.py"
+    ],
+    "exit_code": 0,
+    "elapsed_s": 0.102,
+    "result": "PASS",
+    "stderr_tail": [
+      "----------------------------------------------------------------------",
+      "Ran 18 tests in 0.050s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "argv": [
+      "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+      "-I",
+      "tests/test_official_receipt_renderer.py"
+    ],
+    "exit_code": 0,
+    "elapsed_s": 0.088,
+    "result": "PASS",
+    "stderr_tail": [
+      "----------------------------------------------------------------------",
+      "Ran 10 tests in 0.023s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "argv": [
+      "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+      "-I",
+      "tests/test_report_claim_check.py"
+    ],
+    "exit_code": 0,
+    "elapsed_s": 1.531,
+    "result": "PASS",
+    "stderr_tail": [
+      "----------------------------------------------------------------------",
+      "Ran 4 tests in 0.000s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "argv": [
+      "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+      "-I",
+      "tests/test_queue_receipt_scope_v83.py"
+    ],
+    "exit_code": 0,
+    "elapsed_s": 0.274,
+    "result": "PASS",
+    "stderr_tail": [
+      "----------------------------------------------------------------------",
+      "Ran 15 tests in 0.192s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "argv": [
+      "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+      "-I",
+      "tests/test_owner_receipt_renderer.py"
+    ],
+    "exit_code": 0,
+    "elapsed_s": 0.188,
+    "result": "PASS",
+    "stderr_tail": []
+  }
+]

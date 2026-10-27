@@ -1,13 +1,21 @@
 {
-  "status": "UPDATED",
+  "status": "UPDATED_TO_NATIVE_H1_COMPLETE_AND_H2_APPROVED",
   "existing": [
     "aimo-codabench",
     "aimo-11-3-fallback"
   ],
-  "new": "aimo-zip-h1",
+  "new": null,
   "six_hour_monitor_until": "2026-11-06T20:00:00+09:00",
-  "H1_reminder": "2026-10-31T12:00:00+09:00",
+  "H1_reminder": "DELETED_COMPLETED_H1",
   "note_check": "2026-11-03T12:00:00+09:00",
   "notification": "Meaningful changes, failures, completion, or required user action only; no outbound email/Discord authority.",
-  "authority": "Direct adoption of v10 T-POLL; preserved previous recurring schedule and target thread."
+  "authority": "Direct adoption of v10 T-POLL; preserved previous recurring schedule and target thread.",
+  "recorded_at_utc": "2026-10-27T10:29:08.058272+00:00",
+  "deleted": [
+    {
+      "id": "aimo-zip-h1",
+      "reason": "All three official Small-track frozen submissions Finished with native receipts; no further upload reminder is needed."
+    }
+  ],
+  "latest_state": "H1 IDs1012526/1012549/1012564 all7/14; H2 exact8c approved; push incomplete due original cloud Git objects/Mac locked; H3/H4 pending."
 }

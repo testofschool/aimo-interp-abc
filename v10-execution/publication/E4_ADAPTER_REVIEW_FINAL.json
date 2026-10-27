@@ -1,0 +1,101 @@
+{
+  "reviewed_at_utc": "2026-10-27T11:01:16.976421+00:00",
+  "reviewer": "/root/v10_attachment_readonly_audit",
+  "source_path": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/v10-execution/audit_official_e4.py",
+  "source_sha256": "68eb6ca8d19f1724f4ba151b10a814d9c830c7878aadfe531d968ac4a9cde8b6",
+  "verdict": "PASS_CURRENT_PINNED_OFFICIAL_E4_ARTIFACT",
+  "prior_review": "E4_ADAPTER_REVIEW.json retained unchanged",
+  "static_recheck": {
+    "numeric_minus_and_date_hyphens_preserved": true,
+    "source_proof_exact_three_unique_filenames": true,
+    "current_source_hashes_required": true,
+    "complete_twelve_historical_rows_required": true,
+    "actual_pdf_hash_bound_to_build_manifest": true,
+    "anonymous_source_hash_bound_to_manifest": true,
+    "header_only_fonts_now_fail": true,
+    "font_returncode_nonzero_now_fails": true,
+    "old_pinned_audits_unedited": true,
+    "font_rows_schema_validated": true,
+    "font_separator_required": true,
+    "malformed_nonempty_font_rows_rejected": true
+  },
+  "independent_current_bindings": {
+    "actual_pdf": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/build/official-e4-20261027/main-anonymous-pll2qtyk/main-anonymous.pdf",
+    "actual_pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+    "matches_manifest_pdf_sha256": true,
+    "matches_actual_audit_pdf_sha256": true,
+    "actual_anonymous_source_sha256": "5f725550f6bc6f3d388e22536e4022548614c72868824a7fb62bff8fd79468a2",
+    "matches_manifest_source_sha256": true,
+    "approved_base_manifest_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+    "new_human_review_claimed": false
+  },
+  "immutable_hash_checks": [
+    {
+      "path": "v10-execution/audit_v83.py",
+      "sha256": "375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c",
+      "expected_sha256": "375a982380f2e0eb43bfe9d85b1c91d1cf0fade81c02613bf0fb902ba46b582c",
+      "unchanged": true
+    },
+    {
+      "path": "v10-execution/audit_v83_ai_exception.py",
+      "sha256": "a1c05d7722dddf4b345ef82f8fe167cac52d6ff0b64c79c7a0e3d07527527645",
+      "expected_sha256": "a1c05d7722dddf4b345ef82f8fe167cac52d6ff0b64c79c7a0e3d07527527645",
+      "unchanged": true
+    },
+    {
+      "path": "tools/prize_rubric_gate.py",
+      "sha256": "152e2a488eb0c3cdeadbe4195bb09ac90acab464df4326a612098dc63f5c7630",
+      "expected_sha256": "152e2a488eb0c3cdeadbe4195bb09ac90acab464df4326a612098dc63f5c7630",
+      "unchanged": true
+    }
+  ],
+  "recorded_execution_evidence": {
+    "actual_audit_result": "PASS",
+    "actual_audit_checks": 15,
+    "all_actual_audit_checks_true": true,
+    "recorded_controls": {
+      "result": "PASS",
+      "checks": {
+        "minus_sign_preserved": true,
+        "date_hyphens_preserved": true,
+        "header_only_fonts_fail": true,
+        "nonzero_font_exit_fails": true,
+        "one_font_row_passes": true,
+        "empty_source_proof_fails": true,
+        "old_reviewed_queue_PDF_fails_new_official_checks": true
+      },
+      "negative_input_pdf_modified": false,
+      "pinned_audit_modified": false
+    },
+    "independent_control_or_adapter_executions": 0,
+    "font_schema_static_recheck_source_sha256": "68eb6ca8d19f1724f4ba151b10a814d9c830c7878aadfe531d968ac4a9cde8b6"
+  },
+  "residual_static_finding": {
+    "present_in_reviewed_version": false,
+    "previous_issue": "Header-only was fixed first; an intermediate84bedf version still accepted any8-token font line.",
+    "resolution": "Current68eb version requires a separator plus schema-valid known font type, encoding, three yes/no flags and two numeric object IDs for every nonempty row, with at least one row and a positive object number.",
+    "review_method": "Static inspection of the changed function only; no extra test execution.",
+    "current_artifact_scope": "The current anonymous PDF/source SHA bindings matched independently; the actual named10-page visual PASS and separate actual11-font-row/Type3zero receipts remain applicable."
+  },
+  "fidelity_scope": {
+    "final_record": "E4_FIDELITY_FINAL.json",
+    "result": "PASS_WITH_REPORTED_REFLOW",
+    "table3_stays_page5_old_and_new": true,
+    "reported_natural_reflow": "Unchanged first-crossing explanatory paragraph moves oldpage5 to newpage4 around unchangedTable3; Table3itself remains page5.",
+    "raw_order_comparison_FAIL_retained": "v10-execution/publication/E4_PDF_TEXT_FIDELITY.json",
+    "remaining_unreported_differences": 0,
+    "new_raw_order_text_PASS_claimed": false,
+    "source_of_full_text_classification": "Existing root-authored source/PDF fidelity receipts; not rerun by this quick static review."
+  },
+  "actions": {
+    "source_pdf_gate_edits": 0,
+    "adapter_or_test_executions": 0,
+    "Git_OS_configuration_network_actions": 0,
+    "only_output_written": "v10-execution/publication/E4_ADAPTER_REVIEW_FINAL.json"
+  },
+  "review_scope_limits": [
+    "Current frozen artifact and manifest binding were checked. These are local reproducibility checks, not live server authentication or a new human H2 approval.",
+    "The recorded7 control checks were read; this reviewer did not execute controls or broaden the test suite.",
+    "Source fidelity and the classified paragraph reflow are attributed to the existing root-authored receipts; raw reading-order FAIL remains preserved, not relabelled as PASS."
+  ]
+}
