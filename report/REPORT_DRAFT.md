@@ -134,7 +134,7 @@ We used AI assistance for **Ideation** (screening hypotheses and research direct
 - **S11:** Yoav Benjamini and Yosef Hochberg. Controlling the false discovery rate: a practical and powerful approach to multiple testing. Journal of the Royal Statistical Society, Series B, 1995. [Original article](https://doi.org/10.1111/j.2517-6161.1995.tb02031.x).
 
 - **S12:** Michal Štefánik, Philipp Mondorf, Andreas Waldis, Qianying Liu, Chuan Yang, Michal Spiegel, Josef Kuchar, Marek Kadlčík, Adam Vawda-Oomerjee, Chaoran Liu, Simon Frieder, Barbara Plank, Fazl Barez and Pontus Stenetorp. AIMO Interpretability Challenge. CoRR, abs/2607.13899, 2026. Organizer-specified proposal citation, matching arXiv v1. [Challenge proposal, version cited](https://arxiv.org/abs/2607.13899v1).
-- **S13:** AIMO-Interp organizers (M. Štefánik, A. Waldis, M. Spiegel). Discord #announcements. Supplied transcript received October 24, 2026; absolute message dates include 9, 16 and 21 October, while later posts retain relative timestamps. The 24 October temporary-evaluation-queue notice is documented in the supplied v8.3 handoff; the recorded queue responses accompany the archive. Original bytes, source hash and date-provenance notes accompany the evidence manifest in the reproduction archive.
+- **S13:** AIMO-Interp organizers (M. Štefánik, A. Waldis, M. Spiegel). Discord #announcements. Supplied transcript received October 24, 2026; absolute message dates include 9, 16 and 21 October, while later posts retain relative timestamps. The organizers announced the temporary evaluation queue on 24 October (AIMO-Interp Discord #announcements); the recorded queue responses accompany the reproduction archive. Original bytes, source hash and date-provenance notes accompany the evidence manifest in the reproduction archive.
 
 ## Appendix A. Supporting label audit and problem-only controls
 
@@ -152,7 +152,7 @@ An earlier public report already identifies problem-level shortcuts and reports 
 
 The two frozen bundles are reference baselines (a constant rule and a surface-feature control).
 
-Both reference baselines were scored once each through the organizers' temporary evaluation queue during the Codabench outage [S13]; these runs are not on the leaderboard. The always-robust rule scored 7/14 (submission id bde5e370-4dba-4f19-8291-4a998bfecdcd, 2026-10-24 19:01:28 KST) and the length-and-digit control scored 7/14 (submission id 0c736e59-8248-4dee-8e4f-2df037c552d7, 2026-10-24 19:03:37 KST); each equals the fair-coin expectation and is not separable from it under the declared null. Final-test performance of these bundles is also UNMEASURED. This owner-result limitation is separate from our observed analysis of the public board.
+Both reference baselines were scored once each through the organizers' temporary evaluation queue during the Codabench outage [S13]; these runs are not on the leaderboard. The always-robust rule scored 7/14 (submission id bde5e370-4dba-4f19-8291-4a998bfecdcd, 2026-10-24 19:01:28 KST) and the length-and-digit control scored 7/14 (submission id 0c736e59-8248-4dee-8e4f-2df037c552d7, 2026-10-24 19:03:37 KST); each equals the fair-coin expectation and is not separable from it under the declared null. Final-test performance of these bundles is also not yet measured (final private test pending). This owner-result limitation is separate from our observed analysis of the public board.
 
 The recorded queue receipt JSONs accompany the reproduction archive.
 

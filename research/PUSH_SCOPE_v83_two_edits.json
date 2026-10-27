@@ -1,0 +1,10 @@
+{
+  "direct_user_rule": "push전에hostname,저장소절대경로,HEAD보고;push는그저장소하나에서만",
+  "permitted_hostname": "Jungs-Mac-Studio.local",
+  "permitted_repository": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work",
+  "starting_HEAD": "ef5ab08717a45b6fca04b95a0dbb5c2ef5d07a66",
+  "must_report_live_HEAD_before_push": true,
+  "H2": "PENDING",
+  "required_revised_audit": "MISSING_375a9823_582c",
+  "pushes_this_step": 0
+}

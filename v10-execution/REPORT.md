@@ -1,3 +1,11 @@
+# Current checkpoint: exact two edits before new H2
+
+The two requested substitutions are rebuilt; current anonymous SHA8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa, main5/total10. Immutablev3normalPASS19/19, freshnumericPASS164/164, fidelityPASS21/21, anonymous+named full-page visualPASS10/10 each. Requested revised audit SHA375a9823…582c isMISSING/UNRUN. New H2 is not requested before this required audit passes. H1-auth unchanged; no push orOpenReview action.
+
+Source/edit/build proof: results/v8.3/two-edits-20261027/. Canon, format prefix and unchanged generator body were verified before authoring; oldPDF2edf retained as history. The oldDesktopAUDIT_BUNDLE ZIP is historical, unchanged. Push policy is research/PUSH_SCOPE_v83_two_edits.json: hostnameJungs-Mac-Studio.local, absolute repository /Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work only, report liveHEAD before push.
+
+The previous records below describe earlier artifact hashes and are history, not current completion claims.
+
 # v10 local execution — H1 / H2 handoff
 
 The user directly adopted v10 and answered H0 **“v9 진행”**. This record is local preparation, with no new competition upload, GitHub push, OpenReview note or external message. The actual executor is the Mac Studio, not the M5 named in the attachment.

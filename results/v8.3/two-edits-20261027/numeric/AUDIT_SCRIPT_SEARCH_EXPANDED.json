@@ -1,0 +1,21 @@
+{
+  "recorded_at_utc": "2026-10-27T00:44:20.555108+00:00",
+  "status": "MISSING",
+  "requested_prefix": "375a9823",
+  "requested_suffix": "582c",
+  "filename_scope": "audit anywhere in basename, any extension, under Downloads and Codex attachments; included.py.txt candidates",
+  "filename_match_count": 13,
+  "code_like_candidates": [
+    {
+      "path": "/Users/felix/Downloads/audit_v83.py",
+      "bytes": 4838,
+      "sha256": "b2bd47f681dc332a6fa17225f9e75f15f4072f7b2543109a938e1e152ec37392",
+      "requested_hash_match": false
+    }
+  ],
+  "py_txt_candidates": [],
+  "noncode_matches_not_read_or_hashed": 12,
+  "file_content_scan": false,
+  "code_reconstruction": false,
+  "candidate_execution": false
+}

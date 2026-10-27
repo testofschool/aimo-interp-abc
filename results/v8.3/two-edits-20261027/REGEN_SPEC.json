@@ -1,0 +1,28 @@
+{
+  "authority": "Direct user request: exactly two prose changes, no other changes; new H2 only after v3/report_numbers/revised375auditPASS",
+  "hostname": "Jungs-Mac-Studio.local",
+  "repository": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work",
+  "starting_HEAD": "ef5ab08717a45b6fca04b95a0dbb5c2ef5d07a66",
+  "PDF_canon": {
+    "anonymous": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+    "named": "c8be7a4f3c4fac8da00d1c7c05f6edef9e17f2e974e97b8a190c371eb9927cc0"
+  },
+  "format_canon": "Embedded unchangedNeurIPS2026 preprint style SHA c3fc2894e83d2517ca18b66741d6c595986d97957dc08ec08bb2125a7ec4555a; T1 fontenc; pdfTeX1.40.29; inline bibliography, same build_pdf.py builder",
+  "generation_strategy": "Current create_source.py body renderer; verify generated old body equals captured old TeX exactly, preserve prefix/style and regenerate only body after exactly two strings. Official-kit placeholder is dataless and is not replaced.",
+  "allowed_changes": [
+    {
+      "old": "The 24 October temporary-evaluation-queue notice is documented in the supplied v8.3 handoff; the recorded queue responses accompany the archive.",
+      "new": "The organizers announced the temporary evaluation queue on 24 October (AIMO-Interp Discord #announcements); the recorded queue responses accompany the reproduction archive."
+    },
+    {
+      "old": "UNMEASURED",
+      "new": "not yet measured (final private test pending)",
+      "scope": "one appendix final-test sentence only"
+    }
+  ],
+  "now_false_statement_scan": "Old current-PDF hash and old audit keyword result describe historical artifacts; keep historical evidence, update current review/build records only. Numeric canonical UNMEASURED states and historical reports are not manuscript prose and stay unchanged.",
+  "predeclared_reflow": "Only affected reference/appendix paragraphs may reflow; page-boundary/font/margin/table/content changes elsewhere must be reported and fixed.",
+  "H2": "PENDING_NEW_PDF",
+  "H1": "UNCHANGED_PASSWORD_WAIT",
+  "push_scope": "This absolute repository only; report hostname/absolute repository/currentHEAD again before any eventualpush; no push this buildturn."
+}

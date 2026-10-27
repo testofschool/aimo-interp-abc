@@ -1,0 +1,18 @@
+{
+  "status": "MISSING",
+  "recorded_at_utc": "2026-10-27T00:45:53.650928+00:00",
+  "cutoff_utc": "2026-10-20T00:45:53.612792+00:00",
+  "scope": "Only recent<=1MiB attachmentTXT and Downloads audit*.txt; exact375a9823 or audit_v83.py reference matching; no code extraction/normalization",
+  "filename_candidates": 172,
+  "eligible_files_scanned": 6,
+  "skipped": {
+    "older_than_7d": 166,
+    "over_1MiB": 0,
+    "symlink_or_not_file": 0,
+    "dataless": 0
+  },
+  "matching_files": [],
+  "code_execution": 0,
+  "reconstruction_or_extraction": false,
+  "credential_text_output": false
+}

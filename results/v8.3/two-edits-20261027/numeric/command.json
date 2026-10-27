@@ -1,0 +1,18 @@
+{
+  "argv": [
+    "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/env/bin/python",
+    "-I",
+    "-X",
+    "importtime",
+    "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/tools/report_numbers.py",
+    "--data-dir",
+    "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/data",
+    "--check",
+    "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro/research/claims.json",
+    "--out",
+    "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/results/v8.3/two-edits-20261027/numeric/report_numbers.json"
+  ],
+  "cwd": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/v10-execution/numeric-runtime/individual-recovery/repro",
+  "canonical_numeric_source_commit": "33328fed2a38255f8a85b9d6ae1d54672c44e3bf",
+  "scope": "CPU fixed-data/claims check; no PDF argument or new scientific/outcome analysis"
+}

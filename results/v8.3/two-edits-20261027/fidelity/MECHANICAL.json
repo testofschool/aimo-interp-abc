@@ -1,0 +1,137 @@
+{
+  "old_pdf_sha256": "2edf06ab6764af045e470acdc77f115700d9cf85303a11d174c80e273c182e51",
+  "new_pdf": "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/build/two-edits-20261027/main-anonymous-1mxq3h1n/main-anonymous.pdf",
+  "new_pdf_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+  "checks": {
+    "old_canon_hash": true,
+    "full_text_only_exact_two_deltas": true,
+    "old_ref_sentence_once": true,
+    "old_UNMEASURED_once": true,
+    "new_ref_sentence_once": true,
+    "new_final_pending_once": true,
+    "main.tex_only_two_tex_deltas": true,
+    "main.tex_prefix_unchanged": true,
+    "main.tex_six_tables_identical": true,
+    "main-anonymous.tex_only_two_tex_deltas": true,
+    "main-anonymous.tex_prefix_unchanged": true,
+    "main-anonymous.tex_six_tables_identical": true,
+    "all_unaffected_pages_pixel_identical": true,
+    "font_families_identical": true,
+    "Type3_zero": true,
+    "pages10": true,
+    "main_ends5_Limitations_starts6": true,
+    "seven_URI_targets_identical": true,
+    "Author_Anonymous": true,
+    "identity_counts_zero": true,
+    "citation_bracket_sequences_identical": true
+  },
+  "failed": [],
+  "pixels": [
+    {
+      "page": 1,
+      "equal": true,
+      "change_bbox": null,
+      "size": [
+        850,
+        1100
+      ]
+    },
+    {
+      "page": 2,
+      "equal": true,
+      "change_bbox": null,
+      "size": [
+        850,
+        1100
+      ]
+    },
+    {
+      "page": 3,
+      "equal": true,
+      "change_bbox": null,
+      "size": [
+        850,
+        1100
+      ]
+    },
+    {
+      "page": 4,
+      "equal": true,
+      "change_bbox": null,
+      "size": [
+        850,
+        1100
+      ]
+    },
+    {
+      "page": 5,
+      "equal": true,
+      "change_bbox": null,
+      "size": [
+        850,
+        1100
+      ]
+    },
+    {
+      "page": 6,
+      "equal": true,
+      "change_bbox": null,
+      "size": [
+        850,
+        1100
+      ]
+    },
+    {
+      "page": 7,
+      "equal": false,
+      "change_bbox": [
+        179,
+        642,
+        693,
+        696
+      ],
+      "size": [
+        850,
+        1100
+      ]
+    },
+    {
+      "page": 8,
+      "equal": false,
+      "change_bbox": [
+        150,
+        135,
+        701,
+        896
+      ],
+      "size": [
+        850,
+        1100
+      ]
+    },
+    {
+      "page": 9,
+      "equal": true,
+      "change_bbox": null,
+      "size": [
+        850,
+        1100
+      ]
+    },
+    {
+      "page": 10,
+      "equal": true,
+      "change_bbox": null,
+      "size": [
+        850,
+        1100
+      ]
+    }
+  ],
+  "visual_review": "PASS_ALL10PAGES_100DPI_INDIVIDUALLY_INSPECTED",
+  "H2": "PENDING",
+  "result": "PASS",
+  "unreported_differences_remaining": 0,
+  "observed_at_utc": "2026-10-27T00:45:52.603962+00:00",
+  "audit_375a9823_status": "NOT_RUN_BY_THIS_FIDELITY_REVIEW; separate pinned-script provenance unresolved"
+}

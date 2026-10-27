@@ -1,0 +1,36 @@
+{
+  "old_generator_body_exact": true,
+  "new_generated_TeX_equals_exact_two_replacements": true,
+  "style_prefix_bytes_unchanged": true,
+  "source": {
+    "report/REPORT_OUTLINE.md": {
+      "before": "7acf61343d92c78a7369d5f8c2d8cfba68b0970b135832be7298a956ed6d619f",
+      "after": "fe3ee691c120cee7461311e48e06e34e90e5f30d3e1bfc65d9c9df97f0a992cd"
+    },
+    "report/REPORT_DRAFT.md": {
+      "before": "d8bd1ec1094987d7d37e6208c6d53fdd66e99fa80a7837719196e88d15a11683",
+      "after": "5a626e6f62dca8644d1d9dd868b50e3b5f0ba8db1a2f4ae7e7e304cb59b77fae"
+    },
+    "report/main.tex": {
+      "before": "a8a93a714ae650defd8b4497748468ab32da7343e08871b34083d6f794d87f1c",
+      "after": "045e6b9f2d01bd4f0f0580cc62b39eaa265760c429b9e58bffb4f6fa0fe39a5d"
+    },
+    "report/main-anonymous.tex": {
+      "before": "31f8ceb94cb94edec4f31712a0b8db49bf828b9afd3e82e8537dc680da604aeb",
+      "after": "d56fcfe42fc26d7dca1b31f2026821b36d05b580efb4a255bc83b6be2f69309e"
+    },
+    "report/source_provenance.json": {
+      "before": "ba6efe8501233a85e97345b7d10b56f507cd03cdc1476f3afc6c8a078b9c55fa",
+      "after": "72dc7e563b16ca553469aa1a55d9031703abe3711a6c1c56d7c7f1a6655579ed"
+    }
+  },
+  "authoring_files_changed": [
+    "report/REPORT_OUTLINE.md",
+    "report/REPORT_DRAFT.md",
+    "report/main.tex",
+    "report/main-anonymous.tex",
+    "report/source_provenance.json"
+  ],
+  "scientific_number_or_claim_registry_edits": 0,
+  "H2": "PENDING"
+}

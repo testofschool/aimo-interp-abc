@@ -1,0 +1,41 @@
+{
+  "recorded_at_utc": "2026-10-27T00:41:45.374235+00:00",
+  "status": "MISSING",
+  "requested_sha256_prefix": "375a9823",
+  "requested_sha256_suffix": "582c",
+  "search_scope": [
+    "/Users/felix/Downloads filenames/subfolders matching audit*.py",
+    "/Users/felix/.codex/attachments filename inventory only"
+  ],
+  "downloads_filename_command": [
+    "rg",
+    "--files",
+    "--hidden",
+    "--no-ignore",
+    "-g",
+    "*[Aa][Uu][Dd][Ii][Tt]*.[Pp][Yy]",
+    "-g",
+    "!**/.git/**",
+    "-g",
+    "!**/.venv/**",
+    "-g",
+    "!**/node_modules/**",
+    "-g",
+    "!**/__pycache__/**",
+    "/Users/felix/Downloads"
+  ],
+  "attachment_inventory_count": 180,
+  "attachment_audit_py_candidates": [],
+  "hashed_candidates": [
+    {
+      "path": "/Users/felix/Downloads/audit_v83.py",
+      "bytes": 4838,
+      "sha256": "b2bd47f681dc332a6fa17225f9e75f15f4072f7b2543109a938e1e152ec37392",
+      "matches_requested_prefix_suffix": false
+    }
+  ],
+  "attachment_text_content_scans": 0,
+  "credential_files_read": 0,
+  "candidate_code_execution": 0,
+  "reconstruction_or_replacement": false
+}

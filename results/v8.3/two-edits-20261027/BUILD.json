@@ -1,0 +1,56 @@
+{
+  "recorded_at_utc": "2026-10-27T00:48:24.213547+00:00",
+  "status": "REBUILT_TWO_EDITS_VERIFIED_EXCEPT_MISSING_REQUIRED_AUDIT",
+  "hostname": "Jungs-Mac-Studio.local",
+  "repository": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work",
+  "starting_HEAD": "ef5ab08717a45b6fca04b95a0dbb5c2ef5d07a66",
+  "source_delta": "SOURCE_DELTA.json",
+  "only_two_approved_prose_changes": true,
+  "no_font_margin_template_changes": true,
+  "allowed_render_reflow": "Referencesp7 andAppendixAp8; other8pagespixel-identical",
+  "variants": {
+    "anonymous": {
+      "pdf": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8.3-anonymous.pdf",
+      "sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+      "bytes": 195886,
+      "pages": 10,
+      "body_pages": 5,
+      "visual": "PASS10/10",
+      "Type3": 0,
+      "build_receipt": "results/v8.3/two-edits-20261027/anonymous_build.json"
+    },
+    "named": {
+      "pdf": "/Users/felix/Desktop/02_대회·해커톤/AIMO Interpretability Challenge/v6-execution/work/report/aimo-interp-report-v8.3-named.pdf",
+      "sha256": "9264c4d28af807b447c5a0a2accce9a5dc47f3f7d42b08bf1e7f3e74567bc27f",
+      "bytes": 197427,
+      "pages": 10,
+      "body_pages": 5,
+      "visual": "PASS10/10",
+      "Type3": 0,
+      "build_receipt": "results/v8.3/two-edits-20261027/named_build.json"
+    }
+  },
+  "checks": {
+    "v3": "PASS19/19_normal_exit0",
+    "report_numbers": "PASS164/164_exit0",
+    "submission_text": "CLEAN_exit0",
+    "fidelity": "PASS21/21_unreported0",
+    "anonymous_visual": "PASS10/10",
+    "named_visual": "PASS10/10",
+    "revised_audit_375a9823_582c": "MISSING_UNRUN"
+  },
+  "required_audit": {
+    "expected_prefix": "375a9823",
+    "expected_suffix": "582c",
+    "actual_path": null,
+    "full_sha256": null,
+    "exit": null,
+    "result": "MISSING",
+    "old_b2_audit_substituted": false
+  },
+  "H2": "NOT_REQUESTED_YET_REQUIRED_REVISED_AUDIT_PENDING",
+  "old_H2_requests": "SUPERSEDED_BY_CURRENT_TWO_EDITS_REQUEST",
+  "H1": "UNCHANGED_EXISTING_PASSWORD_WAIT_SESSION86398",
+  "pushes": 0,
+  "OpenReview_edits": 0
+}

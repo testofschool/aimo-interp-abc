@@ -1,0 +1,22 @@
+{
+  "v3": {
+    "argv": [
+      "python3",
+      "-I",
+      "v10-execution/review/prize_rubric_gate_v3.py",
+      "/Users/felix/Desktop/02_\ub300\ud68c\u00b7\ud574\ucee4\ud1a4/AIMO Interpretability Challenge/v6-execution/work/report/build/two-edits-20261027/main-anonymous-1mxq3h1n/main-anonymous.pdf"
+    ],
+    "exit": 0
+  },
+  "submission_text": {
+    "argv": [
+      "python3",
+      "-I",
+      "tools/submission_text_gate.py",
+      "report/main.tex",
+      "report/main-anonymous.tex",
+      "report/REPORT_DRAFT.md"
+    ],
+    "exit": 0
+  }
+}

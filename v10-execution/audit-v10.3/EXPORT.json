@@ -22,5 +22,8 @@
   "external_transmissions": 0,
   "created_at_KST": "2026-10-27T09:32:46.721882+09:00",
   "independent_verification": "PASS20/20",
-  "independent_verification_record": "INDEPENDENT_BUNDLE_VERIFY.json"
+  "independent_verification_record": "INDEPENDENT_BUNDLE_VERIFY.json",
+  "current_artifact_role": "HISTORICAL_BEFORE_TWO_EDITS",
+  "superseded_by_pdf_sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+  "ZIP_bytes_changed": false
 }
