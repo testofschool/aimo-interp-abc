@@ -40,3 +40,27 @@ results/rebuilt_bundles/
 /v10-execution/audit-v10.3/bundle/
 
 /v10-execution/audit-v10.3/raw/
+
+# Local runtime state and public-source caches are not release artifacts.
+/v12-execution/site_repo/
+/v12-execution/watch.log
+/v12-execution/*.lock
+/v12-execution/*.tmp
+/v12-execution/audit/openreview_client_v2.9.1.py
+/v12-execution/private/
+
+# Raw HTTP/cookie captures, generated probe fixtures, and reproduction binaries stay local.
+/v12-execution/**/*.headers
+/v12-execution/**/*.raw
+/v12-execution/**/*.pdf
+/v12-execution/**/*.joblib
+/v12-execution/**/*.zip
+/v12-execution/audit/supplied-script-probes/
+
+# Live monitor state remains on the operating checkout; source receipts are tracked explicitly.
+/v12-execution/watch_state.json
+/v12-execution/watch_result.json
+/v12-execution/WATCH_RUN_*.json
+/v12-execution/invitation_*_*.json
+
+/v12-execution/PUBLICATION.json

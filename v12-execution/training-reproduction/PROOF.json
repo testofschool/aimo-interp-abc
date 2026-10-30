@@ -1,0 +1,104 @@
+{
+  "status": "PASS",
+  "dataset_id": "aimo-interp/train-main-v2",
+  "train_path": "/Users/felix/aimo-v12/data/train-main-v2.parquet",
+  "train_sha256": "e18eb44207e7987781ec2ff214793196038442bdc1466fdf5498f3e87ec58285",
+  "train_bytes": 11372,
+  "rows": {
+    "public_total": 94,
+    "labelled_fit": 80,
+    "unlabelled_excluded": 14,
+    "fit_distinct_problems": 33,
+    "small_labelled": 43,
+    "small_distinct_problems": 22
+  },
+  "label_counts": {
+    "1": 59,
+    "0": 21
+  },
+  "training_model_rows": {
+    "openai/gpt-oss-120b": 37,
+    "Qwen/Qwen3.5-4B": 12,
+    "Skywork/Skywork-OR1-Math-7B": 12,
+    "deepseek-ai/DeepSeek-R1-0528-Qwen3-8B": 10,
+    "allenai/Olmo-3-7B-Think": 9
+  },
+  "bundle_path": "/Users/felix/aimo-v12/bundles/solution-text-length-control-small.zip",
+  "bundle_sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+  "bundle_bytes": 1387,
+  "artifact_sha256": "e78784044aa5acefb48e956e27d84b15065c26f83d295663834808424dcd180d",
+  "artifact_metadata": {
+    "features": "log1p(len(problem)), count(digits)",
+    "trained_on": "aimo-interp/train-main-v2 labelled rows (80)",
+    "sha_train": "e18eb442"
+  },
+  "recipe": {
+    "training_selector": "dropna(is_robust); fit all remaining rows with integer labels",
+    "features": "log1p(len(problem)), count(digits)",
+    "estimator": {
+      "C": 1.0,
+      "class_weight": "balanced",
+      "dual": false,
+      "fit_intercept": true,
+      "intercept_scaling": 1,
+      "l1_ratio": 0.0,
+      "max_iter": 2000,
+      "n_jobs": null,
+      "penalty": "deprecated",
+      "random_state": null,
+      "solver": "lbfgs",
+      "tol": 0.0001,
+      "verbose": 0,
+      "warm_start": false
+    },
+    "scaling": "No fitted scaler or standardization; direct log1p-length and digit-count features."
+  },
+  "recipe_sha256": "18087aed1a94fc56adf8776496389fa4fa9c4bcbe6cd3b517d424abe136f9c9b",
+  "recipe_hash_scope": "UTF-8 canonical JSON of selector, feature formula, estimator parameters and scaling",
+  "reproducer_sha256": "1ca22456b36b2a934b36cc60a48f3047601517761c3fb6c3464b78a15ec4425c",
+  "recovered_original_source_sha256": "cab8d45d75d228fe6bf7b5cdd11490fbcbd7b10af19811684bbb4e5035c2596e",
+  "parity": {
+    "coefficient_max_abs_difference": 8.326672684688674e-16,
+    "intercept_max_abs_difference": 4.440892098500626e-15,
+    "probability_max_abs_difference": 3.3306690738754696e-16,
+    "prediction_rows": 94,
+    "threshold_prediction_equal": true,
+    "refit_coef": [
+      [
+        -0.3833231470322206,
+        -0.0956922993852017
+      ]
+    ],
+    "submitted_coef": [
+      [
+        -0.3833231470322214,
+        -0.09569229938520168
+      ]
+    ],
+    "refit_intercept": [
+      3.2874828836867347
+    ],
+    "submitted_intercept": [
+      3.287482883686739
+    ],
+    "classes": [
+      0,
+      1
+    ],
+    "tolerance": 1e-10
+  },
+  "packaging": {
+    "identical_to_submitted_zip": true,
+    "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+    "bytes": 1387,
+    "scope": "Repackages unchanged pinned submitted source/artifact; numerical refit is checked separately."
+  },
+  "runtime": {
+    "python": "3.12.14",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3"
+  },
+  "scope": "Public-data final-fit and packaging reproduction; no OOF, private-validation or final-test result is produced."
+}

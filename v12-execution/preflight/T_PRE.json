@@ -1,0 +1,263 @@
+{
+  "schema": "v12.2-t-pre/1",
+  "measured_at_utc": "2026-10-30T01:20:25.545333+00:00",
+  "handoff_path": "/Users/felix/Downloads/aimo_v12.2_bundle/HANDOFF_v12.2.md",
+  "handoff_sha256": "4560f739b1d84d9287d6c4c1fd27deae4884399eaa2fc9daf4008f7cd2adeac7",
+  "repo": "/Users/felix/aimo-v12",
+  "branch": "v12",
+  "local_head": "ce8652bd4c654d61dcd20b3e4150564085df461f",
+  "tools": {
+    "route": "Existing system CLIs and Homebrew Poppler; no installation by preflight agent.",
+    "paths": [
+      "/usr/bin/git",
+      "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+      "/usr/bin/curl",
+      "/opt/homebrew/bin/gh",
+      "/opt/homebrew/bin/pdftotext",
+      "/opt/homebrew/bin/pdfinfo"
+    ],
+    "system_python_openreview_import": {
+      "returncode": 1,
+      "status": "MISSING_IN_SYSTEM_PYTHON; root separately installing isolated SDK runtime"
+    }
+  },
+  "hosts": {
+    "host_api2": {
+      "http_code": "200",
+      "returncode": 0
+    },
+    "host_codabench": {
+      "http_code": "200",
+      "returncode": 0
+    },
+    "host_github": {
+      "http_code": "200",
+      "returncode": 0
+    },
+    "host_mirror": {
+      "http_code": "200",
+      "returncode": 0
+    }
+  },
+  "OR0": {
+    "status": "MATCH",
+    "tmdate": 1793096094565,
+    "snapshot_to_live_diff": {
+      "added": [
+        "rules_no_duplicates"
+      ],
+      "removed": [
+        "submission_track"
+      ],
+      "changed": [
+        "leaderboard_submission_ids",
+        "pdf",
+        "rules_compliance"
+      ]
+    }
+  },
+  "OR1": {
+    "status": "MATCH",
+    "tmdate": 1793207454232,
+    "duedate": 1793969940000,
+    "expdate": 1793971740000,
+    "comparison": "Invitation inner object equals October29 baseline; response envelope differs.",
+    "response_envelope_added": {
+      "fromCache": true
+    }
+  },
+  "OR2": {
+    "status": "MATCH",
+    "content_fields": [
+      "title",
+      "authors",
+      "reciprocal_reviewers",
+      "voluntary_reviewers",
+      "keywords",
+      "TLDR",
+      "abstract",
+      "pdf",
+      "supplementary_material",
+      "leaderboard_submission_ids",
+      "white_box_award",
+      "ai_assistance",
+      "ai_use_statement",
+      "reciprocal_reviewing_acknowledgement",
+      "rules_no_duplicates",
+      "rules_compliance",
+      "venue",
+      "venueid"
+    ],
+    "ids_type": "string",
+    "ids_regex": "^\\s*[^\\s,]+\\s*(,\\s*[^\\s,]+\\s*)?$",
+    "submission_track_present": false,
+    "revision_id_param": {
+      "withVenueid": "NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/Submission",
+      "optional": true
+    }
+  },
+  "OR3": {
+    "status": "MATCH",
+    "value": "We confirm that we have not submitted another report describing an identical or highly similar method, and we acknowledge that overlapping reports may all be desk rejected."
+  },
+  "P1": {
+    "status": "MATCH",
+    "local_and_remote_head": "ce8652bd4c654d61dcd20b3e4150564085df461f",
+    "remote_command_record": "COMMANDS.json:P1"
+  },
+  "PDF1_PDF0": {
+    "status": "MATCH",
+    "measurement_file": "pdf/MEASUREMENT.json",
+    "source_edits": "Exactly three E4 paragraph replacements verified independently against source; PDF extraction reflow is informational.",
+    "gates": "Prize normal 19/19; body5 total10; text CLEAN; Type3 zero; identity total zero."
+  },
+  "MIR": {
+    "status": "PARTIAL — availability and README identity check only",
+    "files_http": "200",
+    "readme_http": "200",
+    "readme_identity_wholeword_total": 0,
+    "all_1029_files_scan": "NOT_MEASURED; historical all-file zero-hit claim not promoted."
+  },
+  "CB1": {
+    "phase_end_status": "MATCH",
+    "phase_end_utc": "2026-11-01T11:55:00Z",
+    "phase_current_status": "Current",
+    "submission_rule": "Force_Latest_Multiple",
+    "counts_status": "MISMATCH mutable live snapshot; expected historical counts are not a gate.",
+    "historical_total": 1142,
+    "current_raw_counts": {
+      "total_submission_records": 1358,
+      "Small": {
+        "rows": 809,
+        "unique_owners": 131
+      },
+      "Main": {
+        "rows": 512,
+        "unique_owners": 111
+      }
+    },
+    "counts_retrieved_at_utc": "2026-10-30T00:47:49.148362+00:00",
+    "counts_source_sha256": "7787e9be388d1c5c8c6d2dc08e8ac4ee249db1a0d9404ae4cfa004d121f74953",
+    "counts_scope": "Recent09:47KST public snapshot reused; no new survivor analysis."
+  },
+  "CB2": {
+    "status": "MATCH for3 official IDs, owner check, Small task, accuracy.5/coverage1/invalid0",
+    "measurement_file": "BOARD_REUSED.json",
+    "rows": [
+      {
+        "submission_id": 1012526,
+        "matching_rows": 1,
+        "owner_matches_expected": true,
+        "task": 36241,
+        "scores": {
+          "accuracy": [
+            "0.5000000000"
+          ],
+          "coverage": [
+            "1.0000000000"
+          ],
+          "invalid_predictions": [
+            "0.0000000000"
+          ]
+        },
+        "status": "MATCH_LEGACY_V12"
+      },
+      {
+        "submission_id": 1012549,
+        "matching_rows": 1,
+        "owner_matches_expected": true,
+        "task": 36241,
+        "scores": {
+          "accuracy": [
+            "0.5000000000"
+          ],
+          "coverage": [
+            "1.0000000000"
+          ],
+          "invalid_predictions": [
+            "0.0000000000"
+          ]
+        },
+        "status": "MATCH_LEGACY_V12"
+      },
+      {
+        "submission_id": 1012564,
+        "matching_rows": 1,
+        "owner_matches_expected": true,
+        "task": 36241,
+        "scores": {
+          "accuracy": [
+            "0.5000000000"
+          ],
+          "coverage": [
+            "1.0000000000"
+          ],
+          "invalid_predictions": [
+            "0.0000000000"
+          ]
+        },
+        "status": "MATCH_LEGACY_V12"
+      }
+    ]
+  },
+  "SITE": {
+    "status": "MISMATCH handled by inspected diff",
+    "old": "df91ac68a10d8d84cddf9f816e6baf25053b7ecf",
+    "new": "e2b7f00a654a1a65c10b3670fbeeb9cbfc2e60f9",
+    "index_diff": "SITE_DIFF_e2b7f00a654a1a65c10b3670fbeeb9cbfc2e60f9.md",
+    "interpretation": "Only organizer team card addition; no report obligation, deadline, or rule change."
+  },
+  "BY": {
+    "status": "MATCH",
+    "head": "0bbdcac000bfbef3d9317cbf5664eeec2ce00fec",
+    "tags_returned": 0
+  },
+  "SCR_Z1_Z2": {
+    "utc": "2026-10-30T01:19:58.812732+00:00",
+    "files": {
+      "tools/or_payload_gate.py": {
+        "bytes": 7731,
+        "sha256": "1102d6029cde3b24c5c9573e07486c63d81f551c86bc253ba9de837a68c1dd7d",
+        "expected": "1102d6029cde3b24c5c9573e07486c63d81f551c86bc253ba9de837a68c1dd7d",
+        "status": "MATCH"
+      },
+      "tools/or_post.py": {
+        "bytes": 7530,
+        "sha256": "3e16849597fd299ef4cdcc02549358da47f9694c89ad402e7b41acb3542f7375",
+        "expected": "3e16849597fd299ef4cdcc02549358da47f9694c89ad402e7b41acb3542f7375",
+        "status": "MATCH"
+      },
+      "tools/or_watch.py": {
+        "bytes": 4263,
+        "sha256": "0f6e62c18896e57d2b6fa18c751e47e7a4f663f4dee5c588a6928b9495874df1",
+        "expected": "0f6e62c18896e57d2b6fa18c751e47e7a4f663f4dee5c588a6928b9495874df1",
+        "status": "MATCH"
+      },
+      "v12-execution/payload.json": {
+        "bytes": 2569,
+        "sha256": "f434f002eefef7edd1854c0523a2a4aff1a496e6bf98cb7a3ad3f5c76f3f5781",
+        "expected": "f434f002eefef7edd1854c0523a2a4aff1a496e6bf98cb7a3ad3f5c76f3f5781",
+        "status": "MATCH"
+      },
+      "bundles/solution-always-true-small.zip": {
+        "bytes": 519,
+        "sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+        "expected": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+        "status": "MATCH"
+      },
+      "bundles/solution-text-length-control-small.zip": {
+        "bytes": 1387,
+        "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+        "expected": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+        "status": "MATCH"
+      }
+    },
+    "scope": "Hashes are point-in-time; formal watch is being hardened separately."
+  },
+  "limits": [
+    "No authentication or posting; or_post was not invoked.",
+    "No scientific source/PDF/core parser edit, push or commit.",
+    "Formal watch changes and SDK installation are owned by other active agents; point-in-time hashes may precede those edits.",
+    "No POST.json receipt was inferred from public API access or from handoff assertions."
+  ]
+}

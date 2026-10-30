@@ -1,0 +1,246 @@
+{
+  "measured_at_utc": "2026-10-30T01:19:03.567847+00:00",
+  "head": "ce8652bd4c654d61dcd20b3e4150564085df461f",
+  "pdf0_git_show_returncode": 0,
+  "expected_source_commit": "ce8652bd4c654d61dcd20b3e4150564085df461f",
+  "pdf_checks": {
+    "PDF0": {
+      "sha256": "8c78e829da9988fc2ef37532c8880f9ee031812382a2de6017dcf46b470b98aa",
+      "hash_matches_expected": true,
+      "bytes": 195886,
+      "author": "Anonymous Author(s)",
+      "pages": 10,
+      "type3_font_lines": 0,
+      "identity_whole_word_total": 0,
+      "identity_term_counts": {
+        "identity_term_1": 0,
+        "identity_term_2": 0,
+        "identity_term_3": 0,
+        "identity_term_4": 0,
+        "identity_term_5": 0
+      },
+      "commands_return_zero": true,
+      "ai_use_statement_pages_informational": [
+        6
+      ]
+    },
+    "PDF1": {
+      "sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+      "hash_matches_expected": true,
+      "bytes": 195467,
+      "author": "Anonymous Author(s)",
+      "pages": 10,
+      "type3_font_lines": 0,
+      "identity_whole_word_total": 0,
+      "identity_term_counts": {
+        "identity_term_1": 0,
+        "identity_term_2": 0,
+        "identity_term_3": 0,
+        "identity_term_4": 0,
+        "identity_term_5": 0
+      },
+      "commands_return_zero": true,
+      "ai_use_statement_pages_informational": [
+        6
+      ]
+    }
+  },
+  "G_LOOK_expectation": {
+    "source": "G_LOOK_source.stdout",
+    "sha256": "d504fb78c4c3d0acdfae516319457909695025b101090adbeadb4dac4d5024e7",
+    "three_E4_paragraphs_stated": true,
+    "reflow_stated": true,
+    "diff_status": "informational only, no enforced threshold",
+    "diff_file": "WHITESPACE_NORMALIZED_DIFF.json",
+    "change_groups": 37
+  },
+  "prize_gate": {
+    "returncode": 0,
+    "result": {
+      "result": "PASS",
+      "failed": [],
+      "passed": 19,
+      "total": 19,
+      "blocks": null,
+      "mode": "normal",
+      "rows": [
+        {
+          "check": "ID_FIELD",
+          "source": "[FORM]+[RULE5]",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "OWN_SCORE",
+          "source": "[K1]+[K3]",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "REPO_URL",
+          "source": "[RULE4]",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "BH_WORDING",
+          "source": "[K2]",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "QUEUE_EXPLAINED",
+          "source": "[K1]+[KC1]+[KC2] (Discord 10/16 L14)",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "CITE_PROPOSAL",
+          "source": "[Discord 10/23 L63] required citation",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "PRE_REMOVAL",
+          "source": "[KC1]+[KC2] (Discord 10/21 L41)",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "NO_OWNER_ID",
+          "source": "[KC2] tone",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "BASELINES_NOT_PROBES",
+          "source": "[KC1] (Discord 10/21 L45 'exploit labels ... disqualified')",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "DESIGN_TARGET",
+          "source": "[KC1] (final set = unpublished AIMO sets)",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "NO_SELF_NEGATION",
+          "source": "[K1]",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "ACTIONABLE",
+          "source": "[PRIZE] actionable",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "NEGATIVE_RESULT",
+          "source": "[PRIZE] negative results",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "GENERALIZATION",
+          "source": "[PRIZE] generalization",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "EFFICIENT",
+          "source": "[PRIZE] efficient methods",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "AI_STATEMENT",
+          "source": "[FORM]",
+          "ok": true,
+          "fix": null
+        },
+        {
+          "check": "MAIN_BODY_5_PAGES",
+          "source": "[FORM5]",
+          "ok": true,
+          "value": 5,
+          "first_unlimited_section_page": 6,
+          "fix": null
+        },
+        {
+          "check": "ANONYMIZED",
+          "source": "[FORM5]",
+          "ok": true,
+          "value": {
+            "identity_hits": 0,
+            "pdf_author_anonymous": true
+          },
+          "fix": null
+        },
+        {
+          "check": "NEGATIONS",
+          "source": "[K1]",
+          "ok": true,
+          "value": 31,
+          "max": 40,
+          "fix": null
+        }
+      ]
+    }
+  },
+  "submission_text_gate": {
+    "returncode": 0,
+    "result": {
+      "result": "CLEAN",
+      "hits": []
+    }
+  },
+  "summary_pass": true,
+  "submission_text_gate_initial_attempt": {
+    "returncode": 2,
+    "result": {
+      "result": "UNREADABLE",
+      "file": "report/aimo-interp-report-v8.3-anonymous.tex",
+      "error": "[Errno 2] No such file or directory: 'report/aimo-interp-report-v8.3-anonymous.tex'"
+    }
+  },
+  "source_paragraph_lineage": {
+    "old_commit": "9d4530995fb44d93575b598f31c2da761db072a5",
+    "new_commit": "ce8652bd4c654d61dcd20b3e4150564085df461f",
+    "file": "report/REPORT_DRAFT.md",
+    "method": "split Markdown on blank lines and compare paragraph strings using SequenceMatcher autojunk=False",
+    "changed_groups": [
+      {
+        "operation": "replace",
+        "old_paragraph_count": 1,
+        "new_paragraph_count": 1,
+        "old_has_prior_E4_queue_receipt": true,
+        "new_has_official_E4_ids": true,
+        "new_has_submission_created_kst": true
+      },
+      {
+        "operation": "replace",
+        "old_paragraph_count": 1,
+        "new_paragraph_count": 1,
+        "old_has_prior_E4_queue_receipt": true,
+        "new_has_official_E4_ids": true,
+        "new_has_submission_created_kst": true
+      },
+      {
+        "operation": "replace",
+        "old_paragraph_count": 1,
+        "new_paragraph_count": 1,
+        "old_has_prior_E4_queue_receipt": true,
+        "new_has_official_E4_ids": true,
+        "new_has_submission_created_kst": true
+      }
+    ],
+    "matches_three_E4_paragraph_expectation": true
+  },
+  "pdf_diff_interpretation": {
+    "whitespace_only_token_change_groups": 37,
+    "source_changed_paragraphs": 3,
+    "note": "PDF whitespace-normalized token diff also records line hyphenation, pagination/footer/table ordering and formula extraction order due reflow. These are informational extraction/layout changes; the source paragraph comparison separately verifies the three E4 paragraph replacements. No equality threshold or substantive-only claim is inferred from the raw PDF token diff."
+  }
+}

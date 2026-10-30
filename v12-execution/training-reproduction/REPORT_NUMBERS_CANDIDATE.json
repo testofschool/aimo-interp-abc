@@ -1,0 +1,19 @@
+{
+  "status": "MEASURED_MAPPING_FOR_FUTURE_T_REGEN_NOT_REGISTERED_IN_REPORT_NUMBERS_YET",
+  "source": "PROOF.json",
+  "source_sha256": "1778d96c70495a50b39e41783afe0a16cd59a2795f81873c58ddee96a3a0cb72",
+  "values": {
+    "train_rows": 94,
+    "train_labelled_rows": 80,
+    "train_unlabelled_rows": 14,
+    "train_labelled_problems": 33,
+    "control_fit_small_labelled_rows": 43,
+    "control_fit_small_problems": 22,
+    "control_fit_train_path": "data/train-main-v2.parquet",
+    "control_fit_train_sha256": "e18eb44207e7987781ec2ff214793196038442bdc1466fdf5498f3e87ec58285",
+    "control_fit_recipe_sha256": "18087aed1a94fc56adf8776496389fa4fa9c4bcbe6cd3b517d424abe136f9c9b",
+    "control_fit_reproducer_sha256": "1ca22456b36b2a934b36cc60a48f3047601517761c3fb6c3464b78a15ec4425c"
+  },
+  "existing_count_key_names_checked_in": "tools/report_numbers.py",
+  "integration_gate": "After2026-11-01 20:55KST with final-board gates; no claims/manuscript/PDF edits in this change"
+}

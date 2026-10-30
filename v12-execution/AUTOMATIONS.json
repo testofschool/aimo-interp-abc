@@ -1,0 +1,26 @@
+{
+  "recorded_at_utc": "2026-10-30T02:01:11.692865+00:00",
+  "scheduler": "Existing Codex heartbeat automations updated through automation_update; no duplicate cron/launchd",
+  "automations": [
+    {
+      "role": "six-hour formal source watch",
+      "status": "ACTIVE",
+      "cadence": "every6hours until2026-11-06 20:00KST",
+      "original_schedule_and_target_preserved": true
+    },
+    {
+      "role": "November3 receipt/revision sentinel",
+      "status": "ACTIVE",
+      "cadence": "2026-11-03 12:00KST once",
+      "original_schedule_and_target_preserved": true
+    }
+  ],
+  "formal_runner": "/Users/felix/orvenv/bin/python -I /Users/felix/aimo-v12/tools/or_watch.py --root /Users/felix/aimo-v12/v12-execution",
+  "formal_script_sha256": "c87a5b708ce3067b81eca8ff0bf581040becc53ef6765d22bc2f0401c53fe94e",
+  "receipt_and_note_reconciled": true,
+  "new_note_creation_prohibited": true,
+  "notify_only_meaningful_changes_or_required_action": true,
+  "initial_measurement": "WATCH_INITIAL.json",
+  "after_receipt_measurement": "WATCH_AFTER_RECEIPT.json",
+  "private_configuration_not_published": true
+}

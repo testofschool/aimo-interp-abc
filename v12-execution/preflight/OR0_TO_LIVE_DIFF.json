@@ -1,0 +1,13 @@
+{
+  "added": [
+    "rules_no_duplicates"
+  ],
+  "removed": [
+    "submission_track"
+  ],
+  "changed": [
+    "leaderboard_submission_ids",
+    "pdf",
+    "rules_compliance"
+  ]
+}

@@ -1,0 +1,36 @@
+{
+  "scope": "OFFLINE: actual SDK unbound method with fake session; no client constructor/authentication/network",
+  "sdk_version": "2.9.1",
+  "authenticated_profile_attribute": "~Authenticated_Owner1",
+  "get_profile_without_argument_result": "~Unrelated_Profile1",
+  "captured_request": {
+    "url": "https://api2.openreview.net/profiles",
+    "params": {},
+    "headers_empty": true
+  },
+  "principal_identity_bound": false,
+  "finding": {
+    "priority": "P1",
+    "file": "tools/or_post.py",
+    "line": 235,
+    "title": "Read the authenticated login profile instead of an unfiltered profile query",
+    "evidence": "SDK get_profile(None) ignores self.profile, GETs /profiles with empty params, and returns first returned Profile. SDK __handle_authorization sets self.profile from login-response user.profile.id.",
+    "impact": "Current owner guard uses an unrelated profile enumeration result rather than authenticated identity; valid writes can be refused, and the guard lacks the intended identity binding. Readback also depends on the unnecessary profile query.",
+    "fix": "Use client.profile.id from successful authentication, require a valid profile ID, fail closed if missing; optionally cross-check client.user.profile.id. Add an actual-SDK unbound or semantically faithful principal test."
+  },
+  "utc": "2026-10-30T01:30:30.061489+00:00",
+  "finding_applies_to_original_frozen_sha256": "1267efdb0ef5dfb84f3f4e9cb90972dcb26cc6704bd90b89c4ad59c7332d6235",
+  "hashes_observed_while_proof_ran": {
+    "tools/or_post.py": "8a4de047903293dce25ff08fb2b96611eb9084e8f24019640b7aa34a4d55391b",
+    "tools/or_payload_gate.py": "2c3de2ccdff7df2174debc649e7613caaa312f05901e13a743f8391323cc96cd",
+    "tools/or_watch.py": "c87a5b708ce3067b81eca8ff0bf581040becc53ef6765d22bc2f0401c53fe94e"
+  },
+  "resolution": {
+    "status": "ROOT_PATCH_OBSERVED_DURING_REVIEW",
+    "post_sha256": "8a4de047903293dce25ff08fb2b96611eb9084e8f24019640b7aa34a4d55391b",
+    "change": "Authenticated identity now reads client.profile.id, rejects missing/malformed values, and no longer calls unfiltered get_profile(None). FakeClient.get_profile now raises to catch accidental reuse.",
+    "remaining_material_findings": [],
+    "scope": "Static re-review plus actual SDK unbound semantic proof; root owns current full regression/live-gate/dry-run verification. No auth or writes executed."
+  },
+  "re_review_utc": "2026-10-30T01:30:45.423805+00:00"
+}

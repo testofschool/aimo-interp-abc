@@ -1,0 +1,233 @@
+{
+  "at_utc": "2026-10-30T01:30:32.134338+00:00",
+  "scope": "LOCAL_ONLY: public invitation fetched; no SDK client instantiated, no authentication or external write/readback. All client tests use FakeClient.",
+  "fetch": {
+    "route": "curl verified TLS",
+    "raw_sha256": "5a7e76364007ba54dd7c70205b915831fbf90b5785308f5f52167cbca0857f54",
+    "python_urllib_route": "CERTIFICATE_VERIFY_FAILED; no TLS bypass used",
+    "ordinary_live_cli": "PASS through bounded verified curl fallback; no --inv required"
+  },
+  "checks": [
+    {
+      "name": "tests",
+      "command": [
+        "/Users/felix/orvenv/bin/python",
+        "-I",
+        "tests/test_or_v12_hardening.py",
+        "-v"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "compile",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-I",
+        "-m",
+        "py_compile",
+        "tools/or_payload_gate.py",
+        "tools/or_post.py",
+        "tests/test_or_v12_hardening.py"
+      ],
+      "exit": 0
+    },
+    {
+      "name": "gate",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-I",
+        "tools/or_payload_gate.py",
+        "v12-execution/payload.json",
+        "--snapshot",
+        "v12-execution/invitation_1793096094565.json"
+      ],
+      "exit": 0,
+      "result": "PASS",
+      "invitation_tmdate": 1793207454232,
+      "invitation_fetch_route": "curl_verified_after_urllib_tls_failure",
+      "diff_vs_snapshot": {
+        "added": [
+          "rules_no_duplicates"
+        ],
+        "removed": [
+          "submission_track"
+        ],
+        "changed": [
+          "leaderboard_submission_ids",
+          "pdf",
+          "rules_compliance"
+        ]
+      }
+    },
+    {
+      "name": "dry_run",
+      "command": [
+        "/Library/Frameworks/Python.framework/Versions/3.10/bin/python3",
+        "-I",
+        "tools/or_post.py",
+        "v12-execution/payload.json.filled.json",
+        "--dry-run"
+      ],
+      "exit": 0,
+      "result": "DRY_RUN"
+    }
+  ],
+  "changed_scripts": [
+    {
+      "path": "tools/or_payload_gate.py",
+      "before_sha256": "1102d6029cde3b24c5c9573e07486c63d81f551c86bc253ba9de837a68c1dd7d",
+      "after_sha256": "2c3de2ccdff7df2174debc649e7613caaa312f05901e13a743f8391323cc96cd"
+    },
+    {
+      "path": "tools/or_post.py",
+      "before_sha256": "3e16849597fd299ef4cdcc02549358da47f9694c89ad402e7b41acb3542f7375",
+      "after_sha256": "8a4de047903293dce25ff08fb2b96611eb9084e8f24019640b7aa34a4d55391b"
+    }
+  ],
+  "test_file": "tests/test_or_v12_hardening.py",
+  "sdk_source": {
+    "path": "/Users/felix/orvenv/lib/python3.10/site-packages/openreview/api/client.py",
+    "sha256": "6197fb3107c825dc3e6751ee692201abcd458231c21d0595fc488d729b1551da",
+    "contract": {
+      "__init__": {
+        "line": 65,
+        "arguments": [
+          "self",
+          "baseurl",
+          "username",
+          "password",
+          "token",
+          "tokenExpiresIn",
+          "mfa_code_provider"
+        ]
+      },
+      "get_notes": {
+        "line": 1720,
+        "arguments": [
+          "self",
+          "id",
+          "external_id",
+          "paperhash",
+          "forum",
+          "invitation",
+          "parent_invitations",
+          "replyto",
+          "tauthor",
+          "signature",
+          "transitive_members",
+          "signatures",
+          "writer",
+          "trash",
+          "number",
+          "content",
+          "limit",
+          "offset",
+          "after",
+          "mintcdate",
+          "domain",
+          "paper_hash",
+          "details",
+          "sort",
+          "with_count",
+          "stream"
+        ]
+      },
+      "get_all_notes": {
+        "line": 1859,
+        "arguments": [
+          "self",
+          "id",
+          "paperhash",
+          "forum",
+          "invitation",
+          "parent_invitations",
+          "replyto",
+          "signature",
+          "transitive_members",
+          "signatures",
+          "writer",
+          "trash",
+          "number",
+          "content",
+          "mintcdate",
+          "details",
+          "select",
+          "sort",
+          "domain"
+        ]
+      },
+      "post_note_edit": {
+        "line": 3120,
+        "arguments": [
+          "self",
+          "invitation",
+          "signatures",
+          "note",
+          "readers",
+          "writers",
+          "nonreaders",
+          "content",
+          "await_process"
+        ]
+      }
+    }
+  },
+  "original_bundle_manifest_matches": 11,
+  "original_bundle_manifest_entries": 11,
+  "protected_artifacts": [
+    {
+      "path": "report/aimo-interp-report-v8.3-anonymous.pdf",
+      "sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+      "same_as_HEAD": true
+    },
+    {
+      "path": "report/main-anonymous.tex",
+      "sha256": "5f725550f6bc6f3d388e22536e4022548614c72868824a7fb62bff8fd79468a2",
+      "same_as_HEAD": true
+    },
+    {
+      "path": "report/main.tex",
+      "sha256": "dd1cc698fd799a2180c38ecec96f63c1dc5563c452e60a117c54b2a24801e2a1",
+      "same_as_HEAD": true
+    }
+  ],
+  "actual_note_id": null,
+  "live_auth_qualified": false,
+  "live_post_qualified": false,
+  "regression_tests": 23,
+  "test_sha256": "ebcf2a443f3d585564bb1f8227133f7b1f68c1c0df46f3bf13b442336f7ee380",
+  "owning_api_contract": {
+    "url": "https://api2.openreview.net/docs/api.yml",
+    "raw_path": "v12-execution/audit/API_QUERY_CONTRACT.yml",
+    "sha256": "2df94f2eed48a0f8273eab156e39c9f6aa88378b2b342d32c71be922446e54b4",
+    "notes_get_lines": [
+      3919,
+      4269
+    ],
+    "tauthor_schema": "boolean",
+    "domain_schema": "string",
+    "trash_schema": "boolean; description does not settle include versus only",
+    "strategy": "Each of three scopes is queried with trash=False and trash=True; union by note ID; conflicting author metadata blocks creation",
+    "authored_scope": {
+      "tauthor": true,
+      "domain": "NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge"
+    },
+    "actual_sdk_serialization_probe": "SDK2.9.1 unbound get_notes called with fake self/session: tauthor=True serialized as string true, trash=True as string true; no SDK client or network constructed"
+  },
+  "required_readback_license": "CC BY-SA 4.0; license mismatch returns nonzero in targeted regression",
+  "authenticated_principal_fix": {
+    "owning_source": "/Users/felix/orvenv/lib/python3.10/site-packages/openreview/api/client.py",
+    "authorization_lines": [
+      187,
+      193
+    ],
+    "directory_lookup_lines": [
+      626,
+      653
+    ],
+    "identity_source": "client.profile.id set by successful SDK authorization handler; valid tilde ID required",
+    "forbidden_lookup": "get_profile(None) makes unfiltered GET profiles and returns first result; never called by helper",
+    "regression": "FakeClient.get_profile raises if called; all scenarios pass using client.profile; six absent/malformed profile variants stop before queries/uploads/posts",
+    "live_auth_run": false
+  }
+}

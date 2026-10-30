@@ -1,0 +1,53 @@
+test_absent_or_malformed_authenticated_profile_blocks_before_any_write (test_or_v12_hardening.HardeningTests) ... ok
+test_creation_queries_live_and_trash_and_boolean_author_scope (test_or_v12_hardening.HardeningTests) ... ok
+test_dry_run_never_constructs_client (test_or_v12_hardening.HardeningTests) ... ok
+test_exact_autofill_current_shapes (test_or_v12_hardening.HardeningTests) ... ok
+test_expired_due_opening_and_expiration_rejected (test_or_v12_hardening.HardeningTests) ... ok
+test_failed_verified_fallback_is_explicit_and_does_not_echo_errors (test_or_v12_hardening.HardeningTests) ... ok
+test_file_signature_nested_properties_and_bad_username_rejected (test_or_v12_hardening.HardeningTests) ... ok
+test_first_author_must_be_authenticated_principal (test_or_v12_hardening.HardeningTests) ... ok
+test_incomplete_prior_note_query_blocks_creation (test_or_v12_hardening.HardeningTests) ... ok
+test_installed_sdk_serializes_boolean_author_query (test_or_v12_hardening.HardeningTests) ... ok
+test_mismatch_returns_nonzero_with_known_note_id (test_or_v12_hardening.HardeningTests) ... ok
+test_no_token_password_argument_or_nontty_environment_login (test_or_v12_hardening.HardeningTests) ... ok
+test_permission_error_fails_closed (test_or_v12_hardening.HardeningTests) ... ok
+test_prior_note_for_first_author_or_ambiguous_metadata_refuses (test_or_v12_hardening.HardeningTests) ... ok
+test_readback_has_all_matches_and_makes_no_remote_writes (test_or_v12_hardening.HardeningTests) ... ok
+test_readback_wrong_ids_or_title_returns_nonzero_without_writes (test_or_v12_hardening.HardeningTests) ... ok
+test_revision_target_ownership_and_full_content_preserved (test_or_v12_hardening.HardeningTests) ... ok
+test_ssl_fetch_falls_back_to_bounded_verified_curl (test_or_v12_hardening.HardeningTests) ... ok
+test_stale_enum_payload_rechecked_before_any_write (test_or_v12_hardening.HardeningTests) ... ok
+test_unknown_creation_outcome_blocks_next_attempt_before_login (test_or_v12_hardening.HardeningTests) ... ok
+test_unsupported_malformed_and_empty_required_rejected (test_or_v12_hardening.HardeningTests) ... ok
+test_wrong_ids_and_reciprocal_reviewer_rejected (test_or_v12_hardening.HardeningTests) ... ok
+test_wrong_license_is_reported_and_returns_nonzero (test_or_v12_hardening.HardeningTests) ... ok
+test_added_const_and_optional_are_not_required (test_or_watch.WatchTests) ... ok
+test_all_sources_failed_never_create_a_success_baseline (test_or_watch.WatchTests) ... ok
+test_atomic_replace_failure_preserves_old_file (test_or_watch.WatchTests) ... ok
+test_bad_snapshot_name_and_tmdate_cannot_escape_output_root (test_or_watch.WatchTests) ... ok
+test_certificate_fallback_verifies_tls_and_has_finite_bounds (test_or_watch.WatchTests) ... ok
+test_cutoff_performs_no_network_or_baseline_write (test_or_watch.WatchTests) ... ok
+test_deleted_field_deadline_and_license_are_recorded (test_or_watch.WatchTests) ... ok
+test_failed_git_diff_cannot_be_returned_as_empty_success (test_or_watch.WatchTests) ... ok
+test_failed_site_patch_is_explicit_and_does_not_advance_baseline (test_or_watch.WatchTests) ... ok
+test_git_failure_is_checked_and_credentials_are_disabled (test_or_watch.WatchTests) ... ok
+test_git_timeout_does_not_hide_invitation_change (test_or_watch.WatchTests) ... ok
+test_http503_is_explicit_without_insecure_fallback (test_or_watch.WatchTests) ... ok
+test_invitation_http503_does_not_stop_site_or_phase (test_or_watch.WatchTests) ... ok
+test_legacy_failed_or_malformed_phase_baseline_is_not_silently_adopted (test_or_watch.WatchTests) ... ok
+test_legacy_successful_phase_end_is_upgraded (test_or_watch.WatchTests) ... ok
+test_malformed_baseline_is_reported_without_replacing_it (test_or_watch.WatchTests) ... ok
+test_malformed_live_phase_cannot_poison_baseline (test_or_watch.WatchTests) ... ok
+test_missing_invitation_snapshot_does_not_block_healthy_by_diff (test_or_watch.WatchTests) ... ok
+test_optional_to_required_and_type_change_are_explicit (test_or_watch.WatchTests) ... ok
+test_phase_error_is_not_written_over_successful_phase (test_or_watch.WatchTests) ... ok
+test_required_enum_change_requests_payload_review (test_or_watch.WatchTests) ... ok
+test_same_tmdate_schema_change_keeps_old_snapshot_bytes (test_or_watch.WatchTests) ... ok
+test_seed_then_unchanged (test_or_watch.WatchTests) ... ok
+test_site_patch_is_not_silently_truncated (test_or_watch.WatchTests) ... ok
+test_successful_empty_patch_is_distinct_from_failed_patch (test_or_watch.WatchTests) ... ok
+
+----------------------------------------------------------------------
+Ran 48 tests in 0.300s
+
+OK

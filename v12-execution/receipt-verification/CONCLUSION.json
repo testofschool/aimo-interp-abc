@@ -1,0 +1,31 @@
+{
+  "schema": "receipt-verification-conclusion/1",
+  "utc": "2026-10-30T01:51:53.995456+00:00",
+  "note_id": "kPRRCYEOG1",
+  "owner_supplied_receipt_consistency": "PASS",
+  "receipt_grade": "Owner-supplied authenticated readback record, locally cross-checked; native acceptance email independently corroborated by root in GMAIL_CORROBORATION.json. Anonymous current server readback unavailable.",
+  "public_readback": "UNAVAILABLE: note API403, PDF403, forum200 browser verification challenge; no presence/absence inference.",
+  "local_pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+  "local_pdf_bytes": 195467,
+  "canonical_receipt_presence": {
+    "POST.json": {
+      "exists": false
+    },
+    "READBACK.json": {
+      "exists": false
+    },
+    "POST_RECEIPT_2026-10-30.json": {
+      "exists": true,
+      "sha256": "5abd18ea68eb6ed3bc95b904be4f955a70eace64ce2fc2ceb7f8ad57aeac615d",
+      "note_id": "kPRRCYEOG1",
+      "result": null,
+      "matches_supplied_receipt": true
+    }
+  },
+  "synthetic_receipts_policy": "Fake-client regression tests inspected in this review write only under TemporaryDirectory. No synthetic POST.json was written by this agent; named owner-supplied receipt is kept distinct from SDK POST/READBACK artifacts.",
+  "not_done": [
+    "No authentication, browser-cookie reuse, note create/revise/upload, commit, push, or source edits.",
+    "Opaque receipt attachment reference not followed or expanded."
+  ],
+  "review_scope": "Independent subagent receipt-local-consistency/public-probe review before root publication"
+}

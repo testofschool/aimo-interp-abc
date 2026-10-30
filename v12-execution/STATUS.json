@@ -1,0 +1,102 @@
+{
+  "at_utc": "2026-10-30T02:01:11.692865+00:00",
+  "status": "POST_CONFIRMED_FORMAL_WATCH_ACTIVE_REPRODUCTION_PASS",
+  "repo": "/Users/felix/aimo-v12",
+  "branch": "v12",
+  "base_head": "ce8652bd4c654d61dcd20b3e4150564085df461f",
+  "T_PRE": "COMPLETE_WITH_RECORDED_MIRROR_AND_PUBLIC_ACCESS_LIMITS",
+  "T_POST_CODEX": "COMPLETE_LOCAL_RECEIPT_CHECK_AND_NATIVE_ACCEPTANCE_MAIL_CORROBORATION",
+  "submission": {
+    "note_id": "kPRRCYEOG1",
+    "forum": "https://openreview.net/forum?id=kPRRCYEOG1",
+    "number": 7,
+    "actual_channel": "OWNER_CHROME_WEBFORM",
+    "canonical_receipt": "POST_RECEIPT_2026-10-30.json",
+    "receipt_sha256": "5abd18ea68eb6ed3bc95b904be4f955a70eace64ce2fc2ceb7f8ad57aeac615d",
+    "receipt_preserved_exactly": true,
+    "no_SDK_POST_or_READBACK_fabricated": true,
+    "public_anonymous_readback": "UNAVAILABLE_API403_AND_BROWSER_CHALLENGE_NOT_ABSENCE",
+    "owner_single_note_measurement": "1; owner authenticated measurement, not independently enumerated by Codex"
+  },
+  "publication_evidence": "Git origin/main and local post-commit PUBLICATION.json; only ordinary push after this receipt is committed; no rebase or force",
+  "T_WATCH": "FORMAL_or_watch_SEEDED_THEN_NO_CHANGE_ALL4_OK_EXISTING_AUTOMATIONS_ACTIVE",
+  "T_REGEN": "NOT_DUE_BEFORE_2026-11-01T20:55:00+09:00",
+  "E14": {
+    "always_true_1012526": "CONSTANT_RULE",
+    "length_digit_1012549": "TEXT_BASELINE_FITTED_ON_LABELLED_ROWS",
+    "measured_rows": {
+      "public_total": 94,
+      "labelled_fit": 80,
+      "unlabelled_excluded": 14,
+      "fit_distinct_problems": 33,
+      "small_labelled": 43,
+      "small_distinct_problems": 22
+    },
+    "report_numbers_registration": "DEFERRED_TO_T_REGEN; measured candidate keys in training-reproduction/REPORT_NUMBERS_CANDIDATE.json",
+    "paper_edited": false
+  },
+  "validation": {
+    "helper_regressions": 48,
+    "reproduction_regressions": 11,
+    "reproduction_skips": 0,
+    "prize_gate": "PASS19/19_normal",
+    "body_pages": 5,
+    "total_pages": 10,
+    "PDF_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+    "numerical_refit_parity": {
+      "coefficient_max_abs_difference": 8.326672684688674e-16,
+      "intercept_max_abs_difference": 4.440892098500626e-15,
+      "probability_max_abs_difference": 3.3306690738754696e-16,
+      "prediction_rows": 94,
+      "threshold_prediction_equal": true,
+      "refit_coef": [
+        [
+          -0.3833231470322206,
+          -0.0956922993852017
+        ]
+      ],
+      "submitted_coef": [
+        [
+          -0.3833231470322214,
+          -0.09569229938520168
+        ]
+      ],
+      "refit_intercept": [
+        3.2874828836867347
+      ],
+      "submitted_intercept": [
+        3.287482883686739
+      ],
+      "classes": [
+        0,
+        1
+      ],
+      "tolerance": 1e-10
+    },
+    "unchanged_pinned_bundle_repack_exact": true,
+    "real_authenticated_SDK_qualification": false
+  },
+  "runtime": {
+    "api_python": "/Users/felix/orvenv/bin/python",
+    "SDK": "2.9.1",
+    "numeric_python": "/Users/felix/aimo-v12/.venv/bin/python",
+    "requirements": "requirements-local.txt"
+  },
+  "current_script_sha256": {
+    "tools/or_payload_gate.py": "2c3de2ccdff7df2174debc649e7613caaa312f05901e13a743f8391323cc96cd",
+    "tools/or_post.py": "8a4de047903293dce25ff08fb2b96611eb9084e8f24019640b7aa34a4d55391b",
+    "tools/or_watch.py": "c87a5b708ce3067b81eca8ff0bf581040becc53ef6765d22bc2f0401c53fe94e",
+    "tools/reproduce_control.py": "1ca22456b36b2a934b36cc60a48f3047601517761c3fb6c3464b78a15ec4425c"
+  },
+  "scientific_source_or_PDF_changed": false,
+  "new_OpenReview_writes_by_Codex": 0,
+  "new_Codabench_submissions": 0,
+  "current_human_action": null,
+  "future_human_gates": [
+    "H2b PDF review with bound revision command and payload",
+    "H3b mirror update",
+    "HD organizer final-test-size response or explicit none",
+    "H5 three human-written reviews"
+  ],
+  "overall_competition_complete": false
+}

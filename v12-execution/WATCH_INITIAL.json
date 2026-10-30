@@ -1,0 +1,24 @@
+{
+  "command": [
+    "/Users/felix/orvenv/bin/python",
+    "-I",
+    "/Users/felix/aimo-v12/tools/or_watch.py",
+    "--root",
+    "/Users/felix/aimo-v12/v12-execution"
+  ],
+  "exit": 0,
+  "run_at_utc": "2026-10-30T01:23:17.642964+00:00",
+  "script_sha256": "c87a5b708ce3067b81eca8ff0bf581040becc53ef6765d22bc2f0401c53fe94e",
+  "result": "SEEDED",
+  "baseline_advanced": true,
+  "errors": [],
+  "sources": {
+    "invitation": "OK",
+    "site_head": "OK",
+    "byeolki_head": "OK",
+    "codabench_phase": "OK"
+  },
+  "note_mutations": 0,
+  "files": [],
+  "watch_state_exists": true
+}

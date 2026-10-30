@@ -1,0 +1,59 @@
+{
+  "at_utc": "2026-10-30T01:58:49.675339+00:00",
+  "initial_attempt": "tests subprocess timed out30seconds; subsequent import diagnostic exit0; no cause asserted",
+  "checks": [
+    {
+      "name": "tests",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-I",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests",
+        "-p",
+        "test_reproduce_control.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "elapsed": 9.202,
+      "summary": "duce_control.ReproductionTests.test_unexpected_bundle_member_is_rejected) ... ok\n\n----------------------------------------------------------------------\nRan 11 tests in 2.855s\n\nOK\n"
+    },
+    {
+      "name": "proof",
+      "argv": [
+        ".venv/bin/python",
+        "-B",
+        "-I",
+        "tools/reproduce_control.py",
+        "--data-dir",
+        "data",
+        "--out",
+        "v12-execution/training-reproduction/PROOF.json"
+      ],
+      "exit_code": 0,
+      "elapsed": 1.676,
+      "status": "PASS",
+      "rows": {
+        "public_total": 94,
+        "labelled_fit": 80,
+        "unlabelled_excluded": 14,
+        "fit_distinct_problems": 33,
+        "small_labelled": 43,
+        "small_distinct_problems": 22
+      },
+      "predictions_equal": true,
+      "zip_repack_exact": true
+    }
+  ],
+  "canonical_proof": "PROOF.json",
+  "runtime": {
+    "python": "3.12.14",
+    "sklearn": "1.8.0",
+    "joblib": "1.5.3",
+    "numpy": "2.5.4",
+    "pandas": "2.3.3"
+  }
+}

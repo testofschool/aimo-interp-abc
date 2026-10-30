@@ -1,0 +1,16 @@
+{
+  "at_utc": "2026-10-30T02:01:11.692865+00:00",
+  "status": "RECEIPT_AND_NATIVE_ACCEPTANCE_MAIL_CORROBORATED",
+  "note_id": "kPRRCYEOG1",
+  "submission_number": 7,
+  "receipt": "POST_RECEIPT_2026-10-30.json",
+  "receipt_sha256": "5abd18ea68eb6ed3bc95b904be4f955a70eace64ce2fc2ceb7f8ad57aeac615d",
+  "exact_original_bytes": true,
+  "local_receipt_checks": "LOCAL_RECEIPT_CHECK.json",
+  "independent_owner_receipt_consistency": "LOCAL_CONSISTENCY.json",
+  "native_mail": "GMAIL_CORROBORATION.json",
+  "native_mail_scope": "Acceptance title, full abstract, forum URL and submission number matched; no raw mail or private headers published",
+  "current_anonymous_readback": "API/PDF403; forum200verificationchallenge; neither proves absence",
+  "owner_authenticated_readback_scope": "IDs, title, PDF bytes/hash, signature/license, authors and one owner-note count supplied by owner; PDF/payload fields locally matched",
+  "new_post_or_revise_executed_by_Codex": false
+}

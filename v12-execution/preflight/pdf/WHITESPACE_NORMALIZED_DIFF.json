@@ -1,0 +1,265 @@
+{
+  "informational_only": true,
+  "method": "pdftotext -layout; collapse every whitespace run; SequenceMatcher token diff with autojunk=False",
+  "change_groups": [
+    {
+      "operation": "replace",
+      "old_token_start": 143,
+      "new_token_start": 143,
+      "old": "sin- gle",
+      "new": "single"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 170,
+      "new_token_start": 169,
+      "old": "selection",
+      "new": "se- lection"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 215,
+      "new_token_start": 215,
+      "old": "provide",
+      "new": "pro- vide"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 225,
+      "new_token_start": 226,
+      "old": "baselines",
+      "new": "base- lines"
+    },
+    {
+      "operation": "delete",
+      "old_token_start": 230,
+      "new_token_start": 232,
+      "old": "through the organizers\u2019 temporary evaluation queue during the Codabench outage [11]; these runs are not",
+      "new": ""
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 247,
+      "new_token_start": 234,
+      "old": "leaderboard.",
+      "new": "official Codabench Small Model Track."
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 253,
+      "new_token_start": 244,
+      "old": "(submission",
+      "new": "(Codabench submission"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 255,
+      "new_token_start": 247,
+      "old": "bde5e370-4dba-4f19-8291-4a998bfecdcd, 2026- 10-24 19:01:28",
+      "new": "1012526, 2026-10-27 18:15:52"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 266,
+      "new_token_start": 257,
+      "old": "(submission",
+      "new": "(Codabench submis- sion"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 268,
+      "new_token_start": 261,
+      "old": "0c736e59-8248-4dee-8e4f-2df037c552d7, 2026-10-24 19:03:37",
+      "new": "1012549, 2026-10-27 18:27:40"
+    },
+    {
+      "operation": "delete",
+      "old_token_start": 472,
+      "new_token_start": 465,
+      "old": "Preprint.",
+      "new": ""
+    },
+    {
+      "operation": "insert",
+      "old_token_start": 493,
+      "new_token_start": 485,
+      "old": "",
+      "new": "Preprint."
+    },
+    {
+      "operation": "delete",
+      "old_token_start": 1117,
+      "new_token_start": 1110,
+      "old": "2",
+      "new": ""
+    },
+    {
+      "operation": "insert",
+      "old_token_start": 1162,
+      "new_token_start": 1154,
+      "old": "",
+      "new": "2"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 1163,
+      "new_token_start": 1156,
+      "old": "\u0012",
+      "new": "X\u0012"
+    },
+    {
+      "operation": "delete",
+      "old_token_start": 1165,
+      "new_token_start": 1158,
+      "old": "X",
+      "new": ""
+    },
+    {
+      "operation": "insert",
+      "old_token_start": 1167,
+      "new_token_start": 1159,
+      "old": "",
+      "new": "\u2212N"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 1176,
+      "new_token_start": 1169,
+      "old": "2\u2212N",
+      "new": "2"
+    },
+    {
+      "operation": "delete",
+      "old_token_start": 1630,
+      "new_token_start": 1623,
+      "old": "3",
+      "new": ""
+    },
+    {
+      "operation": "insert",
+      "old_token_start": 1690,
+      "new_token_start": 1682,
+      "old": "",
+      "new": "3"
+    },
+    {
+      "operation": "delete",
+      "old_token_start": 2183,
+      "new_token_start": 2176,
+      "old": "4 Table 3: First crossing and sustained target power under independent-item planning. Sustained thresholds are recommended for item budgeting. True accuracy First N with target power Sustained N with target power 0.6 158 169 0.65 69 76",
+      "new": ""
+    },
+    {
+      "operation": "insert",
+      "old_token_start": 2292,
+      "new_token_start": 2248,
+      "old": "",
+      "new": "4 Table 3: First crossing and sustained target power under independent-item planning. Sustained thresholds are recommended for item budgeting. True accuracy First N with target power Sustained N with target power 0.6 158 169 0.65 69 76"
+    },
+    {
+      "operation": "delete",
+      "old_token_start": 2917,
+      "new_token_start": 2910,
+      "old": "through the organizers\u2019 temporary evaluation queue during the Codabench outage [11]; these runs are not",
+      "new": ""
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 2934,
+      "new_token_start": 2912,
+      "old": "leaderboard.",
+      "new": "official Codabench Small Model Track."
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 2940,
+      "new_token_start": 2922,
+      "old": "(submission",
+      "new": "(Codabench submission"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 2942,
+      "new_token_start": 2925,
+      "old": "bde5e370-4dba-4f19-8291- 4a998bfecdcd, 2026-10-24 19:01:28",
+      "new": "1012526, 2026-10-27 18:15:52"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 2953,
+      "new_token_start": 2935,
+      "old": "(submission",
+      "new": "(Codabench submission"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 2955,
+      "new_token_start": 2938,
+      "old": "0c736e59-8248-4dee-8e4f-2df037c552d7, 2026-10-24 19:03:37",
+      "new": "1012549, 2026-10-27 18:27:40"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 2979,
+      "new_token_start": 2962,
+      "old": "out- comes.",
+      "new": "outcomes."
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 2989,
+      "new_token_start": 2971,
+      "old": "experi- ences",
+      "new": "experiences"
+    },
+    {
+      "operation": "delete",
+      "old_token_start": 3763,
+      "new_token_start": 3744,
+      "old": "through the organizers\u2019 temporary evaluation queue during the Codabench outage [11]; these runs are not",
+      "new": ""
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 3780,
+      "new_token_start": 3746,
+      "old": "leaderboard.",
+      "new": "official Codabench Small Model Track."
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 3786,
+      "new_token_start": 3756,
+      "old": "(submission",
+      "new": "(Codabench submission"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 3788,
+      "new_token_start": 3759,
+      "old": "bde5e370-4dba-4f19-8291-4a998bfecdcd, 2026-10-24 19:01:28",
+      "new": "1012526, 2026-10-27 18:15:52"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 3798,
+      "new_token_start": 3769,
+      "old": "(submission",
+      "new": "(Codabench submission"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 3800,
+      "new_token_start": 3772,
+      "old": "0c736e59-8248-4dee-8e4f- 2df037c552d7, 2026-10-24 19:03:37",
+      "new": "1012549, 2026-10-27 18:27:40"
+    },
+    {
+      "operation": "replace",
+      "old_token_start": 3813,
+      "new_token_start": 3784,
+      "old": "separa- ble",
+      "new": "separable"
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "recorded_before_new_reproducer_run_utc": "2026-10-30T01:52:01.802317+00:00",
+  "original_source_sha256": "cab8d45d75d228fe6bf7b5cdd11490fbcbd7b10af19811684bbb4e5035c2596e",
+  "original_archive": "v12-execution/audit/reproduce_control.original.py",
+  "train_sha256": "e18eb44207e7987781ec2ff214793196038442bdc1466fdf5498f3e87ec58285",
+  "train_bytes": 11372,
+  "source_data_path": "/Users/felix/.cache/aimo-published-verification-20261028T0224/data/train-main-v2.parquet",
+  "verified_copy": "data/train-main-v2.parquet",
+  "expected_bundle_sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+  "coefficient_intercept_probability_max_tolerance": 1e-10,
+  "exact_public_threshold_prediction_parity_required": true,
+  "scope": "Numerical public-data refit and distinct deterministic packaging reproduction; no private evaluation or final frozen board claims",
+  "new_reproducer_sha256_before_execution": "1ca22456b36b2a934b36cc60a48f3047601517761c3fb6c3464b78a15ec4425c",
+  "focused_test_sha256": "f71a04ea3ddf7556f47ab9a503fb713c5f9e784faac18ee83c35ec9671a61879"
+}

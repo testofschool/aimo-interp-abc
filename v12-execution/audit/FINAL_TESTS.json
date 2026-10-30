@@ -1,0 +1,24 @@
+{
+  "at_utc": "2026-10-30T01:31:16.256334+00:00",
+  "command": [
+    "/Users/felix/orvenv/bin/python",
+    "-B",
+    "-I",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_or_*.py",
+    "-v"
+  ],
+  "exit": 0,
+  "scope": "48 targeted offline regressions for the three supplied-and-hardened scripts; SDK serialization uses fake transport, no real authentication/write/readback",
+  "sources": {
+    "tools/or_post.py": "8a4de047903293dce25ff08fb2b96611eb9084e8f24019640b7aa34a4d55391b",
+    "tools/or_payload_gate.py": "2c3de2ccdff7df2174debc649e7613caaa312f05901e13a743f8391323cc96cd",
+    "tools/or_watch.py": "c87a5b708ce3067b81eca8ff0bf581040becc53ef6765d22bc2f0401c53fe94e"
+  },
+  "summary": "sful_empty_patch_is_distinct_from_failed_patch (test_or_watch.WatchTests) ... ok\n\n----------------------------------------------------------------------\nRan 48 tests in 0.300s\n\nOK\n"
+}

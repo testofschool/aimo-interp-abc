@@ -1,0 +1,19 @@
+test_actual_refit_and_packaging_with_separate_cohort_scopes (test_reproduce_control.ReproductionTests.test_actual_refit_and_packaging_with_separate_cohort_scopes) ... /Users/felix/aimo-v12/.venv/lib/python3.12/site-packages/joblib/numpy_pickle.py:207: DeprecationWarning: Setting the shape on a NumPy array has been deprecated in NumPy 2.5.
+As an alternative, you can create a new view using np.reshape (with copy=False if needed).
+  array.shape = self.shape
+ok
+test_changed_estimator_is_detected_by_actual_parameters (test_reproduce_control.ReproductionTests.test_changed_estimator_is_detected_by_actual_parameters) ... ok
+test_cli_outputs_cannot_overwrite_inputs (test_reproduce_control.ReproductionTests.test_cli_outputs_cannot_overwrite_inputs) ... ok
+test_corrupted_hash_fails_before_any_pickle_load (test_reproduce_control.ReproductionTests.test_corrupted_hash_fails_before_any_pickle_load) ... ok
+test_feature_recipe_preserves_unicode_digits (test_reproduce_control.ReproductionTests.test_feature_recipe_preserves_unicode_digits) ... ok
+test_model_class_order_and_parameter_mismatches_are_rejected (test_reproduce_control.ReproductionTests.test_model_class_order_and_parameter_mismatches_are_rejected) ... ok
+test_nonbinary_or_missing_training_schema_is_rejected (test_reproduce_control.ReproductionTests.test_nonbinary_or_missing_training_schema_is_rejected) ... ok
+test_packaging_is_order_independent_with_fixed_metadata (test_reproduce_control.ReproductionTests.test_packaging_is_order_independent_with_fixed_metadata) ... ok
+test_tampered_bundle_fails_before_pickle_load (test_reproduce_control.ReproductionTests.test_tampered_bundle_fails_before_pickle_load) ... ok
+test_training_selector_excludes_nulls_without_hardcoded_cohort_size (test_reproduce_control.ReproductionTests.test_training_selector_excludes_nulls_without_hardcoded_cohort_size) ... ok
+test_unexpected_bundle_member_is_rejected (test_reproduce_control.ReproductionTests.test_unexpected_bundle_member_is_rejected) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 2.855s
+
+OK

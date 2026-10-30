@@ -1,0 +1,30 @@
+{
+ "title": "Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp",
+ "authors": [
+  {
+   "fullname": "Jung Min Kang",
+   "username": "~Jung_Min_Kang1"
+  }
+ ],
+ "reciprocal_reviewers": [
+  "~Jung_Min_Kang1"
+ ],
+ "keywords": [
+  "interpretability",
+  "robustness prediction",
+  "evaluation",
+  "leaderboard identifiability",
+  "statistical power",
+  "negative results"
+ ],
+ "TLDR": "Only perfect observed owner results reject the declared null; non-rejection leaves chance performance, method equivalence and pairwise ranking unresolved.",
+ "abstract": "On the frozen AIMO-Interp public validation board (14 Small and 21 Main items, inferred from the score grid), no score below perfect is separable from the independent fair-coin null after per-owner selection and across-owner Benjamini–Hochberg correction: 59 of 61 Small owners and 40 of 41 Main owners are not rejected, including an owner with a 12/14 Small result. The snapshot predates the organizers' 21 October removal of two perfect-score submissions attributed to iterative profiling of problems and labels. [11] We do not identify which owners were affected. Our hash-pinned analysis adjusts each owner's best visible score for its number of scored submissions under an independent-submission model. Only perfect observed owner results reject the declared null; non-rejection leaves chance performance, method equivalence and pairwise ranking unresolved. A single pre-specified predictor needs at least 76 independent correctness items at true accuracy 0.65, or 169 at 0.6, to sustain power 0.8 at level 0.05 before selection correction. We offer this as a design target for future validation boards, not as a statement about the unpublished final set. Paired, problem-clustered method comparisons need separate sizing. A supporting public-label audit finds no mixed labels among 11 Small problems with multiple checkpoints. We provide CPU reproduction rather than additional model runs. Both reference baselines were scored once each on the official Codabench Small Model Track. The always-robust rule scored 7/14 (Codabench submission id 1012526, 2026-10-27 18:15:52 KST) and the length-and-digit control scored 7/14 (Codabench submission id 1012549, 2026-10-27 18:27:40 KST); each equals the fair-coin expectation and is not separable from it under the declared null.",
+ "pdf": "../report/aimo-interp-report-v8.3-anonymous.pdf",
+ "leaderboard_submission_ids": "1012526, 1012549",
+ "ai_assistance": [
+  "Ideation",
+  "Coding",
+  "Analysis",
+  "Writing"
+ ]
+}

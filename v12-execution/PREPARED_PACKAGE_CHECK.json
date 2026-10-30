@@ -1,0 +1,53 @@
+{
+  "at_utc": "2026-10-30T01:30:48.105062+00:00",
+  "scripts": {
+    "tools/or_post.py": "8a4de047903293dce25ff08fb2b96611eb9084e8f24019640b7aa34a4d55391b",
+    "tools/or_payload_gate.py": "2c3de2ccdff7df2174debc649e7613caaa312f05901e13a743f8391323cc96cd"
+  },
+  "checks": [
+    {
+      "name": "gate",
+      "command": [
+        "/Users/felix/orvenv/bin/python",
+        "-I",
+        "tools/or_payload_gate.py",
+        "v12-execution/payload.json",
+        "--snapshot",
+        "v12-execution/invitation_1793096094565.json"
+      ],
+      "exit": 0,
+      "result": "PASS",
+      "invitation_tmdate": 1793207454232,
+      "diff_vs_snapshot": {
+        "added": [
+          "rules_no_duplicates"
+        ],
+        "removed": [
+          "submission_track"
+        ],
+        "changed": [
+          "leaderboard_submission_ids",
+          "pdf",
+          "rules_compliance"
+        ]
+      },
+      "fetch_route": "curl_verified_after_urllib_tls_failure"
+    },
+    {
+      "name": "dry_run",
+      "command": [
+        "/Users/felix/orvenv/bin/python",
+        "-I",
+        "tools/or_post.py",
+        "v12-execution/payload.json.filled.json",
+        "--dry-run"
+      ],
+      "exit": 0,
+      "result": "DRY_RUN",
+      "invitation_tmdate": 1793207454232,
+      "source_fixed": "authenticated identity from client.profile only; no SDK/auth executed in this mode"
+    }
+  ],
+  "real_auth_or_writes": 0,
+  "audit_history": "audit/PREPARED_PACKAGE_CHECK.before-principal-fix.json"
+}

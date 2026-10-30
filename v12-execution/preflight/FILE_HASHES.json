@@ -1,0 +1,42 @@
+{
+  "utc": "2026-10-30T01:19:58.812732+00:00",
+  "files": {
+    "tools/or_payload_gate.py": {
+      "bytes": 7731,
+      "sha256": "1102d6029cde3b24c5c9573e07486c63d81f551c86bc253ba9de837a68c1dd7d",
+      "expected": "1102d6029cde3b24c5c9573e07486c63d81f551c86bc253ba9de837a68c1dd7d",
+      "status": "MATCH"
+    },
+    "tools/or_post.py": {
+      "bytes": 7530,
+      "sha256": "3e16849597fd299ef4cdcc02549358da47f9694c89ad402e7b41acb3542f7375",
+      "expected": "3e16849597fd299ef4cdcc02549358da47f9694c89ad402e7b41acb3542f7375",
+      "status": "MATCH"
+    },
+    "tools/or_watch.py": {
+      "bytes": 4263,
+      "sha256": "0f6e62c18896e57d2b6fa18c751e47e7a4f663f4dee5c588a6928b9495874df1",
+      "expected": "0f6e62c18896e57d2b6fa18c751e47e7a4f663f4dee5c588a6928b9495874df1",
+      "status": "MATCH"
+    },
+    "v12-execution/payload.json": {
+      "bytes": 2569,
+      "sha256": "f434f002eefef7edd1854c0523a2a4aff1a496e6bf98cb7a3ad3f5c76f3f5781",
+      "expected": "f434f002eefef7edd1854c0523a2a4aff1a496e6bf98cb7a3ad3f5c76f3f5781",
+      "status": "MATCH"
+    },
+    "bundles/solution-always-true-small.zip": {
+      "bytes": 519,
+      "sha256": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "expected": "4a3718e38f915a49ab1a74c5d99f45ee2814fb2845ebb1da3cb0daaa0b249e0a",
+      "status": "MATCH"
+    },
+    "bundles/solution-text-length-control-small.zip": {
+      "bytes": 1387,
+      "sha256": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "expected": "30e59012351a09c5f413376cf600678fe9cd62fe990042f2b43661c3219cbbfd",
+      "status": "MATCH"
+    }
+  },
+  "scope": "Hashes are point-in-time; formal watch is being hardened separately."
+}

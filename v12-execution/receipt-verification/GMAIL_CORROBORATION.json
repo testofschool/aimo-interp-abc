@@ -1,0 +1,16 @@
+{
+  "source": "Connected Gmail native read-only receipt",
+  "message_received_utc": "2026-10-30T01:44:48.000Z",
+  "sender": "AIMOInterp 2026 <aimointerp2026-notifications@openreview.net>",
+  "expected_sender": true,
+  "note_url": "https://openreview.net/forum?id=kPRRCYEOG1",
+  "note_url_matches": true,
+  "submission_number": 7,
+  "number_matches": true,
+  "title_matches": true,
+  "abstract_matches": true,
+  "receipt_posted_sentence": true,
+  "mailbox_authentication_result_reports_dkim_pass": true,
+  "scope": "Independent native acceptance-mail corroboration; does not independently measure PDF hash, field values or total notes per author.",
+  "mail_sent_or_modified": false
+}

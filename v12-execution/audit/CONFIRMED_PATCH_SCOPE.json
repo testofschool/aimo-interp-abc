@@ -1,0 +1,25 @@
+{
+  "recorded_at_utc": "2026-10-30T01:19:04.118312+00:00",
+  "authority": "User open-this-and-restart with prior API/T-WATCH and POST-commit-before-push authorization; no new posting authorized to Codex",
+  "classification_source": "audit/supplied-script-probes/REPORT.md and AUDIT_RESULTS.json; actual original offline probes",
+  "original_script_sha256": {
+    "or_watch.py": "0f6e62c18896e57d2b6fa18c751e47e7a4f663f4dee5c588a6928b9495874df1",
+    "or_payload_gate.py": "1102d6029cde3b24c5c9573e07486c63d81f551c86bc253ba9de837a68c1dd7d",
+    "or_post.py": "3e16849597fd299ef4cdcc02549358da47f9694c89ad402e7b41acb3542f7375"
+  },
+  "confirmed_issues_to_fix": [
+    "Watcher stopsothertracksafterinvitationfailure, hidesgiterrors andoverwritesphasebaseline onfailure",
+    "Watcher optional-to-required/typechangeclassification andatomicstate handling",
+    "Payloadgate unsupportedtypes, emptyrequiredstrings, malformednestedauthors, expiredform and fakePDF pass",
+    "Submitter does not enforce schema gate beforewrite, wrongprincipal duplicate guard, mismatchsuccess, nonTTYcredentialenvfallback",
+    "Creation uncertainty has no durableintent; retry can beambiguous"
+  ],
+  "required_preservation": [
+    "No changed science/PDF/reportnumbers/frozenv3gate",
+    "Originalbundlemanifest and originalscriptbytes preserved",
+    "No realSDKauthentication, attachmentupload, notecreate/revise by Codex",
+    "No POST.json fabricated; no push before actualPOSTreceiptcommit",
+    "Formalwatchfilename or_watch.py; existingheartbeat handles scheduling, no duplicatecron"
+  ],
+  "scope_limit": "Current prepared scripts can be testedoffline/dryrun; actualnotesreadback remainsH4 owner-dependent withoutreceipt ornoteURL."
+}

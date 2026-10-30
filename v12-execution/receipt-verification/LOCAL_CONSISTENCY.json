@@ -1,0 +1,62 @@
+{
+  "schema": "owner-receipt-local-consistency/1",
+  "scope": "User-provided logged-in readback receipt checked against local artifacts. Receipt claims are not independent server measurements.",
+  "source_receipt_sha256": "5abd18ea68eb6ed3bc95b904be4f955a70eace64ce2fc2ceb7f8ad57aeac615d",
+  "source_receipt_path": "/Users/felix/Downloads/POST_RECEIPT_2026-10-30.json",
+  "note_id": "kPRRCYEOG1",
+  "forum_url": "https://openreview.net/forum?id=kPRRCYEOG1",
+  "number": 7,
+  "cdate_ms": 1793324686763,
+  "cdate_kst": "2026-10-30T10:44:46.763000+09:00",
+  "local_payload_sha256": "f434f002eefef7edd1854c0523a2a4aff1a496e6bf98cb7a3ad3f5c76f3f5781",
+  "local_pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+  "local_pdf_bytes": 195467,
+  "checks": {
+    "receipt_note_id_expected": true,
+    "forum_url_expected": true,
+    "ids_match_local": true,
+    "title_match_local": true,
+    "pdf_sha256_matches_local": true,
+    "pdf_sha256_matches_pre_registration": true,
+    "pdf_bytes_match_local": true,
+    "license_expected": true,
+    "signature_matches_payload": true,
+    "authors_match_profile_ids": true,
+    "reciprocal_reviewers_match_local": true,
+    "ai_assistance_match_local": true,
+    "keywords_match_local": true,
+    "TLDR_length_match_local": true,
+    "abstract_length_match_local": true,
+    "white_box_award_unticked": true
+  },
+  "claimed_note_count_by_author": 1,
+  "claimed_invitation_tmdate_at_post": 1793207454232,
+  "attachment_pdf_path": "OMITTED_AS_OPAQUE_REFERENCE; not followed or expanded",
+  "measured_at_utc": "2026-10-30T01:51:20.745697+00:00",
+  "author_representation": "Receipt authors are profile IDs and exactly match current payload usernames.",
+  "unlabelled_preregistered_lengths": {
+    "receipt": [
+      100,
+      117,
+      154,
+      1778
+    ],
+    "candidate_order": "title, comma-and-space-joined keywords, TLDR, abstract",
+    "derived_candidate": [
+      100,
+      117,
+      154,
+      1778
+    ],
+    "candidate_matches": true,
+    "verdict": "Unlabelled tuple order is not defined by receipt; individual labelled title/TLDR/abstract/keyword comparisons are authoritative."
+  },
+  "labelled_local_lengths": {
+    "title": 100,
+    "keywords_count": 6,
+    "keywords_comma_space_join": 117,
+    "TLDR": 154,
+    "abstract": 1778
+  },
+  "all_labelled_checks_match": true
+}

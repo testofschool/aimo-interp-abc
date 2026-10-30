@@ -1,0 +1,68 @@
+{
+  "site_compare": {
+    "command": [
+      "curl",
+      "--connect-timeout",
+      "10",
+      "--max-time",
+      "30",
+      "-sS",
+      "-L",
+      "-o",
+      "/Users/felix/aimo-v12/v12-execution/preflight/site_compare.raw",
+      "-w",
+      "%{http_code}",
+      "https://api.github.com/repos/aimo-interp/aimo-interp.github.io/compare/df91ac68a10d8d84cddf9f816e6baf25053b7ecf...e2b7f00a654a1a65c10b3670fbeeb9cbfc2e60f9"
+    ],
+    "returncode": 0,
+    "http_code": "200",
+    "stderr": "",
+    "bytes": 15193,
+    "sha256": "75099d5e766bd9c066fd5327d4035e868cd870a5533328d387f74ef78b51cd12",
+    "utc": "2026-10-30T01:19:14.845690+00:00"
+  },
+  "site_index_old": {
+    "command": [
+      "curl",
+      "--connect-timeout",
+      "10",
+      "--max-time",
+      "30",
+      "-sS",
+      "-L",
+      "-o",
+      "/Users/felix/aimo-v12/v12-execution/preflight/site_index_old.raw",
+      "-w",
+      "%{http_code}",
+      "https://raw.githubusercontent.com/aimo-interp/aimo-interp.github.io/df91ac68a10d8d84cddf9f816e6baf25053b7ecf/index.html"
+    ],
+    "returncode": 0,
+    "http_code": "200",
+    "stderr": "",
+    "bytes": 96615,
+    "sha256": "f24606b67f1425f7addc9ceba6d0dcd10f2444dac951278ec3d6332efbd92512",
+    "utc": "2026-10-30T01:19:14.556690+00:00"
+  },
+  "site_index_new": {
+    "command": [
+      "curl",
+      "--connect-timeout",
+      "10",
+      "--max-time",
+      "30",
+      "-sS",
+      "-L",
+      "-o",
+      "/Users/felix/aimo-v12/v12-execution/preflight/site_index_new.raw",
+      "-w",
+      "%{http_code}",
+      "https://raw.githubusercontent.com/aimo-interp/aimo-interp.github.io/e2b7f00a654a1a65c10b3670fbeeb9cbfc2e60f9/index.html"
+    ],
+    "returncode": 0,
+    "http_code": "200",
+    "stderr": "",
+    "bytes": 97069,
+    "sha256": "3f7246efcce2e15b0398e07aaac9dacaa8f759bdea5c87864db7fe4142a78e86",
+    "utc": "2026-10-30T01:19:14.891314+00:00"
+  }
+}

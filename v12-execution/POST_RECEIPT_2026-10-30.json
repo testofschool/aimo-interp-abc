@@ -1,0 +1,26 @@
+{
+ "posted_via": "OpenReview web form in Felix's Chrome (Browser 2), filled by Claude in Chrome, Submit clicked in the browser",
+ "note_id": "kPRRCYEOG1",
+ "forum_url": "https://openreview.net/forum?id=kPRRCYEOG1",
+ "number": 7,
+ "cdate_ms": 1793324686763,
+ "signatures": ["~Jung_Min_Kang1"],
+ "license": "CC BY-SA 4.0",
+ "readback": {
+  "title": "Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp",
+  "leaderboard_submission_ids": "1012526, 1012549",
+  "TLDR_len": 154, "abstract_len": 1778,
+  "keywords": ["interpretability","robustness prediction","evaluation","leaderboard identifiability","statistical power","negative results"],
+  "ai_assistance": ["Ideation","Coding","Analysis","Writing"],
+  "reciprocal_reviewers": ["~Jung_Min_Kang1"],
+  "authors": ["~Jung_Min_Kang1"],
+  "white_box_award": null,
+  "pdf_path": "/pdf/125fd88109e87b6126385504f3ee63830378e8cc.pdf",
+  "pdf_bytes": 195467,
+  "pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae"
+ },
+ "pre_registered": {"ids": "1012526, 1012549", "pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae", "payload_lengths": [100,117,154,1778]},
+ "match": {"ids": true, "pdf_sha256": true, "title": true, "notes_by_author": 1},
+ "measured_by": "authenticated GET api2.openreview.net/notes?content.venueid=… and /attachment?id=kPRRCYEOG1&name=pdf from Felix's logged-in browser, 2026-10-30 ~10:46 KST",
+ "invitation_tmdate_at_post": 1793207454232
+}

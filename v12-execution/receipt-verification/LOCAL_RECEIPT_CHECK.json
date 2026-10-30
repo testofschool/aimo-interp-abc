@@ -1,0 +1,30 @@
+{
+  "checked_at_utc": "2026-10-30T01:51:22.379394+00:00",
+  "original_source": "/Users/felix/Downloads/POST_RECEIPT_2026-10-30.json",
+  "stored_receipt_sha256": "5abd18ea68eb6ed3bc95b904be4f955a70eace64ce2fc2ceb7f8ad57aeac615d",
+  "checks": {
+    "note_id_exact": true,
+    "forum_url_exact": true,
+    "ids_equal_payload": true,
+    "title_equal_payload": true,
+    "keywords_equal_payload": true,
+    "AI_equal_payload": true,
+    "reviewers_equal_payload": true,
+    "authors_equal_payload": true,
+    "license_expected": true,
+    "PDF_hash_equals_local": true,
+    "PDF_bytes_equals_local": true,
+    "title_match_flag": true,
+    "ids_match_flag": true,
+    "PDF_match_flag": true,
+    "reported_single_note": true,
+    "TLDR_length_matches": true,
+    "abstract_length_matches": true
+  },
+  "provided_receipt_provenance": "User supplied authenticated browserreadback; localindependentcomparisonofrecordedfields to pinnedpayload/PDF",
+  "fresh_API_readback": "Agent probing exactnote now; not yet claimed",
+  "note_id": "kPRRCYEOG1",
+  "forum_url": "https://openreview.net/forum?id=kPRRCYEOG1",
+  "posting_route": "WEB_FORM_CORRECTION_SUPERSEDES_PRIOR_TERMINAL_REPORT",
+  "reported_single_note": "Not independently enumerated by Codex"
+}

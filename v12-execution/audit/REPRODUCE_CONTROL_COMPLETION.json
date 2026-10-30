@@ -1,0 +1,13 @@
+{
+  "reproducer": "tools/reproduce_control.py",
+  "reproducer_sha256": "1ca22456b36b2a934b36cc60a48f3047601517761c3fb6c3464b78a15ec4425c",
+  "focused_tests": "tests/test_reproduce_control.py",
+  "tests_sha256": "f71a04ea3ddf7556f47ab9a503fb713c5f9e784faac18ee83c35ec9671a61879",
+  "proof": "v12-execution/training-reproduction/PROOF.json",
+  "proof_sha256": "728218221a6ac148cbe99571a1d1488303e24e348290e8a60481a10b28b7edd8",
+  "dataset_ignored": true,
+  "original_recipe_archived": "v12-execution/audit/reproduce_control.original.py",
+  "test_count": 11,
+  "test_skips": 0,
+  "no_commit_or_push_by_this_task": true
+}

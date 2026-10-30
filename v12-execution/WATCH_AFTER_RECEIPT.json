@@ -1,0 +1,22 @@
+{
+  "at_utc": "2026-10-30T01:56:58.709160+00:00",
+  "argv": [
+    "/Users/felix/orvenv/bin/python",
+    "-I",
+    "tools/or_watch.py",
+    "--root",
+    "/Users/felix/aimo-v12/v12-execution"
+  ],
+  "exit": 0,
+  "result": "NO_CHANGE",
+  "sources": {
+    "invitation": "OK",
+    "site_head": "OK",
+    "byeolki_head": "OK",
+    "codabench_phase": "OK"
+  },
+  "files": [],
+  "errors": [],
+  "baseline_advanced": true,
+  "note_mutations": 0
+}
