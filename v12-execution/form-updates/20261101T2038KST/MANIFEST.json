@@ -1,0 +1,27 @@
+{
+  "source_payload": "v12-execution/payload.json.filled.json",
+  "source_payload_sha256": "9ac869bbd41623f66251fef53b135575d0dc158beb4d641aa1d3b4cc9f5a730f",
+  "source_payload_preserved": true,
+  "live_invitation": "v12-execution/invitation_1793515755843_1072b61ab5db0914a480354b5ac9b3ca2561663271c34c983f16f23bb06afd43.json",
+  "live_invitation_sha256": "1072b61ab5db0914a480354b5ac9b3ca2561663271c34c983f16f23bb06afd43",
+  "invitation_tmdate": 1793515755843,
+  "candidate": "v12-execution/form-updates/20261101T2038KST/payload_v83_schema_1793515755843.json",
+  "candidate_sha256": "3b51c5dcfdac960dfe7d8b40817af6ffe89c7fe0bc770ce8039f06651c5dda23",
+  "added_fields": {
+    "submission_1_track": [
+      "Small models track"
+    ],
+    "submission_2_id": "1012549",
+    "submission_2_track": [
+      "Small models track"
+    ],
+    "submission_1_id": "1012526"
+  },
+  "changed_existing_fields": [],
+  "same_note_only": "kPRRCYEOG1",
+  "service_writes": 0,
+  "scientific_copy_and_PDF_preserved": true,
+  "attestation_scope": "No new enum assertion added; carried owner-authored values are not re-certified as true by a syntax gate.",
+  "packet_invitation_copy": "v12-execution/form-updates/20261101T2038KST/LIVE_INVITATION.json",
+  "packet_invitation_copy_sha256": "1072b61ab5db0914a480354b5ac9b3ca2561663271c34c983f16f23bb06afd43"
+}

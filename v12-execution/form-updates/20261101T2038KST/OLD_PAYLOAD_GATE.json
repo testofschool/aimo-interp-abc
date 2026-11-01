@@ -1,0 +1,16 @@
+{
+  "result": "FAIL",
+  "invitation_tmdate": 1793515755843,
+  "invitation_sha256": "36536b4d299459a127fc496f6959abf6ac7bb04c51bf519ca2385661ef83b9ce",
+  "payload_sha256": "545f96cf077c01a44ff7aef4b2b362b53ad2418f52603360f0b600e6a8be4b1b",
+  "duedate": 1793969940000,
+  "expdate": 1793971740000,
+  "errors": [
+    "submission_1_id: missing required value",
+    "submission_1_track: missing required value"
+  ],
+  "notes": [],
+  "scope": "schema/file syntax only; factual attestations and human review not verified",
+  "invitation_fetch_route": "saved_invitation",
+  "filled_payload": null
+}

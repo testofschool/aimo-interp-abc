@@ -92,6 +92,19 @@ class HardeningTests(unittest.TestCase):
     def execute(self,client,opts=None):
         self.save();options={'--out':str(self.out)};options.update(opts or {})
         return post.run(options,[str(self.path)],client_factory=lambda user:(client,Note),state_dir=self.state)
+    def submission_pairs(self,second=True):
+        fields=self.inv['edit']['note']['content']
+        for number in (1,2):
+            fields[f'submission_{number}_id']=field('string',regex=r'^\S+$',optional=number==2)
+            fields[f'submission_{number}_track']=field('string[]',items=[{'value':'Main track'},{'value':'Small models track'}],optional=number==2)
+        self.payload.update(submission_1_id='1012526',submission_1_track=['Small models track'])
+        if second:self.payload.update(submission_2_id='1012549',submission_2_track=['Small models track'])
+        self.payload['leaderboard_submission_ids']='1012526, 1012549' if second else '1012526'
+    def readback_client(self):
+        client=FakeClient(self.inv,self.pdf.read_bytes())
+        client.notes['KNOWN']=Note(id='KNOWN',forum='KNOWN',tmdate=10,cdate=1,license='CC BY-SA 4.0',
+            content={key:{'value':copy.deepcopy(value)} for key,value in self.payload.items()})
+        return client
     def test_ssl_fetch_falls_back_to_bounded_verified_curl(self):
         failure=urllib.error.URLError(ssl.SSLCertVerificationError('SYNTHETIC_CHAIN_ERROR'))
         response=subprocess.CompletedProcess([],0,stdout=json.dumps({'invitations':[self.inv],'count':1}).encode(),stderr=b'')
@@ -199,6 +212,73 @@ class HardeningTests(unittest.TestCase):
         client.notes['SYNTHETIC_NOTE'].content['title']={'value':'Wrong title'}
         result,code=self.execute(client,{'--readback':'SYNTHETIC_NOTE'})
         self.assertEqual(code,1);self.assertFalse(result['ids_match']);self.assertFalse(result['title_match'])
+        self.assertEqual((client.puts,client.posts),(0,0))
+    def test_readback_verifies_one_or_two_submission_pairs(self):
+        for second in (False,True):
+            with self.subTest(second=second):
+                self.submission_pairs(second);client=self.readback_client()
+                result,code=self.execute(client,{'--readback':'KNOWN'})
+                self.assertEqual((code,result['result']),(0,'VERIFIED_READBACK'),result)
+                self.assertTrue(result['submission_fields_match'])
+                self.assertTrue(result['readback']['submission_fields_checked'])
+                self.assertTrue(all(result['readback']['submission_field_matches'].values()))
+                self.assertEqual((client.puts,client.posts),(0,0))
+    def test_readback_rejects_swapped_missing_or_wrong_track_pairs(self):
+        self.submission_pairs()
+        mutations={
+            'swapped_ids':lambda content:(content['submission_1_id'].update(value='1012549'),content['submission_2_id'].update(value='1012526')),
+            'missing_first_id':lambda content:content.pop('submission_1_id'),
+            'missing_first_track':lambda content:content.pop('submission_1_track'),
+            'missing_second_id':lambda content:content.pop('submission_2_id'),
+            'missing_second_track':lambda content:content.pop('submission_2_track'),
+            'wrong_first_track':lambda content:content['submission_1_track'].update(value=['Main track']),
+            'wrong_second_track':lambda content:content['submission_2_track'].update(value=['Main track']),
+            'wrong_track_type':lambda content:content['submission_1_track'].update(value='Small models track'),
+        }
+        for name,mutate in mutations.items():
+            with self.subTest(name=name):
+                client=self.readback_client();mutate(client.notes['KNOWN'].content)
+                result,code=self.execute(client,{'--readback':'KNOWN'})
+                self.assertEqual((code,result['result']),(1,'READBACK_MISMATCH'),result)
+                self.assertTrue(result['ids_match'] and result['title_match'] and result['match_pdf'])
+                self.assertFalse(result['submission_fields_match'])
+                self.assertEqual((client.puts,client.posts),(0,0))
+    def test_modern_one_pair_rejects_an_unexpected_second_nomination(self):
+        self.submission_pairs(second=False)
+        for extra in [{'submission_2_id':'1012549','submission_2_track':['Small models track']},
+                      {'submission_2_track':['Small models track']}]:
+            with self.subTest(extra=extra):
+                client=self.readback_client();client.notes['KNOWN'].content.update({key:{'value':value} for key,value in extra.items()})
+                result,code=self.execute(client,{'--readback':'KNOWN'})
+                self.assertEqual((code,result['result']),(1,'READBACK_MISMATCH'))
+                self.assertFalse(result['submission_fields_match'])
+                self.assertEqual((client.puts,client.posts),(0,0))
+    def test_empty_optional_second_pair_is_treated_as_absent(self):
+        self.submission_pairs(second=False)
+        self.payload.update(submission_2_id='',submission_2_track=[])
+        client=self.readback_client()
+        result,code=self.execute(client,{'--readback':'KNOWN'})
+        self.assertEqual((code,result['result']),(0,'VERIFIED_READBACK'),result)
+        self.assertTrue(result['submission_fields_match'])
+        self.assertEqual((client.puts,client.posts),(0,0))
+    def test_incomplete_modern_expected_pair_refuses_before_login(self):
+        self.submission_pairs()
+        for key in post.SUBMISSION_FIELDS:
+            with self.subTest(key=key):
+                partial=copy.deepcopy(self.payload);partial.pop(key);self.path.write_text(json.dumps(partial))
+                with mock.patch.object(post,'terminal_client',side_effect=AssertionError('no login')):
+                    with self.assertRaises(post.Refused):post.run({'--readback':'KNOWN','--out':str(self.out)},[str(self.path)])
+                self.assertFalse(self.out.exists())
+    def test_submission_expectations_do_not_alias_payload_track_arrays(self):
+        self.submission_pairs();expected=post.expected_submission_fields(self.payload)
+        self.payload['submission_1_track'].append('Main track')
+        self.assertEqual(expected['submission_1_track'],['Small models track'])
+    def test_legacy_readback_keeps_generic_id_checks(self):
+        client=self.readback_client()
+        result,code=self.execute(client,{'--readback':'KNOWN'})
+        self.assertEqual((code,result['result']),(0,'VERIFIED_READBACK'),result)
+        self.assertFalse(result['readback']['submission_fields_checked'])
+        self.assertEqual(result['readback']['submission_field_matches'],{})
         self.assertEqual((client.puts,client.posts),(0,0))
     def test_incomplete_prior_note_query_blocks_creation(self):
         client=FakeClient(self.inv,self.pdf.read_bytes())

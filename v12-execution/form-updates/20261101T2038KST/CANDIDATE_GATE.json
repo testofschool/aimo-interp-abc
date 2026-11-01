@@ -1,0 +1,14 @@
+{
+  "result": "PASS",
+  "invitation_tmdate": 1793515755843,
+  "invitation_sha256": "36536b4d299459a127fc496f6959abf6ac7bb04c51bf519ca2385661ef83b9ce",
+  "payload_sha256": "2e79471db007a9f8b321422d1f4116210ad676ac999f61029efd39bf647161bb",
+  "duedate": 1793969940000,
+  "expdate": 1793971740000,
+  "errors": [],
+  "notes": [],
+  "scope": "schema/file syntax only; factual attestations and human review not verified",
+  "pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+  "invitation_fetch_route": "saved_invitation",
+  "filled_payload": "/Users/felix/aimo-v12/v12-execution/form-updates/20261101T2038KST/payload_v83_schema_1793515755843.json.filled.json"
+}

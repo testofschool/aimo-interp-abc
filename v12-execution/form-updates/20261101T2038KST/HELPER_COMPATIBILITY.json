@@ -1,0 +1,32 @@
+{
+  "recorded_at_utc": "2026-11-01T11:49:39.282468+00:00",
+  "helper_sha256": "5e28c538e7ac201e436491e52c6e9b86f5bb6b9470a894c23ac0dfbdd8210ebf",
+  "tests_sha256": "ff6d339e055d8cca2f5b89383dd7a58bc70b21420b2f0fa01e277f73f809595a",
+  "scope": "Expected new ID/track pairs captured before authentication and checked during readback; create/revise/auth/intent behavior unchanged",
+  "offline_execution": {
+    "executor": "collaboration agent heartbeat_manual_status",
+    "command": "/Users/felix/orvenv/bin/python -B -I -m unittest discover -s tests -p 'test_or_*.py' -v",
+    "cwd": "/Users/felix/aimo-v12",
+    "exit": 0,
+    "test_methods": 55,
+    "skips": 0,
+    "raw_completion_summary": "Ran 55 tests in 0.502s\n\nOK",
+    "execution_output_chunk": "a2db1e",
+    "source": "Agent execution report; no live SDK/auth/network used"
+  },
+  "independent_readonly_review": {
+    "reviewer": "/root/heartbeat_manual_status/readback_pair_review",
+    "verdict": "PASS for scoped readback correction",
+    "scope": "Read-only inspection, not test execution or external service validation"
+  },
+  "root_new_helper_dry_run": {
+    "exit": 0,
+    "result": "DRY_RUN",
+    "gate": "PASS",
+    "invitation_tmdate": 1793515755843,
+    "SDK_auth_and_service_writes": 0
+  },
+  "semantic_generic_ID_pair_consistency": "Separate ID_TRACK_CONSISTENCY.json PASS; helper readback checks equality with expected pairs, not universal semantic consistency",
+  "owner_service_readback": "NOT_RUN; Felix must perform actual revision/authenticated readback",
+  "fixed_watch_gate_scientific_source_receipt_unchanged": true
+}

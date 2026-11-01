@@ -1,0 +1,22 @@
+{
+  "result": "PASS",
+  "generic_ID_order": [
+    "1012526",
+    "1012549"
+  ],
+  "submission_1_id": "1012526",
+  "submission_1_track": [
+    "Small models track"
+  ],
+  "submission_2_id": "1012549",
+  "submission_2_track": [
+    "Small models track"
+  ],
+  "actual_recorded_scope": "Both frozen native baseline IDs are phase30038 Small task36241, per preserved H1 aggregate receipts; not new submissions.",
+  "old_payload_preserved": true,
+  "same_pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae",
+  "scientific_content_unchanged": true,
+  "same_note_only": "kPRRCYEOG1",
+  "service_readback_of_new_fields": "NOT_RUN_OWNER_AUTH_REQUIRED",
+  "factual_attestations": "Not certified by schema-only PASS"
+}

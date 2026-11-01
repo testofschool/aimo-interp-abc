@@ -1,0 +1,91 @@
+{
+  "result": "DRY_RUN",
+  "invitation": "NeurIPS.cc/2026/Workshop/AIMOInterp_Challenge/-/Submission",
+  "content": {
+    "title": {
+      "value": "Can a small validation leaderboard rank robustness predictors? Identifiability limits in AIMO-Interp"
+    },
+    "authors": {
+      "value": [
+        {
+          "fullname": "Jung Min Kang",
+          "username": "~Jung_Min_Kang1"
+        }
+      ]
+    },
+    "reciprocal_reviewers": {
+      "value": [
+        "~Jung_Min_Kang1"
+      ]
+    },
+    "keywords": {
+      "value": [
+        "interpretability",
+        "robustness prediction",
+        "evaluation",
+        "leaderboard identifiability",
+        "statistical power",
+        "negative results"
+      ]
+    },
+    "TLDR": {
+      "value": "Only perfect observed owner results reject the declared null; non-rejection leaves chance performance, method equivalence and pairwise ranking unresolved."
+    },
+    "abstract": {
+      "value": "On the frozen AIMO-Interp public validation board (14 Small and 21 Main items, inferred from the score grid), no score below perfect is separable from the independent fair-coin null after per-owner selection and across-owner Benjamini–Hochberg correction: 59 of 61 Small owners and 40 of 41 Main owners are not rejected, including an owner with a 12/14 Small result. The snapshot predates the organizers' 21 October removal of two perfect-score submissions attributed to iterative profiling of problems and labels. [11] We do not identify which owners were affected. Our hash-pinned analysis adjusts each owner's best visible score for its number of scored submissions under an independent-submission model. Only perfect observed owner results reject the declared null; non-rejection leaves chance performance, method equivalence and pairwise ranking unresolved. A single pre-specified predictor needs at least 76 independent correctness items at true accuracy 0.65, or 169 at 0.6, to sustain power 0.8 at level 0.05 before selection correction. We offer this as a design target for future validation boards, not as a statement about the unpublished final set. Paired, problem-clustered method comparisons need separate sizing. A supporting public-label audit finds no mixed labels among 11 Small problems with multiple checkpoints. We provide CPU reproduction rather than additional model runs. Both reference baselines were scored once each on the official Codabench Small Model Track. The always-robust rule scored 7/14 (Codabench submission id 1012526, 2026-10-27 18:15:52 KST) and the length-and-digit control scored 7/14 (Codabench submission id 1012549, 2026-10-27 18:27:40 KST); each equals the fair-coin expectation and is not separable from it under the declared null."
+    },
+    "leaderboard_submission_ids": {
+      "value": "1012526, 1012549"
+    },
+    "ai_assistance": {
+      "value": [
+        "Ideation",
+        "Coding",
+        "Analysis",
+        "Writing"
+      ]
+    },
+    "ai_use_statement": {
+      "value": "We confirm that our paper includes an AI Use Statement consistent with the boxes ticked above, and that we take full responsibility for all AI-assisted content."
+    },
+    "reciprocal_reviewing_acknowledgement": {
+      "value": "We acknowledge that the nominated reviewers must complete all of their assigned reviews on time, and that failure to do so (including missing, late, low-effort, or undisclosed AI-generated reviews) may result in desk rejection of this submission."
+    },
+    "rules_no_duplicates": {
+      "value": "We confirm that we have not submitted another report describing an identical or highly similar method, and we acknowledge that overlapping reports may all be desk rejected."
+    },
+    "rules_compliance": {
+      "value": "We confirm that this submission follows all rules of the challenge, and we acknowledge that submissions found to violate the rules may be desk rejected or disqualified."
+    },
+    "submission_1_id": {
+      "value": "1012526"
+    },
+    "submission_1_track": {
+      "value": [
+        "Small models track"
+      ]
+    },
+    "submission_2_id": {
+      "value": "1012549"
+    },
+    "submission_2_track": {
+      "value": [
+        "Small models track"
+      ]
+    }
+  },
+  "pdf_file": "/Users/felix/aimo-v12/v12-execution/../report/aimo-interp-report-v8.3-anonymous.pdf",
+  "license": "CC BY-SA 4.0",
+  "gate": {
+    "result": "PASS",
+    "invitation_tmdate": 1793515755843,
+    "invitation_sha256": "36536b4d299459a127fc496f6959abf6ac7bb04c51bf519ca2385661ef83b9ce",
+    "payload_sha256": "2e79471db007a9f8b321422d1f4116210ad676ac999f61029efd39bf647161bb",
+    "duedate": 1793969940000,
+    "expdate": 1793971740000,
+    "errors": [],
+    "notes": [],
+    "scope": "schema/file syntax only; factual attestations and human review not verified",
+    "pdf_sha256": "944693b7138f0cfc51e254b7c37284806336044ed06722d2e09905714c6f55ae"
+  }
+}

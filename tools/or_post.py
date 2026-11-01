@@ -4,7 +4,8 @@
 Usage: or_post.py PAYLOAD [--dry-run [--inv SAVED_INV]] [--out POST.json]
        or_post.py PAYLOAD --revise NOTE_ID --out REVISE.json
        or_post.py [PAYLOAD] --readback NOTE_ID --expect-pdf-sha256 HEX --out READBACK.json
-Readback uses PAYLOAD, or payload.json(.filled.json) beside --out, for title/IDs.
+Readback uses PAYLOAD, or payload.json(.filled.json) beside --out, for title/IDs
+and any per-submission ID/track pairs. Legacy payloads keep generic-ID checks.
 Only hidden interactive Terminal password/OTP entry is supported. No credential
 arguments or environment fallback. Dry-run imports no SDK and never logs in.
 Readback uploads/edits nothing. A mismatch exits nonzero. A creation intent is
@@ -31,6 +32,7 @@ INV_ID=VENUE+'/-/Submission'
 VENUEID=VENUE+'/Submission'
 DEFAULT_USER='gangjeongmin23@gmail.com'
 STATE_DIR=Path(__file__).resolve().parents[1]/'v12-execution'/'private'
+SUBMISSION_FIELDS=('submission_1_id','submission_1_track','submission_2_id','submission_2_track')
 
 
 class Refused(Exception): pass
@@ -192,6 +194,21 @@ def flat_content(note):
     return flat
 
 
+def expected_submission_fields(payload):
+    if not any(key in payload for key in SUBMISSION_FIELDS):return None
+    fields={}
+    for number in (1,2):
+        id_key,track_key=f'submission_{number}_id',f'submission_{number}_track'
+        if number==2 and id_key not in payload and track_key not in payload:continue
+        if id_key not in payload or track_key not in payload:raise Refused('complete expected submission ID/track pair required')
+        sid,tracks=payload[id_key],payload[track_key]
+        if number==2 and sid in (None,'') and tracks in (None,[]):continue
+        if not isinstance(sid,str) or re.fullmatch(r'\S+',sid) is None or not isinstance(tracks,list) or not tracks or any(not isinstance(track,str) or not track.strip() for track in tracks):
+            raise Refused('invalid expected submission ID/track pair')
+        fields[id_key]=sid;fields[track_key]=copy.deepcopy(tracks)
+    return fields
+
+
 def readback(client,nid,expected):
     note=client.get_note(nid)
     if note.id!=nid:raise Refused('readback returned a different note ID')
@@ -206,6 +223,20 @@ def readback(client,nid,expected):
     rb['title_match']=rb.get('title')==expected['title']
     rb['author_match']=first_author(note.content)==expected['first_author']
     rb['license_match']=rb['license']=='CC BY-SA 4.0'
+    submissions=expected.get('submission_fields')
+    rb['submission_fields_checked']=submissions is not None
+    rb['submission_fields']={};rb['submission_field_matches']={}
+    if submissions is not None:
+        for key in SUBMISSION_FIELDS:
+            actual=flat.get(key);rb['submission_fields'][key]=copy.deepcopy(actual)
+            if key in submissions:
+                matches=key in flat and actual==submissions[key]
+            else:
+                # A modern one-submission baseline must not silently verify an
+                # extra nomination already present on the note.
+                matches=actual is None or actual==('' if key.endswith('_id') else [])
+            rb['submission_field_matches'][key]=matches
+    rb['submission_fields_match']=all(rb['submission_field_matches'].values())
     return rb,rb.get('pdf_sha256')==expected['pdf_sha256']
 
 
@@ -224,6 +255,7 @@ def run(opts,positions,client_factory=None,state_dir=None):
     authors=payload.get('authors')
     first=first_author({'authors':{'value':authors}})
     expected={'ids':opts.get('--expect-ids',payload.get('leaderboard_submission_ids')),'title':opts.get('--expect-title',payload.get('title')),'first_author':first}
+    expected['submission_fields']=expected_submission_fields(payload)
     expected_hash=opts.get('--expect-pdf-sha256')
     if expected_hash is None and isinstance(payload.get('pdf'),str) and Path(payload['pdf']).is_file():expected_hash=digest(Path(payload['pdf']).read_bytes())
     if not all(isinstance(expected[k],str) and expected[k] for k in ('ids','title')) or not isinstance(expected_hash,str) or re.fullmatch('[0-9a-f]{64}',expected_hash) is None:raise Refused('complete expected title/IDs/PDF hash required')
@@ -290,8 +322,8 @@ def run(opts,positions,client_factory=None,state_dir=None):
             return rec,1
     try:
         rb,match=readback(client,nid,expected)
-        rec.update(note_id=nid,readback=rb,match_pdf=match,ids_match=rb['ids_match'],title_match=rb['title_match'])
-        passed=match and rb['ids_match'] and rb['title_match'] and rb['author_match'] and rb['license_match']
+        rec.update(note_id=nid,readback=rb,match_pdf=match,ids_match=rb['ids_match'],title_match=rb['title_match'],submission_fields_match=rb['submission_fields_match'])
+        passed=match and rb['ids_match'] and rb['title_match'] and rb['author_match'] and rb['license_match'] and rb['submission_fields_match']
         rec['result']='VERIFIED_READBACK' if passed else 'READBACK_MISMATCH'
     except Exception as error:
         rec.update(result='READBACK_UNAVAILABLE',note_id=nid,error_type=type(error).__name__);passed=False
